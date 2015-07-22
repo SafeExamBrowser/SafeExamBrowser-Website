@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-E.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Safe Exam Browser</title>
+<!-- InstanceEndEditable -->
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css" media="screen"></style>
+<!-- InstanceBeginEditable name="head" -->
+<script src="../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+<link href="../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+<!-- InstanceEndEditable -->
+		<link rel="stylesheet" type="text/css" href="../css/superfish.css" media="screen">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/hoverIntent.js"></script>
+		<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+</head>
+<body>
+<!--<div id="outercontainer">-->
+<div id="container">
+  <div id="navigation">
+    <ul class="sf-menu">
+      <li><a href="../index.html">News</a> </li>
+      <li><a href="../about_overview_en.html">About</a>
+        <ul>
+          <li><a href="../about_overview_en.html">Overview</a>
+          <li><a href="../about_demo_en.html">Demo</a></li>
+          <li><a href="../about_roadmap_en.html">Roadmap</a></li>
+        </ul>
+      </li>
+      <li><a href="../download_en.html">Download</a>
+        <ul>
+          <li><a href="../download_en.html">Downloads</a>
+          <li><a href="../download_releases_en.html">All&nbsp;Releases</a></li>
+        </ul>
+      </li>
+      <li><a href="win_usermanual_en.html">Windows</a>
+        <ul>
+          <li><a href="win_quickguide_en.html">Quick&nbsp;Guide</a></li>
+          <li><a href="win_usermanual_en.html">User&nbsp;Manual</a></li>
+          <li><a href="win_release_notes_en.html">Release&nbsp;Notes</a></li>
+          <li><a href="win_developer.html">Developer</a></li>
+        </ul>
+      </li>
+      <li><a href="../macosx/mac_usermanual_en.html">MacOSX</a>
+        <ul>
+          <li><a href="../macosx/mac_usermanual_en.html">User&nbsp;Manual</a></li>
+          <li><a href="../macosx/mac_release_notes_en.html">Release&nbsp;Notes</a></li>
+          <li><a href="../macosx/mac_developer.html">Developer&nbsp;Manual</a></li>
+        </ul>
+      </li>
+      <li><a href="../support_en.html">Support</a></li>
+    </ul>
+  </div>
+  <div id="header_f">
+    <div id="logotext_f_seb"> <font color="#ff963d">SEB</font></div>
+    <div id="logotext_f_safe"> <font color="#070782">Safe Exam Browser</font></div>
+  </div>
+  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+      <h4>Developer Manual SEB for Windows</h4>
+      <p>This manual is providing  information about getting recent versions of the SEB sources, linking the components and  how to compile and debug SEB.</p>
+      <div id="CollapsiblePanel1" class="CollapsiblePanel">
+        <div class="CollapsiblePanelTab" tabindex="0"><strong>Contents</strong> <span class="textklein">Hide/Show</span></div>
+        <div class="CollapsiblePanelContent"><a href="#architecture">Architecture</a><br />
+          <a href="#checkoutSourceCode">Checkout Source Code</a><br />
+            <a href="#sourceKioskApplication">Source for Kiosk Application</a><br />
+            <a href="#sourceFirefoxExtension">Source for Firefox Extension</a><br />
+        <a href="#sourceLMSExtensions">Source for LMS Extensions</a> </div>
+      </div>
+      <h4><a name="architecture" id="architecture"></a>Architecture</h4>
+      <p>SEB consists of three components: a kiosk-application, a portable firefox with the seb-plugin and extensions to divers learning-management-systems (LMS).</p>
+      <h4><img src="../Media/prozess_seb_dev.jpg" alt="" height="101" width="559" border="0" /></h4>
+      <h5><strong>Kiosk application:</strong></h5>
+      <ul>
+        <li> launches SEB</li>
+        <li>opens an own window-desktop</li>
+        <li>catches system-commands (i.e. shortcuts like CTRL-ALT-DELETE, right-mouse-clicks).</li>
+        <li>configurable: SebStarter.ini, MsgHook.ini</li>
+        <li>possbility to admit other external applications</li>
+      </ul>
+<h5>Portable Firefox or XULRunner with SEB plugin:</h5>
+      <ul>
+        <li>fullscreen mode</li>
+        <li>disables menus, navigation- and statusbar</li>
+        <li>connect between SEB and test</li>
+      </ul>
+  <h5>Extensions to LMS:</h5>
+  <ul>
+    <li>secure exams, quizzes</li>
+    <li>disable the navigation to other resources</li>
+  </ul>
+      <h4><a name="checkoutSourceCode" id="checkoutSourceCode"></a>Checkout Source Code</h4>
+<p>Create a local workspace directory for the source code and checkout the source code into your workspace (i.e. C:/workspace). You can use Tortoise svn client (<a href="http://tortoisesvn.tigris.org/">http://tortoisesvn.tigris.org/</a>), right-click your local workspace directory and choose &quot;svn checkout&quot;. The svn-repository is located at <a href="https://seb.svn.sourceforge.net/svnroot/seb">https://seb.svn.sourceforge.net/svnroot/seb</a>.</p>
+      <p>To checkout the source code, you don't need an account. If you want to contribute to SEB and checkin your code, you need to have a sourceforge account. Please mail your sourceforge account ID to the project administrator, so he can add you to the project. You can find the latest source code in the /trunk directory of the repository, the tagged source code (1.0, 1.1, ....) is located in the /tags directory.</p>
+      <p>SEB consists of several components (see Architecture), that are stored in different places in the repository:</p>
+      <ul>
+        <li>SEB Windows Configuration Tool: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/SebWindowsPackage/SebWindowsConfig/">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/<br />
+SebWindowsPackage/SebWindowsConfig</a><br />
+(The Seb Windows Configuraton Tool can be used by the teacher to preconfigure SEB. It is a graphical editor for the SebStarter.ini and MsgHook.ini files.</li>
+        <li>SEB Windows Client: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/SebWindowsPackage/SebWindowsClient/">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/<br />
+        SebWindowsPackage/SebWindowsClient</a><br />
+        (The SEB Client contains the kiosk application /SebStarter in conjunction with /MsgHook, as well as the browser components /xul_seb and /xulrunner)
+        </li>
+        <li>SEB Windows Service: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/SebWindowsPackage/SebWindowsService/">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/<br />
+          SebWindowsPackage/SebWindowsService</a></li>
+        <li>SEB Windows Installer: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/SebWindowsPackage/SebWindowsInstall/">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/<br />
+          SebWindowsPackage/SebWindowsInstall </a></li>
+        <li>Firefox-extension: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/FirefoxExtension">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/FirefoxExtension</a></li>
+        <li>Ilias-extension: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/ilias">https://seb.svn.sourceforge.net/svnroot/seb/trunk/ilias</a></li>
+        <li>Moodle-extension: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/moodle">https://seb.svn.sourceforge.net/svnroot/seb/trunk/moodle</a></li>
+      </ul>
+<p>After checking out you should have several files and folders in your workspace.</p>
+      <h4><a name="sourceKioskApplication" id="sourceKioskApplication"></a>Source for SEB Client</h4>
+    <p><i>1. MS Visual Studio solution<br />
+        </i>The SEB Client is organized in a MS visual studio solution (free edition: <a href="http://www.microsoft.com/germany/Express/product/visualcplusplusexpress.aspx">Microsoft visual studio 2010 Professional Edition</a>, alternatively you can also use another IDE). In the source code (<a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/SebWindowsPackage/SebWindowsClient/">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/SebWindowsPackage/SebWindowsClient</a>) you can find the solution file for the kiosk application (<b>SebWindowsClient.sln</b>, in the root directory). The solution contains two MS visual studio projects: <b>SebStarter</b> and <b>MsgHook</b>. The project SebStarter is responsible for launching the safe browser, opening an own window desktop and admitting other external applications. MsgHook catches special keys and mouse clicks..</p>
+      <p>Below is an illustration of the directory structure and the most important files.</p>
+      <div class="sourcecode">
+        <p class="sourcecode">SebWindowsPackage/</p>
+        <p class="sourcecode indent1">SebWindowsClient/</p>
+        <p class="sourcecode indent2">MsgHook/</p>
+        <p class="sourcecode indent3">MsgHook.cpp</p>
+        <p class="sourcecode indent3">MsgHook.vcproj</p>
+        <p class="sourcecode indent3">MsgHook.ini<br />
+        </p>
+        <p class="sourcecode indent2">SebStarter/</p>
+        <p class="sourcecode indent3">SebStarter.cpp</p>
+        <p class="sourcecode indent3">SebStarter.vcproj</p>
+        <p class="sourcecode indent3">SebStarter.ini </p>
+        <p class="sourcecode indent2">SebWindowsClient.sln</p>
+      </div>
+      <p></p>
+      <p><strong>SebStarter.vcproj</strong> and <strong>MsgHook.vcproj</strong> are the MS visual studio project files. <strong>SebStarter.cpp</strong> and <strong>MsgHook.cpp</strong> contain the c++/win32api source code. <strong>SebStarter.ini</strong> and <strong>MsgHook.ini</strong> are the configuration files.</p>
+      <p><em>2. Build the solution<br />
+        </em>Open SebClient.sln in MS Visual Studio. You can compile and link the source code by selecting &quot;Build&quot; &gt; &quot;Build solution&quot; in debug or release mode. A new directory <strong>Release</strong> respectively <strong>Debug</strong> is created in the <strong>SebWindowsPackage</strong> directory, containing the files <strong>SebStarter.exe</strong> and <strong>MsgHook.dll</strong>.</p>
+      <p>Below is the directory Release with its content:</p>
+      <div class="sourcecode">
+        <p class="sourcecode">SebWindowsPackage/</p>
+        <p class="sourcecode indent1">Release/</p>
+        <p class="sourcecode indent2">MsgHook.dll</p>
+        <p class="sourcecode indent2">SebStarter.exe      </p>
+      </div>
+      <p><br />
+        <em>3. Run and debug</em><br />
+        To run or debug the application, you have to assure that the configuration files SebStarter.ini and MsgHook.ini lie in the <strong>C:/workspace/SebWindowsPackage/SebWindowsClient</strong> directory (as should be the case if you checked out the SEB from the SVN repository). As said abouve, the SEB extension for XULRunner is included in the /SebWindowsClient directory.</p>
+    <h4>
+      <a name="sourceFirefoxExtension" id="sourceFirefoxExtension"></a>Source for Firefox Extension</h4>
+    <p>You can make changes to the SEB extension of the XULRunner browser component.</p>
+      <p><em>1. Close firefox if it is running</em></p>
+      <p><em>2. Copy the source code to the firefox-extension directory<br />
+        </em>You can get the code at <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/FirefoxExtension">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/FirefoxExtension</a>. Copy the {c808Bd5a-5864-11db-8373-b622a1ef5492} directory to Mozilla Firefox/extensions or C:/workspace/Release/SebFirefox(see Source for SEB kiosk application).</p>
+      <p><em>3. Start firefox</em></p>
+      <p>Here is an illustration of the resulting structure with the most important files:</p>
+    <div class="sourcecode">
+        <p class="sourcecode"indent2">SebWindowsPackage/SebWindowsClient/xul_seb/</p>
+        <p class="sourcecode indent3">chrome/</p>
+        <p class="sourcecode indent4">content/</p>
+        <p class="sourcecode indent5">css/</p>
+        <p class="sourcecode indent5">images/</p>
+        <p class="sourcecode indent5">js/</p>
+        <p class="sourcecode indent6">browser.js</p>
+        <p class="sourcecode indent6">seb.js      </p>
+        <p class="sourcecode indent5">load.xul</p>
+        <p class="sourcecode indent5">seb.xul</p>
+        <p class="sourcecode indent4">locale/</p>
+        <p class="sourcecode indent3">defaults/</p>
+        <p class="sourcecode indent4">preferences/</p>
+        <p class="sourcecode indent5">lock_prefs.js</p>
+        <p class="sourcecode indent5">prefs.js</p>
+        <p class="sourcecode indent3">application.ini</p>
+      </div>
+      <h4>
+        <a name="sourceLMSExtensions" id="sourceLMSExtensions"></a>Source for LMS Extensions</h4>
+      <p>In recent versions of Ilias and Moodle the extensions are no longer required, the connectivity to SEB is already integrated in these LMS.</p>
+      <p><em>For older versions of Ilias</em><br />
+        You can get the source code for the extension at <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/ilias">https://seb.svn.sourceforge.net/svnroot/seb/trunk/ilias</a>.<br />
+        The extension is a new skin for ilias (written in php), that disables all navigation elements.</p>
+      <p><i>For older versions of Moodle</i><br />
+        You can get the source code for the extension at <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/moodle">https://seb.svn.sourceforge.net/svnroot/seb/trunk/moodle</a>.<br />
+        The extension is a patch for moodle (written in php), that disables all navigation elements.</p>
+    <script type="text/javascript">
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
+      </script>
+  <!-- InstanceEndEditable --> </div>
+  <div id="bottom"></div>
+</div>
+<!--</div>-->
+</body>
+<!-- InstanceEnd --></html>

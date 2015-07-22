@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-D.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+        <title>Safe Exam Browser</title>
+        <!-- InstanceEndEditable -->
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css" media="screen"></style>
+<!-- InstanceBeginEditable name="head" -->
+        <!-- InstanceEndEditable -->
+		<link rel="stylesheet" type="text/css" href="../css/superfish.css" media="screen">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/hoverIntent.js"></script>
+		<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+</head>
+<body>
+<div id="container">
+  <div id="navigation">
+		<ul class="sf-menu">
+      <li normal><a href="../news_de.html">News</a> </li>
+      <li><a href="../about_overview_de.html">Über</a>
+        <ul>
+          <li><a href="../about_overview_de.html">Übersicht</a>
+          <li><a href="../about_demo_de.html">Demo</a></li>
+          <li><a href="../about_roadmap_de.html">Roadmap</a></li>
+        </ul>
+      </li>
+      <li><a href="../download_de.html">Download</a>
+        <ul>
+          <li><a href="../download_de.html">Downloads</a>
+          <li><a href="../download_releases_de.html">Alle&nbsp;Versionen</a></li>
+        </ul>
+      </li>
+      <li><a href="win_usermanual_de.html">Windows</a>
+        <ul>
+          <li><a href="win_quickguide_de.html">Kurzanleitung</a></li>
+          <li><a href="win_usermanual_de.html">Benutzerhandbuch</a></li>
+          <li><a href="win_release_notes_de.html">Release&nbsp;Notes</a></li>
+          <li><a href="win_developer.html">Entwickler</a></li>
+        </ul>
+      </li>
+      <li><a href="../macosx/mac_usermanual_de.html">MacOSX</a>
+        <ul>
+          <li><a href="../macosx/mac_usermanual_de.html">Benutzerhandbuch</a></li>
+          <li><a href="../macosx/mac_release_notes_de.html">Release&nbsp;Notes</a></li>
+          <li><a href="../macosx/mac_developer.html">Entwickler</a></li>
+        </ul>
+      </li>
+      <li><a href="../support_de.html">Support</a></li>
+    </ul>
+  </div>
+  <div id="header_f">
+    <div id="logotext_f_seb"> <font color="#ff963d">SEB</font></div>
+    <div id="logotext_f_safe"> <font color="#070782">Safe Exam Browser</font></div>
+  </div>
+  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
+            <tr>
+                <td valign="top"><h4>Safe Exam Browser für Windows </h4></td>
+                <td align="right" valign="top"><span class="link_small"><a href="win_release_notes_en.html">English</a>&nbsp;&nbsp;&nbsp;Deutsch</span></td>
+              </tr>
+          </table>
+            <h4><a name="releasenotes" id="releasenotes"></a>Release Notes</h4>
+    <h5> Release Notes für <a href="../download_de.html#Windows">SEB 2.0 für Windows</a> und neuere Versionen:</h5>
+    <p>Momentan <a href="win_release_notes_en.html">nur englisch</a> verfügbar.</p>
+<h5> Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.9.1</a>:</h5>
+            <ul>
+              <li>Neues Installationsprogramm:<br />
+                Aufgrund von Problemen beim Installieren bzw. Deinstallieren von SEB mit dem Windows-Installer (<span class="path">SebWindowsInstall.msi</span>)   wurde ein neuer Installer erstellt, der <strong>zuverlässiger und stabiler</strong> ist (z.B. Rollback, falls es ein Problem während der Installation   gibt). Der neue Installer hat weniger Eingabedialoge und ist <strong>digital signiert</strong>, <span class="half_linespace"> mit dem Zertifikat des &quot;<strong>Verified Publisher</strong>&quot; ETH Zürich</span>.</li>
+              <li>Verbessertes Konfigurationsprogramm:<br />
+                Der graphische Editor <span class="path">SebWindowsConfig.exe</span> wurde gründlich überarbeitet und bietet jetzt besseren Komfort und   besseres Aussehen. Nach dem Starten werden die   Standard-Konfigurations-Dateien <em>SebStarter.ini</em> und <em>MsgHook.ini</em> <strong>automatisch</strong> in den Editor geladen. Verschiedene Schriftarten für bessere Lesbarkeit. Schaltflächen zum <strong>Wiederherstellen</strong> geladener und versehentlich geänderter Werte, zum gleichzeitigen Abspeichern beider   Konfigurations-Dateien und zum Verlassen des Editors. <strong>Sicherheitseinstellungen</strong> (z.B. für den Task Manager) können jetzt für <strong>innerhalb und ausserhalb</strong> von SEB definiert werden.</li>
+              <li><span class="half_linespace">Neue Browserkomponente:<br />
+                mit verbessertem, aktualisierten XulRunner, u.a. können nun zusätzliche Browser-Fenster geöffnet werden. <strong>Popup-Fenster</strong> öffnen nicht im Vollbildmodus, sondern füllen den Bildschirm nur teilweise aus, mit Möglichkeit zum <strong>Minimieren und Maximieren</strong> des Fensters. Das Herunterladen von Dateien sollte jetzt ebenfalls funktionieren.</span></li>
+              <li>Fehlerbehebung:  Bei vorzeitiger Beendigung oder Absturz des SEB blieben die Registry-Werte (für den blauen <em>Windows-Sicherheits-Bildschirm</em>) <strong>verstellt </strong>(z.B. war der Task Manager jetzt auch im normalen Betrieb gesperrt). Jetzt kann der Benutzer bei der SEB-Konfiguration nicht nur die Werte für <strong>innerhalb</strong>, sondern auch für <strong>ausserhalb</strong> von SEB festlegen. Geht etwas beim SEB-Betrieb schief und sind die Registry-Werte verstellt, startet man SEB einfach nochmals und verlässt ihn mit der <strong>SEB-Austritts-Sequenz</strong> (z.B. F3_F11_F6)<strong> </strong>wieder. Dies setzt die Registry-Werte wieder auf die normalen Werte zurück, und der Task Manager ist wieder verfügbar.</li>
+            </ul>
+<h5>Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.8.2</a>:</h5>
+            <ul>
+              <li>Fehlerbehebung<span class="half_linespace">: Neuladen / Wiederauffrischen der aktuellen   Seite im Browserfenster durch Druck auf die F5-Taste funktionierte nicht. Jetzt ist es möglich, sofern man F5   als Taste zulässt. Die neue Standardeinstellung für die F5-Taste ist deshalb   &quot;enabled&quot; (= &quot;aktiviert&quot;).</span></li>
+            </ul>
+<h5>Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.8.1</a>:</h5>
+			<ul>
+              <li>Fehlerbehebung: Klicken auf das SEB-Icon auf dem Benutzer-Desktop startete in manchen Fällen das SEB-Installationsprogramm<em> </em>statt der eigentlichen SEB-Anwendun<em>g. </em>Jetzt erzeugt das SEB-Installationsprogramm einen Shortcut zur SEB-Anwendung auf dem<strong> gemeinsamen </strong>Desktop<em>. </em>Deshalb sind SEB-Icon und -Shortcut für <strong>alle</strong> Benutzer sichtbar, und Klicken auf dieses Icon startet die SEB-Anwendung wie beabsichtigt.</li>
+			</ul>
+    <ul>
+              <li>Fehlerbehebung:  Beim Beenden stellte SEB die <strong>Standard</strong>-Registry-Werte für Task Manager etc. (auf dem blauen <em>Windows-Sicherheits-Bildschirm</em>) wieder her. Jetzt stellt SEB stattdessen die <strong>vorherigen</strong> Registry-Werte (= die Werte, bevor SEB gestartet wurde) wieder her.</li>
+    </ul>
+
+<h5> Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.8</a>:</h5>
+			<ul>
+              <li>Erleichterte Konfiguration für den Dozenten.  Es ist jetzt   möglich, die Konfiguration in einem neuen GUI-Editor namens <em>SebWindowsConfig.exe</em> per Mausklick vorzunehmen, ohne die Initialisierungsdateien <em>SebStarter.ini</em> und <em>MsgHook.ini</em> direkt zu bearbeiten.</li>
+	</ul>
+    <ul>
+              <li>Das Dateiformat dieser ini-Dateien ist vereinfacht worden und jetzt besser menschen-lesbar.</li>
+            </ul>
+            <ul>
+              <li> Alternativ zur Vollversion von SEB (Installation via .msi-Datei) ist auch eine klassische portable Variante (Kopieren einer zip-Datei ohne Installation) mit geringerem Funktionsumfang erstellbar.<br />
+              </li>
+            </ul>
+
+<h5> Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.7</a>:</h5>
+			<ul>
+              <li>Erleichterte Konfiguration und Verteilung für den Dozenten. Es ist jetzt möglich, die Konfigurationsdateien vor statt nach der Installation zu modifizieren, so dass die Studenten SEB direkt installieren können, ohne noch zusätzliche Konfigurations-dateien nachträglich zu installieren. Auch eine administrative Installation via Netzwerk ist jetzt möglich.</li>
+	</ul>
+            <ul>
+              <li>Herunterladen als  zip-Datei, wie in früheren SEB-Versionen bis 1.4.1</li>
+            </ul>
+<h5> Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.6.1</a>:</h5>
+			<ul>
+              <li>Mehrsprachigkeit (Deutsch, Englisch, Französisch bei Menüs und Fehlermeldungen), basierend auf der Standard-Eingabesprache des aktuellen Benutzers.</li>
+	</ul>
+            <ul>
+              <li>Verbessertes Abbruchverhalten bei Fehlstart von SEB (kein Zombie-Prozess &quot;Seb.exe&quot; mehr).</li>
+            </ul>
+            <ul>
+              <li>XULRunner-Fehlerbehebung: Problem beim Datei-Herunterladen und Starten einer Drittapplikation gemäss der Dateiendung funktioniert jetzt.</li>
+            </ul>
+    <ul>
+              <li>SEB entdeckt selbständig, ob er auf einer virtuellen Maschine läuft.</li>
+            </ul>
+            <ul>
+              <li>Neue Speicherorte für .ini- und .log-Dateien entsprechend den Richtlinien moderner Windows-Anwendungen.            </li>
+            </ul>
+<h5> Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.4.1</a>:</h5>
+			<ul>
+              <li>XULRunner-Version. Fehlerbereinigung bezüglich Schreibrechten des Log-Files  (SEB startet nicht, wenn LOGFILE=0 und die temporäre Log-Datei wegen fehlenden Schreibrechten nicht  erstellt werden kann).<br />
+              </li>
+	</ul>
+
+<h5> Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.3.4</a>:</h5>
+			<ul>
+              <li>Portable Firefox Version. Fehlerbereinigung bezüglich Schreibrechten des Log-Files  (SEB startet nicht, wenn LOGFILE=0 und die temporäre Log-Datei wegen fehlenden Schreibrechten nicht  erstellt werden kann).<br />
+              </li>
+	</ul>
+       
+            <!--end of div container--> 
+            
+            <!-- InstanceEndEditable --> </div>
+  <div id="bottom"></div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

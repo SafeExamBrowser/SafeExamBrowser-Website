@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<plist version="1.0">
+  <dict>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>App</key>
+        <dict>
+          <key>Identifier</key>
+          <string>org.safeexambrowser.SEB</string>
+        </dict>
+        <key>PayloadType</key>
+        <string>com.apple.app.lock</string>
+        <key>PayloadIdentifier</key>
+        <string>org.safeexambrowser.SEB</string>
+        <key>PayloadUUID</key>
+        <string>B2CEA7E1-7EF7-44EC-AC8A-4B6F45D744D1</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+      </dict>
+    </array>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadDisplayName</key>
+    <string>Lock to SEB</string>
+    <key>PayloadIdentifier</key>
+    <string>org.safeexambrowser</string>
+    <key>PayloadUUID</key>
+    <string>270BD8E5-3BAF-4EF9-BAAF-33F9F5403601</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+  </dict>
+</plist>

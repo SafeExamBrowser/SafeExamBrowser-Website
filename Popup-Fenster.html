@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>Popup-Fenster mit JavaScript</title>
+<script type="text/javascript">
+function popup (url) {
+ fenster = window.open(url, "Popup Window", "width=400,height=300,resizable=yes");
+ fenster.focus();
+ return false;
+}
+function popup2 (url) {
+ fenster = window.open(url, "Popup Window 2", "width=800,height=1024,resizable=yes");
+ fenster.focus();
+ return false;
+}
+</script>
+</head>
+<body text="#0000C0" bgcolor="#FFFFE0">
+<pre>&nbsp;</pre>
+<p><a href="http://selfhtml.de" onClick="return popup(this.href);">Show window with URL on external server</a></p>
+<p><a href="http://youtube.com" onClick="return popup2(this.href);">Show window with URL on external server</a></p>
+<p><a href="about_overview_en.html" onClick="return popup2(this.href);">Show window with URL on this server</a></p>
+</body>
+</html>

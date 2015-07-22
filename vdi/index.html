@@ -1,0 +1,107 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-D.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+        <title>Safe Exam Browser</title>
+        <!-- InstanceEndEditable -->
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css" media="screen"></style>
+<!-- InstanceBeginEditable name="head" -->
+        <script src="../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+        <link href="../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+        <!-- InstanceEndEditable -->
+		<link rel="stylesheet" type="text/css" href="../css/superfish.css" media="screen">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/hoverIntent.js"></script>
+		<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+</head>
+<body>
+<div id="container">
+  <div id="navigation">
+		<ul class="sf-menu">
+      <li normal><a href="../news_de.html">News</a> </li>
+      <li><a href="../about_overview_de.html">Über</a>
+        <ul>
+          <li><a href="../about_overview_de.html">Übersicht</a>
+          <li><a href="../about_demo_de.html">Demo</a></li>
+          <li><a href="../about_roadmap_de.html">Roadmap</a></li>
+        </ul>
+      </li>
+      <li><a href="../download_de.html">Download</a>
+        <ul>
+          <li><a href="../download_de.html">Downloads</a>
+          <li><a href="../download_releases_de.html">Alle&nbsp;Versionen</a></li>
+        </ul>
+      </li>
+      <li><a href="../windows/win_usermanual_de.html">Windows</a>
+        <ul>
+          <li><a href="../windows/win_quickguide_de.html">Kurzanleitung</a></li>
+          <li><a href="../windows/win_usermanual_de.html">Benutzerhandbuch</a></li>
+          <li><a href="../windows/win_release_notes_de.html">Release&nbsp;Notes</a></li>
+          <li><a href="../windows/win_developer.html">Entwickler</a></li>
+        </ul>
+      </li>
+      <li><a href="../macosx/mac_usermanual_de.html">MacOSX</a>
+        <ul>
+          <li><a href="../macosx/mac_usermanual_de.html">Benutzerhandbuch</a></li>
+          <li><a href="../macosx/mac_release_notes_de.html">Release&nbsp;Notes</a></li>
+          <li><a href="../macosx/mac_developer.html">Entwickler</a></li>
+        </ul>
+      </li>
+      <li><a href="../support_de.html">Support</a></li>
+    </ul>
+  </div>
+  <div id="header_f">
+    <div id="logotext_f_seb"> <font color="#ff963d">SEB</font></div>
+    <div id="logotext_f_safe"> <font color="#070782">Safe Exam Browser</font></div>
+  </div>
+  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
+            <tr>
+                <td valign="top"><h4>Kompetenzorientiertes Prüfen mit virtueller <br />
+                  Desktop-Infrastruktur und Safe Exam Browser</h4>
+              </td>
+                <!--<td align="right" valign="top"><span class="link_small"><a href="mac_usermanual_en.html">English</a>&nbsp;&nbsp;&nbsp;Deutsch</span></td>-->
+              </tr>
+          </table>
+            <p> Kompetenzorientiertes Prüfen zeichnet sich als eines der grossen, zukünftigen Ausbaufelder im Bereich E-Assessment ab. In den meisten Fachgebieten sind applikationsbasierte Szenarien vorstellbar, die das praxisnahe Überprüfen von Kompetenzen erlauben. Solche Szenarien benötigten bisher spezialisierte und im Allgemeinen aufwändig hergestellte Betriebssystem-Setups, um sie sinnvoll in einem Prüfungsrahmen anbieten zu können. Als besser zu handhabende Lösung bietet sich der Einsatz virtueller Desktops im Rahmen einer virtuellen Desktop Infrastruktur (VDI) der Hochschule an, wobei die Prüfungsrechner mittels Safe Exam Browser abgesichtert werden. Nachfolgend wird der technische Aufbau dieser Prüfungsumgebung genauer beschrieben. <br />
+          </p>
+            <h4><a name="features" id="features"></a>Herkömmliche Prüfungsumgebung mit Einsatz von Safe Exam Browser</h4>
+                  <p class="image-only"><img src="../Media/SEB-Architecture_thirdpartyapp_de.png" alt="" height="260" width="560" border="0" /></p>
+          <p>Schematische Illustration einer herkömmliche Prüfungsumgebung bestehend aus Safe Exam Browser (SEB) als Kiosk-/Lockdown-Browser und einem Prüfungsmodul eines Learning Management System (LMS) wie Moodle, ILIAS oder eines anderen, Web-basierten Prüfungssystem.</p>
+    <p>Die Kiosk-Applikation (SEB-Starter) macht jeden Rechner zu einer abgesicherten Arbeitsstation, indem verschiedene Systemfunktionen wie zum Beispiel das Umschalten auf andere (unerwünschte) Applikationen, gewisse Tastenkombinationen zur Systemsteuerung oder die Nutzung des Internets temporär eingeschränkt oder gänzlich ausgeschaltet werden.<br />
+              <br />
+              Der SEB-Starter kann ausserdem andere Applikationen in einem abgesicherten Kontext starten und ausführen, ohne Einsatz von Virtualisierungstechnologien stösst man dabei allerdings an technische Grenzen, insbesondere wenn man komplexe Applikationen einsetzen möchte. <br />
+              Beispiele für derartige Prüfungsszenarien: In Sozialwissenschaften die Arbeit mit einem Statistikpaket wie SPSS oder R, Numerik in Matlab, Design mit Illustrations- und Grafiksoftware, CAD im Ingenieurswesen, Finanzbuchhaltung mit Excel in Wirtschafswissenschaften, Programmiertechniken für Ingenieure oder Aufgaben im Bereich Softwareentwicklung, die eine integrierte Entwicklungsumgebung voraussetzen.</p>
+            <p>Solche Szenarien benötigten bisher spezialisierte und im Allgemeinen aufwändig hergestellte Betriebssystem-Setups (meist basierend auf speziell abgesicherten Linux- oder Windows-Installationen, die dann von separaten Laufwerken oder übers Netzwerk aufgestartet wurden), um sie sinnvoll in einem Prüfungsrahmen anbieten zu können. Als neue Alternative hierzu bietet sich der Einsatz virtueller Desktops im Rahmen einer virtuellen Desktop Infrastruktur (VDI) an, wobei die Prüfungsrechner weiterhin mit SEB abgesichert werden.</p>
+<h4><a name="download" id="download"></a>Prüfungsumgebung bei Verwendung von <br />
+  virtueller Desktop-Infrastruktur</h4>
+    <div class="image5"><img src="../Media/SEB-Architektur_VDI.png" width="650" height="214" /></div>
+          <p>&nbsp;</p>
+            <p>Die Prüfungsumgebung bei Verwendung von virtueller Desktop-Infrastruktur unterscheidet sich nur teilweise von derjenigen, die an der ETH für herkömmliche Online-Prüfungen im Einsatz ist. Die wesentlichen Komponenten bleiben gleich, werden aber anders auf die beteiligten Systeme verteilt. So werden die Prüfungsrechner weiterhin mit SEB abgesichert, damit die Studierenden während der Prüfung nicht auf andere Programme zugreifen können. Der Browser-Teil des SEB wird aber deaktiviert, dafür wird ein Virtual Desktop Client in einem durch SEB abgesicherten Kontext gestartet. Die Client-Software verbindet sich danach mit dem VDI-Server und erhält von diesem Zugriff auf ein virtuelles Desktop. Auf diesem läuft dann wiederum SEB und verbindet sich mit seinem integrierten Webbrowser mit dem Prüfungs-Modul im Learning Management System. Im virtuellen Desktop sind die gewünschten Drittapplikationen installiert. Das Betriebssystem in der virtualisierten Maschine kann dabei viel besser abgesichert werden als das auf einem realen Rechner, insbesondere ist der Zugriff auf Hardwareeigenschaften präzise steuerbar. Ausserdem können virtuelle Desktops für unterschiedliche Prüfungen gut archiviert werden.<br />
+            </p>
+          <p class="image-only"><img src="../Media/SEB-VDI_V4.png" alt="" width="650" height="609" border="0" class="image5" /></p>
+      <p class="imagecaption">Übersicht über die gesamte Prüfungsumgebung: Komponenten und schematische Darstellung des Ablaufs einer Online-Prüfung auf einem privaten studentischen Notebook mit der Kombination SEB-Starter plus virtuelle Desktop-Infrastruktur. Letztere liefert dabei die eigentliche Prüfungsumgebung an und ermöglicht gleichzeitig die Aufzeichnung aller Prüfungsaktivitäten.</p>
+            <h4><a name="starting" id="starting"></a>Detailierte Dokumentation VDI-Prüfungsumgebung</h4>
+<p><a href="Competence-Oriented_Exams_VDI+SEB_ETH-LET_2013_07.pdf" target="_blank">Diese Beschreibung</a> eines generellen Konzeptes für Prüfungen mit Verwendung von VDI und Safe Exam Browser (SEB) beinhaltet auch Prozessbeschreibungen zur Planung und Durchführung solcher Prüfungen. Ausserdem sind Checklisten und technische Details zur Konfiguration und Verwendung einer virtuellen Desktop-Infrastruktur mit SEB aufgeführt (nur in Englisch verfügbar).</p>
+<p>Für weitere Informationen: <br />
+  Projektleiter Safe Exam Browser<br />
+  <a href="mailto:schneider@let.ethz.ch">Daniel Schneider</a></p>
+<p>&nbsp;</p>
+<p class="caption_text">Siehe auch:<br />
+Schneider, D. R.,  Piendl, Halbherr, T., Bauer, D., Reuter, K.: Kompetenzorientiertes Prüfen mit virtueller Desktop- Infrastruktur und Safe Exam Browser. In: DeLFI 2013. Die 11. E-Learning Fachtagung Informatik der Gesellschaft für Informatik e.V. (GI).</p>
+  <!-- InstanceEndEditable --> </div>
+  <div id="bottom"></div>
+</div>
+</body>
+<!-- InstanceEnd --></html>

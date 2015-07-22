@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadDescription</key>
+            <string>Disables home</string>
+            <key>PayloadDisplayName</key>
+            <string>Home Button Lock</string>
+            <key>PayloadIdentifier</key>
+            <string>com.hbkill.kiosk</string>
+            <key>PayloadOrganization</key>
+            <string>My Org</string>
+            <key>PayloadType</key>
+            <string>com.apple.defaults.managed</string>
+            <key>PayloadUUID</key>
+            <string>B2D02E2D-BAC5-431B-8A29-4B91F71C9FC1</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+            <key>PayloadContent</key>
+            <array>
+                <dict>
+                    <key>DefaultsDomainName</key>
+                    <string>com.apple.springboard</string>
+                    <key>DefaultsData</key>
+                    <dict>
+                    <key>SBStoreDemoAppLock</key>
+                    <true/>
+                    </dict>
+                </dict>
+            </array>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Disables Home Button</string>
+    <key>PayloadDisplayName</key>
+    <string>Home Button Lock</string>
+    <key>PayloadIdentifier</key>
+    <string>com.hbkill</string>
+    <key>PayloadOrganization</key>
+    <string>My Org</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>614D1FE3-F80D-4643-AF6B-D10C4CC8737A</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+</dict>
+</plist>

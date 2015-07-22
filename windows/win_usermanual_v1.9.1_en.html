@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-E.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+        <title>Safe Exam Browser</title>
+        <!-- InstanceEndEditable -->
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css" media="screen"></style>
+<!-- InstanceBeginEditable name="head" -->
+        <script src="../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+        <link href="../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+        <!-- InstanceEndEditable -->
+		<link rel="stylesheet" type="text/css" href="../css/superfish.css" media="screen">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/hoverIntent.js"></script>
+		<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+</head>
+<body>
+<!--<div id="outercontainer">-->
+<div id="container">
+  <div id="navigation">
+    <ul class="sf-menu">
+      <li><a href="../index.html">News</a> </li>
+      <li><a href="../about_overview_en.html">About</a>
+        <ul>
+          <li><a href="../about_overview_en.html">Overview</a>
+          <li><a href="../about_demo_en.html">Demo</a></li>
+          <li><a href="../about_roadmap_en.html">Roadmap</a></li>
+        </ul>
+      </li>
+      <li><a href="../download_en.html">Download</a>
+        <ul>
+          <li><a href="../download_en.html">Downloads</a>
+          <li><a href="../download_releases_en.html">All&nbsp;Releases</a></li>
+        </ul>
+      </li>
+      <li><a href="win_usermanual_en.html">Windows</a>
+        <ul>
+          <li><a href="win_quickguide_en.html">Quick&nbsp;Guide</a></li>
+          <li><a href="win_usermanual_en.html">User&nbsp;Manual</a></li>
+          <li><a href="win_release_notes_en.html">Release&nbsp;Notes</a></li>
+          <li><a href="win_developer.html">Developer</a></li>
+        </ul>
+      </li>
+      <li><a href="../macosx/mac_usermanual_en.html">MacOSX</a>
+        <ul>
+          <li><a href="../macosx/mac_usermanual_en.html">User&nbsp;Manual</a></li>
+          <li><a href="../macosx/mac_release_notes_en.html">Release&nbsp;Notes</a></li>
+          <li><a href="../macosx/mac_developer.html">Developer&nbsp;Manual</a></li>
+        </ul>
+      </li>
+      <li><a href="../support_en.html">Support</a></li>
+    </ul>
+  </div>
+  <div id="header_f">
+    <div id="logotext_f_seb"> <font color="#ff963d">SEB</font></div>
+    <div id="logotext_f_safe"> <font color="#070782">Safe Exam Browser</font></div>
+  </div>
+  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
+            <tr>
+                <td valign="top"><h4>User Manual SEB for Windows (from Version 1.8)</h4>
+                 <p class="textsubnavi"><a href="win_usermanual_en.html">»Manual for SEB 2.0</a></p>
+              <p><a href="win_usermanual_old_en.html">Old versions (until 1.7.1)</a></p>
+              <p>&nbsp;</p></td>
+                <td align="right" valign="top" class="link_small">English&nbsp;&nbsp;&nbsp;<a href="win_usermanual_de.html">Deutsch</a></td>
+              </tr>
+          </table>
+            <div id="CollapsiblePanel1" class="CollapsiblePanel">
+            <div class="CollapsiblePanelTab" tabindex="0"><strong>Contents</strong> <span class="textklein">Hide/Show</span></div>
+            <div class="CollapsiblePanelContent"> <a href="#ConfigurationFiles">Configuration Files</a><br />
+                <a href="#Certificates">Certificates</a><br />
+                <a href="#ConnectBrowserAndTest">Connect Browser and Test</a><br />
+                <a href="#LMSExtensions">LMS Extensions</a> </div>
+          </div>
+            <h4><a name="ConfigurationFiles" id="ConfigurationFiles"></a>Configuration Files</h4>
+            <p>There are two configuration files for SEB: <span class="path">SebStarter.ini</span> and <span class="path">MsgHook.ini</span>. Here's where they are located:<br />
+            </p>
+            <ul>
+              <li>under Windows XP:<br />
+                in the common application data folder, e.g.<br />
+              <span class="path">C:\Documents and Settings\All Users\Application Data\<br />
+              ETH Zuerich\SEB Windows 1.9.1</span></li>
+              <li> under Windows Vista, Windows 7 and Windows 8:<br />
+                in the program data directory, e.g.<br />
+                <span class="path">C:\ProgramData\ETH Zuerich\SEB Windows 1.9.1</span></li>
+            </ul>
+<p>In order to configure SEB for an online exam, the<strong> teacher </strong>can edit both ini files using an arbitrary text editor like <em>Notepad</em>. However, it is much easier to double-click on the GUI editor <em><strong>SebWindowsConfig.exe</strong></em> delivered with SEB. In the opening <em><strong>SEB Windows Configuration Window</strong></em>, the two configuration files delivered with SEB, <em><strong>SebStarter.ini</strong></em> and <em><strong>MsgHook.ini</strong></em>, are then automatically loaded. They contain default values, which are displayed in the GUI window:<br />
+  <br />
+  <img src="images/1.9/SebWindowsConfigGUI01HalfCut.png" width="560" height="380" /><br />
+    </p>
+<p>The teacher can change these settings via mouse clicks and keyboard inputs in the GUI editor, and save his/her settings back to hard disk by clicking on <em><strong>Save ... config file</strong></em>. Reloading the files via <em><strong>Open ... config file </strong></em> is also possible, as well as resetting to the default settings (<strong><em>Default ... settings</em></strong>) or to the values loaded from file (<strong><em>Restore ... config file</em></strong>):<br />
+  <br />
+  <img src="images/1.9/SebWindowsConfigGUI02HalfCut.png" width="560" height="380" /><br />
+  <br />
+Finally, the editor can be quit with or without saving both configuration files (<em><strong>Save both config files and exit</strong></em> or <em><strong>Exit without saving</strong></em>, respectively).</p>
+    <p><span class="path">SebStarter.ini</span> is the primary configuration file. Below you see the default settings of the <em>SebStarter.ini</em> delivered with SEB Windows 1.9.1:<br/>
+    </p>
+          <div class="sourcecode">
+            <p>[SEB]</p>
+            <p>[SebStarterConfigFile]</p>
+            <p>WriteSebStarterLogFile=1</p>
+            <p>[InsideSeb]</p>
+            <p>InsideSebEnableSwitchUser=0<br />
+              InsideSebEnableLockThisComputer=0<br />
+              InsideSebEnableChangeAPassword=0<br />
+              InsideSebEnableStartTaskManager=0<br />
+              InsideSebEnableLogOff=0<br />
+              InsideSebEnableShutDown=0<br />
+              InsideSebEnableEaseOfAccess=0<br />
+              InsideSebEnableVmWareClientShade=0</p>
+            <p>[OutsideSeb]</p>
+            <p>OutsideSebEnableSwitchUser=1<br />
+              OutsideSebEnableLockThisComputer=1<br />
+              OutsideSebEnableChangeAPassword=1<br />
+              OutsideSebEnableStartTaskManager=1<br />
+              OutsideSebEnableLogOff=1<br />
+              OutsideSebEnableShutDown=1<br />
+              OutsideSebEnableEaseOfAccess=1<br />
+              OutsideSebEnableVmWareClientShade=1</p>
+            <p>[SecurityOptions]</p>
+            <p>AllowVirtualMachine=0<br />
+              ForceWindowsService=1<br />
+              CreateNewDesktop=1<br />
+              ShowSebApplicationChooser=1<br />
+              HookMessages=1<br />
+              EditRegistry=1<br />
+              MonitorProcesses=0<br />
+              ShutdownAfterAutostartProcessTerminates=0</p>
+            <p>[OnlineExam]</p>
+            <p>SebBrowser=Seb,../xulrunner/xulrunner.exe -app &quot;..\xul_seb\seb.ini&quot; -profile &quot;%LOCALAPPDATA%\ETH Zuerich\xul_seb\Profiles&quot;<br />
+              AutostartProcess=Seb<br />
+              ExamUrl=http://www.safeexambrowser.org/<br />
+              PermittedApplications=Calculator,calc.exe;Notepad,notepad.exe;</p>
+            <p>[OtherOptions]</p>
+            <p>Win9xKillExplorer=1<br />
+              Win9xScreenSaverRunning=0<br />
+              StrongKillProcessesBefore=<br />
+              StrongKillProcessesAfter=</p>
+</div>
+            </p>
+        <p><br />
+<strong>Important options of the <em>SebStarter.ini</em> file:</strong><br />
+          <strong><br />
+          WriteLogFileSebStarterLog</strong><br />
+          The SEB Client can write <strong>log files</strong>, which are helpful for analysis of eventual problems when running SEB. To accomplish this, the option <em>WriteLogFileSebStarterLog=1</em> and <em>WriteLogFileMsgHookLog=1</em> must be set in the <em><strong>SebStarter.ini</strong></em> and in the <em><strong>MsgHook.ini</strong></em> file, respectively. In the <em><strong>SebWindowsConfig.exe</strong></em> tool, these options are named <em>Write logfile SebStarter.log</em> and <em>Write logfile MsgHook.log</em> .<br />
+          When running the SEB Client, the log files <em><strong>SebStarter.log</strong></em> and <em><strong>MsgHook.log</strong></em> are written into the same directory as their corresponding ini files.<br />
+<br />
+<strong>AllowVirtualMachine</strong><br />
+determines if the SEB Client is allowed to run on a Virtual Machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).<br />
+            <br />
+          <strong>ForceWindowsService</strong><br />
+            determines if the SEB Client shall run only in conjunction with the SEB Windows Service. The purpose of the SEB Windows Service will be explained in the following:<br />
+          <br />
+          <br />
+        Some values stored in the Windows Registry database do influence the system behaviour of Windows, and thus the security of online exams. Beginning with Windows Vista, these options are displayed in the <strong>Windows Security Screen</strong> with the <strong>blue desktop background</strong>, which appears when pressing the key combination Ctrl_Alt_Del. (Until Windows XP, pressing Ctrl_Alt_Del directly invoked the Task Manager).<br />
+        <br />
+        Usually, these options should all be disabled for an online exam, in order to prevent from manipulations or from accessing forbidden resources. This particularly holds for the Task Manager, since programs can be terminated or started from within that tool. Hence all values are set to <em>Enable...=0</em> (or are unchecked) by default. <br />
+<br />
+Until Windows XP, the user was usually logged in as an Administrator, so the SEB client (<em><strong>SebStarter.exe</strong></em>) could set the Windows Registry values by itself, since it had the necessary rights to do so.<br />
+</p>
+        <p>From Windows Vista, the users (hence also the examinees) are for security reasons urged to logging in as Standard User rather than as Administrator. However, a SEB Client started by a Standard User does not have the necessary rights to set the Windows Registry values.<br />
+          <br />
+          A <strong>SEB Windows Service, </strong>running as a background process, is therefore indispensable, which takes over this task. This service is delivered in a .msi file together with the SEB Client, and installed and started automatically by the Microsoft Installer. The SEB Windows Service does also work under Windows XP.<br />
+  <br />
+          The Windows Registry values one by one:<br />
+  <br />
+  <strong>EnableSwitchUser<br />
+  </strong>activates the button &quot;Benutzer wechseln&quot; or &quot;Switch User&quot;, respectively.<br />
+  <br />
+  <strong>EnableLockThisComputer<br />
+  </strong>activates the button &quot;Computer sperren&quot; or &quot;Lock this computer&quot;, respectively.<br />
+  <br />
+  <strong>EnableChangeAPassword<br />
+  </strong>activates the button &quot;Kennwort ändern...&quot; or &quot;Change a password...&quot;, respectively.<br />
+<br />
+  <strong>EnableStartTaskManager<br />
+  </strong>activates the button &quot;Task-Manager starten&quot; or &quot;Start Task Manager&quot;, respectively.<br />
+  <br />
+  Remark:<br />
+  Normally it makes no sense to permit the Task Manager inside SEB (thus during an online exam). Furthermore SEB is usually started in a new desktop (see option <em><strong>CreateNewDesktop</strong></em> below), which would cover an eventual Task Manager window and make it invisible. In case you want to permit the Task Manager in SEB anyhow, <em><strong>CreateNewDesktop</strong></em> must be disabled. An alternative possibility is to add the Task Manager as a third-party application <span class="codetext">TaskManager,taskmgr.exe;</span> to the <em><strong>PermittedApplications</strong></em> (see below).<br />
+          <br />
+          <strong>EnableLogOff<br />
+          </strong>activates the button &quot;Abmelden&quot; or &quot;Log off&quot;, respectively.<br />
+  <br />
+          <strong>EnableShutDown<br />
+          </strong>activates the button &quot;Herunterfahren&quot; or &quot;Shutdown&quot; in the lower right corner.<br />
+          <br />
+          <strong>EnableEaseOfAccess<br />
+          </strong>activates the button &quot;Erleichterter Zugriff&quot; or &quot;Ease of Access&quot; in the lower left corner, which offers help e.g. to visually or aurally handicapped persons, like the Magnifier Glass.<br />
+          <br />
+          <strong>EnableVmWareClientShade</strong><br />
+          activates  the &quot;Shade&quot; bar at the upper edge of a virtual desktop, if existent.<br />
+          <br />
+          From SEB Windows 1.8.3, these Windows Registry values are configured <strong>twice</strong>. The options <strong>InsideSeb...</strong> define the values <em><strong>inside</strong></em> of SEB (which are thus valid during an exam, when SEB is running). The options <strong>OutsideSeb...</strong> define the values <em><strong>outside</strong></em> of SEB (which are thus valid in normal use, when SEB is not running). The standard defaults are to <strong><em>disable</em></strong> all options <em><strong>inside</strong></em> SEB and to <em><strong>enable</strong></em> all options <em><strong>outside</strong></em> SEB.<br />
+          <br />
+          The reason for this procedure:<br />
+  <br />
+          In case there are problems when SEB is operating and SEB is prematurely quit or SEB crashes, the Windows Registry values are <strong>out of tune</strong>, e.g. the Task Manager is disabled also in normal use, since for the computer the <em><strong>InsideSeb</strong></em> values are still valid. In order to restore the correct values, it was in this case necessary to edit the Windows Registry <em><strong>manually as administrator</strong></em>, which is cumbersome and error-prone.<br />
+  <br />
+          From SEB Windows 1.8.3, it suffices instead (as long as the SebWindowsService is still running) to restart SEB once again and <strong>properly</strong> quit SEB using the <strong>SEB exit sequence</strong> (e.g. F3_F11_F6, see below<strong>)</strong>. When quitting, the registry values are reset to the <em><strong>OutsideSeb</strong></em> values, and the Task Manager is available again.<br />
+  <br />
+  <br />
+          Further options, not belonging to the Windows Registry values:<br />
+          <br />
+          <strong>CreateNewDesktop</strong><br />
+          <br />
+    defines whether the SEB Client shall be executed in a newly created desktop window (in fullscreen mode), such that e.g. the task bar and the start menu at the bottom edge of the screen are blanked out. (Remark: In this case, also the Task Manager cannot be used in SEB anymore, even when being activated by <strong>EnableStartTaskManager</strong>, because he is then invisible in the background).</p>
+<p><strong>ShowSebApplicationChooser</strong><br />
+  <br />
+  defines whether after starting SEB, a popup window for permitted third-party applications appears in the upper left corner when Alt_Tab is pressed. For exams with third-party applications, this value must be set to 1, for exams without third-party applications, one can relinquish this popup window and set the value to 0.<br />
+      <br />
+      <strong>PermittedApplications</strong><br />
+    <br />
+    defines the permitted third-party applications. SEB can run in conjunction with other programs, e.g. the <em>Calculator</em> or <em>Notepad</em>, both of which are set by default. In that case, the popup window for selection of third-party applications must be activated (set <em>ShowSebApplicationChooser</em> to 1) and these third-party applications must be added to <em>PermittedApplications</em>. They must have the following format:<br />
+    <br />
+    <span class="codetext">[application1,
+            Path-to-application1/application1-name;application2,Path-to-application2/application2-name;application3,
+            Path-to-application3/application3-name]</span>.<br />
+      <br />
+      The applications are separated from each other by semicolons. Alternatively, you can alternatively enter the paths in the <em><strong>SebStarter.bat</strong></em> script file. The format then looks like this:<br />
+      <br />
+</p>
+<div class="sourcecode">
+  <p class="sourcecode">...<br />
+    set  PermittedAppDir1=&quot;%ProgramFiles%\VMware\VMware  View\Client\bin<br />
+    set PermittedAppDir1(x86)=&quot;%ProgramFiles(x86)%\VMware\VMware View\Client\bin&quot; <br />
+    ...<br />
+    path %path%;%PermittedAppDir1%<br />
+    path %path%;%PermittedAppDir1(x86)%<br />
+    ...<br />
+    SebStarter.exe<br />
+    ... <br />
+  </p>
+</div>
+<p><br />
+  In this case, SEB must be started by double-click on <em><strong>SebStarter.bat</strong></em> rather than <em><strong>SebStarter.exe</strong></em>. The script enhances the environment variable PATH by the paths to the third-party applications and then calls SEB.<br />
+  <br />
+  <strong>AutostartProcess</strong><br />
+  <br />
+  defines an automatically starting process. Usually, this is the SEB client (<em>AutostartProcess=Seb</em>) in conjunction with a browser component. Currently it is the XULRunner, which must be inserted in the line <em>SebBrowser=...</em> .<br />
+</p>
+        <p>Special scenario:<br />
+          If you want to use SEB only as a <strong>pure kiosk application without browser</strong>, e.g. in order to secure a local exam application without a Learning Management System, then you must set <em>AutostartProcess=</em> (without the word <em>Seb</em>).<br />
+  <br />
+        <strong>MonitorProcesses</strong></p>
+        <p>When activated, all running applications and processes are observed. In case someone tries to launch a non-permitted application (no entry in <em>PermittedApplications</em>), this application is stopped. <strong>Hint</strong>: sometimes this option causes problems; thus it should be deactivated in case of doubt (set <em>MonitorProcesses=0</em>).<br />
+          <br />
+        <strong>HookMessages</strong></p>
+        <p>When activated, SEB intercepts key combinations like Alt_F4
+          or right mouse-click. In the other configuration file <span class="path">MsgHook.ini</span> , you can define in detail which key combinations to allow and which not. Below you see the default settings of the <em>MsgHook.ini</em> delivered with SEB Windows 1.9.1:<br/>
+    </p>
+    <div class="sourcecode">
+            <p>[SEB]</p>
+            <p>[MsgHookConfigFile]</p>
+            <p>WriteMsgHookLogFile=1</p>
+            <p>[SpecialKeys]</p>
+            <p>EnableEsc=0<br />
+              EnableCtrlEsc=0<br />
+              EnableAltEsc=0<br />
+              EnableAltTab=1<br />
+              EnableAltF4=0<br />
+              EnableStartMenu=0<br />
+              EnableRightMouse=0</p>
+            <p>[FunctionKeys]</p>
+            <p>EnableF1=0<br />
+              EnableF2=0<br />
+              EnableF3=0<br />
+              EnableF4=0<br />
+              EnableF5=1<br />
+              EnableF6=0<br />
+              EnableF7=0<br />
+              EnableF8=0<br />
+              EnableF9=0<br />
+              EnableF10=0<br />
+              EnableF11=0<br />
+              EnableF12=0</p>
+      <p>[ExitSequence]</p>
+            <p>B1=114<br />
+              B2=122<br />
+              B3=117<br />
+            </p>
+    </div>
+            </p>
+
+            <p> In the example above, most key combinations are disabled (<em>Enable...=0</em> means<em> &quot;Activate = false&quot;</em>).
+        That means with this configuration, only few shortkeys are allowed.<br />
+            </p>
+<p> One exception is the <strong>SEB exit sequence</strong>, which allows
+            for finishing the SEB at any point of time.
+            It is a combination of three function keys which must be pressed
+            in a certain order and then held down simultaneously
+            (just like Ctrl_Alt_Del for calling the Windows Security Screen or the Task Manager).
+            By default, the SEB exit sequence is set to <span class="quote">F3_F11_F6</span>,
+            which means the user must press the three function keys
+    F3, F11, F6 <strong>in this exact order</strong>, and then keep them pressed for a moment.</p>
+            <p> The SEB exit sequence can be <strong>customised</strong> in <span class="path">MsgHook.ini</span> by setting the variables B1, B2 and B3. The function keys F1, F2, ..., F12
+            are coded as decimal values (<span class="quote">virtual key codes</span>)
+            according to the following table: </p>
+            <table border="1" id="codeblock">
+            <tr>
+                <th>Function key</th>
+                <th>Code</th>
+              </tr>
+            <tr>
+                <td> F1 </td>
+                <td> 112 </td>
+              </tr>
+            <tr>
+                <td> F2 </td>
+                <td> 113 </td>
+              </tr>
+            <tr>
+                <td> F3 </td>
+                <td> 114 </td>
+              </tr>
+            <tr>
+                <td> F4 </td>
+                <td> 115 </td>
+              </tr>
+            <tr>
+                <td> F5 </td>
+                <td> 116 </td>
+              </tr>
+            <tr>
+                <td> F6 </td>
+                <td> 117 </td>
+              </tr>
+            <tr>
+                <td> F7 </td>
+                <td> 118 </td>
+              </tr>
+            <tr>
+                <td> F8 </td>
+                <td> 119 </td>
+              </tr>
+            <tr>
+                <td> F9 </td>
+                <td> 120 </td>
+              </tr>
+            <tr>
+                <td> F10 </td>
+                <td> 121 </td>
+              </tr>
+            <tr>
+                <td> F11 </td>
+                <td> 122 </td>
+              </tr>
+            <tr>
+                <td> F12 </td>
+                <td> 123 </td>
+              </tr>
+          </table>
+            <p> If we now set the variable <strong>B1</strong> to 115:
+          <div class="sourcecode">
+            <p class="sourcecode">B1=115</p>
+          </div>
+            </p>
+            <p> the <strong>first</strong> function key to be pressed changes from F3
+            to F4, since we changed the <strong>first</strong> variable
+            B<strong>1</strong>,
+            and 115 is the decimal value for the virtual key code for F4.
+            Since we did not change B2 and B3, the second and third function key
+            are left intact, so in summary the SEB exit sequence changes from the default
+            sequence F3_F11_F6 to the custom sequence F4_F11_F6.
+            With B2 and B3, you can change the other two function keys
+            of the SEB exit sequence as well, for example the values <br/>
+          <div class="sourcecode">
+            <p class="sourcecode">B1=115</p>
+            <p class="sourcecode">B2=116</p>
+            <p class="sourcecode">B3=117</p>
+          </div>
+            </p>
+            <p> will change the SEB exit sequence to F4_F5_F6.<br />
+              <br />
+              <strong>Important:</strong> If you try out a SEB exit sequence but quitting SEB does not work, it might help to try out <strong>another sequence</strong>. For example, the sequence F1_F2_F3 is empirically unsuitable. Possibly the F1 key should  be omitted completely, since it is reserved for the help function by many programs and is also responsible for the Windows Help. Higher function keys seem to be less problematic.<br />
+              <br />
+              In case you <strong>cannot quit SEB anymore</strong> and the Task Manager is locked when pressing
+              Ctrl_Alt_Del, it currently only helps to <strong>restart your computer</strong>. After the restart, you can copy the file <em><strong>MsgHook.ini</strong></em> located in the program data directory, set <strong>another key sequence</strong>, copy this modified <em>MsgHook.ini</em> back into the program data directory, thus overwriting / replacing the old <em>MsgHook.ini</em>. Afterwards you can restart SEB and test the new SEB exit sequence.<br />
+    </p>
+            <p> <strong>Remarks</strong>:<br />
+              <br />
+    1.)            If third-party applications shall be admitted in SEB,
+              you also have to admit the shortkey Alt_Tab by setting
+    <div class="sourcecode">
+      <p class="sourcecode">EnableAltTab=1</p>
+  </div>
+            </p>
+            <p> in <span class="path">MsgHook.ini</span>, as well as setting
+          <div class="sourcecode">
+            <p class="sourcecode">ShowSebApplicationChooser=1</p>
+  </div>
+            </p>
+            <p> in <span class="path">SebStarter.ini</span>.
+            In SEB, you must then press Alt_Tab, which will
+            launch the <span class="quote"><em>Permitted Applications</em></span> popup window, from which you
+            can choose the desired third-party application.<br />
+            <br />
+    </p>
+            <p>2.) If the <em><strong>Start Menu</strong></em> shall be admitted in SEB,            <em><strong>CreateNewDesktop </strong></em>must be deactivated, since a new desktop would cover the Start Menu and thus make it invisible. In this case, you must therefore set</p>
+            <div class="sourcecode">
+              <p class="sourcecode">EnabeStartMenu=1</p>
+            </div>
+            </p>
+            <p> in <span class="path">MsgHook.ini</span> and</p>
+    <div class="sourcecode">
+              <p class="sourcecode">CreateNewDesktop=0</p>
+            </div>
+            </p>
+            <p> in <span class="path">SebStarter.ini</span>.</p>
+<h4> <a name="Certificates"></a>Certificates </h4>
+            <p>In SEB using XULRunner (version 1.4 and above) problems with SSL certificates can occur:</p>
+            <ul>
+            <li>If your secured site is using certificates which are generally trusted by
+                browsers like Firefox, there might be a problem with SEB XULRunner. The
+                problem occurs when your server certificate is signed by an intermediate
+                certificate of any trusted certification authority. In that case the whole
+                issuer chain must be provided to the browser for validation. You might have 
+                to ask your server administrator to change their settings to solve the
+                problem. <br />
+                For further information please consult the documentation of your webserver: <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcertificatechainfile" target="_blank">Apache 2.2</a>, <a href="http://support.microsoft.com/kb/954755" target="_blank">IIS</a>.</li>
+            <li>Self-signed certificates need to be imported into SEB's XULRunner. Since XULRunner doesn't provide an easy way to add  exceptions for not generally trusted certificates, you can open the page in Firefox, accept the certificate, then copy the file <span class="path">cert_override.txt</span> to the XULRunner application profile.</li>
+          </ul>
+            <h4> <a name="ConnectBrowserAndTest" id="ConnectBrowserAndTest"></a>Connect  Browser and Test</h4>
+            <p>Before you start SEB, you should define the starting page of your online exam, and what keyboard shortcuts should be suppressed by SEB during the online exam. The latter have been described in the <a href="#ConfigurationFiles">Configuration Files</a> section above. At first, you can use the default values already given in the downloaded SEB.<br />
+              <br />
+    In order to change the start URL of SEB, set the value <em>ExamUrl</em> in the file <em>SebStarter.ini</em> to the corresponding web address, e.g..</p>
+            <div class="sourcecode">
+              <p class="sourcecode">ExamUrl=http://www.safeexambrowser.org/</p>
+            </div>
+            <h4><a name="LMSExtensions" id="LMS-Extensions"></a>LMS Extensions</h4>
+            <p>In order to use Safe Exam Browser, current versions of ILIAS and Moodle do not need extensions anymore. The connectivity to SEB is already included in these LMS. In case an older ILIAS version is used, you can find informations on installing the &quot;Naviless&quot; skin in ILIAS in the <span class="quote">ILIAS Information Center</span>. And for older Moodle versions, you can find informations on installing the extension in the Readme file attached to the the download file.</p>
+<!-- InstanceEndEditable --> </div>
+  <div id="bottom"></div>
+</div>
+<!--</div>-->
+</body>
+<!-- InstanceEnd --></html>

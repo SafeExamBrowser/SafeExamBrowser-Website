@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-D.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+        <title>Safe Exam Browser</title>
+        <!-- InstanceEndEditable -->
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css" media="screen"></style>
+<!-- InstanceBeginEditable name="head" -->
+        <script src="../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
+        <link href="../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
+        <!-- InstanceEndEditable -->
+		<link rel="stylesheet" type="text/css" href="../css/superfish.css" media="screen">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/hoverIntent.js"></script>
+		<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+</head>
+<body>
+<div id="container">
+  <div id="navigation">
+		<ul class="sf-menu">
+      <li normal><a href="../news_de.html">News</a> </li>
+      <li><a href="../about_overview_de.html">Über</a>
+        <ul>
+          <li><a href="../about_overview_de.html">Übersicht</a>
+          <li><a href="../about_demo_de.html">Demo</a></li>
+          <li><a href="../about_roadmap_de.html">Roadmap</a></li>
+        </ul>
+      </li>
+      <li><a href="../download_de.html">Download</a>
+        <ul>
+          <li><a href="../download_de.html">Downloads</a>
+          <li><a href="../download_releases_de.html">Alle&nbsp;Versionen</a></li>
+        </ul>
+      </li>
+      <li><a href="win_usermanual_de.html">Windows</a>
+        <ul>
+          <li><a href="win_quickguide_de.html">Kurzanleitung</a></li>
+          <li><a href="win_usermanual_de.html">Benutzerhandbuch</a></li>
+          <li><a href="win_release_notes_de.html">Release&nbsp;Notes</a></li>
+          <li><a href="win_developer.html">Entwickler</a></li>
+        </ul>
+      </li>
+      <li><a href="../macosx/mac_usermanual_de.html">MacOSX</a>
+        <ul>
+          <li><a href="../macosx/mac_usermanual_de.html">Benutzerhandbuch</a></li>
+          <li><a href="../macosx/mac_release_notes_de.html">Release&nbsp;Notes</a></li>
+          <li><a href="../macosx/mac_developer.html">Entwickler</a></li>
+        </ul>
+      </li>
+      <li><a href="../support_de.html">Support</a></li>
+    </ul>
+  </div>
+  <div id="header_f">
+    <div id="logotext_f_seb"> <font color="#ff963d">SEB</font></div>
+    <div id="logotext_f_safe"> <font color="#070782">Safe Exam Browser</font></div>
+  </div>
+  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
+            <tr>
+                <td valign="top"><h4>Kurzanleitung zu SEB für Windows</h4>
+              <p><span class="textsubnavi"><a href="win_usermanual_en.html">»Benutzerhandbuch für  SEB 2.0<br />
+              </a></span>(momentan nur in Englisch verfügbar)</p></td>
+                <td align="right" valign="top"><span class="link_small"><a href="win_quickguide_en.html">English</a>&nbsp;&nbsp;&nbsp;Deutsch</span></td>
+              </tr>
+          </table>
+            <p>Diese Anleitung erklärt Schritt für Schritt, wie SEB eingerichtet wird und wie damit sichere Online-Prüfungen in einem Learning-Management-System (LMS) ausgeführt werden.</p>
+            <div id="CollapsiblePanel1" class="CollapsiblePanel">
+            <div class="CollapsiblePanelTab" tabindex="0"><strong>Inhalt</strong> <span class="textklein">Verbergen/Zeigen</span></div>
+        <div class="CollapsiblePanelContent">
+        <a href="#step1">SEB herunterladen</a><br />
+        <a href="#step2">SEB konfigurieren</a><br />
+        <a href="#step3">SEB verteilen    </a><br />
+        <a href="#step4">SEB installieren </a><br />
+        <a href="#step5">SEB ausführen    </a><br />
+        </div>
+          </div>
+            <h4><a name="step1" id="step1"></a>Schritt 1:  SEB herunterladen</h4>
+            <p>Laden Sie die aktuelle SEB-Version im <a href="../download_de.html">Download-Bereich</a> als zip-Datei (z.B. <em><strong>seb_1.9.1_win.zip</strong></em>) herunter. Bis zur Version 1.4.1 enthält die zip-Datei die Programmdateien <em><strong>SebStarter.exe</strong></em> und <em><strong>MsgHook.dll</strong></em> zum manuellen Kopieren auf die Festplatte. Ab Version 1.7 enthält die zip-Datei hingegen eine msi-Datei <em><strong>SebWindowsInstall.msi</strong></em> für den Microsoft Installer, welche eine richtige Installation durchführt und die Programmdateien automatisch an die richtigen Stellen kopiert.<br />
+              <br />
+            Ab Version 1.5 benötigt SEB für Windows die Laufzeitumgebung <strong>Microsoft .NET</strong>, welche auf den meisten Windows-Rechnern bereits installiert ist, allerdings nicht immer in der neuesten Version.  Für die meisten SEB-Komponenten, d.h. auch auf den Prüfungsrechnern, genügt die Version .NET 3.5. Diese ist bei Windows 7 automatisch im Betriebssystem enthalten, unter Windows XP jedoch nicht  unbedingt. Das optionale Tool <em><strong>SebWindowsConfig.exe</strong></em> (siehe unten) benötigt die neueste Version .NET 4.0 - allerdings nur auf dem Rechner, wo der Dozent SEB konfiguriert.<br />
+              <br />
+Prüfen Sie deshalb in der Liste der Programme (&quot;Systemsteuerung&quot; -&gt; &quot;Programme hinzufügen / entfernen&quot; oder &quot;Programme&quot; -&gt; &quot;Programm deinstallieren&quot;), welche .NET-Versionen bereits auf Ihrer Maschine installiert sind; diese heissen &quot;<strong>Microsoft .NET Framework</strong> x.y&quot;. Falls das Framework .NET 3.5 in der Liste noch fehlt, können Sie es hier herunterladen und installieren:<br />
+            </p>
+            <p><a href="http://www.microsoft.com/en-us/download/details.aspx?id=25150">http://www.microsoft.com/en-us/download/details.aspx?id=25150</a></p>
+            <p>Das Framework .NET 4.0 können Sie hier herunterladen:<br />
+              <br />
+              <a href="http://www.microsoft.com/en-us/download/details.aspx?id=17718">http://www.microsoft.com/en-us/download/details.aspx?id=17718</a><br />
+            </p>
+<h4><a name="step2" id="step2"></a>Schritt 2: SEB konfigurieren</h4>
+            <p>Entpacken Sie (in der Rolle als Dozent) die heruntergeladene zip-Datei, z.B. <em><strong>seb_1.9.1_win.zip</strong></em>, in ein beliebiges Verzeichnis Ihrer Festplatte. <font color="red"><strong>WICHTIG:</strong></font> Machen Sie <strong>keinen Doppelklick</strong> auf die zip-Datei, denn dies zeigt ihre enthaltenen Dateien nur an, statt sie wirklich zu entpacken. Machen Sie stattdessen einen <strong>Rechtsklick</strong> auf die zip-Datei und wählen Sie im erscheinenden Kontext-Menü die Option <strong>Alle Extrahieren... </strong>aus. Dies entpackt die zip-Datei in ein neues Verzeichnis  <em><strong>seb_1.9.1_win</strong></em>/ . Wechseln Sie im Explorer (Datei-Manager) in dieses Verzeichnis:<br />
+              <br />
+              <img src="images/1.9/SebWindowsZipStructureCut.png" width="560" height="464" /><br />
+              <br />
+Konfigurieren Sie SEB, indem Sie die Dateien <em><strong>MsgHook.ini</strong></em> und <em><strong>SebStarter.ini</strong></em>  modifizieren.<br />
+Ab Version 1.8 können Sie das bequem via Mausklicks mit dem mitgelieferten Tool <em><strong>SebWindowsConfig.exe</strong></em> erledigen (sofern Sie .NET 4.0 auf Ihrem Konfigurations-Rechner installiert haben). Am wichtigsten ist es, in der Rubrik <em><strong>Online exam</strong></em>  im Eingabefeld <em><strong>Exam URL</strong></em> di<strong>e </strong>Startseite der Online-Prüfung<strong> (</strong><em>http://...</em>) zu setzen, und in der Rubrik <em><strong>Exit sequence</strong></em> die Funktionstasten zum Verlassen des SEB festzulegen. Mehr Details zur Konfiguration finden Sie im im <a href="win_usermanual_de.html">Benutzerhandbuch</a>.<br />
+              <br />
+              Alternativ dazu (und in älteren Versionen) können Sie die ini-Dateien in einen beliebigen ASCII-Texteditor (z.B. <em>Notepad</em>) laden und dort modifizieren. Die Startseite der Online-Prüfung (<em>http://...</em>) steht in der Zeile <em>ExamUrl=...</em>oder <em>URL_EXAM=...</em> der Datei <em><strong>SebStarter.ini</strong></em>. Die Funktionstasten zum Verlassen des SEB werden in codierter Form in den Zeilen <em>B1=...</em>, <em>B2=...</em> und <em>B3=...</em> der Datei <strong><em>MsgHook.ini</em></strong> festgelegt. Das genaue Codierschema finden Sie im <a href="win_usermanual_de.html#codeblock">Benutzerhandbuch</a>. Bei Verwendung des Tools <em><strong>SebWindowsConfig.exe</strong></em> können Sie die Funktionstasten aber direkt ankreuzen, ohne sich mit der Codierung zu befassen; diese wird automatisch vorgenommen.<br />
+              <br />
+              Um weitere Programme in SEB zu erlauben, können Sie zusätzlich die Datei <em><strong>SebStarter.bat</strong></em> editieren und dort die <strong>Pfade</strong> zu den <strong>zugelassenen Anwendungen</strong> eintragen, damit SEB diese Anwendungen finden kann. Weitere Optionen sind im <a href="win_usermanual_de.html">Benutzerhandbuch</a> dokumentiert.<br />
+    </p>
+<h4><a name="step3" id="step3"></a>Schritt 3: SEB verteilen</h4>
+          <p>Sobald Sie die Konfigurationsdateien Ihren Bedürfnissen angepasst haben, packen Sie eine neue zip-Datei zusammen. Markieren Sie dazu die Dateien<br />
+            <br />
+            <em>MsgHook.ini<br />
+SebStarter.ini<br />
+SebWindowsInstall.msi</em><br />
+            <br />
+            des Verzeichnisses mit Ctrl-Taste und linker Maustaste, drücken Sie die rechte Maustaste, wählen Sie  &quot;Senden an&quot; &gt; &quot;komprimierten (gezippten) Ordner&quot;, und geben als Dateiname z.B. <em><strong>SebWindowsInstall.zip</strong></em> an.<br />
+            </p>
+          <p><strong><font color="red">BEMERKUNG</font></strong>: Falls Sie zusätzliche Programme in SEB zulassen wollen, benötigen Sie eventuell noch die Datei <em><strong>SebStarter.bat</strong></em>. Diese Datei müssen Sie dann ebenfalls in die zip-Datei hineinpacken.<br />
+            <br />
+            Die entstehende zip-Datei können Sie dann an Ihre Studenten bzw. Prüflinge verteilen (z.B. bei Prüfungen auf privaten Notebooks) oder per Deployment via Informatikdiensten in einen Computerraum verteilen. Bitte weisen Sie Ihre Studenten an, <strong>die ausgepackte zip-Datei (Source Directory) auf ihrer Festplatte zu belassen</strong>, und zwar <strong>auch nach der Installation</strong> (siehe Schritt 4).<br />
+            <br />
+            <strong>Ab Version 1.7</strong><br />
+<br />
+            Alternativ dazu ist auch eine Verteilung via <em><strong>Administrative Install</strong></em> möglich. Hierzu müssen Sie (der Dozent) das Skript <em><strong>SebWindowsAdminInstall.bat</strong></em> via Rechtsklick und &quot;<em><strong>Als Administrator ausführen</strong></em>&quot; aufrufen. Dieses erzeugt ein sogenanntes <strong>Source Image</strong>, d.h. ein neues Unterverzeichnis namens <em><strong>SebWindowsAdminImage</strong></em>, und kopiert die von Ihnen modifizierten drei Konfigurationsdateien in dieses Source Image. Das Source Image können Sie dann auf einem Netzlaufwerk zur Verfügung stellen.</p>
+          <h4><a name="step4" id="step4"></a>Schritt 4: SEB installieren</h4>
+          <h5><strong>Bis Version 1.4.1</strong> (veraltet)</h5>
+          <p>SEB muss nicht notwendigerweise im Programm-Ordner (z.B. <em><strong>C:\Programme</strong></em>) installiert werden. Sie können ihn in einem beliebigen Verzeichnis installieren. In jedem Fall können Sie einen Shortcut (sozusagen einen &quot;Startknopf&quot;) von SEB auf ihrem Windows-Desktop (Schreibtisch) erstellen, indem Sie auf die Datei <span class="path">...\SEB\Seb.exe</span> rechtsklicken und dann <strong>Senden an &gt; Desktop (Shortcut erzeugen) </strong>anwählen.<br />
+            <br />
+            Falls Sie diese (einfache, aber veraltete) SEB-Variante wählen, benötigen Sie keinen Installer, müssen aber auf den Dienst <em><strong>SebWindowsService.exe</strong></em> (siehe unten) verzichten, der wichtige sicherheitsrelevante Optionen wie z.B. den Task Manager deaktivieren kann, was für viele Online-Prüfungen wünschenswert ist.<br />
+            <br />
+            <strong>Ab Version 1.7</strong><br />
+            <br />
+            Auf den Prüfungsrechnern muss die verteilte <em><strong>SebWindowsInstall.zip</strong></em>-Datei ausgepackt bzw. das Source Image heruntergeladen werden. Sodann kann die eigentliche Installation durch Doppelklick auf die Datei <em><strong>SebWindowsInstall.msi</strong></em> erfolgen. Der Installationsprozess ist einfach und selbsterklärend. Nach erfolgreicher Installation befinden sich die beiden Unterverzeichnisse <span class="path">SebClient\ </span> und <span class="path">SebWindowsService\ </span> im Installationsverzeichnis, z.B. in<br />
+            <br />
+            <span class="path">C:\Programme (x86)\ETH Zuerich\SEB Windows </span><strong><em>1.9.1</em></strong><br />
+          </p>
+<p>Am Ende des Installationsvorgangs wird ein Shortcut (sozusagen ein &quot;Startknopf&quot;) von SEB auf dem Windows-Desktop (Schreibtisch) erstellt. Ferner wird am Ende der Installationsroutine automatisch der  Dienst <em><strong>SebWindowsService.exe</strong></em><strong></strong> im Hintergrund gestartet.<br />
+  <br />
+  <font color="red"><strong>WICHTIG:</strong></font> Für eine spätere <strong>Deinstallation</strong> von SEB verlangt die aktuelle SEB-Version 1.9.0, dass das <strong>Source Directory</strong> (= das aus der <em><strong>SebWindowsInstall.zip</strong></em>-Datei ausgepackte Verzeichnis, welches die <em><strong>SebWindowsInstall.msi</strong></em>-Datei und die .ini-Dateien enthält) <strong>auf der Festplatte des Zielrechners bleiben muss</strong> und auch nicht verschoben oder umbenannt werden sollte. Ansonsten kann es sein, dass beim  Deinstallieren via <strong>Systemsteuerung</strong> das Verzeichnis, in welchem die .msi-Datei liegt, nicht gefunden werden kann und die Deinstallation deshalb fehlschlägt. Deshalb sollten die Studenten angewiesen werden, <strong>das Source Directory auf ihrer Festplatte zu behalten</strong>, und zwar <strong>auch nach der Installation</strong>.</p>
+<h4><a name="step5" id="step5"></a>Schritt 5: SEB ausführen</h4>
+            <ul>
+            <li><font color="red"><strong>ACHTUNG:</strong></font> Bevor Sie SEB starten, merken Sie sich bitte die Tastenkombination zum Beenden von SEB! Die Voreinstellung ist F3_F11_F6.</li>
+            <li>Starten Sie SEB durch Doppelklick auf <span class="path">SebStarter.exe</span> (zu finden im Installationsverzeichnis unter </strong> ...\SebClient\Release), oder durch Doppelklick auf den bei der Installation erstellten Shortcut zu <span class="path">SebStarter.exe</span> auf ihrem Windows-Desktop. <font color="red"><strong>ACHTUNG:</strong></font> Falls zusätzlich <strong>zugelassene Applikationen</strong> in der Datei <em>SebStarter.bat</em> definiert wurden, muss SEB durch Doppelklick auf <em><strong>SebStarter.bat</strong></em> statt auf <em>SebStarter.exe</em> gestartet werden!</li>
+            <li> Beenden Sie den SEB durch Drücken der Tastenkombination (drücken Sie die festgelegten Tasten in der festgelegten Reihenfolge und halten Sie sie einen Augenblick gedrückt).</li>
+          </ul>
+            <script type="text/javascript">
+var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
+      </script> 
+            <!-- InstanceEndEditable --> </div>
+  <div id="bottom"></div>
+</div>
+</body>
+<!-- InstanceEnd --></html>
