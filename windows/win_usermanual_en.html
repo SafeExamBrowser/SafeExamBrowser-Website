@@ -158,13 +158,13 @@
 <img src="images/SEB_Preferences_02_ConfigFile.png" width="650" height="389" border="1" class="image5" /><br />
               <br />
     <ul>
-      <li><span class="quote">Use SEB settings file for ... starting an exam</span>: A configuration file saved with this option will start the exam with the according settings, but won't change the local SEB settings.</li>
+      <li><span class="quote">Use SEB settings file for ... starting an exam</span>: <span class="red">A configuration file saved with this option will start the exam</span> with the according settings, but won't change the local SEB settings.</li>
     </ul>
     <ul>
-      <li><span class="quote">Use SEB settings file for ... configuring a client</span>: A SEB settings file saved with this option can be used to change the local settings of a SEB client. Usually you shoud encrypt it with the same password which is set as administrator password on the SEB client (or none if there is no administrator password set on the SEB client yet). <br />
+      <li><span class="quote">Use SEB settings file for ... configuring a client</span>: <span class="red">A SEB settings file saved with this option can be used to change the local settings of a SEB client</span>. <strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong> (using an empty password prevents people from having to enter a password just when SEB is starting, unless you want this to prevent SEB being started unintentionally for example in a computer lab when there is no exam happening).<br />
         When this .seb file is opened, for example by double clicking it in Windows Explorer, then SEB is started and settings from this file are copied into the file <span class="path">SebClientSettings.seb</span> which is placed in the hidden <span class="quote">Local Application Data</span> folder of the current user (see below for exact path). <br />
         <br />
-        You can also copy this file manually or with a deployment system one of the following directories:<br />
+        <span class="red">You can also copy this file manually or with a deployment system one of the following directories</span>:<br />
         <br />
         <ul>
           <li><strong class="path">C:\ProgramData\SafeExamBrowser\</strong><br />
@@ -185,7 +185,7 @@
       <li><span class="quote">Allow to open preferences window on client</span> (Mac only): Usually you should disable the preference window on exam clients besides for debugging purposes. </li>
       <li><span class="quote">Choose identity to be used for encrypting SEB settings file ...</span> In this popup menu  all identities (X.509 certificates with RSA public key and associated private key) in the Windows Certificate Store are listed, which can be used for encrypting and decrypting. Export the chosen identity and install it on your SEB clients, then they can decrypt .seb files encrypted with this certificate/key.<br />
       </li>
-      <li><span class="quote">Settings password</span>: Password to decrypt the settings file, if one is set then it will be prompted when SEB reads the settings.</li>
+      <li><span class="quote">Settings password</span>: Password to decrypt the settings file, if one is set then it will be prompted when SEB reads the settings. <span class="red"><strong>For  local client settings</strong></span><strong> (saved on every exam client, at one of the two possible standard paths, see above) <span class="red">you don't have to enter any password</span>.</strong> Then a standard password is used for encrypting these settings. This is not very safe, but you should anyways not store any really secret information (like critical admin and quit passwords or a secret exam URL) in the local client settings, for that you should use  separate settings files saved with the option <span class="quote">&quot;Use SEB settings file for ... starting an exam</span>&quot;.</li>
       <li><span class="quote">Confirm settings password</span>: Retype the settings password.</li>
       <li><span class="quote">Default settings</span>: After the user confirms, settings are reset to the default settings.</li>
       <li><span class="quote">Revert to last opened</span>: After the user confirms, settings are reverted to the last ones loaded. </li>
