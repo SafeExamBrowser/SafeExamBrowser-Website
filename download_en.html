@@ -79,49 +79,47 @@
       </tr>
 
       <tr>
-        <td><p id="half_linespace"><strong><a name="Win" id="Win20"></a><a href="http://sourceforge.net/projects/seb/files/seb/SEB_2.0.3/SafeExamBrowserInstaller.exe/download" target="_blank">Safe Exam Browser 2.0.3 </a></strong> for Windows 7 and Windows 8/8.1<br />
-          <span class="codetext">SHA1: bda6a033b4c1665888a2416b76d0fa2db2f88989<br />
-          MD5: 6b5421a06026910f8594d02f8e74a539</span></p>
-<p id="half_linespace">Safe Exam Browser 2.0 is a completely re-engineered, modern .NET application, including new features, superior usability and improved stability. </p>
-<p><span class="quote">Version 2.0.3:</span></p>
+        <td><p id="half_linespace"><strong><a name="Win" id="Win20"></a><a href="http://sourceforge.net/projects/seb/files/seb/SEB_2.1/SafeExamBrowserInstaller.exe/download" target="_blank">Safe Exam Browser 2.1 </a></strong> for Windows 7 and Windows 8/8.1<br />
+          <span class="codetext">SHA1: 588ea06d91ff9b66004311876506918e25303383</span><br />
+          <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from new <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.1" target="_blank">GitHub project site</a>. <br />
+        </p>
+<p id="half_linespace"><span class="half_linespace">Safe Exam Browser 2.1 for Windows  includes new features, usability, stability and security improvements:</span></p>
 <ul>
-  <li>    Improves general stability and compatibility with some exam systems.</li>
-  <li>Allows current versions of Flash to run with SEB in both kiosk modes correctly. </li>
-  <li>Updated browser engine to XULRunner/Gecko (Firefox) 36. </li>
-  <li>Now Flash, Java and JavaScript can be enabled/disabled. </li>
-  <li>Bug fixes include a  rare keyboard bug,  another bug which sometimes caused options in the Windows Security Screen (Ctrl-Alt-Delete) missing after quitting SEB and an exception error message when using the WiFi control in the task bar and the WiFi connection drops. </li>
-  <li>SEB 2.0.3 can  be used with the (currently experimental) <a href="https://github.com/timhunt/moodle-quizaccess_offlinemode" target="_blank">fault-tolerant mode Moodle quiz plugin</a>, which allows to continue quizzes even if the internet connection to the Moodle server fails.</li>
+  <li><span class="half_linespace">SEB 2.1 is the first Safe Exam Browser version featuring a touch optimized mode for Windows tablet computers. </span></li>
+  <li><span class="half_linespace">Buttons for restart exam, reload page, change keyboard layout and a display for the current time improve usability in exams. </span></li>
+  <li>New feature  which monitors processes and hinders all non-permitted applications  to open, become active and display windows while SEB is running.</li>
+  <li><span class="half_linespace">Individual proxy settings, URL filters and server certificates can be used per exam.</span></li>
+  <li><span class="half_linespace"> The SEB Config Tool has been re-engineered and now allows comfortable editing and testing of SEB configuration files. </span></li>
+  <li>The SEB installer now updates an existing SEB installation automatically, so an older SEB version doesn't need to be uninstalled first. </li>
+  <li>Updated browser engine to XULRunner/Gecko (Firefox) 38.0.6. </li>
+  <li>Bug fixes include   another bug which sometimes caused options in the Windows Security Screen (Ctrl-Alt-Delete) missing after quitting SEB, SEB sometimes didn't exit completely when quitting and installing SEB in an administrator (or other) account didn't set filetype for <span class="quote">.seb</span> config files  correctly in another user account.</li>
+  <li>SEB 2.1 can  be used with the <a href="https://github.com/timhunt/moodle-quizaccess_offlinemode" target="_blank">fault-tolerant mode Moodle quiz plugin</a>, which allows to continue quizzes even if the internet connection to the Moodle server fails.</li>
 </ul>
 <!--<p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and known issues.</p>-->
-<p>Main features: </p>
+<p>Other features: </p>
 <ul>
-            <li>Adds support for encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. The  configuration is compatible with both the Windows and Mac version of SEB. Use the separate SEB Windows configuration tool to create .seb settings.</li>
+            <li>Support for encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. The  configuration is compatible with both the Windows and Mac version of SEB. Use the separate SEB Windows configuration tool to create <span class="quote">.seb</span> settings.</li>
             <li>Easier installation and initial configuration of a SEB client, which facilitates to use SEB for secure exams especially on unmanaged computers like students' own laptops, in BYOD scenarios.</li>
-            <li>New feature to quit SEB after the exam is submitted by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by your LMS after submitting the exam.</li>
-            <li>The <span class="quote">Browser Exam Key </span>allows an exam module to authenticate the connecting SEB version and its settings. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a> and <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a>.</li>
-            <li>New options in the user interface: Size and positioning of browser windows (main window with the quiz and additional browser windows) can be preset. The SEB main browser window can be displayed full screen or as a sizable and movable window.</li>
-            <li>Permitted third party applications are easier to start up (autostart together with SEB and by clicking on its icon in the new SEB task bar). </li>
-            <li>Prohibited processes and applications  can be preset which are stopped when SEB starts up and if they start up while SEB is running.</li>
-            <li>Screen saver, idle sleep and Windows Update are paused while SEB is running. </li>
-            <li>PrintScreen can be blocked, the clipboard is cleaned when SEB is started and stopped. The Flash plugin is working again without workarounds.</li>
-            <li>Added optional WLAN control to the SEB task bar which allows to reconnect to WiFi networks which have previously been connected to (before using SEB), see settings pane <span class="quote">Security -&gt; Allow WLAN Control</span>.</li>
-            <li>SEB now pauses Windows Update and therefore prevents slowing down and sudden restarting of a machine during an exam.</li>
-            <li>SEB now disables screen saver and idle sleep while SEB is running and hides the desktop wallpaper (in Windows 8).</li>
-            <li>Java applications (like OpenOffice) can now be used as permitted processes, but require specific settings (see <a href="../windows/win_usermanual_en.html#ApplicationsPane">manual</a>).</li>
-            <li>Added new kiosk mode 'Disable Explorer Shell' (<span class="quote">Security settings pane -&gt; Kiosk Mode: Disable Explorer Shell</span>) which doesn't rely on the 'Create new Desktop' method and increases compatibility with screen recording proctoring software like ObserveIT.</li>
-            <li>Added process monitoring for prohibited processes: Those will be closed when SEB is started up or when they start up while SEB is running.</li>
-            <li>Improved stability and performance when starting, reconfiguring and quitting SEB and the build-in XULRunner seb browser component, which should reduce problems with the XULRunner seb profile folder being locked and producing error message that 'seb is already running'.</li>
+            <li>Feature to quit SEB after the exam is submitted by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by your LMS after submitting the exam.</li>
+            <li>The <span class="quote">Browser Exam Key </span>allows an exam module to authenticate the connecting SEB version and its settings. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a> and <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a>, <a href="windows/win_usermanual_en.html#OpenOLAT">OpenOLAT</a> from version 10.2 has built-in support.</li>
+            <li>Configurable options (per exam) in the user interface: Size and positioning of browser windows (main window with the quiz and additional browser windows) can be preset. The SEB main browser window can be displayed full screen or as a sizable and movable window.</li>
+            <li>Flash, Java and other browser plugins can be used if necessary.</li>
+            <li>Permitted third party applications are easy to start and to switch to (autostart together with SEB and by clicking on its icon in the  SEB task bar). Prohibited processes and applications  can be defined which are closed when SEB starts up.</li>
+            <li>PrintScreen can be blocked, the clipboard is cleaned when SEB is started and stopped. The desktop wallpaper is hidden  (in Windows 8). </li>
+            <li>Optional Wi-Fi control in SEB task bar  allows to reconnect to known W-iFi networks.</li>
+            <li>SEB  pauses Windows Update and therefore prevents slowing down and sudden restarting of a machine during an exam.</li>
+            <li>Screen saver and idle sleep  are paused while SEB is running to prevent having to enter an screen unlock password before the exam starts. </li>
           </ul>
-        <p>  SEB configuration editor for creating and modifiying .seb settings files for Safe Exam Browser 2.0:</p>
+        <p>  SEB configuration editor for creating and modifiying <span class="quote">.seb</span> settings files for Safe Exam Browser:</p>
         <ul>
-            <li>Allows to define all options for the Windows and Mac versions of SEB 2.0.</li>
-            <li>Can save .seb files for individual configuration per exam and per exam client, which are protected by  strong encryption against manipulation. </li>
+            <li>Allows to define all options for the Windows and Mac versions of SEB 2.x.</li>
+            <li>Can save <span class="quote">.seb</span> files for individual configuration per exam and per exam client, which are protected by  strong encryption against manipulation. </li>
             <li>Configuration files can  configure a SEB exam client to show for example a portal page with the current exams.</li>
             <li>Configuration files can be used to start an exam with individual configuration (like specific security and user interface options, permitted third party applications, Browser Exam Key for authenticating these settings and the SEB application to an exam server, Quit Link to close SEB automatically when an exam is submitted etc.).</li>
-            <li>Supports  .seb files encrypted with password or  X.509 (public/private key cryptography) certificates. For debugging purposes .seb configuration files can be saved unencrypted in an human readable XML format.</li>
+            <li>Supports  <span class="quote">.seb</span> files encrypted with password or  X.509 (public/private key cryptography) certificates. For debugging purposes .seb configuration files can be saved unencrypted in an human readable XML format.</li>
           </ul>
-        <p>See <a href="windows/win_release_notes_en.html">release notes</a> for complete list of new features and changes.</p></td>
-        <td valign="top"><a href="http://sourceforge.net/projects/seb/files/seb/SEB_2.0.3/SafeExamBrowserInstaller.exe/download" target="_blank"><img src="Media/icon_pfeil.jpg" alt="" height="29" width="40" border="0" /></a></td>
+        <p><span class="half_linespace">See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and read the <a href="windows/win_usermanual_en.html">updated manual</a> which now covers all SEB 2.1 features.</span></p></td>
+        <td valign="top"><a href="http://sourceforge.net/projects/seb/files/seb/SEB_2.1/SafeExamBrowserInstaller.exe/download" target="_blank"><img src="Media/icon_pfeil.jpg" alt="" height="29" width="40" border="0" /></a></td>
 </tr>
       
 

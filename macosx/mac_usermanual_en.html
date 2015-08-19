@@ -83,26 +83,27 @@
     <div id="CollapsiblePanel1" class="CollapsiblePanel">
       <div class="CollapsiblePanelTab" tabindex="0"><strong>Contents</strong> <span class="textklein">Hide/Show</span></div>
       <div class="CollapsiblePanelContent">
-        <a href="#features">Features</a><br />
-        <a href="#moodle">Using SEB with Moodle</a><br />
-        <a href="#download">Download/Installation</a><br />
-        <a href="#starting">Starting and Quitting SEB</a><br />
-        <a href="#configuration">Configuration</a><br />
-        <a href="#GeneralPane">&nbsp;&nbsp;&nbsp;&nbsp;General Pane</a><br />
-        <a href="#ConfigFilePane">&nbsp;&nbsp;&nbsp;&nbsp;Config File Pane</a><br />
-        <a href="#AppearancePane">&nbsp;&nbsp;&nbsp;&nbsp;Appearance Pane</a><br />
-        <a href="#BrowserPane">&nbsp;&nbsp;&nbsp;&nbsp;Browser Pane</a><br />
-        <a href="#DownUploadsPane">&nbsp;&nbsp;&nbsp;&nbsp;Down/Uploads Pane</a><br />
-        <a href="#ExamPane">&nbsp;&nbsp;&nbsp;&nbsp;Exam Pane</a><br />
-        <a href="#ApplicationsPane">&nbsp;&nbsp;&nbsp;&nbsp;Applications Pane</a><br />
-        <a href="#NetworkPane">&nbsp;&nbsp;&nbsp;&nbsp;Network Pane</a><br />
-        <a href="#NetworkPaneFilterSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filter Section</a><br />
-        <a href="#NetworkPaneCertificatesSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Certificates Section</a><br />
-        <a href="#NetworkPaneProxiesSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proxies Section</a> </a><br />
-        <a href="#SecurityPane">&nbsp;&nbsp;&nbsp;&nbsp;Security Pane</a><br />
-        <a href="#operating_system">Operating System</a>	<br />
-        <a href="#secure_environment">Secure Environment</a><br />
-        <a href="#license">License</a><br />
+        <a href="mac_usermanual_en.html#features">Features</a><br />
+        <a href="mac_usermanual_en.html#moodle">Using SEB with Moodle</a><br />
+        <a href="mac_usermanual_en.html#OpenOLAT">Using SEB with OpenOLAT</a><br />
+        <a href="mac_usermanual_en.html#download">Download/Installation</a><br />
+        <a href="mac_usermanual_en.html#starting">Starting and Quitting SEB</a><br />
+        <a href="mac_usermanual_en.html#configuration">Configuration</a><br />
+        <a href="mac_usermanual_en.html#GeneralPane">&nbsp;&nbsp;&nbsp;&nbsp;General Pane</a><br />
+        <a href="mac_usermanual_en.html#ConfigFilePane">&nbsp;&nbsp;&nbsp;&nbsp;Config File Pane</a><br />
+        <a href="mac_usermanual_en.html#AppearancePane">&nbsp;&nbsp;&nbsp;&nbsp;Appearance Pane</a><br />
+        <a href="mac_usermanual_en.html#BrowserPane">&nbsp;&nbsp;&nbsp;&nbsp;Browser Pane</a><br />
+        <a href="mac_usermanual_en.html#DownUploadsPane">&nbsp;&nbsp;&nbsp;&nbsp;Down/Uploads Pane</a><br />
+        <a href="mac_usermanual_en.html#ExamPane">&nbsp;&nbsp;&nbsp;&nbsp;Exam Pane</a><br />
+        <a href="mac_usermanual_en.html#ApplicationsPane">&nbsp;&nbsp;&nbsp;&nbsp;Applications Pane</a><br />
+        <a href="mac_usermanual_en.html#NetworkPane">&nbsp;&nbsp;&nbsp;&nbsp;Network Pane</a><br />
+        <a href="mac_usermanual_en.html#NetworkPaneFilterSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Filter Section</a><br />
+        <a href="mac_usermanual_en.html#NetworkPaneCertificatesSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Certificates Section</a><br />
+        <a href="mac_usermanual_en.html#NetworkPaneProxiesSection">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Proxies Section</a> </a><br />
+        <a href="mac_usermanual_en.html#SecurityPane">&nbsp;&nbsp;&nbsp;&nbsp;Security Pane</a><br />
+        <a href="mac_usermanual_en.html#operating_system">Operating System</a>	<br />
+        <a href="mac_usermanual_en.html#secure_environment">Secure Environment</a><br />
+        <a href="mac_usermanual_en.html#license">License</a><br />
         <a href="mac_release_notes_en.html#releasenotes">Release Notes</a><br />
       </div>
     </div>
@@ -131,6 +132,13 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
 </ol>
 <p>Sometimes hiding course navigation, link to the user's Moodle profile, logout etc. doesn't work as expected because <span class="red">some custom Moodle themes don't support the secure browser mode of Moodle correctly, they display links with which students can get out of the quiz during an exam.</span> If this happens only with your customized theme and not the standard Moodle theme, then your theme is not implemented correctly. In that case you should fix the problem in your custom Moodle theme.  You may also create URL filter rules which only allow to access the exam and no other parts of Moodle, but this is not trivial and we cannot provide you with any support on that. </p>
 <p>You may find additional information and help in the discussion boards for <a href="https://sourceforge.net/p/seb/discussion/" target="_blank">SEB</a> and <a href="https://moodle.org/mod/forum/view.php?id=737" target="_blank">Moodle</a>.</p>
+<h4><a name="OpenOLAT" id="moodle2"></a><strong>Using SEB with OpenOLAT</strong></h4>
+<p>An assessment mode has been added to the OpenOLAT standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOLAT courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOLAT course elements can be configured for such an exam setting. </p>
+<p>One of the many security features is the enforced usage of  Safe Exam Browser. An exam setting can be configured with multiple <a href="#ExamPane">Browser Exam Key</a> keys.</p>
+<p>No additional software needs to be installed in order to use the assessment mode together with  Safe Exam Browser. The assessment mode is globally enabled / disabled in Administration -&gt; Modules -&gt; Assessment mode. Within the courses the configuration is done in the course menu. </p>
+<p><a href="https://confluence.openolat.org/display/OO103EN/Assessment+mode" target="_blank">More information and a video tutorial about the assessment mode</a>.<br />
+</p>
+<p><a href="http://www.openolat.org" target="_blank">More information about OpenOLAT</a>.</p>
 <h4><a name="download" id="download"></a>Download/Installation</h4>
     <p>You can download the DMG disk image file <a href="../download_en.html#MacOSX">here</a>. If it doesn't get mounted, just double click on the downloaded file. Then  drag the SEB application to the Applications folder (you can drop it on the alias icon in the mounted volume). <strong>Make sure you don't have another SEB version 2.x on your Mac</strong> (as a <span class="path">.seb</span> config file or a <span class="path">seb://</span> link might get opened with the wrong version).<br />
     </p>
@@ -202,7 +210,7 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
     <ul>
       <li><span class="quote">Default Settings</span>: After the user confirms, settings are reset to the default settings.</li>
       <li><span class="quote">Local Client Settings</span>: After the user confirms, revert to the local client settings.</li>
-      <li><span class="quote"> Last Saved</span>: After the user confirms, settings are reverted to the last ones saved or loaded..</li>
+      <li><span class="quote"> Last Saved</span>: After the user confirms, settings are reverted to the last ones saved or loaded.</li>
     </ul>
     <p class="quote">Use Current Settings to…</p>
     <ul>
@@ -227,7 +235,7 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
       <li><span class="quote">Hide toolbar as default</span>: After SEB starts, the browser window toolbar is hidden. Users can unhide the toolbar in the view menu or the key combination cmd-alt-T. In full screen browser view mode, the toolbar is auto hidden with this setting and appears when users move the mouse towards the screen's top border.</li>
       <li><span class="quote">Show menu bar</span>: Show the OS X menu bar to allow accessing settings like Wi-Fi.</li>
       <li><span class="quote">Show SEB dock/task bar</span>: Usually to be used when switching to third party applications is enabled. The task bar is not required, users can also switch to third party applications using the task switcher with keys Cmd-tab.</li>
-      <li><span class="quote">Dock height</span>: SEB Dock height in points (pixel height x 2 on Retina displays). This setting is currently not supported in SEB for Windows.</li>
+      <li><span class="quote">Dock height</span>: SEB Dock height in points (pixel height x 2 on Retina displays). </li>
     </ul>
     <h4><a name="BrowserPane" id="BrowserPane"></a>Settings in the Browser Pane    </h4>
     <div class="image4"><img src="images/SEB_PreferencesBrowser-2.0-en.png" width="762" alt="SEB Preferences Window Browser Pane" /></div>
@@ -295,12 +303,12 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
       clients. <strong>Monitoring processes is not yet functional in SEB 2.0 for Mac</strong>.      </li>
     </ul>
 <h5>Permitted Processes Section</h5>
-<p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. Permitted processes (with the option <span class="quote">Run in background</span> enabled) don't appear in the application chooser, but they are allowed to run in background even when <span class="quote">monitor processes</span> is enabled.</p>
-<p><strong>Using permitted processes is not yet functional in SEB 2.0 for Mac</strong>. You can define and edit permitted processes for SEB 2.0 for Windows here.</p>
+<p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. </p>
+<p><strong>Using permitted processes is not yet functional in SEB 2.0 for Mac</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
 <div class="image4"><img src="images/SEB_PreferencesApplications-PermittedProcesses-2.0-en.png" alt="SEB Preferences Window Applications Pane, Permitted Processes Tab" width="762" /></div>
     <ul>
       <li><span class="quote">Allow  switching to third party applications</span>: If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">cmd-tab</span>) will work, so it's possible to switch to other running applications.<br />
-        Use this option only when running SEB in a user account managed by parental controls, with only SEB and the desired applications allowed. Also you should switch on <span class="quote">Simple Finder</span> and don't give users access to other accounts with administrator rights on that computer (see <a href="#secure_environment">Secure Environment</a>). A later version of SEB for Mac OS X will allow to use third party applications without a separate managed user account.<br />
+        Use this option only when running SEB in a user account managed by parental controls, with only SEB and the desired applications allowed. Also you should switch on <span class="quote">Simple Finder</span> and don't give users access to other accounts with administrator rights on that computer (see <a href="#secure_environment">Secure Environment</a>).<br />
       </li>
       <li>        <span class="quote">Allow Flash to switch to full screen mode</span>: Playing videos with Flash in full screen mode is a security problem. That's why it is strongly recommended to use HTML5 video (there full screen mode is no problem) instead of Flash whenever possible. Depending on the Flash video player and the Mac used, it can be difficult to switch back from full screen mode (best is to use the <span class="quote">esc</span> key), so if you don't need full screen mode, don't enable it here.
         <br />
@@ -328,7 +336,7 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
     </ul>
     <h5>Prohibited Processes Section</h5>
 
-    <p>List of processes which are prohibited to run during an exam (they are on the blacklist) when <span class="quote">monitor processes</span> is enabled. This blacklist of processes makes sense because SEB on both platforms usually allows to run system processes (SEB for Mac OS X allows all processes and applications signed by Apple to run), but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the blacklisted processes are killed by SEB.</p>
+    <p>List of processes which are prohibited to run during an exam  when <span class="quote">monitor processes</span> is enabled. This prohibited list of processes makes sense because SEB  usually allows to run system processes (SEB for Mac OS X allows all processes and applications signed by Apple to run), but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the prohibited processes are killed by SEB.</p>
     <p><strong>Using prohibited processes is not yet functional in SEB 2.0 for Mac</strong>. You can define and edit permitted processes for SEB 2.0 for Windows here.</p>
 <div class="image4"><img src="images/SEB_PreferencesApplications-ProhibitedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Prohibited Processes Tab" /></div>
 <!--
@@ -369,6 +377,7 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
     </ul>
     <p>The table contains  URL filter rules, consisting of a <span class="quote">allow</span> or <span class="quote">block</span> action. The URL filter always first processes rules with the block action, if one matches, then the according http request is discarded. If no block rule matched, then rules with an allow action are processed. If one matches, then the request is loaded. If no allow rule matched, then the request is discarded.<br />
     Discarding a http request means that a link with the URL is not followed and the user is notified with an alert. When content filtering is enabled, an embedded resource with the according URL is not loaded, in this case there's no notification about that, but it is written to the log (log level Warning on Mac). Create a new rule  by clicking the<span class="codetext">'+'</span> button below the table. Remove a rule by selecting it in the table and clicking the <span class="codetext">'-'</span> button.</p>
+    <p>SEB automatically creates an allow filter rule for the exact address of the <span class="quote">Start URL</span> defined in these settings. This means that if your <span class="quote">Start URL</span> is <span class="path">example.com</span>, then all pages and resources in the domain example.com  will be allowed. If your <span class="quote">Start URL</span> is <span class="path">example.com/exams/engineering2015-1.html</span>, then only the pages with this exact address will be allowed. In this case you have to manually add an allow filter rule so all pages and resources your exam uses will be allowed (like <span class="path">example.com/exams/*</span>).</p>
     <p><strong>Rules</strong></p>
     <ul>
       <li><span class="quote">Active</span>:
@@ -427,7 +436,7 @@ The order of filter rules is not relevant.<br />
       <li>You can also choose <span class="quote">cryptographic identities</span> from the keychain which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). Those will also be added to the .seb settings file. Use this feature  for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting .seb files for starting exams later. Thanks to this feature you won't need to export the identities in Keychain Access and install it on your SEB clients manually.</li>
     </ul>
     <h5><a name="NetworkPaneProxiesSection" id="NetworkPaneProxiesSection"></a>Proxies Section</h5>
-    <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not yet functional in SEB 2.0 for Mac</strong>. SEB 2.0.2 for Windows  supports limited individual proxy settings which you can configure here.</p>
+    <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not yet functional in SEB 2.0 for Mac</strong>. SEB 2.1 and newer for Windows  supports  individual proxy settings which you can configure here.</p>
 <div class="image4"><img src="images/SEB_PreferencesNetwork-Proxies-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Proxies Tab" /></div>
     <h4><a name="SecurityPane" id="SecurityPane"></a>Settings in the Security Pane    </h4>
     <div class="image4"><img src="images/SEB_PreferencesSecuritySystemLockdown-2.0-en.png" alt="SEB Preferences Window Security Pane, System Lockdown Tab" width="762" /></div>
@@ -474,10 +483,10 @@ The order of filter rules is not relevant.<br />
         <h4><a name="license" id="license"></a>License</h4>
     <p>Safe Exam Browser for Mac OS X: &copy; 2010-2015 Daniel R. Schneider, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, based on the original idea of Safe Exam Browser by Stefan Schneider, University of Giessen<br />
     Project concept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  French localization: Nicolas Dunand</p>
-    <p><strong>Source code:</strong> <a href="mac_developer.html#getSourceCode">Released</a> under the Mozilla Public License <a href="http://www.mozilla.org/MPL/MPL-1.1.html" target="_blank">MPL 1.1</a></p>
+    <p>Safe Exam Browser is released as freeware. The <a href="https://github.com/SafeExamBrowser/seb-mac" target="_blank">source code</a> is  subject to the <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (the  &quot;License&quot;); you may only use these files in compliance with the  License. You may obtain a copy of the License at <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> .</p>
       <a href="http://webkit.org" target="_blank">WebKit</a>: <a href="License/WebKit/LICENSE-APPLE.txt" target="_blank">BSD License Apple</a>, <a href="http://www.gnu.org/licenses/lgpl.html" target="_blank">LGPL</a> <a href="License/WebKit/LICENSE-LGPL-2.txt" target="_blank">2.0</a>/<a href="License/WebKit/LICENSE-LGPL-2.1.txt" target="_blank">2.1</a></p>
-    <p>This project has been carried out as part of the program &quot;<a href="http://www.switch.ch/aaa" target="_blank">AAA/SWITCH – e-Infrastructure for e- Science</a>”  lead by <a href="http://www.switch.ch" target="_blank">SWITCH</a>, the Swiss National Research and Education Network, and has been supported by funds from ETH Board.<br />
-  </p>
+    <p>Important parts of this project have been carried out as part of the  program &quot;<a href="http://www.switch.ch/aaa/" target="_blank">AAA/SWITCH –<br />
+e-Infrastructure for e-Science</a>&quot;  led by <a href="http://www.switch.ch/" target="_blank">SWITCH</a>, the Swiss National Research and Education Network and  the cooperative project &quot;<a href="http://www.switch.ch/uni/projects/learn_infra/" target="_parent">Learning Infrastructure</a>&quot;  (part of the <a href="http://www.crus.ch/homenavigation/home.html?L=2" target="_blank">CRUS</a> program &quot;<a href="http://www.crus.ch/information-programmes/projets-programmes/programme-cus-2013-2016-p-2-information-scientifique-acces-traitement-et-sauvegarde.html?L=1" target="_blank">Information  scientifique: accès, traitement et sauvegarde</a>&quot;) coordinated by  SWITCH, and was supported by funds from the <a href="http://www.ethrat.ch/en" target="_blank">ETH Board</a> and the <a href="http://www.sbfi.admin.ch/?lang=en">State Secretariat for Education, Research  and Innovation</a> (SERI).</p>
 
 <!--end of div container-->
 

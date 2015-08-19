@@ -74,6 +74,128 @@
     </table> 
     <h4><a name="releasenotes" id="releasenotes"></a>Release Notes</h4>
 
+<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1:</h5>
+<ul>
+  <li>New touch optimized mode for Windows tablet computers:
+    <ul>
+      <li>Larger buttons in the SEB task bar and in dialogs.</li>
+      <li>On-screen keyboard is displayed when the user touches a text field on a browser page or when SEB requires to enter a password.</li>
+      <li>New web pages open in full screen 'windows', switch between open pages with the open windows chooser popup menu invoked by touching the SEB icon in the SEB task bar.</li>
+      <li>Touch exit feature in case no SEB task bar is used: Swipe down from the upper screen edge.</li>
+    </ul>
+  </li>
+  <li>Added button in SEB task bar for reloading current web page and optional warning message for reloading web pages.</li>
+  <li>Added button in SEB task bar for restarting the exam, which can be password protected. Exam supporters can use this button when problems with the exam occur, instead of having to quit and restart SEB.</li>
+  <li>Added control in SEB task bar for switching installed keyboard layouts.</li>
+  <li>Added display of current time in SEB task bar: This is for example helpful if you decide to ban personal watches in exams (because of smart watches).</li>
+  <li>The former app chooser (Alt-Tab) now shows all open windows (from SEB browser and permitted third party applications) rather than all running permitted applications. Fixed visual issues (scrollbars are no longer displayed, scaling properly considering display DPI etc.).</li>
+  <li>Updated SEB browser engine XULRunner to version 38.0.6.<br />
+  </li>
+  </ul>
+<p><strong>SEB Config Tool</strong> has been re-engineered and now allows comfortable editing and testing of SEB configuration files:
+</p>
+<ul>
+  <ul>
+    <li>When you start SEBConfigTool.exe, it loads the local client settings, which are saved at the path <span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\SebClientSettings.seb</span>.</li>
+    <li>There are new functions for working with configuration files (<span class="quote">Open, Save, Save As, Revert Settings to... Default Settings; Local Client Settings; Last Opened, Use Current Settings to... Edit Duplicate, Configure Client, Apply and Start SEB</span>). These functions are accessible at any point when working in the SEB Config Tool with a new menu bar, with shortcuts or as buttons in the Config File tab. </li>
+    <li>If you changed settings, the Config Tool will ask you to save unsaved changes before quitting or reverting to other settings.</li>
+    <li>SEB Config Tool now supports opening .seb config files with drag-and-drop (into the window or onto the application's icon).</li>
+  </ul>
+  <li>Renamed Appearance tab to <strong>User Interface</strong>: 
+    <ul>
+      <li>Added option &quot;Touch optimized&quot; to Browser view modes to switch on the tablet mode of SEB.</li>
+      <li>Added option &quot;Enable touch exit&quot;, when enabled SEB can be quit in touch optimized mode with a swipe down from the upper display edge (helpful, when the SEB task bar with the quit button is not used).</li>
+      <li>Added settings group for SEB task bar for all new controls (see above). </li>
+      <li>Task bar height in pixels can now be changed for high resolution displays (display DPI settings are now also taken in account, in touch optimized mode task bar is scaled up in addition).</li>
+      <li>Added settings options for switching between zooming the full web page or just changing text sizes. </li>
+      <li>Zooming can also be disabled optionally (not recommended in most exam scenarios because of accessibility).</li>
+      <li>Added option to disable the browser spell check.</li>
+      <li>Added setting option for new Mac-only feature &quot;Allow dictionary lookup&quot;.</li>
+      </ul>
+  </li>
+  <li><strong>Browser</strong> tab in SEB Config Tool: 
+    <ul>
+      <li>Added settings to switch between default and custom browser user agent strings, separately for desktop and touch modes (and for SEB on Macs). </li>
+      <li>In touch mode, there is also an option for an iPad user agent string, as many mobile optimized websites recognize this user agent, but not the Windows touch user agent. </li>
+      <li>SEB now also adds its version number to the user agent string.</li>
+      <li>Removed option &quot;block when directing to a different server&quot; for the option &quot;Links in JavaScript/plug-ins&quot; (Mac only feature).<br />
+        </li>
+      </ul>
+  </li>
+  <li><strong>Exam</strong> tab in SEB Config Tool:
+    <ul>
+      <li>Restart exam button: Either check the &quot;Use Start URL&quot; option or enter a link to which the exam is redirected when the restart exam button is pressed. The restart exam button is displayed in the SEB task bar when either the &quot;Use Start URL&quot; option is selected or a link is entered.</li>
+      <li>You can add a custom title and tool tip text, for example if the button/link doesn't restart the exam but redirects to some other specific page, submits the exam etc.</li>
+      <li>You can select the option to protect the restart exam button with the quit/restart password. Exam support/invigilators could be told this password to be able to restart the exam if there is a problem.<br />
+        </li>
+      </ul>
+  </li>
+  <li><strong>Applications/Permitted Processes</strong> tab in SEB Config Tool: 
+    <ul>
+      <li>Added option &quot;Monitor processes while SEB is running&quot;. If enabled, SEB prevents non-permitted processes to display any windows (including alerts, message boxes etc.) by hiding them immediately. If SEB cannot hide such a process (because it is running with the rights of another user, for example SYSTEM) SEB terminates it. For the &quot;Disable Explorer Shell&quot; kiosk mode (see Security tab), &quot;Monitor processes...&quot; should always be activated (which was implicitly the case in former SEB versions), but in SEB 2.1 you can (and should in most cases) use this feature also with the &quot;Create new desktop&quot; kiosk mode. </li>
+      <li>Added button &quot;Choose Application...&quot;. When you select a third party application which is permitted to run during the exam using this button, the parameters for executable and path are automatically set according to the selected executable (.exe) file, considering if and which path of that application is registered in Windows (usually no path or only a relative path to the Windows registered path of that application needs to be entered in the field for &quot;Path&quot;).</li>
+      <li>Added option &quot;Icon in task bar&quot; for permitted processes. Mainly useful for background processes (not requiring user interaction) which you want to autostart when SEB is run.</li>
+      <li>Added option &quot;Allow running in background&quot;. Permitted processes with this option set are allowed to already be running when starting SEB. In this case SEB doesn't ask the user if the process can be terminated before continuing to start SEB. Processes with the option &quot;Allow running in background&quot; don't have an icon in the SEB task bar. They can nevertheless have the option &quot;Autostart&quot; set, in this case SEB attempts to start the permitted process regardless if it was already running or not (and the option &quot;Icon in task bar&quot; is considered in this case). If you need some background process running together with SEB and this process might display some window or alert/message box, you have to add this process's executable to permitted processes with the option &quot;Allow running in background&quot; set, otherwise SEB will hide the window of the background process when &quot;Monitor processes&quot; is selected (or even terminate that process, in case it cannot be hidden). </li>
+      <li>Improved handling of permitted processes and their open windows, when switching between them using the app/window chooser (Alt-Tab) or the icons of these permitted applications in the SEB task bar. Some applications (for example Adobe Acrobat or applications based on Java like Open Office or Eclipse) still need special settings in the Applications/Permitted Processes tab in SEB Config Tool in the fields &quot;Window handling process&quot; (the executable of the main process of that application) and &quot;Identifier&quot; (substring which is displayed in every window the application opens).<br />
+        </li>
+      </ul>
+  </li>
+  <li><strong>Network/Filter</strong> tab in SEB Config Tool: 
+    <ul>
+      <li>Added tables for Allow and Block URL filter rules. </li>
+      <li>Added new option &quot;Rules are regular expressions&quot;: If not enabled, then the rules can be formatted using the wildcard '*', which stands for an arbitrary string of any length.<br />
+        </li>
+      </ul>
+  </li>
+  <li><strong>Network/Certificates</strong> tab in SEB Config Tool: <br />
+    SEB 2.1 supports embedding TLS/SSL and encrypting identity certificates into .seb files. 
+    <ul>
+      <li>Choose TLS/SSL certificate to embed into configuration... Here you can choose SSL server certificates which are stored in the Windows Certificate Store (if you have a certificate file, you first need to import it to the Windows Certificate Store, depending on the format you can just double click such a certificate file to invoke the Windows certificate import assistant). The certificates added to this table will be included into a .seb settings file when it is saved and used on the SEB clients which are started up with that .seb exam configuration. Users won't be presented a warning then when connecting to https servers with self-signed certificates and you don't need to distribute SSL certificates manually to the exam client computers.</li>
+      <li>Choose identity to embed into configuration... You can also choose cryptographic identities stored in the Windows Certificate Store which are suitable for decrypting .seb files on SEB exam clients (X.509 certificates with RSA public key and associated private key). If you have a .p12 or .pfx certificate archive file, you first need to import it into the Windows Certificate Store (usually you can just double click such a certificate file to invoke the Windows certificate import assistant). When importing the .p12/.pfx identity file, the included private key must be marked as &quot;exportable&quot;. The identities added to this table will be embedded into the .seb settings file. Use this feature for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting/decrypting .seb files for starting exams later. When opening this .seb file on your exam clients, the embedded identities will be imported into the Windows Certificate Store (or Keychain on Macs), so that they can be used for decrypting exam settings later. Please note that during this process the private keys imported into the Windows Certificate Store of the exam clients will be flagged as non-exportable for increased security. </li>
+      <li>SEB now finds identities (and certificates) stored in the current user's and local machine Certificate Store.<br />
+        </li>
+      </ul>
+  </li>
+  <li><strong>Network/Proxies</strong> tab in SEB Config Tool: 
+    <ul>
+      <li>Now HTTP, HTTPS, FTP and SOCKS proxies (without authentication) are supported when using the option &quot;Use SEB proxy settings&quot;. </li>
+      <li>The proxy host/domain bypass list is supported now.<br />
+        </li>
+      </ul>
+  </li>
+</ul>
+<p><strong>Installer</strong>:
+</p>
+<ul>
+  <li>The SEB installer now updates an existing SEB installation automatically, so an older SEB version doesn't need to be uninstalled first.</li>
+  <li>Fixed installing SEB in an administrator (or other) account didn't set filetype for .seb config files  correctly in another user account (double clicking a .seb file displayed a dialog to locate a SEB .msi installer file and only after that fixed the filetype binding for that account).</li>
+  <li>Changed properties for SEBRegistryResetter shortcut to prevent it showing up in recently opened programs in the Windows 7 start menu.</li>
+</ul>
+<p><strong>Further bugfixes:</strong></p>
+<ul>
+  <li>Quit and settings password dialogs now have keyboard focus when they appear, so it's usually not necessary to click them first before starting to type.</li>
+  <li>Fixed SEB browser sometimes wasn't closed quickly enough and then displayed an unnecessary &quot;do you really want to quit&quot; or quit password dialog.</li>
+  <li>Fixed when opening a .seb file is canceled (Cancel button in password entry dialog), then SEB starts with only partially visible task bar stub on the upper left screen corner and freezes (cannot be quit).</li>
+  <li> Fixed SEB was quit when loading a .seb file (by seb:// link) and user canceled entering settings password</li>
+  <li> Fixed a security issue with the settings key browserURLSalt.</li>
+  <li> Fixed asking for current or admin password in settings even though that is an empty string.</li>
+  <li> Fixed a security issue where a .seb file for configuring client encrypted with an arbitrary password could reconfigure a client without having to enter the admin pw saved currently in SEB on that client. Now this is only possible after entering the current admin pw or by encrypting the new settings for configuring the client with that current admin pw.</li>
+  <li> Fixed bugs when reconfiguring client settings, when admin pw differs in new and current settings and user is asked to enter the current admin pw.</li>
+  <li> Fixed process name was not listed in dialog &quot;Permitted Processes Are Already Running&quot; and in the dialog when permitted process couldn't be found if it didn't had a title property: Now using executable in the case there's no title.</li>
+  <li> Fixed SEB sometimes didn't exit completely when quitting.</li>
+  <li> Fixed when loading a .seb file with entering settings password, selecting cancel results in SEB being quit.</li>
+  <li> Fixed generating XULRunner seb URL filter whitelist string when the Start URL is not contained in a filter rule and fixed connection with web socket server is not possible when the content filter is active.<br />
+  </li>
+  </ul>
+<p>Known issues in SEB 2.1 for Windows:</p>
+<ul>
+  <li> The on-screen keyboard does not appear automatically when clicking into some text input fields, for example some web rich text editors as used in Moodle for the free text question. Use the keyboard button in the SEB task bar in these cases to trigger the on-screen keyboard manually.</li>
+  <li> In touch optimized mode, sometimes the on-screen keyboard stops being displayed. When this happens, SEB must be quit and the keyboard button in the Windows Explorer task bar needs to be clicked (then the keyboard appears). When closing the keyboard and restarting SEB, it is again being displayed inside SEB.</li>
+  <li> Starting and reconfiguring SEB on Windows 10 takes much longer than usual.</li>
+  <li> Disabling Windows Update while SEB is running does not work on Windows 10, it leads to a timeout (this is the reason for the delay when starting and reconfiguring SEB).</li>
+  <li> When SEB is started twice (by quickly double clicking twice), Registry settings are messed up afterwards (options like Task Manager in the Windows Security Screen invoked with Ctrl-Alt-Del are no longer available). Use SEB Registry Resetter to fix this problem.</li>
+  <li> Buttons for shutdown and restart are not hidden in the Windows 10 Security Screen (invoked with Ctrl-Alt-Del).</li>
+</ul>
 <h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0.3:</h5>
 <ul>
   <li>Improves general stability and compatibility with some exam systems.</li>
