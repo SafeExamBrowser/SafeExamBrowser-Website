@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/main-E.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta name="viewport" content="width=device-width" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Safe Exam Browser</title>
+<!-- InstanceEndEditable -->
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+<style type="text/css" media="screen"></style>
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+		<link rel="stylesheet" type="text/css" href="../css/superfish.css" media="screen">
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/hoverIntent.js"></script>
+		<script type="text/javascript" src="../js/superfish.js"></script>
+		<script type="text/javascript">
+
+		// initialise plugins
+		jQuery(function(){
+			jQuery('ul.sf-menu').superfish();
+		});
+
+		</script>
+</head>
+<body>
+<!--<div id="outercontainer">-->
+<div id="container">
+  <div id="navigation">
+    <ul class="sf-menu">
+      <li><a href="../index.html">News</a> </li>
+      <li><a href="../about_overview_en.html">About</a>
+        <ul>
+          <li><a href="../about_overview_en.html">Overview</a>
+          <li><a href="../about_demo_en.html">Demo</a></li>
+          <li><a href="../about_roadmap_en.html">Roadmap</a></li>
+        </ul>
+      </li>
+      <li><a href="../download_en.html">Download</a>
+        <ul>
+          <li><a href="../download_en.html">Downloads</a>
+          <li><a href="../download_releases_en.html">All&nbsp;Releases</a></li>
+        </ul>
+      </li>
+      <li><a href="../windows/win_usermanual_en.html">Windows</a>
+        <ul>
+          <li><a href="../windows/win_quickguide_en.html">Quick&nbsp;Guide</a></li>
+          <li><a href="../windows/win_usermanual_en.html">User&nbsp;Manual</a></li>
+          <li><a href="../windows/win_release_notes_en.html">Release&nbsp;Notes</a></li>
+          <li><a href="../windows/win_developer.html">Developer</a></li>
+        </ul>
+      </li>
+      <li><a href="../macosx/mac_usermanual_en.html">MacOSX</a>
+        <ul>
+          <li><a href="../macosx/mac_usermanual_en.html">User&nbsp;Manual</a></li>
+          <li><a href="../macosx/mac_release_notes_en.html">Release&nbsp;Notes</a></li>
+          <li><a href="../macosx/mac_developer.html">Developer&nbsp;Manual</a></li>
+        </ul>
+      </li>
+      <li><a href="../support_en.html">Support</a></li>
+    </ul>
+  </div>
+  <div id="header_f">
+    <div id="logotext_f_seb"> <font color="#ff963d">SEB</font></div>
+    <div id="logotext_f_safe"> <font color="#070782">Safe Exam Browser</font></div>
+  </div>
+  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+    <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
+      <tr>
+        <td valign="top"><h4>Frequently Asked Questions</h4></td>
+        <td align="right" valign="top"><span class="link_small">English&nbsp;&nbsp;&nbsp;<a href="faq_de.html">Deutsch</a></span></td>
+      </tr>
+    </table> 
+      <p>FAQ for Safe Exam Browser for <a href="#Windows" title="Jump down to Windows versions">»Windows</a> and for <a href="#MacOSX" title="Jump down to Mac versions">»Mac&nbsp;OS&nbsp;X</a>.</p>
+      <h5><a name="Windows" id="Windows"></a>SEB for Windows</h5>
+      <ul>
+        <li><span class="quote">What is SEB for Windows changing in the system?</span><br />
+          SEB changes  Windows Registry settings for the options in the Windows Security Screen invoked by Ctrl-Alt-Del (for details see <a href="../windows/win_usermanual_en.html#RegistryPane">this section</a> in the manual). In addition when running on Windows  versions before 10, SEB stops Windows updates while it is running using a Registry setting and re-enables them when being quit (when SEB 2.1.1 or later is running on Windows 10, only the Windows Update background service is stopped and restarted when SEB is quit). In case the PC would be force restarted while SEB is running or SEB would crash, these Registry settings are reset to the original values:<br />
+• when SEB is restarted once again and properly quit; <br />
+          • when the computer is restarted (this works correctly starting SEB 2.1.1); <br />
+          • or when uninstalling SEB<br />
+          <br />
+          There is also a command line tool which can be used to reset those values for the unlikely case that the SEB Windows Service (a background service which is part of SEB) didn't work properly or was damaged and can't be run anymore. This tool can be found at the following directory path in your Program Files directory:<br />
+          <span class="path">SafeExamBrowser\SebWindowsServiceWCF\SebRegistryResetter.exe</span><br />
+          (<a href="../windows/win_usermanual_en.html#RegistryPane">see manual</a> for details how to use the registry resetter tool).<br />
+          <br />
+          When SEB is installed, the file type with the file extension .seb and the custom URL protocols <strong>seb</strong>:// and <strong>sebs</strong>:// (the latter starting SEB 2.1.1) are registered. These associations are removed when SEB is being uninstalled.<br />
+          <br />
+          SEB also creates two directories for local SEB settings  in locations which are designated in Windows for such  purposes:
+          <br />
+          <ul>
+            <li><strong class="path">C:\ProgramData\SafeExamBrowser\</strong><br />
+              Exact path using Windows environment variable: <br />
+              <span class="path">%PROGRAMDATA%\SafeExamBrowser\</span><br />
+              <br />
+            </li>
+            <li><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span><br />
+              Exact path using Windows environment variable: <br />
+              <span class="path">%APPDATA%\SafeExamBrowser\</span> <br />
+              In this directory the SEB web browser also caches resources. In SEB's default settings this cached data is removed when SEB quits.
+              <br />
+            </li>
+          </ul>
+        </li>
+        These directories and possible contents 
+      are <strong>not removed</strong> automatically when SEB is uninstalled. 
+      </ul>
+<h5><a name="MacOSX" id="MacOSX"></a>SEB for Mac OS X</h5>
+      <ul>
+        <li><span class="quote">What is SEB for Mac OS X changing in the system?</span><br />
+          SEB doesn't perform any real changes in OS X (this is comprehensible as there is no administrator password necessary when starting SEB for Mac OS X the first time). One global setting (user defaults) change is performed while SEB is running: The path where screen shots are saved is temporarily changed when SEB starts and set back to the user's preset when SEB is quit. If the Mac would be force restarted while SEB is running or SEB would crash, starting and quitting SEB resets the screen shot path again to the original user's preset. In the unlikely case this should ever fail, it is easy to reset this screen shot location to the system's default (the desktop folder) with the following command line in the terminal:<br />
+          <br />
+          <span class="codetext">defaults write com.apple.screencapture location ~/Desktop &amp;&amp; killall SystemUIServer</span></li>
+    </ul>
+    <h5>Additional Resources</h5>
+<p>Please also check the following pages:</p>
+      <p><span class="linksubnavi"><a href="windows/win_usermanual_en.html">»Documentation SEB for Windows</a><br />
+      <a href="macosx/mac_usermanual_en.html">»Documentation SEB for Mac OS X</a></span></p>
+    <p>Please find support following the links below to our Sourceforge project site. The SEB team will answer your questions there.</p>
+      <p><strong>Please always mention, which SEB version and which operating system  you are using </strong>(for example <strong>Windows</strong> 7, Windows 8/8.1, Windows 10, 32/64 Bit version, <strong>Mac OS X</strong> 10.11, 10.10, 10.9, 10.8, 10.7, 10.6) and possibly other details about your system!</p>
+      <p><strong>Otherwise we cannot answer   your questions properly! </strong></p>
+  <p><a href="https://sourceforge.net/p/seb/discussion/" target="_blank">Forum</a></p>
+      <p><a href="https://sourceforge.net/p/seb/feature-requests/" target="_blank">Feature Requests</a></p>
+      <p><a href="https://sourceforge.net/p/seb/bugs/" target="_blank">Bug Report</a></p>
+<!-- InstanceEndEditable --> </div>
+  <div id="bottom"></div>
+</div>
+<!--</div>-->
+</body>
+<!-- InstanceEnd --></html>
