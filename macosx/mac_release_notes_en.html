@@ -116,6 +116,13 @@
   <li>Added option to allow the OS X dictionary lookup feature (three finger tap on trackpad or ctrl-cmd-D), as default this is disabled now.</li>
   <li>Blocking  the  Notification Center  also on OS X 10.10 and higher.</li>
   <li>SEB now detects attempts to switch the user and displays a lock screen afterwards which needs to be unlocked with the quit/restart password by exam supporters/supervisors.</li>
+  <li>Improved getting the filename when downloading a file using an anchor with the &quot;download&quot; attribute.</li>
+  <li>If &quot;allow browsing back/forward&quot; in browser settings is selected, back/forward buttons are displayed in a browser window toolbar and they now get enabled conditionally depending on browsing history. Fixed that those buttons sometimes didn't work.</li>
+  <li>Fixed a bug when downloading a data: blob having a download attribute, the download confirmation dialog was displayed twice.</li>
+  <li>Preferences window is now only available on OS X 10.8 and higher (no longer possible on 10.7 because of lacking support for Base Internationalization). Added alert explaining that the preferences window cannot be used when running SEB on OS X 10.7.</li>
+  <li>Fixed some browser alerts were displaying  alert messages inside the button.</li>
+  <li>Fixed a runtime exception which was rarely caused when displaying the Applications pane permitted/prohibited (caused by table views UI autosave).</li>
+  <li>Fixed several English and German user interface tooltips.</li>
 </ul>
 <h5>Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0</a>:</h5>
 <ul>
