@@ -116,6 +116,16 @@
   <li>Added option to allow the OS X dictionary lookup feature (three finger tap on trackpad or ctrl-cmd-D), as default this is disabled now.</li>
   <li>Blocking  the  Notification Center  also on OS X 10.10 and higher.</li>
   <li>SEB now detects attempts to switch the user and displays a lock screen afterwards which needs to be unlocked with the quit/restart password by exam supporters/supervisors.</li>
+  <li>Improved getting the filename when downloading a file using an anchor with the &quot;download&quot; attribute.</li>
+  <li>If &quot;allow browsing back/forward&quot; in browser settings is selected, back/forward buttons are displayed in a browser window toolbar and they now get enabled conditionally depending on browsing history. Fixed that those buttons sometimes didn't work.</li>
+</ul>
+<ul>
+  <li>Fixed a bug when downloading a data: blob having a download attribute, the download confirmation dialog was displayed twice.</li>
+  <li>Preferences window is now only available on OS X 10.8 and higher (no longer possible on 10.7 because of lacking support for Base Internationalization). Added alert explaining that the preferences window cannot be used when running SEB on OS X 10.7.</li>
+  <li>Fixed some browser alerts were displaying  alert messages inside the button.</li>
+  <li>Fixed a runtime exception which was rarely caused by displaying the Applications pane permitted/prohibited processes tabs (caused by table views UI autosave).</li>
+  <li>Added a warning alert  when activating &quot;Allow switching to third party applications&quot; in the Applications prefs pane. This feature is only supposed to be used in a secured, managed user account, as all applications can be accessed.</li>
+  <li>Fixed several English and German user interface tooltips.</li>
   </ul>
 <p><strong>Known limitations.</strong> The following preferences options are not yet available in this version:</p>
 <ul>
@@ -345,12 +355,11 @@
       <li>Reordered the buttons in preferences and confirm quit dialog according to Apple Human Interface Guidelines.</li>
       <li>Improved code structure in encapsulation and modularity, preparing open source code release including developer documentation. Improved &quot;Cocoa Bindings&quot; implementation in preferences.</li>
     </ul>
-      <h4><a name="limitations" id="limitations"></a>Known Limitations</h4>
+      <h4><a name="limitations" id="limitations"></a>General Known Limitations</h4>
     <p> Please report <a href="https://sourceforge.net/tracker/?group_id=233708&amp;atid=1090685">bugs</a> and <a href="http://sourceforge.net/tracker?atid=1090688&amp;group_id=233708&amp;func=browse">feature requests</a>.</p>
-    <p><strong>Please always mention, which SEB version and which operating system  you are using (OS X 10.10/10.9/10.8/10.7/10.6)</strong> and possibly other details about your system!</p>
+    <p><strong>Please always mention, which SEB version and which operating system  you are using (OS X 10.11/10.10/10.9/10.8/10.7/10.6)</strong> and possibly other details about your system!</p>
     <ul>
-      <li> This version of SEB doesn't disengage <span class="quote">Fast User Switching</span> from the systems panel asking for the user's password after waking up from sleep mode or the screen saver. You should switch off <span class="quote">Fast User Switching</span> if users have access to other accounts on the machine. To hinder possible tricking with fast user switching, SEB delays <span class="quote">forced sleep mode</span> induced by keyboard for the system maximum of 30 seconds. Like this the computers' display is blacked out for more than half a minute before  the fast user switching dialog can be reached. In supervised exams this  might make it harder to cheat for someone  having access to other user accounts.</li>
-      <li>  SEB doesn't prevent remote connections to the computer. You should switch off all relevant Apple and third-party remote access/control services when using SEB for exams or protect everything with proper passwords and don't give users administrator rights on the machine. You could also use an external firewall with very restrictive  settings. </li>
+      <li>  SEB doesn't prevent remote connections to the computer. You should switch off all relevant Apple and third-party remote access/control services when using SEB for exams or protect everything with proper passwords and don't give users administrator rights on the machine. You could also use an external firewall with  restrictive  settings. </li>
       <li> SEB doesn't restrict other applications from playing audio. So you probably should switch off all VOIP and audio messenger systems like iChat and Skype while using SEB for example in an  exam where audio is played in the quiz and students are allowed to use headphones.</li>
       <li>In case your exam uses the https protocol or  Java-Applets which connect to secure Servers, you should make sure their certificates are trusted on the client computers you're using. If that's not yet the case, you can either add the certificates to the OS X keychain manualy or use the check mark for <span class="quote">Always trust ...</span> (displayed after pressing the  <span class="quote">Show Certificate</span> button) when the <span class="quote">accept certificate</span> dialog is displayed.</li>
     </ul>
