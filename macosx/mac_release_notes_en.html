@@ -116,16 +116,29 @@
   <li>Added option to allow the OS X dictionary lookup feature (three finger tap on trackpad or ctrl-cmd-D), as default this is disabled now.</li>
   <li>Blocking  the  Notification Center  also on OS X 10.10 and higher.</li>
   <li>SEB now detects attempts to switch the user and displays a lock screen afterwards which needs to be unlocked with the quit/restart password by exam supporters/supervisors.</li>
+  <li>Added a check if the Force Quit window is open when SEB is started, in that case an error message is displayed and user is asked to close the window or quit SEB. Note: The &quot;About this Mac&quot; window is also identified as the Force Quit window and therefore needs to be closed before running SEB.</li>
+  <li>When restarting, holding down command key now doesn't quit SEB but asks to release the key.</li>
   <li>Improved getting the filename when downloading a file using an anchor with the &quot;download&quot; attribute.</li>
   <li>If &quot;allow browsing back/forward&quot; in browser settings is selected, back/forward buttons are displayed in a browser window toolbar and they now get enabled conditionally depending on browsing history. Fixed that those buttons sometimes didn't work.</li>
-</ul>
-<ul>
-  <li>Fixed a bug when downloading a data: blob having a download attribute, the download confirmation dialog was displayed twice.</li>
-  <li>Preferences window is now only available on OS X 10.8 and higher (no longer possible on 10.7 because of lacking support for Base Internationalization). Added alert explaining that the preferences window cannot be used when running SEB on OS X 10.7.</li>
-  <li>Fixed some browser alerts were displaying  alert messages inside the button.</li>
-  <li>Fixed a runtime exception which was rarely caused by displaying the Applications pane permitted/prohibited processes tabs (caused by table views UI autosave).</li>
+  <li>Now hiding back/forward, zoom text and the new zoom page button in browser window toolbar, if these features are disabled in settings.</li>
+  <li>Added a sebs:// protocol in addition to seb://. SEB uses https for opening a sebs:// link (for a seb:// link SEB first tries to use http and if that fails then https is used).</li>
+  <li>The preferences window is now only available on OS X 10.8 and higher (no longer possible on 10.7 because of lacking support for Base Internationalization). Added alert explaining that the preferences window cannot be used when running SEB on OS X 10.7.</li>
+  <li>SEB preferences are now showing an alert to notify for what the saved .seb file can be used also after &quot;Save As...&quot; of local client settings.</li>
   <li>Added a warning alert  when activating &quot;Allow switching to third party applications&quot; in the Applications prefs pane. This feature is only supposed to be used in a secured, managed user account, as all applications can be accessed.</li>
-  <li>Fixed several English and German user interface tooltips.</li>
+  <li>SEB 2.1 is now supporting WebSQL databases.</li>
+  <li>Fixed browser page history wasn't cleared when restarting SEB&nbsp;/ restarting the exam.</li>
+  <li>Fixed a bug when downloading a data: blob having a download attribute, the download confirmation dialog was displayed twice.</li>
+  <li>Fixed 'download' attribute in an anchor (A tag) didn't work with resources which the browser can display and the protocol wasn't data:</li>
+  <li>Fixed importing an embedded identity in a .seb file into the keychain.</li>
+  <li>Fixed some browser alerts were displaying  alert messages inside the button.</li>
+  <li>Fixed a rare crash when using the URL filter.</li>
+  <li>Fixed a runtime exception which was rarely caused by displaying the Applications pane permitted/prohibited processes tabs (caused by table views UI autosave).</li>
+  <li>Fixed screen shots didn't show SEB windows when &quot;Enable screen capture&quot; was selected and running on OS X 10.10.x and 10.11 (as Apple suddenly fixed a very old bug and OS X is now finally respecting the property NSWindowSharingTypeNone).</li>
+  <li>Fixed a security issue where a .seb file for configuring client encrypted with an arbitrary password could reconfigure a client without having to enter the admin pw saved currently in SEB on that client. Now this is only possible after entering the current admin pw or by encrypting the new settings for configuring the client with that current admin pw.</li>
+  <li>Added clearing Pasteboard when restarting SEB.</li>
+  <li>Fixed several English and German user interface tooltips in the preferences window. Changed title of Appearance pane to User Interface/Benutzeroberfläche.</li>
+  <li>Fixed bug changed passwords in the General prefs pane were not saved when saving settings (commands Save or Save As).</li>
+  <li>Added saving of from comma separated proxy exception list in Network -&gt; Proxies prefs pane.</li>
   </ul>
 <p><strong>Known limitations.</strong> The following preferences options are not yet available in this version:</p>
 <ul>
@@ -147,7 +160,7 @@
   <li>Added optional check for SEB not installed in Applications folder. As default the user will be notified that SEB must be moved to an Applications (/Applications or ~/Applications) folder and that only one copy of SEB should be installed on the system, SEB quits after this alert. Reason: Unexperienced users sometimes tried to run SEB from the mounted disk image and couldn't find SEB later, also registering the .seb filetype and the seb:// protocol requires SEB to be 'installed' on the system, best in an Applications folder. If several SEB versions are installed, a .seb configuration file might be opened with the wrong SEB version.</li>
   <li>SEB now optionally checks for the command key being held down while SEB is starting up. This prevents using the application switcher to mess with SEB's kiosk mode. As default this check is enabled. Please note that in case the cmd key is held down why SEB starts up or reconfigures itself after loading a .seb config file, an alert is displayed and SEB quits after that, the user needs to restart SEB manually.</li>
   <li>Added an option to save an application log to a file (see Security preferences pane). The log level indicates which information gets saved. The level Error shows just error messages, Warning shows errors and warnings, Verbose shows all levels. Default is Warning (error and warning messages). Info contains addresses of opened web pages. Debug and Verbose is meant for debugging (send such a log file to the SEB developers to find out details about a problem). Standard path for log is '~/Library/Logs/Safe Exam Browser/'.</li>
-  <li>New URL filter including teach mode to control access of the SEB browser to web links and resources. Saved settings files contain URL filter rules which also work in SEB 2.0.2 for Windows. Please note that it's currently not possible to edit those filter rules in the SEB Windows Config Tool, full support for the URL filter will be included in SEB 2.1.</li>
+  <li>New URL filter including teach mode to control access of the SEB browser to web links and resources. Saved settings files contain URL filter rules which also work from SEB 2.0.2 for Windows. Please note that it's currently not possible to edit the extended filter rules generated in SEB for Mac OS X in the SEB Windows Config Tool, full support for the URL filter will be included in a later version.</li>
   <li>Fixed embedded certificates were not imported when using private user defaults (loading .seb settings for starting an exam). You can now embed both cryptographic identities (X.509 certificates with RSA public key and associated private key) and SSL/TLS server certificates into .seb config files which will be imported into the keychain of the SEB client which opens that config file. </li>
   <li>Fixed reading identities or certificates from keychain when switching to Network preference pane crashes on some certificates.</li>
   <li>The Browser Exam Key is now automatically re-calculated and displayed in the Exam preferences pane. This happens  whenever a setting changes if editing local client settings and after saving a config file if editing settings for starting an exam.</li>
