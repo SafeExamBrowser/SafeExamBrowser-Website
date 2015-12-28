@@ -289,6 +289,6 @@
 	<key>showTaskBar</key>
 	<true/>
 	<key>startURL</key>
-	<string>http://safeexambrowser.org/exams</string>
+	<string>http://safeexambrowser.org</string>
 </dict>
 </plist>
