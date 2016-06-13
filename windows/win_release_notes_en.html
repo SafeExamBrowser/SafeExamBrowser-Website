@@ -51,7 +51,7 @@
           <li><a href="win_developer.html">Developer</a></li>
         </ul>
       </li>
-      <li><a href="../macosx/mac_usermanual_en.html">MacOSX</a>
+      <li><a href="../macosx/mac_usermanual_en.html">macOS</a>
         <ul>
           <li><a href="../macosx/mac_usermanual_en.html">User&nbsp;Manual</a></li>
           <li><a href="../macosx/mac_release_notes_en.html">Release&nbsp;Notes</a></li>
@@ -241,7 +241,7 @@
 <p>Known issues in SEB 2.0.3 for Windows:</p>
 <ul>
   <li><strong>Always install SEB from a normal user account, not the administrator account</strong> (in case you have several users on your Windows machine). There is a problem in the installer which prevents other (non-administrative) users to double-click .seb files if SEB was installed from the administrator account.</li>
-  <li>The network filter feature  has been reworked and will be fully available as by SEB 2.1. You can already use <a href="../macosx/mac_usermanual_v2_en.html#NetworkPaneFilterSection">SEB 2.0 for Mac OS X</a> to define rules for the new URL filter.  Saved settings files will also work in SEB 2.0.3 for Windows.</li>
+  <li>The network filter feature  has been reworked and will be fully available as by SEB 2.1. You can already use <a href="../macosx/mac_usermanual_v2_en.html#NetworkPaneFilterSection">SEB 2.0 for macOS</a> to define rules for the new URL filter.  Saved settings files will also work in SEB 2.0.3 for Windows.</li>
   <li>SEB 2.0.3 doesn't support embedding SSL and encrypting identity certificates into .seb files yet.</li>
   <li>In SEB 2.0.3, the proxy host/domain bypass list isn't utilized yet.</li>
   <li><strong>In the former version  SEB 2.0.2</strong> the communication with its background Windows service to trigger re-enabling  options like shutdown, task manager, switch user etc. (which are also visible after pressing Ctrl-Alt-Del) sometimes failed when  SEB was exiting. If those options (or some of them) are still not available before or after installing SEB 2.0.3, and running and quitting SEB or a reboot doesn't restore the options  to the original values, you should use  the <a href="http://www.safeexambrowser.org/windows/win_usermanual_en.html#RegistryPane">SebRegistryResetter</a> to solve the problem by resitting those values to the Windows defaults.</li>
@@ -254,7 +254,7 @@
   <li>Added option &quot;Enable Alt-Mousewheel&quot; in SEB Config Tool -&gt; Hooked keys, removed &quot;Enable Alt-Ctrl&quot;.</li>
   <li>The built-in seb XULRunner browser now writes a browser log file (when &quot;Enable logging&quot; in Config Tool -&gt; Security is selected), the path of this seb.log file can also be chosen there.</li>
   <li>Added check box &quot;Use standard directory&quot; for the log file Win path (Config Tool -&gt; Security), this sets the AppData directory as location for the seb XULRunner browser seb.log log file.</li>
-  <li>Added various setting options to match with final version of SEB 2.0 for Mac OS X.</li>
+  <li>Added various setting options to match with final version of SEB 2.0 for macOS.</li>
   <li>New option &quot;Download and open .seb config files&quot; in Config Tool -&gt; Down/Uploads.</li>
   <li>Added default .seb config file filename &quot;SebClientSettings.seb&quot; when opening and saving config files in Config File pane.</li>
   <li>Updated XULRunner version to 33.</li>
@@ -282,7 +282,7 @@
   <li>Updated XULRunner version to 31.</li>
   <li>Fixed bug in SEB Config Tool which caused a crash if loading settings was aborted and then user started to entering settings manually.</li>
   <li>Now arguments for XULRunner can be specified containing Windows environment variables for paths (for example in Config Tool Applications -&gt; Permitted Processes -&gt; xulrunner.exe, new argument: -profile &quot;%LOCALAPPDATA%\SafeExamBrowser\Profiles&quot;).</li>
-  <li>Improved compatibility of .seb config file format with the upcoming SEB 2.0 RC/final release version for Mac OS X.</li>
+  <li>Improved compatibility of .seb config file format with the upcoming SEB 2.0 RC/final release version for macOS.</li>
   </ul>
 <p>Known issues in SEB 2.0.1 for Windows:</p>
 <ul>

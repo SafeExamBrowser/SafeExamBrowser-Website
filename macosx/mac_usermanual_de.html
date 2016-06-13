@@ -51,7 +51,7 @@
           <li><a href="../windows/win_developer.html">Entwickler</a></li>
         </ul>
       </li>
-      <li><a href="mac_usermanual_de.html">MacOSX</a>
+      <li><a href="mac_usermanual_de.html">macOS</a>
         <ul>
           <li><a href="mac_usermanual_de.html">Benutzerhandbuch</a></li>
           <li><a href="mac_release_notes_de.html">Release&nbsp;Notes</a></li>
@@ -68,7 +68,7 @@
   <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
             <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
             <tr>
-                <td valign="top"><h4>Safe Exam Browser für Mac OS X </h4>
+                <td valign="top"><h4>Safe Exam Browser für macOS </h4>
               <p><span class="textsubnavi"><a href="mac_usermanual_en.html">»Benutzerhandbuch für die aktuelle Version Safe Exam Browser 2.0<br />
               </a></span>(momentan nur in Englisch verfügbar)</p></td>
                 <td align="right" valign="top"><span class="link_small"><a href="mac_usermanual_v1.5.2_en.html">English</a>&nbsp;&nbsp;&nbsp;Deutsch</a><br />
@@ -78,8 +78,8 @@
               </span></td>
               </tr>
           </table>
-          <p><strong>Safe Exam Browser 1.5.2 für Mac OS X</strong></p>
-            <p>Safe Exam Browser – SEB für Mac OS X öffnet ein Webbrowser-Fenster ohne Navigationselemente und versetzt den Computer in einen Kiosk-Modus, der den Wechsel zu anderen Applikationen oder das vorzeitige Beenden von SEB verhindert. SEB unterstützt derzeit die weit verbreiteten Learning-Management-Systeme Moodle und ILIAS direkt, kann aber auch mit den meisten anderen Web-basierten Online-Quiz- und E-Assessment-Systemen verwendet werden. <br />
+          <p><strong>Safe Exam Browser 1.5.2 für macOS</strong></p>
+            <p>Safe Exam Browser – SEB für macOS öffnet ein Webbrowser-Fenster ohne Navigationselemente und versetzt den Computer in einen Kiosk-Modus, der den Wechsel zu anderen Applikationen oder das vorzeitige Beenden von SEB verhindert. SEB unterstützt derzeit die weit verbreiteten Learning-Management-Systeme Moodle und ILIAS direkt, kann aber auch mit den meisten anderen Web-basierten Online-Quiz- und E-Assessment-Systemen verwendet werden. <br />
             </p>
             <div id="CollapsiblePanel1" class="CollapsiblePanel">
             <div class="CollapsiblePanelTab" tabindex="0"><strong>Inhalt</strong> <span class="textklein">Verbergen/Zeigen</span></div>
@@ -180,7 +180,7 @@
   Obwohl SEB die Preferences-Datei teilweise verschlüsselt, sollte verhindert werden, dass Benutzer auf diese Datei zugreifen können, siehe <a href="#secure_environment">Sichere Umgebung für Prüfungen mit SEB MacOSX</a>. Diese Standard-plist-Datei kann auch mit Apple's  Xcode bearbeitet werden.<br />
     </p>
     <h4><a name="operating_system" id="operating_system"></a>Betriebssystem</h4>
-            <p> Mac OS X ab Version 10.6 auf 64-bit Intel Mac </p>
+            <p> macOS ab Version 10.6 auf 64-bit Intel Mac </p>
             <p> Auf 32-Bit Macs (wie der ersten Generation Intel Core Solo und Core Duo Mac Mini, MacBook und iMac) sind Web-Plugins aus Sicherheitsgründen deaktiviert. </p>
         <h4> <a name="secure_environment" id="secure_environment"></a>Sichere Umgebung für Prüfungen mit SEB MacOSX</h4>
             <p>Wie bereits erwähnt, ist es sicherer, SEB MacOSX in einer kontrollierten Systemumgebung zu verwenden, für den <strong>Einsatz von Drittapplikationen</strong> ist es sogar dringend notwendig. Wenn Sie ein separates Benutzerkonto mit den untenstehend beschriebenen Einstellungen einrichten, können Sie eine sehr sichere Prüfungsumgebung erzielen. </p>
@@ -191,12 +191,12 @@
             <li>Falls Sie ein Benutzer-Konto mit aktivierter Kindersicherung und Drittapplikationen verwenden, sollten Sie (<span class="quote">Systemeinstellungen -&gt; Kindersicherung</span>) die Optionen <span class="quote">Einfachen Finder verwenden</span> und <span class="quote">Nur ausgewählte Programme erlauben</span> einzig mit  Safe Exam Browser und den  gewünschten Drittapplikationen als erlaubte Programme benutzen. </li>
             <li>Bei der Kindersicherung auf der Seite <span class="quote">Inhalt</span> können Sie unter <span class="quote">Zugriff nur auf diese Websites erlauben</span> einzig die Adresse Ihres LMS-/Prüfungsservers einstellen. Dies empfielt sich insbesondere bei der Verwendung von Drittapplikationen, weil viele Programme über die Hilfefunktion oder das <span class="quote">Über ...</span>-Fenster auf irgendwelche Adressen im Internet verlinken (z.B. Online-Hilfe, Herstellerseite).  OSX startet dann den Standard-Webbrowser, selbst wenn dieser in der Kindersicherung nicht zugelassen ist. Wenn in der Kindersicherung nur der LMS-Server erlaubt ist, gelangen Prüfungsteilnehmer so trotzdem nicht frei ins Internet.</li>
             <li>In <span class="quote">Systemeinstellungen -&gt; Freigaben</span> sollten Sie entweder alles ausschalten, insbesondere Bildschirmfreigabe, Dateifreigabe, entfernte Anmeldung und entfernte Verwaltung  oder mit ordentlichen Passwörtern schützen. Die Benutzer dürfen aber in keinem Fall  Administrator-Rechte auf diesem Rechner besitzen!</li>
-            <li>Richten Sie ein <span class="quote">Open-Firmware-Passwort</span> auf dem Computer ein. Beim Open-Firmware-Passwort handelt es sich um eine Sicherheits-Funktion, die auf modernen Macintosh Systemen zur Verfügung steht. Wenn das Open-Firmware-Passwort aktiviert wird, führt der Computer ein sicheres Aufstarten durch. So wird einerseits das Aufstarten von einem anderen Volume (einer anderen Partition, einer CD/DVD, einem Memorydrive oder einer externen Festplatte) verhindert, nur der Start vom voreingestelten Startlaufwerk (in <span class="quote">Systemeinstellungen -&gt; Startvolume</span>) ist möglich. Andererseits wird verhindert, dass der Einzelbenutzer-Modus  durch das Drücken von Befehlstaste+S während des Aufstartens aktiviert wird. Ein Administrator kann das Open-Firmware-Passwort mittels des <span class="quote">Firmware Password Utility</span>-Programms setzen, das von der Mac OS X Systemdisk kopiert werden kann (befindet sich auf dieser unter <span class="path">/Applications/Utilities/</span>, im Finder nicht sichtbar, Terminal benutzen). <br />
+            <li>Richten Sie ein <span class="quote">Open-Firmware-Passwort</span> auf dem Computer ein. Beim Open-Firmware-Passwort handelt es sich um eine Sicherheits-Funktion, die auf modernen Macintosh Systemen zur Verfügung steht. Wenn das Open-Firmware-Passwort aktiviert wird, führt der Computer ein sicheres Aufstarten durch. So wird einerseits das Aufstarten von einem anderen Volume (einer anderen Partition, einer CD/DVD, einem Memorydrive oder einer externen Festplatte) verhindert, nur der Start vom voreingestelten Startlaufwerk (in <span class="quote">Systemeinstellungen -&gt; Startvolume</span>) ist möglich. Andererseits wird verhindert, dass der Einzelbenutzer-Modus  durch das Drücken von Befehlstaste+S während des Aufstartens aktiviert wird. Ein Administrator kann das Open-Firmware-Passwort mittels des <span class="quote">Firmware Password Utility</span>-Programms setzen, das von der macOS Systemdisk kopiert werden kann (befindet sich auf dieser unter <span class="path">/Applications/Utilities/</span>, im Finder nicht sichtbar, Terminal benutzen). <br />
                 Das Open-Firmware-Passwort wird zurückgesetzt, wenn die physikalische Arbeitsspeicherkonfiguration geändert wird (RAM-Module entfernt oder hinzugefügt werden). Bei Systemen, auf denen das Open-Firmware-Passwort benutzt wird, sollte also verhindert werden, dass Benutzer das Rechner-Gehäuse öffnen können.<br />
               </li>
           </ul>
             <h4><a name="license" id="license"></a>Lizenz</h4>
-            <p>Safe Exam Browser für Mac OS X: &copy; 2010-2015 Daniel R. Schneider, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a>, basierend auf der Originalidee des Safe Exam Browser von Stefan Schneider, Universität Giessen<br />
+            <p>Safe Exam Browser für macOS: &copy; 2010-2015 Daniel R. Schneider, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a>, basierend auf der Originalidee des Safe Exam Browser von Stefan Schneider, Universität Giessen<br />
             Projekt-Konzept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer,  Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs. Französische Lokalisierung: Nicolas Dunand <br />
             </p>
             <p><strong>Quellcode:</strong> <a href="mac_developer.html#getSourceCode">Veröffentlicht</a> unter  Mozilla Public License <a href="http://www.mozilla.org/MPL/MPL-1.1.html" target="_blank">MPL 1.1</a></p>

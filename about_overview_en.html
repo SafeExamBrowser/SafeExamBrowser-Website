@@ -52,7 +52,7 @@
           <li><a href="windows/win_developer.html">Developer</a></li>
         </ul>
       </li>
-      <li><a href="macosx/mac_usermanual_en.html">MacOSX</a>
+      <li><a href="macosx/mac_usermanual_en.html">macOS</a>
         <ul>
           <li><a href="macosx/mac_usermanual_en.html">User&nbsp;Manual</a></li>
           <li><a href="macosx/mac_release_notes_en.html">Release&nbsp;Notes</a></li>
@@ -73,7 +73,7 @@
         </td>
         <td align="right" valign="top"><span class="link_small">English&nbsp;&nbsp;&nbsp;<a href="about_overview_de.html">Deutsch</a><br /><br />
           <a href="windows/win_quickguide_en.html">»Documentation Windows</a><br />
-          <a href="macosx/mac_usermanual_en.html">»Documentation for Mac OS X</a><br />
+          <a href="macosx/mac_usermanual_en.html">»Documentation for macOS</a><br />
         </span></td>
       </tr>
     </table> 
@@ -115,10 +115,10 @@
       </ol>
       <h5>System Architecture of SEB for Windows </h5>
       <p>Safe Exam Browser for Windows  consists of the SEB kiosk application, which opens an own Windows desktop and catches system commands like keyboard shortcuts (for example ALT+F4) and right mouse-button clicks. The second part is <a href="https://developer.mozilla.org/En/XULRunner" target="_blank">XULRunner</a>, a runtime package from the Mozilla Foundation  (Firefox version 3 and above is also based on XULRunner). The SEB browser part running on XULRunner  connects to the LMS and it doesn't contain navigation and status bars.</p>
-      <h5>System Architecture of SEB for Mac OS X</h5>
-      <p>In contrast to the Windows version, Safe Exam Browser for Mac&nbsp;OS&nbsp;X is a monolithic  application using a web browser framework instead of a browser runtime. It's using the <a href="http://webkit.org" target="_blank">WebKit</a>  engine, on which  Safari and some new open source browsers like Google Chrome are based.   SEB for Mac OS X connects to the Learning Management Systems in the same way as the Windows version.</p>
+      <h5>System Architecture of SEB for macOS</h5>
+      <p>In contrast to the Windows version, Safe Exam Browser for Mac&nbsp;OS&nbsp;X is a monolithic  application using a web browser framework instead of a browser runtime. It's using the <a href="http://webkit.org" target="_blank">WebKit</a>  engine, on which  Safari and some new open source browsers like Google Chrome are based.   SEB for macOS connects to the Learning Management Systems in the same way as the Windows version.</p>
       <h5>Safe Exam Browser 2.0</h5>
-      <p>The   major release <span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span> facilitates secure exams on unmanaged computers like students' own laptops as well as in managed environments for both platforms Windows and Mac OS X.</span> <span class="half_linespace"><span class="quote">SEB 2.0</span> offers an individual configuration per exam, which is protected by a strong encryption against manipulation. Thanks to a new authentication feature the exam system can verify that a particular, unaltered SEB version and the correct exam settings are used for an examination. This facilitates secure exams especially on unmanaged computers like students' own laptops.</span></p>
+      <p>The   major release <span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span> facilitates secure exams on unmanaged computers like students' own laptops as well as in managed environments for both platforms Windows and macOS.</span> <span class="half_linespace"><span class="quote">SEB 2.0</span> offers an individual configuration per exam, which is protected by a strong encryption against manipulation. Thanks to a new authentication feature the exam system can verify that a particular, unaltered SEB version and the correct exam settings are used for an examination. This facilitates secure exams especially on unmanaged computers like students' own laptops.</span></p>
       <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span> is an unified version which  brings the same features, exam system interface, configuration files and a very similar user interface onto both platforms, while still taking in account operating system differences and unique platform specific features. </span>Besides the full featured Windows and Mac OS&nbsp;X versions, we are working on an iPad version with a reduced feature set, which will still maintain compatibility with the unified <span class="quote">.seb configuration file</span> format.</p>
       <h4><a name="Features" id="Features"></a>Features </h4>
       <h5>Common/Identical Features</h5>
@@ -145,13 +145,13 @@
         <li>Separate configuration tool with graphical user interface.</li>
         <li>Third party applications can be allowed to run together with SEB, it can be switched between them with an <span class="quote">App Chooser</span> window</li>
       </ul>
-      <h5> SEB for Mac OS X</h5>
+      <h5> SEB for macOS</h5>
       <ul>
         <li>Preferences window for easy set up, can be protected with an administrator password.</li>
         <li>Disabled actions:
           <ul>
             <li>Quit SEB (can be disabled or protected by a quit password)</li>
-            <li>OS X Dock and Menu bar</li>
+            <li>macOS Dock and Menu bar</li>
             <li>Switch to other applications with  process switcher  (cmd+Tab/cmd+Shift+Tab)</li>
             <li>Force Quit window (cmd+opt+Esc)</li>
             <li>Normal reboot (ctrl+cmd+eject) and shutdown (ctrl+opt+cmd+eject)</li>
@@ -160,10 +160,10 @@
             <li>Optionally  hyperlinks requesting to be opened in a new window and links embedded in JavaScript or plug-ins  directing to another server than the one of the current host</li>
             <li>Display and system idle sleep </li>
             <li>Context menu options in Flash fullscreen video players</li>
-            <li>OS X screen capture</li>
+            <li>macOS screen capture</li>
           </ul>
         </li>
-        <li>Third party applications can be allowed to run together with SEB (in an accordingly configured OS X user account)</li>
+        <li>Third party applications can be allowed to run together with SEB (in an accordingly configured macOS user account)</li>
       </ul>
       <h4><a name="Details" id="Details"></a>Technical Details</h4>
       <h5>SEB for Windows</h5>
@@ -171,10 +171,10 @@
         License: Mozilla Public License (MPL)<br />
         Browser Engine: XULRunner (Mozilla Gecko, which is used by Firefox) <br />
         Programming Languages and Frameworks: C# (.NET), JavaScript, Mozilla XULRunner</p>
-      <h5>SEB for Mac OS X</h5>
+      <h5>SEB for macOS</h5>
       <p>Operating System: Mac OS X 10.6 (only supported up to SEB 1.5.2),  OS X 10.7 - OS X 10.11 El Capitan<br />
         License:  Mozilla Public License (MPL)<br />
-        Browser Engine: WebKit  (Safari is also based on WebKit). SEB uses the WebKit version installed on the system (version depends on OS X and Safari updates).<br />
+        Browser Engine: WebKit  (Safari is also based on WebKit). SEB uses the WebKit version installed on the system (version depends on macOS and Safari updates).<br />
         Programming Language: Objective-C (Cocoa)</p>
       <h4><a name="Acknowledgement" id="Acknowledgement"></a>Acknowledgement</h4>
       <p>Important parts of this project have been carried out as part of the program &quot;<a href="http://www.switch.ch/aaa/" target="_blank">AAA/SWITCH –<br />

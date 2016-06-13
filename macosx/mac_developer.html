@@ -52,7 +52,7 @@
           <li><a href="../windows/win_developer.html">Developer</a></li>
         </ul>
       </li>
-      <li><a href="mac_usermanual_en.html">MacOSX</a>
+      <li><a href="mac_usermanual_en.html">macOS</a>
         <ul>
           <li><a href="mac_usermanual_en.html">User&nbsp;Manual</a></li>
           <li><a href="mac_release_notes_en.html">Release&nbsp;Notes</a></li>
@@ -67,7 +67,7 @@
     <div id="logotext_f_safe"> <font color="#070782">Safe Exam Browser</font></div>
   </div>
   <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
-            <h4>Developer Manual SEB for Mac OS X</h4>
+            <h4>Developer Manual SEB for macOS</h4>
             <p><strong>Disclaimer:</strong> This page is not yet updated to reflect the current SEB version 2.0. Most of this information is therefore outdated. Please note that the source code of SEB version 2.x is no longer available in the SEB SourceForge SVN repository, but on <a href="https://sourceforge.net/p/seb/git/ci/master/tree/" target="_blank">SourceForge Git</a>.</p>
             <p>This manual is providing  information about the architecture of Safe Exam Browser for Mac&nbsp;OS&nbsp;X, about  getting  the  SEB (and WebKit) sources, linking the components and  how to build SEB. </p>
 <div id="CollapsiblePanel1" class="CollapsiblePanel">
@@ -80,8 +80,8 @@
                 <a href="#addingNewFrameworkVersions">Adding new WebKit version</a> </div>
           </div>
             <h4><a name="architecture" id="architecture"></a>Architecture</h4>
-            <p>SEB for Mac OS X is a modern Mac&nbsp;OS&nbsp;X application, written in Objective-C, using the Cocoa system framework. It has been developed for Mac&nbsp;OS&nbsp;X 10.6 Snow Leopard and updated for OS&nbsp;X&nbsp;10.7 Lion, we don't intend to support older system versions. SEB for Mac OS X is using the <a href="http://www.webkit.org" target="_blank">WebKit</a> browser engine, on which Safari on Mac and iOS and some new open source browsers like Google Chrome and Android browsers are based. SEB for Mac OS X embeds a private copy of the WebKit framework, so Apple updates of Safari don't affect the compatibility of SEB with existing quizzes. Please note: This doesn't apply to the   Mac App Store version of SEB which is using the system's built-in WebKit framework (due to restrictions of the Mac App Store). </p>
-            <p>SEB for Mac OS X  version 1.3 consists of the classes listed below. The class structure is supposed to change soon, since SEB will go trough major enhancements in the next months. Among others there will be additional preferences panes for more options and SEB will be ported to a document-based architecture to support opening multiple webpages in separate windows and tabs.</p>
+            <p>SEB for macOS is a modern Mac&nbsp;OS&nbsp;X application, written in Objective-C, using the Cocoa system framework. It has been developed for Mac&nbsp;OS&nbsp;X 10.6 Snow Leopard and updated for OS&nbsp;X&nbsp;10.7 Lion, we don't intend to support older system versions. SEB for macOS is using the <a href="http://www.webkit.org" target="_blank">WebKit</a> browser engine, on which Safari on Mac and iOS and some new open source browsers like Google Chrome and Android browsers are based. SEB for macOS embeds a private copy of the WebKit framework, so Apple updates of Safari don't affect the compatibility of SEB with existing quizzes. Please note: This doesn't apply to the   Mac App Store version of SEB which is using the system's built-in WebKit framework (due to restrictions of the Mac App Store). </p>
+            <p>SEB for macOS  version 1.3 consists of the classes listed below. The class structure is supposed to change soon, since SEB will go trough major enhancements in the next months. Among others there will be additional preferences panes for more options and SEB will be ported to a document-based architecture to support opening multiple webpages in separate windows and tabs.</p>
     <h5>List of Classes</h5>
             <ul>
             <li class="normal_line_height" id="half_linespace"><span class="codetext">SEBController</span><br />
@@ -109,7 +109,7 @@
             <p class="no_linespace">Add the SEB Sourceforge repository to Xcode. In Xcode 4 you do this in the Organizer windows' Repositories tab (see the Xcode documentation for details). Name it as you like and use the URL below as Location:</p>
             <p class="codetext">https://seb.svn.sourceforge.net/svnroot/seb</p>
             <p>Type is Subversion, and you don't need a username or password to check out the code.</p>
-            <p>You will find the current developer version of SEB for Mac OS X at the path <span class="path">trunk/mac/SafeExamBrowser-src</span>. Checkout this directory to your computer.</p>
+            <p>You will find the current developer version of SEB for macOS at the path <span class="path">trunk/mac/SafeExamBrowser-src</span>. Checkout this directory to your computer.</p>
             <h4><a name="localisation"></a>Localizing SEB</h4>
             <p class="no_linespace">To translate Interface Builder xib files, you best use the <span class="codetext">ibtool</span> command-line utility to extract all the strings. Enter in Terminal:</p>
             <p class="sourcecode" id="full_linespace">ibtool --generate-strings-file en.lproj/MainMenu.strings en.lproj/MainMenu.xib</p>
