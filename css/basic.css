@@ -3,11 +3,11 @@ body {
 	background-image: url(../images/bg-container.png);
 	background-repeat: repeat-y;
 	background-position: center;
-	padding-top: 60px;
+	padding-top: 80px;
 }
 @media (min-width:768px) and (max-width: 991px) {
   body {
-    padding-top: 100px;
+    padding-top: 130px;
   }
 }
 #half_linespace {
