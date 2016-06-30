@@ -156,7 +156,7 @@ body {
 	margin-top: -30px;
 	margin-right: 60px;
 	margin-left: 60px;
-	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
+/*	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;*/
 }
 #spalte1von1 { line-height: 1.5em; width: 528px; height: auto; float: none; margin-top: 200pt; }
 #spalte1von2 { line-height: 1.5em; width: 260px; height: auto; float: left; padding-right: 10px; }
