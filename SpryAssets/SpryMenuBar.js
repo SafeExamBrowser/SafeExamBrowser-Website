@@ -87,7 +87,7 @@ Spry.BrowserSniff = function()
 Spry.is = new Spry.BrowserSniff();
 
 // Constructor for Menu Bar
-// element should be an ID of an unordered list (<ul> tag)
+// element should be an ID of an unordered list (<ul id="seblist"> tag)
 // preloadImage1 and preloadImage2 are images for the rollover state of a menu
 Spry.Widget.MenuBar = function(element, opts)
 {
@@ -269,7 +269,7 @@ Spry.Widget.MenuBar.prototype.removeIframeLayer =  function(menu)
 };
 
 // clearMenus for Menu Bar
-// root is the top level unordered list (<ul> tag)
+// root is the top level unordered list (<ul id="seblist"> tag)
 Spry.Widget.MenuBar.prototype.clearMenus = function(root)
 {
 	var menus = root.getElementsByTagName('ul');
