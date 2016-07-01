@@ -166,7 +166,7 @@
             <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.2/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-win/releases" target="_blank">GitHub-Projektseite</a>. <br />
         </p>
 <p id="half_linespace2"><span class="half_linespace">SEB 2.1.2 ist  kompatibel mit Windows 10, enthält Verbesserungen für den Einsatz auf Tablets mit Windows  8.1/10 und erhöht die generelle Stabilität: </span></p>
-<ul>
+<ul id="seblist">
   <li>Safe Exam Browser  ist nun vollständig kompatibel mit Windows 10, es tritt keine Verzögerung beim Start unter Windows 10 mehr auf und  Windows Updates werden korrekt pausiert während SEB läuft.</li>
   <li>Verbesserungen im Touch-optimierten Modus für  Windows Tablet Computer, wie ein besseres Verhalten wenn die Bildschirmtastatur eingeblendet wird und die Webseite ein Textfeld in den sichtbaren Bereich scrollt oder wenn der Eingabe-Cursor in oder zwischen Textfeldern bewegt wird.</li>
   <li>Eine neue Option erlaubt es, die Bildschirmtastatur manuell oder automatisch auszuschalten, wenn eine Hardwaretastatur angeschlossen ist.</li>
@@ -177,7 +177,7 @@
   <li>Das <span class="quote">Show Keyboard Layout</span> SEB-Taskbar-Widget schaltet nun die Tastaturbelegung auch unter Windows 7 korrekt um.</li>
   </ul>
 <p>Weitere Funktionen:</p>
-<ul>
+<ul id="seblist">
   <li> Safe Exam Browser enthält einen Touch-optimierten Modus für  Windows-Tablet. </li>
   <li>Eine Sicherheitsfunktion überwacht Prozesse und verhindert, dass nicht erlaubte Applikationen geöffnet und aktiviert werden und Fenster anzeigen. </li>
   <li>Schaltflächen zum Neustarten der Prüfung, Neuladen der Seite, Wechseln der Tastaturbelegung und eine Anzeige der aktuellen Zeit verbessern die Bedienbarkeit in Prüfungen.</li>
@@ -203,7 +203,7 @@
             <a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1/SafeExamBrowser-2.1.dmg" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <br />
             </p>
 <p id="half_linespace">Safe Exam Browser 2.1 <span class="half_linespace">für macOS  bietet neue  Funktionalität, verbesserte Bedienbarkeit und viele Verbesserungen in der Absicherung des Prüfungscomputers:</span>              </p>
-<ul>
+<ul id="seblist">
   <li>Neue Tasten im SEB-Dock zum Neustarten der Prüfung, Neuladen der aktuellen Webseite und eine Anzeige der Uhrzeit verbessern die Usability in Prüfungen.</li>
   <li>Volle Kompatibilität mit OS X 10.11 El Capitan.</li>
   <li>Nun kann eingestellt werden, ob die Rechtschreib- und Grammatikprüfung und das Nachschlagen von Wörtern während einer Prüfung benutzt werden darf.</li>
@@ -214,7 +214,7 @@
   <li>Neues <span class="quote">sebs://</span> Protokol hinzugefügt (zusätzlich zu <span class="quote">seb://</span>), welches die Benutzung von https zum Laden einer <span class="quote">.seb</span> Konfigurationsdatei erzwingt.</li>
   </ul>
 <p>Andere Funktionen:</p>
-<ul>
+<ul id="seblist">
   <li>Unterstützung für verschlüsselte SEB-Konfigurationsdateien (Dateityp <span class="quote">.seb</span>), die es erlauben, SEB pro Prüfung individuell zu konfigurieren. Dieselben <span class="quote">.seb</span> Dateien können nun für das Starten von Prüfungen mit SEB 2.x auf Windows-Rechnern und auf Macs benutzt werden. </li>
   <li>Eingebauter komfortabler Editor für die Plattform-unabhängigen SEB-Konfigurationsdateien, der auch alle zusätzlichen individuellen Einstellungen der Windows-Version konfigurieren kann.</li>
   <li>SEB blockiert  auch die Bildschirmfoto-Funktion von macOS.</li>
@@ -237,7 +237,7 @@
           <span class="codetext">SHA1: f0f921d3e4f59582d9826bc38597e33d1f6b5cbd<br />
           MD5: 9e163ab593ed0a5245c5f6af0b1c52ac</span></p>
 <p id="half_linespace">Wichtigste Eigenschaften und Neuigkeiten: </p>
-              <ul>
+              <ul id="seblist">
       <li>SEB kann nun zusätzliche Browserfenster öffnen.</li>
       <li>In neuen Browser-Einstellungen kann festgelegt werden, wie Hyperlinks in einem neuen Browserfenster geöffnet werden: Links  generell blockieren, im selben Fenster öffnen, in einem neuen Fenster öffnen. Einstellung separat möglich für normale Links und für solche, die per JavaScript oder aus Plug-Ins aufgerufen werden.</li>
       <li>Zusätzlich kann eingestellt werden, ob SEB Links ignorieren soll, die in einem neuen Fenster geöffnet werden sollen und auf einen anderen  Server als den der aktuellen Webseite führen.</li>
@@ -274,7 +274,7 @@
           <span class="codetext">SHA1: 6d43851950e7e7d029d2320f5641d9cb85c9ff16<br />
           MD5: d0575b4ba1ba6125dc8a5ed1e957b713</span></p>
 <p id="half_linespace">Dieser Patch sorgt dafür, dass der Prüfungsmodus in Moodle 2.3.x wieder korrekt mit Safe Exam Browser funktioniert, d.h. alle Navigationslinks für andere Bereiche des LMS während der Prüfung ausgeblendet werden. In Moodle 2.4 wird die Korrektur integriert sein, untenstehend eine kurze Anleitung (für  Moodle-Administratoren), wie der Patch auf Moodle 2.3-Versionen angewendet werden kann:</p>
-              <ul>
+              <ul id="seblist">
       <li>Zip-Datei enpacken.</li>
       <li>Die Passagen mit  zusätzlichen Patch-Code starten  mit <span class="codetext">// Voma add start</span> und enden mit  <span class="codetext">// Voma add end</span> und befinden sich jeweils fast/ganz am Ende der Dateien. </li>
       <li> Da sich die beiden Dateien <span class="path">attempt.php</span> und <span class="path">summary.php</span> in verschiedenen Moodle 2.3.x-Versionen unterscheiden können, sollte man nur den Patch-Code zwischen <span class="codetext">// Voma add start/end</span> an die richtige Stelle in die   zwei betroffenen Dateien der entsprechenden Moodle-Installation kopieren.</li>

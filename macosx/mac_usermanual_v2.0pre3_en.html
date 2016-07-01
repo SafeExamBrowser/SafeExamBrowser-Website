@@ -207,7 +207,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     <p>In the preferences window you can set the following parameters:</p>
     <h4><a name="GeneralPane" id="GeneralPane"></a>Settings in  the General Pane    </h4>
     <div class="image4"><img src="images/2.0pre3/SEB_PreferencesGeneral-2.0-en.png" width="764" height="511" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
       <li><span class="quote">Paste from saved clipboard</span>: SEB saves the content of the clipboard (if it's a text string) when starting up and before clearing the clipboard. Use this link to paste the saved string to the <span class="quote">Start URL</span> field.</li>
       <li><span class="quote">Administrator password</span>: Password required to enter the preferences window. It's recommended to set one!</li>
@@ -219,7 +219,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
       <li><span class="quote">Help-Button &quot;?&quot;</span>: Displays this manual page in the browser window. Preferences stay open, if they get hidden behind the browser window, you can access them by pressing the same keys as mentioned before.</li>
     </ul>
     <p>You can get out of the preferences windows using one of the three buttons below:</p>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Close window</span> (standard control in the windows title bar): Accepts preferences and closes window. If you changed start URL, SEB will be restarted to display the new page.</li>
       <li><span class="quote">Restart SEB</span>: Saves preferences and restarts SEB, displaying the webpage at start URL.</li>
       <li><span class="quote">Quit</span>: Saves preferences and exits SEB.</li>
@@ -227,10 +227,10 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     <h4><a name="ConfigFilePane" id="ConfigFilePane"></a>Settings in the Config File Pane</h4>
     <p>File handling buttons like open, save and revert are not yet final because the settings file handling is not yet final. </p>
     <div class="image4"><img src="images/2.0pre3/SEB_PreferencesConfigFile-2.0-en.png" width="764" height="533" alt="SEB Preferences Window" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Use SEB settings file for ... starting an exam</span>: A settings file saved with this option will start the exam with the according settings, but won't change the local SEB settings.</li>
     </ul>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Use SEB settings file for ... configuring a client</span>: A SEB settings file saved with this option can be used to change the local settings of a SEB client. Encrypt it with the same password which is set as administrator password on the SEB client (or none if there is no administrator password set on the SEB client yet).</li>
       <li><span class="quote">Allow to open preferences window on client</span>: Usually you should disable the preference window on exam clients besides for debugging purposes. </li>
       <li><span class="quote">Choose identity to be used for encrypting SEB settings file ...</span> In this popup menu  all identities (X.509 certificates with RSA public key and associated private key) in your default keychain are listed, which can be used for encrypting and decrypting. Export the chosen identity (in Keychain Access utility) and install it on your SEB clients.<br />
@@ -246,10 +246,10 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     </p>
 <h4><a name="AppearancePane" id="AppearancePane"></a>Settings in the Appearance Pane    </h4>
     <div class="image4"><img src="images/2.0pre3/SEB_PreferencesAppearance-2.0-en.png" width="764" height="482" alt="SEB Preferences Window" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Use browser window</span>: Use a window for the SEB browser which can be scaled and moved around, also to another screen when available. One advantage of using a browser window is that if you're using a large wide screen display, some web pages may not be ergonomic to read. With the scalable browser window you can adjust the width of displayed web pages.</li>
     </ul>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Use full screen mode</span>: Display the SEB browser full screen.</li>
       <li><span class="quote">Main browser window size</span>: You can set the width and height of the main SEB browser window as absolute pixel values or a percentage of the screen width or height.  You can enter the dimensions (in pixels or percent values) in the text field or select one of the predefined values in the  popdown menu. </li>
       <li><span class="quote">Main browser window horizontal positioning</span>:  You can choose how the window will be positioned horizontally if it doesn't fill the full screen width: Left, Center, Right.</li>
@@ -261,9 +261,9 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     </ul>
     <h4><a name="BrowserPane" id="BrowserPane"></a>Settings in the Browser Pane    </h4>
     <div class="image4"><img src="images/2.0pre3/SEB_PreferencesBrowser-2.0-en.png" width="764" height="642" alt="SEB Preferences Window" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Links requesting to be opened in a new browser window ... </span>This popup list offers three policies:</li>
-      <ul>
+      <ul id="seblist">
       <li><span class="quote">get generally blocked</span></li>
       <li><span class="quote">open in same window</span>: This was the behaviour in SEB MacOSX versions before 1.5.</li>
       <li><span class="quote">open in new window</span></li>
@@ -273,7 +273,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
       <li><span class="quote">New browser window size</span>: You can set the width and height of  new browser windows as absolute pixel values or a percentage of the screen width or height.  You can enter the dimensions (in pixels or percent values) in the text field or select one of the predefined values in the  popdown menu. </li>
       <li><span class="quote">New browser window horizontal positioning</span>:  You can choose how the window will be positioned horizontally if it doesn't fill the full screen width: Left, Center, Right.</li>
       <li><span class="quote"> Links in JavaScript/plug-ins ... </span>This popup list offers three policies for hyperlinks opened from JavaScript or plug-ins (like Flash):</li>
-      <ul>
+      <ul id="seblist">
       <li><span class="quote">get generally blocked</span></li>
       <li><span class="quote">open in same window</span>: This was the behavior in SEB MacOSX versions before 1.5, but links got only opened, when they were not directing to a different server (see the checkbox below).</li>
       <li><span class="quote">open in new window</span></li>
@@ -288,14 +288,14 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     </ul>
     <h4><a name="DownUploadsPane" id="DownUploadsPane"></a>Settings in the Down/Uploads Pane    </h4>
 <div class="image4"><img src="images/2.0pre3/SEB_PreferencesDownUploads-2.0-en.png" width="764" height="442" alt="SEB Preferences Window" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Allow downloading and uploading files</span>: Usually to be used when switching to third party applications is enabled.</li>
     </ul>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Save downloaded files to</span>: Choose the download directory in this Popup menu.</li>
       <li><span class="quote">Open files after downloading</span>: Downloaded files will be opened with the according application, which has to be set correctly in the system for each used file type! </li>
       <li><span class="quote">Choose file to upload …</span> SEB can let the user choose the file to upload manually (as usual) or automatically choose the same file which was downloaded before. There are three possible policies to choose the file to upload:</li>
-          <ul>
+          <ul id="seblist">
       <li><span class="quote">manually with file requester</span></li>
       <li><span class="quote">by attempting to upload same file downloaded before</span>: If the file is not found, a file requester  is presented and the user can choose some other file manually.</li>
       <li><span class="quote">by only allowing to upload the same file downloaded before</span>: 
@@ -306,7 +306,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
 
     <h4><a name="ExamPane" id="ExamPane"></a>Settings in the Exam Pane    </h4>
     <div class="image4"><img src="images/2.0pre3/SEB_PreferencesExam-2.0-en.png" width="764" height="502" alt="SEB Preferences Window" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Browser Exam Key</span>: Press the <span class="quote">Generate</span> button and copy the exam key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. <br />
       <strong>Important: First save your final exam settings in a .seb settings file and then generate and copy the browser exam key to your exam system's quiz settings as the Browser Exam Key changes when you change any setting</strong>. <br />
       Please note that if you want to use the same .seb file with Windows and Mac clients, you should not alter the file anymore when you're copying the Browser Exam Key hashes to your exam settings in your quiz module. Re-saving it (especially in the Windows version) will change the Browser Exam Key of that file also in the SEB version on the other platform. The keys for the Mac and the Windows version will in any case be different, so you have to load the final .seb file into both versions and copy both keys to your quiz settings.      </li>
@@ -316,13 +316,13 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     </ul>
 
     <h4><a name="ApplicationsPane" id="ApplicationsPane"></a>Settings in the Applications Pane    </h4>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Monitor processes:</span> If enabled, SEB monitors which processes/applications are running during an exam.  When SEB is started,  an alert/dialogue window is displayed to tell the user to quit the currently running applications (which are not in the list of  permitted processes) and to restart SEB afterwards or to let SEB kill the applications risking that there could be data loss. Prohibited background processes are killed automatically, without user confirmation. Applications which allow to be terminated nicely in macOS are automatically terminated (also without asking the user).</li>
     </ul>
 <h5>Permitted Processes Section</h5>
 <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. Permitted processes don't appear in the application chooser, but they are allowed to run in background even when <span class="quote">monitor processes</span> is enabled (they are on the whitelist).</p>
 <div class="image4"><img src="images/2.0pre3/SEB_PreferencesApplications-PermittedProcesses-2.0-en.png" width="764" height="812" alt="SEB Preferences Window" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Allow  switching to third party applications</span>: If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">cmd+Tab</span>) will work, so it's possible to switch to other running applications.<br />
         Use this option only when running SEB in a user account managed by parental controls, with only SEB and the desired applications allowed. Also you should switch on <span class="quote">Simple Finder</span> and don't give users access to other accounts with administrator rights on that computer (see <a href="#secure_environment">Secure Environment</a>). <strong>The final version of SEB for macOS 2.0 will allow to use third party applications without a separate managed user account.</strong><br />
       </li>
@@ -333,7 +333,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
       <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of permitted processes.</li>
     </ul>
     <p>Selected Process details:</p>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Active</span>: Indicates if this permitted process item is active (can be used while testing).</li>
       <li><span class="quote">Title</span>: Application title which is displayed in the application chooser. Background processes don't have a title, because they can not be selected by users.</li>
       <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
@@ -351,12 +351,12 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
 
     <p>List of processes which are prohibited to run during an exam (they are on the blacklist) when <span class="quote">monitor processes</span> is enabled. This blacklist of processes makes sense because SEB on both platforms usually allows to run system processes (SEB MacOSX allows all processes and applications signed by Apple to run), but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the blacklisted processes are killed by SEB.</p>
 <div class="image4"><img src="images/2.0pre3/SEB_PreferencesApplications-ProhibitedProcesses-2.0-en.png" width="764" height="812" alt="SEB Preferences Window" /></div>
-<ul>
+<ul id="seblist">
       <li><span class="quote">Choose Executable...</span> Displays a file requester for choosing  a process executable or application which will be added to the list of prohibited processes.</li>
       <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of prohibited processes.</li>
     </ul>
     <p>Selected Process details:</p>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Active</span>: Indicates if this prohibited process item is active (can be used while testing).</li>
       <li><span class="quote">Executable</span>: Process name, usually the file name of the executable.</li>
       <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
@@ -382,21 +382,21 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     <!--
 <div class="image4"><img src="images/2.0pre3/SEB_PreferencesNetwork-Filter-2.0-en.png" width="764" height="682" alt="SEB Preferences Window" /></div>
 
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Activate URL filtering</span>: Filter URLs when loading web pages using the filter set defined below.<br />
       </li>
       <li> <span class="quote">Filter also embedded content</span>: If selected, also all embedded ressources will be filtered using the filter set.    Note that there can be hundreds of resources such as images and other media per page, so filtering all content may slow down page loading.</li>
     </ul>
     <p>The table contains  URL filter rules, consisting of one or several actions, displayed as a two level hierarchical list. The rules and the actions inside the rule sets can be rearranged by drag and drop. Create a new rule or a new action by choosing the appropriate type from the popup window on the <span class="codetext">'+'</span> button below the table. Remove an action or rule by selecting it in the table and clicking the <span class="codetext">'-'</span> button.</p>
     <p><strong>Rules (first level rows, can be expanded or collapsed)</strong></p>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Active</span>:
         Indicates if the rule is active.</li>
       <li><span class="quote">Expression</span>:
         Text field containing a description of the rule set. This is only displayed in the SEB configuration tool, preferences window and in logs. It should explain what kind of rule this is. Before a description is entered,  a generic &quot;description&quot;/name like &quot;Rule 1&quot;, &quot;Rule 2&quot; etc. is generated.</li>
     </ul>
     <p><strong>Actions (second level rows inside rules, expand a rule to show its actions)</strong></p>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Active</span>: Indicates if the action is active.</li>
       <li><span class="quote">Regex</span>:
         Indicates if the action rule is a regular expression. <br />
@@ -404,7 +404,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
       <li><span class="quote">Action</span> to process if the corresponding expression matches. The URL filter processes the actions and expressions inside each rule one by one. If the URL doesn't match one expression, then the next expression is processed. The actions described below are used to decide what to do if the URL matches the expression.<br />
         <br />
         Possible actions:
-<ul>
+<ul id="seblist">
           <li><span class="quote">block</span><br />
             If the URL matches the expression, then it is rejected and processing of following actions inside this rule and processing of rules following the current one is stopped.</li>
           <li><span class="quote">allow</span><br />
@@ -424,7 +424,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
         scheme://host:port/path?query_string#fragment_id<br />
         <br />
         </span>      <span class="quote">Format for a filter expression in the non-regex format:</span><br />
-        <ul>
+        <ul id="seblist">
           <li>Scheme  is optional, and must be followed by <span class="codetext">'://'</span>.<br />
           </li>
           <li>The host field is required, and is either a partial or full hostname or an IP address. It can also contain or be replaced completely with the wildcard <span class="codetext">'*'</span> char, see below for details. The URL filter doesn't resolve hostnames itself, so if you allow everything and only block <span class="codetext">'hostname.com'</span>, then that host could still be reached using its IP address. You should therefore mainly use whitelisting to allow accessing only specific sites during an exam.</li>
@@ -452,7 +452,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     -->
     <h5>Certificates Section</h5>
 <div class="image4"><img src="images/2.0pre3/SEB_PreferencesNetwork-Certificates-2.0-en.png" width="764" height="688" alt="SEB Preferences Window" /></div>
-    <ul>
+    <ul id="seblist">
       <li>Here you can choose <span class="quote">SSL server certificates</span> from the keychain. The selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Like this users won't be presented a warning when connecting to  https servers with self-signed certificates and you  don't need to distribute SSL certificates manually to the exam client computers.</li>
       <li>You can also choose <span class="quote">cryptographic identities</span> from the keychain which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). Those will also be added to the .seb settings file. Use this feature  for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting .seb files for starting exams later. Thanks to this feature you won't need to export the identities in Keychain Access and install it on your SEB clients manually.</li>
     </ul>
@@ -461,10 +461,10 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
 <div class="image4"><img src="images/2.0pre3/SEB_PreferencesNetwork-Proxies-2.0-en.png" width="764" height="682" alt="SEB Preferences Window" /></div>
     <h4><a name="SecurityPane" id="SecurityPane"></a>Settings in the Security Pane    </h4>
     <div class="image4"><img src="images/2.0pre3/SEB_PreferencesSecurity-2.0-en.png" alt="SEB Preferences Window" width="764" height="442" /></div>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (as Root), which is necessary to block and unblock some system features (like macOS screen capture, <em>Fast User Switching</em>, disabling the Notification Center  in OS X 10.8 and newer while working with third party applications) and killing prohibited system processes when using <em>monitor processes</em>.  SEB Service is installed automatically with SEB downloaded from <a href="../download_en.html#MacOSX">safeexambrowser.org</a>, but needs to be installed manually when installing SEB from the App Store. You can define the policy that applies when an exam client doesn't have the SEB Service installed:
     </li>
-        <ul>
+        <ul id="seblist">
           <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service, it will only be noted in the log that the service was not securing the computer during the exam.</li>
           <li><span class="quote">warn when service is not running</span>: A warning is displayed when the service is not installed/running, but the exam can be started.</li>
           <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is installed. <br />
@@ -478,7 +478,7 @@ Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_bl
     <p> OS X 10.7 (Lion), OS X 10.8  (Mountain Lion) and OS X 10.9 (Mavericks) on 64-bit Intel Macs    </p>
     <h4> <a name="secure_environment" id="secure_environment"></a>Secure Environment for Exams with SEB MacOSX</h4>
     <p>As mentioned, it is more secure to use SEB MacOSX  in a managed environment, for <strong>using third party applications</strong> it's generally recommended in version 2.0pre3.  When you create a separate user account with the settings described below, you can  achieve a really secure environment.</p>
-    <ul>
+    <ul id="seblist">
       <li>Create a <span class="quote">Standard</span> or <span class="quote">Managed with Parental Controls</span> user account (<span class="quote">System Preferences -&gt; Accounts</span>). For running third party applications together with SEB, you have to use an account managed by parental controls.</li>
       <li>You can add SEB to <span class="quote">Login Items</span> in the Account Preferences, then SEB will be started automatically after the exam user logs in.</li>
       <li>In <span class="quote">Login Options</span> you should uncheck the checkbox in front of <span class="quote">Show fast user switching menu as</span>, at least when the examinees have access to other accounts on that computer.</li>

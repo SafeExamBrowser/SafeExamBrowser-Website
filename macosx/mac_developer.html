@@ -164,7 +164,7 @@
             <p>SEB for macOS is a modern Mac&nbsp;OS&nbsp;X application, written in Objective-C, using the Cocoa system framework. It has been developed for Mac&nbsp;OS&nbsp;X 10.6 Snow Leopard and updated for OS&nbsp;X&nbsp;10.7 Lion, we don't intend to support older system versions. SEB for macOS is using the <a href="http://www.webkit.org" target="_blank">WebKit</a> browser engine, on which Safari on Mac and iOS and some new open source browsers like Google Chrome and Android browsers are based. SEB for macOS embeds a private copy of the WebKit framework, so Apple updates of Safari don't affect the compatibility of SEB with existing quizzes. Please note: This doesn't apply to the   Mac App Store version of SEB which is using the system's built-in WebKit framework (due to restrictions of the Mac App Store). </p>
             <p>SEB for macOS  version 1.3 consists of the classes listed below. The class structure is supposed to change soon, since SEB will go trough major enhancements in the next months. Among others there will be additional preferences panes for more options and SEB will be ported to a document-based architecture to support opening multiple webpages in separate windows and tabs.</p>
     <h5>List of Classes</h5>
-            <ul>
+            <ul id="seblist">
             <li class="normal_line_height" id="half_linespace"><span class="codetext">SEBController</span><br />
                 Main Safe Exam Browser controller class.  Locks  system into  kiosk mode, opens browser and preferences window and exits SEB.</li>
             <li class="normal_line_height" id="half_linespace"><span class="codetext">BrowserWindow</span><br />
@@ -221,7 +221,7 @@
      <h4> <a name="privateWebKit" id="privateWebKit"> </a>Preparing a private copy of WebKit for use with SEB</h4>
             <p>Until version 1.4.1, SEB downloaded from this website contained a private copy of WebKit. From version 1.5 it was omitted, because experiences didn't show any  real advantage of using a private WebKit instead of the system's in practice, but there was a lot of additional time and effort needed for every update. Besides that at least some WebKit builds from December 2011 and January 2012 were not working on Mac OS X 10.6.8 anymore (and compiling on Snow Leopard resulted in build errors). But besides you can find how to include your private copy of WebKit if you see an advantage in that:</p>
             <p>Check out the WebKit source code in Terminal:</p>
-            <ul>
+            <ul id="seblist">
             <li class="normal_line_height" id="half_linespace"> <p>Change to your working directory</p></li>
             <li class="normal_line_height" id="half_linespace">
               <p class="no_linespace"> Enter the following command in Terminal (and be prepared that it may take several hours):</p>

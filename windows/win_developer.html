@@ -162,7 +162,7 @@
       <p>SEB consists of three components: a kiosk-application, a portable firefox with the seb-plugin and extensions to divers learning-management-systems (LMS).</p>
       <h4><img src="../Media/prozess_seb_dev.jpg" alt="" height="101" width="559" border="0" /></h4>
       <h5><strong>Kiosk application:</strong></h5>
-      <ul>
+      <ul id="seblist">
         <li> launches SEB</li>
         <li>opens an own window-desktop</li>
         <li>catches system-commands (i.e. shortcuts like CTRL-ALT-DELETE, right-mouse-clicks).</li>
@@ -170,13 +170,13 @@
         <li>possbility to admit other external applications</li>
       </ul>
 <h5>Portable Firefox or XULRunner with SEB plugin:</h5>
-      <ul>
+      <ul id="seblist">
         <li>fullscreen mode</li>
         <li>disables menus, navigation- and statusbar</li>
         <li>connect between SEB and test</li>
       </ul>
   <h5>Extensions to LMS:</h5>
-  <ul>
+  <ul id="seblist">
     <li>secure exams, quizzes</li>
     <li>disable the navigation to other resources</li>
   </ul>
@@ -184,7 +184,7 @@
 <p>Create a local workspace directory for the source code and checkout the source code into your workspace (i.e. C:/workspace). You can use Tortoise svn client (<a href="http://tortoisesvn.tigris.org/">http://tortoisesvn.tigris.org/</a>), right-click your local workspace directory and choose &quot;svn checkout&quot;. The svn-repository is located at <a href="https://seb.svn.sourceforge.net/svnroot/seb">https://seb.svn.sourceforge.net/svnroot/seb</a>.</p>
       <p>To checkout the source code, you don't need an account. If you want to contribute to SEB and checkin your code, you need to have a sourceforge account. Please mail your sourceforge account ID to the project administrator, so he can add you to the project. You can find the latest source code in the /trunk directory of the repository, the tagged source code (1.0, 1.1, ....) is located in the /tags directory.</p>
       <p>SEB consists of several components (see Architecture), that are stored in different places in the repository:</p>
-      <ul>
+      <ul id="seblist">
         <li>SEB Windows Configuration Tool: <a href="https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/SebWindowsPackage/SebWindowsConfig/">https://seb.svn.sourceforge.net/svnroot/seb/trunk/win/<br />
 SebWindowsPackage/SebWindowsConfig</a><br />
 (The Seb Windows Configuraton Tool can be used by the teacher to preconfigure SEB. It is a graphical editor for the SebStarter.ini and MsgHook.ini files.</li>

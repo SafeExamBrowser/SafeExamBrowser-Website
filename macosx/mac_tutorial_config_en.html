@@ -174,7 +174,7 @@
     </div>
     <h4><a name="encryption"></a>Choose encryption method</h4>
     <p>SEB 2.0 offers two possible encryption methods for the new .seb settings: </p>
-            <ul>
+            <ul id="seblist">
               <li>Encryption with public key cryptography <br />
                 In this scenario, a cryptographic identity (X.509 certificates with RSA public key and associated private key) installed in the keychain of the administrator and exam computers is used for encrypting and decrypting. This scenario makes most sense on managed computers.</li>
               <li>Encryption with a password<br />
@@ -210,7 +210,7 @@
     <div class="image2"><img src="images/SEB2.0/SEB_PreferencesGeneral-2.0-en.png" width="614" height="509" /></div>
     <p>In the preferences window you can set the following parameters:</p>
     <h5>Settings in  General Pane</h5>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
       <li><span class="quote">Paste from saved clipboard</span>: SEB saves the content of the clipboard (if it's a text string) when starting up and before clearing the clipboard. Use this link to paste the saved string to the <span class="quote">Start URL</span> field.</li>
       <li><span class="quote">Administrator password</span>: Password required to enter the preferences window. It's recommended to set one!</li>
@@ -222,23 +222,23 @@
       <li><span class="quote">Help-Button &quot;?&quot;</span>: Displays this manual page in the browser window. Preferences stay open, if they get hidden behind the browser window, you can access them by pressing the same keys like mentioned before.</li>
     </ul>
     <p>You can get out of the preferences windows using one of the three buttons below:</p>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Close window</span> (standard control in the windows title bar): Accepts preferences and closes window. If you changed start URL, SEB will be restarted to display the new page.</li>
       <li><span class="quote">Restart SEB</span>: Saves preferences and restarts SEB, displaying the webpage at start URL.</li>
       <li><span class="quote">Quit</span>: Saves preferences and exits SEB.</li>
     </ul>
     <div class="image2"><img src="images/SEB2.0/SEB_PreferencesBrowser-2.0-en.png" width="614" height="484" alt="SEB Preferences Window" /></div>
     <h5>Settings in Browser Pane</h5>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Links requesting to be opened in a new browser window ... </span>This popup list offers three policies:</li>
-      <ul>
+      <ul id="seblist">
       <li><span class="quote">get generally blocked</span></li>
       <li><span class="quote">open in same window</span>: This was the behaviour in SEB MacOSX versions before 1.5.</li>
       <li><span class="quote">open in new window</span></li>
       </ul>
       <li><span class="quote">Block when directing to a different server</span>: Hyperlinks which direct to a different host than the one of the current  page will be ignored.</li>
       <li><span class="quote"> Links in JavaScript/plug-ins ... </span>This popup list offers three policies for hyperlinks opened from JavaScript or plug-ins (like Flash):</li>
-      <ul>
+      <ul id="seblist">
       <li><span class="quote">get generally blocked</span></li>
       <li><span class="quote">open in same window</span>: This was the behavior in SEB MacOSX versions before 1.5, but links got only opened, when they were not directing to a different server (see the checkbox below).</li>
       <li><span class="quote">open in new window</span></li>
@@ -252,14 +252,14 @@
     </ul>
     <div class="image2"><img src="images/SEB2.0/SEB_PreferencesExam-2.0-en.png" width="614" height="752" alt="SEB Preferences Window" /></div>
     <h5>Settings in Exam Pane</h5>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Exam Key</span>: Copy this exam key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in.<br />
         <strong>This feature in the exam preferences pane is not yet implemented in this version (see <a href="https://sourceforge.net/tracker/?func=detail&amp;aid=3585657&amp;group_id=233708&amp;atid=1090688" target="_blank">this discussion</a> about how it will work). It should be available in SEB version 2.0pre2.</strong><br />
       </li>
       <li>        <span class="quote">Copy Exam Key to clipboard when quitting SEB</span>: SEB clears the clipboard when quitting, so you should either use SEB to copy the exam key to your quiz settings or this option to find the exam key in the clipboard after quitting SEB.</li>
       <li><span class="quote">Link to quit SEB after exam</span>: Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> (full URL starting with http:// or https://) and placing this on the summary page displayed by the LMS after submitting the exam.</li>
     </ul>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Use SEB settings file for ... starting an exam</span>: A settings file saved with this option will start the exam with the according settings, but won't change the local SEB settings.</li>
       <li><span class="quote">Use SEB settings file for ... configuring a client</span>: A SEB settings file saved with this option can be used to change the local settings of a SEB client. Encrypt it with the same password which is set as administrator password on the SEB client (or none if there is no administrator password set on the SEB client yet).</li>
       <li><span class="quote">Allow to open preferences window on client</span>: Usually you should disable the preference window on exam clients besides for debugging purposes. </li>
@@ -271,7 +271,7 @@
     </ul>
     <div class="image3"><img src="images/SEB2.0/SEB_PreferencesAdvanced-2.0-en.png" width="714" height="516" alt="SEB Preferences Window" /></div>
     <h5>Settings in Advanced Pane</h5>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Allow to switch to third party applications</span>: If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">cmd+Tab</span>) will work, so it's possible to switch to other running applications.<br />
         Use this option only when running SEB in a user account managed by parental controls, with only SEB and the desired applications allowed. Also you should switch on <span class="quote">Simple Finder</span> and don't give users access to other accounts with administrator rights on that computer (see <a href="#secure_environment">Secure Environment</a>). <strong>The final version of SEB for macOS 2.0 will allow to use third party applications without a separate managed user account.</strong><br />
       </li>
@@ -279,12 +279,12 @@
       <br />
       When switching to third party applications is disabled, Flash fullscreen mode isn't possible at all.</li>
     </ul>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Allow downloading and uploading files</span>: Usually to be used when switching to third party applications is enabled.</li>
       <li><span class="quote">Save downloaded files to</span>: Choose the download directory in this Popup menu.</li>
       <li><span class="quote">Open files after downloading</span>: Downloaded files will be opened with the according application, which has to be set correctly in the system for each used file type! </li>
       <li><span class="quote">Choose file to upload …</span> SEB can let the user choose the file to upload manually (as usual) or automatically choose the same file which was downloaded before. There are three possible policies to choose the file to upload:</li>
-          <ul>
+          <ul id="seblist">
       <li><span class="quote">manually with file requester</span></li>
       <li><span class="quote">by attempting to upload same file downloaded before</span>: If the file is not found, a file requester  is presented and the user can choose some other file manually.</li>
       <li><span class="quote">by only allowing to upload the same file downloaded before</span>: 
@@ -299,7 +299,7 @@
     <p> OS X 10.7  and above on 64-bit Intel Macs    </p>
     <h4> <a name="secure_environment" id="secure_environment"></a>Secure Environment for Exams with SEB MacOSX</h4>
     <p>As mentioned, it is more secure to use SEB MacOSX  in a managed environment, for <strong>using third party applications</strong> it's generally recommended in version 2.0pre1.  When you create a separate user account with the settings described below, you can  achieve a really secure environment.</p>
-    <ul>
+    <ul id="seblist">
       <li>Create a <span class="quote">Standard</span> or <span class="quote">Managed with Parental Controls</span> user account (<span class="quote">System Preferences -&gt; Accounts</span>). For running third party applications together with SEB, you have to use an account managed by parental controls.</li>
       <li>You can add SEB to <span class="quote">Login Items</span> in the Account Preferences, then SEB will be started automatically after the exam user logs in.</li>
       <li>In <span class="quote">Login Options</span> you should uncheck the checkbox in front of <span class="quote">Show fast user switching menu as</span>, at least when the examinees have access to other accounts on that computer.</li>

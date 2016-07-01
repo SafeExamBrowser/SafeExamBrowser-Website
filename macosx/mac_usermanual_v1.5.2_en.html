@@ -194,7 +194,7 @@
     <div class="image2"><img src="images/SEB_PreferencesGeneral-1.5-en.png" width="614" height="570" alt="SEB Preferences Window" /></div>
     <p>In the preferences window you can set the following parameters:</p>
     <h5>Settings in  General Pane</h5>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
       <li><span class="quote">Paste from saved clipboard</span>: SEB saves the content of the clipboard (if it's a text string) when starting up and before clearing the clipboard. Use this link to paste the saved string to the <span class="quote">Start URL</span> field.</li>
       <li><span class="quote">Administrator password</span>: Password required to enter the preferences window. It's recommended to set one!</li>
@@ -209,23 +209,23 @@
       <li><span class="quote">Help-Button &quot;?&quot;</span>: Displays this manual page in the browser window. Preferences stay open, if they get hidden behind the browser window, you can access them by pressing the same keys like mentioned before.</li>
     </ul>
     <p>You can get out of the preferences windows using one of the three buttons below:</p>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Close window</span> (standard control in the windows title bar): Accepts preferences and closes window. If you changed start URL, SEB will be restarted to display the new page.</li>
       <li><span class="quote">Restart SEB</span>: Saves preferences and restarts SEB, displaying the webpage at start URL.</li>
       <li><span class="quote">Quit</span>: Saves preferences and exits SEB.</li>
     </ul>
     <div class="image2"><img src="images/SEB_PreferencesBrowser-1.5-en.png" width="614" height="484" alt="SEB Preferences Window" /></div>
     <h5>Settings in Browser Pane</h5>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Links requesting to be opened in a new browser window ... </span>This popup list offers three policies:</li>
-      <ul>
+      <ul id="seblist">
       <li><span class="quote">get generally blocked</span></li>
       <li><span class="quote">open in same window</span>: This was the behaviour in SEB MacOSX versions before 1.5.</li>
       <li><span class="quote">open in new window</span></li>
       </ul>
       <li><span class="quote">Block when directing to a different server</span>: Hyperlinks which direct to a different host than the one of the current  page will be ignored.</li>
       <li><span class="quote"> Links in JavaScript/plug-ins ... </span>This popup list offers three policies for hyperlinks opened from JavaScript or plug-ins (like Flash):</li>
-      <ul>
+      <ul id="seblist">
         <li><span class="quote">get generally blocked</span></li>
         <li><span class="quote">open in same window</span>: This was the behaviour in SEB MacOSX versions before 1.5, but links got only opened, when they were not directing to a different server (see the checkbox below).</li>
         <li><span class="quote">open in new window</span></li>
@@ -239,7 +239,7 @@
     </ul>
     <div class="image3"><img src="images/SEB_PreferencesAdvanced-1.5-en.png" width="714" height="516" alt="SEB Preferences Window" /></div>
     <h5>Settings in Advanced Pane</h5>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Allow to switch to third party applications</span>: If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">cmd+Tab</span>) will work, so it's possible to switch to other running applications.<br />
         Use this option only when running SEB in a user account managed by parental controls, with only SEB and the desired applications allowed. Also you should switch on <span class="quote">Simple Finder</span> and don't give users access to other accounts with administrator rights on that computer (see <a href="#secure_environment">Secure Environment</a>).<br />
       </li>
@@ -247,12 +247,12 @@
       <br />
       When switching to third party applications is disabled, Flash fullscreen mode isn't possible at all.</li>
     </ul>
-    <ul>
+    <ul id="seblist">
       <li><span class="quote">Allow downloading and uploading files</span>: Usually to be used when switching to third party applications is enabled.</li>
       <li><span class="quote">Save downloaded files to</span>: Choose the download directory in this Popup menu.</li>
       <li><span class="quote">Open files after downloading</span>: Downloaded files will be opened with the according application, which has to be set correctly in the system for each used file type! </li>
       <li><span class="quote">Choose file to upload …</span> SEB can let the user choose the file to upload manually (as usual) or automatically choose the same file which was downloaded before. There are three possible policies to choose the file to upload:</li>
-          <ul>
+          <ul id="seblist">
       <li><span class="quote">manually with file requester</span></li>
       <li><span class="quote">by attempting to upload same file downloaded before</span>: If the file is not found, a file requester  is presented and the user can choose some other file manually.</li>
       <li><span class="quote">by only allowing to upload the same file downloaded before</span>: 
@@ -268,7 +268,7 @@
     <p>      On 32-bit Mac's (like the first generation of Intel Core Solo and Core Duo Mac Mini, MacBook and iMac) for security reasons web plugins are disabled . </p>
     <h4> <a name="secure_environment" id="secure_environment"></a>Secure Environment for Exams with SEB MacOSX</h4>
     <p>As mentioned, it is more secure to use SEB MacOSX  in a managed environment, for <strong>using third pary applications</strong> it's generally recommended.  When you create a separate user account with the settings described below, you can  achieve a really secure environment.</p>
-    <ul>
+    <ul id="seblist">
       <li>Create a <span class="quote">Standard</span> or <span class="quote">Managed with Parental Controls</span> user account (<span class="quote">System Preferences -&gt; Accounts</span>). For running third party applications together with SEB, you have to use an account managed by parental controls.</li>
       <li>You can add SEB to <span class="quote">Login Items</span> in the Account Preferences, then SEB will be started automatically after the exam user logs in.</li>
       <li>In <span class="quote">Login Options</span> you should uncheck the checkbox in front of <span class="quote">Show fast user switching menu as</span>, at least when the examinees have access to other accounts on that computer.</li>
