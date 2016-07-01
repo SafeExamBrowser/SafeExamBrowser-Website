@@ -3,7 +3,7 @@ body {
 	background-image: url(../images/bg-container.png);
 	background-repeat: repeat-y;
 	background-position: center;
-	padding-top: 80px;
+	padding-top: 90px;
 }
 @media (min-width:768px) and (max-width: 991px) {
   body {
@@ -180,6 +180,12 @@ p {
 	line-height: 16px;
 	margin: 0em 0em 1em 0em;
 }
+h3 {
+	color:  #ff963d;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+}
 h4 {
 	color: #555;
 	font-size: 14px;
@@ -311,4 +317,8 @@ h5 {
 }
 .half_linespace {
 	margin-bottom: 0.5em;
+}
+.list_regular {
+	font-size: 13px;
+	font: Arial, Helvetica, sans-serif;
 }

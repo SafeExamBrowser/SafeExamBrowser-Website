@@ -96,9 +96,9 @@
                             <li>
                                 <a href="../consortium/join.html">Join</a>
                             </li>
-                            <li>
+                            <!--<li>
                                 <a href="../consortium/faq.html">FAQ</a>
-                            </li>
+                            </li>-->
                         </ul>
                     </li>
                     <li class="dropdown">
