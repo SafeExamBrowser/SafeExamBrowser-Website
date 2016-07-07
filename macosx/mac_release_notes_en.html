@@ -50,8 +50,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
             </button>
-                <table border="0">
+                <table border="0" class="seb_logo_container">
                   <tr>
+                    <td width="10">&nbsp;</td>
                     <td><img style="width:40px;" src="../images/SEBIcon_40_2x.png" alt="SEB logo"></td>
                     <td width="10">&nbsp;</td>
                     <td><a class="navbar-brand" href="index.html">Safe&nbsp;Exam&nbsp;Browser</a></td>
@@ -184,7 +185,7 @@
       </div>
     </div>
     <h4><a name="releasenotes" id="releasenotes"></a>Release Notes</h4>
-<h5> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1</a>:</h5>
 <ul id="seblist">
   <li>SEB 2.1 is fully compatible with OS X 10.11 El Capitan.</li>
   <li>Added button in SEB task bar for reloading current web page and an optional warning message for reloading web pages.</li>
@@ -227,7 +228,7 @@
   <li>Network pane/Proxies:  It's not yet possible to set individual SEB proxy settings, you have to set system-wide proxy settings in macOS System Preferences. SEB for Windows 2.1 supports  individual proxy settings which you can configure here.</li>
   <li>Network pane/Certificates: SEB 2.1 for macOS doesn't support reading embedded TLS/SSL certificates yet. In addition SEB for Windows cannot read TLS/SSL certificates embedded in the Mac version.</li>
 </ul>
-<h5>Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0</a>:</h5>
+<h5 id="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0</a>:</h5>
 <ul id="seblist">
   <li>Adapted format of the encrypted SEB configuration files to be compatible with the SEB 2.0.2 version for Windows. You can use the same .seb files for starting exams on SEB 2.0.x Windows clients and SEB 2.0 macOS clients. <span class="red"><strong>Note:</strong></span> Local client settings in the Preferences folder of the system (created with SEB version 2.0pre3 or earlier) <strong>are cleared</strong> when this new SEB version is started first time, you will have to configure SEB freshly. You can although save settings with SEB 2.0pre3 (<strong>before running SEB 2.0 first time</strong>) and reconfigure the SEB 2.0 client with these. SEB config files saved with SEB 2.0pre1 or 2.0pre2 cannot be read with this version.</li>
   <li>Comfortable built-in editor for the platform-independent SEB settings files, which can also set all additional individual settings for the Windows version. </li>
@@ -255,7 +256,7 @@
   <li>Now bringing SEB and the current browser window to foreground before displaying any web browser related alert.</li>
   <li>Fixed enter password dialog was not correctly resizing (shrinking) when it was re-displayed and the former height was larger.</li>
 </ul>
-<h5>Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0pre3</a>:</h5>
+<h5 id="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0pre3</a>:</h5>
 <ul id="seblist">
   <li>Adapted format of the encrypted SEB configuration files to be compatible with the SEB 2.0RC version for Windows. You can now use the same .seb files for starting exams on SEB 2.0RC Windows clients and SEB 2.0pre3 macOS clients. <strong>Note:</strong> SEB settings files written with SEB 2.0pre1 or 2.0pre2 cannot be read with this version.</li>
   <li>Fixed a bug in calculating the Browser Exam Key when loading a .seb file for starting an exam.</li>
@@ -271,7 +272,7 @@
   <li>Security pane: SEB Service, Allow user switching and logging not yet functional.</li>
   <li>OS X 10.9 Mavericks: When SEB is run in a multi display environment, then an application being in  full screen mode on one screen won't be hidden by SEB. Workaround: Don't use SEB 2.0pre3 with a multi display setting on OS X 10.9 or  disable the setting &quot;Displays have separate Spaces&quot; in System Preferences -&gt; Mission Control.</li>
 </ul>
-<p> This preview does not contain all features of the final 2.0 release yet. Please test it and <a href="https://sourceforge.net/projects/seb/forums/forum/3704033" target="_blank">provide us with feedback</a>. This version runs on OS X 10.7, 10.8 and 10.9.</p><h5> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0pre2</a>:</h5>
+<p> This preview does not contain all features of the final 2.0 release yet. Please test it and <a href="https://sourceforge.net/projects/seb/forums/forum/3704033" target="_blank">provide us with feedback</a>. This version runs on OS X 10.7, 10.8 and 10.9.</p><h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0pre2</a>:</h5>
 <ul id="seblist">
   <li>The <strong>Browser Exam Key </strong>allows an exam module to authenticate the connecting SEB version and its settings. For the learning management system <span class="quote">Moodle</span> a beta version of a plug-in offering this functionality has been <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">released</a>.</li>
   <li>New options in the user interface: Size and positioning of browser windows (main window with the quiz and additional browser windows) can be preset. A new  indicator shows network activity.</li>
@@ -293,7 +294,7 @@
   <li>Security pane: SEB Service, Allow user switching and logging not yet functional.</li>
 </ul>
 <p> This preview does not contain all features of the final 2.0 release yet. Please test it and <a href="https://sourceforge.net/projects/seb/forums/forum/3704033" target="_blank">provide us with feedback</a>. This version runs on OS X 10.7 and 10.8 only.</p>
-<h5> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0pre1</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.0pre1</a>:</h5>
 <ul id="seblist">
   <li> Adds support for encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. </li>
   <li>New feature to quit SEB after the exam is submitted (without having to enter a quit password) by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by your LMS after submitting the exam. </li>
@@ -301,19 +302,19 @@
   <li>Removed writing settings to App Bundle feature which is replaced by the SEB settings (<span class="quote">.seb</span> files) feature.</li>
 </ul>
 <p> This preview does not contain all features of the final 2.0 release yet. Please test it and <a href="https://sourceforge.net/projects/seb/forums/forum/3704033" target="_blank">provide us with feedback</a>. This version runs on OS X 10.7 and 10.8 only.</p>
-<h5> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  1.5.2</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  1.5.2</a>:</h5>
 <ul id="seblist">
   <li>Fixed  link button for pasting saved clipboard string in general preferences pane sometimes not active. </li>
   <li>Changed placeholder string for start URL field.</li>
   <li>Mac App Store version: Removed writing settings to App Bundle feature due to restrictions from Apple and because it doesn't make much sense for the software deployment scenario of the App Store.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.5.1:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.5.1:</h5>
 <ul id="seblist">
   <li>Completed french translation of new GUI elements.</li>
   <li>Fixed bug preferences window not set to modal.</li>
   <li>Fixed graphical flaw in app icon.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.5:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.5:</h5>
 <ul id="seblist"><li>
   <p>SEB can now open webpages in additional browser windows.</p>
 </li>
@@ -372,32 +373,32 @@
     <p>Removed embedded WebKit framework. Experiences didn't show any real advantage of using a private WebKit instead of the system's in practice, besides that recent WebKit builds  were not working on Mac OS X 10.6.8 anymore.</p>
   </li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.4.1:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.4.1:</h5>
 <ul id="seblist">
   <li>Fixed bug when running on OS X 10.7.2 Lion browser window didn't come in front.</li>
   <li>Fixed bug crashing when starting third party application by downloading document.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.4:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.4:</h5>
 <ul id="seblist">
   <li>It is now possible to generate a pre-configured copy of SEB by writing the settings into the application bundle. Then this copy of SEB can be copied to all exam computers without having to distribute a separate preferences file.</li>
   <li>Fixed bug saving changed passwords when switching panes in preferences.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.3.1:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.3.1:</h5>
 <ul id="seblist">
   <li>Completed French translation of new GUI elements.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.3:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.3:</h5>
 <ul id="seblist">
   <li>VM Detector refuses to start up SEB in a virtual environment.</li>
   <li>Improved compatibility with OS X 10.7 Lion.</li>
   <li>Updated embedded WebKit framework. </li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.2.1:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.2.1:</h5>
 <ul id="seblist">
   <li>Fixed a bug of SEB 1.2 crashing when there was no preferences file saved yet.</li>
   <li>Completed French translation of new GUI elements.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.2:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.2:</h5>
 <ul id="seblist">
   <li>In advanced preferences it can now be chosen if SEB should allow down- and uploading files and if downloaded files should be opened automatically. This is useful when running additional applications during an exam in an account managed by macOS parental controls.</li>
   <li>SEB can be quit now also with the close button of the browser window (if quitting is allowed in preferences, quitting needs to be confirmed in the same way as before).</li>
@@ -406,22 +407,22 @@
   <li>Fixed a bug of version 1.1 when password preferences were not correctly saved or loaded in rare cases.</li>
   <li>Updated embedded WebKit framework.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.1:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.1:</h5>
 <ul id="seblist">
   <li>New preferences window with panes offers additional settings.</li>
   <li>SEB MacOSX now allows to run additional applications during an exam in an account managed by macOS parental controls.</li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.0.2:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.0.2:</h5>
 <ul id="seblist">
   <li class="normal_line_height" id="half_linespace2">Added French localization (thanks to Nicolas Dunand).</li>
   <li class="normal_line_height" id="half_linespace2">Updated embedded WebKit framework. </li>
 </ul>
-<h5> Release notes for Safe Exam Browser version  1.0.1:</h5>
+<h5 id="sebh5"> Release notes for Safe Exam Browser version  1.0.1:</h5>
 <ul id="seblist">
   <li>Added German localization.</li>
   <li>Copyright and version displayed in about box are now read from the corresponding fields in the applications' info.plist file. </li>
 </ul>
-    <h5> Release notes for Safe Exam Browser version  1.0:</h5>
+    <h5 id="sebh5"> Release notes for Safe Exam Browser version  1.0:</h5>
     <ul id="seblist">
       <li>Improved security of  SEB kiosk mode by preventing other applications to unhide, to steal user focus and to change presentation options. </li>
       <li>SEB is now  macOS code signed, so changes of the binary are prevented and the identity of its publisher can be verified.</li>
@@ -439,7 +440,7 @@
       <li>Updated to latest WebKit framework build.    </li>
       <li>Fixed a bug of RC1.0 where other applications could become active.</li>
     </ul>
-    <h5> Release notes for Safe Exam Browser version  RC1.0:</h5>
+    <h5 id="sebh5"> Release notes for Safe Exam Browser version  RC1.0:</h5>
     <ul id="seblist">
       <li>Administrator and quit passwords are no longer saved in plaintext but as a SHA256 hash, input and checking of passwords in preferences and sheets was changed accordingly. </li>
       <li>Added a &quot;confirm quit password&quot; field in preferences. Fixed a bug occurring rarely when comparing  password and confirm password fields.</li>

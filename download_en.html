@@ -47,8 +47,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
             </button>
-                <table border="0">
+                <table border="0" class="seb_logo_container">
                   <tr>
+                    <td width="10">&nbsp;</td>
                     <td><img style="width:40px;" src="images/SEBIcon_40_2x.png" alt="SEB logo"></td>
                     <td width="10">&nbsp;</td>
                     <td><a class="navbar-brand" href="index.html">Safe&nbsp;Exam&nbsp;Browser</a></td>
@@ -160,27 +161,24 @@
       </tr>
 
       <tr>
-        <td><p id="half_linespace"><strong><a name="Win" id="Win20"></a><a href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.2/SafeExamBrowserInstaller.exe/download" target="_blank">Safe Exam Browser 2.1.2 </a></strong> for Windows 7, 8.1 and 10<br />
-          <span class="codetext">SHA1: fb9e3833b891182881b3be079bb0687cb53ac362</span></p>
-          <p>          <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.2/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-win/releases" target="_blank">GitHub project site</a>. <br />
+        <td><p id="half_linespace"><strong><a name="Win" id="Win20"></a><a href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.3/SafeExamBrowserInstaller.exe/download" target="_blank">Safe Exam Browser 2.1.3 </a></strong> for Windows 7, 8.1 and 10<br />
+          <span class="codetext">SHA1: c22a606a760a15ce2d0ab2d44c3823d3430ab5da</span></p>
+          <p>          <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.3/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-win/releases" target="_blank">GitHub project site</a>. <br />
           </p>
-<p id="half_linespace">SEB 2.1.2 is  compatible with Windows 10, contains improvements when running on Windows 8.1/10 tablets, <span class="half_linespace">supports the native HTML5 full screen mode, hardware acceleration in the browser  </span>and increases general stability. New in SEB 2.1.2:</p>
-<ul id="seblist">
-  <li>Native HTML5 full screen mode is now supported. Please note: The SEB task bar (if enabled) is not hidden by this full screen mode. To be able to exit the full screen mode, the Esc key needs to be enabled in SEB settings. Alternatively the full screen view should contain a button to close it.</li>
-  <li>Hardware accelaration is now activated in the SEB browser.</li>
-  <li>Fixed problem not recognizing a quit URL  if the quit link was not clicked by the user but the quit URL directly loaded on the website.</li>
-  <li>Fixed problem (displaying an exception message) when selecting a network in the SEB Wi-Fi task bar control.</li>
-  <li>Fixed cancel button in the dialog window for the restart exam button.</li>
-  <li>The option &quot;Monitor processes while SEB is running&quot; in the Applications config tool tab cannot be altered when the kiosk mode &quot;Disable Explorer Shell&quot; is active, as process monitoring is always active in this kiosk mode.</li>
-  </ul>
-Important changes since SEB 2.1.1:
-<ul id="seblist">
-  <li>Safe Exam Browser  is now fully compatible with Windows 10, there is no delay when starting up on Windows 10 anymore and Windows updates are paused correctly while SEB is running.</li>
-  <li>Improvements in the touch optimized mode for Windows tablet computers, as better behavior when the on-screen keyboard is displayed and the web page scrolls a text field into the visible area or when moving the cursor in and between text fields.</li>
-  <li>A new setting allows to switch off the on-screen keyboard manually or automatically when a hardware keyboard is connected.</li>
-  <li>Added a <span class="quote">sebs://</span> protocol (in addition to <span class="quote">seb://</span>), which forces the use of https for loading a <span class="quote">.seb</span> configuration file.</li>
-  <li>Contains browser engine  XULRunner/Gecko (Firefox) 41.0.2. </li>
-</ul>
+          <p>Safe Exam Browser 2.1.3 for Windows adds support for using Windows system proxy settings and <strong>fixes some important issues (therefore it is highly recommended to update to SEB 2.1.3 as soon as possible)</strong>:</p>
+          <ul id="seblist">
+            <li>Current versions of Internet Explorer, Edge and Windows 10 complained about an invalid signature of the SEB 2.1.2 installer when downloading or starting it, as Microsoft doesn't accept insecure SHA1 code signatures anymore. SEB 2.1.3 is signed with a new secure SHA-256 certificate.<br>
+            </li>
+            <li>Added support for system proxy settings (the existing option in SEB Config Tool / Network / Proxies is functional now).<br>
+            </li>
+            <li>SEB Windows service didn't start properly on some machines, this should be fixed now.<br>
+            </li>
+            <li>Fixed URL of SEBWindowsServiceWCF to avoid collisions with other WCF services. This might have caused SEB influencing some other installed applications.<br>
+            </li>
+            <li>Improved stability of resetting registry settings when SEB quits or is started/quit again after not being exited properly.<br>
+              </li>
+            <li>Fixed wrong version number in SEB installer.</li>
+          </ul>
 <!--<p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and known issues.</p>-->
 <p>Other features: </p>
 <ul id="seblist">
@@ -208,7 +206,7 @@ Important changes since SEB 2.1.1:
             <li>Supports  <span class="quote">.seb</span> files encrypted with password or  X.509 (public/private key cryptography) certificates. For debugging purposes .seb configuration files can be saved unencrypted in an human readable XML format.</li>
           </ul>
         <p><span class="half_linespace">See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and read the <a href="windows/win_usermanual_en.html"> manual</a> which  covers all SEB features.</span></p></td>
-        <td valign="top"><a href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.2/SafeExamBrowserInstaller.exe/download" target="_blank"><img src="Media/icon_pfeil.jpg" alt="" height="29" width="40" border="0" /></a></td>
+        <td valign="top"><a href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.3/SafeExamBrowserInstaller.exe/download" target="_blank"><img src="Media/icon_pfeil.jpg" alt="" height="29" width="40" border="0" /></a></td>
 </tr>
       
 

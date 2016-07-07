@@ -50,8 +50,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
             </button>
-                <table border="0">
+                <table border="0" class="seb_logo_container">
                   <tr>
+                    <td width="10">&nbsp;</td>
                     <td><img style="width:40px;" src="../images/SEBIcon_40_2x.png" alt="SEB logo"></td>
                     <td width="10">&nbsp;</td>
                     <td><a class="navbar-brand" href="index.html">Safe&nbsp;Exam&nbsp;Browser</a></td>
@@ -424,7 +425,7 @@
       <li><span class="quote">Monitor processes while SEB is running:</span> If enabled, SEB prevents non-permitted processes to display any windows (including alerts, message boxes etc.) by hiding them immediately. If SEB cannot hide such a process (because it is running with the rights of another user, for example SYSTEM) SEB terminates it. For the &quot;<span class="quote">Disable Explorer Shell</span>&quot; kiosk mode (see <a href="win_usermanual_en.html#SecurityPane">Security</a> pane), &quot;Monitor processes...&quot; should always be activated (which was implicitly the case in former SEB versions), but from SEB 2.1 you can (and should in most cases) use this feature also with the &quot;Create new desktop&quot; kiosk mode. </li>
     </ul>
     <p>Besides the live process monitoring while  running,  when SEB is started,  an alert/dialogue window is displayed to tell the user to quit the currently running applications (which are  in the list of  permitted and prohibited processes) and to restart SEB afterwards or to let SEB kill the applications risking that there could be data loss. Applications which have the <span class="quote">Force quit</span> parameter set are automatically terminated (without asking the user).</p>
-<h5>Permitted Processes Section</h5>
+<h5 id="sebh5">Permitted Processes Section</h5>
 <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser with their icon and their application name set with the parameter <span class="quote">title</span>, they can be used during an exam in addition to the SEB browser. </p>
 <img src="images/SEB_Preferences_07a_Applications_PermittedProcesses.png" width="650" border="1" class="image5" /><br />
               <br />
@@ -462,7 +463,7 @@ This flag should not be set for macOS applications which allow to be terminated 
       <!--<li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process/application, multiple signatures can be added. This isn't necessary if the processes/applications are signed with a trusted signature (on OS X), because the signature identifies an application independently of the program version. Also you can generate code signatures here. <strong>Not yet available in SEB 2.0.</strong></li>-->
     </ul>
     <p>Java applications (like OpenOffice) can  be used as permitted processes, but require specific settings: The title of their main window must be defined in  the field <span class="quote">Permitted Processes -&gt; Identifier</span> (for example &quot;OpenOffice Calc&quot;), the required main executable in <span class="quote">Permitted Processes -&gt; Executable</span> (&quot;scalc.exe&quot;) and the process which is actually handling the main window in <span class="quote">Permitted Processes -&gt; Window Handling Process(es)</span> (&quot;soffice.bin&quot;). For this example the executable path should be entered as &quot;program&quot; in <span class="quote">Permitted Processes -&gt; Path</span>, as that is the relative path to the main executable from the OpenOffice main directory, which is registered in Windows <span class="quote">App Paths</span>.</p>
-<h5>Prohibited Processes Section</h5>
+<h5 id="sebh5">Prohibited Processes Section</h5>
 
     <p>List of processes which are prohibited to run during an exam when <span class="quote">monitor processes</span> is enabled. This list of prohibited processes makes sense because SEB on both platforms usually allows to run system processes, but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the prohibited processes are killed by SEB.</p>
     <img src="images/SEB_Preferences_07b_Applications_ProhibitedProcesses.png" width="650" border="1" class="image5" /><br />
@@ -489,7 +490,7 @@ This flag should not be set for macOS applications which allow to be terminated 
       <!--<li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process binary/application, multiple signatures can be added. This isn't necessary if the process binaries/applications are signed with a trusted signature (on OS X), because the signature identifies an application independently of the program version. Also you can generate code signatures here. <strong>Not yet available in SEB 2.0.</strong></li>-->
     </ul>
     <h4><a name="NetworkPane" id="NetworkPane"></a>Settings in the Network Pane</h4>
-    <h5>      Filter Section
+    <h5 id="sebh5">      Filter Section
     </h5>
     <br />
     <img src="images/SEB_Preferences_08a_Network_Filter.png" width="650" border="1" class="image5" /><br />
@@ -506,7 +507,7 @@ This flag should not be set for macOS applications which allow to be terminated 
     <p> Create a new rule  by clicking the<span class="codetext">'+'</span> button below the table. Remove a rule by selecting it in the table and clicking the <span class="codetext">'-'</span> button.</p>
     <p>Please not that SEB 2.1 for macOS is using a more advanced format for URL filters. It also incorporates a teach mode, where SEB can interactively create filter rules for you. When SEB 2.0 or higher for macOS saves a <span class="quote">.seb</span> settings file, it creates also compatible filter rules for SEB 2.0.3 (or higher) for Windows (which you can see in the Allow/Block tables here in the <span class="quote">SEB Config Tool / Network / Filter</span> tab, see the screenshot above for an example). So the URL filter rules created in SEB 2.0 for Mac are compatible with SEB 2.1.2 for Windows, but not the other way round: Filter rules defined in SEB 2.1.2 for Windows are not compatible with SEB for macOS. </p>
     <p>This means in short: <strong>If you want to use URL filter rules in a mixed environment (Windows/Mac), you have to create the URL rules in SEB for macOS.</strong> A future version of SEB for Windows will also adopt the more advanced format for URL filters. </p>
-    <h5><a name="Certificates" id="Certificates"></a>Certificates Section</h5>
+    <h5 id="sebh5"><a name="Certificates" id="Certificates"></a>Certificates Section</h5>
               <br />
 <img src="images/SEB_Preferences_08b_Network_Certificates.png" width="650" border="1" class="image5" /><br />
               <br />
@@ -514,7 +515,7 @@ This flag should not be set for macOS applications which allow to be terminated 
       <li><span class="quote">Choose TLS/SSL certificate to embed into configuration... </span>Here you can choose <span class="quote">SSL server certificates</span> which are stored in the <em>Windows Certificate Store</em> (if you  have a certifcate file, you first need to import it to the <em>Windows Certificate Store</em>, depending on the format you can just double click such a certificate file to invoke the Windows certifcate import assistant). The  certificates added to this table will be embedded into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning then when connecting to  https servers with those self-signed certificates and you  don't need to distribute SSL certificates manually to the exam client computers<strong>.</strong></li>
       <li><span class="quote">Choose identity to embed into configuration... </span>You can also choose <span class="quote">cryptographic identities</span> stored in the <em>Windows Certificate Store</em> which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). If you have a .p12 or .pfx certificate archive file, you first need to import it into the <em>Windows Certificate Store</em> (usually you can just double click such a certificate file to invoke the Windows certificate import assistant). <strong>When importing the .p12/.pfx identity file, the included private key must be marked as &quot;exportable&quot;.</strong> The identities added to this table will be embedded into the <span class="quote">.seb</span> settings file. Use this feature  for creating a <span class="quote">.seb</span> file for configuring a client and add the identity or identities you like to use for encrypting/decrypting <span class="quote">.seb</span> files for starting exams later. When opening this <span class="quote">.seb</span> file on your exam clients, the embedded identities will be imported into the <em>Windows Certificate Store</em> (or <em>Keychain</em> on Macs), so that they can be used for decrypting exam settings later. Please note that during this process the  private keys imported into the Windows Certificate Store of the exam clients will be flagged as non-exportable for increased security. </li>
     </ul>
-    <h5>In SEB  problems with SSL certificates can occur:</h5>
+    <h5 id="sebh5">In SEB  problems with SSL certificates can occur:</h5>
     <ul id="seblist">
       <li>Even if your secured site is using certificates which are generally trusted by
         browsers like Firefox, there might be a problem with the SEB <span class="quote">XULRunner</span> browser. The
@@ -525,7 +526,7 @@ This flag should not be set for macOS applications which allow to be terminated 
         problem. <br />
       For further information please consult the documentation of your webserver: <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcertificatechainfile" target="_blank">Apache 2.2</a>, <a href="http://support.microsoft.com/kb/954755" target="_blank">IIS</a>. There is a <a href="https://sourceforge.net/p/seb/discussion/844844/thread/16c9eec9/#031f" target="_blank">discussion</a> about this problem in our forum too.</li>
     </ul>
-    <h5>Proxies Section</h5>
+    <h5 id="sebh5">Proxies Section</h5>
 <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients.  You can currently specify a proxy server address and port manually for HTTP, HTTPS, FTP and SOCKS proxies (without authentication), use auto proxy discovery and automatic proxy configuration. You can also add  host/domain addresses to the bypass/exception list.</p>
               <br />
 <img src="images/SEB_Preferences_08c_Network_Proxies.png" width="650" border="1" class="image5" /><br />
