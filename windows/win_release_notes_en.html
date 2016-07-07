@@ -156,7 +156,16 @@
     </table> 
     <h4><a name="releasenotes" id="releasenotes"></a>Release Notes</h4>
 
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.2:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.3: </h5>
+<ul id="seblist">
+  <li>Current versions of Internet Explorer, Edge and Windows 10 complained about an invalid signature of the SEB installer when downloading or starting it. Reason: Windows doesn't accept executables signed with code signing certificates using an insecure SHA-1 signature since a security update from January 12, 2016 (if the executable was signed using SHA-1 after this date). SEB is now signed with a new code signing certificate with a SHA-256 signature.</li>
+  <li> Added support for system proxy settings (the existing option in SEB Config Tool / Network / Proxies is functional now).</li>
+  <li> SEB Windows service didn't start properly on some machines (SID could not be determined using the user name), this should be fixed now. Please report if single users are still having problems with the SEB Windows Service (warning or error message when starting SEB): http://safeexambrowser.org/support</li>
+  <li> Fixed URL of SEBWindowsServiceWCF to avoid collisions with other WCF services. This might have caused SEB influencing some other installed applications.</li>
+  <li> Improved stability of resetting registry settings when SEB quits or is started/quit again after not being exited properly.</li>
+  <li> Fixed wrong version number in SEB installer.</li>
+</ul>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.2:</h5>
 <ul id="seblist">
   <li>Native HTML5 full screen mode is now supported. Please note: The SEB task bar (if enabled) is not hidden by this full screen mode. To be able to exit the full screen mode, the Esc key needs to be enabled in SEB settings. Alternatively the full screen view should contain a button to close it.</li>
   <li>Hardware accelaration is now activated in the SEB browser.</li>
@@ -165,7 +174,7 @@
   <li>Fixed cancel button in the dialog window for the restart exam button.</li>
   <li>The option &quot;Monitor processes while SEB is running&quot; in the Applications config tool tab cannot be altered when the kiosk mode &quot;Disable Explorer Shell&quot; is active, as process monitoring is always active in this kiosk mode.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.1:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.1:</h5>
 <ul id="seblist">
   <li>Safe Exam Browser 2.1.1 is fully compatible with Windows 10, there is no delay when starting up on Windows 10 anymore and Windows updates are paused correctly while SEB is running.</li>
   <li>Improvements in the touch optimized mode for Windows tablet computers, as better behavior when the on-screen keyboard is displayed and the web page scrolls a text field into the visible area or when moving the cursor in and between text fields.
@@ -190,7 +199,7 @@
   <li>Fixed touch exit didn't work properly when screen was rotated.</li>
   <li>Fixed message boxes were not displayed properly after rotating the screen.</li>
 </ul>
-<h5>Release notes <a href="../download_releases_en.html">Safe Exam Browser for Windows</a> version 2.1:</h5>
+<h5 id="sebh5">Release notes <a href="../download_releases_en.html">Safe Exam Browser for Windows</a> version 2.1:</h5>
 <ul id="seblist">
   <li>New touch optimized mode for Windows tablet computers:
     <ul id="seblist">
@@ -310,7 +319,7 @@
   <li> When SEB is started twice (by quickly double clicking twice), Registry settings are messed up afterwards (options like Task Manager in the Windows Security Screen invoked with Ctrl-Alt-Del are no longer available). Use SEB Registry Resetter to fix this problem.</li>
   <li> Buttons for shutdown and restart are not hidden in the Windows 10 Security Screen (invoked with Ctrl-Alt-Del).</li>
 </ul>
-<h5>Release notes <a href="../download_releases_en.html">Safe Exam Browser for Windows</a> version 2.0.3:</h5>
+<h5 id="sebh5">Release notes <a href="../download_releases_en.html">Safe Exam Browser for Windows</a> version 2.0.3:</h5>
 <ul id="seblist">
   <li>Improves general stability and compatibility with some exam systems.</li>
   <li>Allows current versions of Flash to run with SEB in both kiosk modes correctly. </li>
@@ -328,7 +337,7 @@
   <li>In SEB 2.0.3, the proxy host/domain bypass list isn't utilized yet.</li>
   <li><strong>In the former version  SEB 2.0.2</strong> the communication with its background Windows service to trigger re-enabling  options like shutdown, task manager, switch user etc. (which are also visible after pressing Ctrl-Alt-Del) sometimes failed when  SEB was exiting. If those options (or some of them) are still not available before or after installing SEB 2.0.3, and running and quitting SEB or a reboot doesn't restore the options  to the original values, you should use  the <a href="http://www.safeexambrowser.org/windows/win_usermanual_en.html#RegistryPane">SebRegistryResetter</a> to solve the problem by resitting those values to the Windows defaults.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0.2:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0.2:</h5>
 <ul id="seblist">
   <li>Fixed keyboard freezes (no text entering possible after pressing Alt-Ctrl twice).</li>
   <li>Fixed bug when in some cases restoring Windows Registry settings for options in the Windows Security Screen (invoked by Ctrl-Alt-Delete) failed, for example when SEB crashed or the PC was hard-reset while SEB was running. </li>
@@ -354,7 +363,7 @@
   <li>Sometimes the communication of SEB 2.0.2  with its background Windows service to trigger re-enabling  options like shutdown, task manager, switch user etc. (which are also visible after pressing Ctrl-Alt-Del) fails when  SEB is exiting. When those options (or some of them) are not available after quitting SEB (or if SEB crashed), then usually running and quitting SEB should restore them. After a reboot the options are also reset to the original values.<br />
     If this doesn't help then the <a href="http://www.safeexambrowser.org/windows/win_usermanual_en.html#RegistryPane">SebRegistryResetter</a> will solve the problem by resetting those values to the Windows defaults.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a>  version 2.0.1:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a>  version 2.0.1:</h5>
 <ul id="seblist">
   <li>Added &quot;Please Wait&quot; loading screen when SEB is reconfigured or quit. This prevents Windows from telling that the application is not responding and asking users if they want to quit it.</li>
   <li>Fixes in certificate management in SEB Config Tool: Display SerialNumber if no FriendlyName is available in a certificate, fix in selecting the correct certificate when loading the .seb file.</li>
@@ -374,14 +383,14 @@
   <li>SEB 2.0.1 doesn't support embedding SSL and encrypting identity certificates into .seb files yet.</li>
   <li>In SEB 2.0.1, only HTTP and HTTPS proxies without authentication are supported when using the option &quot;Use SEB proxy settings&quot;. The proxy host/domain bypass list isn't utilized yet.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> final release version 2.0:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> final release version 2.0:</h5>
 <ul id="seblist">
   <li>Added tool tips to the SEB Config Tool.</li>
   <li>Added about SEB splash screen.</li>
   <li>Fixed option to disable the shade (menubar) for the new Horizon VMware Client. </li>
   <li>Minor bugfixes.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC6:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC6:</h5>
 <ul id="seblist">
   <li>Added optional WLAN control to the SEB task bar which allows to reconnect to WiFi networks which have previously been connected to (before using SEB), see settings pane <span class="quote">Security -&gt; Allow WLAN Control</span>.</li>
 </ul>
@@ -400,7 +409,7 @@
   <li>Fixed bug when using browser in full screen mode, without SEB task bar and application chooser (Alt-Tab) which previously minimized the browser window.</li>
   <li>Various additional bug fixes.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC5:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC5:</h5>
 <ul id="seblist">
   <li>Completely re-engineered SEB Windows Service with improved stability for setting and resetting options in the Windows Security Screen (invoked by Ctrl-Alt-Del), like Task Manager. In case of a SEB crash or enforced reset of the machine, those options are reset to the values which were active before SEB was used. This happens when SEB is started again and quit properly, after a reboot, or when uninstalling SEB.</li>
 </ul>
@@ -429,19 +438,19 @@
   <li>Browser Exam Key is now also calculated when reverting to default settings.</li>
   <li>All running applications are now minimized when SEB is started. This is useful when not using &quot;Create new desktop&quot; but &quot;Kill explorer shell&quot; (which is only recommended in managed environments and as a workaround when using third party software which isn't compatible with the &quot;create new desktop&quot; mode.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC4:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC4:</h5>
 <ul id="seblist">
   <li>Added an install condition which displays a dialog with instructions how to enable .NET 3.5 manually on systems where it is disabled. See https://sourceforge.net/p/seb/discussion/3704033/thread/d68de28a/?limit=25#37e8</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC3:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC3:</h5>
 <ul id="seblist">
   <li>Fixed problem when opening .seb files with spaces in the path/file name by double clicking didn't work.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC2:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC2:</h5>
 <ul id="seblist">
   <li>Added dealing with a possible race condition when opening .seb files by double clicking.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC build 2.0.5162.18136:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC build 2.0.5162.18136:</h5>
 <ul id="seblist">
   <li>SEB Config Tool is now contained in the SEB installer and is installed in the same directory like SafeExamBrowser.exe application (Program Files\SafeExamBrowser\SebWindowsConfig.exe).</li>
   <li>SEB Windows Client is now localized to German.</li>
@@ -449,7 +458,7 @@
   <li>Fixed bug in Browser Exam Key generation in SEBProtection controller.</li>
   <li>Added .NET 4 (full profile) prerequisite to installer.</li>
 </ul>
-<h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC:</h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.0RC:</h5>
 <p>Safe Exam Browser 2.0 is a completely re-engineered, modern .NET application, including new features, superior usability and improved stability.</p>
 <p>Main features: </p>
 <ul id="seblist">
@@ -469,7 +478,7 @@
   <li>Configuration files can be used to start an exam with individual configuration (like specific security and user interface options, permitted third party applications, Browser Exam Key for authenticating these settings and the SEB application to an exam server, Quit Link to close SEB automatically when an exam is submitted etc.).</li>
   <li>Supports .seb files encrypted with password or X.509 (public/private key cryptography) certificates. For debugging purposes .seb configuration files can be saved unencrypted in an human readable XML format.</li>
 </ul>
-<h5>Release notes for <a href="../download_en.html#Windows">SEB Windows 1.9.1</a>:</h5>
+<h5 id="sebh5">Release notes for <a href="../download_en.html#Windows">SEB Windows 1.9.1</a>:</h5>
 <ul id="seblist">
   <li>New installation program:<br />
     Due to problems when installing or uninstalling SEB using the Windows installer (<em><strong>SebWindowsInstall.msi</strong></em>),   a new installer was created, which is <strong>more reliable and stable</strong> (e.g. Rollback in case there is a problem during the   installation).      
@@ -480,18 +489,18 @@
     with improved, updated XulRunner which can open additional browser windows now. <strong>Popup windows</strong> do not open in fullscreen mode but fill the screen only partially, with the option to <strong>minimise or maximise</strong> the window. File downloading should now work, too.</span></li>
   <li>Bugfix: When SEB was prematurely quit or crashed, the Windows Registry values (for the blue <em>Windows Security Screen</em>) remained <strong>changed</strong> (e.g. the Task Manager was disabled also in normal use). Now the user can during configuration define the values not only for <strong>inside</strong> but also for <strong>outside</strong> of SEB. If something goes wrong during SEB operation and the registry values are out of tune, you simply start SEB once again and quit it using the <strong>SEB exit sequence</strong> (e.g. F3_F11_F6). This will reset the registry values to the normal ones,<em><strong> </strong></em>and the Task Manager will be available again.</li>
 </ul>
-<h5>Release notes for <a href="../download_en.html#Windows">SEB Windows 1.8.2</a>:</h5>
+<h5 id="sebh5">Release notes for <a href="../download_en.html#Windows">SEB Windows 1.8.2</a>:</h5>
 <ul id="seblist">
   <li> Bugfix: Reloading / Refreshing the current page in the browser window by pressing the F5 key did not work. Now it is possible, provided that the F5 key is admitted. The new default setting for the F5 key is therefore &quot;enabled&quot;.</li>
 </ul>
-<h5>Release notes for <a href="../download_en.html#Windows">SEB Windows 1.8.1</a>:</h5>
+<h5 id="sebh5">Release notes for <a href="../download_en.html#Windows">SEB Windows 1.8.1</a>:</h5>
 <ul id="seblist"><li>
   Bugfix: Clicking on the SEB icon of the user's desktop in some cases launched the SEB installer rather than the actual SEB application. Now the SEB installer creates a shortcut to the SEB application on the <strong>common</strong> desktop. Thus the SEB icon and shortcut are visible to <strong>all</strong> users, and clicking on this icon launches the SEB application as intended.</li>
 </ul>
 <ul id="seblist">
   <li>Bugfix: When finishing, SEB restored the <strong>default</strong> registry values for Task Manager etc. (on the blue <em>Windows Security Screen</em>). Now, SEB instead restores the <strong>previous</strong> registry values (= the values before SEB was started).</li>
 </ul>
-<h5> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.8</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.8</a>:</h5>
 <ul id="seblist">
   <li>Easens configuration for the teacher.  It is now possible     to do the configuration in a new GUI editor called <em>SebWindowsConfig.exe</em> using mouse clicks, without directly editing the initialisation files <em>SebStarter.ini</em> and <em>MsgHook.ini</em>.</li>
 </ul>
@@ -501,14 +510,14 @@
 <ul id="seblist">
   <li>In addition to the full version of SEB (installation via .msi file), a classic portable version can be built (copying of a zip file without installation), which has less functionality.</li>
 </ul>
-<h5> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.7</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.7</a>:</h5>
 <ul id="seblist"><li>
   <p>Easens configuration and deployment for the teacher. It is now possible   to modify the configuration files before rather than after installation,   so the students can directly install SEB without patching it by   additional configuration files after installation. Also, an   Administrative Install via network is now possible. </p></li>
 </ul>
 <ul id="seblist">
   <li>Downloading a zip file, as in former SEB versions up to 1.4.1 </li>
 </ul>
-<h5> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.6.1</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.6.1</a>:</h5>
 <ul id="seblist"><li>
   Multilingual (German, English, French menus and error   messages) based upon the current user default input language.</li>
 </ul>
@@ -524,13 +533,13 @@
 <ul id="seblist">
   <li>New file locations for .ini and .log files match policy for modern Windows   applications.  </li>
 </ul>
-<h5> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.4.1</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.4.1</a>:</h5>
 <ul id="seblist"><li>
   <p>XULRunner version. Fixes a bug regarding the logfile  (SEB startup problem when  LOGFILE=0 and logfile could not be created due to lack of write permission).</p>
 </li>
 </ul>
 
-<h5> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.3.4</a>:</h5>
+<h5 id="sebh5"> Release notes for <a href="../download_en.html#Windows">SEB Windows 1.3.4</a>:</h5>
 <ul id="seblist"><li>
   <p>Portable Firefox version. Fixes a bug regarding the logfile  (SEB startup problem when  LOGFILE=0 and logfile could not be created due to lack of write permission).</p>
 </li>

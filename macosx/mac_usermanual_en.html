@@ -432,7 +432,7 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
       <li><span class="quote">Monitor processes </span>(Win): If enabled, SEB monitors which processes/applications are running during an exam.  When SEB is started,  an alert/dialogue window is displayed to tell the user to quit the currently running applications (which are not in the list of  permitted processes) and to restart SEB afterwards or to let SEB kill the applications risking that there could be data loss. Prohibited background processes are killed automatically, without user confirmation. Applications which allow to be terminated nicely in macOS are automatically terminated (also without asking the user).<br />
       clients. <strong>Monitoring processes is not yet functional in SEB 2.1 for Mac</strong>.      </li>
     </ul>
-<h5>Permitted Processes Section</h5>
+<h5 id="sebh5">Permitted Processes Section</h5>
 <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. </p>
 <p><strong>Using permitted processes is not yet functional in SEB 2.1 for Mac</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
 <div class="image4"><img src="images/SEB_PreferencesApplications-PermittedProcesses-2.0-en.png" alt="SEB Preferences Window Applications Pane, Permitted Processes Tab" width="762" /></div>
@@ -469,7 +469,7 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
       <!--<li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process/application, multiple signatures can be added. This isn't necessary if the processes/applications are signed with a trusted signature (on OS X), because the signature identifies an application independently of the program version. Also you can generate code signatures here. <strong>Not yet available in SEB 2.0.</strong></li>-->
     </ul>
     <p>Java applications (like OpenOffice) can  be used as permitted processes, but require specific settings: The title of their main window must be defined in  the field <span class="quote">Permitted Processes -&gt; Identifier</span> (for example &quot;OpenOffice Calc&quot;), the required main executable in <span class="quote">Permitted Processes -&gt; Executable</span> (&quot;scalc.exe&quot;) and the process which is actually handling the main window in <span class="quote">Permitted Processes -&gt; Window Handling Process(es)</span> (&quot;soffice.bin&quot;). For this example the executable path should be entered as &quot;program&quot; in <span class="quote">Permitted Processes -&gt; Path</span>, as that is the relative path to the main executable from the OpenOffice main directory, which is registered in Windows <span class="quote">App Paths</span>.</p>
-<h5>Prohibited Processes Section</h5>
+<h5 id="sebh5">Prohibited Processes Section</h5>
 
     <p>List of processes which are prohibited to run during an exam  when <span class="quote">monitor processes</span> is enabled. This prohibited list of processes makes sense because SEB  usually allows to run system processes (SEB for macOS allows all processes and applications signed by Apple to run), but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the prohibited processes are killed by SEB.</p>
     <p><strong>Using prohibited processes is not yet functional in SEB 2.1 for Mac</strong>. You can define and edit permitted processes for the Windows version of SEB here.</p>
@@ -498,7 +498,7 @@ Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to
     </ul>
 
     <h4><a name="NetworkPane" id="NetworkPane"></a>Settings in the Network Pane</h4>
-    <h5>      <a name="NetworkPaneFilterSection" id="NetworkPaneFilterSection"></a>Filter Section</h5>
+    <h5 id="sebh5">      <a name="NetworkPaneFilterSection" id="NetworkPaneFilterSection"></a>Filter Section</h5>
     
 <div class="image4"><img src="images/SEB_PreferencesNetwork-Filter-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Filter Tab" /></div>
 
@@ -561,13 +561,13 @@ The order of filter rules is not relevant.<br />
       </li>
     </ul>
 
-    <h5><a name="NetworkPaneCertificatesSection" id="NetworkPaneCertificatesSection"></a>Certificates Section</h5>
+    <h5 id="sebh5"><a name="NetworkPaneCertificatesSection" id="NetworkPaneCertificatesSection"></a>Certificates Section</h5>
 <div class="image4"><img src="images/SEB_PreferencesNetwork-Certificates-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Certificates Tab" /></div>
     <ul id="seblist">
       <li>Here you can choose <span class="quote">TLS/SSL server certificates</span> from the keychain. The selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Like this users won't be presented a warning when connecting to  https servers with self-signed certificates and you  don't need to distribute TLS/SSL certificates manually to the exam client computers. <strong>Note:</strong> <strong>SEB 2.1 for macOS doesn't support reading embedded TLS/SSL certificates yet.</strong> In addition SEB for Windows cannot read TLS/SSL certificates embedded in the Mac version.</li>
       <li>You can also choose <span class="quote">cryptographic identities</span> from the keychain which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). Those will also be added to the .seb settings file. Use this feature  for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting .seb files for starting exams later. Thanks to this feature you won't need to export the identities in Keychain Access and install it on your SEB clients manually.</li>
     </ul>
-    <h5><a name="NetworkPaneProxiesSection" id="NetworkPaneProxiesSection"></a>Proxies Section</h5>
+    <h5 id="sebh5"><a name="NetworkPaneProxiesSection" id="NetworkPaneProxiesSection"></a>Proxies Section</h5>
     <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not yet functional in SEB 2.1 for Mac</strong>. SEB 2.1 and newer for Windows  supports  individual proxy settings which you can configure here.</p>
 <div class="image4"><img src="images/SEB_PreferencesNetwork-Proxies-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Proxies Tab" /></div>
     <h4><a name="SecurityPane" id="SecurityPane"></a>Settings in the Security Pane    </h4>
