@@ -146,9 +146,11 @@
       </div>
         <!-- /.container -->
     </nav>
-<!--<div id="outercontainer">-->
-<div id="container">
-  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+<!-- InstanceBeginEditable name="MainContent" -->
             <h4>Developer Manual SEB for macOS</h4>
             <p><strong>Disclaimer:</strong> This page is not yet updated to reflect the current SEB version 2.0. Most of this information is therefore outdated. Please note that the source code of SEB version 2.x is no longer available in the SEB SourceForge SVN repository, but on <a href="https://sourceforge.net/p/seb/git/ci/master/tree/" target="_blank">SourceForge Git</a>.</p>
             <p>This manual is providing  information about the architecture of Safe Exam Browser for Mac&nbsp;OS&nbsp;X, about  getting  the  SEB (and WebKit) sources, linking the components and  how to build SEB. </p>
@@ -327,10 +329,19 @@ var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
             If it displays <span class="quote">Your WebKit version is a nightly build</span>, then SEB is using the private embedded WebKit.</p>
             <p>The second target in the Xcode project, <span class="quote">Safe Exam Browser App</span> (which is used to build the Mac App Store version of SEB), is using the system's built-in WebKit framework. </p>
     <p>Use <a href="../Popup-Fenster.html">this page</a> if you want to test the JavaScript popup window opening settings in SEB 1.5.x.</p>
-  <!-- InstanceEndEditable --> </div>
-  <div id="bottom"></div>
-</div>
-<!--</div>-->
+  <!-- InstanceEndEditable -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2010-2016 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
@@ -339,4 +350,5 @@ var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
     <script src="../js/bootstrap.min.js"></script>
 
 </body>
+
 <!-- InstanceEnd --></html>
