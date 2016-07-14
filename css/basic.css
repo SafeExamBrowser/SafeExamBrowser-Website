@@ -68,24 +68,6 @@
 .indent6 {
 	text-indent: 120px;
 }
-h4 {
-	color: #555;
-	font-size: 14px;
-	font-weight: bold;
-	background-color: white;
-	font-family: Verdana, Geneva, sans-serif;
-	margin-top: 36px;
-	margin-bottom: 18px;
-}
-h5 {
-	color: #444;
-	font-size: 13px;
-	font-weight: bold;
-	background-color: white;
-	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 20px;
-	margin-bottom: 0px;
-}
 #sebh5 {
 	margin-bottom: 0.5em;
 }
