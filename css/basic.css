@@ -1,8 +1,20 @@
 @media (min-width:768px) and (max-width: 991px) {
   body {
-    padding-top: 130px;
+    padding-top: 100px;
   }
 }
+.sebbrandimg {
+    margin-top:-10px;
+	vertical-align:top;
+}
+.sebnavbar-brand {
+    margin:0;
+    display: inline-block;
+}
+.navbar .logo {
+    width: 40px;
+}
+
 #half_linespace {
 	margin-bottom: 0.5em;
 }
@@ -70,15 +82,14 @@
 }
 #sebh5 {
 	margin-bottom: 0.5em;
+	margin-top: 2em;
 }
 #seblist ul {
 	margin: 0.5em 0 1em -1.5em;
 }
 #seblist li {
 	margin-bottom: 0.5em;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	line-height: 16px;
+	line-height: 1.25em;
 }
 #seblist ul li ul {
 	margin-top: 0px;

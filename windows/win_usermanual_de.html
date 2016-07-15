@@ -42,21 +42,18 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-            </button>
-                <table border="0">
-                  <tr>
-                    <td><img style="width:40px;" src="../images/SEBIcon_40_2x.png" alt="SEB logo"></td>
-                    <td width="10">&nbsp;</td>
-                    <td><a class="navbar-brand" href="index.html">Safe&nbsp;Exam&nbsp;Browser</a></td>
-                  </tr>
-            </table>
-          </div>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                  <span><img class="sebbrandimg" src="../images/SEBIcon_40_2x.png" alt="SEB-Logo" width="40"></span>
+                  Safe&nbsp;Exam&nbsp;Browser
+                </a>
+            </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -98,9 +95,9 @@
                             <li>
                                 <a href="../consortium/join.html">Join</a>
                             </li>
-                            <!--<li>
+                            <li>
                                 <a href="../consortium/faq.html">FAQ</a>
-                            </li>-->
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -145,9 +142,11 @@
       </div>
         <!-- /.container -->
     </nav>
-<!--<div id="outercontainer">-->
-<div id="container">
-  <div id="content"> <!-- InstanceBeginEditable name="MainContent" -->
+    
+    <!-- Page Content -->
+    <div class="container">
+
+    <!-- InstanceBeginEditable name="MainContent" -->
             <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
             <tr>
                 <td valign="top"><h4>Benutzerhandbuch SEB für Windows (ab Version 1.8)<br />
@@ -501,10 +500,19 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
             </div>
 <h4><a name="LMSExtensions" id="LMS-Erweiterungen"></a>LMS-Erweiterungen</h4>
             <p>In aktuellen Versionen von ILIAS und Moodle werden keine Erweiterungen mehr benötigt, um Safe Exam Browser zu verwenden. Die Verbindungsmöglichkeit mit SEB ist bereits in diesen LMS eingebaut. Falls eine ältere ILIAS-Version benutzt wird, finden sich Informationen, wie das Skin &quot;Naviless&quot; in ILIAS installiert wird, im <span class="quote">ILIAS Information Center</span>. Und für ältere Moodle-Versionen finden sich Informationen zur Installation der Erweiterung in der Readme-Datei, die an die Download-Datei angehängt ist.</p>
-          <!-- InstanceEndEditable --> </div>
-  <div id="bottom"></div>
-</div>
-<!--</div>-->
+          <!-- InstanceEndEditable -->
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; 2010-2016 <a href="http://www.ethz.ch" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a></p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
@@ -513,4 +521,5 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
     <script src="../js/bootstrap.min.js"></script>
 
 </body>
+
 <!-- InstanceEnd --></html>
