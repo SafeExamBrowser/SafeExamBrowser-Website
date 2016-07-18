@@ -3,6 +3,16 @@
     padding-top: 100px;
   }
 }
+
+/*Header formatting */
+.MainContent {
+    margin-top: 50px;
+}
+.group, .subgroup {
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
 .sebbrandimg {
     margin-top:-10px;
 	vertical-align:top;

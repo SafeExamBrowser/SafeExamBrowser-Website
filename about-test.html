@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Bootstrap, a sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.">
+<meta name=keywords content="HTML, CSS, JS, JavaScript, framework, bootstrap, front-end, frontend, web development">
+<meta name=author content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+<title>Getting started &middot; Bootstrap</title>
+<link href="css/bootstrap.min.css" rel=stylesheet>
+<link href="css/docs.min.css" rel=stylesheet>
+<!--[if lt IE 9]><script src="../assets/js/ie8-responsive-file-warning.js"></script><![endif]--><script src="js/ie-emulation-modes-warning.js"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+<link rel=apple-touch-icon href=/apple-touch-icon.png>
+<link rel=icon href=/favicon.ico>
+<script>!function(e,t,a,n,c,o,s){e.GoogleAnalyticsObject=c,e[c]=e[c]||function(){(e[c].q=e[c].q||[]).push(arguments)},e[c].l=1*new Date,o=t.createElement(a),s=t.getElementsByTagName(a)[0],o.async=1,o.src=n,s.parentNode.insertBefore(o,s)}(window,document,"script","//www.google-analytics.com/analytics.js","ga"),ga("create","UA-146052-10","getbootstrap.com"),ga("send","pageview");</script>
+</head>
+<body>
+<a id=skippy class="sr-only sr-only-focusable" href=#content>
+<div class=container><span class=skiplink-text>Skip to main content</span></div>
+</a>
+<header class="navbar navbar-static-top bs-docs-nav" id=top role=banner>
+  <div class=container>
+    <div class=navbar-header>
+      <button class="navbar-toggle collapsed" type=button data-toggle=collapse data-target=#bs-navbar aria-controls=bs-navbar aria-expanded=false> <span class=sr-only>Toggle navigation</span> <span class=icon-bar></span> <span class=icon-bar></span> <span class=icon-bar></span> </button>
+      <a href=file:///DRS-MBP15Retina/Users/drs/developer class=navbar-brand>Bootstrap</a> </div>
+    <nav id=bs-navbar class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class=active> <a href="file:///DRS-MBP15Retina/Users/drs/developer/getting-started">Getting started</a> </li>
+        <li> <a href="file:///DRS-MBP15Retina/Users/drs/developer/css">CSS</a> </li>
+        <li> <a href="file:///DRS-MBP15Retina/Users/drs/developer/components">Components</a> </li>
+        <li> <a href="file:///DRS-MBP15Retina/Users/drs/developer/javascript">JavaScript</a> </li>
+        <li> <a href="file:///DRS-MBP15Retina/Users/drs/developer/customize">Customize</a> </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href=http://expo.getbootstrap.com onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;Navbar&quot;,&quot;Community links&quot;,&quot;Expo&quot;)">Expo</a></li>
+        <li><a href=http://blog.getbootstrap.com onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;Navbar&quot;,&quot;Community links&quot;,&quot;Blog&quot;)">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class=bs-docs-header id=content tabindex=-1>
+  <div class=container>
+    <h1>Getting started</h1>
+    <p>An overview of Bootstrap, how to download and use, basic templates and examples, and more.</p>
+    <script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=getbootstrapcom" id="_carbonads_js"></script></div>
+</div>
+
+<!-- Page Content -->
+<div class="container bs-docs-container"> 
+  
+  <!-- Page Heading/Breadcrumbs --> 
+  
+  <!-- Content Row -->
+  <div class="row"> 
+    <!-- Content Column -->
+    <div class="col-md-9" role="main"> 
+      <!-- Document Section -->
+
+<div class="container bs-docs-container">
+  <div class=row>
+    <div class=col-md-9 role=main>
+      <div class=bs-docs-section>
+        <h1 id=download class=page-header>Download</h1>
+        <p class=lead>Bootstrap (currently v3.3.6) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
+        <div class="row bs-downloads">
+          <div class=col-sm-4>
+            <h3 id=download-bootstrap>Bootstrap</h3>
+            <p>Compiled and minified CSS, JavaScript, and fonts. No docs or original source files are included.</p>
+            <p> <a href=https://github.com/twbs/bootstrap/releases/download/v3.3.6/bootstrap-3.3.6-dist.zip class="btn btn-lg btn-outline" onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;Getting started&quot;,&quot;Download&quot;,&quot;Download compiled&quot;)">Download Bootstrap</a> </p>
+          </div>
+          <div class=col-sm-4>
+            <h3 id=download-source>Source code</h3>
+            <p>Source Less, JavaScript, and font files, along with our docs. <strong>Requires a Less compiler and <a href=#grunt>some setup.</a></strong></p>
+            <p> <a href=https://github.com/twbs/bootstrap/archive/v3.3.6.zip class="btn btn-lg btn-outline" onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;Getting started&quot;,&quot;Download&quot;,&quot;Download source&quot;)">Download source</a> </p>
+          </div>
+          <div class=col-sm-4>
+            <h3 id=download-sass>Sass</h3>
+            <p><a href=https://github.com/twbs/bootstrap-sass>Bootstrap ported from Less to Sass</a> for easy inclusion in Rails, Compass, or Sass-only projects.</p>
+            <p> <a href=https://github.com/twbs/bootstrap-sass/archive/v3.3.6.tar.gz class="btn btn-lg btn-outline" onclick="ga(&quot;send&quot;,&quot;event&quot;,&quot;Getting started&quot;,&quot;Download&quot;,&quot;Download Sass&quot;)">Download Sass</a> </p>
+          </div>
+        </div>
+        <h2 id=download-cdn>Bootstrap CDN</h2>
+        <p>The folks over at <a href="https://www.maxcdn.com/">MaxCDN</a> graciously provide CDN support for Bootstrap's CSS and JavaScript. Just use these <a href="https://www.bootstrapcdn.com/">Bootstrap CDN</a> links.</p>
+        <figure class=highlight>
+          <pre><code class=language-html data-lang=html><span class=c>&lt;!-- Latest compiled and minified CSS --&gt;</span>
+<span class=nt>&lt;link</span> <span class=na>rel=</span><span class=s>"stylesheet"</span> <span class=na>href=</span><span class=s>"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"</span> <span class=na>integrity=</span><span class=s>"sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"</span> <span class=na>crossorigin=</span><span class=s>"anonymous"</span><span class=nt>&gt;</span>
+
+<span class=c>&lt;!-- Optional theme --&gt;</span>
+<span class=nt>&lt;link</span> <span class=na>rel=</span><span class=s>"stylesheet"</span> <span class=na>href=</span><span class=s>"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"</span> <span class=na>integrity=</span><span class=s>"sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"</span> <span class=na>crossorigin=</span><span class=s>"anonymous"</span><span class=nt>&gt;</span>
+
+<span class=c>&lt;!-- Latest compiled and minified JavaScript --&gt;</span>
+<span class=nt>&lt;script </span><span class=na>src=</span><span class=s>"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"</span> <span class=na>integrity=</span><span class=s>"sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"</span> <span class=na>crossorigin=</span><span class=s>"anonymous"</span><span class=nt>&gt;&lt;/script&gt;</span></code></pre>
+        </figure>
+        <h2 id=download-bower>Install with Bower</h2>
+        <p>You can also install and manage Bootstrap's Less, CSS, JavaScript, and fonts using <a href=http://bower.io>Bower</a>:</p>
+        <figure class=highlight>
+          <pre><code class=language-bash data-lang=bash><span class=gp>$ </span>bower install bootstrap</code></pre>
+        </figure>
+        <h2 id=download-npm>Install with npm</h2>
+        <p>You can also install Bootstrap using <a href=https://www.npmjs.com>npm</a>:</p>
+        <figure class=highlight>
+          <pre><code class=language-bash data-lang=bash><span class=gp>$ </span>npm install bootstrap</code></pre>
+        </figure>
+        <p><code>require('bootstrap')</code> will load all of Bootstrap's jQuery plugins onto the jQuery object. The <code>bootstrap</code> module itself does not export anything. You can manually load Bootstrap's jQuery plugins individually by loading the <code>/js/*.js</code> files under the package's top-level directory.</p>
+        <p>Bootstrap's <code>package.json</code> contains some additional metadata under the following keys:</p>
+        <ul>
+          <li><code>less</code> - path to Bootstrap's main <a href=http://lesscss.org>Less</a> source file</li>
+          <li><code>style</code> - path to Bootstrap's non-minified CSS that's been precompiled using the default settings (no customization)</li>
+        </ul>
+        <h2 id=download-composer>Install with Composer</h2>
+        <p>You can also install and manage Bootstrap's Less, CSS, JavaScript, and fonts using <a href=https://getcomposer.org>Composer</a>:</p>
+        <figure class=highlight>
+          <pre><code class=language-bash data-lang=bash><span class=gp>$ </span>composer require twbs/bootstrap</code></pre>
+        </figure>
+        <h2 id=download-autoprefixer>Autoprefixer required for Less/Sass</h2>
+        <p>Bootstrap uses <a href=https://github.com/postcss/autoprefixer>Autoprefixer</a> to deal with <a href=http://webdesign.about.com/od/css/a/css-vendor-prefixes.htm>CSS vendor prefixes</a>. If you're compiling Bootstrap from its Less/Sass source and not using our Gruntfile, you'll need to integrate Autoprefixer into your build process yourself. If you're using precompiled Bootstrap or using our Gruntfile, you don't need to worry about this because Autoprefixer is already integrated into our Gruntfile.</p>
+      </div>
+      <div class=bs-docs-section>
+        <h1 id=whats-included class=page-header>What's included</h1>
+        <p class=lead>Bootstrap is downloadable in two forms, within which you'll find the following directories and files, logically grouping common resources and providing both compiled and minified variations.</p>
+        <div class="bs-callout bs-callout-warning" id=jquery-required>
+          <h4>jQuery required</h4>
+          <p>Please note that <strong>all JavaScript plugins require jQuery</strong> to be included, as shown in the <a href=#template>starter template</a>. <a href=https://github.com/twbs/bootstrap/blob/v3.3.6/bower.json>Consult our <code>bower.json</code></a> to see which versions of jQuery are supported.</p>
+        </div>
+        <h2 id=whats-included-precompiled>Precompiled Bootstrap</h2>
+        <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Bootstrap. You'll see something like this:</p>
+        <figure class=highlight>
+          <pre><code class=language-bash data-lang=bash>bootstrap/
+├── css/
+│   ├── bootstrap.css
+│   ├── bootstrap.css.map
+│   ├── bootstrap.min.css
+│   ├── bootstrap.min.css.map
+│   ├── bootstrap-theme.css
+│   ├── bootstrap-theme.css.map
+│   ├── bootstrap-theme.min.css
+│   └── bootstrap-theme.min.css.map
+├── js/
+│   ├── bootstrap.js
+│   └── bootstrap.min.js
+└── fonts/
+    ├── glyphicons-halflings-regular.eot
+    ├── glyphicons-halflings-regular.svg
+    ├── glyphicons-halflings-regular.ttf
+    ├── glyphicons-halflings-regular.woff
+    └── glyphicons-halflings-regular.woff2</code></pre>
+        </figure>
+        <p>This is the most basic form of Bootstrap: precompiled files for quick drop-in usage in nearly any web project. We provide compiled CSS and JS (<code>bootstrap.*</code>), as well as compiled and minified CSS and JS (<code>bootstrap.min.*</code>). CSS <a href=https://developer.chrome.com/devtools/docs/css-preprocessors>source maps</a> (<code>bootstrap.*.map</code>) are available for use with certain browsers' developer tools. Fonts from Glyphicons are included, as is the optional Bootstrap theme.</p>
+        <h2 id=whats-included-source>Bootstrap source code</h2>
+        <p>The Bootstrap source code download includes the precompiled CSS, JavaScript, and font assets, along with source Less, JavaScript, and documentation. More specifically, it includes the following and more:</p>
+        <figure class=highlight>
+          <pre><code class=language-bash data-lang=bash>bootstrap/
+├── less/
+├── js/
+├── fonts/
+├── dist/
+│   ├── css/
+│   ├── js/
+│   └── fonts/
+└── docs/
+    └── examples/</code></pre>
+        </figure>
+        <p>The <code>less/</code>, <code>js/</code>, and <code>fonts/</code> are the source code for our CSS, JS, and icon fonts (respectively). The <code>dist/</code> folder includes everything listed in the precompiled download section above. The <code>docs/</code> folder includes the source code for our documentation, and <code>examples/</code> of Bootstrap usage. Beyond that, any other included file provides support for packages, license information, and development.</p>
+      </div>
+
+      
+      <div class="bs-docs-section">
+        <h4 id="concept" class="page-header"> <a class="anchorjs-link " href="#concept" aria-label="Anchor link for: concept" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"> </a> Concept </h4>
+        <h5 id="concept-general-concept"> <a class="anchorjs-link " href="#concept-general-concept" aria-label="Anchor link for: concept general concept" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> General Concept </h5>
+        <p>SEB runs on a local computer and  it is connected via the internet to a learning management system (LMS).  Generally SEB works with any web based LMS and other kind of web based exam systems. Currently the two wide spread learning management systems  Moodle and ILIAS offer a quiz mode specifically compatible with SEB. </p>
+        <h5 id="concept-architecture"> <a class="anchorjs-link " href="#concept-architecture" aria-label="Anchor link for: concept concept-architecture" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Architecture </h5>
+        <p>SEB   consists of a kiosk application and a browser part, which are running on a examination computer. The kiosk application locks down the examination computer, the browser part comunicates via the internet (or a LAN) with the quiz module of a LMS running on a server. </p>
+        <p><img src="Media/SEB-Architecture_thirdpartyapp_en.png" alt="" class="img-responsive"/></p>
+        <p class="imagecaption"> Schematic illustration of a online exam with Safe Exam Browser and a LMS, for example ILIAS or Moodle. In addition a third party application can be allowed to run at the same time, for example Excel or R</p>
+        <h5 id="concept-components"> <a class="anchorjs-link " href="#concept-components" aria-label="Anchor link for: concept-components" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Components </h5>
+        <p>The illustration above shows the two internal components which SEB consists of, the <strong>kiosk application</strong> and the <strong>browser</strong> part. The third part of a SEB exam environment is build into the supported <strong>LMS</strong>. Optionally one or several <strong>third party application</strong>(s) can be allowed to run during an exam and are started by the SEB kiosk application.</p>
+        <ol start="1" type="1">
+          <li>The<strong> kiosk application</strong> locks down the computer and starts the SEB browser plus optional third party applications. Since this application has to control miscellaneous  OS functions, it is designed very  system specific. </li>
+          <li>The<strong> SEB browser</strong> connects with the preset URL of the LMS exam page and doesn't show any navigation elements like address bar, search engine field etc. The Windows version of SEB uses the Mozilla Gecko browser engine, either in the form of Portable Firefox or XULRunner. SEB for Mac&nbsp;OS&nbsp;X uses the WebKit browser engine.</li>
+          <li>The<strong> learning management systems</strong> contain so-called quiz modules, which are used for onlline exams. SEB relies on extensions/skins to the quiz modules in Moodle and ILIAS for safe exams. With these extensions the user interface of the LMS is reduced to just contain navigation for the exam (no links to other pages outside the quiz) and no other undesirable features like messaging. An exam can also be configured to run only with SEB, not another browser.   These SEB LMS extensions, which originally had to be installed separately to achive this connectivity with SEB, have been integrated into the LMS in  recent versions of ILIAS and Moodle.</li>
+        </ol>
+        <h5 id="concept-seb-windows"> <a class="anchorjs-link " href="#concept-seb-windows" aria-label="Anchor link for: Features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> SEB for Windows </h5>
+        <p>Safe Exam Browser for Windows consists of the SEB kiosk application, which opens an own Windows desktop and catches system commands like keyboard shortcuts (for example ALT+F4) and right mouse-button clicks. The second part is <a href="https://developer.mozilla.org/En/XULRunner" target="_blank">XULRunner</a>, a runtime package from the Mozilla Foundation  (Firefox version 3 and above is also based on XULRunner). The SEB browser part running on XULRunner  connects to the LMS and it doesn't contain navigation and status bars.</p>
+        <h5 id="concept-seb-mac"> <a class="anchorjs-link " href="#concept-seb-mac" aria-label="Anchor link for: Features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> SEB for macOS </h5>
+        <p>In contrast to the Windows version, Safe Exam Browser for Mac&nbsp;OS&nbsp;X is a monolithic  application using a web browser framework instead of a browser runtime. It's using the <a href="http://webkit.org" target="_blank">WebKit</a> engine, on which  Safari and some new open source browsers like Google Chrome are based.   SEB for macOS connects to the Learning Management Systems in the same way as the Windows version.</p>
+        <h5>Safe Exam Browser 2.0</h5>
+        <p>The major release <span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span> facilitates secure exams on unmanaged computers like students' own laptops as well as in managed environments for both platforms Windows and macOS.</span> <span class="half_linespace"><span class="quote">SEB 2.0</span> offers an individual configuration per exam, which is protected by a strong encryption against manipulation. Thanks to a new authentication feature the exam system can verify that a particular, unaltered SEB version and the correct exam settings are used for an examination. This facilitates secure exams especially on unmanaged computers like students' own laptops.</span></p>
+        <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span> is an unified version which  brings the same features, exam system interface, configuration files and a very similar user interface onto both platforms, while still taking in account operating system differences and unique platform specific features. </span>Besides the full featured Windows and Mac OS&nbsp;X versions, we are working on an iPad version with a reduced feature set, which will still maintain compatibility with the unified <span class="quote">.seb configuration file</span> format.</p>
+      </div>
+      <!-- / Document Section --> 
+      
+      <!-- Document Section -->
+      <div class="bs-docs-section">
+        <h4 id="features" class="page-header"> <a class="anchorjs-link " href="#features" aria-label="Anchor link for: Features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Features </h4>
+        <h5 id="features-common-features"> <a class="anchorjs-link " href="#features-common-features" aria-label="Anchor link for: common features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Common Features </h5>
+        <ul id="seblist">
+          <li>Fullscreen mode or multiple browser windows  which can be resized (without any navigation elements)</li>
+          <li>VM detector: SEB detects whether it is running on a virtual machine and can refuse to start up</li>
+          <li>Build in connection to Moodle and ILIAS, can be used with basically any web-based examination system.</li>
+        </ul>
+        <h5 id="features-seb-windows"> <a class="anchorjs-link " href="#features-seb-windows" aria-label="Anchor link for: features seb windows" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> SEB for Windows </h5>
+        <ul id="seblist">
+          <li>Disabled actions (default):
+            <ul id="seblist">
+              <li>Shortcuts/Keys as Win, CTRL+ALT+DEL (Windows XP), ALT+F4, F1, CTRL+P etc.</li>
+              <li>Right-click</li>
+              <li>Switch to other applications (unless permitted)</li>
+              <li>Process monitoring and killing of not allowed  processes starting up while SEB is running</li>
+              <li>Menu options on Windows Security Screen on Windows 7  removed while SEB is running</li>
+              <li>VMware shade when using VMware Horizon View Client for VDI</li>
+              <li>Display and system idle sleep </li>
+              <li>Print Screen</li>
+            </ul>
+          </li>
+          <li>Separate configuration tool with graphical user interface.</li>
+          <li>Third party applications can be allowed to run together with SEB, it can be switched between them with an <span class="quote">App Chooser</span> window</li>
+        </ul>
+        <h5 id="features-seb-macOS"> <a class="anchorjs-link " href="#features-seb-macOS" aria-label="Anchor link for: Features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> SEB for macOS </h5>
+        <ul id="seblist">
+          <li>Preferences window for easy set up, can be protected with an administrator password.</li>
+          <li>Disabled actions:
+            <ul id="seblist">
+              <li>Quit SEB (can be disabled or protected by a quit password)</li>
+              <li>macOS Dock and Menu bar</li>
+              <li>Switch to other applications with  process switcher  (cmd+Tab/cmd+Shift+Tab)</li>
+              <li>Force Quit window (cmd+opt+Esc)</li>
+              <li>Normal reboot (ctrl+cmd+eject) and shutdown (ctrl+opt+cmd+eject)</li>
+              <li>Hiding the application or minimizing the window, printing and Exposé</li>
+              <li>Right-click (context menu)</li>
+              <li>Optionally  hyperlinks requesting to be opened in a new window and links embedded in JavaScript or plug-ins  directing to another server than the one of the current host</li>
+              <li>Display and system idle sleep </li>
+              <li>Context menu options in Flash fullscreen video players</li>
+              <li>macOS screen capture</li>
+            </ul>
+          </li>
+          <li>Third party applications can be allowed to run together with SEB (in an accordingly configured macOS user account)</li>
+        </ul>
+      </div>
+      <!-- / Document Section --> 
+      
+      <!-- Document Section -->
+      <div class="bs-docs-section">
+        <h4 id="details" class="page-header"> <a class="anchorjs-link " href="#details" aria-label="Anchor link for: details" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Technical Details </h4>
+        <h5 id="details-seb-windows"> <a class="anchorjs-link " href="#details-seb-windows" aria-label="Details SEB for Windows" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> SEB for Windows </h5>
+        <p>Operating System: Microsoft   Windows 7, Windows 8/8.1 and Window 10<br />
+          License: Mozilla Public License (MPL)<br />
+          Browser Engine: XULRunner (Mozilla Gecko, which is used by Firefox) <br />
+          Programming Languages and Frameworks: C# (.NET), JavaScript, Mozilla XULRunner</p>
+        <h5 id="details-seb-macOS"> <a class="anchorjs-link " href="#details-seb-macOS" aria-label="Anchor link for: Details SEB for macOS" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> SEB for macOS </h5>
+        <p>Operating System: Mac OS X 10.6 (only supported up to SEB 1.5.2),  OS X 10.7 - OS X 10.11 El Capitan<br />
+          License:  Mozilla Public License (MPL)<br />
+          Browser Engine: WebKit  (Safari is also based on WebKit). SEB uses the WebKit version installed on the system (version depends on macOS and Safari updates).<br />
+          Programming Language: Objective-C (Cocoa)</p>
+      </div>
+      <!-- / Document Section --> 
+      
+      <!-- Document Section -->
+      <div class="bs-docs-section">
+        <h4 id="acknowledgement" class="page-header"> <a class="anchorjs-link " href="#acknowledgement" aria-label="Anchor link for: Acknowledgement" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a> Acknowledgement </h4>
+        <p>Important parts of this project have been carried out as part of the program &quot;<a href="http://www.switch.ch/aaa/" target="_blank">AAA/SWITCH –<br />
+          e-Infrastructure for e-Science</a>&quot; lead by<br />
+          <a href="http://www.switch.ch" target="_blank">SWITCH</a>, the Swiss National Research and Education Network  and the cooperative project &quot;<a href="http://www.switch.ch/uni/projects/learn_infra/" target="_blank">Learning Infrastructure</a>&quot; (part of the <a href="http://www.crus.ch/homenavigation/home.html?L=2" target="_blank">CRUS</a> program &quot;<a href="http://www.crus.ch/information-programmes/projets-programmes/programme-cus-2013-2016-p-2-information-scientifique-acces-traitement-et-sauvegarde.html?L=1" target="_blank">Information scientifique: accès, traitement et sauvegarde</a>&quot;) coordinated by SWITCH, and was<br />
+          supported by funds from the <a href="http://www.ethrat.ch/en" target="_blank">ETH Board</a>.</p>
+      </div>
+      <!-- / Document Section --> 
+      
+      <!-- / Content -->
+      <p>&nbsp;</p>
+    </div>
+    <!-- / Content Column --> 
+    
+    <!-- Right Sidebar Column -->
+    <div class=col-md-3 role=complementary>
+      <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm">
+        <ul class="nav bs-docs-sidenav">
+          <li> <a href=#download>Download</a> </li>
+          <li> <a href=#whats-included>What's included</a>
+            <ul class=nav>
+              <li><a href=#whats-included-precompiled>Precompiled</a></li>
+              <li><a href=#whats-included-source>Source code</a></li>
+            </ul>
+          </li>
+          <li> <a href="#concept">Concept</a> </li>
+          <ul class="nav">
+            <li><a href="#concept-general-concept">General Concept</a></li>
+            <li><a href="#concept-architecture">Architecture</a></li>
+            <li><a href="#concept-components">Components</a></li>
+            <li><a href="#concept-seb-windows">SEB for Windows</a></li>
+            <li><a href="#concept-seb-macOS">SEB for macOS</a></li>
+          </ul>
+          </li>
+          <li> <a href="#features">Features</a> </li>
+          <ul class="nav">
+            <li><a href="#features-common-features">Common Features</a></li>
+            <li><a href="#features-seb-windows">SEB for Windows</a></li>
+            <li><a href="#features-seb-macOS">SEB for macOS</a></li>
+          </ul>
+          </li>
+          <li> <a href="#details">Technical Details</a> </li>
+          <ul class="nav">
+            <li><a href="#details-seb-windows">SEB for Windows</a></li>
+            <li><a href="#details-seb-macOS">SEB for macOS</a></li>
+          </ul>
+          </li>
+          <li> <a href="#acknowledgement">Acknowledgement</a> </li>
+        </ul>
+        <a class=back-to-top href=#top> Back to top </a> </nav>
+    </div>
+  </div>
+  <!-- /.row (Content Row)-->
+  
+  <hr>
+  
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; 2010-2016 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+      </div>
+    </div>
+  </footer>
+</div>
+<!-- /.container --> 
+
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js></script><script>window.jQuery||document.write('<script src="../assets/js/vendor/jquery.min.js"><\/script>');</script><script src="js/bootstrap.min.js"></script><script src="js/docs.min.js"></script><script src="js/ie10-viewport-bug-workaround.js"></script><script>var _gauges=_gauges||[];!function(){var e=document.createElement("script");e.async=!0,e.id="gauges-tracker",e.setAttribute("data-site-id","4f0dc9fef5a1f55508000013"),e.src="//secure.gaug.es/track.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}();</script>
+</body>
+</html>
