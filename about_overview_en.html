@@ -200,14 +200,14 @@
               Concept
             </h4>
           
-            <h5 id="concept-general-concept">
+            <h5 class="seb-section-header" id="concept-general-concept">
               <a class="anchorjs-link " href="#concept-general-concept" aria-label="Anchor link for: concept general concept" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               General Concept
             </h5>
               
             <p>SEB runs on a local computer and  it is connected via the internet to a learning management system (LMS).  Generally SEB works with any web based LMS and other kind of web based exam systems. Currently the two wide spread learning management systems  Moodle and ILIAS offer a quiz mode specifically compatible with SEB. </p>
             
-            <h5 id="concept-architecture">
+            <h5 class="seb-section-header" id="concept-architecture">
               <a class="anchorjs-link " href="#concept-architecture" aria-label="Anchor link for: concept concept-architecture" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               Architecture
             </h5>
@@ -216,7 +216,7 @@
             <p><img src="Media/SEB-Architecture_thirdpartyapp_en.png" alt="Illustration of SEB architecture" class="img-responsive"/></p>
             <p class="imagecaption"> Schematic illustration of a online exam with Safe Exam Browser and a LMS, for example ILIAS or Moodle. In addition a third party application can be allowed to run at the same time, for example Excel or R</p>
       
-            <h5 id="concept-components">
+            <h5 class="seb-section-header" id="concept-components">
                <a class="anchorjs-link " href="#concept-components" aria-label="Anchor link for: concept-components" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
                Components
             </h5>
@@ -228,21 +228,24 @@
               <li>The<strong> learning management systems</strong> contain so-called quiz modules, which are used for onlline exams. SEB relies on extensions/skins to the quiz modules in Moodle and ILIAS for safe exams. With these extensions the user interface of the LMS is reduced to just contain navigation for the exam (no links to other pages outside the quiz) and no other undesirable features like messaging. An exam can also be configured to run only with SEB, not another browser.   These SEB LMS extensions, which originally had to be installed separately to achive this connectivity with SEB, have been integrated into the LMS in  recent versions of ILIAS and Moodle.</li>
             </ol>
             
-            <h5 id="concept-seb-windows">
+            <h5 class="seb-section-header" id="concept-seb-windows">
               <a class="anchorjs-link " href="#concept-seb-windows" aria-label="Anchor link for: Features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               SEB for Windows
             </h5>
                 
             <p>Safe Exam Browser for Windows consists of the SEB kiosk application, which opens an own Windows desktop and catches system commands like keyboard shortcuts (for example ALT+F4) and right mouse-button clicks. The second part is <a href="https://developer.mozilla.org/En/XULRunner" target="_blank">XULRunner</a>, a runtime package from the Mozilla Foundation  (Firefox version 3 and above is also based on XULRunner). The SEB browser part running on XULRunner  connects to the LMS and it doesn't contain navigation and status bars.</p>
             
-            <h5 id="concept-seb-mac">
+            <h5 class="seb-section-header" id="concept-seb-mac">
               <a class="anchorjs-link " href="#concept-seb-mac" aria-label="Anchor link for: Features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               SEB for macOS
             </h5>
             
             <p>In contrast to the Windows version, Safe Exam Browser for Mac&nbsp;OS&nbsp;X is a monolithic  application using a web browser framework instead of a browser runtime. It's using the <a href="http://webkit.org" target="_blank">WebKit</a> engine, on which  Safari and some new open source browsers like Google Chrome are based.   SEB for macOS connects to the Learning Management Systems in the same way as the Windows version.</p>
             
-            <h5>Safe Exam Browser 2.0</h5>
+            <h5 class="seb-section-header" id="concept-configuration">
+              <a class="anchorjs-link " href="#concept-configuration" aria-label="Anchor link for: configuration"></a>
+              Configuration
+           </h5>
             <p>The major release <span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span> facilitates secure exams on unmanaged computers like students' own laptops as well as in managed environments for both platforms Windows and macOS.</span> <span class="half_linespace"><span class="quote">SEB 2.0</span> offers an individual configuration per exam, which is protected by a strong encryption against manipulation. Thanks to a new authentication feature the exam system can verify that a particular, unaltered SEB version and the correct exam settings are used for an examination. This facilitates secure exams especially on unmanaged computers like students' own laptops.</span></p>
             <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span> is an unified version which  brings the same features, exam system interface, configuration files and a very similar user interface onto both platforms, while still taking in account operating system differences and unique platform specific features. </span>Besides the full featured Windows and Mac OS&nbsp;X versions, we are working on an iPad version with a reduced feature set, which will still maintain compatibility with the unified <span class="quote">.seb configuration file</span> format.</p>
             
@@ -257,7 +260,7 @@
               Features
             </h4>
         
-            <h5 id="features-common-features">
+            <h5 class="seb-section-header" id="features-common-features">
               <a class="anchorjs-link " href="#features-common-features" aria-label="Anchor link for: common features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               Common Features
             </h5>
@@ -267,7 +270,7 @@
               <li>VM detector: SEB detects whether it is running on a virtual machine and can refuse to start up</li>
               <li>Build in connection to Moodle and ILIAS, can be used with basically any web-based examination system.</li>
             </ul>
-            <h5 id="features-seb-windows">
+            <h5 class="seb-section-header" id="features-seb-windows">
               <a class="anchorjs-link " href="#features-seb-windows" aria-label="Anchor link for: features seb windows" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               SEB for Windows
             </h5>
@@ -288,7 +291,7 @@
               <li>Separate configuration tool with graphical user interface.</li>
               <li>Third party applications can be allowed to run together with SEB, it can be switched between them with an <span class="quote">App Chooser</span> window</li>
             </ul>
-            <h5 id="features-seb-macOS">
+            <h5 class="seb-section-header" id="features-seb-macOS">
               <a class="anchorjs-link " href="#features-seb-macOS" aria-label="Anchor link for: Features" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               SEB for macOS
             </h5>
@@ -324,7 +327,7 @@
               Technical Details
             </h4>
         
-            <h5 id="details-seb-windows">
+            <h5 class="seb-section-header" id="details-seb-windows">
               <a class="anchorjs-link " href="#details-seb-windows" aria-label="Details SEB Windows" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               SEB for Windows
             </h5>
@@ -347,7 +350,7 @@
                 </ul>
               </li>
             </ul>
-            <h5 id="details-seb-macOS">
+            <h5 class="seb-section-header" id="details-seb-macOS">
               <a class="anchorjs-link " href="#details-seb-macOS" aria-label="Anchor link for: Details SEB macOS" data-anchorjs-icon="" style="font-family: anchorjs-icons; font-style: normal; font-variant-ligatures: normal; font-variant-position: normal; font-variant-caps: normal; font-variant-numeric: normal; font-variant-alternates: normal; font-variant-east-asian: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
               SEB for macOS
             </h5>
@@ -401,6 +404,7 @@
                   <li><a href="#concept-components">Components</a></li>
                   <li><a href="#concept-seb-windows">SEB for Windows</a></li>
                   <li><a href="#concept-seb-macOS">SEB for macOS</a></li>
+                  <li><a href="#concept-configuration">Configuration</a></li>
                 </ul>
               </li>
               <li> <a href="#features">Features</a>
