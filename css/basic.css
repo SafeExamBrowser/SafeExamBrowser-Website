@@ -13,6 +13,14 @@
     margin-top: 2em;
 }
 
+.ontop {
+	z-index:1;
+}
+
+.no_overflow {
+	display: block;
+}
+
 a.anchorjs-link {
     padding-top: 50px;
     margin-top: -50px;
