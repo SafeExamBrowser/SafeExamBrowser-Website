@@ -21,7 +21,7 @@
 	display: block;
 }
 
-a.anchorjs-link {
+.sebnavbar-link {
     padding-top: 50px;
     margin-top: -50px;
 }
@@ -143,6 +143,14 @@ a.anchorjs-link {
 }
 .red {
 	color: #F00;
+}
+.mac_prefs_screenshot {
+	margin-top: -32px;
+	margin-right: -60px;
+	margin-bottom: -80px;
+	margin-left: -60px;
+	padding-top: 5px;
+	padding-bottom: 40px;
 }
 .image1 {
 	margin-top: 5px;
