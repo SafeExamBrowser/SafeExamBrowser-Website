@@ -13,6 +13,11 @@
     margin-top: 2em;
 }
 
+.seb-section-header.sebnavbar-link {
+    padding-top: 73px;
+    margin-top: -58px;
+}
+
 .ontop {
 	z-index:1;
 }
