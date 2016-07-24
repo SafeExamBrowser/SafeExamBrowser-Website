@@ -32,7 +32,6 @@
 }
 
 .bs-docs-sidebar {
-  background-color: #FFF;
   z-index: 1;
 }
 
@@ -183,9 +182,9 @@
 }
 .mac_prefs_screenshot {
 	margin-top: -32px;
-	margin-right: -60px;
 	margin-bottom: -80px;
-	margin-left: -60px;
+	margin-left: -08.6%;
+	margin-right: -08.6%;
 	padding-top: 5px;
 	padding-bottom: 40px;
 }
