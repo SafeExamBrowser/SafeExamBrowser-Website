@@ -1,15 +1,94 @@
-body {
-	background-color: #DDD;
-	background-image: url(../images/bg-container.png);
-	background-repeat: repeat-y;
-	background-position: center;
-	padding-top: 90px;
-}
-@media (min-width:768px) and (max-width: 991px) {
-  body {
-    padding-top: 130px;
+@media (max-width:767px) {
+  .bs-docs-container {
+	  overflow: hidden;
   }
 }
+
+@media (min-width:768px) and (max-width: 991px) {
+  body {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* Show all (even inactive) nested list items */
+  .bs-docs-sidebar .nav ul.nav {
+	  display: block;           
+  }
+  .bs-docs-sidebar {
+	padding-top: 0px;
+	padding-bottom: 30px;
+  }
+  /* all links */
+  .bs-docs-sidebar .nav>li>a {
+	  font-size: 14px;
+  }
+  
+  /* nested links */
+  .bs-docs-sidebar .nav .nav>li>a {
+	  font-size: 14px;
+  }
+}
+
+@media print {
+  /* Show all (even inactive) nested list items */
+  .bs-docs-sidebar .nav ul.nav {
+	  display: block;           
+  }
+}
+
+.breadcrumb>li+li:before {
+	content:"|\00a0"
+	}
+
+.bs-docs-sidebar {
+  z-index: 1;
+}
+
+/*Header formatting */
+.MainContent {
+    margin-top: 50px;
+}
+
+.seb-section-header {
+    margin-top: 1.65em;
+}
+
+.seb-section-header.sebnavbar-link {
+    padding-top: 73px;
+    margin-top: -58px;
+}
+
+.ontop {
+	z-index:2;
+}
+
+.no_overflow {
+	display: block;
+}
+
+.sebnavbar-link {
+    padding-top: 58px;
+    margin-top: -58px;
+}
+
+.group, .subgroup {
+    padding-top: 50px;
+    margin-top: -50px;
+}
+
+.sebbrandimg {
+    margin-top:-10px;
+	vertical-align:top;
+}
+.sebnavbar-brand {
+    margin:0;
+    display: inline-block;
+}
+.navbar .logo {
+    width: 40px;
+}
+
 #half_linespace {
 	margin-bottom: 0.5em;
 }
@@ -75,146 +154,19 @@ body {
 .indent6 {
 	text-indent: 120px;
 }
-#container {
-	width: 680px;
-	margin: auto;
-	text-align: left;
-	background-color: #FFF;
-	left: 20px;
-}
-#outercontainer {
-	position: fixed;
-	background: color: #DDD url(../images/bg-container.png) center repeat-y;
-}
-#logotext_seb {
-	color: #ff963d;
-	font-size: 22pt;
-	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-	font-style: normal;
-	font-weight: bold;
-	margin-top: 120px;
-	margin-left: 360px;
-	position: relative;
-	z-index: 10;
-	width: 50px;
-	height: 50px;
-}
-#logotext_safe {
-	color: #070782;
-	font-size: 22pt;
-	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-	font-style: normal;
-	font-weight: bold;
-	margin-top: 155px;
-	margin-left: 360px;
-	position: relative;
-	z-index: 10;
-	width: 100px;
-	height: 40px;
-}
-#logotext_f_seb {
-	color: #ff963d;
-	font-size: 29px;
-	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-	font-weight: bold;
-	font-style: normal;
-	vertical-align: top;
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	z-index: 10;
-	margin-top: 80px;
-	margin-left: 435px;
-}
-#logotext_f_safe {
-	color: #070782;
-	font-size: 29px;
-	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;
-	font-style: normal;
-	font-weight: bold;
-	position: absolute;
-	z-index: 10;
-	width: 100px;
-	height: 40px;
-	vertical-align: top;
-	margin-top: 14px;
-	margin-left: 510px;
-}
-#header { font-size: 20pt; font-weight: bold; line-height: 10pt; background-image: url(../Media/header_index.jpg); background-repeat: no-repeat; width: 100%; height: 300px; z-index: 10; padding: 1px; }
-#header_f {
-	background: url(../images/header_fn2.jpg) left bottom no-repeat;
-	width: 100%;
-	height: 160px;
-	z-index: 10;
-}
-#blogeinbindung { font-size: 10pt; background-color: aqua; position: absolute; top: 200px; margin-right: auto; margin-left: auto; width: 600px; height: 500px; z-index: -5; }
-#content {
-	line-height: 1.5em;
-	width: 560px;
-	height: auto;
-	z-index: 10;
-	margin-top: -30px;
-	margin-right: 60px;
-	margin-left: 60px;
-/*	font-family: Helvetica, Geneva, Arial, SunSans-Regular, sans-serif;*/
-}
-#spalte1von1 { line-height: 1.5em; width: 528px; height: auto; float: none; margin-top: 200pt; }
-#spalte1von2 { line-height: 1.5em; width: 260px; height: auto; float: left; padding-right: 10px; }
-#spalte2von2 { line-height: 1.5em; width: 260px; height: auto; float: right; }
-#spalte1von4 { line-height: 1.5em; width: 130px; height: auto; float: left; }
-#spalte2von4 { line-height: 1.5em; width: auto; height: auto; float: none; }
-#spalte3von4 { line-height: 1.5em; width: 129px; height: auto; float: left; margin-top: 0; }
-#spalte4von4 { line-height: 1.5em; width: 125px; height: auto; float: right; margin-top: 0; }
-#text  /* halbe Spalte links */ { width: 250px; float: left; }
-#bilder  /* halbe Spalte, rechts */ { position: absolute; left: 445px; width: 124px; margin-left: 0; border-left-width: 250px; }
-#bilder2 { position: absolute; left: 490px; width: 125px; float: right; margin-left: 125px; border-right-width: 0; }
-#bottom {
-	height: 30px;
-	margin-top: 100px;
-	background-color: #FFF;
-	padding-left: 5px;
-}
-p {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	line-height: 16px;
-	margin: 0em 0em 1em 0em;
-}
-h3 {
-	color:  #ff963d;
-	font-size: 12px;
-	font-weight: bold;
-	font-family: Verdana, Geneva, sans-serif;
-}
-h4 {
-	color: #555;
-	font-size: 14px;
-	font-weight: bold;
-	background-color: white;
-	font-family: Verdana, Geneva, sans-serif;
-	margin-top: 36px;
-	margin-bottom: 18px;
-}
-h5 {
-	color: #444;
-	font-size: 13px;
-	font-weight: bold;
-	background-color: white;
-	font-family: Arial, Helvetica, sans-serif;
-	margin-top: 20px;
-	margin-bottom: 0px;
-}
 #sebh5 {
 	margin-bottom: 0.5em;
+	margin-top: 2em;
 }
 #seblist ul {
 	margin: 0.5em 0 1em -1.5em;
 }
 #seblist li {
 	margin-bottom: 0.5em;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	line-height: 16px;
+	line-height: 1.25em;
+}
+ol.seblist>li {
+	margin-bottom: 10px;
 }
 #seblist ul li ul {
 	margin-top: 0px;
@@ -241,6 +193,21 @@ h5 {
 .red {
 	color: #F00;
 }
+
+.mac_prefs_screenshot {
+	margin-top: -32px;
+	margin-bottom: -80px;
+	margin-left: -08.6%;
+	margin-right: -08.6%;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+
+.bs-docs-section>img.img-responsive {
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+
 .image1 {
 	margin-top: 5px;
 	margin-right: 0px;
@@ -271,6 +238,10 @@ h5 {
 	left: -45px;
 	top: 0px;
 	margin-bottom: 0px;
+}
+.image_memberlogos {
+	width: 140px;
+	margin-bottom: 10px;
 }
 .image-only {
 	margin-top: 5px;

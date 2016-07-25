@@ -22,6 +22,9 @@
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Docs CSS -->
+	<link href="../css/docs.min.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -40,21 +43,18 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-            </button>
-                <table border="0">
-                  <tr>
-                    <td><img style="width:40px;" src="../images/SEBIcon_40_2x.png" alt="SEB logo"></td>
-                    <td width="10">&nbsp;</td>
-                    <td><a class="navbar-brand" href="index.html">Safe&nbsp;Exam&nbsp;Browser</a></td>
-                  </tr>
-            </table>
-          </div>
+                </button>
+                <a href="index.html" class="navbar-brand">
+                  <span><img class="sebbrandimg" src="../images/SEBIcon_40_2x.png" alt="SEB-Logo" width="40"></span>
+                  Safe&nbsp;Exam&nbsp;Browser
+                </a>
+            </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -96,9 +96,9 @@
                             <li>
                                 <a href="../consortium/join.html">Join</a>
                             </li>
-                            <!--<li>
+                            <li>
                                 <a href="../consortium/faq.html">FAQ</a>
-                            </li>-->
+                            </li>
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -137,18 +137,34 @@
                     <li>
                         <a href="../support_de.html">Support</a>
                     </li>
+                    <li>
+                    	<a href="../faq/faq_de.html">FAQ</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
       </div>
         <!-- /.container -->
     </nav>
-<!--<div id="outercontainer">-->
-<div id="container">
-  <div id="content"> <!-- TemplateBeginEditable name="MainContent" --> <!-- TemplateEndEditable --> </div>
-  <div id="bottom"></div>
-</div>
-<!--</div>-->
+    
+    <!-- Page Content -->
+    <div class="container bs-docs-container">
+
+	  <!-- TemplateBeginEditable name="MainContent" -->
+      
+      <!-- TemplateEndEditable -->
+
+      <!-- Footer -->
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Copyright &copy; 2010-2016 <a href="http://www.ethz.ch" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a></p>
+              </div>
+          </div>
+      </footer>
+
+    </div>
+    <!-- /.container -->
 
     <!-- jQuery -->
     <script src="../js/jquery.js"></script>
@@ -156,5 +172,9 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
 
+    <!-- Bootstrap Docs (for Sidebar) JavaScript -->
+    <script src="../js/docs.min.js"></script>
+
 </body>
+
 </html>
