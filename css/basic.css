@@ -37,6 +37,10 @@
   }
 }
 
+.breadcrumb>li+li:before {
+	content:"|\00a0"
+	}
+
 .bs-docs-sidebar {
   z-index: 1;
 }
@@ -47,7 +51,7 @@
 }
 
 .seb-section-header {
-    margin-top: 2em;
+    margin-top: 1.65em;
 }
 
 .seb-section-header.sebnavbar-link {

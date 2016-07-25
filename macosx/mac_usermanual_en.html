@@ -160,6 +160,8 @@
           <ol class="breadcrumb">
             <li class="active">English
             </li>
+            <li><a href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf" target="_blank">SEB 2.x How To</a>
+            </li>
           </ol>
     
         </div>
@@ -192,7 +194,7 @@
                 <ul class="nav">
                   <li><a href="#moodle">Using SEB with Moodle</a></li>
                   <li><a href="#ILIAS">Using SEB with ILIAS</a></li>
-                  <li><a href="#OpenOLAT">Using SEB with OpenOLATs</a></li>
+                  <li><a href="#OpenOLAT">Using SEB with OpenOLAT</a></li>
                 </ul>
               </li>
               <li> <a href="#download">Download/Installation</a> </li>
@@ -389,7 +391,7 @@
             <li><span class="quote">Security</span> contains detail settings about how SEB locks down security relevant system features.</li>
           </ul>
           
-          <p><strong>There are two different modes in which you can edit settings: </strong></p>
+          <p class="seb-section-header"><strong>There are two different modes in which you can edit settings: </strong></p>
           
           <ul id="seblist">
             <li><span class="quote">Edit local client settings</span>: Changes settings of this SEB client. These <span class="quote">local client settings</span> are saved persistently on drive (in the ~Library/Preferences/ directory). When you change a setting option, then  it is immediately saved (this is how preferences in other macOS standard applications work). <br />
@@ -398,14 +400,14 @@
             <strong>In the title bar of the Preferences window</strong> the file name of the currently loaded settings file<span class="quote"></span> is displayed, together with an file icon. As usual in macOS document windows, you can cmd-click this icon to show the path where the file is saved (as long as it already was saved on drive, see below).    </li>
           </ul>
           
-          <p>You can switch from <em>editing local client settings</em> to <em>editing a settings file</em> with the commands:</p>
+          <p class="seb-section-header">You can switch from <em>editing local client settings</em> to <em>editing a settings file</em> with the commands:</p>
           
           <ul id="seblist">
             <li><span class="quote">Save As…</span> Saves local client settings into a .seb file and  if answering the following dialog 'Edit Saved Settings'? with <span class="quote">Edit File</span> switches from local client settings to the new file.</li>
             <li><span class="quote">Edit Duplicate</span>: Switches to editing a settings file (with the default file name <span class="path">SebClientSettings.seb</span>), when saving this config file, the file chooser will be displayed to select a destination directory and to change the file name if desired.</li>
           </ul>
           
-          <p>You can switch from <em>editing a settings file</em> to  <em>local client settings</em> with:</p>
+          <p class="seb-section-header">You can switch from <em>editing a settings file</em> to  <em>local client settings</em> with:</p>
           
           <ul id="seblist">
             <li><span class="quote">Revert Settings to Local Client Settings</span>: The currently edited settings file is discarded and SEB switches back to editing local client settings.</li>
@@ -438,7 +440,7 @@
             <li><span class="quote">About</span>: Shows a window with SEB copyright information and  version number. Click somewhere into the window to close it.</li>
             <li><span class="quote">Help-Button &quot;?&quot;</span>: Displays this manual page in a new browser window.</li>
           </ul>
-          <p>You can get out of the preferences windows using one of the three buttons described below:</p>
+          <p class="seb-section-header">You can get out of the preferences windows using one of the three buttons described below:</p>
           <ul id="seblist">
             <li><span class="quote">Close window</span> (standard red close button in the windows title bar).</li>
             <li><span class="quote">Restart SEB</span>: Saves preferences, eventually reconfigures and restarts SEB, displaying the webpage at start URL.</li>
@@ -648,7 +650,7 @@
             <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of permitted processes.</li> -->
           </ul>
           
-          <p>Selected Process details:</p>
+          <p class="seb-section-header quote">Selected Process details:</p>
           
           <ul id="seblist">
             <li><span class="quote">Active</span>: Indicates if this permitted process item is active (can be used while testing).</li>
@@ -688,7 +690,7 @@
                 <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of prohibited processes.</li>
            </ul> -->
               
-          <p>Selected Process details:</p>
+          <p class="quote">Selected Process details:</p>
           
           <ul id="seblist">
             <li><span class="quote">Active</span>: Indicates if this prohibited process item is active.</li>
@@ -731,7 +733,7 @@
           
           <p>SEB automatically creates an allow filter rule for the exact address of the <span class="quote">Start URL</span> defined in these settings. This means that if your <span class="quote">Start URL</span> is <span class="path">example.com</span>, then all pages and resources in the domain example.com  will be allowed. If your <span class="quote">Start URL</span> is <span class="path">example.com/exams/engineering2015-1.html</span>, then only the pages with this exact address will be allowed. In this case you have to manually add an allow filter rule so all pages and resources your exam uses will be allowed (like <span class="path">example.com/exams/*</span>).</p>
           
-          <p><strong>Rules</strong></p>
+          <p class="seb-section-header quote">Rules</p>
           
           <ul id="seblist">
             <li><span class="quote">Active</span>:
@@ -838,7 +840,7 @@
             <li><span class="quote">Log file directory Windows</span>: Enter a valid,    Windows-specific formatted path.</li>
           </ul>
           
-          <p><strong>Settings for SEB Windows</strong></p>
+          <p class="seb-section-header quote">Settings for SEB Windows</p>
           
           <ul id="seblist">
             <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. <span class="quote">Enable WiFi control</span>: Displays a control icon in the SEB task bar allowing to reconnect to Wi-Fi networks used before. In SEB 2.1 for macOS this control doesn't exist yet, you can use <span class="quote">Show menu bar</span> in the <a href="#AppearancePane">Appearance pane</a> instead for a similar functionality.</li>
@@ -857,8 +859,18 @@
             Operating System
           </h3>
           
-          <p> OS X 10.7 (Lion), OS X 10.8  (Mountain Lion), OS X 10.9 (Mavericks),  OS X 10.10 (Yosemite) and OS X 10.11 (El Capitan) on 64-bit Intel Macs    </p>
+          <p>SEB for macOS is running on 64-bit Intel Macs on following operating systems:</p>
                
+          <ul id="seblist">
+            <li>Mac OS X 10.6 Snow Leopard (only supported up to SEB 1.5.2)</li>
+            <li>OS X 10.7 Lion (only supported as client, preferences window not available)</li>
+            <li>OS X 10.8 Mountain Lion</li>
+            <li>OS X 10.9 Mavericks</li>
+            <li>OS X 10.10 Yosemite</li>
+            <li>OS X 10.11 El Capitan</li>
+            <li>Beta versions of macOS 10.12 Sierra: Not yet thoroughly tested, please <a href="https://sourceforge.net/p/seb/bugs/" target="_blank">report</a> possible problems.</li>
+          </ul>
+
         </div>
         <!-- / Document Section --> 
     
