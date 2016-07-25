@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 <!-- InstanceBeginEditable name="doctitle" -->
-        <title>Safe Exam Browser</title>
+        <title>Safe Exam Browser - Windows Benutzerhandbuch</title>
         <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -22,6 +22,9 @@
     <!-- Custom Fonts -->
     <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Docs CSS -->
+	<link href="../css/docs.min.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,7 +33,6 @@
     <![endif]-->
 
 <!-- InstanceBeginEditable name="head" -->
-        <script src="../SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
         <link href="../SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
         <!-- InstanceEndEditable -->
 <link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
@@ -147,21 +149,53 @@
     </nav>
     
     <!-- Page Content -->
-    <div class="container">
+    <div class="container bs-docs-container">
 
 	  <!-- InstanceBeginEditable name="MainContent" -->
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
-            <tr>
-                <td valign="top"><h4>Benutzerhandbuch SEB für Windows (ab Version 1.8)<br />
+            
+      <!-- Page Heading/Breadcrumbs -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Windows <small>Benutzerhandbuch</small></h1>
+          <ol class="breadcrumb">
+            <li><a href="win_usermanual_en.html">English</a>
+            </li>
+            <li class="active">Deutsch
+            </li>
+          </ol>
+    
+        </div>
+      </div>
+      <!-- /.row --> 
+      
+      <!-- Content Row -->
+      <div class="row"> 
+        
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+          <div class="list-group">
+            <a href="../news_de.html" class="list-group-item">News</a>
+            <a href="../about_overview_de.html" class="list-group-item">Über SEB</a>
+            <a href="../consortium/members.html" class="list-group-item">Konsortium</a>
+            <a href="../download_de.html" class="list-group-item">Download</a>
+            <a href="win_usermanual_de.html" class="list-group-item active">Windows – Benutzerhandbuch</a>
+            <a href="win_release_notes_de.html" class="list-group-item">Windows – Release Notes</a>
+            <a href="../macosx/mac_usermanual_de.html" class="list-group-item">Dokumentation macOS</a>
+            <a href="../support_de.html" class="list-group-item">Support</a>
+          </div>
+        </div>
+        
+        <!-- Content Column -->
+        <div class="col-md-9">
+        
+          <!-- Content -->
+          <h2></h2>
+    
+        <h4>Benutzerhandbuch SEB für Windows (ab Version 1.8)<br />
                 </h4>
                 <p><span class="textsubnavi"><a href="win_usermanual_en.html">»Benutzerhandbuch für  SEB 2.0 und neuere Versionen<br />
               </a></span>(momentan nur in Englisch verfügbar)</p>
-            <p><a href="win_usermanual_old_de.html">ältere Versionen (bis  1.7.1)</a></p>
-            <p>&nbsp;</p></td>
-                <td align="right" valign="top" class="link_small"><a href="win_usermanual_en.html">English</a>&nbsp;&nbsp;&nbsp;Deutsch</td>
-              </tr>
-          </table>
-          <div id="CollapsiblePanel1" class="CollapsiblePanel">
+            <p><a href="win_usermanual_old_de.html">ältere Versionen (bis  1.7.1)</a></p>          <div id="CollapsiblePanel1" class="CollapsiblePanel">
             <div class="CollapsiblePanelTab" tabindex="0"><strong>Inhalt</strong> <span class="textklein">Verbergen/Zeigen</span></div>
             <div class="CollapsiblePanelContent"> <a href="#ConfigurationFiles">Konfigurationsdateien</a><br />
                 <a href="#Certificates">Zertifikate</a><br />
@@ -182,11 +216,11 @@
           </ul>
 <p>Um SEB für eine Online-Prüfung zu konfigurieren, kann der <strong>Dozent</strong> die beiden ini-Dateien mit einem beliebigen Texteditor wie z.B.<em> Notepad</em> bearbeiten. Viel einfacher ist es aber, auf den mit SEB mitgelieferten GUI-Editor <em><strong>SebWindowsConfig.exe</strong></em> doppelzuklicken. Im sich öffnenden Fenster <em><strong>SEB Windows Configuration Window</strong></em> werden die beiden mit SEB mitgelieferten Konfigurations-Dateien  <em><strong>SebStarter.ini</strong></em> und <em><strong>MsgHook.ini</strong></em> dann automatisch geladen. Sie besitzen Voreinstellungen, die im GUI-Fenster angezeigt werden:<br />
   <br />
-  <img src="images/1.9/SebWindowsConfigGUI01HalfCut.png" width="560" height="380" /><br />
+  <img class="img-responsive" src="images/1.9/SebWindowsConfigGUI01HalfCut.png" /><br />
 </p>
 <p>Der Dozent kann diese Einstellungen per Mausklicks und Tastatureingaben im GUI-Editor ändern und seine Einstellungen durch Klick auf <em><strong>Save ... config file </strong></em>wieder auf Festplatte speichern. Auch das Neuladen der Dateien ist mittels <em><strong>Open ... config file</strong></em> möglich, ebenso das Zurücksetzen auf die Voreinstellungen (<strong><em>Default ... settings</em></strong>) oder die zuletzt von Datei geladenen Werte (<strong><em>Restore ... config file</em></strong>):<br />
   <br />
-  <img src="images/1.9/SebWindowsConfigGUI02HalfCut.png" width="560" height="380" /><br />
+  <img class="img-responsive" src="images/1.9/SebWindowsConfigGUI02HalfCut.png" /><br />
 </p>
 <p>Zum Schluss kann der Editor mit oder ohne Abspeichern der beiden Konfigurations-Dateien verlassen werden (<em><strong>Save both config files and exit</strong></em> bzw. <em><strong>Exit without saving</strong></em>).</p>
 <p><span class="path">SebStarter.ini </span>ist die primäre Konfigurationsdatei. Untenstehend die Voreinstellungen der mit SEB Windows 1.9.1 mitgelieferten <em>SebStarter.ini</em>:<br/>
@@ -503,7 +537,18 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
             </div>
 <h4><a name="LMSExtensions" id="LMS-Erweiterungen"></a>LMS-Erweiterungen</h4>
             <p>In aktuellen Versionen von ILIAS und Moodle werden keine Erweiterungen mehr benötigt, um Safe Exam Browser zu verwenden. Die Verbindungsmöglichkeit mit SEB ist bereits in diesen LMS eingebaut. Falls eine ältere ILIAS-Version benutzt wird, finden sich Informationen, wie das Skin &quot;Naviless&quot; in ILIAS installiert wird, im <span class="quote">ILIAS Information Center</span>. Und für ältere Moodle-Versionen finden sich Informationen zur Installation der Erweiterung in der Readme-Datei, die an die Download-Datei angehängt ist.</p>
-          <!-- InstanceEndEditable -->
+
+          <!-- / Content --> 
+          <p>&nbsp;</p>
+        </div>
+        <!-- / Content Column --> 
+        
+      </div>
+      <!-- /.row (Content Row)-->
+      
+      <hr>
+      
+<!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
@@ -522,6 +567,9 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Docs (for Sidebar) JavaScript -->
+    <script src="../js/docs.min.js"></script>
 
 </body>
 

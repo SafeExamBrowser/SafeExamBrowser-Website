@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Safe Exam Browser</title>
+<title>Safe Exam Browser - Demo</title>
 <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -21,6 +21,9 @@
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Docs CSS -->
+	<link href="css/docs.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -151,28 +154,58 @@
     </nav>
     
     <!-- Page Content -->
-    <div class="container">
+    <div class="container bs-docs-container">
 
 	  <!-- InstanceBeginEditable name="MainContent" -->
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
-            <tr>
-                <td valign="top"><h4>Alles  über den Safe Exam Browser … </h4></td>
-                <td align="right" valign="top"><span class="link_small"><a href="about_demo_en.html">English</a>&nbsp;&nbsp;&nbsp;Deutsch</span></td>
-              </tr>
-            <tr>
-              <td valign="top">&nbsp;</td>
-              <td align="right" valign="top">&nbsp;</td>
-            </tr>
-          </table>
-<p>… in audio-visueller Form: <a href="#podcast">Podcast</a>, <a href="#demovideo">Demo-Video</a> und <a href="#screenshots">Bildschirmfotos</a>.</p>
+  
+      <!-- Page Heading/Breadcrumbs -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Über SEB <small>Demo</small></h1>
+          <ol class="breadcrumb">
+            <li><a href="about_demo_en.html">English</a>
+            </li>
+            <li class="active">Deutsch
+            </li>
+          </ol>
+    
+        </div>
+      </div>
+      <!-- /.row --> 
+      
+      <!-- Content Row -->
+      <div class="row"> 
+        
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+          <div class="list-group">
+            <a href="news_de.html" class="list-group-item">News</a>
+            <a href="about_overview_de.html" class="list-group-item">Über SEB</a>
+            <a href="about_demo_de.html" class="list-group-item active">Über SEB - Demo</a>
+            <a href="about_roadmap_de.html" class="list-group-item">Über SEB - Roadmap</a>
+            <a href="consortium/members.html" class="list-group-item">Konsortium</a>
+            <a href="download_de.html" class="list-group-item">Download</a>
+            <a href="windows/win_usermanual_de.html" class="list-group-item">Dokumentation Windows</a>
+            <a href="macosx/mac_usermanual_de.html" class="list-group-item">Dokumentation macOS</a>
+            <a href="support_de.html" class="list-group-item">Support</a>
+          </div>
+        </div>
+        
+        <!-- Content Column -->
+        <div class="col-md-9">
+        
+        <!-- Content -->
+      <h2></h2>
+      
+<p>Alles über Safe Exam Browser in audio-visueller Form: <a href="#podcast">Podcast</a>, <a href="#demovideo">Demo-Video</a> und <a href="#screenshots">Bildschirmfotos</a>.</p>
 <!--<p>Ausserdem eine <a href="demo/">Demo-Version</a> mit vorkonfigurierter Moodle-Prüfung.</p>-->
-    <h4> <a name="podcast" id="podcast"></a>Podcast</h4>
+    <h3 class="page-header"> <a name="podcast" id="podcast"></a>Podcast</h3>
     <p>Interview zum Safe Exam Browser (Audio-Podcast mit Standbildern).</p>
     <div class="image1 podcastbox">
     <!-- Begin VideoJS -->
     <div class="video-js-box">
       <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
-      <video id="SEB_Adventspodcast" class="video-js" width="300" height="300" controls="controls" preload="auto" poster="Media/SEB_Adventspodcast.jpg">
+      <video id="SEB_Adventspodcast" class="video-js" width="300" height="300" controls preload="auto" poster="Media/SEB_Adventspodcast.jpg">
         <source src="Media/SEB_Adventspodcast.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="Media/SEB_Adventspodcast.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="Media/SEB_Adventspodcast.ogv" type='video/ogg; codecs="theora, vorbis"' />
@@ -193,13 +226,13 @@
     <!-- End VideoJS -->
     </div>
     <p>Podcast im <a href="Media/SEB_Adventspodcast.m4a">m4a-Format</a></p>
-    <h4><a name="demovideo" id="demovideo"></a>Demo-Video</h4>
+    <h3 class="page-header"><a name="demovideo" id="demovideo"></a>Demo-Video</h3>
     <p>So funktioniert der Safe Exam Browser (in Englisch).</p>
       <div class="image1">
       <!-- Begin VideoJS -->
     <div class="video-js-box">
       <!-- Using the Video for Everybody Embed Code http://camendesign.com/code/video_for_everybody -->
-      <video id="SafeExamBrowser" class="video-js" width="550" height="400" controls="controls" preload="auto" poster="Media/SafeExamBrowser.jpg">
+      <video id="SafeExamBrowser" class="video-js" width="550" height="400" controls preload="auto" poster="Media/SafeExamBrowser.jpg">
         <source src="Media/SafeExamBrowser.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
         <source src="Media/SafeExamBrowser.webm" type='video/webm; codecs="vp8, vorbis"' />
         <source src="Media/SafeExamBrowser.ogv" type='video/ogg; codecs="theora, vorbis"' />
@@ -219,20 +252,23 @@
     </div>
     <!-- End VideoJS -->
     </div>
-    <h4><a name="screenshots" id="screenshots"></a>Bildschirmfotos</h4>
-    <p class="image1"><img src="Media/SEB_Bildschirmfoto_Moodle+Prefs.png" alt="" height="350" width="100%" border="0" /></p>
-    <p class="imagecaption">Safe Exam Browser für macOS zusammen mit einer Moodle-Prüfung, deutsch lokalisiertes Einstellungen-Fenster sichtbar</p>
-    <p class="image1"><img src="Media/SEB_Screenshot_ILIAS+Prefs.png" width="100%" height="350px" alt="SEB for Mac OS X with ILIAS" /></p>
-    <p class="imagecaption">Safe Exam Browser für macOS zusammen mit einer ILIAS-Prüfung, englisch lokalisiertes Einstellungen-Fenster sichtbar
-    </p>
-    <p class="image1"><img src="Media/SEB_Bildschirmfoto_Video+About.png" width="100%" height="350" alt="SEB Mac OS X displaying ILIAS video and about box" /></p>
-    <p class="imagecaption">Safe Exam Browser für macOS mit einem ILIAS-Video Fragentyp und dem Fenster &quot;Über SEB&quot;</p>
-    <p class="image1"><img src="Media/SEB_Bildschirmfoto_VirtualBox.png" width="100%" height="350" alt="SEB about to be started in a virtualized OS X" /></p>
+      <h3 class="page-header"><a name="screenshots" id="screenshots"></a>Bildschirmfotos</h3>
+    <p class="image1"><img class="img-responsive" src="Media/SEB_Bildschirmfoto_VirtualBox.png" alt="SEB about to be started in a virtualized OS X" /></p>
     <p class="imagecaption">Hier wird versucht, Safe Exam Browser für macOS in einem virtualisierten macOS zu starten&nbsp;…</p>
-    <p class="image1"><img src="Media/SEB_Bildschirmfoto_VM_Detektor.png" width="100%" height="350" alt="But the VM detector of SEB prevents this" /></p>
+    <p class="image1"><img class="img-responsive" src="Media/SEB_Bildschirmfoto_VM_Detektor.png" alt="But the VM detector of SEB prevents this" /></p>
     <p class="imagecaption">…&nbsp;was der VM-Detektor von SEB verhindert.</p>
 
-    <!-- InstanceEndEditable -->
+          <!-- / Content --> 
+          <p>&nbsp;</p>
+        </div>
+        <!-- / Content Column --> 
+        
+      </div>
+      <!-- /.row (Content Row)-->
+      
+      <hr>
+      
+      <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
@@ -251,6 +287,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Docs (for Sidebar) JavaScript -->
+    <script src="js/docs.min.js"></script>
 
 </body>
 

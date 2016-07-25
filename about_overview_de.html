@@ -10,7 +10,7 @@
     <meta name="author" content="">
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Safe Exam Browser</title>
+<title>Safe Exam Browser - Übersicht</title>
 <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -22,6 +22,9 @@
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!-- Docs CSS -->
+	<link href="css/docs.min.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,8 +33,6 @@
     <![endif]-->
 
 <!-- InstanceBeginEditable name="head" -->
-<script src="SpryAssets/SpryCollapsiblePanel.js" type="text/javascript"></script>
-<link href="SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
 <!-- InstanceEndEditable -->
 <link href="css/basic.css" rel="stylesheet" type="text/css" media="all">
 
@@ -147,136 +148,303 @@
     </nav>
     
     <!-- Page Content -->
-    <div class="container">
+    <div class="container bs-docs-container">
 
 	  <!-- InstanceBeginEditable name="MainContent" -->
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
-            <tr>
-                <td valign="top"><h4>Über SEB </h4></td>
-                <td align="right" valign="top"><p class="link_small"><a href="about_overview_en.html">English</a>&nbsp;&nbsp;&nbsp;Deutsch<br />
-                <br />
-          <a href="windows/win_quickguide_de.html">»Dokumentation Windows</a><br />
-          <a href="macosx/mac_usermanual_de.html">»Dokumentation für macOS</a><br />
-</p></td>
-              </tr>
-          </table>
-    <div style="position:relative;width:560px;">
-      <div style="position:static;height:100%;">
-        <div style="position:static;top:0px;left:0px;width:300px;">
-          <p> Safe Exam Browser (SEB) ist eine abgesicherte Browser-Applikation, um Online-Prüfungen auf Learning Management Systemen (LMS) zuverlässig durchführen zu können.  Durch den Start der SEB-Applikation wird ein herkömmlicher Windows- oder Mac&nbsp;OS&nbsp;X Computer in einen sogenannten Kioskmodus versetzt und somit zu einer temporär abgesicherten Arbeitsstation. SEB regelt den Zugriff auf Hilfsmittel wie Systemfunktionen, andere Websites und Programme und unterbindet die Verwendung von unerlaubten Ressourcen während einer Prüfung.          </p>
-          <div id="CollapsiblePanel1" class="CollapsiblePanel">
-            <div class="CollapsiblePanelTab" tabindex="0"><strong>Inhalt</strong> <span class="textklein">Verbergen/Zeigen</span></div>
-            <div class="CollapsiblePanelContent"> <a href="#Concept">Konzept von SEB</a><br />
-              <a href="#Features">Funktionen</a><br />
-              <a href="#Details">Technische Details</a><br />
-              <a href="#Acknowledgement">Danksagung</a> </div>
-          </div>
+  
+      <!-- Page Heading/Breadcrumbs -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Über SEB <small>Übersicht</small></h1>
+          <ol class="breadcrumb">
+            <li><a href="about_overview_en.html">English</a>
+            </li>
+            <li class="active">Deutsch
+            </li>
+          </ol>
+    
         </div>
-        <div style="position:absolute;top:0px;left:352px;width:75px;height:106px;"> <a href="about_demo_de.html"><img src="Media/icon_seb_demo_ref.jpg" alt="" height="106" width="75" align="left" border="0" /></a></div>
-        <div style="position:absolute;top:0px;left:485px;width:75px;height:106px;"> <a href="download_de.html"><img src="Media/icon_seb_download_ref.jpg" alt="" height="106" width="75" align="right" border="0" /></a></div>
-        <div style="position:absolute; top:130px; left:485px; width:75px; height:106px;"> <a href="support_de.html"><img src="Media/icon_seb_support_ref.jpg" alt="" height="106" width="75" align="right" border="0" /></a></div>
-        <div style="position:absolute; top:130px; left:352px; width:75px; height:106px;"> <a href="news_de.html"><img src="Media/icon_seb_doc_ref.jpg" alt="" height="106" width="75" align="left" border="0" /></a></div>
-        <div class="caption_text" style="position:absolute; top:94px; left:352px; width:48px; height:20px;"> Demo</div>
-        <div class="caption_text" style="position:absolute; top:94px; left:485px; width:62px; height:20px;"> Download</div>
-        <div class="caption_text" style="position:absolute; top:224px; left:352px; width:96px; height:20px;"> News</div>
-        <div class="caption_text" style="position:absolute; top:224px; left:485px; width:52px; height:20px;"> Support</div>
       </div>
-      <h4><a name="Concept" id="Concept"></a>Konzept von SEB</h4>
-      <h5>Generelles Konzept</h5>
-      <div></div>
-      <p>SEB läuft lokal auf einem  Computer und ist über das Internet mit einem Learning Management System verbunden. Generell läuft SEB mit jedem Web-basierten LMS und anderen Web-basierten Prüfungssystemen. Momentan bieten die beiden weitverbreiteten Learning Management Systeme Moodle und ILIAS einen ausdrücklich mit SEB kompatiblen Prüfungsmodus. </p>
-      <h5>Systemarchitektur von SEB </h5>
-      <p>SEB besteht  aus einer Kiosk-Applikation und einer Browser-Komponente, die auf einem Prüfungs-Rechner ausgeführt werden. Die Kiosk-Applikation ist für die Absicherung des Prüfungs-PC verantwortlich, wogegen die Browser-Komponente die Kommunikation über das Internet (oder internes LAN) mit dem Quiz-Teil eines LMS auf einem Server übernimmt.</p>
-      <p class="image-only"><img src="Media/SEB-Architecture_thirdpartyapp_de.png" alt="" height="260" width="560" border="0" /></p>
-      <p class="imagecaption">Schematische Darstellung einer Online-Prüfung mit Safe Exam Browser und einem LMS, beispielsweise  ILIAS oder Moodle. Zusätzlich kann eine parallel laufende Drittapplikation zugelassen werden, z.B. Excel oder R</p>
-      <h5>Komponenten der Systemarchitektur</h5>
-      <p>Die obenstehende Abbildung  zeigt die beiden internen Komponenten, aus denen SEB besteht, die <strong>Kiosk-Anwendung</strong> und den <strong>Browser</strong>-Teil. Der dritte Bestandteil einer SEB-Prüfungsumgebung ist in den unterstützten <strong>LMS</strong> integriert. Optional sind auch eine oder mehrere <strong>Drittapplikationen</strong> möglich</p>
-      <ol start="1" type="1">
-        <li>Die <strong>Kiosk-Anwendung</strong>, die den      Rechner absichert und den SEB-Browser plus optionale Drittapplikationen      startet. Da diese Applikation diverse Systemfunktionen während der      Ausführung von SEB unterbinden oder steuern muss, ist diese Komponente      sehr systemnah programmiert. </li>
-        <li>Der <strong>SEB-Browser</strong>, der sich mit      der voreingestellten URL der LMS-Prüfungsseite verbindet und über keine      Navigationselemente wie Adresszeile, Suchmaschinen-Feld usw. verfügt. Die      Windows-Version von SEB verwendet das Browser-System Gecko der Firma Mozilla, entweder in der Form von Portable Firefox oder XULRunner. SEB für macOS      verwendet  das WebKit-Browsersystem. </li>
-        <li><strong>LMS</strong> beinhalten sogenannte Quiz-Module, die  für Online-Prüfungen Verwendung finden. SEB stützt sich auf Erweiterungen zu diesen Modulen in Moodle und ILIAS, damit die Prüfungen sicher durchgeführt werden können. Die Erweiterungen, die inzwischen im Core-Code der Lernplattformen integriert sind, bestehen aus speziellen Skins (alternativen Benutzeroberflächen). Diese sind dafür verantwortlich, dass die  Navigation der LMS auf die Prüfung eingeschränkt wird, also keine Links auf Seiten ausserhalb der Prüfung führen. Ausserdem werden unerwünschte Funktionen wie der interne Nachrichtenaustausch ausgeschaltet . Ebenfalls stellen die Erweiterungen sicher, dass das Prüfungs-Quiz nur mit einem sicheren Browser wie  SEB durchgeführt werden kann. Diese Einstellungen lassen sich bei der Erstellung der Tests in den  Lernplattformen konfigurieren.</li>
-      </ol>
-      <h5>Systemarchitektur von SEB für Windows </h5>
-      <p>Safe Exam Browser für Windows besteht aus der SEB-Kiosk-Anwendung, die einen eigenen Windows-Desktop öffnet und Systembefehle wie Tastenkombinationen (zum Beispiel ALT+F4) und Klicks auf die rechte Maustaste abfängt. Der zweite Teil ist <a href="https://developer.mozilla.org/En/XULRunner" target="_blank">XULRunner</a>, eine Laufzeitumgebung der  Mozilla Foundation  (Firefox Version 3 und neuer basieren ebenfalls auf XULRunner). Der SEB Browser-Teil, der auf XULRunner läuft, enthält  keine Navigationselemente und Adress- und Statusleisten.</p>
-      <h5>Systemarchitektur von SEB für macOS</h5>
-      <p>Im Gegensatz zur Windows-Version besteht Safe Exam Browser für Mac&nbsp;OS&nbsp;X aus einer monolithischen Applikation, die API-Funktionen eines Webbrowser-Frameworks aufruft, anstatt einen portablen Browser oder eine Browser-Laufzeitumgebung als separaten Prozess einzubinden. SEB für macOS benutzt das <a href="http://webkit.org" target="_blank">WebKit</a>-Browsersystem, das auch von Safari, Apple Mail und diversen neuen Open-Source Browsern  eingesetzt wird.  SEB für macOS verbindet sich auf dieselbe Weise mit den Learning Management Systemen wie die Windows-Version. </p>
-      <h5>Safe Exam Browser 2.0</h5>
-      <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span>  ermöglicht sichere Prüfungen auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern und erleichtert die Konfiguration auch in zentral verwalteten Prüfungsumgebungen auf beiden Platformen Windows und macOS. </span><span class="half_linespace">Mit <span class="quote">SEB 2.0</span> wird eine individuelle Konfiguration pro Prüfung auf einfache Weise möglich, die  mit starker Verschlüsselung vor Manipulationen gesichert ist. Dank einer neuen Authentifizierungsmethode ist es möglich, in Prüfungssystemen sicherzustellen, dass nur  bestimmte, unveränderte SEB-Versionen mit den korrekten Sicherheitseinstellungen für die Prüfung verwendet werden. Dies ermöglicht sicheres Prüfen insbesondere auch auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern.</span> </p>
-      <p><span class="quote">Safe Exam Browser 2.0</span> ist eine vereinheitlichte Version, welche dieselben Funktionen, Schnittstellen für Prüfungssysteme, Konfigurationsdateien und eine sehr ähnliche Benutzeroberfläche auf beiden unterstützten Plattformen zur Verfügung stellt. Dabei werden aber weiterhin Eigenheiten der Betriebssysteme und spezifische Funktionalitäten der Plattformen berücksichtigt. Neben den mit allen Funktionen ausgestatteten Versionen für Windows und Mac OS&nbsp;X arbeiten wir ausserdem an einer Version für das iPad mit reduziertem Funktionsumfang, die aber trotzdem kompatibel mit dem vereinheitlichen <span class="quote">.seb Konfigurationsformat</span> sein wird.</p>
-      <h4><a name="Features" id="Features"></a>Funktionen </h4>
-      <h5>Gemeinsame/identische Funktionen</h5>
-      <ul id="seblist">
-        <li>Mehrere   Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne jegliche Navigationselemente)</li>
-        <li>VM-Detektor: SEB erkennt, ob er in einer virtuellen oder &quot;nativen&quot; Umgebung läuft und verweigert notfalls das Aufstarten</li>
-        <li>Eingebaute Anbindung an Moodle und ILIAS, grundsätzliche Kompatibilität zu jedem Web-basierten Prüfungssystem</li>
-      </ul>
+      <!-- /.row --> 
+      
+      <!-- Content Row -->
+      <div class="row"> 
+        
+        <!-- Sidebar Column -->
+        <div class="col-md-3">
+          <div class="list-group">
+            <a href="news_de.html" class="list-group-item">News</a>
+            <a href="about_overview_de.html" class="list-group-item active">Über SEB</a>
+            <a href="about_demo_de.html" class="list-group-item">Über SEB - Demo</a>
+            <a href="about_roadmap_de.html" class="list-group-item">Über SEB - Roadmap</a>
+            <a href="consortium/members.html" class="list-group-item">Konsortium</a>
+            <a href="download_de.html" class="list-group-item">Download</a>
+            <a href="windows/win_usermanual_de.html" class="list-group-item">Dokumentation Windows</a>
+            <a href="macosx/mac_usermanual_de.html" class="list-group-item">Dokumentation macOS</a>
+            <a href="support_de.html" class="list-group-item">Support</a>
+          </div>
+          
+          <!-- Sidebar Content Table -->
+          <nav class="bs-docs-sidebar">
+            <ul class="nav bs-docs-sidenav">
+              <h5>Inhalt</h5>
+              <li> <a href="#concept">Konzept</a>
+                <ul class="nav">
+                  <li><a href="#concept-general-concept">Generelles Konzept</a></li>
+                  <li><a href="#concept-architecture">Architektur</a></li>
+                  <li><a href="#concept-components">Komponenten</a></li>
+                  <li><a href="#concept-seb-windows">SEB für Windows</a></li>
+                  <li><a href="#concept-seb-macOS">SEB für macOS</a></li>
+                  <li><a href="#concept-configuration">Konfiguration</a></li>
+                </ul>
+              </li>
+              <li> <a href="#features">Funktionen</a>
+                <ul class="nav">
+                  <li><a href="#features-common-features">Gemeinsame Funktionen</a></li>
+                  <li><a href="#features-seb-windows">SEB für Windows</a></li>
+                  <li><a href="#features-seb-macOS">SEB für macOS</a></li>
+                </ul>
+              </li>
+              <li> <a href="#details">Technische Details</a>
+                <ul class="nav">
+                  <li><a href="#details-seb-windows">SEB für Windows</a></li>
+                  <li><a href="#details-seb-macOS">SEB für macOS</a></li>
+                </ul>
+              </li>
+              <li> <a href="#acknowledgement">Danksagung</a> </li>
+            </ul>
+            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Zurück zum Seitenanfang </a> 
+          </nav>
+          
+        </div>
+        <!-- /Sidebar Contents Table -->
 
-      <h5>SEB für Windows</h5>
-      <ul id="seblist">
-        <li></li>
-        <li>Deaktivierbare (System-)Funktionen:
-          <ul id="seblist">
-            <li> SEB  vorzeitig beenden</li>
-            <li>Tastenkombinationen wie Win, CTRL+ALT+DEL (Windows XP), ALT+F4, F1, CTRL+P usw.</li>
-            <li>Rechte Maustaste</li>
-            <li>Umschalten auf andere Programme (ausgenommen erlaubte Drittapplikationen)</li>
-            <li>Prozess-Überwachung und Beenden unerlaubt startender Prozesse</li>
-            <li>Menuoptionen auf dem Windows Security Screen unter Windows 7  werden  durch SEB deaktiviert/entfernt</li>
-            <li>VMware &quot;Shade&quot;-Balken bei Verwendung von VMWare Horizon View Client für VDI</li>
-            <li>Print Screen</li>
-          </ul>
-        </li>
-        <li>Separates Konfigurationswerkzeug mit grafischer Benutzeroberfläche.</li>
-        <li>Zugelassene Drittapplikationen können gleichzeitig mit SEB laufen, und mittels <span class="quote">App Chooser</span> Fenster aufgerufen werden</li>
-      </ul>
-      <h5> SEB für macOS</h5>
-      <ul id="seblist">
-        <li>Mehrere   Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne Navigationsemlemente) auf dem Hauptbildschirm, können skaliert und verschoben werden, andere angeschlossenen Bildschirme werden mit einem schwarzen Hintergrund abgedeckt.</li>
-        <li>Fenster <span class="quote">Einstellungen</span> für einfache Konfiguration, Zugang kann mit einem Administrator-Passwort geschützt werden.</li>
-        <li>Deaktivierte (System-)Funktionen:
-          <ul id="seblist">
-            <li> SEB beenden (kann verboten, erlaubt oder mittels eines Passworts eingeschränkt werden)</li>
-            <li>macOS Dock und Menuleiste</li>
-            <li>Mittels Programmumschalter auf andere Applikationen umschalten   (Befehlstaste+Tabulator,  ausser wenn Drittapplikationen erlaubt sind</li>
-            <li>Programme sofort beenden (Befehl+Option+Esc)</li>
-            <li>Neustarten (Befehl+ctrl+Medienauswurftaste) und Ausschalten (Befehl+Option+ctrl+Medienauswurftaste) </li>
-            <li>Ausblenden der Applikation, Minimieren des Fensters, Drucken und Exposé</li>
-            <li>Kontextmenü über den rechten (oder ctrl-) Mausklick</li>
-            <li> Ruhezustand des Bildschirms oder des Systems bei Leerlauf  </li>
-            <li> Kontextmenü in Plugin-Webinhalten</li>
-            <li>Optional Hyperlinks die in einem neuen Browserfenster geöffnet werden sollen und  in Javascript und Web-Plugins eingebettete Links, sofern sie zu einem anderen Server als den der  angezeigten Webseite verlinken</li>
-            <li>macOS Bildschirmfoto-Funktion</li>
-          </ul>
-        </li>
-        <li>Zugelassene Drittapplikationen können gleichzeitig mit SEB laufen (in einem entsprechend konfigurierten macOS Benutzerkonto)</li>
-      </ul>
-      <h4><a name="Details" id="Details"></a>Technische Details</h4>
-      <h5>SEB für Windows</h5>
-      <p>Betriebssystem: Microsoft  7 und Windows 8/8.1	<br />
-        Lizenz: Mozilla Public License (MPL)<br />
-        Browser-System: Eingebettete Version von XULRunner (Mozilla Gecko, worauf auch Firefox basiert) <br />
-        Programmiersprachen/Frameworks: C#, .NET, JavaScript, Mozilla XULRunner</p>
-      <h5>SEB für macOS</h5>
-      <p>Betriebssystem: Mac OS X 10.6 (nur bis SEB für macOS 1.5.2),  OS X 10.7 bis OS X 10.10 Yosemite.<br />
-        Lizenz:  Mozilla Public License (MPL)<br />
-        Browser-System: In dem jeweiligen Betriessystem integrierte Version von WebKit (worauf auch Safari basiert)<br />
-        Programmiersprache/Framework: Objective-C/Cocoa</p>
-      <h4><a name="Acknowledgement" id="Acknowledgement"></a>Danksagung</h4>
-      <p>Dieses Projekt wurde  teilweise im Rahmen der von <a href="http://www.switch.ch" target="_blank">SWITCH</a> geleiteten Programms &quot;<a href="http://www.switch.ch/de/aaa" target="_blank">AAA/SWITCH – e-Infrastructure für e-Science</a>&quot; und des durch SWITCH koordinierten Kooperationsprojektes &quot;<a href="http://www.switch.ch/de/uni/projects/learn_infra/" target="_blank">Learning Infrastructure</a>&quot; (Teil des <a href="http://www.crus.ch/homenavigation/home.html?L=0" target="_blank">CRUS</a>-Programms &quot;<a href="http://www.crus.ch/information-programme/projekte-programme/suk-programm-2013-2016-p-2-wissenschaftliche-information-zugang-verarbeitung-und-speicherung.html?L=0" target="_blank">Wissenschaftliche Information: Zugang, Verarbeitung und Speicherung</a>&quot;) durchgeführt und erhielt finanzielle Unterstützung durch  den <a href="http://www.ethrat.ch/en" target="_blank">ETH-Rat</a>.<br />
-      </p>
-      <!--end of div container-->
-      <script type="text/javascript">
-<!--
-var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
-//-->
-        </script>
-    </div>
-    <script type="text/javascript">
-<!--
-var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
-//-->
-    </script>
-    <!-- InstanceEndEditable -->
+        <!-- Content Column -->
+        <div class="col-md-7">
+        
+        <!-- Content -->
+          <h2></h2>
+
+          <!-- Document Section --> 
+          <div class="bs-docs-section">
+
+            <h3 id="concept" class="page-header sebnavbar-link">
+              <a class="anchorjs-link " href="#concept" aria-label="Anchor link for: concept" ></a>
+              Konzept
+            </h3>
+
+            <p> Safe Exam Browser (SEB) ist eine abgesicherte Browser-Applikation, um Online-Prüfungen auf Learning Management Systemen (LMS) zuverlässig durchführen zu können.  Durch den Start der SEB-Applikation wird ein herkömmlicher Windows- oder Mac&nbsp;OS&nbsp;X Computer in einen sogenannten Kioskmodus versetzt und somit zu einer temporär abgesicherten Arbeitsstation. SEB regelt den Zugriff auf Hilfsmittel wie Systemfunktionen, andere Websites und Programme und unterbindet die Verwendung von unerlaubten Ressourcen während einer Prüfung. </p>
+
+            <h4 class="seb-section-header sebnavbar-link" id="concept-general-concept">
+              <a class="anchorjs-link " href="#concept-general-concept" aria-label="Anchor link for: concept general concept" ></a>
+              Generelles Konzept
+            </h4>
+
+            <p>SEB läuft lokal auf einem  Computer und ist über das Internet mit einem Learning Management System verbunden. Generell läuft SEB mit jedem Web-basierten LMS und anderen Web-basierten Prüfungssystemen. Momentan bieten die beiden weitverbreiteten Learning Management Systeme Moodle und ILIAS einen ausdrücklich mit SEB kompatiblen Prüfungsmodus. </p>
+            
+            <h4 class="seb-section-header sebnavbar-link" id="concept-architecture">
+              <a class="anchorjs-link " href="#concept-architecture" aria-label="Anchor link for: concept concept-architecture"></a>
+              Architektur
+            </h4>
+              
+            <p>SEB besteht  aus einer Kiosk-Applikation und einer Browser-Komponente, die auf einem Prüfungs-Rechner ausgeführt werden. Die Kiosk-Applikation ist für die Absicherung des Prüfungs-PC verantwortlich, wogegen die Browser-Komponente die Kommunikation über das Internet (oder internes LAN) mit dem Quiz-Teil eines LMS auf einem Server übernimmt.</p>
+            
+            <img class="img-responsive" src="Media/SEB-Architecture_thirdpartyapp_de.png" alt="" />
+            
+            <p class="imagecaption">Schematische Darstellung einer Online-Prüfung mit Safe Exam Browser und einem LMS, beispielsweise  ILIAS oder Moodle. Zusätzlich kann eine parallel laufende Drittapplikation zugelassen werden, z.B. Excel oder R</p>
+            
+            <h4 class="seb-section-header sebnavbar-link" id="concept-components">
+               <a class="anchorjs-link " href="#concept-components" aria-label="Anchor link for: concept-components"></a>
+               Komponenten
+            </h4>
+            
+            <p>Die obenstehende Abbildung  zeigt die beiden internen Komponenten, aus denen SEB besteht, die <strong>Kiosk-Anwendung</strong> und den <strong>Browser</strong>-Teil. Der dritte Bestandteil einer SEB-Prüfungsumgebung ist in den unterstützten <strong>LMS</strong> integriert. Optional sind auch eine oder mehrere <strong>Drittapplikationen</strong> möglich</p>
+            
+            <ol start="1" type="1">
+              <li>Die <strong>Kiosk-Anwendung</strong>, die den      Rechner absichert und den SEB-Browser plus optionale Drittapplikationen      startet. Da diese Applikation diverse Systemfunktionen während der      Ausführung von SEB unterbinden oder steuern muss, ist diese Komponente      sehr systemnah programmiert. </li>
+              <li>Der <strong>SEB-Browser</strong>, der sich mit      der voreingestellten URL der LMS-Prüfungsseite verbindet und über keine      Navigationselemente wie Adresszeile, Suchmaschinen-Feld usw. verfügt. Die      Windows-Version von SEB verwendet das Browser-System Gecko der Firma Mozilla, entweder in der Form von Portable Firefox oder XULRunner. SEB für macOS      verwendet  das WebKit-Browsersystem. </li>
+              <li><strong>LMS</strong> beinhalten sogenannte Quiz-Module, die  für Online-Prüfungen Verwendung finden. SEB stützt sich auf Erweiterungen zu diesen Modulen in Moodle und ILIAS, damit die Prüfungen sicher durchgeführt werden können. Die Erweiterungen, die inzwischen im Core-Code der Lernplattformen integriert sind, bestehen aus speziellen Skins (alternativen Benutzeroberflächen). Diese sind dafür verantwortlich, dass die  Navigation der LMS auf die Prüfung eingeschränkt wird, also keine Links auf Seiten ausserhalb der Prüfung führen. Ausserdem werden unerwünschte Funktionen wie der interne Nachrichtenaustausch ausgeschaltet . Ebenfalls stellen die Erweiterungen sicher, dass das Prüfungs-Quiz nur mit einem sicheren Browser wie  SEB durchgeführt werden kann. Diese Einstellungen lassen sich bei der Erstellung der Tests in den  Lernplattformen konfigurieren.</li>
+            </ol>
+            
+            <h4 class="seb-section-header sebnavbar-link" id="concept-seb-windows">
+              <a class="anchorjs-link " href="#concept-seb-windows" aria-label="Anchor link for: Features"></a>
+              SEB für Windows
+            </h4>
+            
+            <p>Safe Exam Browser für Windows besteht aus der SEB-Kiosk-Anwendung, die einen eigenen Windows-Desktop öffnet und Systembefehle wie Tastenkombinationen (zum Beispiel ALT+F4) und Klicks auf die rechte Maustaste abfängt. Der zweite Teil ist <a href="https://developer.mozilla.org/En/XULRunner" target="_blank">XULRunner</a>, eine Laufzeitumgebung der  Mozilla Foundation  (Firefox Version 3 und neuer basieren ebenfalls auf XULRunner). Der SEB Browser-Teil, der auf XULRunner läuft, enthält  keine Navigationselemente und Adress- und Statusleisten.</p>
+            
+            <h4 class="seb-section-header sebnavbar-link" id="concept-seb-macOS">
+              <a class="anchorjs-link " href="#concept-seb-macOS" aria-label="Anchor link for: Features"></a>
+              SEB für macOS
+            </h4>
+            
+            <p>Im Gegensatz zur Windows-Version besteht Safe Exam Browser für Mac&nbsp;OS&nbsp;X aus einer monolithischen Applikation, die API-Funktionen eines Webbrowser-Frameworks aufruft, anstatt einen portablen Browser oder eine Browser-Laufzeitumgebung als separaten Prozess einzubinden. SEB für macOS benutzt das <a href="http://webkit.org" target="_blank">WebKit</a>-Browsersystem, das auch von Safari, Apple Mail und diversen neuen Open-Source Browsern  eingesetzt wird.  SEB für macOS verbindet sich auf dieselbe Weise mit den Learning Management Systemen wie die Windows-Version. </p>
+      
+            <h5 class="seb-section-header sebnavbar-link" id="concept-configuration">
+              <a class="anchorjs-link " href="#concept-configuration" aria-label="Anchor link for: configuration"></a>
+              Konfiguration
+           </h5>
+           
+          <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span>  ermöglicht sichere Prüfungen auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern und erleichtert die Konfiguration auch in zentral verwalteten Prüfungsumgebungen auf beiden Platformen Windows und macOS. </span><span class="half_linespace">Mit <span class="quote">SEB 2.0</span> wird eine individuelle Konfiguration pro Prüfung auf einfache Weise möglich, die  mit starker Verschlüsselung vor Manipulationen gesichert ist. Dank einer neuen Authentifizierungsmethode ist es möglich, in Prüfungssystemen sicherzustellen, dass nur  bestimmte, unveränderte SEB-Versionen mit den korrekten Sicherheitseinstellungen für die Prüfung verwendet werden. Dies ermöglicht sicheres Prüfen insbesondere auch auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern.</span> </p>
+          
+          <p><span class="quote">Safe Exam Browser 2.0</span> ist eine vereinheitlichte Version, welche dieselben Funktionen, Schnittstellen für Prüfungssysteme, Konfigurationsdateien und eine sehr ähnliche Benutzeroberfläche auf beiden unterstützten Plattformen zur Verfügung stellt. Dabei werden aber weiterhin Eigenheiten der Betriebssysteme und spezifische Funktionalitäten der Plattformen berücksichtigt. Neben den mit allen Funktionen ausgestatteten Versionen für Windows und Mac OS&nbsp;X arbeiten wir ausserdem an einer Version für das iPad mit reduziertem Funktionsumfang, die aber trotzdem kompatibel mit dem vereinheitlichen <span class="quote">.seb Konfigurationsformat</span> sein wird.</p>
+            
+          </div>
+          <!-- / Document Section --> 
+          
+          <!-- Document Section --> 
+          <div class="bs-docs-section">
+      
+            <h3 id="features" class="page-header sebnavbar-link">
+              <a class="anchorjs-link " href="#features" aria-label="Anchor link for: Features"></a>
+              Funktionen
+            </h3>
+        
+            <h4 class="seb-section-header sebnavbar-link" id="features-common-features">
+              <a class="anchorjs-link " href="#features-common-features" aria-label="Anchor link for: common features"></a>
+              Gemeinsame Funktionen
+            </h4>
+        
+            <ul id="seblist">
+              <li>Mehrere Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne jegliche Navigationselemente)</li>
+              <li>VM-Detektor: SEB erkennt, ob er in einer virtuellen oder &quot;nativen&quot; Umgebung läuft und verweigert notfalls das Aufstarten</li>
+              <li>Eingebaute Anbindung an Moodle und ILIAS, grundsätzliche Kompatibilität zu jedem Web-basierten Prüfungssystem</li>
+            </ul>
+      
+            <h4 class="seb-section-header sebnavbar-link" id="features-seb-windows">
+              <a class="anchorjs-link " href="#features-seb-windows" aria-label="Anchor link for: features seb windows"></a>
+              SEB für Windows
+            </h4>
+        
+            <ul id="seblist">
+              <li>Deaktivierbare (System-)Funktionen:
+                <ul id="seblist">
+                  <li> SEB  vorzeitig beenden</li>
+                  <li>Tastenkombinationen wie Win, CTRL+ALT+DEL (Windows XP), ALT+F4, F1, CTRL+P usw.</li>
+                  <li>Rechte Maustaste</li>
+                  <li>Umschalten auf andere Programme (ausgenommen erlaubte Drittapplikationen)</li>
+                  <li>Prozess-Überwachung und Beenden unerlaubt startender Prozesse</li>
+                  <li>Menuoptionen auf dem Windows Security Screen unter Windows 7  werden  durch SEB deaktiviert/entfernt</li>
+                  <li>VMware &quot;Shade&quot;-Balken bei Verwendung von VMWare Horizon View Client für VDI</li>
+                  <li>Print Screen</li>
+                </ul>
+              </li>
+              <li>Separates Konfigurationswerkzeug mit grafischer Benutzeroberfläche.</li>
+              <li>Zugelassene Drittapplikationen können gleichzeitig mit SEB laufen, und mittels <span class="quote">App Chooser</span> Fenster aufgerufen werden</li>
+            </ul>
+            
+            <h4 class="seb-section-header sebnavbar-link" id="features-seb-macOS">
+              <a class="anchorjs-link " href="#features-seb-macOS" aria-label="Anchor link for: Features"></a>
+              SEB für macOS
+            </h4>
+            
+            <ul id="seblist">
+              <li>Mehrere   Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne Navigationsemlemente) auf dem Hauptbildschirm, können skaliert und verschoben werden, andere angeschlossenen Bildschirme werden mit einem schwarzen Hintergrund abgedeckt.</li>
+              <li>Fenster <span class="quote">Einstellungen</span> für einfache Konfiguration, Zugang kann mit einem Administrator-Passwort geschützt werden.</li>
+              <li>Deaktivierte (System-)Funktionen:
+                <ul id="seblist">
+                  <li> SEB beenden (kann verboten, erlaubt oder mittels eines Passworts eingeschränkt werden)</li>
+                  <li>macOS Dock und Menuleiste</li>
+                  <li>Mittels Programmumschalter auf andere Applikationen umschalten   (Befehlstaste+Tabulator,  ausser wenn Drittapplikationen erlaubt sind</li>
+                  <li>Programme sofort beenden (Befehl+Option+Esc)</li>
+                  <li>Neustarten (Befehl+ctrl+Medienauswurftaste) und Ausschalten (Befehl+Option+ctrl+Medienauswurftaste) </li>
+                  <li>Ausblenden der Applikation, Minimieren des Fensters, Drucken und Exposé</li>
+                  <li>Kontextmenü über den rechten (oder ctrl-) Mausklick</li>
+                  <li> Ruhezustand des Bildschirms oder des Systems bei Leerlauf  </li>
+                  <li> Kontextmenü in Plugin-Webinhalten</li>
+                  <li>Optional Hyperlinks die in einem neuen Browserfenster geöffnet werden sollen und  in Javascript und Web-Plugins eingebettete Links, sofern sie zu einem anderen Server als den der  angezeigten Webseite verlinken</li>
+                  <li>macOS Bildschirmfoto-Funktion</li>
+                </ul>
+              </li>
+              <li>Zugelassene Drittapplikationen können gleichzeitig mit SEB laufen (in einem entsprechend konfigurierten macOS Benutzerkonto)</li>
+            </ul>
+            
+          </div>
+          <!-- / Document Section --> 
+          
+          <!-- Document Section --> 
+          <div class="bs-docs-section">
+        
+            <h3 id="details" class="page-header sebnavbar-link">
+              <a class="anchorjs-link " href="#details" aria-label="Anchor link for: details"></a>
+              Technische Details
+            </h3>
+        
+            <h4 class="seb-section-header sebnavbar-link" id="details-seb-windows">
+              <a class="anchorjs-link " href="#details-seb-windows" aria-label="Details SEB Windows"></a>
+              SEB für Windows
+            </h4>
+        
+            <ul>
+              <li>Betriebssystem:          
+                <ul>
+                  <li>Microsoft Windows 7</li>
+                  <li>Windows 8/8.1 </li>
+                  <li>Window 10</li>
+                </ul>
+              </li>
+              <li>Lizenz: Mozilla Public License (MPL)</li>
+              <li>Browser-System: Eingebettete Version von XULRunner (Mozilla Gecko, worauf auch Firefox basiert) </li>
+              <li>Programmiersprachen/Frameworks: 
+                <ul>
+                  <li>C# (.NET)</li>
+                  <li>JavaScript</li>
+                  <li>Mozilla XULRunner</li>
+                </ul>
+              </li>
+            </ul>
+                          
+            <h4 class="seb-section-header sebnavbar-link" id="details-seb-macOS">
+              <a class="anchorjs-link " href="#details-seb-macOS" aria-label="Anchor link for: Details SEB macOS"></a>
+              SEB für macOS
+            </h4>
+            
+            <ul>
+              <li>BetriebssystemSystem: 
+                <ul>
+                  <li>Mac OS X 10.6 Snow Leopard (nur bis SEB 1.5.2)</li>
+                  <li>OS X 10.7 Lion (nur als Prüfungs-Client unterstützt, das Einstellungen-Fenster ist nicht verfügbar)</li>
+                  <li>OS X 10.8 Mountain Lion</li>
+                  <li>OS X 10.9 Mavericks</li>
+                  <li>OS X 10.10 Yosemite</li>
+                  <li> OS X 10.11 El Capitan</li>
+                </ul>
+              </li>
+              <li>Lizenz:  Mozilla Public License (MPL)</li>
+              <li>Browser-System: In dem jeweiligen Betriessystem integrierte Version von WebKit (worauf auch Safari basiert)</li>
+              <li>Programmiersprache/Framework: Objective-C (Cocoa)</li>
+            </ul>
+            
+          </div>
+          <!-- / Document Section --> 
+          
+          <!-- Document Section --> 
+          <div class="bs-docs-section">
+      
+            <h3 id="acknowledgement" class="page-header sebnavbar-link">
+              <a class="anchorjs-link " href="#acknowledgement" aria-label="Anchor link for: Acknowledgement"></a>
+              Danksagung
+            </h3>
+            
+            <h4 class="page-header"><a name="Acknowledgement" id="Acknowledgement"></a>Danksagung</h4>
+            
+            <p>Dieses Projekt wurde  teilweise im Rahmen der von <a href="http://www.switch.ch" target="_blank">SWITCH</a> geleiteten Programms &quot;<a href="http://www.switch.ch/de/aaa" target="_blank">AAA/SWITCH – e-Infrastructure für e-Science</a>&quot; und des durch SWITCH koordinierten Kooperationsprojektes &quot;<a href="http://www.switch.ch/de/uni/projects/learn_infra/" target="_blank">Learning Infrastructure</a>&quot; (Teil des <a href="http://www.crus.ch/homenavigation/home.html?L=0" target="_blank">CRUS</a>-Programms &quot;<a href="http://www.crus.ch/information-programme/projekte-programme/suk-programm-2013-2016-p-2-wissenschaftliche-information-zugang-verarbeitung-und-speicherung.html?L=0" target="_blank">Wissenschaftliche Information: Zugang, Verarbeitung und Speicherung</a>&quot;) durchgeführt und erhielt finanzielle Unterstützung durch  den <a href="http://www.ethrat.ch/en" target="_blank">ETH-Rat</a>.<br />
+            </p>
+            
+          </div>
+          <!-- / Document Section --> 
+          
+          <!-- / Content --> 
+          <p>&nbsp;</p>
+        </div>
+        <!-- / Content Column --> 
+        
+      </div>
+      <!-- /.row (Content Row)-->
+      
+      <hr>
+      
+<!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
@@ -295,6 +463,9 @@ var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Docs (for Sidebar) JavaScript -->
+    <script src="js/docs.min.js"></script>
 
 </body>
 

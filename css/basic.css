@@ -165,6 +165,9 @@
 	margin-bottom: 0.5em;
 	line-height: 1.25em;
 }
+ol.seblist>li {
+	margin-bottom: 10px;
+}
 #seblist ul li ul {
 	margin-top: 0px;
 	margin-bottom: 0px;
