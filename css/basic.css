@@ -8,6 +8,17 @@
   body {
     padding-top: 100px;
   }
+  
+  .sebnavbar-link {
+    padding-top: 108px!important;
+    margin-top: -108px!important;
+  }
+  
+  .seb-section-header.sebnavbar-link {
+	  padding-top: 123px!important;
+	  margin-top: -108px!important;
+  }
+
 }
 
 @media (max-width: 991px) {
@@ -54,6 +65,11 @@
     margin-top: 1.65em;
 }
 
+.sebnavbar-link {
+    padding-top: 58px;
+    margin-top: -58px;
+}
+
 .seb-section-header.sebnavbar-link {
     padding-top: 73px;
     margin-top: -58px;
@@ -65,16 +81,6 @@
 
 .no_overflow {
 	display: block;
-}
-
-.sebnavbar-link {
-    padding-top: 58px;
-    margin-top: -58px;
-}
-
-.group, .subgroup {
-    padding-top: 50px;
-    margin-top: -50px;
 }
 
 .sebbrandimg {
