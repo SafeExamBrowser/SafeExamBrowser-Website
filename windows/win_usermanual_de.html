@@ -191,18 +191,19 @@
           <!-- Content -->
           <h2></h2>
     
-        <h4>Benutzerhandbuch SEB für Windows (ab Version 1.8)<br />
-                </h4>
-                <p><span class="textsubnavi"><a href="win_usermanual_en.html">»Benutzerhandbuch für  SEB 2.0 und neuere Versionen<br />
-              </a></span>(momentan nur in Englisch verfügbar)</p>
-            <p><a href="win_usermanual_old_de.html">ältere Versionen (bis  1.7.1)</a></p>          <div id="CollapsiblePanel1" class="CollapsiblePanel">
+          <p><a href="win_usermanual_en.html"><strong>Benutzerhandbuch für  Safe Exam Browser 2.0 und neuere Versionen</strong><br />
+        </a>(momentan nur in Englisch verfügbar)</p>
+        
+          <h2 class="page-header">Safe Exam Browser für Windows (ab Version 1.8)</h2>
+          
+            <p><a href="win_usermanual_old_de.html"><strong>ältere Versionen (bis  1.7.1)</strong></a></p>          <div id="CollapsiblePanel1" class="CollapsiblePanel">
             <div class="CollapsiblePanelTab" tabindex="0"><strong>Inhalt</strong> <span class="textklein">Verbergen/Zeigen</span></div>
             <div class="CollapsiblePanelContent"> <a href="#ConfigurationFiles">Konfigurationsdateien</a><br />
                 <a href="#Certificates">Zertifikate</a><br />
                 <a href="#ConnectBrowserAndTest">Test und Browser verbinden</a><br />
                 <a href="#LMSExtensions">LMS-Erweiterungen</a> </div>
           </div>
-            <h4><a name="ConfigurationFiles" id="ConfigurationFiles"></a>Konfigurationsdateien</h4>
+            <h3 class="page-header"><a name="ConfigurationFiles" id="ConfigurationFiles"></a>Konfigurationsdateien</h3>
           <p>Es gibt zwei Konfigurationsdateien für SEB Windows: <span class="path">SebStarter.ini</span> und <span class="path">MsgHook.ini</span>. Diese befinden sich:<br />
           </p>
           <ul id="seblist">
@@ -515,7 +516,7 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
             </p>
             <p> in <span class="path">SebStarter.ini</span> setzen.<br />
             </p>
-<h4> <a name="Certificates" id="Certificates"></a>Zertifikate</h4>
+          <h3 class="page-header"> <a name="Certificates" id="Certificates"></a>Zertifikate</h3>
             <p>In SEB  mit XULRunner (Version 1.4 und neuer) können Probleme mit SSL-Zertifikaten auftreten:</p>
             <ul id="seblist">
             <li>Wenn Sie die Kommunikation zum Prüfungsserver/LMS mit SSL schützen, kann es
@@ -528,14 +529,14 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
                 Weitere Informationen finden Sie im Handbuch Ihres Webservers: <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcertificatechainfile" target="_blank">Apache 2.2</a>, <a href="http://support.microsoft.com/kb/954755" target="_blank">IIS</a>.</li>
             <li>Selbst-signierte Zertifikate müssen in SEBs XULRunner importiert werden. Da XULRunner keine einfache Möglichkeit bietet, für nicht generell vertrauenswürdige Zertifikate Ausnahmen hinzuzufügen, können Sie die Seite in Firefox öffnen, das Zertifikat akzeptieren und dann die Datei  <strong>cert_override.txt</strong> in das XULRunner-Anwendungsprofil kopieren. </li>
           </ul>
-            <h4> <a name="ConnectBrowserAndTest" id="ConnectBrowserAndTest"></a>Test und Browser verbinden</h4>
+            <h3 class="page-header"> <a name="ConnectBrowserAndTest" id="ConnectBrowserAndTest"></a>Test und Browser verbinden</h3>
             <p>              Bevor Sie SEB starten, sollten Sie die Startseite Ihrer Online-Prüfung festlegen, und welche Tastenkombinationen während der Online-Prüfung durch SEB unterdrückt werden sollen. Diese wurden oben im Abschnitt <a href="#ConfigurationFiles">Konfigurationsdateien</a> beschrieben. Für's erste können Sie auch die Standard-Vorgabewerte benutzen, die im heruntergeladenen SEB schon vorhanden sind.<br />
               <br />
           Die Start-URL von SEB ändert man, indem man in der Datei <em>SebStarter.ini</em> den Wert <em>ExamUrl</em> auf die entsprechende Web-Adresse setzt, z.B.</p>
             <div class="sourcecode">
               <p class="sourcecode">ExamUrl=http://www.safeexambrowser.org/</p>
             </div>
-<h4><a name="LMSExtensions" id="LMS-Erweiterungen"></a>LMS-Erweiterungen</h4>
+          <h3 class="page-header"><a name="LMSExtensions" id="LMS-Erweiterungen"></a>LMS-Erweiterungen</h3>
             <p>In aktuellen Versionen von ILIAS und Moodle werden keine Erweiterungen mehr benötigt, um Safe Exam Browser zu verwenden. Die Verbindungsmöglichkeit mit SEB ist bereits in diesen LMS eingebaut. Falls eine ältere ILIAS-Version benutzt wird, finden sich Informationen, wie das Skin &quot;Naviless&quot; in ILIAS installiert wird, im <span class="quote">ILIAS Information Center</span>. Und für ältere Moodle-Versionen finden sich Informationen zur Installation der Erweiterung in der Readme-Datei, die an die Download-Datei angehängt ist.</p>
 
           <!-- / Content --> 

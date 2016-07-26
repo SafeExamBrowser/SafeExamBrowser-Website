@@ -1,9 +1,3 @@
-@media (max-width:767px) {
-  .bs-docs-container {
-	  overflow: hidden;
-  }
-}
-
 @media (min-width:768px) and (max-width: 991px) {
   body {
     padding-top: 100px;
@@ -46,6 +40,10 @@
   .bs-docs-sidebar .nav ul.nav {
 	  display: block;           
   }
+}
+
+tr>td>a {
+	font-weight: bold;
 }
 
 .breadcrumb>li+li:before {
@@ -93,6 +91,11 @@
 }
 .navbar .logo {
     width: 40px;
+}
+
+.seb-table-header {
+	padding-top: 1em!important;
+	padding-bottom: 1em!important;
 }
 
 #half_linespace {

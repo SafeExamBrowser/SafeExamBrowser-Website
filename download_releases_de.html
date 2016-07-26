@@ -190,20 +190,27 @@
           <!-- Content -->
           <h2></h2>
 
-          <p>Die neusten Versionen finden sich auf der Hauptseite <a href="download_de.html">Download</a>. </p>
+          <h3 class="page-header">Ältere Versionen von Safe Exam Browser für <a href="#Windows" title="Jump down to Windows versions">Windows</a> und  <a href="#macOS" title="Jump down to Mac versions">macOS</a>          </h3>
+          <p><strong>Die neusten Versionen finden sich auf der Hauptseite <a href="download_de.html">Download</a>.</strong></p>
           
-    <p><strong>Benutzen Sie alte Versionen von  Safe Exam Browser nicht, ausser Sie haben einen guten Grund dazu.</strong> Veraltete Versionen können Stabilitäts- und Sicherheitsprobleme aufweisen, also führen Sie schnellstmöglich  Updates auf  <a href="download_de.html">aktuelle Versionen</a> durch.</p>
-    
-    <p>Veraltete Software-Erweiterungen für ältere Versionen von unterstützten  <a href="#LMS">Learning Management Systemen</a>:<a href="#Moodle" title="Jump to extensions for learning management systems"> Moodle</a>, <a href="#ILIAS">ILIAS</a>.</p>
+          <p><strong>Benutzen Sie alte Versionen von  Safe Exam Browser nicht, ausser Sie haben einen guten Grund dazu.</strong> Veraltete Versionen können Stabilitäts- und Sicherheitsprobleme aufweisen, also führen Sie schnellstmöglich  Updates auf  <a href="download_de.html"><strong>aktuelle Versionen</strong></a> durch.</p>
+          
+          <p>Veraltete Software-Erweiterungen für ältere Versionen von unterstützten  <a href="#LMS">Learning Management Systemen</a>:<a href="#Moodle" title="Jump to extensions for learning management systems"> <strong>Moodle</strong></a>, <a href="#ILIAS"><strong>ILIAS</strong></a>.</p>
 
-    <table class="table table-bordered">
+    <table class="table table-bordered table-responsive">
           <tr>
             <th>Version</th>
             <th> Datum </th>
             <th> Kommentar </th>
           </tr>
-          <tr bgcolor="#CCCCCC" >
-            <td colspan="3" bgcolor="#DDDDDD"><a href="windows/win_quickguide_de.html">Safe Exam Browser für Windows</a></td>
+
+          <tr class="info">
+            <td class="seb-table-header" colspan="3">
+              <span class="h4 sebnavbar-link" id="Windows">
+                <a class="anchorjs-link" href="#Windows"></a>
+                Safe Exam Browser für Windows
+              </span>
+            </td>
           </tr>
 
           <tr>
@@ -405,9 +412,16 @@ MD5: 6b5421a06026910f8594d02f8e74a539</span></nobr><span class="codetext"></span
             <td><nobr> 21.08.2008</nobr></td>
             <td></td>
           </tr>
-          <tr bgcolor="#CCCCCC">
-            <td colspan="3" bgcolor="#DDDDDD"><a href="macosx/index.html">Safe Exam Browser für macOS</a></td>
+
+          <tr class="info">
+            <td class="seb-table-header" colspan="3">
+              <span class="h4 sebnavbar-link" id="macOS">
+                <a class="anchorjs-link" href="#macOS"></a>
+                Safe Exam Browser für macOS
+              </span>
+            </td>
           </tr>
+
           <tr>
             <td><a href="http://sourceforge.net/projects/seb/files/seb-macosx/seb-macosx_2.0/SafeExamBrowser-2.0.dmg/download" target="_blank">SafeExamBrowser-2.0</a><br/>
               <nobr><span class="codetext">SHA1: 5c2e2f21805c75976d7a3b5496760e9b92bffb0f<br />
@@ -510,28 +524,68 @@ MD5: d3203eba648092bc4fc6c779fb16fed0</span></nobr></span></td>
             <td><nobr> 19.08.2010</nobr></td>
             <td>Erste Version</td>
           </tr>
-          <tr bgcolor="#DDDDDD">
-            <td colspan="3"><strong>ILIAS Extension</strong> (nicht mehr benötigt für ILIAS Version 3.10 und neuer)</td>
+          
+          <tr class="info">
+            <td class="seb-table-header" colspan="3">
+              <span class="h4 sebnavbar-link" id="LMS">
+                <a class="anchorjs-link" href="#LMS" id="LMS"></a>
+                Learning Management Systems
+              </span>
+            </td>
           </tr>
+
+          <tr class="active">
+            <td colspan="3">
+              <span class="h5 sebnavbar-link" id="Moodle">
+                <a class="anchorjs-link" href="#Moodle"></a>
+                Moodle Erweiterungen
+              </span>
+            </td>
+          </tr>
+
           <tr>
-            <td> <a href="http://sourceforge.net/project/downloading.php?group_id=233708&amp;use_mirror=mesh&amp;filename=naviless_1.0.zip&amp;18274151">ilias_extension_1.0</a><br />
-            <nobr><span class="codetext">MD5: 212ee424c7858b0e651178fec7978c25</span></nobr></td>
-            <td><nobr> 20.08.2008</nobr></td>
-            <td>Erste Version</td>
+            <td>
+              <p id="half_linespace"><strong><a href="http://sourceforge.net/projects/seb/files/moodle_extension/moodle-2.3_quiz-fix/Moodle-2.3_Quiz-Fix.zip/download" target="_blank">Quiz-Modus Patch für Moodle 2.3</a></strong><br />
+              <span class="codetext">SHA1: 6d43851950e7e7d029d2320f5641d9cb85c9ff16<br />
+              MD5: d0575b4ba1ba6125dc8a5ed1e957b713</span></p>
+    <p id="half_linespace">Dieser Patch sorgt dafür, dass der Prüfungsmodus in Moodle 2.3.x wieder korrekt mit Safe Exam Browser funktioniert, d.h. alle Navigationslinks für andere Bereiche des LMS während der Prüfung ausgeblendet werden. In Moodle 2.4 wird die Korrektur integriert sein, untenstehend eine kurze Anleitung (für  Moodle-Administratoren), wie der Patch auf Moodle 2.3-Versionen angewendet werden kann:</p>
+              <ul id="seblist">
+                <li>Zip-Datei enpacken.</li>
+                <li>Die Passagen mit  zusätzlichen Patch-Code starten  mit <span class="codetext">// Voma add start</span> und enden mit  <span class="codetext">// Voma add end</span> und befinden sich jeweils fast/ganz am Ende der Dateien. </li>
+                <li>Da sich die beiden Dateien <span class="path">attempt.php</span> und <span class="path">summary.php</span> in verschiedenen Moodle 2.3.x-Versionen unterscheiden können, sollte man nur den Patch-Code zwischen <span class="codetext">// Voma add start/end</span> an die richtige Stelle in die   zwei betroffenen Dateien der entsprechenden Moodle-Installation kopieren.</li>
+              </ul>
+    </td>
+            <td><nobr>2012-11-15</nobr></td>
+            <td>Erste Version. Nicht mehr benötigt für Moodle Version 2.4 und neuer</td>
           </tr>
-          <tr bgcolor="#DDDDDD">
-            <td colspan="3"><strong>Moodle Extension</strong> (nicht mehr benötigt für Moodle Version 1.9.6 und neuer)</td>
-          </tr>
+
           <tr>
             <td> <strong><a href="https://sourceforge.net/project/downloading.php?group_id=233708&amp;use_mirror=&amp;filename=moodle_safe_quiz_1.0.1.zip&amp;73460735">moodle_extension_1.0.1</a></strong><br />
             <nobr><span class="codetext">MD5: f5ba56d2ac61f8f96b369de2794fa0ed</span></nobr></td>
             <td><nobr> 15.01.2009</nobr></td>
             <td> 2 Fehlerbereinigungen </td>
           </tr>
+
           <tr>
             <td> <strong>moodle_extension_1.0</strong></td>
             <td><nobr>01.12.2008</nobr></td>
-            <td> Erste Version</td>
+            <td> Erste Version. Nicht mehr benötigt für Moodle Version 1.9.6 und neuer</td>
+          </tr>
+
+          <tr class="active">
+            <td colspan="3">
+              <span class="h5 sebnavbar-link" id="ILIAS">
+                <a class="anchorjs-link" href="#ILIAS"></a>
+                ILIAS Erweiterungen
+              </span>
+            </td>
+          </tr>
+
+        <tr>
+            <td> <a href="http://sourceforge.net/project/downloading.php?group_id=233708&amp;use_mirror=mesh&amp;filename=naviless_1.0.zip&amp;18274151"><strong>ilias_extension_1.0</strong></a><br />
+            <nobr><span class="codetext">MD5: 212ee424c7858b0e651178fec7978c25</span></nobr></td>
+            <td><nobr> 20.08.2008</nobr></td>
+            <td>Erste Version. Nicht mehr benötigt für ILIAS Version 3.10 und neuer</td>
           </tr>
         </table>
 
