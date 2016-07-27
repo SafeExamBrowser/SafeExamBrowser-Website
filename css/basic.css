@@ -85,6 +85,7 @@ tr>td>a {
     margin-top:-10px;
 	vertical-align:top;
 }
+
 .sebnavbar-brand {
     margin:0;
     display: inline-block;
@@ -96,6 +97,20 @@ tr>td>a {
 .seb-table-header {
 	padding-top: 1em!important;
 	padding-bottom: 1em!important;
+}
+
+.seb-button-icon {
+    vertical-align: middle!important;
+	font-size:1.5em;
+}
+.seb-icntxt-button a {
+	position:relative;
+	top:0.1em;
+}
+.seb-button-text {
+	position:relative;
+	top:0.1em;
+	font-weight:normal;
 }
 
 #half_linespace {
