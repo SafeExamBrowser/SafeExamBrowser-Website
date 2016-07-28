@@ -828,7 +828,11 @@
             <li>or when uninstalling SEB. </li>
           </ul>
           <p><span class="red">There is also a  command line tool which can be used to reset those values for the unlikely case that the SEB Windows Service didn't work properly or was damaged and can't be run anymore.</span> This tool can be found at the following directory path in your Program Files directory:</p>
-          <p class="path">SafeExamBrowser\SebWindowsServiceWCF\<span class="red">SebRegistryResetter</span>.exe</p>
+          
+          <pre>
+                <p class="path">SafeExamBrowser\SebWindowsServiceWCF\<span class="red">SebRegistryResetter</span>.exe</p>
+          </pre>
+          
           <p>You need to execute this tool as administrator (right mouse button context menu &quot;<span class="quote">Run as administrator</span>&quot;). In case the original values for the Registry Settings aren't found anymore, they will be reset to the Windows default values (all enabled). In this latter unlikely case you would also need to enter <strong>the user name of the user in which account SEB was run</strong>, when the problem occurred. If you were running SEB in your administrator account, the user name you have to enter usually isn't &quot;Admin&quot; or similar. It is the user name of the account which has the administrator role. That's the name of the user's home directory (if you go to C:\Users\ in a Windows Explorer window, you can see all user account names on this computer).</p>
           
           <h4 class="seb-section-header sebnavbar-link" id="HookedKeysPane">
