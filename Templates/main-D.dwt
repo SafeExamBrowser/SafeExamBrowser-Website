@@ -9,6 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=gAEABXnBxw">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=gAEABXnBxw" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=gAEABXnBxw" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=gAEABXnBxw">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=gAEABXnBxw" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=gAEABXnBxw">
+    <meta name="apple-mobile-web-app-title" content="SEB">
+    <meta name="application-name" content="SEB">
+    <meta name="theme-color" content="#ffffff">
+
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>Safe Exam Browser</title>
 <!-- TemplateEndEditable -->
