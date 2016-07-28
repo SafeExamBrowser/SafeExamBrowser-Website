@@ -189,8 +189,13 @@
         <!-- Content -->
           <h2></h2>
 
-      <p>FAQ for Safe Exam Browser for <a href="#Windows" title="Jump down to Windows versions">Windows</a> and for <a href="#MacOSX" title="Jump down to Mac versions">macOS</a>.</p>
-      <h5><a name="Windows" id="Windows"></a>SEB for Windows</h5>
+          <h2 class="page-header sebnavbar-link">FAQ  for <a href="#Windows" title="Jump down to Windows versions">Windows</a> and <a href="#MacOSX" title="Jump down to Mac versions">macOS</a></h2>
+          
+      <h3 class="page-header seb-section-header sebnavbar-link" id="Windows">
+        <a class="anchorjs-link" href="#Windows"></a>
+        Safe Exam Browser for Windows
+      </h3>          
+
       <ul id="seblist">
         <li><span class="quote">What is SEB for Windows changing in the system?</span><br />
           While running, SEB changes  Windows Registry settings for the options in the Windows Security Screen invoked by Ctrl-Alt-Del (for details see <a href="../windows/win_usermanual_en.html#RegistryPane">this section</a> in the manual). In addition when running on Windows  versions before 10, SEB stops Windows updates while it is running using a Registry setting and re-enables them when being quit (when SEB 2.1.1 or later is running on Windows 10, only the Windows Update background service is stopped and restarted when SEB is quit). <br />
@@ -223,14 +228,20 @@
         </li>
         These directories and possible contents are <strong>not removed</strong> automatically when SEB is uninstalled. 
       </ul>
-<h5><a name="MacOSX" id="MacOSX"></a>SEB for macOS</h5>
+      
+      <!-- macOS FAQ -->
+      <h3 class="page-header seb-section-header sebnavbar-link" id="MacOSX">
+        <a class="anchorjs-link" href="#MacOSX"></a>
+        Safe Exam Browser for macOS
+      </h3>
+      
       <ul id="seblist">
         <li><span class="quote">What is SEB for macOS changing in the system?</span><br />
           SEB doesn't perform any real changes in macOS (this is comprehensible as there is no administrator password necessary when starting SEB for macOS the first time). One global setting (user defaults) change is performed while SEB is running: The path where screen shots are saved is temporarily changed when SEB starts and set back to the user's preset when SEB is quit. If the Mac would be force restarted while SEB is running or SEB would crash, starting and quitting SEB resets the screen shot path again to the original user's preset. In the unlikely case this should ever fail, it is easy to reset this screen shot location to the system's default (the desktop folder) with the following command line in the terminal:<br />
           <br />
           <span class="codetext">defaults write com.apple.screencapture location ~/Desktop &amp;&amp; killall SystemUIServer</span></li>
     </ul>
-    <h5>Additional Resources</h5>
+      <h3 class="page-header">Additional Resources</h3>
 <p>Please also check the following pages:</p>
       <p><span class="linksubnavi"><a href="../windows/win_usermanual_en.html">Documentation SEB for Windows</a><br />
       <a href="../macosx/mac_usermanual_en.html">Documentation SEB for macOS</a></span></p>
