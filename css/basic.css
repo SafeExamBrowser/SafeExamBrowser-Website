@@ -99,6 +99,10 @@ tr>td>a {
 	padding-bottom: 1em!important;
 }
 
+.btn-responsive {
+    white-space: normal !important;
+}
+
 .seb-button-icon {
     vertical-align: middle!important;
 	font-size:1.5em;
