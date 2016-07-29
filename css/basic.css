@@ -49,7 +49,7 @@ tr>td>a {
 pre p {
 	margin-top: -10px;!important;
 	margin-bottom: -30px;!important;
-	word-break: normal;
+    white-space:nowrap;
 }
 
 .breadcrumb>li+li:before {
