@@ -439,28 +439,21 @@
             <li><span class="quote">Use SEB settings file for ... configuring a client</span>: <span class="red">A SEB settings file saved with this option is used to change the local settings of a SEB client</span>. <strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong> (using an empty password prevents people from having to enter a password just when SEB is starting, unless you want this to prevent SEB being started unintentionally for example in a computer lab when there is no exam happening).<br />
               When this <span class="quote">.seb</span> file is opened, for example by double clicking it in Windows Explorer, then SEB is started and settings from this file are copied into the file <span class="path">SebClientSettings.seb</span> which is placed in the hidden <span class="quote"> Application Data</span> folder of the current user (see below for exact path). <br />
               <br />
-              <span class="red">You can also copy this file manually or with a deployment system one of the following directories</span>:<br />
-              <br />
-              <ul id="seblist">
-                <li>
+              <span class="red">You can also copy this file manually or with a deployment system one of the following directories</span>:</p>
+              <p>
                   <pre>
                       <p><span class="path">C:\ProgramData\SafeExamBrowser\</span><br />Exact path using Windows path variables:<br /><span class="path">%PROGRAMDATA%\SafeExamBrowser\SebClientSettings.seb</span></p>
                   </pre>
                   
                   (writable only with administrator rights, has first priority)<br />
                   <br />
-                </li>
-                <li>
                   <pre>
-                    <p><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span><br />Exact path using Windows path variable:<br /><span class="path">%APPDATA%\SafeExamBrowser\SebClientSettings.seb</span></p>
+                    <p><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span><br />Exact path using Windows path variables:<br /><span class="path">%APPDATA%\SafeExamBrowser\SebClientSettings.seb</span></p>
                 </pre>
 
                   (writable with user rights, second priority)
-                  <br />
-                </li>
-              </ul>
-              <p><br />
-              <strong>Please note:</strong> On a managed exam computer you probably should copy the default client settings file <span class="path">SebClientSettings.seb</span>  to the <strong class="path">\ProgramData\SafeExamBrowser\</strong> directory. If such a file exists in this location, this will be read by SEB with first priority and another file at the <span class="quote">Local Application Data</span> folder of the current user will be ignored. As the PROGRAMDATA directory is writable only with administrator rights, regular users cannot change the exam computer's default settings, which is the desired case on a managed computer.</p>
+              </p>
+              <p><strong>Please note:</strong> On a managed exam computer you probably should copy the default client settings file <span class="path">SebClientSettings.seb</span>  to the <strong class="path">\ProgramData\SafeExamBrowser\</strong> directory. If such a file exists in this location, this will be read by SEB with first priority and another file at the <span class="quote">Local Application Data</span> folder of the current user will be ignored. As the PROGRAMDATA directory is writable only with administrator rights, regular users cannot change the exam computer's default settings, which is the desired case on a managed computer.</p>
             </li>
             <li><span class="quote">Allow to open preferences window on client</span> (Mac only): Usually you should disable the preference window on exam clients besides for debugging purposes. </li>
             <li><span class="quote">Choose identity to be used for encrypting SEB settings file ...</span> In this popup menu  all identities (X.509 certificates with RSA public key and associated private key) in the Windows Certificate Store are listed, which can be used for encrypting and decrypting. Install that identity on your SEB clients, then they can decrypt <span class="quote">.seb</span> files encrypted with this certificate/key. You can also make identities available to specific computers in a network zone over the LAN without placing them physically onto the exam clients (ask your Windows network administrators about that). You can install identities on client computers using deployment systems or by embedding them into a <span class="quote">.seb</span> config file for configuring the client (see <a href="win_usermanual_en.html#Certificates">Network / Certificates</a> pane).<br />
