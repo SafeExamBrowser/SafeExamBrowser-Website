@@ -188,6 +188,9 @@
     <!-- Bootstrap Docs (for Sidebar) JavaScript -->
     <script src="../js/docs.min.js"></script>
 
+<!-- TemplateBeginEditable name="scripts" -->
+<!-- TemplateEndEditable -->
+
 </body>
 
 </html>
