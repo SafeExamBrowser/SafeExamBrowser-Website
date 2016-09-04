@@ -481,10 +481,10 @@
           </div>
           
           <ul id="seblist">
-            <li><span class="quote">Use SEB settings file for ... starting an exam</span>: A config file saved with this option will start the exam with the according settings, but won't change the local SEB settings.</li>
+            <li><span class="quote">Use SEB settings file for ... starting an exam</span>: A config file saved with this option will start the exam with the according settings, but won't change local SEB settings.</li>
           </ul>
           <ul id="seblist">
-            <li><span class="quote">Use SEB settings file for ... configuring a client</span>: A SEB settings file saved with this option can be used to change the local settings of a SEB client. Encrypt it with the same password which is set as administrator password on the SEB client (or none if there is no administrator password set on the SEB client yet).</li>
+            <li><span class="quote">Use SEB settings file for ... configuring a client</span>: A SEB settings file saved with this option can be used to change  local settings of a SEB client. This means, next time the Safe Exam Browser app is started directly (by opening its icon from the Applications folder, the Dock or Lauchpad), it will use these settings. <strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong>. If you use another settings password, then users are promted to enter it.</li>
             <li><span class="quote">Allow to open preferences window on client</span>: Usually you should disable the preference window on exam clients besides for debugging purposes. </li>
             <li><span class="quote">Choose identity to be used for encrypting SEB settings file ...</span> In this popup menu  all identities (X.509 certificates with RSA public key and associated private key) in your default keychain are listed, which can be used for encrypting and decrypting. Export the chosen identity (in Keychain Access utility) and install it on your SEB clients or embedd that identity into a config file for configuring a client (see <a href="#NetworkPaneCertificatesSection">Network pane – Certificates section</a>).<br />
             </li>
