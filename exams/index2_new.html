@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/nologo-E.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=gAEABXnBxw">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=gAEABXnBxw" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=gAEABXnBxw" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=gAEABXnBxw">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=gAEABXnBxw" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=gAEABXnBxw">
+    <meta name="apple-mobile-web-app-title" content="SEB">
+    <meta name="application-name" content="SEB">
+    <meta name="theme-color" content="#ffffff">
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Exam Portal - Demo</title>
+<!-- InstanceEndEditable -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Docs CSS -->
+	<link href="../css/docs.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body>
+    <!-- InstanceBeginEditable name="navigation" -->
+    <!-- Navigation -->
+    <nav class="navbar navbar-default sebnavbar-background navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a href="https://www.ethz.ch/en.html" target="_blank" class="navbar-brand">
+                <span><img class="sebbrandimg" src="../images/eth_logo_white_small_40_2x.png" alt="SEB Logo" height="40"></span>
+              </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            </div>
+            <!-- /.navbar-collapse -->
+      </div>
+        <!-- /.container -->
+    </nav>
+    <!-- InstanceEndEditable -->
+
+    <!-- Page Content -->
+    <div class="container bs-docs-container">
+
+    <!-- InstanceBeginEditable name="MainContent" -->
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading/Breadcrumbs -->
+      <div class="row">
+        <div class="col-lg-12">
+          <h1 class="page-header">Exam Portal
+            <small>Current Online Exams</small>
+          </h1>
+        </div>
+      </div>
+      <!-- /.row -->
+
+      <!-- Content Row -->
+      <div class="row">
+      
+        <!-- Content Column -->
+        <div class="col-lg-12">
+
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                  <th>Exams</th>
+                  <th>Date</th>
+                  <th>Teacher</th>
+                  <th>Link</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                  <td>Moodle SEB Quit Test Exam (.seb file password encrypted)</td>
+                  <td>December 2013</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://safeexambrowser.org/exams/Moodle_ExitTest_Pw.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle Demo eduhub days w/filter (.seb file unencrypted)</td>
+                  <td>July 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://safeexambrowser.org/exams/MoodleDemoEduhubDaysFilterUC.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle SEB Quit Test Exam (password encrypted, URI seb://)</td>
+                  <td>December 2013</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Moodle_ExitTest_Pw.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle SEB Quit Test Exam (PW encrypted, no quit PW, URI seb://)</td>
+                  <td>January 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Moodle_ExitTest_Pw_noQuitPW.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle SEB Quit Test Exam (certificate encrypted, cnd, seb://)</td>
+                  <td>December 2013</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Moodle_ExitTest_Pk.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle SEB Quit Test Exam Debug (password encrypted, URI seb://)</td>
+                  <td>November 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Moodle_ExitTest_Pw_Debug.seb">start exam</a></td>
+              </tr>
+              <tr>
+                 <td>Moodle SEB Quit Test Exam direct seb:// link to config file stored inside Moodle</td>
+                 <td>May 2016</td>
+                 <td>D. Schneider</td>
+                 <td><a href="sebs://moodle-app2.let.ethz.ch/mod/resource/view.php?id=120434">start exam</a></td>
+              </tr>
+              <tr>
+                 <td>Moodle SEB Workshop Test Exam direct seb:// link with file extension .seb to config file stored inside Moodle</td>
+                 <td>August 2016</td>
+                 <td>D. Schneider</td>
+                 <td><a href="sebs://moodle-app2.let.ethz.ch/pluginfile.php/256696/mod_resource/content/1/MoodleDemoEduhubDays.seb?forcedownload=1">start exam</a></td>
+              </tr>
+              <tr>
+                 <td>Moodle Exit Test seb:// link with  extension .seb to config stored in basic auth server dir</td>
+                 <td>September 2016</td>
+                 <td>D. Schneider</td>
+                 <td><a href="seb://digital-lifestyle.ch/SafeExamBrowser/Moodle_ExitTest_Pw.seb">start exam</a></td>
+              </tr>
+              <tr>
+                 <td>Basic auth server test</td>
+                 <td>September 2016</td>
+                 <td>D. Schneider</td>
+                 <td><a href="https://www1.ethz.ch/id/servicedesk/guide/vpn/vpn_secret" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle Freehand Drawing </td>
+                  <td>May 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Freehand-Drawing.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle Freehand Drawing, no quit PW</td>
+                  <td>May 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Freehand-Drawing_noQuitPW.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle Demo SEB-Workshop Maps Local</td>
+                  <td>January 2015</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/MoodleDemoSEBWorkshopMapsLocal.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>ILIAS SEB Test Exam</td>
+                  <td>April 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/ILIAS-Testpruefung.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td> VDI VMware Horizon HTML Access</td>
+                  <td>October 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/VDI-ETH.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td>Moodle SEB Browser Exam Key Test Exam</td>
+                  <td>April 2013</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Moodle_ExamKeyTest.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>LET Demo Prüfung</p></td>
+                  <td>December 2013</td>
+                  <td>T. Halbherr</td>
+                  <td><a href="http://safeexambrowser.org/exams/LET-Demo-Exam.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>Configure Client Test Portal nCND</p></td>
+                  <td>September 2013</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/InitialSettings_SEB-Portal_nCND_cc.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>Configure Client Test Portal Quit PW</p></td>
+                  <td>January 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/ConfigureClientExamPortal_quitPW.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>Configure Client LET Portal</p></td>
+                  <td>December 2015</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Configure_Client_ETH-Onlineprüfungen.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>SEB+Notepad+Firefox+&quot;TextEdit.exe&quot;</p></td>
+                  <td>Januar 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="seb://safeexambrowser.org/exams/Portal_UE_CND_allowSelectPath.seb">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>Flash-Test</p></td>
+                  <td>September 2013</td>
+                  <td>K. Reuter</td>
+                  <td><a href="http://helpx.adobe.com/de/flash-player/kb/find-version-flash-player.html" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>JavaScript-Popup-Test</p></td>
+                  <td>November 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://javascript.info/tutorial/popup-windows" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>mail.com</p></td>
+                  <td>November 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://mail.com" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>fastmail.com</p></td>
+                  <td>November 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://fastmail.com" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>google.com/?mail.com</p></td>
+                  <td>November 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://google.com/?mail.com" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>Show user agent and IP</p></td>
+                  <td>August 2015</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://whatsmyuseragent.com" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>Test for local storage</p></td>
+                  <td>November 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://safeexambrowser.org/exams/offline.html" target="_blank">start exam</a></td>
+              </tr>
+              <tr>
+                  <td><p>Test: a href download=</p></td>
+                  <td>December 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" download="file.png">start test</a></td>
+              </tr>
+              <tr>
+                  <td><p>Test: a download= href</p></td>
+                  <td>December 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a download="file.png" href="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">start test</a></td>
+              </tr>
+              <tr>
+                  <td><p>Test: download tag in a child of the link</p></td>
+                  <td>June 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://safeexambrowser.org/exams/file_download_child_tag.html" target="_blank" download="file.png">start test</a></td>
+              </tr>
+              <tr>
+                  <td><p>Test: download=HowTo_SEB2.0.pdf</p></td>
+                  <td>December 2014</td>
+                  <td>D. Schneider</td>
+                  <td><a download="HowTo_SEB2.0.pdf" href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf">start test</a></td>
+              </tr>
+              <tr>
+                  <td><p>FileSaver.js</p></td>
+                  <td>November 2015</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://eligrey.com/demos/FileSaver.js" target="_blank">start test</a></td>
+              </tr>
+              <tr>
+                  <td><p>Download SEB 2.1 Installer</p></td>
+                  <td>March 2015</td>
+                  <td>D. Schneider</td>
+                  <td><a download="SafeExamBrowserInstaller.exe" href="http://safeexambrowser.org/download/SafeExamBrowserInstaller.exe">start test</a></td>
+              </tr>
+              <tr>
+                  <td><p>Quit Link Test: http://seb.com/exit</p></td>
+                  <td>January 2016</td>
+                  <td>D. Schneider</td>
+                  <td><a href="http://seb.com/exit">Quit Link</a></td>
+              </tr>
+              <tr>
+                  <td><p>FH Test</p></td>
+                  <td>April 2016</td>
+                  <td>A. H.</td>
+                  <td><a href="https://moodle-test-entw.ethz.ch/mod/quiz/attempt.php?attempt=32&page=1">Quit Link</a></td>
+              </tr>
+            </tbody>
+          </table>
+          <p>&nbsp;</p>
+    
+          <p><a href="../index.html">safeexambrowser.org</a></p>
+          	          
+          <!-- / Content --> 
+
+        </div>
+        <!-- / Content Column -->
+        
+      </div>
+      <!-- /.row (Content Row)-->
+      
+      <hr>
+      
+	<!-- InstanceEndEditable -->
+
+      <!-- Footer -->
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Copyright &copy; 2010-2016 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+              </div>
+          </div>
+      </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Docs (for Sidebar) JavaScript -->
+    <script src="../js/docs.min.js"></script>
+
+<!-- InstanceBeginEditable name="scripts" -->
+<!-- InstanceEndEditable -->
+
+</body>
+
+<!-- InstanceEnd --></html>

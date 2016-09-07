@@ -96,6 +96,11 @@ pre p {
     margin:0;
     display: inline-block;
 }
+
+.sebnavbar-background {
+	background-image: url("../images/app_head_bg_c090.jpg")!important; 
+}
+
 .navbar .logo {
     width: 40px;
 }
