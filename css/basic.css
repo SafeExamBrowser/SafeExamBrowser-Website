@@ -215,6 +215,20 @@ ol.seblist>li {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
+@media (max-width: 768px) {
+.sebtable tr th:nth-of-type(2) {
+	display: none;
+}
+.sebtable tr th:nth-of-type(3) {
+	display: none;
+}
+.sebtable tr td:nth-of-type(2) {
+	display: none;
+}
+.sebtable tr td:nth-of-type(3) {
+	display: none;
+}
+}
 .textsubnavi { color: #070782; font-size: 10pt; font-weight: bold; text-decoration: none; }
 .linksubnavi { color: #6a8ccf; font-size: 10pt; font-weight: bold; text-decoration: none; }
 .textmainnavi { color: #494949; font-size: 11pt; font-weight: bold; }
