@@ -215,7 +215,7 @@ ol.seblist>li {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-@media (max-width: 768px) {
+@media (max-width: 544px) {
 .sebtable tr th:nth-of-type(2) {
 	display: none;
 }
