@@ -280,27 +280,39 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="http://sourceforge.net/projects/seb/files/seb-macosx/seb-macosx_2.1/SafeExamBrowser-2.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macosx_2.1.1/SafeExamBrowser-2.1.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.1 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.1.1 for macOS</span>
           </a> 
         </p>
         
-        <p><strong>Current version of Safe Exam Browser for OS X <a href="#RemarkOSX10-7">10.7*</a>, 10.8, 10.9, 10.10 and 10.11</strong><br />
-            <span class="codetext">SHA1: f199534d21d2b900008183e3959a37f9fd423b18</span></p>
+        <p><strong>Current version of Safe Exam Browser for macOS 10.12, 10.11, 10.10, 10.9, 10.8 and <a href="#RemarkOSX10-7">10.7*</a></strong><br />
+            <span class="codetext">SHA1: cec5aa5ec4640f046ae243882493a8d6fbfd31d6</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1/SafeExamBrowser-2.1.dmg" target="_blank">Download</a> from new <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub projekt site</a>. </p>
-  <p id="half_linespace">Safe Exam Browser 2.1 for macOS offers new features,  usability enhancements and includes major security improvements:</p>
-  <ul id="seblist">
-    <li>Buttons for restarting exam, reloading page and a display for the current time improve usability in exams. </li>
-    <li>Full compatibility with OS X 10.11 El Capitan.</li>
-    <li>Now it is possible to configure if you want examinees to be able to use the spell and grammar checker and the macOS dictionary lookup feature.</li>
-    <li>Zooming the entire web page is also possible in addition to only changing text size. Zoom can be disable completely as well.</li>
-    <li> SEB now detects when the examinee tries to switch to another user account and locks itself down.</li>
-    <li>SEB 2.1 can be configured to always use the more secure internal PDF viewer instead of the Acrobat Reader plug-in.</li>
-    <li>Individual browser user agent strings can be used per exam, SEB also identifies its version now in the user agent.</li>
-    <li>Added a <span class="quote">sebs://</span> protocol (in addition to <span class="quote">seb://</span>), which forces the use of https for loading a <span class="quote">.seb</span> configuration file.</li>
-  </ul>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.1/SafeExamBrowser-2.1.1.dmg" target="_blank">Download</a> from new <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub projekt site</a>. </p>
+        <p>Safe Exam Browser 2.1.1 for macOS offers new features, usability enhancements and <strong>includes major security improvements (therefore it is highly recommended to update as soon as possible)</strong>: </p>
+        <ul id="seblist">
+          <li>Fully compatible with macOS 10.12 Sierra</li>
+          <li>Implements support for embedded TLS/SSL &amp; CA certificates and certificate pinning (for SEB running on OS X 10.9 or later).</li>
+          <li>SEB is now using a private clipboard, so utilities running in the background and Universal Clipboard (on macOS 10.12 Sierra) cannot be used to paste text into exams (can be disabled if using third party applications in a securely managed user account).</li>
+          <li>            WebAudio API is enabled now.</li>
+          <li>            Added blocking panels and windows opened by third party tools running in the background.<br>
+          </li>
+          <li>Added detection for macOS ScreenSharing.<br>
+          </li>
+          <li>Added deactivating display mirroring and a new setting option for a maximum number of displays which the user is allowed to use. This can prevent wireless displays to be used to cheat or leak exam content.<br>
+          </li>
+          <li>Added full support for Basic/Digest and NTLM Authentication.</li>
+          <li>Loading seb(s):// linked settings from authenticated servers is possible now, even with indirect links (not containing the config file name with the .seb extension, like for example sebs://example.com/download.php?id=2352). The login session is remembered, therefore students don't have to login twice in SEB if you start SEB/an exam using a seb(s):// link to a config file on an authenticated server.</li>
+          <li>Added a new settings option for enforcing a minimal macOS version. This is helpful if your web application isn't compatible with an older WebKit version (as for example used in OS X 10.7) or if you want to make sure that embedded certificates and certificate pinning work on all exam clients, then you should enforce the minimum macOS version 10.9. </li>
+          <li>On a trackpad supporting Force Touch, the lookup feature (invoked by strongly pressing the trackpad while the cursor is over a word or text selection) is now also blocked when the settings option &quot;Allow dictionary look up&quot; is disabled.<br>
+          </li>
+          <li>Fixed an issue when a media player app like iTunes could take over the screen if started with the keyboard play key (after being maximized to full screen and quit before starting SEB).</li>
+          <li>Fixed issues in the URL filter: Host addresses with or without a trailing slash &quot;/&quot; are treated as the same address, creating a filter for a path with trailing wildcard &quot;/*&quot; now also matches the path without trailing slash.</li>
+          <li>            Fixed a WebKit related bug which occurred in older WebKit versions (if running on an older system than OS X 10.11) and with malformatted DOM elements.<br>
+          </li>
+          <li>Fixed various minor issues.</li>
+        </ul>
   <p>Main features: </p>
   <ul id="seblist">
               <li>Support for encrypted SEB setting files (file type <span class="quote">.seb</span>) which allow to individually configure SEB per exam. You can  use the same .seb files for starting exams on SEB  Windows clients and SEB clients on macOS. </li>
@@ -309,7 +321,7 @@
               <li>New feature to quit SEB after the exam is submitted by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by your LMS after submitting the exam.</li>
               <li>The <span class="quote">Browser Exam Key </span>allows an exam module to authenticate the connecting SEB version and its settings. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a> and <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a>, other systems have built-in support: <a href="macosx/mac_usermanual_en.html#OpenOLAT">OpenOLAT</a>, <a href="http://www.inspera.com" target="_blank">Inspera Assessment</a> and others.</li>
               <li>New options in the user interface: Size and positioning of browser windows (main window with the quiz and additional browser windows) can be preset. Main window can be displayed full screen. An  indicator shows network activity.</li>
-              <li>SEB can optionally display the standard macOS menu bar and a tool bar in browser windows, functions like 'About SEB', quit, open preferences, reload page, zoom page/text and browsing back/forward are therefore easier accessible (if desired).</li>
+              <li>SEB can optionally display the standard macOS menu bar and a tool bar in browser windows, functions like 'About SEB', quit, open preferences, reload page, zoom page/text and browsing back/forward are therefore easier accessible.</li>
               <li>New URL filter including teaching mode to control access of the SEB browser to web links and resources. Saved settings files contain URL filter rules which also work in SEB for Windows.</li>
               <li>Improved security and performance.        </li>
   </ul>
