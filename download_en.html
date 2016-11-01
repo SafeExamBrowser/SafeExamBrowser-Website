@@ -280,17 +280,17 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macosx_2.1.1/SafeExamBrowser-2.1.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macos_2.1.2/SafeExamBrowser-2.1.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.1.1 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.1.2 for macOS</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for macOS 10.12, 10.11, 10.10, 10.9, 10.8 and <a href="#RemarkOSX10-7">10.7*</a></strong><br />
-            <span class="codetext">SHA1: 39ba3fcbc3b0e67ce3c53eb620fde998a08ada5b</span></p>
+            <span class="codetext">SHA1: e9249dbc86bc16b1586f9a4dc34de29303f1b14c</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.1/SafeExamBrowser-2.1.1.dmg" target="_blank">Download</a> from new <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>. </p>
-        <p>Safe Exam Browser 2.1.1 for macOS offers new features, usability enhancements and <strong>includes major security improvements (therefore it is highly recommended to update as soon as possible)</strong>: </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.2/SafeExamBrowser-2.1.2.dmg" target="_blank">Download</a> from new <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>. </p>
+        <p>Safe Exam Browser 2.1.2 for macOS offers new features, usability enhancements and <strong>includes major security improvements (therefore it is highly recommended to update as soon as possible)</strong>: </p>
         <ul id="seblist">
           <li>Fully compatible with macOS 10.12 Sierra</li>
           <li>Implements support for embedded TLS/SSL &amp; CA certificates and certificate pinning (for SEB running on macOS 10.9 or later) for enhanced security when  connecting with  exam servers.</li>
@@ -310,7 +310,8 @@
           <li>Fixed an issue when a media player app like iTunes could take over the screen if started with the keyboard play key (after being maximized to full screen and quit before starting SEB).</li>
           <li>Fixed issues in the URL filter: Host addresses with or without a trailing slash &quot;/&quot; are treated as the same address, creating a filter for a path with trailing wildcard &quot;/*&quot; now also matches the path without trailing slash.</li>
           <li>            Fixed a WebKit related bug which occurred in older WebKit versions (if running on an older system than OS X 10.11) and with malformatted DOM elements.</li>
-          <li>Fixed various minor issues.</li>
+          <li>When starting SEB by opening a SEB config file or a seb(s):// link, the start URL from persistent SEB client settings isn't opened anymore in the main browser window in the background. In case loading or decrypting  these new settings isn’t successful (load error, canceled by the user, wrong decryption credentials etc.), SEB  quits instead of starting up with the persistent client settings.</li>
+          <li>Fixed various minor issues. The bugfix release SEB 2.1.2 mainly fixes issues in SEB 2.1.1 which could occur in non-default screen configurations and when starting SEB by opening specific settings in a .seb file.</li>
         </ul>
   <p>Main features: </p>
   <ul id="seblist">

@@ -256,19 +256,19 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macosx_2.1.1/SafeExamBrowser-2.1.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macos_2.1.2/SafeExamBrowser-2.1.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.1.1 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.1.2 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 10.12, 10.11, 10.10, 10.9, 10.8 und <a href="#RemarkOSX10-7">10.7*</a></strong><br />
-        <span class="codetext">SHA1: 39ba3fcbc3b0e67ce3c53eb620fde998a08ada5b</span></p>
+        <span class="codetext">SHA1: e9249dbc86bc16b1586f9a4dc34de29303f1b14c</span></p>
             
-            <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.1/SafeExamBrowser-2.1.1.dmg" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. </p>
+            <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.2/SafeExamBrowser-2.1.2.dmg" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. </p>
             
-<p id="half_linespace">Safe Exam Browser 2.1.1 <span class="half_linespace">für macOS bietet neue  Funktionalität, verbesserte Bedienbarkeit,  einige Fehlerbehebungen und beinhaltet mehrere wichtige  Verbesserungen in der Absicherung des Prüfungscomputers.<strong> Ein zeitnahes Update wird deshalb dringend empfohlen</strong>.</span></p>
+<p id="half_linespace">Safe Exam Browser 2.1.2 <span class="half_linespace">für macOS bietet neue  Funktionalität, verbesserte Bedienbarkeit,  einige Fehlerbehebungen und beinhaltet mehrere wichtige  Verbesserungen in der Absicherung des Prüfungscomputers.<strong> Ein zeitnahes Update wird deshalb dringend empfohlen</strong>.</span></p>
 <ul id="seblist">
   <li>Vollständige Kompatibilität mit macOS 10.12 Sierra.</li>
   <li>Neu können TLS-/SSL- und CA-Zertifikate in SEB-Konfigurationsdateien eingebettet  und mittels Zertifikat-Pinning  die Sicherheit bei verschlüsselten Verbindungen mit Prüfungsservern erhöht werden (wenn SEB unter macOS 10.9 oder neuer läuft).</li>
@@ -284,7 +284,8 @@
   <li>Eine Medienspieler-Applikation wie iTunes, welche unter Vollbildeinstellung beendet und nach dem Start von SEB mittels der Play-Funktionstaste wieder gestartet wird, kann nun den Bildschirm nicht mehr übernehmen.</li>
   <li>Probleme im URL-Filter beseitigt: Host-Adressen mit oder ohne abschliessendes Pfadtrennzeichen '/' werden jetzt gleichwertig behandelt. Eine Filterregel mit abschliessendem Wildcard-Zeichen '/*' funktioniert nun auch bei einem Pfad ohne abschliessendes '/'-Zeichen.</li>
   <li>Ein Fehler, der in Zusammenhang mit einer älteren WebKit-Version (unter OS X 10.10 oder älter) und falsch formatierten HTML-Elementen auftreten konnte, wurde beseitigt.</li>
-  <li>Diverse kleinere Probleme wurden  beseitigt.</li>
+  <li>Wenn SEB über das Öffnen einer SEB-Konfigurationsdatei oder eines seb(s):// Links gestartet wird, dann werden die persistenten Client-Einstellungen nicht mehr im Haupt-Browserfenster im Bildschirmhintergrund geöffnet. Schlägt das Öffnen der neuen Einstellungen fehl (Ladefehler, Benutzer bricht ab, Entschlüsselung nicht möglich), wird SEB nun beendet, anstatt mit den persistenten Einstellungen weiter zu laufen.</li>
+  <li>Diverse kleinere Probleme früherer Versionen wurden  beseitigt. Das Bugfix-Release SEB 2.1.2 beseitigt darüber hinaus vorwiegend  Probleme, die in SEB 2.1.1 mit nicht-standardmässigen Bildschirm-Einstellungen und beim Starten einer unüblichen Konfiguration mittels .seb-Datei oder seb(s):// Link.</li>
   </ul>
 <p>Andere Funktionen:</p>
 <ul id="seblist">
