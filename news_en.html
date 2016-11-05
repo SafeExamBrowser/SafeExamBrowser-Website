@@ -207,8 +207,8 @@
           <p class="half_linespace"><a href="download_en.html#MacOSX">Safe Exam Browser 2.1.1 for macOS</a> offers new features, usability enhancements and includes major security improvements: </p>
           <ul id="seblist">
             <li>Fully compatible with macOS 10.12 Sierra</li>
-            <li>Implements support for embedded TLS/SSL &amp; CA certificates and certificate pinning.</li>
-            <li>SEB is now using a private clipboard, so utilities running in the background and Universal Clipboard (on macOS 10.12 Sierra) cannot be used to paste text into exams.</li>
+            <li>Implements support for embedded TLS/SSL &amp; CA certificates and certificate pinning  for enhanced security when connecting with exam servers.</li>
+            <li>SEB is now using a private clipboard, so utilities running in the background and Universal Clipboard (on macOS 10.12 Sierra) cannot be used to copy-paste contents into or out of exams.</li>
             <li> WebAudio API is enabled now.</li>
             <li> Added blocking panels and windows opened by third party tools running in the background.<br>
             </li>
@@ -217,8 +217,8 @@
             <li>Added deactivating display mirroring and a new setting option for a maximum number of displays which the user is allowed to use. This can prevent wireless displays to be used to cheat or leak exam content.<br>
             </li>
             <li>Added full support for Basic/Digest and NTLM Authentication.</li>
-            <li>Loading seb(s):// linked settings from authenticated servers is possible now. The login session is remembered, therefore students don't have to login twice in SEB if you start SEB/an exam using a seb(s):// link to a config file on an authenticated server.</li>
-            <li>Added a new settings option for enforcing a minimal macOS version. </li>
+            <li>Loading seb(s):// linked settings from authenticated servers is possible now, even with indirect links (not containing the config file name with the .seb extension, like for example sebs://example.com/download.php?id=2352). Therefore a SEB exam config file can be stored for example into the same Moodle course as the quiz. The login session is remembered, therefore students don't have to login twice in SEB if you start SEB/an exam using a seb(s):// link to a config file on an authenticated server.</li>
+            <li>Added a new settings option to enforce SEB being used with a specific minimal macOS version. </li>
             <li>On a trackpad supporting Force Touch, the lookup feature (invoked by strongly pressing the trackpad while the cursor is over a word or text selection) is  also blocked now.<br>
             </li>
             <li>Fixed various minor issues.          </li>
