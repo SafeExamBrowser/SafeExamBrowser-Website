@@ -263,10 +263,10 @@
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
-            Safe Exam Browser 2.1 for macOS
+            Safe Exam Browser 2.1.2 for macOS
           </h2>
     
-          <p>Safe Exam Browser – SEB for macOS opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely.  <span class="quote">Safe Exam Browser  2.1</span><span class="half_linespace"> enables  secure exams on unmanaged computers like students' own laptops (BYOD) and facilitates the use of SEB in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several non-commercial and commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most web-based online quiz and e-assessment systems.<br />
+          <p>Safe Exam Browser – SEB for macOS opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely.<span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several non-commercial and commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most web-based online quiz and e-assessment systems.<br />
           </p>
 
         </div>
@@ -283,11 +283,11 @@
           <p>To prevent switching to other applications or interrupting an exam, SEB disables the macOS Dock, the process switcher (cmd-tab/cmd-shift-tab), the Apple Menu and various other items in the menu bar, the <span class="quote">Force Quit</span> window (cmd-opt-esc), normal reboot (ctrl-cmd-eject), normal shutdown (ctrl-opt-cmd-eject), hiding the application, printing, Exposé, screenshots and the Notification Center. </p>
           <p>Display and system idle sleep is also prevented while SEB is running. It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
           <p>Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
-          <p>In the browser window there is no right mouse (or ctrl-) click popup window available, links requesting to be opened in a separate window can be set to be blocked generally, to open in the same  browser window or in a new SEB window. Besides that, the browser is supporting Java, Quicktime and Flash content (as long as the required  plugins are installed on the system).  SEB 2.1 can also be configured to always use the more secure internal PDF viewer instead of the Acrobat Reader plug-in.</p>
+          <p>In the browser window there is no right mouse (or ctrl-) click popup window available, links requesting to be opened in a separate window can be set to be blocked generally, to open in the same  browser window or in a new SEB window. Besides that, the browser is supporting Java, Quicktime and Flash content (as long as the required  plugins are installed on the system).  SEB  can also be configured to always use the more secure internal PDF viewer instead of the Acrobat Reader plug-in.</p>
           <p>SEB features an optional dock/task bar displaying an icon for the SEB browser with controls for its open browser windows and widgets. Buttons in the dock for quitting SEB, restarting exam, reloading page and a display for the current time improve usability in exams. Clicking the SEB icon in the dock and holding the left mouse button down or a secondary (right mouse button) click displays a popup menu with all open browser windows, the main browser window is at the bottom. With this menu you can switch between open browser windows.</p>
           <p>It is possible to configure if you want examinees to be able to use the spell and grammar checker and the macOS dictionary lookup feature. Also availability of page and text zoom can be configured.</p>
           <p>SEB detects when it was started in a virtual instead of a native environment and refuses to run. This virtual machine detector hinders manipulating SEB further when used in unmanaged environments.</p>
-          <p>SEB 2.1 also detects attempts to switch the user and displays a lock screen afterwards which needs to be unlocked with the quit/restart password by exam supporters/supervisors.</p>
+          <p>SEB also detects attempts to switch the user and displays a lock screen afterwards which needs to be unlocked with the quit/restart password by exam supporters/supervisors.</p>
           <p>SEB for macOS is based on the WebKit browser engine, which is also used by Safari, Apple Mail and many open source browsers  (in contrast to the Mozilla Firefox/XULRunner/Gecko engine used by SEB for Windows). There might be some small differences  regarding rendering of web pages in those different browser engines, so you should check all functionality of your quiz in SEB for macOS before using it in exams.  </p>
           <p> SEB for macOS can be used together with additional (third party) applications during an exam. You can download and open files linked in your online exam, edit it in a third party application and then upload the results to your online quiz/LMS again. Currently this is only possible when SEB is used in a separate user account managed by macOS parental controls.</p>
           <p>From version 2.0, encrypted <span class="quote">.seb</span> configuration files are used which allow to individually configure SEB per exam.</p>
@@ -535,6 +535,14 @@
               </ul>
             </li>
             <li><span class="quote">Enable touch exit</span> (Win): When enabled, SEB can be quit in touch optimized mode with a swipe down from the upper display edge (helpful when the SEB task bar with the quit button is not used).</li>
+            <li><span class="quote">Automatic on-screen keyboard behavior</span> (Win): Controls when SEB displays the on-screen keyboard.
+      		  <ul id="seblist">
+                <li>Always show</li>
+                <li>Never show</li>
+                <li>Detect physical keyboard: If a physical keyboard is connected, SEB doesn't show the on-screen keyboard.</li>
+              </ul>
+            </li>
+
             <li><span class="quote">Main browser window size</span>: You can set the width and height of the main SEB browser window as absolute points (pixel) values or a percentage of the screen width or height.  You can enter the dimensions (in points or percent values) in the text field or select one of the predefined values in the  popdown menu. </li>
             <li><span class="quote">Main browser window horizontal positioning</span>:  You can choose how the window will be positioned horizontally if it doesn't fill the full screen width: Left, Center, Right.</li>
             <li><span class="quote">Enable browser window toolbar</span>: Indicaties if a toolbar is displayed on top of the browser window which can also be hidden by the user if it's disturbing. The toolbar containts the back/forward browsing buttons, page and text zoom buttons (if enabled) and the reload button.<br />
@@ -595,7 +603,7 @@
                 <li><span class="quote">Custom</span>: Enter a custom user agent string (SEB appends its version number automatically)</li>
               </ul>
             </li>
-            <li><span class="quote">Use SEB without browser window</span>: If you intend to use another application for an exam and don't need to display any web content on the exam client, you can switch off the SEB browser with this option. Don't try to disable XULRunner in the <span class="quote">Application -&gt; Permitted Processes</span> tab, that isn't necessary when using this option. <strong>This feature is not yet available in SEB 2.1.</strong></li>
+            <li><span class="quote">Use SEB without browser window</span>: If you intend to use another application for an exam and don't need to display any web content on the exam client, you can switch off the SEB browser with this option. Don't try to disable XULRunner in the <span class="quote">Application -&gt; Permitted Processes</span> tab, that isn't necessary when using this option. <strong>This feature is not yet available in SEB 2.1.2.</strong></li>
           </ul>
           
           <h4 class="seb-section-header sebnavbar-link" id="DownUploadsPane">
@@ -650,14 +658,14 @@
           </h4>
           
           <ul id="seblist">
-            <li><span class="quote">Monitor processes </span>(Win): If enabled, SEB monitors which processes/applications are running during an exam.  When SEB is started,  an alert/dialogue window is displayed to tell the user to quit the currently running applications (which are not in the list of  permitted processes) and to restart SEB afterwards or to let SEB kill the applications risking that there could be data loss. Prohibited background processes are killed automatically, without user confirmation. Applications which allow to be terminated nicely in macOS are automatically terminated (also without asking the user).<br />
-            clients. <strong>Monitoring processes is not yet functional in SEB 2.1 for Mac</strong>.      </li>
+            <li><span class="quote">Monitor processes </span>(Winows): If enabled, SEB monitors which processes/applications are running during an exam.  When SEB is started,  an alert/dialogue window is displayed to tell the user to quit the currently running applications (which are not in the list of  permitted processes) and to restart SEB afterwards or to let SEB kill the applications risking that there could be data loss. Prohibited background processes are killed automatically, without user confirmation. Applications which allow to be terminated nicely in macOS are automatically terminated (also without asking the user).<br />
+            clients.      </li>
           </ul>
           
           <h5 class="seb-section-header sebnavbar-link">Permitted Processes Section</h5>
           
           <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. </p>
-          <p><strong>Using permitted processes is not yet functional in SEB 2.1 for Mac</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
+          <p><strong>Using permitted processes is not yet functional in SEB 2.1.2 for macOS</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
           
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesApplications-PermittedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Permitted Processes Tab" />
@@ -704,7 +712,7 @@
       
           <p>List of processes which are prohibited to run during an exam  when <span class="quote">monitor processes</span> is enabled. This prohibited list of processes makes sense because SEB  usually allows to run system processes (SEB for macOS allows all processes and applications signed by Apple to run), but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the prohibited processes are killed by SEB.</p>
           
-          <p><strong>Using prohibited processes is not yet functional in SEB 2.1 for Mac</strong>. You can define and edit permitted processes for the Windows version of SEB here.</p>
+          <p><strong>Using prohibited processes is not yet functional in SEB 2.1.2 for macOS</strong>. You can define and edit permitted processes for the Windows version of SEB here.</p>
           
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesApplications-ProhibitedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Prohibited Processes Tab" />
@@ -820,8 +828,12 @@
           </div>
           
           <ul id="seblist">
-            <li>Here you can choose <span class="quote">TLS/SSL server certificates</span> from the keychain. The selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Like this users won't be presented a warning when connecting to  https servers with self-signed certificates and you  don't need to distribute TLS/SSL certificates manually to the exam client computers. <strong>Note:</strong> <strong>SEB 2.1 for macOS doesn't support reading embedded TLS/SSL certificates yet.</strong> In addition SEB for Windows cannot read TLS/SSL certificates embedded in the Mac version.</li>
-            <li>You can also choose <span class="quote">cryptographic identities</span> from the keychain which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). Those will also be added to the .seb settings file. Use this feature  for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting .seb files for starting exams later. Thanks to this feature you won't need to export the identities in Keychain Access and install it on your SEB clients manually.</li>
+            <li><span class="quote">Choose TLS/SSL  certificate to embed into settings:</span>  Lists valid TLS/SSL certificates from the macOS keychain (if a TLS/SSL certificate isn't listed here, use the &quot;Advanced…&quot; option below). Selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning when connecting to  https servers with self-signed certificates and you  don't need to distribute TLS/SSL certificates manually to the exam client computers.</li>
+            <li><span class="quote">Choose CA  certificate to embed into settings:</span>  Lists valid certificate authority certificates from the macOS keychain (if a CA certificate isn't listed here, use the &quot;Advanced…&quot; option below). Selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning when connecting to  https servers with  certificates which rely on a certificate authority which isn't included in the system's root certificate store. You  don't need to distribute CA certificates manually to the exam client computers when embedding them into a SEB config file.</li>
+            <li><span class="quote">Pin embedded certificates:</span> If this option is selected, the  certficate store of macOS isn't used to evaluate the validity of a server certificate when SEB connects to a secure server using https. You have to embed TLS or CA certificates into SEB settings which establish trust for the secure servers you want SEB to connect to. The used certificates must be valid (not expired, containing the server's host address in &quot;common name&quot; or &quot;alternative names&quot;). If you want to use a certificate which fails validation (for the mentioned reasons), use a &quot;Debug Certificate&quot; which you can add in the &quot;Advanced&quot; window, where you can override &quot;common name&quot; and &quot;alternative names&quot; by changing the displayed name of the certificate into the server's host address (you can also specify a non-default port number).<br>
+If &quot;Pin embedded certificates&quot; isn't selected and you embed TLS,  Debug and/or CA certificates, these<br>
+certificates extend the system trust store (as if you had manually added them to the system trust store)            </li>
+            <li>You can also choose <span class="quote">cryptographic identities</span> from the keychain which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). Those will also be added to the .seb settings file. <strong>Use this feature  for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting SEB config files for starting exams later. Thanks to this feature you won't need to export the identities in Keychain Access and install it on your SEB clients manually</strong>.</li>
           </ul>
           
           <h5 class="seb-section-header sebnavbar-link" id="NetworkPaneProxiesSection">
@@ -829,7 +841,7 @@
             Proxies Section
           </h5>
           
-          <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not yet functional in SEB 2.1 for Mac</strong>. SEB 2.1 and newer for Windows  supports  individual proxy settings which you can configure here.</p>
+          <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not available in SEB 2.1.2 for macOS</strong>, you have to set proxy settings in System Preferences / Network on each client computer. SEB 2.1 and newer for Windows  supports  individual proxy settings which you can configure here.</p>
           
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesNetwork-Proxies-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Proxies Tab" />
@@ -852,7 +864,7 @@
                 <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is installed. <br />
                 </li>
             </ul>
-                <strong>SEB 2.1 for macOS doesn't  use a SEB Service.</strong> Currently this setting has an effect in SEB for Windows only.<br />&nbsp;
+                <strong>SEB  for macOS doesn't  use a SEB Service.</strong> This setting has an effect in SEB for Windows only.<br />&nbsp;
             <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).</li>
             <li><span class="quote">Enable screen capture</span>: Controls macOS screen capture (invoked with cmd-3 and cmd-4), corresponds with Enable Print Screen in Windows. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
             <li><span class="quote">Allow user switching</span>: Indicates if <em>Fast User Switching</em> is allowed. When using SEB on students' own computers this key should be set to false. Otherwise when the computer is put to sleep and woken up again, in the lock screen &quot;Switch user&quot; is shown and when using a third party application or enabling the menu bar the <em>Fast User Switching</em> option is displayed on the right side of the menu bar.</li>
@@ -868,7 +880,8 @@
           <p class="seb-section-header quote">Settings for SEB Windows</p>
           
           <ul id="seblist">
-            <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. <span class="quote">Enable WiFi control</span>: Displays a control icon in the SEB task bar allowing to reconnect to Wi-Fi networks used before. In SEB 2.1 for macOS this control doesn't exist yet, you can use <span class="quote">Show menu bar</span> in the <a href="#AppearancePane">Appearance pane</a> instead for a similar functionality.</li>
+            <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
+            <li><span class="quote">Enable WiFi control</span>: Displays a control icon in the SEB task bar allowing to reconnect to Wi-Fi networks used before. In SEB 2.1.2 for macOS this control doesn't exist yet, you can use <span class="quote">Show menu bar</span> in the <a href="#AppearancePane">Appearance pane</a> instead for a similar functionality.</li>
             <li><span class="quote">Registry</span>: Select which options in the Windows Security Screen invoked by Ctrl-Alt-Del should be available while SEB is running (switch user, lock this computer, change a password, start Task Manager, log off, shut down, ease of access). In addition the Registry setting <span class="quote">Enable VMware Client Shade</span> activates the 'Shade' bar at the upper edge of a virtual desktop. If you're not using VMware, this setting doesn't have any effect.</li>
             <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled. Note: <span class="quote">Enable Print Screen</span> corresponds with <span class="quote">Enable screen capture</span> in macOS (changing one settings also changes the other). Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.</li>
           </ul>
@@ -906,7 +919,7 @@
             <a name="secure_environment"></a>Secure Environment for Exams with SEB for macOS
           </h3>
           
-          <p>As mentioned, it is more secure to use SEB for macOS  in a managed environment, for <strong>using third party applications</strong> it's generally recommended in version 2.1.  When you create a separate user account with the settings described below, you can  achieve a really secure environment.</p>
+          <p>As mentioned, it is more secure to use SEB for macOS  in a managed environment, for <strong>using third party applications</strong> it's generally required.  When you create a separate user account with the settings described below, you can  achieve a really secure environment.</p>
           
           <ul id="seblist">
             <li>Create a <span class="quote">Standard</span> or <span class="quote">Managed with Parental Controls</span> user account (<span class="quote">System Preferences -&gt; Accounts</span>). For running third party applications together with SEB, you have to use an account managed by parental controls.</li>
