@@ -832,7 +832,9 @@
             <li><span class="quote">Choose CA  certificate to embed into settings:</span>  Lists valid certificate authority certificates from the macOS keychain (if a CA certificate isn't listed here, use the &quot;Advanced…&quot; option below). Selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning when connecting to  https servers with  certificates which rely on a certificate authority which isn't included in the system's root certificate store. You  don't need to distribute CA certificates manually to the exam client computers when embedding them into a SEB config file.</li>
             <li><span class="quote">Pin embedded certificates:</span> If this option is selected, the  certficate store of macOS isn't used to evaluate the validity of a server certificate when SEB connects to a secure server using https. You have to embed TLS or CA certificates into SEB settings which establish trust for the secure servers you want SEB to connect to. The used certificates must be valid (not expired, containing the server's host address in &quot;common name&quot; or &quot;alternative names&quot;). If you want to use a certificate which fails validation (for the mentioned reasons), use a &quot;Debug Certificate&quot; which you can add in the &quot;Advanced&quot; window, where you can override &quot;common name&quot; and &quot;alternative names&quot; by changing the displayed name of the certificate into the server's host address (you can also specify a non-default port number).<br>
 If &quot;Pin embedded certificates&quot; isn't selected and you embed TLS,  Debug and/or CA certificates, these<br>
-certificates extend the system trust store (as if you had manually added them to the system trust store)            </li>
+certificates extend the system trust store (as if you had manually added them to the system trust store)<br>
+</li>
+            <li><span class="red">SEB only supports embedding TLS/SSL and CA certificates and using certificate pinning if running on macOS 10.9 or later versions.</span> If you want to make sure that embedded certificates and certificate pinning work on all exam clients, then you should enforce the minimum macOS version 10.9 in the Security pane. </li>
             <li>You can also choose <span class="quote">cryptographic identities</span> from the keychain which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). Those will also be added to the .seb settings file. <strong>Use this feature  for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting SEB config files for starting exams later. Thanks to this feature you won't need to export the identities in Keychain Access and install it on your SEB clients manually</strong>.</li>
           </ul>
           
@@ -856,7 +858,7 @@ certificates extend the system trust store (as if you had manually added them to
           </div>
           
           <ul id="seblist">
-            <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (as administrator/Root), which is necessary to block and unblock some system features (in macOS <span class="quote"> Fast User Switching</span>, disabling the Notification Center  while working with third party applications) and killing prohibited system processes when using <span class="quote">monitor processes</span>.  SEB Service is installed automatically with SEB downloaded from <a href="../download_en.html#MacOSX">safeexambrowser.org</a>, but needs to be installed manually when installing SEB from the App Store. You can define the policy that applies when an exam client doesn't have the SEB Service installed:
+            <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (with administrator rights), which is necessary to block and unblock some system features. You can define the policy that applies when the SEB Service isn't running (for whatever reason):
           </li>
               <ul id="seblist">
                 <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service, it will only be noted in the log that the service was not securing the computer during the exam.</li>
@@ -866,22 +868,27 @@ certificates extend the system trust store (as if you had manually added them to
             </ul>
                 <strong>SEB  for macOS doesn't  use a SEB Service.</strong> This setting has an effect in SEB for Windows only.<br />&nbsp;
             <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).</li>
-            <li><span class="quote">Enable screen capture</span>: Controls macOS screen capture (invoked with cmd-3 and cmd-4), corresponds with Enable Print Screen in Windows. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
-            <li><span class="quote">Allow user switching</span>: Indicates if <em>Fast User Switching</em> is allowed. When using SEB on students' own computers this key should be set to false. Otherwise when the computer is put to sleep and woken up again, in the lock screen &quot;Switch user&quot; is shown and when using a third party application or enabling the menu bar the <em>Fast User Switching</em> option is displayed on the right side of the menu bar.</li>
-            <li><span class="quote">Disable app switcher when starting</span>: SEB checks for the command key being held down while SEB is starting up. This prevents using the application switcher to mess with SEB's kiosk mode</li>
-            <li><span class="quote">Force installation in Applications folder</span>: SEB enforces to be installed in an Applications folder (/Applications or ~/Applications)</li>
+            <li><span class="quote">Allow screen sharing</span>: Allows macOS screen sharing to be used. If this option isn't enabled,  SEB shows an alert and refuses to start up. If screen sharing is detected while SEB is running, a red lock screen is displayed and SEB can only be unlocked after  the screen sharing session has been stopped and then  the restart/quit password is entered (therefore exam supervision/support should know this password!).<br>
+            To avoid that SEB locks itself during an exam when it detects that screen sharing started, it's best to switch off 'Screen Sharing' and 'Remote Management' in System Preferences/Sharing.            </li>
+            <li><span class="quote">Enable screen capture</span>: Controls macOS screen capture (invoked with cmd-shift-3 and cmd-shift-4), corresponds with Enable Print Screen in Windows. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
+            <li><span class="quote">Use private clipboard</span>: Private clipboard should always be used besides when working with third party applications in a managed user account.</li>
             <li><span class="quote">Enable logging</span>: The log can help in debugging SEB (if you send it to the developers) and to find out about possible manipulations. You can save the log to a network drive mounted on all exam client computers, since the log's name is unique and contains the machine's name and IP address. </li>
             <li><span class="quote">Log level</span>: The log level indicates which information gets saved. <strong>Error</strong> includes fatal application and browser level errors, <strong>Warning</strong> are non-fatal but non-expected or security affecting events. <strong>Info</strong> includes most user actions including all browser navigation actions like addresses of opened web pages. <strong>Debug</strong> is reserved for information which is only necessary for in-deep program code debugging. The log will contain the selected log level plus all levels with a lower value, a log with the <strong>Verbose</strong> level contains events of all levels.. Default is Warning (error and warning messages).  <strong>Debug</strong> and <strong>Verbose</strong> are meant for debugging (send such a log file to the SEB developers to find out details about a problem). </li>
             <li><span class="quote">Save log file to</span>: Choose the directory where to save the log to. <!--If you select a path inside the current user's home directory, then the path to the home directory is internally replaced with the according tilde placeholder (~/), so this abreviated relative path will also work on a client computer with another home directory name. -->You could also save the log to a network drive mounted on the exam client computer. </li>
             <li><span class="quote">Use standard directory</span>: The log is saved to the directory <span class="path">~/Library/Logs/Safe Exam Browser/</span> which is also displayed in the Console app log list.</li>
             <li><span class="quote">Log file directory Windows</span>: Enter a valid,    Windows-specific formatted path.</li>
           </ul>
-          
-          <p class="seb-section-header quote">Settings for SEB Windows</p>
+
+          <p class="seb-section-header quote">OS Specific Settings: macOS</p>
+          <ul id="seblist2">
+            <li><span class="quote">Enforce minimal macOS version</span>:  This is helpful if your web application isn't compatible with an older WebKit version (as for example used in OS X 10.7) or if you want to make sure that embedded certificates and certificate pinning work on all exam clients. In the latter case you should enforce the minimum macOS version 10.9.</li>
+            <li><span class="quote">Disable app switcher when starting</span>: SEB checks for the command key being held down while SEB is starting up. This prevents using the application switcher to mess with SEB's kiosk mode.</li>
+            <li><span class="quote">Force installation in Applications folder</span>: SEB enforces to be installed in an Applications folder (/Applications or ~/Applications).</li>
+          </ul>
+          <p class="seb-section-header quote">OS Specific Settings: Settings for SEB Windows</p>
           
           <ul id="seblist">
             <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
-            <li><span class="quote">Enable WiFi control</span>: Displays a control icon in the SEB task bar allowing to reconnect to Wi-Fi networks used before. In SEB 2.1.2 for macOS this control doesn't exist yet, you can use <span class="quote">Show menu bar</span> in the <a href="#AppearancePane">Appearance pane</a> instead for a similar functionality.</li>
             <li><span class="quote">Registry</span>: Select which options in the Windows Security Screen invoked by Ctrl-Alt-Del should be available while SEB is running (switch user, lock this computer, change a password, start Task Manager, log off, shut down, ease of access). In addition the Registry setting <span class="quote">Enable VMware Client Shade</span> activates the 'Shade' bar at the upper edge of a virtual desktop. If you're not using VMware, this setting doesn't have any effect.</li>
             <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled. Note: <span class="quote">Enable Print Screen</span> corresponds with <span class="quote">Enable screen capture</span> in macOS (changing one settings also changes the other). Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.</li>
           </ul>
@@ -900,13 +907,13 @@ certificates extend the system trust store (as if you had manually added them to
           <p>SEB for macOS is running on 64-bit Intel Macs with the following operating systems:</p>
                
           <ul id="seblist">
-            <li>Mac OS X 10.6 Snow Leopard (only supported up to SEB 1.5.2)</li>
-            <li>OS X 10.7 Lion (only supported as client, preferences window not available)</li>
-            <li>OS X 10.8 Mountain Lion</li>
-            <li>OS X 10.9 Mavericks</li>
-            <li>OS X 10.10 Yosemite</li>
+            <li>macOS 10.12 Sierra</li>
             <li>OS X 10.11 El Capitan</li>
-            <li>Beta versions of macOS 10.12 Sierra: Not yet thoroughly tested, please <a href="https://sourceforge.net/p/seb/bugs/" target="_blank">report</a> possible problems.</li>
+            <li>OS X 10.10 Yosemite</li>
+            <li>OS X 10.9 Mavericks</li>
+            <li>OS X 10.8 Mountain Lion (TLS/SSL/CA certificate embedding and certificate pinning not supported)</li>
+            <li>OS X 10.7 Lion (only supported as client, preferences window not available. TLS/SSL/CA certificate embedding and certificate pinning not supported)</li>
+            <li>Mac OS X 10.6 Snow Leopard (only supported up to SEB 1.5.2)</li>
           </ul>
 
         </div>
