@@ -208,7 +208,7 @@
           <ul id="seblist">
             <li>Fixes a bug when a browser window wasn’t scaled correctly to fit the screen (it was placed in the lower left screen corner, mainly off-screen) when only one screen is connected and the „useBuiltin“ setting is false.</li>
             <li>Fixes a bug when the main browser window stayed open when starting SEB by opening a config file. The window couldn’t be manually closed and stayed in the foreground (as a „zombie“ window, caused by a timing problem when the window gets the close command while it’s still being opened).</li>
-            <li> To solve the latter problem and improve usability generally, when starting SEB by opening a .seb config file or a seb(s):// link, the start URL from persistent settings of the SEB client isn't opened first anymore, instead the new settings are directly applied. In case loading or decrypting these new settings isn’t successful (load error, canceled by the user, wrong decryption credentials etc.), SEB quits instead of continuing with the persistent client settings.</li>
+            <li> To solve the latter problem and improve usability generally, when starting SEB by opening a .seb config file or a seb(s):// link, the start URL from persistent settings of the SEB client isn't opened first anymore, instead the new settings are directly applied. In case loading or decrypting these  settings isn’t successful (load error, canceled by the user, wrong decryption credentials etc.), SEB quits instead of continuing with the persistent client settings.</li>
             <li> Fixed visible screen area was being wrong calculated, not considering correctly if the SEB dock was visible on that screen. This also caused the temporary browser window for authentication not to be moved up when the user moved it underneath the SEB dock. </li>
             <li> Fixed this calculation when no main browser window is open yet (when starting SEB by opening a seb(s):// link from a authenticated server and only the temporary browser window is opened).</li>
             <li> Now opening the main browser window, the SEB dock and the temporary browser window when starting SEB by opening a seb(s):// link from a authenticated server always on the main screen as defined by settings (not macOS).</li>
@@ -216,8 +216,8 @@
           </ul>
           <p><strong>Known limitations.</strong> The following preferences options are not yet available in this version:</p>
           <ul id="seblist">
-            <li>Applications pane: Monitor processes (new third party application handling and additional security feature) is not yet available. It's possible to add permitted and prohibited processes for SEB 2.x for Windows. SEB for Mac OS X doesn't support directly starting and monitoring third party applications yet.</li>
-            <li>Network pane: It's not yet possible to set individual SEB proxy settings, you have to set system-wide proxy settings in OS X System Preferences. SEB for Windows 2.1.x supports individual proxy settings which you can configure here.</li>
+            <li>Applications pane: Monitor processes (new third party application handling and additional security feature) is not yet available. It's possible to add permitted and prohibited processes for SEB 2.x for Windows. SEB for macOS doesn't support directly starting and monitoring third party applications yet.</li>
+            <li>Network pane: It's not yet possible to set individual SEB proxy settings, you have to set system-wide proxy settings in macOS System Preferences. SEB for Windows 2.1.x supports individual proxy settings which you can configure here.</li>
           </ul>
                       
           <h5 id="sebh5"> Release notes for Safe Exam Browser version  2.1.1:</h5>
@@ -240,8 +240,8 @@
           </ul>
           <p><strong>Known limitations.</strong> The following preferences options are not yet available in this version:</p>
           <ul id="seblist">
-            <li>Applications pane: Monitor processes (new third party application handling and additional security feature) is not yet available. It's possible to add permitted and prohibited processes for SEB 2.x for Windows. SEB for Mac OS X doesn't support directly starting and monitoring third party applications yet.</li>
-            <li>Network pane: It's not yet possible to set individual SEB proxy settings, you have to set system-wide proxy settings in OS X System Preferences. SEB for Windows 2.1.x supports individual proxy settings which you can configure here.</li>
+            <li>Applications pane: Monitor processes (new third party application handling and additional security feature) is not yet available. It's possible to add permitted and prohibited processes for SEB 2.x for Windows. SEB for macOS doesn't support directly starting and monitoring third party applications yet.</li>
+            <li>Network pane: It's not yet possible to set individual SEB proxy settings, you have to set system-wide proxy settings in macOS System Preferences. SEB for Windows 2.1.x supports individual proxy settings which you can configure here.</li>
           </ul>
                                             
           <h5 id="sebh5"> Release notes for <a href="../download_releases_en.html">Safe Exam Browser version  2.1</a>:</h5>
