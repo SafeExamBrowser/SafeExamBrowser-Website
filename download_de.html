@@ -230,12 +230,14 @@
           
           <p><a href="https://github.com/SafeExamBrowser/seb-win/releases/download/2.1.4/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-win/releases" target="_blank">GitHub-Projektseite</a>. </p>
           
-<p id="half_linespace2"><span class="half_linespace">Safe Exam Browser 2.1.4 für Windows beinhaltet Usability- und Stabilitätsverbesserungen:</span></p>
+<p id="half_linespace2"><span class="half_linespace">Safe Exam Browser 2.1.4 für Windows beinhaltet Usability- und Stabilitätsverbesserungen und erleichtert die automatisierte Verteilung auf verwalteten Rechnern dank Änderungen im SEB-Installer und Verbesserungen bei Verwendung von X.509</span>-Zertifikaten für die Verschlüsselung von SEB-Konfigurationsdateien. Neu in SEB 2.1.4:</p>
 <ul id="seblist">
   <li>Alle neuen Einstellungsoptionen der aktuellen SEB-Version für macOS (2.1.2) zum Config Tool hinzugefügt.</li>
   <li> &quot;Restart Exam&quot; Button in &quot;Back to Start&quot; umbenannt und Icon angepasst. Ein Hinweis im Bestätigungsdialog macht klar, dass diese Funktion einen eingeloggten Benutzer nicht ausloggt.</li>
   <li>Gecko/Firefox Einstellung &quot;browser.display.use_document_fonts = 1&quot; hinzugefügt, sodass Webseiten benutzerdefinierte Schriftarten benutzten können.</li>
   <li>X.509 Identitätszertifikate zur Entschlüsselung einer damit verschlüsselten Konfigurationsdatei können nun auch im &quot;Trusted People&quot; Store im Windows Zertifikatsspeicher abgelegt werden, was das Ablegen der Zertifikate in alle momentan vorhandenen Benutzerkonten auf dem Rechner über das Administratorkonto ermöglicht.</li>
+  <li>Das  SEB-Installationsprogramm erstellt keine Verknüpfung mehr auf dem Schreibtisch.  Benutzer können SEB weiterhin mit dem Menüeintrag im Windows Startmenü oder der Kachel auf dem Windows Start Screen starten, die weiterhin erstellt werden. In vielen Einsatzszenarien mag es aber mehr Sinn machen, SEB mittels einer SEB-Konfigurationsdatei oder einem seb(s):// Link aus einem anderen Browser/Mailprogram heraus zu starten.</li>
+  <li>Der SEB-Installer erstellt das %APPDATA%\SafeExamBrowser\ Verzeichnis nicht mehr, falls es noch nicht vorhanden war. Dies war der Grund für ein kurzes Aufstarten und &quot;Updaten der Installation&quot;, wenn SEB erstmals in einem anderen Benutzerkonto gestartet wurde, als wo er installiert worden war.</li>
   <li>Fehlerbehebungen beim erneuten Starten von erlaubten Drittapplikationen.</li>
   <li>Browser Exam Key wird nun auch korrekt berechnet, wenn SEB von einer älteren Version aktualisiert wird.</li>
   <li>Das Umschalten von einigen Tastaturbelegungen (z.B. Österreich) funktioniert nun korrekt.</li>

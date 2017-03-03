@@ -229,12 +229,14 @@
           <span class="codetext">SHA1: 9d6a8676595c0f10439601d4021d653b42d46faf</span></p>
         <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/2.1.4/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases" target="_blank">GitHub project site</a>. <br />
         </p>
-        <p>Safe Exam Browser 2.1.4 for Windows contains usability and stability improvements:</p>
+        <p>Safe Exam Browser 2.1.4 for Windows contains usability and stability improvements. <span class="half_linespace">Mass deployment on managed computers is significantly facilitated, with changes in the SEB installer and  improvements in the management of config file encryption using X.509 certificates.</span> New in SEB 2.1.4:</p>
         <ul id="seblist">
           <li>Added all new setting options of SEB 2.1.2 for macOS to SEB Config Tool.</li>
           <li>Changed „Restart Exam Button“ title and icon to „Back to Start Button“, added disclaimer about this function not logging out a previously logged in user.</li>
           <li>Added Gecko/Firefox setting &quot;browser.display.use_document_fonts = 1&quot; to the SEB browser, to allow pages to choose their own fonts.</li>
           <li>SEB now looks for X.509 identity certificates for decrypting an identity-encrypted config file also in the &quot;Trusted People&quot; store in the Windows Certificate Store (in addition to the default &quot;Personal&quot; store). On managed computers this allows to deploy the identity certificate to the &quot;Local Machine/Trusted People&quot; store when installing SEB in an administrator account. The certificate will then also be available in the &quot;Current User/Trusted People&quot; stores of all currently existing user accounts on that machine.</li>
+          <li>The SEB installer doesn't create a SEB shortcut on the desktop anymore. Users can start SEB directly from the Windows Start Menu / Windows Start Screen (a menu entry/tile for SEB is still created). As before, it can make sense to start SEB by opening a SEB config file or by opening a seb(s):// link from another web browser or mail application. </li>
+          <li>The SEB installer doesn't create the %APPDATA%\SafeExamBrowser\ directory anymore (when it wasn't existing). This was the reason that Windows Installer shortly started and &quot;updated&quot; the SEB installation when starting SEB the first time in another user account than the one where SEB was installed. </li>
           <li>Fixed that some permitted applications could not be immediately restarted after being quit. </li>
           <li>Fixed a problem which caused the Browser Exam Key to be different when SEB was updated from an older version than when it was installed freshly. SEB 2.1.4 can be updated from 2.1.1, 2.1.2 or 2.1.3. A direct update from SEB 2.1 might fail, so uninstall SEB 2.1 first using the Windows control panel before installing SEB 2.1.4.</li>
           <li>Fixed a problem when switching keyboards didn't work properly when using specific keyboard layouts (at least when running on Windows 10). </li>
