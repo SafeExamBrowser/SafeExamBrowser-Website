@@ -769,13 +769,23 @@
               </ul>
             <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulation).</li>
             <li><span class="quote">Enable screen capture / PrintScreen</span>: Controls PrintScreen and macOS screen capture (invoked with cmd-3 and cmd-4), this setting corresponds with Enable PrintScreen in the <a href="win_usermanual_en.html#HookedKeysPane">Hooked Keys</a> pane. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when PrintScreen is disabled.</li>
-            <li><p><span class="quote">Enable logging</span>: The log can help in debugging SEB (if you send it to the developers) and to find out about possible manipulations. There are two log files:</p>
+            <li>
+              <p><span class="quote">Enable logging</span>: The log can help in debugging SEB (if you send it to the developers) and to find out about possible manipulations. There are three log files:</p>
+
 <p>SafeExamBrowser main application, located at </p>
 <p>
               <pre>
                     <p><span class="path">%APPDATA%\SafeExamBrowser\SebClient.log</span><br />usually:<br /><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\SebClient.log</span></p>
                 </pre>
               </p><br>
+
+<p>SafeExamBrowser browser, located at </p>
+<p>
+              <pre>
+                    <p><span class="path">%APPDATA%\SafeExamBrowser\seb.log</span><br />usually:<br /><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\seb.log</span></p>
+                </pre>
+              </p><br>
+
 <p>SEB Windows Service, located at </p>
 <p>
               <pre>
@@ -783,6 +793,7 @@
                 </pre>
               </p>
             </li>
+
             <li><span class="quote">Kiosk mode</span>: This setting reflects how the computer is locked down into SEB.<br />
               <ul id="seblist">
                 <li><span class="quote">Create new desktop</span>:  SEB  and all permitted applications are started on a new desktop. Switching to the standard desktop is not possible, so other applications are invisible and cannot be reached during the exam. This kiosk mode may prevent specific third party software to run correctly together with SEB, like some screen recording software or the Windows on-screen keyboard (this is why this kiosk mode cannot be used with  touch optimized mode).</li>
