@@ -230,13 +230,11 @@
         <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.5/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.1.5" target="_blank">GitHub project site</a>. <br />
         </p>
         <p>Safe Exam Browser 2.1.5 for Windows facilitates mass deployment on managed computers  significantly, with changes in the SEB installer and improvements in the management of config file encryption using X.509 certificates. Also contains additional bug fixes for using specific permitted third party applications and fixes minor bugs and usability issues in the SEB Config Tool:</p>
-        <ul>
+        <ul id="seblist">
           <li>Fixed that for some third party applications new instances were started when clicking the icon in the task bar (instead switching to the window of the already running instance).</li>
           <li>Fixed: Already running instances of some permitted applications were not quit when SEB starts and were accessible inside SEB. Also fixed this for prohibited applications.</li>
           <li>Fixed some config tool UI issues: Radio buttons for Zoom Page/Text and User Agent were sometimes not set properly after loading a new config file, main browser window size wasn't disabled when using full screen mode.        </li>
           <li>Fixed in Network/Filter: If editing a filter rule (block/allow), the Config Tool doesn't save this edited rule when using commands Save, Save As, closing the Config Tool. In the following cases in addition also added checking for unconfirmed passwords: Open Settings (with button, menu and drag-and-drop), Revert Settings to Default/Local Client/Last Opened, Use Current Settings to Edit Duplicate/Configure Client/Apply and Start SEB.        </li>
-        </ul>
-        <ul id="seblist">
           <li>Added all new setting options of SEB 2.1.2 for macOS to SEB Config Tool.</li>
           <li>Changed „Restart Exam Button“ title and icon to „Back to Start Button“, added disclaimer about this function not logging out a previously logged in user.</li>
           <li>Added Gecko/Firefox setting &quot;browser.display.use_document_fonts = 1&quot; to the SEB browser, to allow pages to choose their own fonts.</li>
