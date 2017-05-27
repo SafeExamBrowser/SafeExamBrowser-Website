@@ -335,7 +335,7 @@
             <strong>Using SEB with ILIAS</strong>
           </h4>
           
-          <p>You can find information about how to install the ILIAS plugin for SEB support <a href="https://github.com/hrz-unimr/Ilias.SEBPlugin" target="_blank">here</a>. </p>
+          <p>You can find information about how to install the ILIAS plugin for SEB support <a href="https://github.com/hrz-unimr/Ilias.SEBPlugin" target="_blank">here</a>. <span class="red">Not yet supported in SEB for iOS:</span> Use the regular quiz mode with support for Safe Exam Browser which is integrated in ILIAS.</p>
           
           <p>Please note that currently  support for Safe Exam Browser in ILAS can only be switched on for some roles of a whole installation, not a single exam/course.</p>
           
@@ -346,7 +346,7 @@
           
           <p>An assessment mode has been added to the OpenOLAT standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOLAT courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOLAT course elements can be configured for such an exam setting. </p>
           
-          <p>One of the many security features is the enforced usage of  Safe Exam Browser. An exam setting can be configured with multiple <a href="#ExamPane">Browser Exam Key</a> keys.</p>
+          <p>One of the many security features is the enforced usage of  Safe Exam Browser. An exam setting can be configured with multiple <a href="#ExamPane">Browser Exam Key</a> keys. <span class="red">Not yet supported in SEB for iOS.</span></p>
           
           <p>No additional software needs to be installed in order to use the assessment mode together with  Safe Exam Browser. The assessment mode is globally enabled / disabled in Administration -&gt; Modules -&gt; Assessment mode. Within the courses the configuration is done in the course menu. </p>
           
@@ -392,6 +392,13 @@
 
           <img class="img-responsive" src="images/SEB_InitialConfigurationAssistant.png" />
  
+          <p>The current version of the Initial Configuration Assistant shows you four options for stating an exam or configuring SEB for your institution:</p>
+          <ul>
+            <li><strong>Open an SEB exam or configuration link from Safari, Mail or a messenger app: </strong>To try this out, you can switch to Safari (using the home button, the multitasking gesture or 3D Touch) and open the demo exam portal page <a href="https://seb.let.ethz.ch/exams" target="_blank">https://seb.let.ethz.ch/exams</a> there. If you now click one of the  links on this page, iOS will start or switch to the SEB app (after confirming this in the alert Safari displays) and the config file refered to by the config link will be opened in SEB. This is one way of starting SEB with an individual exam configuration, by opening a seb(s):// link from Safari/Mail or another app. This procedure is often being used in the macOS and Windows versions, SEB for iOS is compatible with this procedure.</li>
+            <li><strong>Enter a URL of an institution which supports SEB:</strong> This is a new feature, called &quot;Automatic Client Configuration&quot;. An institution can place a SEB config file at a specific path on their webserver. SEB will search those predefined paths (there are three variations possible) when the main URL of that institution is typed in. You can try to enter <span class="quote">let.ethz.ch</span>, SEB will then be reconfigured to display the demo exam portal page mentioned above.</li>
+            <li>Scan SEB configuration QR code: If you generate a QR code which containts a seb(s):// URL to a SEB config file, then using the built-in</li>
+            <li>Administrators: Set up your exam, Edit Settings</li>
+          </ul>
           <p>You can also change client settings of SEB for iOS by reconfiguring it with the link &quot;Configure Client for Administrators / SEB Testing&quot; (sebs://seb.let.ethz.ch/exams/ClientConfigTesting.seb) on the testing portal page https://seb.let.ethz.ch/exams/, then in the left slider menu (tap SEB logo in the SEB dock at the bottom of the screen or swipe right from left display edge) you will find a command &quot;Edit Settings&quot;. The SEB admin password used in the demo settings is &quot;seb&quot;, the quit password &quot;quit&quot;.</p>
           <p>You can also go to the Settings app, find SEB's setting options and enable either the &quot;Allow Editing&quot; or &quot;Initiate Settings Reset&quot; options. After returning to SEB, you'll have to enter the SEB admin password (&quot;seb&quot; in the demo settings) to edit settings or for settings being reset to its default values (then the initial configuration assistant view will be displayed again).</p>
           <p>for the platform-independent SEB configuration files, which can also set all additional individual settings for the Windows version. Invoke it by selecting <span class="quote">Preferences…</span> in the SafeExamBrowser menu (if visible), by simultaneously pressing the <span class="quote">cmd - ,</span> (comma) keys, or the <span class="quote">F3 and F6</span> keys (on modern Mac keyboards you usually also have to hold the <span class="quote">fn</span> key). After setting a <span class="quote">SEB administrator password</span>, users have to enter this to display the preferences window. SEB for macOS can also be configured not to display the preferences window at all, this could make sense on exam client computers.</p>
