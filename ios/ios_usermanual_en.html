@@ -233,7 +233,10 @@
                   <li><a href="#UsingInAppSettingsInterface">Using In-App Settings Interface</a></li>
                   <li><a href="#GeneralPane">General Pane</a></li>
                   <li><a href="#ConfigFilePane">Config File Pane</a></li>
-                  <li><a href="#AppearancePane">User Interface Pane</a></li>
+                  <li><a href="#UserInterfacePane">User Interface Pane</a></li>
+                	<ul class="nav">
+                  	  <li><a href="#DockAndSlider">SEB Dock and Slider</a></li>
+                	</ul>
                   <li><a href="#BrowserPane">Browser Pane</a></li>
                   <li><a href="#ExamPane">Exam Pane</a></li>
               <!--             
@@ -467,7 +470,13 @@
             </li>
           </ul>
           <ul id="seblist">
-            <li><span class="quote"> SEB Dock and Slider</span>:  The SEB Dock is displaying an icon for the SEB browser on its left. Tapping this icon or swiping right from the left screen edge reveals a left slider menu with a list of open browser tabs and commands. The rightmost icon in the SEB Dock is the Quit Button, for quitting the current exam/browser session. This closes all possibly openend additional browser tabs, reopens the start URL in the exam tab and resets the browser session cookies. Additional command item buttons in the Dock can be enabled or disabled in the sub-pane <strong>SEB Dock and Slider</strong>:</li>
+            <li><span class="quote"> SEB Dock and Slider</span>:  The SEB Dock is displaying an icon for the SEB browser on its left. Tapping this icon or swiping right from the left screen edge reveals a left slider menu with a list of open browser tabs and commands. The rightmost icon in the SEB Dock is the Quit Button, for quitting the current exam/browser session. This closes all possibly openend additional browser tabs, reopens the start URL in the exam tab and resets the browser session cookies. Additional command item buttons in the Dock can be enabled or disabled in the sub-pane described below.</li>
+
+          <h4 class="seb-section-header sebnavbar-link" id="DockAndSlider">
+            <a class="anchorjs-link" href="#DockAndSlider"></a>
+              SEB Dock and Slider
+          </h4>
+          
              <img class="img-responsive" src="images/SEB_SettingsDockAndSlider.png" alt="SEB Settings for SEB Dock and Slider" />
   <ul id="seblist">
     <li><span class="quote">Show Dock</span>: If  SEB Dock isn't enabled, then you can still access command items in the left slider menu. The slider can always be accessed by swiping right from the left display edge.<br>
@@ -491,17 +500,19 @@
           <img class="img-responsive" src="images/SEB_SettingsBrowser.png" alt="SEB Settings in Browser Section" />
           
           <ul id="seblist">
-            <li><span class="quote">Links requesting to be opened in a new browser window ... </span>This popup list offers three policies:</li>
+            <li><span class="quote">Restrictions in Exam Tab</span>: The  four options described below are valid in the browser tab displaying the exam. The exam tab is always  topmost in the list of open browser tabs in the left slider menu and its title is displayed in black  color.</li>
+            <li><span class="quote">Restrictions in New Tabs</span>: The four options described below are valid in additional browser tabs. New tabs are opened when a link requests to be opened in a new browser window/tab (and their titles are displayed in white color in the slider menu).</li>
             <ul id="seblist">
-            <li><span class="quote">get generally blocked</span></li>
-            <li><span class="quote">open in same window</span>: This was the behaviour in SEB for macOS versions before 1.5.</li>
-            <li><span class="quote">open in new window</span></li>
+            <li><span class="quote">Allow Navigation</span>: Using back/forward buttons might be problematic in some exam systems. In Moodle quizzes for example browsing back to the start page of a quiz allows to access functionality not wanted in exams.</li>
+            <li><span class="quote">Allow Reload</span>: Some exam systems (especially if they have a partial offline mode built-in) fail, if the exam page is reloaded while the internet connection is temporarily down. In this case, reload should be disabled for the exam tab. It can be enabled for additional tabs, which can make sense if these tabs display regular web content.</li>
+            <li><span class="quote">Show Reload Warning</span>: SEB shows a warning asking the user to confirm before reloading a web page, to prevent a possible loss of entered information.</li>
+            <li><span class="quote">Show URLs</span>: In some use cases it might be relevant for security of the exam to hide the URLs of visited exam pages from examinees. While testing on the other side, it can be helpful to show URLs of opened web pages in the left slider view, in the browser toolbar (if enabled) and in load error alerts.</li>
             </ul>
-            <li><span class="quote">Allow browsing back/forward</span>: Disabling browsing to previously visited pages (by cmd - Cursor left) increases security, because it might be possible to leave an exam by browsing back to an external start page. </li>
-            <li><span class="quote">User agent</span>: Choose browser agent settings for SEB running on various operating systems and device types
+            <li><span class="quote">User agent</span>: For choosing the browser agent string which  the SEB browser sends to the exam system. SEB always appends its version number.
               <ul id="seblist">
-                <li><span class="quote">Default</span>: Default user agent string on this Mac (it depends on installed Safari/WebKit version and therefore can differ on exam clients!)</li>
-                <li><span class="quote">Custom</span>: Enter a custom user agent string (SEB appends its version number automatically)</li>
+                <li><span class="quote">Default</span>: Default user agent string for the  device (depends on the installed iOS version used and therefore can differ on exam clients)</li>
+                <li><span class="quote">Mac Desktop</span>: Typical user agent string of a macOS device in Safari. This can be used to prevent that some exam systems  switch to a mobile theme depending on the user agent.</li>
+                <li><span class="quote">Custom</span>: Enter a custom user agent string</li>
               </ul>
             </li>
           </ul>
@@ -510,13 +521,26 @@
             <a class="anchorjs-link" href="#ExamPane"></a>Settings in the Exam Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_SettingsExam.png" alt="SEB Settings in Exam Section" />
+          <p><img class="img-responsive" src="images/SEB_SettingsExam.png" alt="SEB Settings in Exam Section" />
+          </p>
           
           <ul id="seblist">
-            <li><span class="quote">Quit Link</span>: Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> (full URL starting with http:// or https://) and placing this on the summary page displayed by the LMS after submitting the exam. If a Quit Link is entered, it works regardless of other quit settings in the General pane (<span class="quote">Allow user to quit SEB</span> and the <span class="quote">Quit password</span> is ignored when a quit link is clicked).</li>
-            <li><span class="quote">Back to Start Button</span>: Either check the &quot;<span class="quote">Use Start URL</span>&quot; option or enter a link to which the exam is redirected when the restart exam button is pressed. The restart exam button is displayed in the SEB task bar when either the &quot;Use Start URL&quot; option is selected or a link is entered.</li>
-            <li><span class="quote">Custom Title Text</span>: This text is displayed as the title of the confirmation alert and as tool tip on the icon. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
-            <li><span class="quote">Require Quit Password</span>: The quit password (if set, see <a href="mac_usermanual_en.html#GeneralPane">General</a> pane) must be entered when the Back to Start Button was tapped. Exam support/invigilators should know this password to be able to return to the start of the exam if there is a problem, for example a network connection issue. Note: </li>
+            <li><strong>Quit Link</strong>
+              <ul>
+                <li><span class="quote">Quit URL</span>: Allows to  quit SEB automatically after the exam is finished/submitted, without having to enter a quit password. This happens when SEB detects the address specified in settings as <span class="quote">Quit Link</span> (full URL starting with http:// or https://). So either use the (unique) URL of the summary page displayed  after the exam was finished/submitted as Quit URL or place a link with this URL on the summary page (naming it for example &quot;Unlock Device&quot;). </li>
+                <li><span class="quote">Confirm Quitting</span>: When the Quit URL is detected, SEB displays an alert to confirm quitting.<br>
+                  <br>
+                </li>
+              </ul>
+            </li>
+            <li><strong>Back
+            to Start Button</strong>
+              <ul>
+                <li>Either enable the <span class="quote">Use Start URL</span> option or enter a  <span class="quote">custom URL</span> to which the exam is redirected when the Back to Start Button is pressed.                </li>
+                <li><span class="quote">Custom Title Text</span>: This text is displayed as the title of the confirmation alert and as command title in the left slider menu. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
+                <li><span class="quote">Require Quit Password</span>: The quit password (if set, see <a href="mac_usermanual_en.html#GeneralPane">General</a> pane) must be entered when the Back to Start Button was tapped. Exam support/invigilators should know this password to be able to return to the start of the exam if there is a problem, for example a network connection issue. Note: </li>
+              </ul>
+            </li>
           </ul>
       
             <!--
@@ -722,29 +746,24 @@ certificates extend the system trust store (as if you had manually added them to
             <a class="anchorjs-link" href="#SecurityPane"></a>Settings in the Security Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_SettingsSecurity.png" alt="SEB Settings in Security Section" />
+          <p><img class="img-responsive" src="images/SEB_SettingsSecurity.png" alt="SEB Settings in Security Section" />
           
-          <ul id="seblist">
-            <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (with administrator rights), which is necessary to block and unblock some system features. You can define the policy that applies when the SEB Service isn't running (for whatever reason):
-          </li>
-              <ul id="seblist">
-                <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service, it will only be noted in the log that the service was not securing the computer during the exam.</li>
-                <li><span class="quote">warn when service is not running</span>: A warning is displayed when the service is not installed/running, but the exam can be started.</li>
-                <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is installed. <br />
-                </li>
-            </ul>
-                <strong>SEB  for macOS doesn't  use a SEB Service.</strong> This setting has an effect in SEB for Windows only.<br />&nbsp;
-            <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).</li>
-            <li><span class="quote">Allow screen sharing</span>: Allows macOS screen sharing to be used. If this option isn't enabled,  SEB shows an alert and refuses to start up. If screen sharing is detected while SEB is running, a red lock screen is displayed and SEB can only be unlocked after  the screen sharing session has been stopped and then  the restart/quit password is entered (therefore exam supervision/support should know this password!).<br>
-            To avoid that SEB locks itself during an exam when it detects that screen sharing started, it's best to switch off 'Screen Sharing' and 'Remote Management' in System Preferences/Sharing.            </li>
-            <li><span class="quote">Enable screen capture</span>: Controls macOS screen capture (invoked with cmd-shift-3 and cmd-shift-4), corresponds with Enable Print Screen in Windows. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
-            <li><span class="quote">Use private clipboard</span>: Prevents utilities running in the background and Universal Clipboard (on macOS 10.12 Sierra) to be used to copy-paste contents into or out of exams. Private clipboard should always be used besides when working with third party applications in a managed user account.</li>
-            <li><span class="quote">Enable logging</span>: The log can help in debugging SEB (if you send it to the developers) and to find out about possible manipulations. You can save the log to a network drive mounted on all exam client computers, since the log's name is unique and contains the machine's name and IP address. </li>
-            <li><span class="quote">Log level</span>: The log level indicates which information gets saved. <strong>Error</strong> includes fatal application and browser level errors, <strong>Warning</strong> are non-fatal but non-expected or security affecting events. <strong>Info</strong> includes most user actions including all browser navigation actions like addresses of opened web pages. <strong>Debug</strong> is reserved for information which is only necessary for in-deep program code debugging. The log will contain the selected log level plus all levels with a lower value, a log with the <strong>Verbose</strong> level contains events of all levels.. Default is Warning (error and warning messages).  <strong>Debug</strong> and <strong>Verbose</strong> are meant for debugging (send such a log file to the SEB developers to find out details about a problem). </li>
-            <li><span class="quote">Save log file to</span>: Choose the directory where to save the log to.
-
+          </p>
+          <p>SEB support the following iOS single app (kiosk/lock down) modes: </p>
+          <ul>
+            <li><strong>Automatic Assessment Configuration (AAC)</strong>: Also know as &quot;app self-lock&quot;. This single app mode can be invoked by assessment apps like SEB even when using unmanaged devices owned by students (for bring-your-own-device BYOD scenarios). The examinee needs to confirm starting AAC in an alert.</li>
+            <li> <strong>Autonomous Single App Mode (ASAM)</strong>: Requires device to be supervised (device needs to be specially set-up usually using the macOS application <a href="https://itunes.apple.com/app/apple-configurator-2/id1037126344?mt=12" target="_blank">Apple Configurator</a>). In addition SEB needs to be set as allowed app to invoke ASAM using a mobile device management system MDM). Then ASAM is automatically invoked (without an alert) when an exam (secure session) is started.</li>
+            <li><strong>Classic Single App Mode (SAM)</strong>: The 'classic' Single App Mode can be invoked and again deactivated by Apple's <a href="https://itunes.apple.com/app/classroom/id1085319084?mt=8" target="_blank">Classroom</a> App, an MDM system or Apple Configurator. </li>
           </ul>
-          
+          <p>These kiosk/lock down modes are provided by iOS, SEB for iOS doesn't need use  any kind of modifications in the iOS operating system (which  iOS anyways doesn't allow). </p>
+          <p>SEB needs to be configured  and exams started differently depending on the single app mode used. If you don't have experience with supervised devices or MDM systems, you probably should just use the AAC app self-lock mode which works on all devices.</p>
+          <ul>
+            <li><span class="quote">Use AAC/ASAM If Available</span>: Either AAC (for BYOD) is used or ASAM on a supervised device, where SEB is set as allowed app to invoke ASAM.  If ASAM is available on a device, it takes priority over AAC.</li>
+            <li><span class="quote">Allow Single App Mode (SAM)</span>: When this option is enabled for exam settings, then after starting an exam (which has a quit password set/is running in secure mode) SEB will wait for SAM to be activated by Apple's <a href="https://itunes.apple.com/app/classroom/id1085319084?mt=8" target="_blank">Classroom</a> App or an MDM system. You can also lock those devices first into SEB. <strong>Please note:</strong> You have to distribute devices already locked into SAM or disable the single app lock mode <span class="quote">Guided Access</span> (which can be activated manually by users) if you want to make sure that only SAM is used by the syste. iOS doesn't provide a way to detect if SAM or Guided Access is active on a device.</li>
+            <li><span class="quote">Download/Open SEB Config Files</span>: Disable for preventing seb(s):// links to be used for starting exams or reconfiguring the client.</li>
+            <li><span class="quote">Allow QR Code Config</span>: Allows to start an exam or to reconfigure SEB by scanning a QR code with a link to a SEB config file. This is only possible while SEB isn't running in exam mode. Use slider menu, dock button (if enabled in the  <a href="#DockAndSlider">User Interface Dock subpane</a>) or 3D touch Home screen quick action (on a device which supports 3D Touch).</li>
+            <li><span class="quote">Prevent Auto-Lock</span>: The device isn't locked and the display  isn't dimmed after the delay set in the Settings App.</li>
+          </ul>
         </div>
         <!-- / Document Section --> 
     
