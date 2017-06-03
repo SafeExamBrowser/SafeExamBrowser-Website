@@ -20,7 +20,7 @@
     <meta name="theme-color" content="#ffffff">
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Safe Exam Browser - FAQ</title>
+<title>Safe Exam Browser - iOS User Manual</title>
 <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -43,6 +43,13 @@
     <![endif]-->
 
 <!-- InstanceBeginEditable name="head" -->
+<style>
+@media (max-width:767px) {
+  .bs-docs-container {
+	  overflow: hidden;
+  }
+}
+</style>
 <!-- InstanceEndEditable -->
 <link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
 
@@ -154,10 +161,10 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">iOS<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="../ios/ios_usermanual_en.html">User Manual</a>
+                                <a href="ios_usermanual_en.html">User Manual</a>
                             </li>
                             <li>
-                                <a href="../ios/ios_tutorial_en.html">Tutorial</a>
+                                <a href="ios_tutorial_en.html">Tutorial</a>
                             </li>
                         </ul>
                     </li>
@@ -165,7 +172,7 @@
                         <a href="../support_en.html">Support</a>
                     </li>
                     <li>
-                    	<a href="faq_en.html">FAQ</a>
+                    	<a href="../faq/faq_en.html">FAQ</a>
                     </li>
                 </ul>
             </div>
@@ -178,17 +185,20 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-        
+
       <!-- Page Heading/Breadcrumbs -->
       <div class="row">
         <div class="col-lg-12">
-          <h1 class="page-header">Support <small>Frequently Asked Questions</small></h1>
+          <h1 class="page-header">iOS <small>Tutorial</small></h1>
           <ol class="breadcrumb">
             <li class="active">English
             </li>
-            <li><a href="faq_de.html">Deutsch</a>
+            <li><a href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf" target="_blank">SEB 2.x How To</a>
+            </li>
+            <li><a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/e7e542a5/" target="_blank">Pre-Release Testing</a>
             </li>
           </ol>
+    
         </div>
       </div>
       <!-- /.row --> 
@@ -196,90 +206,130 @@
       <!-- Content Row -->
       <div class="row"> 
         
-        <!-- Sidebar Column -->
+        <!-- Left Sidebar Column -->
         <div class="col-md-3">
-          <div class="list-group">
+          <div class="list-group hidden-print hidden-xs hidden-sm">
             <a href="../news_en.html" class="list-group-item">News</a>
             <a href="../about_overview_en.html" class="list-group-item">About</a>
             <a href="../consortium/members.html" class="list-group-item">Consortium</a>
             <a href="../download_en.html" class="list-group-item">Download</a>
             <a href="../windows/win_usermanual_en.html" class="list-group-item">Documentation Windows</a>
             <a href="../macosx/mac_usermanual_en.html" class="list-group-item">Documentation macOS</a>
-            <a href="../support_en.html" class="list-group-item">Support – Links</a>
-            <a href="faq_en.html" class="list-group-item active">Support – FAQ</a>
+            <a href="ios_usermanual_en.html" class="list-group-item">iOS – User Manual</a>
+            <a href="ios_tutorial_en.html" class="list-group-item active">iOS – Tutorial</a>
+            <a href="../support_en.html" class="list-group-item">Support</a> 
           </div>
-        </div>
-        
-        <!-- Content Column -->
-        <div class="col-md-6" role="main">
-        
-        <!-- Content -->
+                    
+          <!-- Sidebar Contents Table -->
+          <nav class="bs-docs-sidebar">
+            <ul class="nav bs-docs-sidenav">
+              <h5>Contents</h5>
+              <li> <a href="#introduction">Introduction</a> </li>
+              <li> <a href="#ConfiguringSEB">Configuring SEB</a> </li>
+              <li> <a href="#UsingWithClassroom">Using SEB for iOS with Classroom</a>
+              <!--
+                <ul class="nav">
+                  <li><a href="#moodle">Using SEB with Moodle</a></li>
+                  <li><a href="#ILIAS">Using SEB with ILIAS</a></li>
+                  <li><a href="#OpenOLAT">Using SEB with OpenOLAT</a></li>
+                </ul>
+              -->
+              </li>
+              <!--             
+              <li> <a href="#starting">Starting and Quitting</a> </li>
+
+              <li> <a href="#configuration">Configuration</a>
+                <ul class="nav">
+                  <li><a href="#InitialConfigurationAssistant">Initial Configuration Assistant</a></li>
+                  <li><a href="#UsingInAppSettingsInterface">Using In-App Settings Interface</a></li>
+                  <li><a href="#GeneralPane">General Pane</a></li>
+                  <li><a href="#ConfigFilePane">Config File Pane</a></li>
+                  <li><a href="#UserInterfacePane">User Interface Pane</a></li>
+                	<ul class="nav">
+                  	  <li><a href="#DockAndSlider">SEB Dock and Slider</a></li>
+                	</ul>
+                  <li><a href="#BrowserPane">Browser Pane</a></li>
+                  <li><a href="#ExamPane">Exam Pane</a></li>
+                  <li><a href="#ApplicationsPane">Applications Pane</a></li>
+                  <li><a href="#NetworkPane">Network Pane</a>
+                    <ul class="nav">
+                      <li><a href="#NetworkPaneFilterSection">&nbsp;&nbsp;&nbsp;Filter Section</a></li>
+                      <li><a href="#NetworkPaneCertificatesSection">&nbsp;&nbsp;&nbsp;Certificates Section</a></li>
+                      <li><a href="#NetworkPaneProxiesSection">&nbsp;&nbsp;&nbsp;Proxies Section</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#SecurityPane">Security Pane</a></li>
+                </ul>
+              </li>
+                            
+              <li><a href="#operating_system">Operating System</a></li>
+              <li><a href="#license">License</a></li>
+                            -->
+
+            </ul>
+            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Back to top </a> 
+          </nav>
+          
+      </div>
+      <!-- /Sidebar Contents Table -->
+      
+      <!-- Content Column -->
+      <div class="col-md-9" role="main">
+      
+        <!-- Document Section --> 
+        <div class="bs-docs-section">
+      
+          <!-- Content -->
           <h2></h2>
 
-          <h2 class="page-header sebnavbar-link">FAQ  for <a href="#Windows" title="Jump down to Windows versions">Windows</a> and <a href="#MacOSX" title="Jump down to Mac versions">macOS</a></h2>
-          
-      <h3 class="page-header seb-section-header sebnavbar-link" id="Windows">
-        <a class="anchorjs-link" href="#Windows"></a>
-        Safe Exam Browser for Windows
-      </h3>          
+          <h2 class="page-header sebnavbar-link" id="introduction">
+            <a class="anchorjs-link" href="#introduction"></a>
+            Tutorial SEB for iOS
+          </h2>
+    
+          <p><strong>The following tutorial explains   how to configure and use SEB for iOS from the perspective of exam administrators.</strong> SEB is a very flexible and modular tool, therefore documentation for examinees on how to use SEB with individual exam setups and the various exam systems it works with should be provided by the institution using SEB or their e-assessment provider.</p>
+          <p><strong>To understand this tutorial, you should also study the <a href="ios_usermanual_en.html">SEB for iOS manual</a>.</strong><br />
+          </p>
 
-      <ul id="seblist">
-        <li><span class="quote">What is SEB for Windows changing in the system?</span><br />
-          While running, SEB changes  Windows Registry settings for the options in the Windows Security Screen invoked by Ctrl-Alt-Del (for details see <a href="../windows/win_usermanual_en.html#RegistryPane">this section</a> in the manual). In addition when running on Windows  versions before 10, SEB stops Windows updates while it is running using a Registry setting and re-enables them when being quit (when SEB 2.1.1 or later is running on Windows 10, only the Windows Update background service is stopped and restarted when SEB is quit). <br />
-          SEB remembers the values for these Registry settings which were active on the exam client computer before running SEB and resets them to the original values when exiting regularly. In case the PC would be force reset while SEB is running or SEB would crash, these Registry settings are again reset to the original values:<br />
-• when SEB is restarted once again and properly quit; <br />
-          • when the computer is restarted (this works correctly starting SEB 2.1.1); <br />
-          • or when uninstalling SEB<br />
-          <br />
-          There is also a command line tool which can be used to reset those values for the unlikely case that the SEB Windows Service (a background service which is part of SEB) didn't work properly or was damaged and can't be run anymore.This tool can be found at the following directory path in your Program Files directory:<br />
-          <span class="path">SafeExamBrowser\SebWindowsServiceWCF\SebRegistryResetter.exe</span><br />
-          (<a href="../windows/win_usermanual_en.html#RegistryPane">see manual</a> for details how to use the registry resetter tool).<br />
-          <br />
-          When SEB is installed, the file type with the file extension <strong>.seb</strong> and the custom URL protocols <strong>seb</strong>:// and <strong>sebs</strong>:// (the latter starting SEB 2.1.1) are registered. These associations are removed when SEB is being uninstalled.<br />
-          <br />
-          SEB also creates two directories for local SEB settings  in locations which are designated in Windows for such  purposes:
-          <br />
-          <ul id="seblist">
-            <li><strong class="path">C:\ProgramData\SafeExamBrowser\</strong><br />
-              Exact path using Windows environment variable: <br />
-              <span class="path">%PROGRAMDATA%\SafeExamBrowser\</span><br />
-              <br />
-            </li>
-            <li><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span><br />
-              Exact path using Windows environment variable: <br />
-              <span class="path">%APPDATA%\SafeExamBrowser\</span> <br />
-              In this directory the SEB web browser also caches resources. In SEB's default settings this cached data is removed when SEB quits.
-              <br />
-            </li>
-          </ul>
-        </li>
-        These directories and possible contents are <strong>not removed</strong> automatically when SEB is uninstalled. 
-      </ul>
-      
-      <!-- macOS FAQ -->
-      <h3 class="page-header seb-section-header sebnavbar-link" id="MacOSX">
-        <a class="anchorjs-link" href="#MacOSX"></a>
-        Safe Exam Browser for macOS
-      </h3>
-      
-      <ul id="seblist">
-        <li><span class="quote">What is SEB for macOS changing in the system?</span><br />
-          SEB doesn't perform any real changes in macOS (this is comprehensible as there is no administrator password necessary when starting SEB for macOS the first time). One global setting (user defaults) change is performed while SEB is running: The path where screen shots are saved is temporarily changed when SEB starts and set back to the user's preset when SEB is quit. If the Mac would be force restarted while SEB is running or SEB would crash, starting and quitting SEB resets the screen shot path again to the original user's preset. In the unlikely case this should ever fail, it is easy to reset this screen shot location to the system's default (the desktop folder) with the following command line in the terminal:<br />
-          <br />
-          <span class="codetext">defaults write com.apple.screencapture location ~/Desktop &amp;&amp; killall SystemUIServer</span></li>
-    </ul>
-      <h3 class="page-header">Additional Resources</h3>
-<p>Please also check the following pages:</p>
-      <p><span class="linksubnavi"><a href="../windows/win_usermanual_en.html">Documentation SEB for Windows</a><br />
-      <a href="../macosx/mac_usermanual_en.html">Documentation SEB for macOS</a></span></p>
-    <p>Please find support following the links below to our Sourceforge project site. The SEB team will answer your questions there.</p>
-      <p><strong>We kindly request you to first read the SEB manuals and search the discussion board for duplicate questions before asking.</strong> You'll save  us time, which we can better spend in improving SEB.</p>
-      <p><strong>Please always mention, which SEB version and which operating system  you are using </strong>(for example <strong>Windows</strong> 7, Windows 8/8.1, Windows 10, <strong>OS X 10.11</strong>, 10.10, 10.9, 10.8, 10.7, 10.6) and possibly other details about your system!</p>
-      <p><strong>Otherwise we cannot answer   your questions properly! </strong></p>
-  <p><a href="https://sourceforge.net/p/seb/discussion/" target="_blank">Forum</a></p>
-      <p><a href="https://sourceforge.net/p/seb/feature-requests/" target="_blank">Feature Requests</a></p>
-      <p><a href="https://sourceforge.net/p/seb/bugs/" target="_blank">Bug Report</a></p>
+        </div>
+        <!-- / Document Section --> 
+    
+        <!-- Document Section --> 
+        <div class="bs-docs-section">
+        
+          <h3 class="page-header sebnavbar-link" id="ConfiguringSEB">
+            <a class="anchorjs-link" href="#ConfiguringSEB"></a>
+            Configuring SEB
+          </h3>
           
+          <p>Being a kiosk browser, SEB doesn't have an address or search field to enter website URLs. As an exam administrator, you have to configure which website is loaded by SEB. This so called Start URL setting can either be the address of your exam system, where students would log in and be presented the exam they are scheduled to conduct. You could also configure SEB to show an exam portal page outside of your exam system, this might be a simple HTML webpage or be managed by a content management system (CMS). On this exam portal page, you would then add a list of links to current exams. This has one advantage: You can use links to SEB configuration files stored on a web server, which then contain the Start URL of your exam. Like this you can use an individual SEB configuration per exam. These links differ from regular http/https web links, you should use the custom URL protocols seb/sebs instead. Tapping such a seb(s):// link opens it in SEB, even if the exam portal page is displayed in another (regular) web browser or you sent an SEB link to your students in an email. Usually the other browser or operating system asks to confirm opening the link in SEB, see the picture below. There the exam portal page was opened in Safari, tapping the <a href="sebs://seb.let.ethz.ch/exams/DemoExamGeneral.seb">SEB Demo Exam</a> link will open SEB.</p>
+
+          <img class="img-responsive" src="images/SEB_TutorialOpeningSEBLink.png" />
+
+          <p>If opening the seb(s):// link is confirmed, SEB is opened, and loads the SEB config file from the link's target URL <a href="sebs://seb.let.ethz.ch/exams/DemoExamGeneral.seb">sebs://seb.let.ethz.ch/exams/DemoExamGeneral.seb</a>. As  a settings password was set for this config file, SEB will request to enter it. When the correct password is entered, SEB decrypts the config file and is reconfigured  temporary using the settings contained in the config file.</p>
+          <p>As the config file has a quit password set, SEB now tries to start a single app mode (also called <span class="quote">kiosk mode</span> or <span class="quote">lock down mode</span>). In this case the iPad isn't owned and managed (supervised) by an organisation, it belongs to the student. In this case the <span class="quote">&quot;App Self-Lock&quot; Single App Mode</span> is invoked, which needs to be confirmed in the dialog displayed in the picture below.</p>
+          
+          <img class="img-responsive" src="images/SEB_TutorialAppSelfLock.png" />
+          
+          <p>If starting the <span class="quote">Single App Mode</span> is confirmed, then the exam is loaded. If App Self-Lock is denied, then SEB displays an error alert with the option to retry starting the <span class="quote">Single App Mode</span> or to quit this exam session. </p>
+          <p>When the <span class="quote">Single App Mode</span> is started, students cannot switch to other apps, can't access the notification and control center etc. If they want to quit SEB manually by using the Quit Button in the lower right corner of the screen, in the SEB Dock bar, then SEB asks to enter a quit password. This is defined in these exam settings and usually only exam invigilators/supporters would know this.</p>
+          <p>&nbsp;</p>
+          <p><strong>This document is work in progress. To be continued soon.</strong></p>
+          <p>Also see the <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x.
+          </p>
+        </div>
+        <!-- / Document Section --> 
+    
+        <!-- Document Section --> 
+        <div class="bs-docs-section">
+        
+          <h3 class="page-header sebnavbar-link" id="LMS">
+          <a class="anchorjs-link" href="#LMS"></a></h3>
+        </div>
+        <div class="bs-docs-section">
+        </div>
+        <!-- / Document Section --> 
+
           <!-- / Content --> 
           <p>&nbsp;</p>
         </div>
@@ -314,6 +364,7 @@
     <script src="../js/docs.min.js"></script>
 
 <!-- InstanceBeginEditable name="scripts" -->
+	<script type="text/javascript" src="../js/retina.min.js"></script>
 <!-- InstanceEndEditable -->
 
 </body>
