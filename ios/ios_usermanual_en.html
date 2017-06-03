@@ -168,11 +168,16 @@
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="../support_en.html">Support</a>
-                    </li>
-                    <li>
-                    	<a href="../faq/faq_en.html">FAQ</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                    		<li>
+                        		<a href="../support_en.html">Support Links</a>
+                    		</li>
+                    		<li>
+                    			<a href="../faq/faq_en.html">FAQ</a>
+                    		</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -396,7 +401,7 @@
             Configuration
           </h3>
         
-          <p>Configuring SEB for iOS works quite similar as in the SEB desktop versions for macOS and Windows. As the .seb config files and seb(s):// config links are generally compatible (platform-independent), you can generate configuration files in SEB for macOS or Windows and use it also for the iOS version. However, in the current desktop versions, the setting options specific for the iOS version cannot be configured yet. If you need to change the default values for these iOS SEB setting options, you have to use the built-in settings editor in SEB for iOS. Below you'll find information about how SEB for iOS can be configured generally and a description for each option. </p>
+          <p>Configuring SEB for iOS works quite similar as in the SEB desktop versions for macOS and Windows. As the .seb config files and seb(s):// config links are generally compatible (platform-independent), you can generate configuration files in SEB for macOS or Windows and use it also for the iOS version. However, in the current desktop versions, the setting options specific for the iOS version cannot be configured yet. If you need to change the default values for these iOS SEB setting options, you have to use the built-in settings editor in SEB for iOS. Below you'll find information about how SEB for iOS can be configured generally and a description of all setting options. </p>
 
           <h4 class="seb-section-header sebnavbar-link" id="InitialConfigurationAssistant">
             <a class="anchorjs-link" href="#InitialConfigurationAssistant"></a>
@@ -465,9 +470,7 @@
             <li><span class="quote">Settings password</span>: Password used to encrypt the config file, if one is set then it will be prompted when SEB opens the settings. You should use a settings password when a config file is shared for starting exams. Encryption prevents settings to be altered and to access the exam before communicating the password to examinees.</li>
             <li><span class="quote">Show Settings In App</span>: Shows the  <span class="quote">Edit Settings</span> command in the left slider menu. If this option is enabled in the client configuration, in-app settings will also be available after opening an exam config. Use this for easier setting up and testing.</li>
           </ul>
-          
-          <p><span class="quote">Local client settings</span> are saved according to macOS standards in the user's <span class="path">Library/Preferences/</span> directory (<span class="path">~/Library/Preferences/</span>, is by default invisible in Finder). Starting SEB version 2.0, it isn't anymore possible to deploy the <span class="path">org.safeexambrowser.Safe-Exam-Browser.plist</span> file from the Preferences folder to other machines (due to stronger, individual encryption per client). Instead, either deploy and open a .seb config file saved with the option 'Use SEB settings file for ... configuring a client'. This requires user interaction, because SEB will show an alert <em>'Local settings of this SEB client have been reconfigured. Do you want to continue working with SEB now or quit?'</em> and one of the buttons 'Continue' or 'Quit' has to be clicked. As an alternative, you can use the new pre-configuration feature when deploying SEB on managed systems which works similar like in SEB for Windows (and doesn't require user interaction):          </p>
-          
+                  
           <h4 class="seb-section-header sebnavbar-link" id="UserInterfacePane">
             <a class="anchorjs-link" href="#UserInterfacePane"></a>
               Settings in the User Interface Pane
