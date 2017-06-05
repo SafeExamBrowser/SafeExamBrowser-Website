@@ -349,7 +349,7 @@
           
           <img class="img-responsive" src="images/SEB_TutorialClassroomNavigateBookmark.png" />
             
-          <p>On your student's iPads, SEB will be started, loads the exam Config File and asks for the exam password. You can wait until all students have the password prompt on their screen and communicate the password then. </p>
+          <p>On your students' iPads, SEB will be started, loads the exam Config File and asks for the exam password. You can wait until all students have the password prompt on their screen and communicate the password then. </p>
           <p>Using  default <a href="ios_usermanual_en.html#Security" target="_blank">Security</a> settings in SEB, the &quot;App Self-Lock&quot; (AAC) Single App Mode will be used. Students have to confirm this and their devices will then be locked into SEB until they submit the exam and tap the <a href="#StartingAndQuittingExam">Quit Link on the feedback page</a>. Then their iPads will be unlocked automatically. </p>
           
           <img class="img-responsive" src="images/SEB_TutorialAppSelfLock.png" />
@@ -359,7 +359,7 @@
             <li>With the latest iOS 10 versions, you cannot use Classroom's Screens View feature (activated with the &quot;Screens&quot; button) to see an overview of all student screens during the exam or to view a single screen in full size.</li>
             <li>If  some students  submit the exam ahead of a  time limit (preset in your exam system), they can use other apps on their devices, what might not be desired.</li>
           </ul>
-          <p>This is the reason why another procedure sometimes might be better. For this you need to create another SEB Config File, where you change the Single App Mode settings as follows:</p>
+          <p>This is the reason why another procedure sometimes might be better. For this you need to create another SEB Config File, where you <a href="ios_usermanual_en.html#Security" target="_blank">change the Single App Mode settings</a> as follows:</p>
           
           <img class="img-responsive" src="images/SEB_TutorialClassroomSAM.png" />
             
@@ -367,17 +367,40 @@
             <li>Disable the "Use AAC/ASAM If Available" setting</li>
             <li>Enable the &quot;Allow Single App Mode&quot; setting</li>
           </ul>
-          Share and save this Config File in the same way as the first and create a bookmark for it in Safari.
+          <p>Share and save this Config File in the same way as the first one and create a bookmark for it in Safari. </p>
+          <p>When you navigate to this bookmark in Classroom, then again on your students' iPads SEB will be opened, loads the exam Config File and asks for the exam password.</p>
+          
+          <img class="img-responsive" src="images/SEB_TutorialClassroomNavigateBookmarkSAM.png" />
+            
+          <p>But this time, after students enter the exam password, SEB will wait for the Single App Mode to be started by Classroom, displaying the message &quot;Waiting for Single App Mode&quot;:</p>
+          
+          <img class="img-responsive" src="images/SEB_TutorialClassroomWaitingForSAM.png" />
+            
+          <p>Now you need to use the Open App button in Classroom and select SEB.        </p>
+
+          <img class="img-responsive" src="images/SEB_TutorialClassroomOpenSEB.png" />
+            
+          <p>Now you need to use the Open App button in Classroom and select SEB, while activating the &quot;Lock in app after opening&quot; switch below.</p>
+          <p>This command will lock students' iPads into SEB, remote activating the Single App Mode. In case you didn't use the lock feature in Classroom on your students' iPads before, they will have to confirm this first.</p>
+          
+          <img class="img-responsive" src="images/SEB_TutorialClassroomLockDevice.png" />
+            
+          <p>Students can now again answer questions in their exam and submit it when they are finished, but you will be able to use the Screen View feature in Classroom to observe their screens during the exam.</p>
+          <p>After submitting the exam and taping the &quot;Quit Safe Exam Browser&quot; Quit Link on the feedback page, students' iPads won't be unlocked, instead SEB will display an alert with the message &quot;Waiting For Single App Mode to End – You will be able to work with other apps after Single App Mode is switched off by your administrator.&quot;. </p>
+          <p>Now you can decide when  to unlock  devices of all students at the same time, using the Unlock button in Classroom. </p>
+
+          <img class="img-responsive" src="images/SEB_TutorialClassroomUnlockDevice.png" />
+            
+          <p>&nbsp;</p>
+          
+          <p>These are only two possible way of how to use Classroom to start secure exams with SEB. You could also configure SEB on all devices to display an exam portal page and place a link to the current exam there. Then you would just need to use the &quot;Open App&quot; button in Classroom. </p>
         </div>
         <!-- / Document Section --> 
     
         <!-- Document Section --> 
         <div class="bs-docs-section">
         
-          <p>&nbsp;</p>
-          <p><strong>This document is work in progress. To be continued soon.</strong></p>
-          <p>Also see the <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x.
-          </p>
+          <p>Please let us know if you have questions or suggestions for other tutorial topics in our <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">discussion board</a>.</p>
 
         </div>
         <!-- / Document Section --> 
