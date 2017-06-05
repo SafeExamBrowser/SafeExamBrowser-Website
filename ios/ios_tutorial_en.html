@@ -333,14 +333,41 @@
             <a class="anchorjs-link" href="#StartingAndQuittingExam"></a>
             Using SEB  with Classroom
           </h3>
-          <p>Using SEB with Apple's Classroom solution allows to easily start secured exams on iPads, which can run on basically  any web based e-assessment solution. As an exam administrator  first create a SEB Config File for your exam, containing its address as Start URL. Configure a Quit Password and a Quit URL in these settings and use the mode <a href="ios_usermanual_en.html#ConfigFilePane" target="_blank">for starting Exams</a>. Then upload the shared SEB Config File to a web server. If you like to use an exam portal page, then place a hyperlink to your exam there, using the protocol/scheme seb(s) instead of http(s).</p>
+          <p>Using SEB with Apple's <a href="https://itunes.apple.com/app/classroom/id1085319084?mt=8" target="_blank">Classroom</a> solution allows to easily start secured exams on iPads, which can run on basically  any web based e-assessment solution. As an exam administrator  first create a SEB Config File for your exam, containing its address as Start URL. Configure a Quit Password and a Quit URL in these settings and use the mode <a href="ios_usermanual_en.html#ConfigFilePane" target="_blank">for starting Exams</a>. Then upload the shared SEB Config File to a web server. If you like to use an exam portal page, then place a hyperlink to your exam there, using the protocol/scheme seb(s) instead of http(s).</p>
 
           <img class="img-responsive" src="images/SEB_TutorialExamPortal.png" />
+            
+          <p>Open Safari on your iPad and create a bookmark with the same seb(s) URL of the exam Config File on your server. In Safari on iOS you first have to tap the Share button, select "Add Bookmark" and then edit the bookmark to change its URL to the seb(s) address of the exam Config File.</p>
+                   
+            <img class="img-responsive" src="images/SEB_TutorialClassroomSafariBookmark.png" />
+            
+          <p>Now you can start your class in Classroom. Use the Navigate button, go to Safari …</p>
           
-        Open Safari on your iPad and create a bookmark with the same seb(s) URL of the exam Config File on your server. In Safari on iOS you first have to tap the Share button, select "Add Bookmark" and then edit the bookmark to change its URL to the seb(s) address of the exam Config File.
+            <img class="img-responsive" src="images/SEB_TutorialClassroomNavigate.png" />
+            
+          <p>… and select the bookmark for the SEB exam.</p>
           
-          <img class="img-responsive" src="images/SEB_TutorialClassroomSafariBookmark.png" />
+          <img class="img-responsive" src="images/SEB_TutorialClassroomNavigateBookmark.png" />
+            
+          <p>On your student's iPads, SEB will be started, loads the exam Config File and asks for the exam password. You can wait until all students have the password prompt on their screen and communicate the password then. </p>
+          <p>Using  default <a href="ios_usermanual_en.html#Security" target="_blank">Security</a> settings in SEB, the &quot;App Self-Lock&quot; (AAC) Single App Mode will be used. Students have to confirm this and their devices will then be locked into SEB until they submit the exam and tap the <a href="#StartingAndQuittingExam">Quit Link on the feedback page</a>. Then their iPads will be unlocked automatically. </p>
           
+          <img class="img-responsive" src="images/SEB_TutorialAppSelfLock.png" />
+            
+          <p>Using  App Self-Lock Single App Mode might have two disadvantages:</p>
+          <ul>
+            <li>With the latest iOS 10 versions, you cannot use Classroom's Screens View feature (activated with the &quot;Screens&quot; button) to see an overview of all student screens during the exam or to view a single screen in full size.</li>
+            <li>If  some students  submit the exam ahead of a  time limit (preset in your exam system), they can use other apps on their devices, what might not be desired.</li>
+          </ul>
+          <p>This is the reason why another procedure sometimes might be better. For this you need to create another SEB Config File, where you change the Single App Mode settings as follows:</p>
+          
+          <img class="img-responsive" src="images/SEB_TutorialClassroomSAM.png" />
+            
+          <ul>
+            <li>Disable the "Use AAC/ASAM If Available" setting</li>
+            <li>Enable the &quot;Allow Single App Mode&quot; setting</li>
+          </ul>
+          Share and save this Config File in the same way as the first and create a bookmark for it in Safari.
         </div>
         <!-- / Document Section --> 
     
