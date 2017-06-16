@@ -351,3 +351,9 @@ ol.seblist>li {
 	font-size: 13px;
 	font: Arial, Helvetica, sans-serif;
 }
+.header-white {
+	font-size: 36px;
+	font-weight: normal;
+	color: #FFF;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
