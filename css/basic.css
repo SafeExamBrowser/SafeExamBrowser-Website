@@ -101,6 +101,10 @@ pre p {
 	background-image: url("../images/app_head_bg_c090.jpg")!important; 
 }
 
+.sebnavbar-background-dark {
+	background-color: #EC9622!important;
+}
+
 .navbar .logo {
     width: 40px;
 }
