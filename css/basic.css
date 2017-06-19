@@ -102,7 +102,7 @@ pre p {
 }
 
 .sebnavbar-background-dark {
-	background-color: #EC9622!important;
+	background-color: #E9933F!important;
 }
 
 .navbar .logo {
@@ -356,7 +356,7 @@ ol.seblist>li {
 	font: Arial, Helvetica, sans-serif;
 }
 .header-white {
-	font-size: 36px;
+	font-size: 25px;
 	font-weight: normal;
 	color: #FFF;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
