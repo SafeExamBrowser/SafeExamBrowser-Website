@@ -36,8 +36,10 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+    
+	<link href="../css/ekko-lightbox.css" rel="stylesheet">
+	
+    <link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
 
@@ -95,20 +97,29 @@
               </tr>
             </thead>
             <tbody>
-             <tr>
-               <td><a href="seb://safeexambrowser.org/exams/DemoExamGeneral.seb">SEB Demo Exam</a></td>
-               <td>April 2017</td>
-               <td>D. Schneider</td>
+              <tr>
+                <td>
+               	  <a href="seb://safeexambrowser.org/exams/DemoExamGeneral.seb">SEB Demo Exam&nbsp;&nbsp;</a>
+                  <a href="QRcodes/SEBDemoExamGeneral.png" data-toggle="lightbox"><img src="../images/QRCodeIcon.png" width="20" height="20" alt="Show SEB QR Code" /></a>
+              	</td>
+               	<td>April 2017</td>
+               	<td>D. Schneider</td>
              </tr>
                
              <tr>
-               <td><a href="seb://safeexambrowser.org/exams/DemoExamGeneral_iOS11.seb">SEB Demo Exam</a> (use with iOS 11 beta)</td>
+               <td>
+               	<a href="seb://safeexambrowser.org/exams/DemoExamGeneral_iOS11.seb">SEB Demo Exam</a> (use with iOS 11 beta)
+                  <a href="QRcodes/SEBDemoExamGeneral_iOS11.eps" target="_blank"><img src="../images/QRCodeIcon.png" width="20" height="20" alt="Show SEB QR Code" /></a>
+               </td>
                <td>June 2017</td>
                <td>D. Schneider</td>
              </tr>
                
              <tr>
-               <td><a href="seb://safeexambrowser.org/exams/DemoExamFreehandDrawing.seb">SEB Freehand Drawing Demo Exam</a></td>
+               <td>
+                 <a href="seb://safeexambrowser.org/exams/DemoExamFreehandDrawing.seb">SEB Freehand Drawing Demo Exam</a>
+                  <a href="QRcodes/SEBDemoExamFreehandDrawing.eps" target="_blank"><img src="../images/QRCodeIcon.png" width="20" height="20" alt="Show SEB QR Code" /></a>
+               </td>
                <td>April 2017</td>
                <td>D. Schneider</td>
              </tr>
@@ -167,5 +178,15 @@
 
     <!-- Bootstrap Docs (for Sidebar) JavaScript -->
     <script src="../js/docs.min.js"></script>
+    
+    <script src="../js/ekko-lightbox.js"></script>
+    
+	<script type="text/javascript">
+		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    	event.preventDefault();
+    	$(this).ekkoLightbox();
+		});
+    </script>
+
 </body>
 </html>
