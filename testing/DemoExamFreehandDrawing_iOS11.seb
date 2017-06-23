@@ -45,7 +45,7 @@
 	<key>allowedDisplaysMaxNumber</key>
 	<integer>3</integer>
 	<key>allowiOSBetaVersionNumber</key>
-	<integer>0</integer>
+	<integer>11</integer>
 	<key>blacklistURLFilter</key>
 	<string></string>
 	<key>blockPopUpWindows</key>
