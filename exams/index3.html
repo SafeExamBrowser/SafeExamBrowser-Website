@@ -21,6 +21,7 @@
 
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>Exam Portal - Demo</title>
+
 <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -43,6 +44,9 @@
     <![endif]-->
 
 <!-- InstanceBeginEditable name="head" -->
+
+	<link href="../css/ekko-lightbox.css" rel="stylesheet">
+	
 <!-- InstanceEndEditable -->
 <link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
 
@@ -382,8 +386,10 @@
               <tr>
                   <td>
                   	<a href="seb://safeexambrowser.org/exams/FullscreenGallery.seb">Fullscreen gallery</a>
+                 	<a href="QRcodes/SEBFullscreenGallery.png" data-toggle="lightbox"><img src="../images/QRCodeIcon.png" width="20" height="20" alt="Show SEB QR Code" /></a>
+                 	<a href="QRcodes/SEBFullscreenGallery.eps" class="text-muted" role="button" title="Download SEB Config QR Code" download="SEBFullscreenGallery-QRcode.eps"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span></a>
                   </td>
-                  <td>January 2017</td>
+                  <td>June 2017</td>
                   <td>D. Schneider</td>
               </tr>
             </tbody>
@@ -426,6 +432,16 @@
     <script src="../js/docs.min.js"></script>
 
 <!-- InstanceBeginEditable name="scripts" -->
+
+    <script src="../js/ekko-lightbox.js"></script>
+    
+	<script type="text/javascript">
+		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
+    	event.preventDefault();
+    	$(this).ekkoLightbox();
+		});
+    </script>
+
 <!-- InstanceEndEditable -->
 
 </body>
