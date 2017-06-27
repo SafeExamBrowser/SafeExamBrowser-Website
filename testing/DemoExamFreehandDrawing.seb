@@ -57,7 +57,7 @@
 	<key>browserMessagingSocket</key>
 	<string>ws:\localhost:8706</string>
 	<key>browserScreenKeyboard</key>
-	<false/>
+	<true/>
 	<key>browserURLSalt</key>
 	<true/>
 	<key>browserUserAgentMac</key>
@@ -79,7 +79,7 @@
 	<key>browserUserAgentiOSCustom</key>
 	<string></string>
 	<key>browserViewMode</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>browserWindowAllowReload</key>
 	<true/>
 	<key>browserWindowShowURL</key>
@@ -87,7 +87,7 @@
 	<key>chooseFileToUploadPolicy</key>
 	<integer>0</integer>
 	<key>createNewDesktop</key>
-	<true/>
+	<false/>
 	<key>downloadAndOpenSebConfig</key>
 	<true/>
 	<key>downloadDirectoryOSX</key>
@@ -182,7 +182,7 @@
 	<true/>
 	<key>examKeySalt</key>
 	<data>
-	RKj2UscAUVNklr25p8gO2fLmYmSjPCXIISmeUylNNMU=
+	6xQ5kVmffZyX83Z431fSGKvqxsm+JD4ydn3fKN+6BV0=
 	</data>
 	<key>exitKey1</key>
 	<integer>2</integer>
@@ -221,7 +221,7 @@
 	<key>insideSebEnableVmWareClientShade</key>
 	<false/>
 	<key>killExplorerShell</key>
-	<false/>
+	<true/>
 	<key>logDirectoryOSX</key>
 	<string></string>
 	<key>logDirectoryWin</key>
@@ -299,7 +299,7 @@
 	<key>openDownloads</key>
 	<false/>
 	<key>originatorVersion</key>
-	<string>SEB_OSX_2.1.11_10872</string>
+	<string>SEB_OSX_2.1.3_27D2</string>
 	<key>oskBehavior</key>
 	<integer>2</integer>
 	<key>outsideSebEnableChangeAPassword</key>
@@ -489,13 +489,13 @@
 	<key>taskBarHeight</key>
 	<integer>40</integer>
 	<key>touchOptimized</key>
-	<false/>
+	<true/>
 	<key>urlFilterRegex</key>
-	<false/>
+	<true/>
 	<key>urlFilterTrustedContent</key>
 	<false/>
 	<key>whitelistURLFilter</key>
-	<string></string>
+	<string>^https:\/\/((seb\.let\.ethz\.ch)|(.*?\.seb\.let\.ethz\.ch))\/moodle\/mod\/quiz\/view\.php\?id=5$</string>
 	<key>zoomMode</key>
 	<integer>0</integer>
 </dict>
