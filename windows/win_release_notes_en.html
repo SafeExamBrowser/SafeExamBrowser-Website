@@ -223,8 +223,20 @@
         <!-- Content -->
           <h2></h2>
     
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.6: </h5>
+<ul id="seblist">
+  <li>Removed &quot;Create new desktop&quot; kiosk mode which fixes the mouse offset problem introduced by the recent Windows Creators Update. The mouse cursor had an offset if the display scale factor was set to a different value than 100% and SEB was using the default &quot;Create new desktop&quot; kiosk mode. For compatibility with older SEB versions, you can still select this kiosk mode in the SEB Config Tool, but SEB 2.1.6 ignores this setting.</li>
+  <li>Added support for HTML 5 webcam and microphone access with new SEB settings in SEB Config Tool / Browser / Browser security / Allow video capture (webcam) &amp; Allow audio capture (microphone). New setting keys allowVideoCapture (in seb browser mapped to media.navigator.video.enabled) and allowAudioCapture (mapped to media.getusermedia.audiocapture.enabled), and set media.navigator.permission.disabled to true (prerequisite for video and audio capture to work in SEB, as the Firefox “allow” alert is not being displayed in SEB).</li>
+  <li>Now ignoring SEB/firefox.exe entry from permittedProcesses, which fixes error message when using SEB 2.2 generated settings with SEB 2.1.6.</li>
+  <li>Improved compatibility with SEB 2.2 generated settings: Removing additionalResources from settings sent to browser.</li>
+  <li>The SEB icon in the SEB task bar is now always leftmost, even if it isn't the first entry in the permittedProcesses setting.</li>
+  <li>Fixed SEB doesn't doesn't finish starting up properly when it can't add some permitted applications (which have been removed but not properly uninstalled).</li>
+  <li>Fixed again wrong Browser Exam Key calculation after update by really performing a major update (completely removing old version's files).</li>
+  <li>Updated seb XUL browser application to current status.</li>
+  <li>Set Gecko/Firefox setting &quot;dom.serviceWorkers.enabled&quot; to true.</li>
+</ul>
 <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.5: </h5>
-<ul id="seblist2">
+<ul id="seblist">
   <li>Fixed that for some third party applications new instances were started when clicking the icon in the task bar (instead switching to the window of the already running instance).</li>
   <li>Fixed: Already running instances of permitted applications were not quit when SEB starts and were accessible inside SEB. Also fixed this for prohibited applications.</li>
   <li>Fixed some config tool UI issues: Radio buttons for Zoom Page/Text and User Agent were sometimes not set properly after loading a new config file, main browser window size wasn't disabled when using full screen mode.</li>

@@ -235,35 +235,36 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.5/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.6/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.1.5 for Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.1.6 for Windows</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for Windows 7, 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: 9d6a8676595c0f10439601d4021d653b42d46faf</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.5/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.1.5" target="_blank">GitHub project site</a>. <br />
+          <span class="codetext">SHA1: 0d6c663eb2940e946d14b403763f8156dd776b1b</span></p>
+        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.6/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.1.6" target="_blank">GitHub project site</a>. <br />
         </p>
-        <p>Safe Exam Browser 2.1.5 for Windows facilitates mass deployment on managed computers  significantly, with changes in the SEB installer and improvements in the management of config file encryption using X.509 certificates. Also contains additional bug fixes for using specific permitted third party applications and fixes minor bugs and usability issues in the SEB Config Tool:</p>
-        <ul id="seblist">
-          <li>Fixed that for some third party applications new instances were started when clicking the icon in the task bar (instead switching to the window of the already running instance).</li>
-          <li>Fixed: Already running instances of some permitted applications were not quit when SEB starts and were accessible inside SEB. Also fixed this for prohibited applications.</li>
-          <li>Fixed some config tool UI issues: Radio buttons for Zoom Page/Text and User Agent were sometimes not set properly after loading a new config file, main browser window size wasn't disabled when using full screen mode.        </li>
-          <li>Fixed in Network/Filter: If editing a filter rule (block/allow), the Config Tool doesn't save this edited rule when using commands Save, Save As, closing the Config Tool. In the following cases in addition also added checking for unconfirmed passwords: Open Settings (with button, menu and drag-and-drop), Revert Settings to Default/Local Client/Last Opened, Use Current Settings to Edit Duplicate/Configure Client/Apply and Start SEB.        </li>
-          <li>Added all new setting options of SEB 2.1.2 for macOS to SEB Config Tool.</li>
-          <li>Changed „Restart Exam Button“ title and icon to „Back to Start Button“, added disclaimer about this function not logging out a previously logged in user.</li>
-          <li>Added Gecko/Firefox setting &quot;browser.display.use_document_fonts = 1&quot; to the SEB browser, to allow pages to choose their own fonts.</li>
-          <li>SEB now looks for X.509 identity certificates for decrypting an identity-encrypted config file also in the &quot;Trusted People&quot; store in the Windows Certificate Store (in addition to the default &quot;Personal&quot; store). On managed computers this allows to deploy the identity certificate to the &quot;Local Machine/Trusted People&quot; store when installing SEB in an administrator account. The certificate will then also be available in the &quot;Current User/Trusted People&quot; stores of all currently existing user accounts on that machine.</li>
-          <li>The SEB installer doesn't create a SEB shortcut on the desktop anymore. Users can start SEB directly from the Windows Start Menu / Windows Start Screen (a menu entry/tile for SEB is still created). As before, it can make sense to start SEB by opening a SEB config file or by opening a seb(s):// link from another web browser or mail application. </li>
-          <li>The SEB installer doesn't create the %APPDATA%\SafeExamBrowser\ directory anymore (when it wasn't existing). This was the reason that Windows Installer shortly started and &quot;updated&quot; the SEB installation when starting SEB the first time in another user account than the one where SEB was installed. </li>
-          <li>Fixed that some permitted applications could not be immediately restarted after being quit. </li>
-          <li>Fixed a problem which caused the Browser Exam Key to be different when SEB was updated from an older version than when it was installed freshly. SEB 2.1.4 can be updated from 2.1.1, 2.1.2 or 2.1.3. A direct update from SEB 2.1 might fail, so uninstall SEB 2.1 first using the Windows control panel before installing SEB 2.1.4.</li>
-          <li>Fixed a problem when switching keyboards didn't work properly when using specific keyboard layouts (at least when running on Windows 10). </li>
-          <li> Fixed issues in SEB Windows Service, in SEB Registry Resetter and an issue which lead to an error message  about a blocked port.</li>
-          <li> Write log file directly after starting SEB. Logging initially starts in the standard log directory, even if settings define another log file path. Added SEB version to log file.</li>
+        <p>Safe Exam Browser 2.1.6 for Windows fixes a problem with the mouse cursor introduced by the recent Windows 10 Creators Update, adds support for webcam and microphone access with new settings and improves compatibility to config files generated with the upcoming major release SEB 2.2.</p>
+        <ul>
+          <li>
+            <p>Removed "Create new desktop" kiosk mode which fixes the mouse offset problem introduced by the recent Windows Creators Update. The mouse cursor had an offset if the display scale factor was set to a different value than 100% and SEB was using the default "Create new desktop" kiosk mode. For compatibility with older SEB versions, you can still select this kiosk mode in the SEB Config Tool, but SEB 2.1.6 ignores this setting.</p>
+          </li>
+          <li>
+            <p>Added support for HTML 5 webcam and microphone access with new SEB settings in SEB Config Tool / Browser / Browser security / Allow video capture (webcam) &amp; Allow audio capture (microphone).</p>
+          </li>
+          <li>
+            <p>Improved compatibility with SEB 2.2 generated settings: Fixes error message that "SEB" couldn't be found when using SEB 2.2 generated settings with SEB 2.1.6 and removing possible embedded additional resources, which could delay SEB starting up or cause a crash.</p>
+          </li>
+          <li>
+            <p>Fixed again a possible wrong Browser Exam Key calculation after update by really performing a major update (completely removing old version's files).</p>
+          </li>
+          <li>
+            <p>Fixed SEB doesn't doesn't finish starting up properly when it can't add some permitted applications (which have been removed but not properly uninstalled).</p>
+          </li>
         </ul>
-        <!--<p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and known issues.</p>-->
+        <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and known issues.</p>
+        
         <p>Other features: </p>
         <ul id="seblist">
           <li>Support for encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. The  configuration is compatible with both the Windows and Mac version of SEB. Use the separate SEB Windows configuration tool to create <span class="quote">.seb</span> settings.</li>
