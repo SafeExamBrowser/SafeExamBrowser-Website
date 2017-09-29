@@ -223,17 +223,17 @@
         <!-- Content -->
           <h2></h2>
     
-<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.6: </h5>
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.7: </h5>
 <ul id="seblist">
-  <li>Removed &quot;Create new desktop&quot; kiosk mode which fixes the mouse offset problem introduced by the recent Windows Creators Update. The mouse cursor had an offset if the display scale factor was set to a different value than 100% and SEB was using the default &quot;Create new desktop&quot; kiosk mode. For compatibility with older SEB versions, you can still select this kiosk mode in the SEB Config Tool, but SEB 2.1.6 ignores this setting.</li>
-  <li>Added support for HTML 5 webcam and microphone access with new SEB settings in SEB Config Tool / Browser / Browser security / Allow video capture (webcam) &amp; Allow audio capture (microphone). New setting keys allowVideoCapture (in seb browser mapped to media.navigator.video.enabled) and allowAudioCapture (mapped to media.getusermedia.audiocapture.enabled), and set media.navigator.permission.disabled to true (prerequisite for video and audio capture to work in SEB, as the Firefox “allow” alert is not being displayed in SEB).</li>
-  <li>Now ignoring SEB/firefox.exe entry from permittedProcesses, which fixes error message when using SEB 2.2 generated settings with SEB 2.1.6.</li>
-  <li>Improved compatibility with SEB 2.2 generated settings: Removing additionalResources from settings sent to browser.</li>
-  <li>The SEB icon in the SEB task bar is now always leftmost, even if it isn't the first entry in the permittedProcesses setting.</li>
-  <li>Fixed SEB doesn't doesn't finish starting up properly when it can't add some permitted applications (which have been removed but not properly uninstalled).</li>
-  <li>Fixed again wrong Browser Exam Key calculation after update by really performing a major update (completely removing old version's files).</li>
-  <li>Updated seb XUL browser application to current status.</li>
-  <li>Set Gecko/Firefox setting &quot;dom.serviceWorkers.enabled&quot; to true.</li>
+  <li>Now adding list of prohibited (browser) processes automatically to all config files which SEB Client or SEB Config Tool opens, unless a prohibited process with the same name already exists. If you need to allow one of these processes, then just deselect the &quot;Active&quot; flag of that process in the list of prohibited processes.</li>
+  <li>Automatically disabling Chrome notifications using a Registry setting.</li>
+  <li>Added new settings sub-key originalName to permitted and prohibited processes.</li>
+  <li>Improved detecting permitted and prohibited processes, file name extensions are now stripped from executable and original filenames before comparing to running processes. </li>
+  <li>Fixed error when displaying which running processes must be terminated before starting exam.</li>
+  <li>Added verification of original filename when allowing user to choose path to third-party application.</li>
+  <li>Fixed bug caused by case-sensitive string comparison when allowing user to choose path to allowed application.</li>
+  <li>Fixed bug for terminating permitted applications when quitting SEB.</li>
+  <li>Fixed autostart error when using SEB 2.2 generated settings with SEB 2.1.7. If permitted process firefox.exe for SEB browser was contained in settings (because those were created in SEB 2.2), the permitted process following SEB/firefox.exe in the list of permitted processes was auto-started, even if that flag wasn’t set.</li>
 </ul>
 <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.5: </h5>
 <ul id="seblist">
@@ -244,6 +244,27 @@
   <li>Added MIME type application/seb to the .seb file type which the installer registers.</li>
   <li>Fixed in Network/Filter: If editing a filter rule (block/allow), the Config Tool didn't save this edited rule when using commands Save, Save As, closing the Config Tool, Open Settings (with button, menu and drag-and-drop), Revert Settings to Default/Local Client/Last Opened, Use Current Settings to Edit Duplicate/Configure Client/Apply and Start SEB.</li>
   <li>In the following cases also added checking for unconfirmed passwords: Open Settings (with button, menu and drag-and-drop), Revert Settings to Default/Local Client/Last Opened, Use Current Settings to Edit Duplicate/Configure Client/Apply and Start SEB.</li>
+</ul>
+
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.4: </h5>
+<ul id="seblist">
+  <li>Added all new setting options of SEB 2.1.2 for macOS to SEB Config Tool.</li>
+  <li>Changed „Restart Exam Button“ title and icon to „Back to Start Button“, added disclaimer about this function not logging out a previously logged in user.</li>
+  <li>Added Gecko/Firefox setting &quot;browser.display.use_document_fonts = 1&quot;, to allow pages to choose their own fonts.</li>
+  <li> SEB now looks for X.509 identity certificates for decrypting an identity-encrypted config file also in the &quot;Trusted People&quot; store in the Windows Certificate Store (in addition to the default &quot;Personal&quot; store). On managed computers this allows to deploy the identity certificate to the &quot;Local Machine/Trusted People&quot; store when installing SEB in an administrator account. The certificate will then also be available in the &quot;Current User/Trusted People&quot; stores of all currently existing user accounts on that machine.</li>
+  <li>The SEB installer doesn't create the %APPDATA%\SafeExamBrowser\ directory anymore when it wasn't existing. This was the reason that Windows Installer shortly started and &quot;updated&quot; the SEB installation when starting SEB the first time in another user account than the one where SEB was installed. Please note that if deploying SEB on managed computers, Windows Installer will start and install .NET 4.5 on a Windows 7 system which didn't had this .NET version installed yet and will require a restart. So make sure that when deploying SEB on Windows 7 computers, .NET 4.5 is also deployed.</li>
+  <li>The SEB installer doesn't create a SEB shortcut on the desktop anymore. Users can start SEB directly from the Windows Start Menu / Windows Start Screen (a menu entry/tile for SEB is still created). As before, it can make sense to start SEB by opening a SEB config file or by opening a seb(s):// link from another web browser or mail application. </li>
+  <li> Fixed that some permitted applications could not be immediately restarted after being quit. </li>
+  <li> Fixed a problem which caused the Browser Exam Key to be different when SEB was updated from an older version than when it was installed freshly. SEB 2.1.4 can be updated from 2.1.1, 2.1.2 or 2.1.3. A direct update from SEB 2.1 might fail, so uninstall SEB 2.1 first using the Windows control panel before installing SEB 2.1.4.</li>
+  <li> Fixed a problem when switching keyboards didn't work properly when using specific keyboard layouts (at least when running on Windows 10). </li>
+  <li> Fixed: Registry Resetter didn't complain and just did nothing when an inexistent username has been typed in. Added additional output for debugging.</li>
+  <li> Fixed a problem which caused SEB Windows Service to crash rarely.</li>
+  <li> Fixed starting the socket server after closing already running processes. This way if an instance of the browser is already running, it gets closed before starting the socket server and an error about a blocked port does not appear.</li>
+  <li> The installer now always performs a &quot;major update&quot;, which guarantees all older files are replaced with the new ones.</li>
+  <li>&quot;Monitor Processes&quot; is now always active when &quot;Disable Explorer Shell&quot; is selected as kiosk mode.</li>
+  <li> Changed title of setting in Config Tool / Exams to &quot;Use Browser Exam Key (send in HTTP header)&quot; according to Mac version and moved checkbox up, to be the first setting in the Browser Exam Key group box. Disabling this setting also disables the Browser Exam Key text field now. </li>
+  <li> Log SEB version in log file.</li>
+  <li> Write log file directly after starting SEB. Logging initially starts in the standard log directory, even if settings define another log file path.</li>
 </ul>
 
 <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.4: </h5>

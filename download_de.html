@@ -236,28 +236,25 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.6/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.7/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.1.6 für Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.1.7 für Windows</span>
           </a> 
         </p>
         
 		<p><strong>Aktuelle Version von Safe Exam Browser für Windows 7, 8.1 und 10</strong><br />
-          <span class="codetext">SHA1: 0d6c663eb2940e946d14b403763f8156dd776b1b</span></p>
+          <span class="codetext">SHA1: df9c74aec134bfcac0d330bf8f5c0943ff6e224a</span></p>
           
-          <p><a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.6/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-win/releases" target="_blank">GitHub-Projektseite</a>. </p>
+          <p><a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.7/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-win/releases" target="_blank">GitHub-Projektseite</a>. </p>
           
-<p id="half_linespace2"><span class="half_linespace">Safe Exam Browser 2.1.6 für Windows beseitigt ein Problem mit dem Mauscursor, welches durch das kürzliche  Windows 10 Creators Update ausgelöst wurde, integriert Unterstützung für Webcam- und Mikrofon-Zugriff, gesteuert durch neue Einstellungsoptionen und verbessert die Kompatibilität mit Konfigurationsdateien, welche mit dem kommenden grossen Release  SEB 2.2 erzeugt wurden.</span></p>
+<p id="half_linespace2"><span class="half_linespace">Safe Exam Browser 2.1.7 für Windows ist ein wichtiges Sicherheitsupdate. Diese SEB-Version löst ein Problem mit Chrome und einigen anderen Webbrowsern, welche Benachrichtigungen anzeigen konnten, solange SEB lief. Dieses Sicherheitsproblem wurde für viele SEB-Nutzer durch SEB 2.1.6 ausgelöst. Wir empfehlen ein sofortiges Update, falls momentan SEB 2.1.6 oder der &quot;Disable Explorer Shell&quot; Kioskmodus benutzt wird.</span> </p>
+<p>SEB 2.1.7 verbessert ausserdem das Zulassen und Sperren von Prozessen generell, das Blockieren von nicht erlaubten Prozessen ist nun sicherer.</p>
 <ul id="seblist">
   <li>
-    <p>Der "Create New Desktop" Kioskmodus wurde entfernt, bei welchem seit dem <span class="half_linespace">kürzlichen Windows 10 Creators Update </span>ein Offset zwischen dem Mausecursor und der Klick-Position auftrat, zumindest wenn die Bildschirmskalierung auf einen anderen Wert als 100% eingestellt war.</p>
+    <p>Eine Liste von nicht zugelassenen Browser-Prozessen wird automatisch zu allen Konfigurationsdateien hinzugefügt, welche der SEB Client oder das SEB Config Tool öffnen, sofern nicht schon ein Eintrag in der &quot;prohibited Processes&quot;-Liste mit demselben Namen existiert. Falls einer dieser Prozesse doch zugelassen werden soll, kann einfach der Parameter &quot;Active&quot; bei diesem Prozess ausgeschaltet werden.</p>
   </li>
-  <li>
-    <p><span class="half_linespace">Unterstützung für HTML 5 Webcam- und Mikrofon-Zugriff hinzugefügt, gesteuert durch neue Einstellungsoptionen</span>   im SEB Config Tool unter  Browser / Browser security / Allow video capture (webcam) &amp; Allow audio capture (microphone).</p>
-  </li>
-  <li>
-    <p><span class="half_linespace">Kompatibilität mit Konfigurationsdateien verbessert, welche mit   SEB 2.2 erzeugt wurden</span>: Fehlermeldung dass die Drittapplikation "SEB" nicht gefunden werden kann wurde beseitigt. Ausserdem werden eingebettete zusätzliche Ressourcen entfernt, welche Verzögerungen oder Abstürze beim Starten von SEB auslösen konnten.</p>
-  </li>
+  <li>Benachrichtigungen des Chrome-Browsers werden zusätzlich mittels einer Registry-Einstellung deaktiviert, während SEB läuft.</li>
+  <li>Die Erkennung von erlaubten und verbotenen Prozessen wurde verbessert, es gibt jetzt auch einen Parameter &quot;ursprünglicher Dateiname&quot; welcher dabei einbezogen wird.</li>
 </ul>
 <p>Allgemeine Funktionen:</p>
 <ul id="seblist">
