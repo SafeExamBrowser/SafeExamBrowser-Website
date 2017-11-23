@@ -223,6 +223,19 @@
           <!-- Content -->
           <h2></h2>
  
+    <h5 id="sebh5"> Release Notes für <a href="../download_de.html#Windows">SEB 2.1.8 für Windows</a>:</h5>
+
+    <ul id="seblist">
+      <li>&quot;Create New Desktop&quot; Kioskmodus wieder eingebaut und DPI-Awareness-Paramenter gesetzt, um  Mauszeiger-Offset-Problem zu lösen.</li>
+      <li>Standardmässig strikt verbotene Prozesse (Screensharing- und Kommunikationstools) werden immer zu Einstellungen hinzugefügt, standardmässig verbotene Browser-Prozesse nur im &quot;Disable Explorer Shell&quot;-Kioskmodus.</li>
+      <li>Beim Öffnen solcher Konfigurationsdateien im SEB Config Tool oder beim Umschalten auf &quot;Create new Desktop&quot; unter &quot;Security&quot; wird ein Dialog angezeigt, in welchem nachgefragt wird, ob diese Prozesse wieder entfernt werden sollen. </li>
+      <li>Process-Monitoring ist nun immer aktiv, wenn einer der beiden Kioskmodis aktiviert ist. </li>
+      <li>Der Dialog zum Eingeben eines Prüfungs-/Settings-Passworts (wenn beim Starten von SEB angezeigt) wird nun auch korrekt dargestellt, wenn die Systemeinstellungen für die Bildschirmskalierung auf einen anderen Wert als  100% eingestellt sind.</li>
+      <li>Monitoring des Windows File Explorers hinzugefügt, um seltene Fälle zu vermeiden, in denen explorer.exe neu gestartet wurde,  die Tastenkombinationen Win+Tab und Win+D und &quot;Sticky Keys&quot; funktionierten.</li>
+      <li>Wenn der SEB-Browser deaktiviert ist, wird nun nicht mehr der falsche zugelassene Prozess automatisch gestartet (wenn sein &quot;autostart&quot;-Parameter gesetzt ist).</li>
+      <li>Fehlerbehebung: Beim Beenden von SEB wurden manche zugelassene Applikationen wie Acrobat Reader nicht korrekt beendet. </li>
+      </ul>
+
     <h5 id="sebh5"> Release Notes für <a href="../download_de.html#Windows">SEB 2.1.7 für Windows</a>:</h5>
 
     <ul id="seblist">
@@ -231,7 +244,6 @@
       </li>
       <li>Benachrichtigungen des Chrome-Browsers werden zusätzlich mittels einer Registry-Einstellung deaktiviert, während SEB läuft.</li>
       <li>Die Erkennung von erlaubten und verbotenen Prozessen wurde verbessert, es gibt jetzt auch einen Parameter &quot;ursprünglicher Dateiname&quot; welcher dabei einbezogen wird.
-        <p>&nbsp;</p>
       </li>
       </ul>
 

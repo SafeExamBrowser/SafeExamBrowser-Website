@@ -223,6 +223,19 @@
         <!-- Content -->
           <h2></h2>
     
+    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.8: </h5>
+<ul id="seblist">
+  <li>Re-integrated the &quot;Create New Desktop&quot; kiosk mode and declared dpi-awareness to resolve mouse pointer offset.</li>
+  <li>Adding strictly prohibited default processes (screen sharing and communication tools) unconditionally to settings, default prohibited browser processes only in Disable Explorer Shell kiosk mode. If you need to allow one of these processes, then just deselect the &quot;Active&quot; flag of that process in Applications/Prohibited Processes.</li>
+  <li>Now removing prohibited default browser processes in SEB Config Tool conditionally (if admin user confirms) from settings when loading config file which has Create new desktop kiosk mode set or when switching to Create new desktop (in Security tab).</li>
+  <li>Process monitoring is now always active if either of the two kiosk modes is set.</li>
+  <li>Fixed a security issue, now checking if SEB windows use original filename as well.</li>
+  <li>Fixed dialog for entering settings password (if displayed when starting SEB) had a wrong scale if the system DPI ratio was different than 100%.</li>
+  <li>Added monitoring of Windows File Explorer to prevent rare cases when explorer.exe was restarted, the shortcuts Win+Tab and Win+D and &quot;Sticky Keys&quot; were working.</li>
+  <li>Fixed that the wrong permitted process was automatically started (with autostart property set) when the SEB browser is deactivated.</li>
+  <li>Fixed quitting SEB didn't quit some permitted processes like Acrobat Reader.</li>
+</ul>
+
 <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.7: </h5>
 <ul id="seblist">
   <li>Now adding list of prohibited (browser) processes automatically to all config files which SEB Client or SEB Config Tool opens, unless a prohibited process with the same name already exists. If you need to allow one of these processes, then just deselect the &quot;Active&quot; flag of that process in the list of prohibited processes.</li>
@@ -235,6 +248,20 @@
   <li>Fixed bug for terminating permitted applications when quitting SEB.</li>
   <li>Fixed autostart error when using SEB 2.2 generated settings with SEB 2.1.7. If permitted process firefox.exe for SEB browser was contained in settings (because those were created in SEB 2.2), the permitted process following SEB/firefox.exe in the list of permitted processes was auto-started, even if that flag wasn’t set.</li>
 </ul>
+
+<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.6: </h5>
+<ul id="seblist">
+  <li>Removed &quot;Create new desktop&quot; kiosk mode which fixes the mouse offset problem introduced by the recent Windows Creators Update. The mouse cursor had an offset if the display scale factor was set to a different value than 100% and SEB was using the default &quot;Create new desktop&quot; kiosk mode. For compatibility with older SEB versions, you can still select this kiosk mode in the SEB Config Tool, but SEB 2.1.6 ignores this setting.</li>
+  <li>Added support for HTML 5 webcam and microphone access with new SEB settings in SEB Config Tool / Browser / Browser security / Allow video capture (webcam) &amp; Allow audio capture (microphone). New setting keys allowVideoCapture (in seb browser mapped to media.navigator.video.enabled) and allowAudioCapture (mapped to media.getusermedia.audiocapture.enabled), and set media.navigator.permission.disabled to true (prerequisite for video and audio capture to work in SEB, as the Firefox “allow” alert is not being displayed in SEB).</li>
+  <li>Now ignoring SEB/firefox.exe entry from permittedProcesses, which fixes error message when using SEB 2.2 generated settings with SEB 2.1.6.</li>
+  <li>Improved compatibility with SEB 2.2 generated settings: Removing additionalResources from settings sent to browser.</li>
+  <li>The SEB icon in the SEB task bar is now always leftmost, even if it isn't the first entry in the permittedProcesses setting.</li>
+  <li>Fixed SEB doesn't doesn't finish starting up properly when it can't add some permitted applications (which have been removed but not properly uninstalled).</li>
+  <li>Fixed again wrong Browser Exam Key calculation after update by really performing a major update (completely removing old version's files).</li>
+  <li>Updated seb XUL browser application to current status.</li>
+  <li>Set Gecko/Firefox setting &quot;dom.serviceWorkers.enabled&quot; to true.</li>
+</ul>
+
 <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.5: </h5>
 <ul id="seblist">
   <li>Fixed that for some third party applications new instances were started when clicking the icon in the task bar (instead switching to the window of the already running instance).</li>
