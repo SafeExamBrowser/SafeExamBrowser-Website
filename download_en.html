@@ -235,25 +235,29 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.7/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.1.8/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.1.7 for Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.1.8 for Windows</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for Windows 7, 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: df9c74aec134bfcac0d330bf8f5c0943ff6e224a</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.7/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.1.6" target="_blank">GitHub project site</a>. <br />
+          <span class="codetext">SHA1: 0a6f3245c93091493d83684edee50a5eedd19f77</span></p>
+        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.1.8/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.1.8" target="_blank">GitHub project site</a>. <br />
         </p>
-        <p>SEB 2.1.7 for Windows is an important security update. This SEB version fixes a problem with Chrome and some other web browsers which could display notifications while SEB was running. This security issue was induced by SEB 2.1.6 for many SEB users. We recommend an immediate update if you're using SEB 2.1.6 or you configured SEB to use the &quot;Disable Explorer Shell&quot; kiosk mode. </p>
-        <p> In addition, SEB 2.1.7 improves handling permitted and prohibited processes in general and blocks prohibited processes more securely.</p>
+        <p>SEB 2.1.8 for Windows is an important update which increases security and stability. This SEB version re-introduces the "Create new desktop" kiosk mode, which reliably blocks notifications from various applications like some web browsers (applications which don't use standard Windows notifications, those were always blocked in SEB). This is possible because the mouse pointer offset problem which occurred with SEB 2.1.5, "Create new desktop" and a recent Windows Creators Update could be solved now.</p>
+        <p>We recommend an immediate update if you're using SEB 2.1.6/2.1.7. If you manually changed your settings to use the "Disable Explorer Shell" kiosk mode with these two SEB versions, then you can change it back to "Create new Desktop" again. You can also remove the default prohibited browser processes from your settings which were added by SEB 2.1.7. If you open a config file containing such default prohibited processes in SEB Config Tool or switch back to "Create new desktop", a dialog is displayed asking if you want to remove those processes.</p>
+        <p>In addition, SEB 2.1.8 blocks new default prohibited processes like some screen sharing and communication tools, fixes the severe "Sticky Keys" security issue and a rare bug which made it possible to switch applications using the shortcut Win + Tab on some devices. All changes:</p>
         <ul>
-          <li>Now adding list of prohibited (browser) processes automatically to all config files which SEB Client or SEB Config Tool opens, unless a prohibited process with the same name already exists. If you need to allow one of these processes, then just deselect the &quot;Active&quot; flag of that process in the list of prohibited processes.</li>
-          <li>Automatically disabling Chrome notifications using a Registry setting.</li>
-          <li>Added new settings sub-key original name to permitted and prohibited processes.</li>
-          <li>Improved detecting permitted and prohibited processes. </li>
-          <li>Fixed error when displaying which running processes must be terminated before starting exam.</li>
-          <li>Added verification of original filename when allowing user to choose path to third-party application.</li>
+          <li>Re-integrated the "Create New Desktop" kiosk mode and declared dpi-awareness to resolve mouse pointer offset.</li>
+          <li>Adding strictly prohibited default processes (screen sharing and communication tools) unconditionally to settings, default prohibited (browser) processes only in Disable Explorer Shell kiosk mode.</li>
+          <li>Now removing prohibited default processes in SEB Config Tool conditionally (if admin user confirms) from settings when loading config file which has Create new desktop kiosk mode set or when switching to Create new desktop (in Security tab).</li>
+          <li>Process monitoring is now always active if either of the two kiosk modes is set.</li>
+          <li>Fixed a security issue, now checking if SEB windows use original filename as well.</li>
+          <li>Fixed dialog for entering settings password (if displayed when starting SEB) had a wrong scale if the system DPI ratio was different than 100%.</li>
+          <li>Added monitoring of Windows File Explorer to prevent rare cases when explorer.exe was restarted and the shortcuts Win+Tab and Win+D were working.</li>
+          <li>Fixed that the wrong permitted process was automatically started (with autostart property set) when the SEB browser is deactivated.</li>
+          <li>Fixed quitting SEB didn't quit some permitted processes like Acrobat Reader.</li>
         </ul>
         <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and known issues.</p>
         
