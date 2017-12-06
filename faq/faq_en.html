@@ -234,7 +234,7 @@
           While running, SEB changes  Windows Registry settings for the options in the Windows Security Screen invoked by Ctrl-Alt-Del (for details see <a href="../windows/win_usermanual_en.html#RegistryPane">this section</a> in the manual). In addition when running on Windows  versions before 10, SEB stops Windows updates while it is running using a Registry setting and re-enables them when being quit (when SEB 2.1.1 or later is running on Windows 10, only the Windows Update background service is stopped and restarted when SEB is quit). <br />
           SEB remembers the values for these Registry settings which were active on the exam client computer before running SEB and resets them to the original values when exiting regularly. In case the PC would be force reset while SEB is running or SEB would crash, these Registry settings are again reset to the original values:<br />
 • when SEB is restarted once again and properly quit; <br />
-          • when the computer is restarted (this works correctly starting SEB 2.1.1); <br />
+          • when the computer is restarted (this doesn&rsquo;t work always, depending on peculiarities of the Windows installation); <br />
           • or when uninstalling SEB<br />
           <br />
           There is also a command line tool which can be used to reset those values for the unlikely case that the SEB Windows Service (a background service which is part of SEB) didn't work properly or was damaged and can't be run anymore.This tool can be found at the following directory path in your Program Files directory:<br />
