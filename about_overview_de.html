@@ -228,7 +228,7 @@
                   <li><a href="#concept-architecture">Architektur</a></li>
                   <li><a href="#concept-components">Komponenten</a></li>
                   <li><a href="#concept-seb-windows">SEB für Windows</a></li>
-                  <li><a href="#concept-seb-macOS">SEB für macOS</a></li>
+                  <li><a href="#concept-seb-macOS">SEB für macOS/iOS</a></li>
                   <li><a href="#concept-configuration">Konfiguration</a></li>
                 </ul>
               </li>
@@ -243,6 +243,7 @@
                 <ul class="nav">
                   <li><a href="#details-seb-windows">SEB für Windows</a></li>
                   <li><a href="#details-seb-macOS">SEB für macOS</a></li>
+                  <li><a href="#details-seb-iOS">SEB für iOS</a></li>
                 </ul>
               </li>
               <li> <a href="#license">Lizenz</a> </li>
@@ -269,14 +270,14 @@
               Konzept
             </h3>
 
-            <p> Safe Exam Browser (SEB) ist eine abgesicherte Browser-Applikation, um Online-Prüfungen auf Learning Management Systemen (LMS) zuverlässig durchführen zu können.  Durch den Start der SEB-Applikation wird ein herkömmlicher Windows- oder Mac&nbsp;OS&nbsp;X Computer in einen sogenannten Kioskmodus versetzt und somit zu einer temporär abgesicherten Arbeitsstation. SEB regelt den Zugriff auf Hilfsmittel wie Systemfunktionen, andere Websites und Programme und unterbindet die Verwendung von unerlaubten Ressourcen während einer Prüfung. </p>
+            <p> Safe Exam Browser (SEB) ist eine abgesicherte Browser-Applikation, um Online-Prüfungen auf Learning Management Systemen (LMS) zuverlässig durchführen zu können.  Durch den Start der SEB-Applikation wird ein herkömmlicher Windows- oder macOS Computer oder ein iOS Gerät in einen sogenannten Kioskmodus versetzt und somit zu einer temporär abgesicherten Arbeitsstation. SEB regelt den Zugriff auf Hilfsmittel wie Systemfunktionen, andere Websites und Programme und unterbindet die Verwendung von unerlaubten Ressourcen während einer Prüfung. </p>
 
             <h4 class="seb-section-header sebnavbar-link" id="concept-general-concept">
               <a class="anchorjs-link " href="#concept-general-concept" aria-label="Anchor link for: concept general concept" ></a>
               Generelles Konzept
             </h4>
 
-            <p>SEB läuft lokal auf einem  Computer und ist über das Internet mit einem Learning Management System verbunden. Generell läuft SEB mit jedem Web-basierten LMS und anderen Web-basierten Prüfungssystemen. Momentan bieten die beiden weitverbreiteten Learning Management Systeme Moodle und ILIAS einen ausdrücklich mit SEB kompatiblen Prüfungsmodus. </p>
+            <p>SEB läuft lokal auf einem  Gerät und ist über das Internet mit einem Learning Management System verbunden. Generell läuft SEB mit jedem Web-basierten LMS und anderen Web-basierten Prüfungssystemen. Momentan bieten  weitverbreiteten Learning Management Systeme Moodle,  ILIAS und OpenOLAT und E-Assessment-Systeme wie Inspera Assessment einen ausdrücklich mit SEB kompatiblen Prüfungsmodus. </p>
             
             <h4 class="seb-section-header sebnavbar-link" id="concept-architecture">
               <a class="anchorjs-link " href="#concept-architecture" aria-label="Anchor link for: concept concept-architecture"></a>
@@ -287,7 +288,7 @@
             
             <img class="img-responsive" src="Media/SEB-Architecture_thirdpartyapp_de.png" alt="" />
             
-            <p class="imagecaption">Schematische Darstellung einer Online-Prüfung mit Safe Exam Browser und einem LMS, beispielsweise  ILIAS oder Moodle. Zusätzlich kann eine parallel laufende Drittapplikation zugelassen werden, z.B. Excel oder R</p>
+            <p class="imagecaption">Schematische Darstellung einer Online-Prüfung mit Safe Exam Browser und einem LMS, beispielsweise  ILIAS,  Moodle, OpenOLAT. Zusätzlich kann eine parallel laufende Drittapplikation zugelassen werden, z.B. Excel, Matlab oder R</p>
             
             <h4 class="seb-section-header sebnavbar-link" id="concept-components">
                <a class="anchorjs-link " href="#concept-components" aria-label="Anchor link for: concept-components"></a>
@@ -298,7 +299,7 @@
             
             <ol class="seblist" start="1" type="1">
               <li>Die <strong>Kiosk-Anwendung</strong>, die den      Rechner absichert und den SEB-Browser plus optionale Drittapplikationen      startet. Da diese Applikation diverse Systemfunktionen während der      Ausführung von SEB unterbinden oder steuern muss, ist diese Komponente      sehr systemnah programmiert. </li>
-              <li>Der <strong>SEB-Browser</strong>, der sich mit      der voreingestellten URL der LMS-Prüfungsseite verbindet und über keine      Navigationselemente wie Adresszeile, Suchmaschinen-Feld usw. verfügt. Die      Windows-Version von SEB verwendet das Browser-System Gecko der Firma Mozilla, entweder in der Form von Portable Firefox oder XULRunner. SEB für macOS      verwendet  das WebKit-Browsersystem. </li>
+              <li>Der <strong>SEB-Browser</strong>, der sich mit      der voreingestellten URL der LMS-Prüfungsseite verbindet und über keine      Navigationselemente wie Adresszeile, Suchmaschinen-Feld usw. verfügt. Die      Windows-Version von SEB verwendet das Browser-System Gecko der Firma Mozilla, entweder in der Form von  Firefox oder XULRunner. SEB für macOS und iOS    verwendet  das WebKit-Browsersystem. </li>
               <li><strong>LMS</strong> beinhalten sogenannte Quiz-Module, die  für Online-Prüfungen Verwendung finden. SEB stützt sich auf Erweiterungen zu diesen Modulen in Moodle und ILIAS, damit die Prüfungen sicher durchgeführt werden können. Die Erweiterungen, die inzwischen im Core-Code der Lernplattformen integriert sind, bestehen aus speziellen Skins (alternativen Benutzeroberflächen). Diese sind dafür verantwortlich, dass die  Navigation der LMS auf die Prüfung eingeschränkt wird, also keine Links auf Seiten ausserhalb der Prüfung führen. Ausserdem werden unerwünschte Funktionen wie der interne Nachrichtenaustausch ausgeschaltet . Ebenfalls stellen die Erweiterungen sicher, dass das Prüfungs-Quiz nur mit einem sicheren Browser wie  SEB durchgeführt werden kann. Diese Einstellungen lassen sich bei der Erstellung der Tests in den  Lernplattformen konfigurieren.</li>
             </ol>
             
@@ -311,19 +312,19 @@
             
             <h4 class="seb-section-header sebnavbar-link" id="concept-seb-macOS">
               <a class="anchorjs-link " href="#concept-seb-macOS" aria-label="Anchor link for: Features"></a>
-              SEB für macOS
+              SEB für macOS/iOS
             </h4>
             
-            <p>Im Gegensatz zur Windows-Version besteht Safe Exam Browser für Mac&nbsp;OS&nbsp;X aus einer monolithischen Applikation, die API-Funktionen eines Webbrowser-Frameworks aufruft, anstatt einen portablen Browser oder eine Browser-Laufzeitumgebung als separaten Prozess einzubinden. SEB für macOS benutzt das <a href="http://webkit.org" target="_blank">WebKit</a>-Browsersystem, das auch von Safari, Apple Mail und diversen neuen Open-Source Browsern  eingesetzt wird.  SEB für macOS verbindet sich auf dieselbe Weise mit den Learning Management Systemen wie die Windows-Version. </p>
+            <p>Im Gegensatz zur Windows-Version besteht Safe Exam Browser für macOS und iOS aus einer monolithischen Applikation, die API-Funktionen eines Webbrowser-Frameworks aufruft, anstatt eine  Browser-Applikation oder eine Browser-Laufzeitumgebung als separaten Prozess einzubinden. SEB für macOS und iOS benutzt das <a href="http://webkit.org" target="_blank">WebKit</a>-Browsersystem, das auch von Safari, Apple Mail und diversen neuen Open-Source Browsern  eingesetzt wird.  SEB für macOS und iOS verbindet sich auf dieselbe Weise mit den Learning Management Systemen wie die Windows-Version. </p>
       
             <h5 class="seb-section-header sebnavbar-link" id="concept-configuration">
               <a class="anchorjs-link " href="#concept-configuration" aria-label="Anchor link for: configuration"></a>
               Konfiguration
            </h5>
            
-          <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span>  ermöglicht sichere Prüfungen auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern und erleichtert die Konfiguration auch in zentral verwalteten Prüfungsumgebungen auf beiden Platformen Windows und macOS. </span><span class="half_linespace">Mit <span class="quote">SEB 2.0</span> wird eine individuelle Konfiguration pro Prüfung auf einfache Weise möglich, die  mit starker Verschlüsselung vor Manipulationen gesichert ist. Dank einer neuen Authentifizierungsmethode ist es möglich, in Prüfungssystemen sicherzustellen, dass nur  bestimmte, unveränderte SEB-Versionen mit den korrekten Sicherheitseinstellungen für die Prüfung verwendet werden. Dies ermöglicht sicheres Prüfen insbesondere auch auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern.</span> </p>
+          <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span>  und neuer ermöglicht sichere Prüfungen auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern und erleichtert die Konfiguration auch in zentral verwalteten Prüfungsumgebungen auf den drei Platformen Windows, macOS und iOS. </span><span class="half_linespace">Mit <span class="quote">SEB 2.x</span> wird eine individuelle Konfiguration pro Prüfung auf einfache Weise möglich, die  mit starker Verschlüsselung vor Manipulationen gesichert ist. Dank einer neuen Authentifizierungsmethode ist es möglich, in Prüfungssystemen sicherzustellen, dass nur  bestimmte, unveränderte SEB-Versionen mit den korrekten Sicherheitseinstellungen für die Prüfung verwendet werden. Dies ermöglicht sicheres Prüfen insbesondere auch auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern.</span> </p>
           
-          <p><span class="quote">Safe Exam Browser 2.0</span> ist eine vereinheitlichte Version, welche dieselben Funktionen, Schnittstellen für Prüfungssysteme, Konfigurationsdateien und eine sehr ähnliche Benutzeroberfläche auf beiden unterstützten Plattformen zur Verfügung stellt. Dabei werden aber weiterhin Eigenheiten der Betriebssysteme und spezifische Funktionalitäten der Plattformen berücksichtigt. Neben den mit allen Funktionen ausgestatteten Versionen für Windows und Mac OS&nbsp;X arbeiten wir ausserdem an einer Version für das iPad mit reduziertem Funktionsumfang, die aber trotzdem kompatibel mit dem vereinheitlichen <span class="quote">.seb Konfigurationsformat</span> sein wird.</p>
+          <p><span class="quote">Safe Exam Browser 2.0</span> und neuer ist eine vereinheitlichte Version, welche dieselben Funktionen, Schnittstellen für Prüfungssysteme, Konfigurationsdateien und eine sehr ähnliche Benutzeroberfläche auf beiden unterstützten Plattformen zur Verfügung stellt. Dabei werden aber weiterhin Eigenheiten der Betriebssysteme und spezifische Funktionalitäten der Plattformen berücksichtigt.</p>
             
           </div>
           <!-- / Document Section --> 
@@ -342,9 +343,9 @@
             </h4>
         
             <ul id="seblist">
-              <li>Mehrere Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne jegliche Navigationselemente)</li>
-              <li>VM-Detektor: SEB erkennt, ob er in einer virtuellen oder &quot;nativen&quot; Umgebung läuft und verweigert notfalls das Aufstarten</li>
-              <li>Eingebaute Anbindung an Moodle und ILIAS, grundsätzliche Kompatibilität zu jedem Web-basierten Prüfungssystem</li>
+              <li>Mehrere Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne jegliche Navigationselemente), Browser-Tabs auf iPads</li>
+              <li>VM-Detektor: SEB erkennt, ob er in einer virtuellen oder &quot;nativen&quot; Umgebung oder auf einem Gerät mit Jailbreak läuft und verweigert notfalls das Starten einer Prüfung</li>
+              <li>Eingebaute Anbindung an Moodle,  ILIAS, OpenOLAT, Inspera Assessment, grundsätzliche Kompatibilität zu jedem Web-basierten Prüfungssystem</li>
             </ul>
       
             <h4 class="seb-section-header sebnavbar-link" id="features-seb-windows">
@@ -420,12 +421,12 @@
                 </ul>
               </li>
               <li>Lizenz: Mozilla Public License (MPL)</li>
-              <li>Browser-System: Eingebettete Version von XULRunner (Mozilla Gecko, worauf auch Firefox basiert) </li>
+              <li>Browser-System: Mozilla Gecko, worauf auch Firefox (bis Version 56) basiert </li>
               <li>Programmiersprachen/Frameworks: 
                 <ul>
                   <li>C# (.NET)</li>
                   <li>JavaScript</li>
-                  <li>Mozilla XULRunner</li>
+                  <li>Mozilla XUL</li>
                 </ul>
               </li>
             </ul>
@@ -438,6 +439,7 @@
             <ul>
               <li>Betriebssystem: 
                 <ul>
+	              <li>macOS 10.13 High Sierra</li>
 	              <li>macOS 10.12 Sierra</li>
     	          <li>OS X 10.11 El Capitan</li>
         	      <li>OS X 10.10 Yosemite</li>
@@ -445,6 +447,23 @@
 	              <li>OS X 10.8 Mountain Lion (Einbetten von TLS/SSL/CA-Zertifikaten in die SEB-Konfigurationsdatei und Zertifikats-Pinning wird nicht unterstützt)</li>
     	          <li>OS X 10.7 Lion (nur als Prüfungs-Client unterstützt, das Einstellungen-Fenster ist nicht verfügbar, Einbetten von TLS/SSL/CA-Zertifikaten in die SEB-Konfigurationsdatei und Zertifikats-Pinning wird nicht unterstützt)</li>
                   <li>Mac OS X 10.6 Snow Leopard (nur bis SEB 1.5.2)</li>
+                </ul>
+              </li>
+              <li>Lizenz:  Mozilla Public License (MPL)</li>
+              <li>Browser-System: In dem jeweiligen Betriessystem integrierte Version von WebKit (worauf auch Safari basiert)</li>
+              <li>Programmiersprache/Framework: Objective-C (Cocoa)</li>
+            </ul>
+                        <h4 class="seb-section-header sebnavbar-link" id="details-seb-iOS">
+              <a class="anchorjs-link " href="#details-seb-iOS" aria-label="Anchor link for: Details SEB for iOS"></a>
+              SEB für iOS
+            </h4>
+            
+            <ul>
+              <li>Betriebssystem: 
+                <ul>
+	              <li>iOS 11</li>
+	              <li>iOS 10</li>
+	              <li>iOS 9.3.5</li>
                 </ul>
               </li>
               <li>Lizenz:  Mozilla Public License (MPL)</li>
@@ -477,7 +496,7 @@
               <a class="anchorjs-link " href="#privacy-statement" aria-label="Anchor link for: Privacy Statement"></a>Datenschutzerklärung</h3>
             
             <p>SafeExamBrowser (SEB) liefert weder personenbezogene noch andere Daten an einen zentralen Server und ist mit keinem Webanalyse-Dienst (Web Analytics, User Tracking, Clickstream Analytics usw.) direkt verbunden.  SEB sammelt in der Standardeinstellung sogenannte Randdaten, die lokal auf dem jeweiligen Client-Rechner in einer Log-Datei gespeichert werden. Die Log-Dateien werden durch SEB nicht weitergeben, sondern verbleiben auf dem lokalen Rechner. Die Log-Dateien können manuell eingesammelt werden. Sie dienen dem Zweck der Fehleranalyse. Das Sammeln von Randdaten und des Erstellen der zugehörigen Log-Dateien kann in den SEB-Einstellungen deaktiviert werden (<a href="windows/win_usermanual_en.html#SecurityPane">Win</a>/<a href="macosx/mac_usermanual_en.html#SecurityPane">Mac</a>). SEB sammelt keine anderen Benutzerdaten, sondern lädt und zeigt nur Webseiten an und &quot;kennt&quot; deswegen keine Details über die jeweiligen Benutzer.  SEB arbeitet mit verschiedenen webbasierten Prüfungssystemen zusammen, die unter Umständen Benutzerdaten sammeln, hierfür sind die jeweiligen, produktbezogenen Datenschutzbestimmungen zu beachten.</p>
-            <p>Weder für den Download von SEB noch für dessen Installation oder Nutzung ist eine irgendwie geartete Anmeldung notwendig. SEB hat keinerlei Verbindung zu einem Cloud-Service. SEB verbindet sich ausschließlich zu dem Server, der in den Einstellungen unter "Start URL" definiert wird. In der Standardeinstellung zeigt SEB diese <a href="http://safeexambrowser.org/start" target="_blank">Webseite</a>, die in diesem <a href="https://github.com/SafeExamBrowser/SafeExamBrowser.github.io" target="_blank">öffentlichen Repository</a> innerhalb des Dienstes <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> gespeichert ist. Die entsprechenden Erklärungen von GitHub zur Verwendung von Webanalyse-Diensten finden sich im <a href="https://help.github.com/articles/github-privacy-statement/#our-use-of-cookies-and-tracking" target="_blank">GitHub Privacy Statement</a>.</p>
+            <p>Weder für den Download von SEB noch für dessen Installation oder Nutzung ist eine irgendwie geartete Anmeldung notwendig. SEB hat keinerlei Verbindung zu einem Cloud-Service. SEB verbindet sich ausschließlich zu dem Server, der in den Einstellungen unter "Start URL" definiert wird. In der Standardeinstellung zeigt SEB diese <a href="http://safeexambrowser.org/start" target="_blank">Webseite</a>.</p>
             <p>Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>des Open-Source-Projekts SEB ist öffentlich verfügbar. Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>kann jederzeit und uneingeschränkt eingesehen und damit die gemachten Erklärungen unabhängig überprüft werden.<br>
             </p>
               
