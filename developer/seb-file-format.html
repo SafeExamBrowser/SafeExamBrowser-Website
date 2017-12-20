@@ -153,7 +153,7 @@
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li>
-									<a href="developer/seb-integration.html">SEB Integration</a>
+									<a href="../developer/overview.html">Developer Information</a>
 								</li>
 								<li>
 									<a href="../support_en.html">Support Links</a>
@@ -175,9 +175,230 @@
 			<div class="page-header">
 				<h1>Encrypted SEB Config Files Format</h1>
 			</div>
-			
-			Content goes here...
-			
+			<div class="row">
+				<div class="col-md-3">
+					<div class="list-group hidden-print"> 
+						<a href="overview.html" class="list-group-item">Overview</a>
+						<a href="seb-integration.html" class="list-group-item">Integration</a> 
+						<a href="seb-file-format.html" class="list-group-item active">File Format</a> 
+					</div>
+				</div>
+				<div class="col-md-9">
+					<p><span>Safe Exam Browser’s configuration files with the file name extension .seb containing exam configurations have to be encrypted because:</span></p>
+					<ul>
+						<li><span>examinees should not be able to alter the exam configuration;</span></li>
+						<li><span>some details of an exam configuration should be kept secret to hinder manipulating configuration of exams.</span></li>
+					</ul>
+					<p><span>It has to be possible to implement the encryption on various platforms, as clients running on Windows, Mac OS X and in future iOS, Linux-, Android and a SEB server application should be able to open and save .seb files. We prioritize an encryption which is as secure as possible, following current cryptography standards.</span></p>
+					<p><span>The settings itself are defined as a XML structure with key/value pairs. Key names should be self-explaining (avoid abbreviations, key name string length is irrelevant).</span></p>
+					<p><span>It has to be possible to use the same .seb files platform-independently for configuring all versions of SEB clients. As many key/value pairs as possible should have the same function on all platforms. If this isn’t possible because of the nature of a settings option (for example if that feature isn’t available on some platform or doesn’t make sense there) a compatible way of configuring clients must be found. For example there can be a general meta key for enabling/disabling a specific functionality and individual detail keys per platform for the specific configuration details.</span></p>
+					<p><span>There are two encryption/decryption methods:</span></p>
+					<ul>
+						<li><span>When opening a .seb file, the password used to encrypt this file needs to be entered. This method separates encrypted data (cypher text) and key (secret) very well, as long as the exam administrator chooses a good password and it is kept secret just before the exam starts. Therefore this method is ideal on not centrally managed student computers.<br> </span></li>
+						<li><span>For encrypting .seb files a cryptographic key (combined with a X.509 certificate) is used, which will be deployed to the exam client computers before the exams and stored securely in the Windows Certificate Store or the OS X Keychain. On centrally managed computers where users/examines don’t have administrator access, the secret (key) is separated quite well from the cipher text.<br> At the same time this method doesn’t use a general key, which would be stored inside the SEB application code and therefore could be extracted, made public and would affect the whole installed base of SEB worldwide. Instead, each institution using SEB can generate their own certificates/keys and replace them whenever they like.</span></li>
+					</ul>
+					<p><span>Encryption with certificate/key can be combined with password encryption, for example for additional security for particular exams.<br></span></p>
+					<h4 class="seb-section-header"><span><strong><br>Basic file structure with 4 char prefix</strong></span></h4>
+					<p>A .seb file is actually a gzip compressed archive, but with the file extension .seb. This helps some web browsers to recognize that they should download a .seb file instead of displaying it as text in the browser (which would lead to arbitrary characters, as the .seb file is encrypted and in a binary format). Because a web server usually won’t know the .seb file type, it will deliver a .seb file with the standard MIME type html/text. By using a gzip wrapper around the binary encrypted configuration data, most browsers will download the .seb file.</p>
+					<p><span>A gzip decompressed .seb file always begins with a 4 char prefix, which specifies the kind of the following data. The four chars correspond 4 bytes. In general, all text information in .seb files, means prefixes and the XML settings data (keys and values) are coded in Unicode <strong>UTF8</strong>. Encrypted data is in binary format. In the illustration below the .seb file length is n+1 bytes, the lower line shows the byte numbers (ranging from 0 to n).&nbsp;</span></p>
+					<p><span>| &nbsp; &nbsp; prefix<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>... data ...<span class="Apple-tab-span"> </span>|</span></p>
+					<p><span>|&nbsp; &nbsp; &nbsp; 0 - 3<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>&nbsp; &nbsp; 4 - n<span class="Apple-tab-span"> </span>|</span></p>
+					<p><span>Valid prefixes:<br> </span></p>
+					<p style="margin-left: 35.4px;"><span><strong>pkhs</strong><span class="Apple-tab-span"> </span>Public key hash, stands for encrypted data using a cryptographic identity, identified by a 20 bytes hash of the encrypting public key.&nbsp;</span></p><p style="margin-left: 35.4px;"><span>phsk<span class="Apple-tab-span"> </span></span></p>
+					<p style="margin-left: 35.4px;"><span><strong>pswd</strong><span class="Apple-tab-span"> </span>Password, stands for encrypted data using a password.&nbsp;</span></p>
+					<p style="margin-left: 35.4px;"><span><strong>plnd</strong><span class="Apple-tab-span"> </span>Plain data, stands for unencrypted, gzip compressed data, see below.</span></p>
+					<p style="margin-left: 35.4px;"><span><strong>pwcc</strong><span class="Apple-tab-span"> </span>Password, configuring a client. This kind of .seb file is used for changing the local preferences which are used when the SEB application is started up directly (not by opening a .seb file). In the Mac OS X SEB client settings are written into the file ~/Library/Preferences/org.safeexambrowser.Safe-Exam-Browser.plist. The Windows version writes the settings to the file SebClientSettings.seb in the „AppData“ directory.</span></p>
+					<p><span>Since a .seb file can be encrypted with both a cryptographic identity and a password, there can be an outer block and an encapsulated inner block, both identified by their own prefixes. If the .seb file is encrypted by both methods, then the outer block is always a “pkhs” block, the inner is a “pswd” or a “pwcc” block. If a .seb file is only encrypted by an identity, there is a outer “pkhs” block and an inner “plnd” block (means the outer block is encrypted with an identity and the inner block is prefixed by “plnd” and its data is not encrypted). If a .seb file is solely encrypted by a password, there is only one “pswd” or a “pwcc” block (there is no outer/inner block).</span></p>
+					<p><span>The inner, plain (decrypted) data consists of an XML text file. To save space, this UTF8 formatted text file is compressed with the gzip algorithm. That means an encrypted .seb file uses the gzip compression twice: Once on the plain XML text data to reduce its size and a second time on the final, encrypted and prefixed data. To reduce the size of the configuration data effectively, the gzip compression must be applied on the plain text data, as the encrypted binary data has too much entropy and wouldn’t reduce size of the data well (or not at all).</span></p>
+					<p><span><strong>Procedure to encrypt and save a .seb file</strong></span></p>
+					<p><span>(This is done on Windows with the SEB configuration tool, on the Mac inside SEB in the preferences window’s “Exam” pane)<br> </span></p>
+					<ol>
+						<li><span>The SEB configuration tool checks if at least a password or a cryptographic identity for encryption is selected. If none is selected, then it aborts saving the .seb file, requesting the user to enter/choose at least one of these security elements.<br> </span></li>
+						<li><span>If a password is entered, encrypt the gzip compressed XML settings data with that password and prefix it with “pswd” (store those four bytes in front of the encrypted data).<br> </span></li>
+						<li><span>If no password is entered, prefix the gzip compressed plain XML settings data with “plnd”.<br> </span></li>
+						<li><span>If a cryptographic identity is selected, encrypt the whole resulting data from step 2 or 3 (including the prefix!) with the public key. Store the prefix “pkhs”, store the 20 bytes public key hash value (see next chapter) and append the encrypted data to that.<br> </span></li>
+						<li><span>Compress with gzip and save the resulting (binary) data in the .seb file.</span></li>
+					</ol>
+					<p><span><strong>Procedure to load and decrypt a .seb file</strong></span></p>
+					<p><span>(This happens in SEB Starter)</span></p>
+					<ol>
+						<li><span>Load the whole .seb file into memory. Decompress with gzip (ungzip). Check for the first four bytes prefix.<br> </span></li>
+						<li><span>If the prefix is not “pkhs”: Skip to step 4. <br> </span></li>
+						<li><span>If the prefix is “pkhs”: The 20 bytes public key hash following this prefix (see next chapter) is read and used to retrieve the identity to which the public key is belonging to from the certificate store or keychain. The private key belonging to this identity is retrieved and used to decrypt the encrypted data.<br> </span></li>
+						<li><span>Check for the prefix of the data resulting from step 2 or 3. If it is “plnd”, then strip the 4 bytes prefix, the remaining data is the XML settings data.<br> </span></li>
+						<li><span>If the prefix is “pswd”: Request the user to enter a password. Decrypt the data with this password. If decryption fails with a “wrong password” error, ask again for the password (max. 5 times, then abort).<br> </span></li>
+						<li><span>If decryption was successful, decompress with gzip (ungzip). The resulting data is the XML settings data.</span></li>
+					</ol>
+					<h4 class="seb-section-header"><span><strong><br>Encryption with public/private key</strong></span></h4>
+					<p><span>In this scenario, RSA public-key cryptography is used to encrypt and decrypt the plain XML settings data or the XML settings data already encrypted by password (see chapter “basic file structure”). In detail, a X.509 certificate with an embedded public key is used to encrypt the exam settings and the associated private key is used to decrypt the settings in the SEB exam clients (the combination of such a certificate containing a public key together with the according private key is called cryptographic identity). This encryption/decryption scenario is a bit an unusual use of the asymmetric RSA cryptography (because the private key has to be deployed to all the exam clients), but it was chosen because it’s easy to deploy the cryptographic identity in form of PKCS #12 data in a password-protected *.p12 file (which can be renamed to .pfx as used by Windows) to all the exam clients. The private key is stored securely in the Certificate Store in Windows or the Keychain in Mac OS X, so this scenario is quite secure if examinees don’t have administrator rights on the (centrally managed) exam computers (means they cannot extract the key from the secure store). Currently SEB is not using the certificate to verify the identity of the originator of the exam settings; so self-signed identity certificates can be used. For better performance especially when decoding larger configuration files with SEB 2.2 we introduced a new version of the identity certificate encryption, which should preferably be used, latest when compatibility with SEB versions &lt; 2.2. isn’t required anymore.</span></p>
+					<h5><span><strong>a) Encryption with public/private asymmetric keys and symmetric key</strong></span></h5>
+					<p><span>Available in SEB versions starting 2.2, default format when not selecting „Use old asymmetric-only encryption“ in the Config File settings pane.<br> </span></p>
+					<p><span>.seb settings structure when using a cryptographic identity together with a symmetric key:</span></p>
+					<p><span>| &nbsp; &nbsp; “phsk”<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>public key hash<span class="Apple-tab-span"> </span>| key length |<span class="Apple-tab-span"> </span> encrypted key&nbsp; |<span class="Apple-tab-span"> </span>&nbsp; ... encrypted data ...<span class="Apple-tab-span"> </span>|</span></p>
+					<p><span>|&nbsp; &nbsp; &nbsp; 0 - 3<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>&nbsp; &nbsp; &nbsp; 4 - 23<span class="Apple-tab-span"> </span>|&nbsp; &nbsp; 24 - 27 &nbsp; |<span class="Apple-tab-span"> </span>&nbsp; 28 - (28+kl)<span class="Apple-tab-span"> </span> &nbsp; &nbsp; |<span class="Apple-tab-span"> </span>(29+kl) - n<span class="Apple-tab-span"> </span>|</span></p>
+					<p><span>See above illustration where the parts of the settings structure are placed in the binary data (total length of the .seb file is n+1 bytes).</span></p>
+					<ul>
+						<li><span>4 bytes prefix containing the string “phsk” (standing for „public key hash + symmetric key“)</span></li>
+						<li><span>20 bytes public key hash: In X.509 certificates, the hash of the public key can be used to identity both the certificate (with its embedded public key) and the associated private key. Therefore the SEB on an exam client computer checks if a cryptographic identity with the hash contained in the .seb file is stored in the Certificate Store or Keychain and uses its private key for decoding.&nbsp;</span></li>
+						<li><span>4 bytes integer value with the length of the encrypted symmetric key (named „kl“ above).</span></li>
+						<li><span>kl bytes with the binary representation of the encrypted symmetric key.&nbsp;</span></li>
+						<li><span>Encrypted settings</span></li>
+					</ul>
+					<p><span>The encryption in this „phsk“ mode works generally as usual implementations of public/private key cryptography, where asymmetric keys are combined with a randomly generated symmetric key, as decryption with symmetric keys is much faster:</span></p>
+					<p><span>Encrypt:</span></p>
+					<ol>
+						<ol>
+							<li><span>Generate a random symmetric key. In the current implementation, as standard AES 256 key is used (256 bits = 32 bytes).</span></li><li><span>Encrypt the SEB config data with the generated symmetric key. For convenience, we are using the same encryption as for password encrypted setting files (based on RNCryptor, see section „ <strong>Encryption with password“</strong>). The binary key is converted to a base64 encoded string, which is used as the encryption password for the settings data.&nbsp;</span></li>
+							<li><span>Encrypt the symmetric key with the given public key</span></li><li><span>Put the data together (prefix, public key hash, encrypted symmetric key with preceding 32 bit integer value containing the length of the encrypted key, encrypted settings data), gzip compress resulting binary data.</span></li>
+						</ol>
+					</ol>
+					<p><span>Decrypt:</span></p>
+					<ol>
+						<ol>
+							<li><span><span class="Apple-tab-span"> </span>3.1.1.</span><span>Decompress data, parse prefix and other components</span></li>
+							<li><span><span class="Apple-tab-span"> </span>3.1.2.</span><span>Use public key hash to find matching private key from certificate store</span></li><li><span><span class="Apple-tab-span"> </span>3.1.3.</span><span>Decrypt symmetric key using the private key</span></li><li><span><span class="Apple-tab-span"> </span>3.1.4.</span><span>Use base64 encoded string representation of the decrypted symmetric key to decrypt the SEB config data.</span></li>
+						</ol>
+					</ol>
+					<h5><span><strong>b) Encryption with public/private key</strong></span></h5>
+					<p><span>Available in SEB versions &lt; 2.2 and for compatibility also in SEB 2.2 and higher.<br> </span></p>
+					<p><span>.seb settings structure when using a cryptographic identity:</span></p>
+					<p><span>| &nbsp; &nbsp; “pkhs”<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>public key hash<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>... encrypted data ...<span class="Apple-tab-span"> </span>|</span></p>
+					<p><span>|&nbsp; &nbsp; &nbsp; 0 - 3<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>&nbsp; &nbsp; &nbsp; 4 - 23<span class="Apple-tab-span"> </span>|<span class="Apple-tab-span"> </span>&nbsp;<span class="Apple-tab-span"> </span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 24 - n<span class="Apple-tab-span"> </span>|</span></p>
+					<p><span>Total length of the .seb file is n+1 bytes. After the 4 bytes prefix containing the string “pkhs”, a 20 bytes public key hash follows and after that the encrypted data. In X.509 certificates, the hash of the public key can be used to identity both the certificate (with its embedded public key) and the associated private key. Therefore the SEB on an exam client computer checks if a cryptographic identity with the hash contained in the .seb file is stored in the Certificate Store or Keychain and uses its private key to decode the settings.</span></p>
+					<p><span>In the Mac OS X version of SEB the system provided Common Security Services Manager (CSSM) APIs are used for encryption with public/private key. CSSM belongs to the cross platform, open source Common Data Security Architecture (CDSA), which “is a set of layered security services and cryptographic framework that provide an infrastructure for creating cross-platform, interoperable, security-enabled applications for client-server environments. CDSA covers all the essential components of security capability … with security services that provide facilities for cryptography, certificate management, trust policy management, and key recovery.” For more information see the official documentation at <a href="http://www.opengroup.org/security/cdsa.htm" target="_blank">http://www.opengroup.org/security/cdsa.htm</a> and <a href="http://pubs.opengroup.org/onlinepubs/9629299/toc.htm" target="_blank"><span>http://pubs.opengroup.org/onlinepubs/9629299/toc.htm</span></a>. Although other compatible security frameworks and higher-level APIs may also be used on other platforms, below the CDSA/CSSM API methods are listed which are used by SEB on OS X.</span></p>
+					<p><span><strong><br>Encrypting&nbsp;</strong></span></p>
+					<ol>
+						<li>
+							<span>The exam administrator can choose the identity for encryption from a list of cryptographic identities. These have to meet the following conditions:<br> </span>
+							<ul>
+								<li><span>They need to be complete identities; means there must be a certificate with embedded public key and an associated private key.<br> </span></li>
+								<li><span>In the CSSM_KEY structure of both keys, <em>KeyHeader.AlgorithmId</em> must be CSSM_ALGID_RSA (they have to be RSA keys)<br> </span></li>
+								<li><span>The public key’s (its <em>KeyHeader.KeyClass</em> is CSSM_KEYCLASS_PUBLIC_KEY) <em>KeyHeader.KeyUsage</em> property must have at least one of these 3 flags set: CSSM_KEYUSE_ENCRYPT, CSSM_KEYUSE_WRAP, CSSM_KEYUSE_ANY.<br> </span></li>
+								<li><span>The private key’s (its <em>KeyHeader.KeyClass</em> is CSSM_KEYCLASS_PRIVATE_KEY) <em>KeyHeader.KeyUsage</em> property must have at least one of these 3 flags set: CSSM_KEYUSE_DECRYPT, CSSM_KEYUSE_WRAP, CSSM_KEYUSE_ANY.</span></li>
+							</ul>
+						</li>
+						<li><span>Fetch certificate and its public key from the identity selected for encryption.<br> </span></li>
+						<li><span>Get CSSM_ACCESS_CREDENTIALS for operation CSSM_ACL_AUTHORIZATION_ENCRYPT with the selected public key.<br> </span></li>
+						<li><span>Get CSSM_CSP_HANDLE and CSSM_KEY for the selected public key.<br> </span></li>
+						<li><span>Call CSSM_CSP_CreateAsymmetricContext with algorithm ID = CSSM_ALGID_RSA and Padding = CSSM_PADDING_PKCS1. This creates the new context handle CSSM_CC_HANDLE.<br> </span></li>
+						<li><span>Call CSSM_EncryptData, the result is the encrypted data.<br> </span></li>
+						<li><span>Free the context with CSSM_DeleteContext.</span></li>
+					</ol>
+					<p><span><strong>Decrypting &nbsp;</strong></span></p>
+					<ol>
+						<li><span>Using the public key hash find the according certificate -&gt; identity -&gt; private key in the certificate store/keychain on the exam client computers.<br> </span></li>
+						<li><span>Get CSSM_ACCESS_CREDENTIALS for operation CSSM_ACL_AUTHORIZATION_DECRYPT with the selected private key.<br> </span></li>
+						<li><span>Get CSSM_CSP_HANDLE and CSSM_KEY for the selected private key.<br> </span></li>
+						<li><span>Call CSSM_CSP_CreateAsymmetricContext with algorithm ID = CSSM_ALGID_RSA and Padding = CSSM_PADDING_PKCS1. This creates the new context handle CSSM_CC_HANDLE.<br> </span></li>
+						<li><span>Call CSSM_DecryptData, the result is the decrypted plain XML settings data.<br> </span></li><li><span>Free the context with CSSM_DeleteContext.</span></li>
+					</ol>
+					<h4 class="seb-section-header"><span><span><strong><br>Encryption with password</strong></span></span></h4>
+					<p><span>In this encryption scenario we use a symmetric AES cipher algorithm, the key is derived from a password. To do this properly, so that we get a secure AES key, is not trivial. The Mac OS X version of SEB uses the open source <a href="https://github.com/rnapier/RNCryptor" target="_blank"><span>RNCryptor</span></a> Objective-C framework, which provides a secure implementation of AES encryption including correct handling of password stretching (PBKDF2), salting, IV and HMAC (see explanations below). The author also provides good documentation about <a href="http://robnapier.net/blog/aes-commoncrypto-564" target="_blank"><span>properly encrypting with AES</span></a> and explains, why this effort is necessary. The description below explains generally how the encryption and decryption is done by RNCryptor, which is roughly the procedure that should be used for <em>any</em> secure use of AES (it is not specific to RNCryptor). For Windows/.NET and other platforms/languages the encryption has to be re-implemented using the platform provided <em>standard low-level crypto algorithms, namely PBKDF2, AES-256-CBC and SHA-256</em>. The OS X version uses the open source C crypto framework <a href="http://opensource.apple.com/source/CommonCrypto/" target="_blank"><span>CommonCrypto</span></a>, which could also be used on Linux, although many other open and closed source frameworks also provide these crypto algorithms. <a href="http://msdn.microsoft.com/en-us/library/system.security.cryptography.aspx" target="_blank"><span>.NET also includes AES</span></a>.</span></p>
+					<p><span><strong>Explanation of terms used</strong></span></p>
+					<p><span>(Taken from <a href="http://en.wikipedia.org" target="_blank"><span>Wikipedia</span></a>, see the links for the full description)<br> </span></p>
+					<p style="margin-left: 49.6px;"><span><a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank"><strong>AES</strong></a></span><span><span class="Apple-tab-span"> </span>Advanced Encryption Standard, specification for the <a href="http://en.wikipedia.org/wiki/Encryption" target="_blank"><span>encryption</span></a> of electronic data using a <a href="http://en.wikipedia.org/wiki/Symmetric-key_algorithm" target="_blank"><span>symmetric-key algorithm</span></a>.<strong> </strong>See also <a href="http://en.wikipedia.org/wiki/AES_implementations" target="_blank"><span>list of implementations</span></a>.</span></p>
+					<p style="margin-left: 49.6px;"><span><a href="http://en.wikipedia.org/wiki/Hash-based_message_authentication_code" target="_blank"><strong>HMAC</strong></a></span><span><span class="Apple-tab-span"> </span>A hash-based message authentication code is a specific construction for calculating a <a href="http://en.wikipedia.org/wiki/Message_authentication_code" target="_blank"><span>message authentication code</span></a> (MAC) involving a <a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank"><span>cryptographic hash function</span></a> in combination with a secret <a href="http://en.wikipedia.org/wiki/Cryptographic_key" target="_blank"><span>cryptographic key</span></a>. As with any MAC, it may be used to simultaneously verify both the <a href="http://en.wikipedia.org/wiki/Data_integrity" target="_blank"><span><em>data integrity</em></span></a> and the <a href="http://en.wikipedia.org/wiki/Authentication" target="_blank"><span><em>authenticity</em></span></a> of a <a href="http://en.wikipedia.org/wiki/Cleartext" target="_blank"><span>message</span></a>.</span></p>
+					<p style="margin-left: 49.6px;"><span><a href="http://en.wikipedia.org/wiki/Initialization_vector" target="_blank"><strong>IV</strong></a></span><span><span class="Apple-tab-span"> </span>Initialization vector, an additional random or pseudorandom input value, which is required to be mixed with the first block when using a block-based encryption algorithm like AES-CBC.</span></p>
+					<p style="margin-left: 49.6px;"><span><a href="http://en.wikipedia.org/wiki/PBKDF2" target="_blank"><strong>PBKDF2</strong></a></span><span><span class="Apple-tab-span"> </span>Password-Based Key Derivation Function 2 is a <a href="http://en.wikipedia.org/wiki/Key_derivation_function" target="_blank"><span>key derivation function</span></a> that is part of <a href="http://en.wikipedia.org/wiki/RSA_Laboratories" target="_blank"><span>RSA Laboratories</span></a>' <a href="http://en.wikipedia.org/wiki/Public-Key_Cryptography_Standards" target="_blank"><span>Public-Key Cryptography Standards</span></a> (PKCS) series. PBKDF2 applies a <a href="http://en.wikipedia.org/wiki/Pseudorandom_function" target="_blank"><span>pseudorandom function</span></a>, such as a <a href="http://en.wikipedia.org/wiki/Cryptographic_hash" target="_blank"><span>cryptographic hash</span></a>, <a href="http://en.wikipedia.org/wiki/Cipher" target="_blank"><span>cipher</span></a>, or <a href="http://en.wikipedia.org/wiki/HMAC" target="_blank"><span>HMAC</span></a> to the input <a href="http://en.wikipedia.org/wiki/Password" target="_blank"><span>password</span></a> or <a href="http://en.wikipedia.org/wiki/Passphrase" target="_blank"><span>passphrase</span></a> along with a <a href="http://en.wikipedia.org/wiki/Salt_(cryptography)" target="_blank"><span>salt</span></a> value and repeats the process many times to produce a <em>derived key</em>, which then can be used as a <a href="http://en.wikipedia.org/wiki/Key_(cryptography)" target="_blank"><span>cryptographic key</span></a> in subsequent operations.</span></p>
+					<p style="margin-left: 49.6px;"><span><a href="http://en.wikipedia.org/wiki/Pseudorandom_function" target="_blank"><strong>PRF</strong></a></span><span><span class="Apple-tab-span"> </span>Pseudo random function. A hash algorithm like SHA-256 can be used as a PRF.</span></p>
+					<p style="margin-left: 49.6px;"><span style="text-decoration: underline;"><a href="http://en.wikipedia.org/wiki/Sha-256" target="_blank"><strong>SHA-256</strong></a></span><span><a href="http://en.wikipedia.org/wiki/Secure_Hash_Algorithm" target="_blank"><span>Secure Hash Algorithm</span></a> belonging to the SHA-2 set of <a href="http://en.wikipedia.org/wiki/Cryptographic_hash_function" target="_blank"><span>cryptographic hash functions</span></a>.</p>
+					<p><span><strong>Data Format</strong></span></p>
+					<p><span>All data in network order (big-endian).</span></p>
+					<p><span>| version<span class="Apple-tab-span"> </span>| options<span class="Apple-tab-span"> </span>| encryption salt<span class="Apple-tab-span"> </span>| HMAC salt<span class="Apple-tab-span"> </span>|&nbsp; IV<span class="Apple-tab-span"> </span>| ... encrypted data ...<span class="Apple-tab-span"> </span>| &nbsp; HMAC<span class="Apple-tab-span"> </span>|</span></p>
+					<p><span>|&nbsp; &nbsp; 0<span class="Apple-tab-span"> </span>|&nbsp; &nbsp; 1<span class="Apple-tab-span"> </span>|&nbsp; &nbsp; 2-9<span class="Apple-tab-span"> </span>|&nbsp; &nbsp; 10-17<span class="Apple-tab-span"> </span>| 18-33<span class="Apple-tab-span"> </span>|&nbsp; &nbsp; 34 - n-33<span class="Apple-tab-span"> </span>| n-31 - n<span class="Apple-tab-span"> </span>|</span></p>
+					<ol>
+						<li><span>version (1 byte): Data format version. For now always 1.</span></li>
+						<li><span>options (1 byte): Reserved. Always 0.&nbsp;</span></li>
+						<li><span>encryption salt (8 bytes)</span></li>
+						<li><span>HMAC salt (8 bytes)</span></li><li><span>IV (16 bytes)</span></li>
+						<li><span>encrypted data/ciphertext (variable) -- Encrypted with CBC mode.</span></li>
+						<li><span>HMAC (32 bytes)</span></li>
+					</ol>
+					<p><span>Details:</span></p>
+					<ul>
+						<li><span>EncryptionKey = PBKDF2 (with parameters encryption salt, 10k iterations, password)</span></li>
+						<li><span>HMACKey = PBKDF2(HMAC salt, 10k iterations, password)</span></li>
+						<li><span>Encrypted data (ciphertext) is AES-256-CBC encrypted using the given IV and the EncryptionKey (above).</span></li>
+						<li><span>HMAC is generated using the encrypted data and the HMACKey (above) and the SHA-256 PRF.</span></li>
+					</ul>
+					<p><span><strong>Encrypting</strong></span></p>
+					<ol>
+						<li><span>Generate a random encryption salt</span></li>
+						<li><span>Generate the encryption key using PBKDF2 (see your language docs for how to call this). Pass the password as a string, the random encryption salt, and 10,000 iterations.</span></li>
+						<li><span>Generate a random HMAC salt</span></li><li><span>Generate the HMAC key using PBKDF2 (see your language docs for how to call this). Pass the password as a string, the random HMAC salt, and 10,000 iterations.</span></li>
+						<li><span>Generate a random IV</span></li><li><span>Encrypt the data using the encryption key (above), the IV (above), AES-256, and the CBC mode. This is the default mode for almost all AES encryption libraries.</span></li>
+						<li><span>Pass your ciphertext to an HMAC function, along with the HMAC key (above), and the PRF "SHA-256" (see your library's docs for what the names of the PRF functions are; this might also be called "SHA-2, 256-bits").</span></li>
+						<li><span>Put these elements together in the format given above.</span></li>
+					</ol>
+					<p><span><strong>Decrypting</strong></span></p>
+					<ol>
+						<li><span>Pull apart the pieces as described in the data format.</span></li>
+						<li><span>Generate the encryption key using PBKDF2 (see your language docs for how to call this). Pass the password as a string, the given encryption salt, and 10,000 iterations.</span></li>
+						<li><span>Generate the HMAC key using PBKDF2 (see your language docs for how to call this). Pass the password as a string, the given HMAC salt, and 10,000 iterations.</span></li>
+						<li><span>Decrypt the data using the encryption key (above), the given IV, AES-256, and the CBC mode. This is the default mode for almost all AES encryption libraries.</span></li>
+						<li><span>Pass your ciphertext to an HMAC function, along with the HMAC key (above), and the PRF "SHA-256" (see your library's docs for what the names of the PRF functions are; this might also be called "SHA-2, 256-bits"). Verify that your result matches the result in the message you were sent.</span></li>
+					</ol>
+					<h4 class="seb-section-header"><span><strong><span class="Apple-tab-span"> </span><br></strong><span><strong>Structure and list of keys in the plain XML configuration file before encryption</strong></span></span></h4>
+					<p><span>The plain settings are saved as serialized objects in a XML format. As base for this the Apple property list (<a href="http://en.wikipedia.org/wiki/Plist" target="_blank"><span>plist</span></a>) format was chosen, because it‘s a) having a simple structure using only a few basic tags, b) being directly supported on Mac OS X and iOS and easy to parse on other systems.</span></p>
+					<p><span>Property list data types and XML tags:</span></p>
+					<table class="table table-striped">
+						<colgroup>
+							<col><col><col>
+						</colgroup>
+						<thead>
+							<tr>
+								<th><strong>Abstract type</strong></th>
+								<th><strong>XML Tag</strong></th>
+								<th><strong>Storage format</strong></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>array</td>
+								<td>&lt;array&gt;</td>
+								<td>Indexed collections of values: Can contain any number of child elements</td>
+							</tr>
+							<tr>
+								<td>dictionary:&nbsp;</td>
+								<td>&lt;dict&gt;</td>
+								<td>Collections of values each identified by a key: Alternating &lt;key&gt; tags and plist element tags</td>
+							</tr>
+							<tr>
+								<td>string</td>
+								<td>&lt;string&gt;</td>
+								<td>UTF-8 encoded string</td>
+							</tr>
+							<tr>
+								<td>number - integer</td>
+								<td>&lt;integer&gt;</td>
+								<td>Decimal string</td>
+							</tr>
+							<tr>
+								<td>number - floating point</td>
+								<td>&lt;real&gt;</td>
+								<td>Decimal string</td>
+							</tr>
+							<tr>
+								<td>boolean</td>
+								<td>&lt;true /&gt;, or &lt;false /&gt;</td>
+								<td>No data (tag only)</td>
+							</tr>
+							<tr>
+								<td>date</td>
+								<td>&lt;date&gt;</td>
+								<td><p><span><a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a></span><span> formatted string</td>
+							</tr>
+							<tr>
+								<td>data</td>
+								<td>&lt;data&gt;</td>
+								<td><p><span><a href="http://en.wikipedia.org/wiki/Base64" target="_blank">Base64</a></span><span> encoded data</td>
+							</tr>
+						</tbody>
+					</table>
+					<p><span>Since human readability is not relevant for the .seb configuration file as users will never see it unencrypted, structure of the XML configuration files is reduced to the basic, essential plist-structure. Therefore there are <strong>no sections</strong> as in the old ini files. All keys in the root-level dictionary are unique (each key can only occur once).</span></p>
+				</div>
+			</div>
+			<hr />
 			<!-- TemplateEndEditable -->
 			<!-- Footer -->
 			<footer>
