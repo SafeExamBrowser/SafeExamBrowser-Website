@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=gAEABXnBxw">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png?v=gAEABXnBxw" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png?v=gAEABXnBxw" sizes="16x16">
+		<link rel="manifest" href="/manifest.json?v=gAEABXnBxw">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg?v=gAEABXnBxw" color="#5bbad5">
+		<link rel="shortcut icon" href="/favicon.ico?v=gAEABXnBxw">
+		<meta name="apple-mobile-web-app-title" content="SEB">
+		<meta name="application-name" content="SEB">
+		<meta name="theme-color" content="#ffffff">
+		<!-- TemplateBeginEditable name="doctitle" -->
+		<title>Safe Exam Browser - Integration</title>
+		<!-- TemplateEndEditable -->
+			<!-- Bootstrap Core CSS -->
+			<link href="../css/bootstrap.min.css" rel="stylesheet">
+			<!-- Custom CSS -->
+			<link href="../css/modern-business.css" rel="stylesheet">
+			<!-- Custom Fonts -->
+			<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+			<!-- Docs CSS -->
+			<link href="../css/docs.min.css" rel="stylesheet">
+			<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+			<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+			<!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+				<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+			<![endif]-->
+		<!-- TemplateBeginEditable name="head" -->
+		<!-- TemplateEndEditable -->
+		<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="../news_en.html" class="navbar-brand">
+					<span><img class="sebbrandimg" src="../images/SEBIcon_40_2x.png" alt="SEB Logo" width="40"></span>
+					Safe&nbsp;Exam&nbsp;Browser
+					</a>
+				</div>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="../news_en.html">News</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="../about_overview_en.html">Overview</a>
+								</li>
+								<li>
+									<a href="../about_demo_en.html">Demo</a>
+								</li>
+								<li>
+									<a href="../about_roadmap_en.html">Roadmap</a>
+								</li>
+								<li>
+									<a href="../about_publications_en.html">Publications</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Consortium<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="../consortium/members.html">Members</a>
+								</li>
+								<li>
+									<a href="../consortium/board.html">Board</a>
+								</li>
+								<li>
+									<a href="../consortium/documents.html">Documents</a>
+								</li>
+								<li>
+									<a href="../consortium/benefits.html">Benefits</a>
+								</li>
+								<li>
+									<a href="../consortium/fees.html">Fees</a>
+								</li>
+								<li>
+									<a href="../consortium/join.html">Join</a>
+								</li>
+								<li>
+									<a href="../consortium/donate.html">Donate</a>
+								</li>
+								<li>
+									<a href="../consortium/faq.html">FAQ</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Download<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="../download_en.html">Downloads</a>
+								</li>
+								<li>
+									<a href="../download_releases_en.html">Former Releases</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Windows<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="../windows/win_usermanual_en.html">User Manual</a>
+								</li>
+								<li>
+									<a href="../windows/win_release_notes_en.html">Release Notes</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">macOS<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="../macosx/mac_usermanual_en.html">User Manual</a>
+								</li>
+								<li>
+									<a href="../macosx/mac_release_notes_en.html">Release Notes</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">iOS<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="../ios/ios_usermanual_en.html">User Manual</a>
+								</li>
+								<li>
+									<a href="../ios/ios_tutorial_en.html">Tutorial</a>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="developer/seb-integration.html">SEB Integration</a>
+								</li>
+								<li>
+									<a href="../support_en.html">Support Links</a>
+								</li>
+								<li>
+									<a href="../faq/faq_en.html">FAQ</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- /.navbar-collapse -->
+			</div>
+			<!-- /.container -->
+		</nav>
+		<!-- Page Content -->
+		<div class="container bs-docs-container">
+			<!-- TemplateBeginEditable name="MainContent" -->
+			<div class="page-header">
+				<h1>Integration of Safe Exam Browser into Exam Solutions</h1>
+			</div>
+			<p>SEB integration into learning management systems (LMS) and other exam solutions has the following objectives:</p>
+			<ol>
+				<li><span></span>Make sure a quiz can only be taken using Safe Exam Browser, display an error message if trying to open the quiz in another web browser.</span></li>
+				<li><span>Check if legitimate SEB settings and the correct version of SEB are used.</span></li>
+				<li><span>Quit SEB (and/or unlock the device) automatically after the exam was submitted.</span></li>
+				<li><span>Facilitate starting SEB with the correct settings for the exam.</span></li>
+				<li><span>Don't display any links inside an exam which would allow to navigate to other sections of the LMS or even other websites.&nbsp;<br></span></li>
+			</ol>
+			<p><span>Below we’ll discuss possible solutions to achieve these objectives and provide links to detailed specifications for the according solutions.</span></p>
+			<h4 class="seb-section-header"><strong>1. &nbsp; Make sure a quiz can only be taken using Safe Exam Browser</strong></h4>
+			<p><span>There are basically three different possible ways to achieve this:</span></p>
+			<ol>
+				<li><span>In your exam solution, check for the string “SEB” in the user agent reported by the web browser. <br> This is the classic check for SEB, which is used in the built-in Safe Exam Browser requirements in the LMS Moodle and ILIAS. We don’t recommend this SEB check, it is very easy to trick, as most web browsers allow in a more or less easy way to modify the user agent.</span></li>
+				<li>
+					<span>Use a custom user agent string (or suffix) in your SEB settings and check if this string is sent back from the browser in your exam solution.<br> If properly implemented, this is significantly more secure. SEB settings (configuration files) can be encrypted using an exam (settings) password or a X.509 certificate + key, which can be installed in the secure key store (Windows Certificate Store or macOS/iOS Keychain) of the exam devices. So it wouldn’t be easy to find out the individual user agent, given that the internet connection from SEB to the exam system is properly secured (use https, don’t allow to navigate to other web servers in SEB while the settings using the individual user agent string are active).<br> To use an individual user agent string, the following SEB setting keys can be used:</span>
+					<ul>
+						<li><span>In newer SEB versions (starting Windows 2.2, macOS 2.1.3, iOS 2.1.12): <em>browserUserAgent</em> (suffix string which is appended to the current user agent)</span></li>
+						<li><span>In older SEB versions: <em>browserUserAgentMacCustom, browserUserAgentWinDesktopModeCustom, browserUserAgentWinTouchModeCustom</em> (replaces current browser user agent completely, only SEB/&lt;version number&gt; is appended).</span></li>
+					</ul>
+				</li>
+				<li><span>Use the request header check for one of the keys generated by SEB and sent to the exam system, see 2.</span></li>
+			</ol>
+			<h4 class="seb-section-header"><strong>2. &nbsp; Check if legitimate SEB settings and the correct version of SEB are used</strong></h4>
+			<p><span>SEB allows to individually configure your exam environment, for example allowing specific resources to be used for some exams, configure URL filters or even use permitted third party applications. So it is important to make sure a specific exam is accessed in SEB with the according correct settings. The easiest (but also least secure) way how to achieve that legitimate SEB settings for a specific exam are used, would be to keep the URL of that exam strictly secret:</span></p>
+			<ul>
+				<li><span>Make sure the exam can only be accessed using a complex URL containing a randomly generated one-time-login query string valid only for that one single exam, taken at one specific moment in time only and simultaneously by all examinees. If you need to repeat the exam or examinees to take it in batches, you would need to use a different URL for each repetition or batch.</span></li>
+				<li><span>Use strictly (!) only https with fully trusted certificates (in addition you could use the certificate pinning feature of SEB).</span></li>
+				<li><span>Use this exam URL strictly only as the Start URL parameter in properly encrypted SEB configuration files. Never let anyone use the URL with another browser than SEB (to keep it really secret, in regular browsers it would show up in browsing history and caches).</span></li>
+				<li><span>Use SEB config files stored on a server (saved with the option “use for starting an exam” and not “for configuring a client”). Use server-side technology to make sure the exam config file is only accessible at the time of the exam (not before).&nbsp;</span></li>
+				<li><span>On unmanaged student devices (BYOD), use a settings password which is unique per exam and communicate this password directly before the exam starts and only to students sitting in the exam hall (they should not be able to communicate to people outside the exam hall at this moment). Of course you need proctors/invigilators in your exam hall.</span></li>
+				<li><span>Use server-side technology in your exam system to make sure that the exam cannot be started in SEB and then continued in another, regular browser (using session cookies, preventing that the IP address of the connected client can change during the exam etc.).</span></li>
+			</ul>
+			<p><span>If you strictly follow these rules, then no one should be able to access the exam with another browser than SEB and with different settings, because they cannot find out the URL without decrypting the exam config file in SEB (containing those legit settings).&nbsp;</span></p>
+			<p><span>As mentioned this method isn’t the safest. One reason for that is that you really need to strictly follow the security measures mentioned above. You would need to create a workflow to follow those security measures with acceptable effort for the exam administrator. Also in BYOD scenarios on student desktop OS computers risks of manipulating the installed SEB version are higher, therefore we recommend one of the more secure methods described below.</span></p>
+			<p><span>Exam administrators might want to make sure that only some specific SEB versions are used to access exams, for example only the newest official SEB version with the latest security patches. To achieve this, SEB can generate special key strings and send these to the exam system. The exam system can then verify if such a key matches the key which was entered by the exam administrator when setting up the exam or if it matches the key generated for the exam settings used for a particular exam.&nbsp;</span></p>
+			<p><span>Current SEB versions are using the <strong>Browser Exam Key (BEK)</strong>, which as its name suggests ensures that:</span></p>
+			<ul>
+				<li><span>the right version of Safe Exam <strong>Browser</strong> (SEB) is used to complete the exam;</span></li>
+				<li><span>the SEB exam client is correctly configured/secured for this specific <strong>exam</strong>.&nbsp;</span></li>
+			</ul>
+			<p><span>Exam administrators can copy the Browser Exam Key which is displayed in the SEB Config Tool or Preferences window in the Exam tab and paste it to the Exam/quiz settings inside of an e-assessment system which supports SEB. Whenever any of the setting options in SEB are changed, the BEK also changes. Therefore, you should first configure SEB appropriately, then save those settings as a config file and then copy-paste the BEK.</span></p>
+			<p><span>In current (Windows/macOS) versions of SEB, the Browser Exam Key is different for each build version of SEB. Whenever you want students to use a new release of SEB, you have to load the settings used for that exam into the according new SEB version and copy-paste the new BEK to your exam system. Therefore all integrations for SEB using the BEK have to allow to enter several Browser Exam Keys. If you support several SEB versions, you need to copy-paste all required keys to your exam settings. This also applies to SEB versions for different platforms. SEB Config Files are compatible and usually you would only use one config for all platforms. But when using the BEK check,&nbsp;</span></p>
+			<ul>
+				<li><span>you need to save the config file in one SEB version,</span></li>
+				<li><span>then load the same config file in each SEB version on each platform you want to support and copy-paste each different BEK. <strong>In this step it is essential to not save the SEB Config File again</strong>, as that usually would alter the BEK for all other versions.</span></li>
+			</ul>
+			<p><span>For the Browser Exam Key to be secure, it is essential that it cannot easily be generated outside of the SEB application, that’s why you need to copy-paste it from each SEB version. This can be inconvenient if you create many exam configurations. If you don’t need to change SEB settings for every exam, then you could also use a general config file which uses a general link (for the SEB <em>Start URL</em> setting) and then forwards to the current exam or displays an exam portal page where students select the exam they are supposed to take. This would decrease the efforts for generating config files and copy-pasting its Browser Exam Keys.</span></p>
+			<p><span>Upcoming SEB versions will support two additional keys, which will help to overcome those disadvantages of the Browser Exam Key. Specifications will be provided soon.</span></p>
+			<h4 class="seb-section-header"><strong>3. &nbsp; Quit SEB (and/or unlock the device) automatically after the exam was submitted</strong></h4>
+			<p><span>While an exam is running, examinees should not be able to leave SEB. Only after finishing/submitting the exam, students should be allowed to end the kiosk mode and quit SEB. At the same time, exam supporters must be able to quit SEB anytime in case of a technical problem. How to achieve this:</span></p>
+			<ul>
+				<li><span>The exam administrator defines a quit password when setting up an exam in SEB. Only exam supporters know that quit password and can exit SEB manually if necessary (using the quit button in the SEB task bar or Ctrl/Cmd + Q).&nbsp;</span></li>
+				<li><span>You could define a unique quit password for each exam and communicate this password to students as soon as the time for the exam is over.&nbsp;</span></li>
+				<li><span>Another, easier way of ending the lock down of an exam device and quit SEB is the Quit Link functionality: In SEB settings, you define an arbitrary Quit URL. Then you place a hyperlink with this exact same URL on the page which is displayed after the exam was submitted. This can usually be the feedback page, which in most systems allows to display a customized message text including a hyperlink. You could use a text similar to “Unlock device” or “Quit exam session” for this link.</span></li>
+				<li><span>You set the address of the page displayed after the exam was submitted as Quit URL in SEB’s settings. Then examinees don’t have to click any additional link, SEB will quit as soon as it detects that address being loaded (you should disable the SEB setting option “Confirm quitting” for the Quit Link feature in this case).</span></li>
+				<li><span>You can also build in an automated/timed “end exam” feature into your exam solution: Just invoke a redirect to the Quit URL from your server at the time you want to unlock the exam devices. This prevents students using other applications on their devices in case some of them submit the exam ahead of the scheduled exam duration.</span></li>
+			</ul>
+			<h4 class="seb-section-header"><strong>4. &nbsp; Facilitate starting SEB with the correct settings for the exam</strong></h4>
+			<p><span>If you want to use different settings for each exam, then it might not be feasible to create those manually. The best option would be to integrate automatic creation of SEB exam settings into your exam solution. We have general&nbsp;specifications for the <a href="seb-file-format.html">SEB Config File format</a> (including encryption) and the <a class="external-link" href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf">supported setting keys</a>. As you can see there, SEB configuration files are basically XML files with key/value pairs, following the Apple plist (property list) format. They can also be converted to JSON directly (with the exception of binary data values which must be converted to strings with base64 encrypted data first). There would be several possible levels of supporting SEB Config Files:</span></p>
+			<ol>
+				<li><span>Support only plain text (unencrypted) SEB files. This is the method easiest to implement, but you will have to make sure that only the correct, unmodified config is being used for an exam, by placing it on an authenticated server and providing it only to users which are allowed to access the exam (candidates taking the exam) and just at the time of the exam start. You should also use the Browser Exam Key (or the new Config Key) which will basically provide a checksum of the correct exam settings to verify in your exam system that those correct settings are being used by SEB clients.</span></li>
+				<li><span>Implement support for password encrypted SEB Config Files. SEB uses the RNCryptor framework to encrypt and decrypt SEB Config Files using an exam (settings) password. This framework is available for various platforms (macOS, iOS, .NET Windows, Java, PHP etc.), see the specification document for details.</span></li>
+				<li><span>If you want to prevent that examinees have to enter an SEB exam password for encrypted configuration files, you would need to implement encryption for exam settings using a X.509 certificate plus provide them with a SEB client config file to deploy this certificate to their devices ahead of the exam. See the <a href="seb-file-format.html">specification document</a> for details and <a class="external-link" href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf">this presentation</a> which explains how to configure SEB in various scenarios.</span></li>
+			</ol>
+			<p><span>There are several ways how to open those SEB Config Files to either start an exam with the contained settings or to configure SEB clients:</span></p>
+			<ul>
+				<li><span>By double clicking the file (from Windows File Explorer or the Finder), then SEB is started, decrypts (if necessary) and reads the file. The contained settings determine how SEB will proceed (changing client settings, opening the predefined Start URL etc.). This method usually is only used when clients and exams are manually operated.</span></li>
+				<li><span>By downloading a SEB Config File in SEB or another web browser and opening it from there. If SEB is configured accordingly, it will directly download and open a file with the file name extension .seb. Other browsers might ask if the downloaded file should be just saved or also opened with an application. Usually the browser should suggest Safe Exam Browser as it has been registered in the operating system for the .seb file type. Other web browsers just show that a file was downloaded and users have to open it from the downloads list/menu or open it manually from the downloads directory. This method has the disadvantage that some users might be confused how to exactly open the SEB Config File. The advantage is that downloading config files works also from web servers which require users to authenticate. The preferred method described below works with authenticated servers only in specific SEB versions.</span></li>
+				<li><span>By clicking (loading) a special hyperlink with the custom URL protocol scheme seb/sebs. The link should contain the address of a SEB Config File. The advantage of using a custom URL protocol is that other browsers and basically all applications which can open URLs will start SEB and open the link there, similar like opening a .seb file with SEB. But using a SEB Config Link doesn’t require to download and save the SEB Config File to the local file system. SEB itself will just load the configuration temporarily into memory, when it’s ment to start an exam. The process is also smoother with this method, applications usually just ask if it’s ok to open the link in SEB. As mentioned before, opening SEB Config Links which direct to a SEB Config File saved on a web server which requires authentication works only in specific SEB versions, currently in SEB for macOS 2.1.1 and newer and SEB for Windows 2.2. In the latter there is currently the limitation that loading a configuration file on an authenticated server works only when opening a seb/sebs link from within SEB, not from another browser/application. But otherwise&nbsp; the link doesn’t even have to contain the config file name with extension .seb, it can also be an indirect link similar to <span style="text-decoration: underline;">mylms.com/file.php?id=34</span>.&nbsp;</span></li>
+			</ul>
+			<p><span>The information in this section and the linked documents should allow you to implement directly&nbsp;</span>starting your exams with correct settings in SEB.</p>
+			<h4 class="seb-section-header"><strong>5. &nbsp; Don’t display any navigation links which allow to exit from the exam</strong></h4>
+			<p><span>This point should be obvious, but especially when using quiz modules in widely customizable open source learning management systems like Moodle, you still might want to make sure that there are no links inside an exam which would allow to navigate to other sections of the LMS or even other websites. In the case of an LMS for example course navigation, link to the user's profile, logout, link to the University homepage (maybe inside a logo) etc. need to be disabled/hidden. Only the quiz navigation (to navigate to other questions) and the button or link to submit an exam should be visible.<br> </span></p>
+			<p><span>This part should be be done inside the exam system. Alternatively a URL filter could to be defined in SEB settings to only allow access to the exam.</span></p>
+			<!-- TemplateEndEditable -->
+			<hr />
+			<!-- Footer -->
+			<footer>
+				<div class="row">
+					<div class="col-lg-12">
+						<p>Copyright &copy; 2010-2017 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- /.container -->
+		<!-- jQuery -->
+		<script src="../js/jquery.js"></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="../js/bootstrap.min.js"></script>
+		<!-- Bootstrap Docs (for Sidebar) JavaScript -->
+		<script src="../js/docs.min.js"></script>
+		<!-- TemplateBeginEditable name="scripts" -->
+		<!-- TemplateEndEditable -->
+	</body>
+</html>
