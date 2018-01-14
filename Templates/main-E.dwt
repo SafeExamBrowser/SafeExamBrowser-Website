@@ -19,6 +19,9 @@
     <meta name="application-name" content="SEB">
     <meta name="theme-color" content="#ffffff">
 
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+
 <!-- TemplateBeginEditable name="doctitle" -->
 <title>Safe Exam Browser</title>
 <!-- TemplateEndEditable -->
@@ -42,8 +45,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<!-- TemplateBeginEditable name="head" -->
-<!-- TemplateEndEditable -->
 <link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
 
 </head>
