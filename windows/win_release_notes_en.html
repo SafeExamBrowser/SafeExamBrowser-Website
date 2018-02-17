@@ -227,7 +227,61 @@
         <!-- Content -->
           <h2></h2>
     
-    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.8.1: </h5>
+    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2: </h5>
+
+
+    <p>SEB 2.2 for Windows is a major update with new features and many improvements. This version is replacing the SEB 2.1.x branch, with which it is compatible with one important exception: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2 for Windows.</p>
+    <ul>
+      <li>Using the powerful new feature "Additional Resources", webpages, websites and documents can be allowed to be used in an exam.</li>
+      <li>Additional Resources can be opened using icons in the SEB task bar (similar to permitted applications) or with hierarchical popup menus.</li>
+      <li>External Additional Resources use the improved URL filter to only allow displaying specific webpages, documents or sections of websites.</li>
+      <li>Additional Resources can be embedded into SEB configuration files. An exam administrator can add documents like PDF files and HTML documents. </li>
+      <li>Even full HTML5 web apps can be added as embedded Additional Resources, which allows to use web content in a fully offline exam scenario. </li>
+      <li>You could deploy SEB Config Files containing a self-contained HTML5/JavaScript exam player onto mobile devices and then perform an offline e-assessment. The commercial exam solution Inspera Assessment is already supporting this.</li>
+      <li>New improved URL filter which allows to use simple filter rules to effectively allow specific web pages/sites/content and block all others.</li>
+      <li>Improved, refactored browser engine based on Firefox 52 ESR. This is the last Firefox version compatible with the XUL browser engine application used in SEB. We are already working on the next generation of SEB for Windows, which will be using a Chromium based browser engine (this SEB 3.0 branch won't replace the current Firefox-based SEB before 2019).</li>
+      <li>Improved blocking of third party applications and tools for screen sharing and screen recording.</li>
+      <li>Now preventing SEB being run in a remote session (using Remote Desktop Connection or similar on an exam client).</li>
+      <li>Improved stability when setting and resetting Windows Registry settings to disable options like Task Manager, Switch User, Sign out and Shut down (reachable with Ctrl+Alt+Del shortcut) during the exam and re-enabling them when quitting SEB.</li>
+      <li>Integrated secure viewer for PDF files.</li>
+      <li>Added Audio Control Component to SEB task bar, which allows to increase/decrease and mute system audio volume. Audio can be muted or the audio level preset when starting SEB. </li>
+      <li>SEB config files can now be loaded from servers using authentication (Basic, OAuth etc.) using seb(s):// links. Even indirect links (not containing the config file name with the .seb extension, like for example <a href="http://sebs//example.com">sebs://example.com</a>/download.php?id=2352) are possible. Therefore a SEB exam config file can be stored for example into the same Moodle course as the quiz. The login session is remembered, therefore students don't have to login twice in SEB if you start SEB/an exam using a seb(s):// link to a config file on an authenticated server. Note: Starting SEB by opening a seb(s):// linked config file from an authenticated server isn't supported in SEB for Windows 2.2, such indirect seb(s) links can only be opened from inside SEB (for example from an exam portal/landing page). Note: Starting SEB by opening a seb(s):// linked config file from an authenticated server doesn't work yet in this build, only opening such indirect seb(s) links from inside SEB.</li>
+      <li>Added a page loading (network activity) indicator.</li>
+      <li>Added a browser window toolbar, similar to SEB for macOS, with reload and back/forward buttons.</li>
+      <li>Navigation in browser history (back/forward) can now be allowed/disabled separately for the exam and additional browser windows.</li>
+      <li>The browser User Agent string now reflects the operating system SEB is running on and allows a custom suffix string to be added.</li>
+      <li>Added new asymmetric/symmetric encryption for config files using identity certificate for better performance when decrypting certificate encrypted config files.</li>
+      <li>Fixed on-screen keyboard wasn't displayed in latest versions of Windows 10. Now "Tablet Mode" needs to be activated in the system when using SEB in its "Touch optimized" mode.</li>
+      <li>Added spell checking dictionaries in addition to US English for Danish, English UK/Canada/Australia, Spanish, French, Portuguese, Swedish, Swedish (Finnland) (da, en-AU, en-GB, en-US, es-ES, fr-classic, pt-PT, sv, sv_FI). Some dictionaries for other languages cannot be distributed together with SEB, because they are only available under a GPL license which isn't compatible with SEB's MPL license. Currently only incorrectly written words get underlined with the usual red dotted line. The spell checking language cannot be selected manually yet, the default language indicated by the web site (for example &lt;html lang="en-UK"&gt;) is used for spell checking.</li>
+      <li>Fixed performance issue with application switching mechanism (ALT+TAB) causing Windows to overlay its task switcher over the SEB one.</li>
+      <li>Fixed and slightly changed functionality of setting &ldquo;Download and open SEB Config Files&rdquo;, which now also controls if SEB can be started with opening seb(s):// config links and .seb config files. The setting is now also respected when a .seb file is downloaded and opened inside of the running SEB.</li>
+      <li>Now logging all SEB files which are used for generating the Browser Exam Key.</li>
+      <li>Fixed that some dialogs (reconfiguring not allowed etc.) were not displayed in the foreground, but hidden behind the browser window and were only accessible using Alt+Tab.</li>
+      <li>Changed Base16 encoding of SEB passwords to use lower case letters a-f (following web standards and macOS/iOS) instead of Microsofts non-standard upper case letters.</li>
+      <li>Added "Allow reload in exam&ldquo;, "Allow reload in additional window&ldquo;, &ldquo;Show reload warning in exam&rdquo; and &ldquo;Show reload warning in additional window&rdquo; options to Config Tool / Browser.</li>
+      <li>Localized also all UI strings in Win Forms in SEB Client to German.</li>
+      <li>Now maximizing browser windows if their size is configured to be 100% width and height.</li>
+      <li>Quit Link sometimes not exiting SEB: Also removing trailing slashes before comparing request URLs to the quit URL.</li>
+      <li>Now trimming trailing slashes &ldquo;/&ldquo; from URL before applying URL filter (this wasn't the case in SEB 2.1.x and could lead to incompatibilities to URL filter rules generated in SEB for macOS).</li>
+      <li>Changed default settings for hooked keys ESC and right mouse key to enabled (true).</li>
+      <li>Now passing system language locale correctly to web pages in browser.</li>
+      <li>Added some Firefox settings to improve Service Worker support.</li>
+      <li>Changed reload in seb2 from hard reload to soft reload (to not break Service Worker when offline).</li>
+      <li>Removed SEB for macOS settings in Config Tool / Browser for new browser windows opened by JavaScript/Plugins.</li>
+      <li>Added improved logging for the embedded browser. Note: The log path cannot be changed in exam settings, SEB now uses always the path (and log enable option) which is configured in client config.</li>
+      <li>In the native HTML full screen mode, the SEB task bar is also hidden now. Please note: You have to enable the "Esc" key in SEB settings if full screen mode on your website can only be exit using the key (otherwise provide a button on the webpage!).</li>
+      <li>Added "Firefox/xx" to the default browser user agent strings for better compatibility.</li>
+      <li>In the "iPad" setting option for the user agent for touch/tablet mode, the default iPad user agent string can be edited in the Config Tool / Browser pane.</li>
+      <li>Added new option to Config Tool / Config File pane to use old asymmetric-only encryption (for compatibility with SEB &lt; 2.2).</li>
+      <li>SEB now deletes the browser profile folder when updating SEB, to prevent problems with not updated, cached browser modules.</li>
+      <li>SEB Registry Resetter now exits when a non-existing/wrong user name is entered.</li>
+      <li>Added another method to find out the SID of the current user and send it to the SEBWindowsService. This is an addition to the username, because the translation from username to SID inside the Service sometimes fails.</li>
+      <li>The desktop background picture is now also removed on PCs running Windows 7.</li>
+      <li>If SEB cannot terminate or force quit prohibited applications (Config Tool / Applications / Prohibited Processes) because they are running with other user permissions, then the exam is blocked and SEB asks to enter the quit/restart password (which exam supervisors/supporters should know) to continue.</li>
+    </ul>
+
+    <h5 id="sebh5">&nbsp;</h5>
+    <h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.1.8.1: </h5>
 <ul id="seblist">
   <li>Re-integrated the &quot;Create New Desktop&quot; kiosk mode and declared dpi-awareness to resolve mouse pointer offset.</li>
   <li>Adding strictly prohibited default processes (screen sharing and communication tools) unconditionally to settings, default prohibited browser processes only in Disable Explorer Shell kiosk mode. If you need to allow one of these processes, then just deselect the &quot;Active&quot; flag of that process in Applications/Prohibited Processes.</li>
