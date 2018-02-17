@@ -245,11 +245,6 @@
                   <li><a href="#DownUploadsPane">Down/Uploads Pane</a></li>
                   <li><a href="#ExamPane">Exam Pane</a></li>
                   <li><a href="#ApplicationsPane">Applications Pane</a></li>
-                    <ul class="nav">
-                      <li><a href="PermittedProcessesSection">&nbsp;&nbsp;&nbsp;Permitted Processes Section</a></li>
-                      <li><a href="ProhibitedProcessesSection">&nbsp;&nbsp;&nbsp;Prohibited Processes Section</a></li>
-                    </ul>
-                  <li><a href="#AdditionalResources">Additional Resources Pane</a></li>
                   <li><a href="#NetworkPane">Network Pane</a>
                     <ul class="nav">
                       <li><a href="#NetworkPaneFilterSection">&nbsp;&nbsp;&nbsp;Filter Section</a></li>
@@ -284,7 +279,7 @@
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
-            Safe Exam Browser 2.2 for Windows
+            Safe Exam Browser 2.1.8 for Windows
           </h2>
     
           <p>Safe Exam Browser – SEB for Windows opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several commercial and non-commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most  web-based online quiz and e-assessment systems.</p>
@@ -302,20 +297,20 @@
             Features
           </h3>
           
-        <p>SEB disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock (this Computer)</strong>, <strong>Switch User</strong>, <strong>Sign out (Log off</strong>), <strong>Change a password</strong>, <strong>(Start) Task Manager</strong>, <strong>Shut down, Restart </strong>and <strong>Ease of Access</strong>. It disables the <strong>Windows Task Bar</strong> and the <strong>Start Menu</strong> (button in the lower left corner of the screen), the <strong>App/Task/Window Switcher</strong> (invoked by Alt-Tab and Windows-Tab),  printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
+        <p>SEB disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock this Computer</strong>, <strong>Switch User</strong>, <strong>Log off</strong>, <strong>Change a password</strong>, <strong>Start Task Manager</strong>, <strong>Shut down</strong> and <strong>Ease of Access</strong>. It disables the <strong>Start Menu</strong> (button in the lower left corner of the screen) with its submenus <strong>Shut down</strong> / <strong>Undock</strong> / <strong>Switch user</strong> / <strong>Log off</strong> / <strong>Lock</strong> / <strong>Restart</strong> / <strong>Sleep</strong> / <strong>Hibernate</strong>, the <strong>Task Switcher</strong> (invoked by Alt-Tab and Windows-Tab),  printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
         
         <p>Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
         
-        <p>In the browser window there is no right mouse (or Shift-F10) click popup window available. Besides that, the browser is supporting  Java and Flash content (as long as the required  plugins are installed on the system). </p>
+        <p>In the browser window there is no right mouse (or Shift-F10) click popup window available. Besides that, the browser is supporting Quicktime, Java and Flash content (as long as the required  plugins are installed on the system). </p>
         
         <p>SEB detects when it was started in a virtual instead of a native environment and refuses to run. This virtual machine detector hinders manipulating SEB further when used in unmanaged environments.</p>
         
-        <p>SEB for Windows is based on the <em><strong>Mozilla Firefox/Gecko</strong></em> engine (in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
+        <p>SEB for Windows is based on the <em><strong>Mozilla Firefox/XULRunner/Gecko</strong></em> engine (in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
         
         <p> SEB for Windows can be used together with additional (third party) applications during an exam. You can download and open files linked in your online exam, edit it in a third party application and then upload the results to your online quiz/LMS again. </p>
         <p>From version 2.0 SEB uses encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam.<br />
         <br />
-        Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x and its new features.</p>
+        Also see the preliminary <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x and its new features.</p>
         <p><strong><span class="red">Please understand that you also have to configure your exam system correctly to be locked down securely.</span></strong> SEB is generally  locking down exam client computers only, not the exam system or the quiz module of a learning management system. <strong>Check documentation for your exam/learning management system on how to lock it down correctly.</strong> </p>
         
         </div>
@@ -389,7 +384,7 @@
           
           <p>You can download the SEB for Windows Installation setup program (also containing the SEB Windows configuration tool) <a href="../download_en.html#Windows">here</a>. Just start <span class="path">SafeExamBrowserInstaller.exe</span> and follow the steps in the installation program. </p>
           
-          <p>SEB for Windows containing the main application executable <span class="path">SafeExamBrowser.exe</span> and the configuration tool <span class="path">SebWindowsConfig.exe</span> are placed in the SEB application folder named <span class="path">SafeExamBrowser</span> which will be installed into the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). Also a <span class="path">Safe Exam Browser</span> program  entry will be placed into your Start Menu.<br />
+          <p>SEB for Windows containing the main application executable <span class="path">SafeExamBrowser.exe</span> and the configuration tool <span class="path">SebWindowsConfig.exe</span> are placed in the SEB application folder named <span class="path">SafeExamBrowser</span> which will be installed into the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). Also a <span class="path">Safe Exam Browser</span> program icon shortcut will be placed on your desktop.<br />
           </p>
           
         </div>
@@ -403,8 +398,8 @@
             Starting and Quitting SEB
           </h3>
           
-          <p>When you start SEB, all currently running applications, the Windows Task Bar and the desktop are hidden. On the main screen SEB opens its web browser window filling the whole screen (optionally the window can be resized and moved or switched to fullscreen). SEB opens the webpage at the preset Start URL, which might take some seconds. As default, as long as you don't set another <span class="quote">Start URL</span> (see <a href="#configuration">Configuration</a>), SEB for Windows opens <a href="https://safeexambrowser.org/start/" target="_blank">this page</a> with initial instructions. </p>
-          <p>SEB doesn't have any navigation buttons, but the optional reload button in the SEB task bar, the browser toolbar (if activated) or the key  <strong>F5</strong>   can be used to reload the current page.</p>
+          <p>When you start SEB, all currently running applications are hidden and all attached screens are covered with a dark blue background. On the main screen SEB opens its web browser window filling the whole screen (optionally the window can be resized and moved or switched to fullscreen). SEB opens the webpage at the preset Start URL, which might take some seconds. As default, as long as you don't set another <span class="quote">Start URL</span> (see <a href="#configuration">Configuration</a>), SEB for Windows opens the project web site. </p>
+          <p>SEB doesn't have any navigation buttons, but the optional reload button in the SEB task bar or the key  <strong>F5</strong>   can be used to reload the current page.</p>
           
           <p>To quit SEB (while it's using the default settings), just press the <span class="quote">Quit</span> button in the SEB task bar, keys <span class="quote">Ctrl-Q</span> or the red close button in the browser window. Quitting SEB can optionally be switched off or password protected, also the function key exit sequence which was used in former SEB versions is still supported optionally. When SEB quits, the applications which were running before starting it will get unhidden again (as long as settings didn't force to quit those applications).</p>
           
@@ -431,7 +426,6 @@
             <li><span class="quote">Down/Uploads</span> refers to   file downloads and uploads;</li>
             <li> <span class="quote">Exam</span> handles the connection to  exam systems and exam specific settings. </li>
             <li><span class="quote">Application</span> is for handling  permitted and prohibited processes; </li>
-            <li><span class="quote">Additional Resources</span> is for adding webpages, websites or documents which can be opened during the exam; </li>
             <li><span class="quote">Network</span> about the URL filter, certificates and proxies; </li>
             <li><span class="quote">Security</span> contains detail settings about how SEB locks down security relevant system features. </li>
             <li><span class="quote">Registry</span> allows to control  options in the Windows Security Screen invoked by Ctrl-Alt-Del and an option when using VMware Horizon View while SEB is running. </li>
@@ -443,7 +437,7 @@
             Settings in the General Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_01_General.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_01_General.png" />
  
            <ul id="seblist">
             <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
@@ -463,13 +457,13 @@
             Settings in the Config File Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_02_ConfigFile.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_02_ConfigFile.png" />
           
           <ul id="seblist">
             <li><span class="quote">Use SEB settings file for ... starting an exam</span>: <span class="red">A configuration file saved with this option will start the exam</span> with the according settings, but won't change  local SEB settings.</li>
           </ul>
           <ul id="seblist">
-            <li><span class="quote">Use SEB settings file for ... configuring a client</span>: <span class="red">A SEB settings file saved with this option is used to change  persistent settings of a SEB client</span>. This means, next time SEB is started by double clicking its shortcut from the desktop (or opening SafeExamBrowser.exe from the Program Files folder), it will use these settings.<strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong> (using an empty password prevents people from having to enter a password just when SEB is starting, unless you want this to prevent SEB being started unintentionally for example in a computer lab when there is no exam happening).<br />
+            <li><span class="quote">Use SEB settings file for ... configuring a client</span>: <span class="red">A SEB settings file saved with this option is used to change  local settings of a SEB client</span>. This means, next time SEB is started by double clicking its shortcut from the desktop (or opening SafeExamBrowser.exe from the Program Files folder), it will use these settings.<strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong> (using an empty password prevents people from having to enter a password just when SEB is starting, unless you want this to prevent SEB being started unintentionally for example in a computer lab when there is no exam happening).<br />
               When this <span class="quote">.seb</span> file is opened, for example by double clicking it in Windows Explorer, then SEB is started and settings from this file are copied into the file <span class="path">SebClientSettings.seb</span> which is placed in the hidden <span class="quote"> Application Data</span> folder of the current user (see below for exact path). <br />
               <br />
               <span class="red">You can also copy this file manually or with a deployment system one of the following directories</span>:</p>
@@ -516,7 +510,7 @@
               Settings in the User Interface Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_03_UserInterface.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_03_UserInterface.png" />
           
           <ul id="seblist">
             <li><span class="quote">Use browser window</span>: Use a window for the SEB browser which can be scaled and moved around, also to another screen when available. One advantage of using a browser window is that if you're using a large wide screen display, some web pages may not be ergonomic to read. With the scalable browser window you can adjust the width of displayed web pages.</li>
@@ -565,7 +559,7 @@
             <a class="anchorjs-link" href="#BrowserPane"></a>Settings in the Browser Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_04_Browser.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_04_Browser.png" />
                   
           <ul id="seblist">
             <li><span class="quote">Links requesting to be opened in a new browser window... </span>(Mac only): This popup list offers three policies:</li>
@@ -611,7 +605,7 @@
             Settings in the Down/Uploads Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_05_DownUploads.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_05_DownUploads.png" />
                   
           <ul id="seblist">
             <li><span class="quote">Allow downloading and uploading files</span> (Mac only): Usually to be used with permitted third party applications for which you want to provide files to be downloaded.</li>
@@ -633,7 +627,7 @@
             <a class="anchorjs-link" href="#ExamPane"></a>Settings in the Exam Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_06_Exam.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_06_Exam.png" />
 
           <ul id="seblist">
             <li><span class="quote">Browser Exam Key</span>: Copy the exam key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a>, <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a> and OpenOLAT has a built-in SEB support.<br />
@@ -665,15 +659,11 @@
           
           <p>Besides the live process monitoring while  running,  when SEB is started,  an alert/dialogue window is displayed to tell the user to quit the currently running applications (which are  in the list of  permitted and prohibited processes) and to restart SEB afterwards or to let SEB kill the applications risking that there could be data loss. Applications which have the <span class="quote">Force quit</span> parameter set are automatically terminated (without asking the user).</p>
           
-          
-          <h5 class="seb-section-header sebnavbar-link" id="PermittedProcessesSection">
-            <a class="anchorjs-link" href="#PermittedProcessesSection"></a>
-            Permitted Processes SectionSection
-          </h5>
+          <h5 class="seb-section-header sebnavbar-link">Permitted Processes Section</h5>
 
           <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser with their icon and their application name set with the parameter <span class="quote">title</span>, they can be used during an exam in addition to the SEB browser. </p>
       
-          <img class="img-responsive" src="images/SEB_Preferences_07a_Applications_PermittedProcesses.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_07a_Applications_PermittedProcesses.png" />
  
           <ul id="seblist">
             <li><span class="quote">Allow  switching to third party applications</span> (Mac only): If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">Cmd-Tab</span>) will work, so it's possible to switch to other running applications.<br />
@@ -696,7 +686,6 @@
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
             <li><span class="quote">OS</span>: Indicates on which operating system the permitted process runs (currently only the option <span class="quote">Win</span> works).</li>
             <li><span class="quote">Executable</span>: File name of the executable, <strong>which should not contain any parts of a file system path</strong>, only the filename of the exe file (like <span class="quote">calc.exe</span>).</li>
-            <li><span class="quote">Original Name</span>: Original file name of the executable. Some files don't have this meta data information. If it is available, SEB will prioritize this string over the  Executable file name string.</li>
             <li><span class="quote">Window Handling Process</span>: Process executable which is actually handling the main window, this is necessary to indicate for Java and some other applications (for example OpenOffice, Eclipse, Adobe Acrobat).</li>
             <li><span class="quote">Path</span>: Optional filesystem path (formatted system specific) to the process executable's directory <strong>excluding the filename, see field executable</strong>. If the path is not given or relative, then SEB searches the system provided paths for applications. For applications which have been installed and properly registred in Windows  App Paths you don't need to specify the path.</li>
             <li><span class="quote">Arguments</span>  to append to the executable  of the application when starting it. You can select if an argument is <span class="quote">active</span> or not (for testing). You can add and remove arguments using the <span class="quote">+/-</span> buttons.</li>
@@ -713,14 +702,10 @@
           </ul>
           <p>Java applications (like OpenOffice) can  be used as permitted processes, but require specific settings: The title of their main window must be defined in  the field <span class="quote">Permitted Processes -&gt; Identifier</span> (for example &quot;OpenOffice Calc&quot;), the required main executable in <span class="quote">Permitted Processes -&gt; Executable</span> (&quot;scalc.exe&quot;) and the process which is actually handling the main window in <span class="quote">Permitted Processes -&gt; Window Handling Process(es)</span> (&quot;soffice.bin&quot;). For this example the executable path should be entered as &quot;program&quot; in <span class="quote">Permitted Processes -&gt; Path</span>, as that is the relative path to the main executable from the OpenOffice main directory, which is registered in Windows <span class="quote">App Paths</span>.</p>
 
-
-          <h5 class="seb-section-header sebnavbar-link" id="ProhibitedProcessesSection">
-            <a class="anchorjs-link" href="#ProhibitedProcessesSection"></a>
-            Prohibited Processes Section
-          </h5>
+          <h5 class="seb-section-header sebnavbar-link">Prohibited Processes Section</h5>
     
           <p>List of processes which are prohibited to run during an exam when <span class="quote">monitor processes</span> is enabled. This list of prohibited processes makes sense because SEB on both platforms usually allows to run system processes, but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the prohibited processes are killed by SEB.</p>
-          <img class="img-responsive" src="images/SEB_Preferences_07b_Applications_ProhibitedProcesses.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_07b_Applications_ProhibitedProcesses.png" />
       <!--<br />
       <ul id="seblist">
             <!--<li><span class="quote">Choose Executable...</span> Displays a file requester for choosing  a process executable or application which will be added to the list of prohibited processes. <strong>Not yet available in SEB 2.0.</strong></li>
@@ -732,7 +717,6 @@
             <li><span class="quote">Active</span>: Indicates if this prohibited process item is active.</li>
             <li><span class="quote">Executable</span>: Process name, usually the filename of the executable.</li>
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
-            <li><span class="quote">Original Name</span>: Original file name of the executable. Some files don't have this meta data information. If it is available, SEB will prioritize this string over the  Executable file name string.</li>
             <li><span class="quote">OS</span>: Indicates on which operating system SEB should watch for the prohibited process  (currently only <span class="quote">Win</span> works).</li>
             <li><span class="quote">Identifier:</span> String of the process identifier in reverse domain notation (Mac) or the string or substring of the main window title of a process which doesn't have a MainWindow handle (Win), this is usually the case with Java applications (use for example &quot;OpenOffice&quot; for OpenOffice Calc). </li>
             <!--<li><span class="quote">User</span><br />
@@ -744,33 +728,8 @@
               This flag should not be set for macOS applications which allow to be terminated nicely (they are anyways automatically terminated, without asking the user).</li>
             <!--<li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process binary/application, multiple signatures can be added. This isn't necessary if the process binaries/applications are signed with a trusted signature (on OS X), because the signature identifies an application independently of the program version. Also you can generate code signatures here. <strong>Not yet available in SEB 2.0.</strong></li>-->
           </ul>
-
       
-          <h4 class="seb-section-header sebnavbar-link" id="AdditionalResources">
-            <a class="anchorjs-link" href="#AdditionalResources"></a>
-            Settings in the Additional Resources Pane
-          </h4>
-          
-          <img class="img-responsive" src="images/SEB_Preferences_08_AdditionalResources.png" />
-                  
-          <ul id="seblist">
-            <li><span class="quote">Allow downloading and uploading files</span> (Mac only): Usually to be used with permitted third party applications for which you want to provide files to be downloaded.</li>
-          </ul>
-          <ul id="seblist">
-            <li><span class="quote">Save downloaded files to</span>: Choose the download directory with this button, which displays a file/directory chooser dialog. In the  path displayed afterwards righthand of the button, SEB automatically replaces sections with a Windows environment variable, so paths are portable to other computers, for instance with another user account name (if you for example select your <span class="path">Documents</span> folder, the path becomes <span class="path">%USERPROFILE%\Documents</span>). An empty path means SEB uses the <span class="path">Download</span> folder.</li>
-            <li><span class="quote">Open files after downloading</span> (Mac only): Downloaded files will be opened with the according application, which has to be set correctly in the system for each used file type.</li>
-            <li><span class="quote">Choose file to upload…</span>  (Mac only): SEB can let the user choose the file to upload manually (as usual) or automatically choose the same file which was downloaded before. There are three possible policies to choose the file to upload:</li>
-                <ul id="seblist">
-            <li><span class="quote">manually with file requester</span></li>
-            <li><span class="quote">by attempting to upload same file downloaded before</span>: If the file is not found, a file requester  is presented and the user can choose some other file manually.</li>
-            <li><span class="quote">by only allowing to upload the same file downloaded before</span>: 
-              If the file is not found,  an error message is presented. This setting might bring additional security, because only files which have been downloaded before (in the same browser session, means since SEB was started) can be uploaded. If several files have been downloaded, pressing the <span class="quote">choose file</span> (or similarly named) button  in the browser window will first choose the file most recently downloaded, pressing the button several times will cycle through all the files downloaded in this session.<br />
-            </ul>
-            <li><span class="quote">Download and open PDF files instead of displaying them inline</span>  (Mac only): PDF files will not be displayed by SEB but downloaded and opened (if <span class="quote">Open files after downloading</span> is active!) by the application set in Finder (usually Preview or Adobe Acrobat). This option is useful when you <span class="quote">allow to switch to third party applications</span> and want to use some PDF forms which have to be filled out by  the examinees/users.</li>
-          </ul>
-      
-
-         <h4 class="seb-section-header sebnavbar-link" id="NetworkPane">
+          <h4 class="seb-section-header sebnavbar-link" id="NetworkPane">
             <a class="anchorjs-link" href="#NetworkPane"></a>
             Settings in the Network Pane
           </h4>
@@ -780,77 +739,27 @@
             Filter Section
           </h5>
           
-        <img class="img-responsive" src="images/SEB_Preferences_09a_Network_Filter.png" />
+        <img class="img-responsive" src="images/2.1.8/SEB_Preferences_08a_Network_Filter.png" />
 
-          <ul id="seblist">
-            <li><span class="quote">Activate URL filtering</span>: Filter URLs when loading web pages using the filter set defined below.<br />
-            </li>
-            <li> <span class="quote">Filter also embedded content</span>: If selected, also all embedded ressources will be filtered using the filter set.    Note that there can be hundreds of resources such as images and other media per page, so filtering all content may slow down page loading.</li>
-          </ul>
-          <p>The table contains  URL filter rules, consisting of a <span class="quote">allow</span> or <span class="quote">block</span> action. The URL filter always first processes rules with the block action, if one matches, then the according http request is discarded. If no block rule matched, then rules with an allow action are processed. If one matches, then the request is loaded. If no allow rule matched, then the request is discarded.<br />
-          Discarding a http request means that a link with the URL is not followed and the user is notified with an alert. When content filtering is enabled, an embedded resource with the according URL is not loaded, in this case there's no notification about that, but it is written to the log. Create a new rule  by clicking the<span class="codetext">'+'</span> button below the table. Remove a rule by selecting it in the table and clicking the <span class="codetext">'-'</span> button.</p>
-          
-          <p>SEB automatically creates an allow filter rule for the exact address of the <span class="quote">Start URL</span> defined in these settings. This means that if your <span class="quote">Start URL</span> is <span class="path">example.com</span>, then all pages and resources in the domain example.com  will be allowed. If your <span class="quote">Start URL</span> is <span class="path">example.com/exams/engineering2015-1.html</span>, then only the pages with this exact address will be allowed. In this case you have to manually add an allow filter rule so all pages and resources your exam uses will be allowed (like <span class="path">example.com/exams/*</span>).</p>
-          
-          <p class="seb-section-header quote">Rules</p>
-          
-          <ul id="seblist">
-            <li><span class="quote">Active</span>:
-              Indicates if the rule is active.</li>
-            <li><span class="quote">Regex</span>:
-              Indicates if the  rule is a regular expression. <br />
-            If <em>Regex</em> is not checked, then the rule can be formatted using the wildcard <span class="codetext">'*'</span>, which stands for an arbitrary string of any length.</li>
-            <li><span class="quote">Action</span> to process if the corresponding expression matches. Possible actions:
-      <ul id="seblist">
-                <li><span class="quote">block</span><br />
-                If the URL matches the expression, then it is rejected and processing of the remaining rules  is stopped.</li>
-                <li><span class="quote">allow</span><br />
-                  If the URL matches the expression, then it is accepted and processing of the remaining rules  is stopped.</li>
-              </ul>
-              <br />
-            If the URL filter reaches  the last rule (means there was no matching block or allow expression found), then the URL is discarded. If you want the URL to be accepted if no matching block (or allow) expression was found, then add an <span class="codetext">'allow *'</span> expression.</li>
-            <li><span class="quote">Expression</span>:
-              A Text field which contains  the filtering expression or pattern, either in a regular expression (Regex) format or a simpler filter expression containing the wildcard char <span class="codetext">'*'</span>. A filter expression can filter against all elements of a URL/URI according to <a href="http://tools.ietf.org/html/rfc3986" target="_blank">RFC 3986</a>: <span class="codetext"><br />
-              <br />
-              scheme://user:password@host:port/path?query#fragment<br />
-              <br />
-              </span>      <span class="quote">Format for a filter expression in the non-regex format:</span><br />
-              <ul id="seblist">
-                <li>Scheme  is optional, and must be followed by <span class="codetext">'://'</span>.<br />
-                </li>
-                <li>The host field is required (besides when filtering against a protocol like about:blank or data:), and is either a partial or full hostname or an IP address. It can also contain or be replaced completely with the wildcard <span class="codetext">'*'</span> char, see below for details. The URL filter doesn't resolve hostnames itself, so if you allow everything and only block <span class="codetext">'hostname.com'</span>, then that host could still be reached using its IP address. You should therefore mainly use whitelisting to allow accessing only specific sites during an exam.</li>
-                <li>An optional <span class="codetext">'.'</span> (dot) can prefix the host field to disable subdomain matching, see below for details.</li>
-                <li>An optional port can come after the host and always has to start with the character <span class="codetext">':'</span>. It must be a valid port value from 1 to 65535.</li>
-                <li>An optional path can come after the host or after the port and always has to start with the character <span class="codetext">'/'</span>. Parts of the path can be replaced with the wildcard char <span class="codetext">'*'</span>. If a path ends with a <span class="codetext">'/'</span>, that trailing <span class="codetext">'/'</span> is removed (as the filter doesn't distinguish paths with or without trailing <span class="codetext">'/'</span>).</li>
-                <li>URL parameters like a query string can be indicated and always have to start with the character <span class="codetext">'?'</span>. Parts of the query can be replaced with the wildcard char <span class="codetext">'*'</span>.</li>
-                <li>Filtering against a fragment usually doesn't make sense, as the content can be reached by scrolling the loaded page. Allowing specific fragments could force people to use a link to a particular anchor on a page (other links would not work).<br />
-                  <br />
-                  <span class="quote">      Examples for filter expressions:</span></li>
-                <li><span class="codetext"><strong>'example.com'</strong></span> matches <span class="codetext">'example.com'</span>, <span class="codetext">'www.example.com'</span> and <span class="codetext">'www.mail.example.com'</span> (internally processed as a host name search for <span class="codetext">'example.com'</span> and a search for <span class="codetext">'*.example.com'</span>)</li>
-                <li><span class="codetext"><strong>'.www.example.com'</strong></span> matches exactly <span class="codetext">'*://www.example.com'</span>  (no other subdomains)</li>
-                <li><span class="codetext"><strong>'mail.*'</strong></span> matches all hosts having a subdomain or domain <span class="codetext">'mail'</span>, like  <span class="codetext">'mail.ethz.ch'</span>, <span class="codetext">'www.mail.gov.to'</span>, <span class="codetext">'mail.com'</span></li>
-                <li><span class="codetext"><strong>'*:8088'</strong></span> matches all requests to port 8088</li>
-                <li><span class="codetext"><strong>'example.com/stuff/*'</strong></span> matches all requests to any subdomain of <span class="codetext">'example.com'</span> that have <span class="codetext">'stuff'</span> as the first segment of the path<span class="codetext"></span></li>
-                <li><strong><span class="codetext">'example.com/images/*.png'</span> </strong>matches all requests to any subdomain of <span class="codetext">'example.com'</span> that have <span class="codetext">'/images/'</span> as the first segment of the path and <span class="codetext">'.png'</span> as the path extension of an file URL (means it matches all PNG images in the <span class="codetext">'/images/'</span> directory or its subdirectories)<span class="codetext"></span></li>
-                <li><span class="codetext"><strong>'*.net'</strong></span> matches all host with any kind of subdomains in the .net top level domain like <span class="codetext">'example.net'</span>, <span class="codetext">'www.example.net'</span>, <span class="codetext">'www.mail.example.net'</span></li>
-                <li><span class="codetext"><strong>'*/*.net'</strong></span> matches all files with a <span class="codetext">'.net'</span> file extension on any host<br />
-                  <br />
-                  You should consider using a regular expression if performing complex filtering (when a simple filter doesn't cover all possible cases how that complex URL could be formatted) or split the expression into several filter rules.  
-      
-      The order of filter rules is not relevant.<br />
-                  <br />
-                </li>
-              </ul>
-            </li>
-          </ul>
-
+        <ul id="seblist">
+          <li><span class="quote">Activate URL filtering</span>: Filter URLs when loading web pages using the filter set defined below.<br />
+          </li>
+          <li> <span class="quote">Filter also embedded content</span>: If selected, also all embedded resources will be filtered using the filter set.    Note that there can be hundreds of resources such as images and other media per page, so filtering all content may slow down page loading.</li>
+          <li><span class="quote">Rules are regular expressions:</span> If not enabled, then the rules can be formatted using the wildcard <span class="codetext">'*'</span>, which stands for an arbitrary string of any length.</li>
+        </ul>
+        <p>There are two tables contains  URL filter rules, either with an <span class="quote">Allow</span> or <span class="quote">Block</span> action. The URL filter always first processes rules with the <span class="quote">block</span> action, if one matches, then the according http request is discarded. If no <span class="quote">block</span> rule matched, then rules with an <span class="quote">allow</span> action are processed. If one matches, then the request is loaded. If no <span class="quote">allow</span> rule matched, then the request is discarded.
+        Discarding a http request means that a link with the URL is not followed and the user is notified with an alert. When content filtering is enabled, an embedded resource with the according URL is not loaded. </p>
+        <p>SEB automatically creates an <span class="quote">allow</span> filter rule for the exact address of the <span class="quote">Start URL</span> defined in these settings. This means that if your <span class="quote">Start URL</span> is <span class="path">example.com</span>, then all pages and resources in the domain example.com  will be allowed. If your <span class="quote">Start URL</span> is <span class="path">example.com/exams/engineering2015-1.html</span>, then only the page with this exact address will be allowed. In this case you have to manually add an <span class="quote">allow</span> filter rule so all pages and resources your exam uses will be allowed (like <span class="path">example.com/exams/*</span>).</p>
+        <p> Create a new rule  by clicking the<span class="codetext">'+'</span> button below the table. Remove a rule by selecting it in the table and clicking the <span class="codetext">'-'</span> button.</p>
+        <p>Please not that SEB 2.1 for macOS is using a more advanced format for URL filters. It also incorporates a teach mode, where SEB can interactively create filter rules for you. When SEB 2.0 or higher for macOS saves a <span class="quote">.seb</span> settings file, it creates also compatible filter rules for SEB 2.0.3 (or higher) for Windows (which you can see in the Allow/Block tables here in the <span class="quote">SEB Config Tool / Network / Filter</span> tab, see the screenshot above for an example). So the URL filter rules created in SEB 2.0 for Mac are compatible with SEB 2.1.3 for Windows, but not the other way round: Filter rules defined in SEB 2.1.3 for Windows are not compatible with SEB for macOS. </p>
+        <p>This means in short: <strong>If you want to use URL filter rules in a mixed environment (Windows/Mac), you have to create the URL rules in SEB for macOS.</strong> A future version of SEB for Windows will also adopt the more advanced format for URL filters. </p>
       
           <h5 class="seb-section-header sebnavbar-link" id="NetworkPaneCertificatesSection">
             <a class="anchorjs-link" href="#NetworkPaneCertificatesSection"></a>
             Certificates Section
           </h5>
           
-          <img class="img-responsive" src="images/SEB_Preferences_09b_Network_Certificates.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_08b_Network_Certificates.png" />
 
           <ul id="seblist">
             <li><span class="quote">Choose TLS/SSL certificate to embed into configuration... </span>Here you can choose <span class="quote">SSL server certificates</span> which are stored in the <em>Windows Certificate Store</em> (if you  have a certifcate file, you first need to import it to the <em>Windows Certificate Store</em>, depending on the format you can just double click such a certificate file to invoke the Windows certifcate import assistant). The  certificates added to this table will be embedded into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning then when connecting to  https servers with those self-signed certificates and you  don't need to distribute SSL certificates manually to the exam client computers<strong>.</strong></li>
@@ -877,13 +786,13 @@
           
           <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients.  You can currently specify a proxy server address and port manually for HTTP, HTTPS, FTP and SOCKS proxies (without authentication), use auto proxy discovery and automatic proxy configuration. You can also add  host/domain addresses to the bypass/exception list.</p>
 
-          <img class="img-responsive" src="images/SEB_Preferences_09c_Network_Proxies.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_08c_Network_Proxies.png" />
           
           <h4 class="seb-section-header sebnavbar-link" id="SecurityPane">
             <a class="anchorjs-link" href="#SecurityPane"></a>Settings in the Security Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_10_Security.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_09_Security.png" />
 
           <ul id="seblist">
             <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (as administrator), which is necessary to block and unblock some system features (the options in the Windows Security Screen invoked by Ctrl-Alt-Del) and pausing Windows Update<em></em>.  SEB Windows Service is installed automatically together with the SEB application and started afterwards, but it might happen in rare cases that the service gets stopped. After a reboot of the computer it should get started again, also you could use  Windows Task Manager to restart the service manualy (in the Services tab). <br />
@@ -937,7 +846,7 @@
             <a class="anchorjs-link" href="#RegistryPane"></a>Settings in the Registry Pane
           </h4>
 
-          <img class="img-responsive" src="images/SEB_Preferences_11_Registry.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_10_Registry.png" />
       
           <p>Options in the Windows Security Screen invoked by Ctrl-Alt-Del:</p>
           <ul id="seblist">
@@ -984,7 +893,7 @@
             <a class="anchorjs-link" href="#HookedKeysPane"></a>Settings in the Hooked Keys Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_12_HookedKeys.png" />
+          <img class="img-responsive" src="images/2.1.8/SEB_Preferences_11_HookedKeys.png" />
       
           <ul id="seblist">
             <li><span class="quote">Special Keys</span>: Settings to enable or block (hook)  keys, key combinations and  mouse buttons.</li>
@@ -1024,7 +933,7 @@
             License
           </h3>
           
-          <p>Safe Exam Browser for Windows: &copy; 2010-2018 Damian Büchel, Daniel R. Schneider, Dirk Bauer, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, Pascal Wyss, Viktor Tomas, Stefan Schneider, Oliver  Rahs, based on the original idea of Safe Exam Browser by Stefan Schneider,  University of Giessen<br />
+          <p>Safe Exam Browser for Windows: &copy; 2010--2018 Damian Büchel, Daniel R. Schneider, Dirk Bauer, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, Pascal Wyss, Viktor Tomas, Stefan Schneider, Oliver  Rahs, based on the original idea of Safe Exam Browser by Stefan Schneider,  University of Giessen<br />
           Project concept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  French localization: Nicolas Dunand<br />
           </p>
           <p>Safe Exam Browser is released as freeware. The <a href="https://github.com/SafeExamBrowser/seb-win" target="_blank">source code</a> is  subject to the <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (the  &quot;License&quot;); you may only use these files in compliance with the  License. You may obtain a copy of the License at <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> .</p>
