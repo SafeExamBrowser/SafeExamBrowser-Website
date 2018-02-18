@@ -198,7 +198,9 @@
             </li>
             <li><a href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf" target="_blank">SEB 2.x How To</a>
             </li>
-          </ol>
+            <li><a href="win_usermanual_v2.1.8_en.html">SEB 2.1.8</a>
+            </li>
+         </ol>
     
         </div>
       </div>
@@ -577,12 +579,6 @@
             <li><span class="quote">Block when directing to a different server</span>: Hyperlinks which direct to a different host than the one of the current  page will be ignored.</li>
             <li><span class="quote">New browser window size</span>: You can set the width and height of  new browser windows as absolute pixel values or a percentage of the screen width or height.  You can enter the dimensions (in pixels or percent values) in the text field or select one of the predefined values in the  pop down menu. </li>
             <li><span class="quote">New browser window horizontal positioning</span>:  You can choose how the window will be positioned horizontally if it doesn't fill the full screen width: Left, Center, Right.</li>
-            <li><span class="quote"> Links in JavaScript/plug-ins... </span> (Mac only): This list offers three policies for hyperlinks opened from JavaScript or plug-ins (like Flash):</li>
-            <ul id="seblist">
-            <li><span class="quote">get generally blocked</span></li>
-            <li><span class="quote">open in same window</span></li>
-            <li><span class="quote">open in new window</span></li>
-            </ul>
             <li><span class="quote">Block when directing to a different server</span>: Hyperlinks which direct to a different host than the one of the current  page will be ignored. This can also filter unwanted cross-site content on a page, but redirections might also not work. Test this option carefully with your exam before using it!</li>
           </ul>
           <h5>Browser Security Settings</h5>
@@ -593,17 +589,23 @@
             <li><span class="quote">Block pop-up windows</span>: Disables pop-up windows (often advertisement) opened by JavaScript without an user action such as a button click.</li>
             <li><span class="quote">Allow video capture (webcam)</span>: Allow web applications to access camera (using HMTL 5 APIs).</li>
             <li><span class="quote">Allow audio capture (microphone)</span>: Allow web applications to access microphone (using HMTL 5 APIs).</li>
-            <li><span class="quote">Allow browsing back/forward</span>: Disabling browsing to previously visited pages (by Alt-Mousewheel or Ctrl-Cursor left on Mac) increases security, because it might be possible to leave an exam by browsing back to an external start page. This setting corresponds with  the setting &quot;<span class="quote">Enable Alt-Mousewheel</span>&quot; in <a href="win_usermanual_en.html#HookedKeysPane">Hooked Keys</a> pane.</li>
-            <li><span class="quote">Show reload warning</span>: SEB shows a warning asking the user to confirm reloading a web page with F5 or the reload button.</li>
+            <li><span class="quote">Allow navigating back/forward in exam</span>: Disabling browsing to previously visited pages (by Ctrl-Cursor left) increases security, because it might be possible to leave an exam by browsing back to an external start page.</li>
+            <li><span class="quote">Allow navigating in additional windows</span>: Disabling browsing to previously visited pages (by Ctrl-Cursor left) might not be desired for additional resources and other content opening in additional browser windows, therefore this separate setting.</li>
+            <li><span class="quote">Allow reload in exam</span>: You can disable reload completely (reload button in task bar, browser tool bar, iOS side slider menu, keyboard shortcut F5/cmd+R) with this setting, as  offline caching in some e-assessment systems might break when the user tries to reload a page without internet connection.</li>
+            <li><span class="quote">Allow reload in additional windows</span>:  For additional resources and other content opening in additional browser windows reload can be enabled/disabled separately with this setting.</li>
+            <li><span class="quote">Show reload warning in exam</span>: SEB shows a warning asking the user to confirm reloading the main browser containing the exam.</li>
+            <li><span class="quote">Show reload warning in exam</span>: You can disable/enable the reload warning for additional resources and other content opening in additional browser windows separately.</li>
             <li><span class="quote">Remove profile</span> (Win only): Deletes contents of the seb XULRunner embedded browser profile directory (cache, cookies, local browser storage etc.) when quitting SEB.</li>
           </ul>
           <h5>User Agent Settings</h5>
           <ul>
+            <li><span class="quote">Suffix to be added to any user agent</span>: Enter a string here which will be appended to any user agent string (independent from the other user agent settings below).</li>
             <li><span class="quote">User agent for desktop mode</span>: Allows to switch between the default and a custom browser user agent string for SEB Windows running in  desktop mode. SEB appends its version number automatically to the selected user agent string.</li>
             <li><span class="quote">User agent for touch/tablet mode</span>: Allows to switch between the default, an iPad-like and a custom browser user agent string for SEB Windows running in  the touch optimized mode (on tablet computers). SEB appends its version number automatically to the selected user agent string.</li>
             <li> <span class="quote">iPad</span>: Use an iPad-like user agent string for the touch optimized/tablet mode, as many mobile optimized websites recognize this user agent, but not the Windows tablet touch user agent. </li>
             <li><span class="quote">User agent (Mac)</span>: Allows to switch between the default and a custom browser user agent string in SEB for macOS running in  desktop mode. The default string depends on the installed Safari/WebKit version and therefore can differ on exam clients. SEB for macOS also appends its version number automatically to the selected user agent string.</li>
             <li><span class="quote">Use SEB without browser window</span>: If you intend to use another application for an exam and don't need to display any web content on the exam client, you can switch off the SEB browser with this option. Don't try to disable XULRunner in the Application -&gt; Permitted Processes tab, that isn't necessary when using this option.</li>
+            <li><span class="quote">Suffix to be added to every browser window</span>: Enter a string to append to every browser window title.</li>
           </ul>
           
           <h4 class="seb-section-header sebnavbar-link" id="DownUploadsPane">
@@ -627,6 +629,8 @@
               If the file is not found,  an error message is presented. This setting might bring additional security, because only files which have been downloaded before (in the same browser session, means since SEB was started) can be uploaded. If several files have been downloaded, pressing the <span class="quote">choose file</span> (or similarly named) button  in the browser window will first choose the file most recently downloaded, pressing the button several times will cycle through all the files downloaded in this session.<br />
             </ul>
             <li><span class="quote">Download and open PDF files instead of displaying them inline</span>  (Mac only): PDF files will not be displayed by SEB but downloaded and opened (if <span class="quote">Open files after downloading</span> is active!) by the application set in Finder (usually Preview or Adobe Acrobat). This option is useful when you <span class="quote">allow to switch to third party applications</span> and want to use some PDF forms which have to be filled out by  the examinees/users.</li>
+            <li><span class="quote">Allow using Acrobat Reader PDF plugin (insecure)</span>: The Adobe Acrobat Reader browser plugin should only be used on secured managed Mac computers, as it allows to access the file system and  cloud services.</li>
+            <li><span class="quote">Download and open SEB config files</span>: Controls if .seb config files are downloaded and opened (regardless if downloading and opening other file types is allowed) and if SEB can be started with opening seb(s):// config links and SEB config files.</li>
           </ul>
       
           <h4 class="seb-section-header sebnavbar-link" id="ExamPane">
@@ -636,15 +640,16 @@
           <img class="img-responsive" src="images/SEB_Preferences_06_Exam.png" />
 
           <ul id="seblist">
+            <li> <span class="quote">Use Browser Exam Key (send in HTTP header)</span>: Enables using the Browser Exam Key, it is send in an HTTP header to authenticate the SEB client and its settings to a compatible exam system.</li>
             <li><span class="quote">Browser Exam Key</span>: Copy the exam key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a>, <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a> and OpenOLAT has a built-in SEB support.<br />
             <strong>Important: First save your final exam settings in a .seb settings file and then  copy the browser exam key to your exam system's quiz settings as the Browser Exam Key changes when you change any setting</strong>. <br />
             Please note that if you want to use the same <span class="quote">.seb</span> file with Windows and Mac clients, you should not alter the file anymore when you're copying the Browser Exam Key hashes to your exam settings in your quiz module. Re-saving it will change the Browser Exam Key of that file also in the SEB version on the other platform. The keys for the Mac and the Windows version will in any case be different, so you have to load the final <span class="quote">.seb</span> file into both versions and copy both keys to your quiz settings. <br />
             <strong class="red">PLEASE NOTE:</strong> <span class="red">Every new SEB version generates a different Browser Exam Key</span> (as code and configuration option changes are reflected in the key, this is the idea of the request header check using this key together with compatible exam systems). If you want to use an existing exam configuration with a new SEB version, you have to re-calculate the Browser Exam Key with the new version and copy the new key to the quiz settings in your SEB compatible examination system (Moodle,  ILIAS and OpenOLAT allow you to specify several keys in case you want to  allow your examinees to use for example the current and previous SEB version).      </li>
-            <li> <span class="quote">Send Browser Exam Key in HTTP header</span>: This enables sending the Browser Exam Key  in an HTTP header to authenticate the SEB client and its settings to a compatible exam system.</li>
             <li><span class="quote">Link to quit SEB after exam</span>: Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> (full URL starting with http:// or https://) and placing this on the summary page displayed by the LMS after submitting the exam.</li>
-            <li><span class="quote">Restart exam button</span>: Either check the &quot;<span class="quote">Use Start URL</span>&quot; option or enter a link to which the exam is redirected when the restart exam button is pressed. The restart exam button is displayed in the SEB task bar when either the &quot;Use Start URL&quot; option is selected or a link is entered.</li>
-            <li><span class="quote">Title/tool tip text for the restart button</span>: This text is displayed as the title of the confirmation alert and as tool tip on the icon. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
-            <li><span class="quote">Protect  restart exam button with the quit/restart password</span>: The quit/restart password (if set, see <a href="win_usermanual_en.html#GeneralPane">General</a> pane) must be entered when the restart exam button was tapped. Exam support/invigilators should be told this password to be able to restart the exam if there is a problem.</li>
+            <li><span class="quote">Ask user to confirm quitting</span>: If not selected, then SEB is quit immediately after a Quit Link is detected, without users having to confirm.</li>
+            <li><span class="quote">Back to Start button</span>: Either check the &quot;<span class="quote">Use Start URL</span>&quot; option or enter a link to which the exam is redirected when the Back to Start button is pressed. The browser session is not restarted using this feature (session cookies are not cleared; a logged in user isn't logged out). The Back to Start button is displayed in the SEB task bar when either the &quot;Use Start URL&quot; option is selected or a link is entered.</li>
+            <li><span class="quote">Title/tool tip text for the Back to Start button</span>: This text is displayed as the title of the confirmation alert and as tool tip on the icon. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
+            <li><span class="quote">Protect  Back to Start button with the quit/restart password</span>: The quit/restart password (if set, see <a href="win_usermanual_en.html#GeneralPane">General</a> pane) must be entered when the Back to Start button was tapped. Exam support/invigilators should be told this password to be able to return to the start of the exam if there is a problem.</li>
           </ul>
       
           <h4 class="seb-section-header sebnavbar-link" id="ApplicationsPane">
