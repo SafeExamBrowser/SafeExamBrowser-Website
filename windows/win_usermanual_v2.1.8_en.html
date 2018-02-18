@@ -198,6 +198,8 @@
             </li>
             <li><a href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf" target="_blank">SEB 2.x How To</a>
             </li>
+            <li><a href="win_usermanual_en.html">SEB 2.2</a>
+            </li>
           </ol>
     
         </div>
@@ -686,6 +688,7 @@
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
             <li><span class="quote">OS</span>: Indicates on which operating system the permitted process runs (currently only the option <span class="quote">Win</span> works).</li>
             <li><span class="quote">Executable</span>: File name of the executable, <strong>which should not contain any parts of a file system path</strong>, only the filename of the exe file (like <span class="quote">calc.exe</span>).</li>
+            <li><span class="quote">Original Name</span>: Original file name of the executable. Some files don't have this meta data information. If it is available, SEB will prioritize this string over the  Executable file name string.</li>
             <li><span class="quote">Window Handling Process</span>: Process executable which is actually handling the main window, this is necessary to indicate for Java and some other applications (for example OpenOffice, Eclipse, Adobe Acrobat).</li>
             <li><span class="quote">Path</span>: Optional filesystem path (formatted system specific) to the process executable's directory <strong>excluding the filename, see field executable</strong>. If the path is not given or relative, then SEB searches the system provided paths for applications. For applications which have been installed and properly registred in Windows  App Paths you don't need to specify the path.</li>
             <li><span class="quote">Arguments</span>  to append to the executable  of the application when starting it. You can select if an argument is <span class="quote">active</span> or not (for testing). You can add and remove arguments using the <span class="quote">+/-</span> buttons.</li>
@@ -716,6 +719,7 @@
           <ul id="seblist">
             <li><span class="quote">Active</span>: Indicates if this prohibited process item is active.</li>
             <li><span class="quote">Executable</span>: Process name, usually the filename of the executable.</li>
+            <li><span class="quote">Original Name</span>: Original file name of the executable. Some files don't have this meta data information. If it is available, SEB will prioritize this string over the  Executable file name string.</li>
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
             <li><span class="quote">OS</span>: Indicates on which operating system SEB should watch for the prohibited process  (currently only <span class="quote">Win</span> works).</li>
             <li><span class="quote">Identifier:</span> String of the process identifier in reverse domain notation (Mac) or the string or substring of the main window title of a process which doesn't have a MainWindow handle (Win), this is usually the case with Java applications (use for example &quot;OpenOffice&quot; for OpenOffice Calc). </li>
