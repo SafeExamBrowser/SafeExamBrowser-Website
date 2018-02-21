@@ -323,7 +323,7 @@
         <h4>New in SEB 2.2</h4>
         <p>SEB 2.2 for Windows is a major update with new features and many improvements. This version is replacing the SEB 2.1.x branch, with which it is <span class="red">compatible with one important exception</span>: <strong>If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2 SEB Config Tool, following the new filter rule scheme.</strong> URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2 for Windows.</p>
         <ul>
-          <li>Using the powerful new feature <a href="#AdditionalResources">Additional Resources</a>, specific webpages, full or partial websites and documents can be allowed to be used securely and easily in exams.</li>
+          <li>Using the powerful new feature <a href="#AdditionalResources">Additional Resources</a>, specific webpages, full or partial websites and documents can be  used securely and easily in exams.</li>
           <li>Additional Resources can be opened using icons in the SEB task bar (similar to permitted applications) or with hierarchical popup menus.</li>
           <li>External Additional Resources use the improved URL filter to only allow displaying specific webpages, documents or sections of websites.</li>
           <li>Additional Resources can be embedded into SEB configuration files. An exam administrator can add documents like PDF files and HTML documents.</li>
@@ -788,7 +788,7 @@
           
           <img class="img-responsive" src="images/SEB_Preferences_08_AdditionalResources.png" />
                   
-          <p>Using the powerful new feature Additional Resources, specific webpages, full or partial websites and documents can be allowed to be used securely and easily in exams. These resources can  be located</p>
+          <p>Using the powerful new feature Additional Resources, you can configure  SEB to access specific webpages, full or partial websites and documents   securely and easily in exams. These resources can  be located</p>
           <ul>
             <li> on an external server and linked using an URL. External Additional Resources use the improved URL filter to only allow displaying specific webpages, documents or sections of websites</li>
             <li> embedded   into the SEB configuration file. Using this method, resources like for example like PDF files or HTML documents can be deployed ahead of the exam to SEB exam clients. Even full HTML5 web apps can be added as embedded Additional Resources, which allows to use web content in a fully offline exam scenario.</li>
@@ -799,12 +799,14 @@
           <li> Manually, using icons in the SEB task bar (similar to permitted applications) or with hierarchical popup menus</li>
           <li>Triggered by a Link URL, similar to the <a href="#ExamPane">Quit URL</a> which triggers quitting SEB</li>
           </ul>
-<h5>Sections in the Additional Resources Pane</h5>
+<p>See below the desciption of all Additional Resources settings grouped by sections:</p>
 <h5>Hierarchical list of resource items</h5>
 <ul>
   <li><span class="quote">&quot;+&quot;</span>: Add a resource item</li>
   <li><span class="quote">&quot;-&quot;</span>: Remove the selected resource item </li>
   <li><span class="quote">&quot;(+&quot;</span>: Add a sub or child resource. By creating an &quot;empty&quot; resource just with a title and a custom icon if desired, you can add sub/child resources to this root/parent resource. Resources on the root level are displayed as icons in the SEB task bar, the next level is displayed as a popup menu on the root level icon. You can add another (third) level, which is displayed as a sub-menu in this popup menu.</li>
+  <li><span class="quote">&quot;^&quot;</span>: Move a resource item up in the list</li>
+  <li><span class="quote">&quot;v&quot;</span>: Move a resource item down in the list</li>
 </ul>
 <h5>Selected Resource</h5>
 <ul>
