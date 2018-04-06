@@ -43,7 +43,7 @@
 	<key>allowSpellCheck</key>
 	<true/>
 	<key>allowSwitchToApplications</key>
-	<false/>
+	<true/>
 	<key>allowUserSwitching</key>
 	<true/>
 	<key>allowVideoCapture</key>
@@ -322,7 +322,7 @@
 	<key>openDownloads</key>
 	<false/>
 	<key>originatorVersion</key>
-	<string>SEB_OSX_2.1.3_2903</string>
+	<string>SEB_OSX_2.1.2_27A8</string>
 	<key>oskBehavior</key>
 	<integer>2</integer>
 	<key>outsideSebEnableChangeAPassword</key>
