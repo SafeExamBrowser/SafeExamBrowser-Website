@@ -1,177 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=gAEABXnBxw">
-		<link rel="icon" type="image/png" href="/favicon-32x32.png?v=gAEABXnBxw" sizes="32x32">
-		<link rel="icon" type="image/png" href="/favicon-16x16.png?v=gAEABXnBxw" sizes="16x16">
-		<link rel="manifest" href="/manifest.json?v=gAEABXnBxw">
-		<link rel="mask-icon" href="/safari-pinned-tab.svg?v=gAEABXnBxw" color="#5bbad5">
-		<link rel="shortcut icon" href="/favicon.ico?v=gAEABXnBxw">
-		<meta name="apple-mobile-web-app-title" content="SEB">
-		<meta name="application-name" content="SEB">
-		<meta name="theme-color" content="#ffffff">
-		<!-- TemplateBeginEditable name="doctitle" -->
-		<title>Safe Exam Browser - Integration</title>
-		<!-- TemplateEndEditable -->
-			<!-- Bootstrap Core CSS -->
-			<link href="../css/bootstrap.min.css" rel="stylesheet">
-			<!-- Custom CSS -->
-			<link href="../css/modern-business.css" rel="stylesheet">
-			<!-- Custom Fonts -->
-			<link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-			<!-- Docs CSS -->
-			<link href="../css/docs.min.css" rel="stylesheet">
-			<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-			<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-			<!--[if lt IE 9]>
-				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-				<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-			<![endif]-->
-		<!-- TemplateBeginEditable name="head" -->
-		<!-- TemplateEndEditable -->
-		<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
-	</head>
-	<body>
-		<!-- Navigation -->
-		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-			<div class="container">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a href="../news_en.html" class="navbar-brand">
-					<span><img class="sebbrandimg" src="../images/SEBIcon_40_2x.png" alt="SEB Logo" width="40"></span>
-					Safe&nbsp;Exam&nbsp;Browser
-					</a>
-				</div>
-				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a href="../news_en.html">News</a>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="../about_overview_en.html">Overview</a>
-								</li>
-								<li>
-									<a href="../about_demo_en.html">Demo</a>
-								</li>
-								<li>
-									<a href="../about_roadmap_en.html">Roadmap</a>
-								</li>
-								<li>
-									<a href="../about_publications_en.html">Publications</a>
-								</li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Consortium<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="../consortium/members.html">Members</a>
-								</li>
-								<li>
-									<a href="../consortium/board.html">Board</a>
-								</li>
-								<li>
-									<a href="../consortium/documents.html">Documents</a>
-								</li>
-								<li>
-									<a href="../consortium/benefits.html">Benefits</a>
-								</li>
-								<li>
-									<a href="../consortium/fees.html">Fees</a>
-								</li>
-								<li>
-									<a href="../consortium/join.html">Join</a>
-								</li>
-								<li>
-									<a href="../consortium/donate.html">Donate</a>
-								</li>
-								<li>
-									<a href="../consortium/faq.html">FAQ</a>
-								</li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Download<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="../download_en.html">Downloads</a>
-								</li>
-								<li>
-									<a href="../download_releases_en.html">Former Releases</a>
-								</li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Windows<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="../windows/win_usermanual_en.html">User Manual</a>
-								</li>
-								<li>
-									<a href="../windows/win_release_notes_en.html">Release Notes</a>
-								</li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">macOS<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="../macosx/mac_usermanual_en.html">User Manual</a>
-								</li>
-								<li>
-									<a href="../macosx/mac_release_notes_en.html">Release Notes</a>
-								</li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">iOS<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="../ios/ios_usermanual_en.html">User Manual</a>
-								</li>
-								<li>
-									<a href="../ios/ios_tutorial_en.html">Tutorial</a>
-								</li>
-							</ul>
-						</li>
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<li>
-									<a href="../developer/overview.html">Developer Documentation</a>
-								</li>
-								<li>
-									<a href="../support_en.html">Support Links</a>
-								</li>
-								<li>
-									<a href="../faq/faq_en.html">FAQ</a>
-								</li>
-							</ul>
-						</li>
-					</ul>
-				</div>
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container -->
-		</nav>
-		<!-- Page Content -->
-		<div class="container bs-docs-container">
-			<!-- TemplateBeginEditable name="MainContent" -->
+<html lang="en"><!-- InstanceBegin template="/Templates/main-E.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=gAEABXnBxw">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png?v=gAEABXnBxw" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png?v=gAEABXnBxw" sizes="16x16">
+    <link rel="manifest" href="/manifest.json?v=gAEABXnBxw">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=gAEABXnBxw" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon.ico?v=gAEABXnBxw">
+    <meta name="apple-mobile-web-app-title" content="SEB">
+    <meta name="application-name" content="SEB">
+    <meta name="theme-color" content="#ffffff">
+
+<!-- InstanceBeginEditable name="head" -->
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Safe Exam Browser: Developer – Integration</title>
+<!-- InstanceEndEditable -->
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Docs CSS -->
+	<link href="../css/docs.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<link href="../css/basic.css" rel="stylesheet" type="text/css" media="all">
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../news_en.html" class="navbar-brand">
+                  <span><img class="sebbrandimg" src="../images/SEBIcon_40_2x.png" alt="SEB Logo" width="40"></span>
+                  Safe&nbsp;Exam&nbsp;Browser
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../news_en.html">News</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../about_overview_en.html">Overview</a>
+                            </li>
+                            <li>
+                                <a href="../about_demo_en.html">Demo</a>
+                            </li>
+                            <li>
+                                <a href="../about_roadmap_en.html">Roadmap</a>
+                            </li>
+                            <li>
+                                <a href="../about_publications_en.html">Publications</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Consortium<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../consortium/members.html">Members</a>
+                            </li>
+                            <li>
+                                <a href="../consortium/board.html">Board</a>
+                            </li>
+                            <li>
+                                <a href="../consortium/documents.html">Documents</a>
+                            </li>
+                            <li>
+                                <a href="../consortium/benefits.html">Benefits</a>
+                            </li>
+                            <li>
+                                <a href="../consortium/fees.html">Fees</a>
+                            </li>
+                            <li>
+                                <a href="../consortium/join.html">Join</a>
+                            </li>
+                            <li>
+                                <a href="../consortium/donate.html">Donate</a>
+                            </li>
+                            <li>
+                                <a href="../consortium/faq.html">FAQ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Download<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../download_en.html">Downloads</a>
+                            </li>
+                            <li>
+                                <a href="../download_releases_en.html">Former Releases</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Windows<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../windows/win_usermanual_en.html">User Manual</a>
+                            </li>
+                            <li>
+                                <a href="../windows/win_release_notes_en.html">Release Notes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">macOS<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../macosx/mac_usermanual_en.html">User Manual</a>
+                            </li>
+                            <li>
+                                <a href="../macosx/mac_release_notes_en.html">Release Notes</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">iOS<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../ios/ios_usermanual_en.html">User Manual</a>
+                            </li>
+                            <li>
+                                <a href="../ios/ios_tutorial_en.html">Tutorial</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="../developer/overview.html">Developer Information</a>
+                            </li>
+                    		<li>
+                        		<a href="../support_en.html">Support Links</a>
+                    		</li>
+                    		<li>
+                    			<a href="../faq/faq_en.html">FAQ</a>
+                    		</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+      </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container bs-docs-container">
+
+    <!-- InstanceBeginEditable name="MainContent" -->
 			<div class="page-header">
 				<h1>Integration of Safe Exam Browser into Exam Solutions</h1>
 			</div>
@@ -219,7 +235,7 @@
 					<p><span>If you strictly follow these rules, then no one should be able to access the exam with another browser than SEB and with different settings, because they cannot find out the URL without decrypting the exam config file in SEB (containing those legit settings).&nbsp;</span></p>
 					<p><span>As mentioned this method isn’t the safest. One reason for that is that you really need to strictly follow the security measures mentioned above. You would need to create a workflow to follow those security measures with acceptable effort for the exam administrator. Also in BYOD scenarios on student desktop OS computers risks of manipulating the installed SEB version are higher, therefore we recommend one of the more secure methods described below.</span></p>
 					<p><span>Exam administrators might want to make sure that only some specific SEB versions are used to access exams, for example only the newest official SEB version with the latest security patches. To achieve this, SEB can generate special key strings and send these to the exam system. The exam system can then verify if such a key matches the key which was entered by the exam administrator when setting up the exam or if it matches the key generated for the exam settings used for a particular exam.&nbsp;</span></p>
-					<p><span>Current SEB versions are using the <strong>Browser Exam Key (BEK)</strong>, which as its name suggests ensures that:</span></p>
+					<p><span>Current SEB versions are using the <strong><a href="documents/SEB-Specification-BrowserExamKey.pdf" target="_blank">Browser Exam Key</a> (BEK)</strong>, which as its name suggests ensures that:</span></p>
 					<ul>
 						<li><span>the right version of Safe Exam <strong>Browser</strong> (SEB) is used to complete the exam;</span></li>
 						<li><span>the SEB exam client is correctly configured/secured for this specific <strong>exam</strong>.&nbsp;</span></li>
@@ -242,7 +258,7 @@
 						<li><span>You can also build in an automated/timed “end exam” feature into your exam solution: Just invoke a redirect to the Quit URL from your server at the time you want to unlock the exam devices. This prevents students using other applications on their devices in case some of them submit the exam ahead of the scheduled exam duration.</span></li>
 					</ul>
 					<h4 class="seb-section-header"><strong>4. &nbsp; Facilitate starting SEB with the correct settings for the exam</strong></h4>
-					<p><span>If you want to use different settings for each exam, then it might not be feasible to create those manually. The best option would be to integrate automatic creation of SEB exam settings into your exam solution. We have general&nbsp;specifications for the <a href="seb-file-format.html">SEB Config File format</a> (including encryption) and the <a class="external-link" href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf">supported setting keys</a>. As you can see there, SEB configuration files are basically XML files with key/value pairs, following the Apple plist (property list) format. They can also be converted to JSON directly (with the exception of binary data values which must be converted to strings with base64 encrypted data first). There would be several possible levels of supporting SEB Config Files:</span></p>
+					<p><span>If you want to use different settings for each exam, then it might not be feasible to create those manually. The best option would be to integrate automatic creation of SEB exam settings into your exam solution. We have general&nbsp;specifications for the <a href="seb-file-format.html">SEB Config File format</a> (including encryption) and the <a href="documents/SEB-Specification-ConfigKeys.pdf" target="_blank" class="external-link">supported setting keys</a>. As you can see there, SEB configuration files are basically XML files with key/value pairs, following the Apple plist (property list) format. They can also be converted to JSON directly (with the exception of binary data values which must be converted to strings with base64 encrypted data first). There would be several possible levels of supporting SEB Config Files:</span></p>
 					<ol>
 						<li><span>Support only plain text (unencrypted) SEB files. This is the method easiest to implement, but you will have to make sure that only the correct, unmodified config is being used for an exam, by placing it on an authenticated server and providing it only to users which are allowed to access the exam (candidates taking the exam) and just at the time of the exam start. You should also use the Browser Exam Key (or the new Config Key) which will basically provide a checksum of the correct exam settings to verify in your exam system that those correct settings are being used by SEB clients.</span></li>
 						<li><span>Implement support for password encrypted SEB Config Files. SEB uses the RNCryptor framework to encrypt and decrypt SEB Config Files using an exam (settings) password. This framework is available for various platforms (macOS, iOS, .NET Windows, Java, PHP etc.), see the specification document for details.</span></li>
@@ -260,25 +276,34 @@
 					<p><span>This part should be be done inside the exam system. Alternatively a URL filter could to be defined in SEB settings to only allow access to the exam.</span></p>
 				</div>
 			</div>
-			<!-- TemplateEndEditable -->
-			<hr />
-			<!-- Footer -->
-			<footer>
-				<div class="row">
-					<div class="col-lg-12">
-						<p>Copyright &copy; 2010-2017 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
-					</div>
-				</div>
-			</footer>
-		</div>
-		<!-- /.container -->
-		<!-- jQuery -->
-		<script src="../js/jquery.js"></script>
-		<!-- Bootstrap Core JavaScript -->
-		<script src="../js/bootstrap.min.js"></script>
-		<!-- Bootstrap Docs (for Sidebar) JavaScript -->
-		<script src="../js/docs.min.js"></script>
-		<!-- TemplateBeginEditable name="scripts" -->
-		<!-- TemplateEndEditable -->
-	</body>
-</html>
+            
+<!-- InstanceEndEditable -->
+
+      <!-- Footer -->
+      <footer>
+          <div class="row">
+              <div class="col-lg-12">
+                  <p>Copyright &copy; 2010-2017 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+              </div>
+          </div>
+      </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="../js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <!-- Bootstrap Docs (for Sidebar) JavaScript -->
+    <script src="../js/docs.min.js"></script>
+
+<!-- InstanceBeginEditable name="scripts" -->
+<!-- InstanceEndEditable -->
+
+</body>
+
+<!-- InstanceEnd --></html>
+
