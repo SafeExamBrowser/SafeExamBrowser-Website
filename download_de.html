@@ -354,18 +354,18 @@
   <li>Neue "Config Key"-Funktion, welche es einem Prüfungssystem erlaubt, zu überprüfen, ob SEB-Clients die korrekten Einstellungen benutzen. Der Config Key kann serverseitig generiert werden und ändert sich nicht, wenn dieselben Einstellungen in einer neueren SEB-Version geladen werden, in welcher neue Einstellungsoptionen hinzugefügt wurden (Aufwärts- und Abwärtskompatibilität).           
   <li>Neue Einstellungsoptionen zum Deaktivieren von Siri und der Diktats-Funktion hinzugefügt.
   <li> Touch Bar Textvorschläge werden während einer Prüfung ausgeschaltet.</li>
-  <li>Now refusing to re-enter an exam which hasn't been submitted properly before, for example because the Mac was force-rebooted.</li>
-  <li> URL filter now treats query strings consistently between SEB for macOS 2.1.3 and Windows 2.2.1.</li>
-  <li>Implemented functionality for separate Allow Reload / Show Reload Warning / Allow Navigating setting for exam and new browser windows.</li>
-  <li>Setting &quot;enable right mouse button&quot; now also works in SEB for macOS: Allows to use the right mouse button/context menu on special website elements.</li>
-  <li> Now loading SEBClientSettings.seb also from the /Library/Preferences directory: This directory is valid for all users on a Mac and usually only writable with administrator rights. This improvement makes it easier to configure managed SEB clients which are used by multiple users.</li>
-  <li>Fixed that SEB in some cases didn't switch off automatic spelling correction.</li>
-  <li>The screen sharing detector now also works correctly when connecting to a Mac using Apple ID (Back to My Mac).</li>
-  <li> Improved startup process: Now client settings saved persistently on the Mac are not considered at all when starting SEB by opening a config file or config link. </li>
-  <li>Fixed that double clicking a .seb config file several times could lock SEB.</li>
-  <li>The About SEB splash screen now cannot hide alerts and lock SEB if those were displayed modally.</li>
-  <li> Fixed modal lock when webpage tries to download a font.</li>
-  <li> In case SEB cannot terminate an implicitly prohibited process (trying to display an overlay/panel window), a lock screen is displayed requiring to enter the quit/unlock password.</li>
+  <li>SEB verweigert, eine zuvor nicht korrekt beendete Prüfung wieder aufzunehmen (zuerst muss eine Prüfungsaufsichtsperson  das Entsperren-/Beenden-Passwort eingeben), beispielsweise nachdem der Rechner zwangsweise neu gestartet wurde.</li>
+  <li> Der URL-Filter behandelt den Query-Teil einer Adresse nun konsistent zwischen  SEB für macOS 2.1.3 und Windows 2.2.1.</li>
+  <li>Separate Einstellungen für Neuladen / Neuladen-Warnung /  Seiten-Navigation in Prüfung und neuen Browser-Fenstern hinzugefügt.</li>
+  <li>Die Einstellung  &quot;Rechte Maustaste erlauben&quot; funktioniert nun auch in SEB für macOS: Dies erlaubt, die rechte Maustaste/das Kontextmenü bei speziellen Webseiten-Elementen zu benutzen.</li>
+  <li> Die Client-Konfigurationsdatei SEBClientSettings.seb wird nun auch aus dem Systemverzeichnis /Library/Preferences geladen: Dieses Verzeichnis gilt für alle Benutzer auf einem Mac und darauf kann normalerweise nur mit Administrator-Rechten zugegriffen werden. Diese Verbesserung macht es einfacher, zentral verwaltete Macs zu konfigurieren, die von mehreren Benutzern genutzt werden.</li>
+  <li>Ein Fehler wurde beseitigt, bei dem die automatische Rechtschreiben-Korrektur in manchen Fällen nicht korrekt ausgeschaltet wurde.</li>
+  <li>Die Erkennung der Bildschirmfreigabe-Funktion funktioniert nun auch korrekt, wenn die Verbindung mittels Apple ID / Zugang zu meinem Mac aufgebaut wird.</li>
+  <li> Verbesserter Startprozess: Die fest auf dem Mac gespeicherten Client-Einstellungen werden nun nicht mehr beachtet, wenn  SEB mittels Öffnen einer Konfigurationsdatei oder eines Konfigurationslinks gestartet wird. </li>
+  <li>Korrigiert, dass mehrfaches Doppelklicken auf eine  .seb Konfigurationsdatei  SEB blockieren konnte.</li>
+  <li>Das &quot;Über SEB&quot;-Startfenster kann nun keine modalenMeldungen mehr verdecken und SEB blockieren.</li>
+  <li> Wenn eine Webseite versucht, eine Schriftart herunterzuladen, blockiert dies SEB nun nicht mehr.</li>
+  <li> Im Fall dass  SEB einen implizit verbotenen Prozess (welcher versucht, ein Panel-Fenster anzuzeigen) nicht beenden kann, wird ein Sperrbildschirm angezeigt, welcher die Eingabe des Entsperren-/Beenden-Passworts notwendig macht.</li>
 </ul>
 <p>Andere Funktionen:</p>
 <ul id="seblist">
