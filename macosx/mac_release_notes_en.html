@@ -228,7 +228,61 @@
         <!-- Content -->
           <h2></h2>
 
-          <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1.2</a>:</h5>
+          <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1.3</a>:</h5>
+          <ul id="seblist">
+            <li> New &quot;Config Key&quot; feature allowing an exam system to verify that the correct settings are being used. The Config Key can be generated server-side and doesn't change if same settings are loaded in a new SEB version which adds new setting keys.</li>
+            <li> Added setting to disable Siri.</li>
+            <li> Added setting to disable dictation.</li>
+            <li> Now refusing to start an exam which hasn't been submitted properly before, displaying lock screen including log entries from the previously interrupted exam.</li>
+            <li> Preventing that SIGSTOP could be used to freeze SEB and to cheat undiscovered.</li>
+            <li> Added browser user agent suffix setting option.</li>
+            <li> Now blocking Touch Bar typing suggestions (predictive keyboard) during an exam.</li>
+            <li> The screen sharing detector now also works correctly when connecting to a Mac using Apple ID (Back to My Mac).</li>
+            <li> Added checkbox to lock screen to override security check and unlock SEB, even if screen sharing is still active. Displaying info about overriding security check in HUD (in red text color). </li>
+            <li> Fixed that SEB in some cases didn't switch off automatic spelling correction when running on macOS 10.12 and later.</li>
+            <li> Implemented functionality for separate Allow Reload / Show Reload Warning / Allow Navigating setting for exam and new browser windows: Hiding navigation and reload buttons in toolbar and enabling navigation with Cmd + cursor keys according to settings.</li>
+            <li> Added confirm quitting option for Quit Link.</li>
+            <li> Now respecting setting &quot;enable right mouse button&quot;: Allows to use the right mouse button/context menu according to setting key enableRightMouse. This only has an effect in Javascript, browser plugins and video players etc. (not on regular website elements).</li>
+            <li> URL filter now treats query strings consistently between SEB macOS 2.1.3 and Windows 2.2.1.</li>
+            <li> Implemented new URL filter query string condition: If &quot;?.&quot; is specified as query, then SEB enforces no query.</li>
+            <li> URL filter now ignores &quot;about:&quot; URLs. These can be blocked explicitly if desired.</li>
+            <li> Fixed URL filter didn't work correctly with Javascript open links by only closing the new window if the URL of the main frame wasn't allowed (applies only if content filter isn't active).</li>
+            <li> Changed &quot;Restart Exam Button&quot; to &quot;Back to Start Button&quot; and added disclaimer about not logging out users.</li>
+            <li> Now loading SEBClientSettings.seb also from the /Library/Preferences directory: This directory is valid for all users on a Mac and usually only writable with administrator rights. This improvement makes it easier to configure managed SEB clients which are used by multiple users.</li>
+            <li> Reconfiguration is now done seamlessly before initializing and opening the browser. Note: The SEB admin password of a new client config needs to match the one in the old client config (if there was one set), otherwise the reconfiguration fails silently. If you need to change the SEB admin password on managed clients, you first need to reset the existing SEB user defaults.</li>
+            <li> Added new setting to allow SEB installation in user's ~/Applications folder. By default, it's now only allowed to start SEB from the /Applications folder.</li>
+            <li> Refactored startup process to correctly initialize SEB if it is started directly (using client settings) or by opening a config file. Now client settings saved persistently on the Mac are not considered at all when starting SEB by opening a config file or config link. </li>
+            <li> Fixed that double clicking a .seb config file several times could lock SEB.</li>
+            <li> The About SEB splash screen now cannot hide alerts and lock SEB if those were displayed modally.</li>
+            <li> Fixed modal lock when webpage tries to download a font by sending an return key event tap, which closes the dialog (invoking the button &quot;Skip&quot; in the system alert which is displayed behind SEB's windows). This doesn't work on macOS 10.14 though, as a workaround make sure that websites don't download additional fonts or open the page first in Safari (or in SEB without active kiosk mode, using the setting Applications/Permitted Processes/Allow switching to third party applications) so the font gets downloaded before the exam.</li>
+            <li> In case SEB cannot terminate an explicitly prohibited process (trying to display an overlay/panel window), a lock screen is displayed requiring to enter the quit/unlock password.</li>
+            <li>Fixed names of running processes in log were truncated after 16 characters.</li>
+            <li> No longer changing screenshot location on OS X 10.10 and later, as SEB's windows are not captured on screenshots anyways.</li>
+            <li> Updated default Start URL to &quot;https://safeexambrowser.org/start&quot;.</li>
+            <li> Fixed problems while opening new settings when alerts were open in SEB.</li>
+            <li> Now adding Safari/WebKit version strings &quot;Version/11.1.1&quot; and 605.1.15 to user agent string.</li>
+            <li> Added information on how to solve an issue with the Force Quit window alert: &quot;If the window isn't open and this alert is displayed anyways, restart your Mac&quot;.</li>
+            <li> Fixed displaying correct time the SEB process was interrupted (in lock screen and HUD).</li>
+            <li> Now preventing editing of log messages in lock screen.</li>
+            <li> Fixed: Additional browser windows can be displayed behind the black screen background cover windows after closing Preferences Window (when not changing any settings).</li>
+            <li> Fixed changing settings when Exam Pane is displayed doesn't trigger &quot;save changed settings&quot; warning.</li>
+            <li> Fixed Preferences window not working correctly on OS X 10.8 (bad auto layout support!) by allowing to open Preferences starting macOS 10.9.</li>
+            <li> Fixed lock screen windows could be opened twice (for screen sharing and user switch) which would make it impossible to unlock again.</li>
+            <li> Improved logging when starting SEB: Now starting to log (with log level Debug and at standard log file path) regardless of current settings directly after SEB starts up, before local persistent settings are initialized.</li>
+            <li> Again fixed a bug when SEB could kill itself when a space switch occurred, this time correctly.</li>
+            <li> Fixed opening seb(s):// link wasn't working when temporary browser window (for authentication) was open and SEB was restarted after editing preferences.</li>
+            <li> Added one point to menu bar height to keep a black edge between menu bar and browser window.</li>
+            <li> Fixed a compatibility issue which caused SEB 2.1.2 to crash immediately when started on OS X 10.7.</li>
+            <li> Fixed reload (with confirm message) not working on macOS 10.7/10.8 (on non fullscreen browser windows).</li>
+            <li> Added Win Registry setting insideSebEnableNetworkConnectionSelector to Security pane and Settings.</li>
+            <li> Enabled all Function Keys in Hooked Keys (Win) default settings.</li>
+          </ul>
+          <p><strong>Known limitations.</strong> The following preferences options are not yet available in this version:</p>
+          <ul id="seblist">
+            <li>Applications pane: Monitor processes (new third party application handling and additional security feature) is not yet available. It's possible to add permitted and prohibited processes for SEB 2.x for Windows. SEB for macOS doesn't support directly starting and monitoring third party applications yet.</li>
+            <li>Network pane: It's not yet possible to set individual SEB proxy settings, you have to set system-wide proxy settings in macOS System Preferences. SEB for Windows 2.1.x or later supports individual proxy settings which you can configure here.</li>
+          </ul>
+          <h5> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1.2</a>:</h5>
           <ul id="seblist">
             <li>Fixes a bug when a browser window wasn’t scaled correctly to fit the screen (it was placed in the lower left screen corner, mainly off-screen) when only one screen is connected and the „useBuiltin“ setting is false.</li>
             <li>Fixes a bug when the main browser window stayed open when starting SEB by opening a config file. The window couldn’t be manually closed and stayed in the foreground (as a „zombie“ window, caused by a timing problem when the window gets the close command while it’s still being opened).</li>
