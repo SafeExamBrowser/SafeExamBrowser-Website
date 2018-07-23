@@ -337,37 +337,36 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macos_2.1.2/SafeExamBrowser-2.1.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macos_2.1.3/SafeExamBrowser-2.1.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.1.2 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.1.3 für macOS</span>
           </a> 
         </p>
         
 
-<p><strong>Aktuelle Version von Safe Exam Browser für macOS 10.12, 10.11, 10.10, 10.9, 10.8 und <a href="#RemarkOSX10-7">10.7*</a></strong><br />
-        <span class="codetext">SHA1: e9249dbc86bc16b1586f9a4dc34de29303f1b14c</span></p>
+<p><strong>Aktuelle Version von Safe Exam Browser für macOS 10.13, 10.12, 10.11, 10.10, 10.9, <a href="#RemarkOSX10-7">10.8 und 10.7*</a></strong><br />
+        <span class="codetext">SHA1: 89c6c4cb8bee3faf5bb9acad414fa8813737e1f6</span></p>
             
-            <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.2/SafeExamBrowser-2.1.2.dmg" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. </p>
+            <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.3/SafeExamBrowser-2.1.3.dmg" target="_blank">Download</a> von neuer <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. </p>
             
-<p id="half_linespace">Safe Exam Browser 2.1.2 <span class="half_linespace">für macOS bietet neue  Funktionalität, verbesserte Bedienbarkeit,  einige Fehlerbehebungen und beinhaltet mehrere wichtige  Verbesserungen in der Absicherung des Prüfungscomputers.<strong> Ein zeitnahes Update wird deshalb dringend empfohlen</strong>.</span></p>
+<p id="half_linespace"><span class="half_linespace">Diese  Version beinhaltet wichtige Sicherheits- und Stabilitätsverbesserungen, ein zeitnahes Update wird deshalb dringend empfohlen.</span></p>
 <ul id="seblist">
-  <li>Vollständige Kompatibilität mit macOS 10.12 Sierra.</li>
-  <li>Neu können TLS-/SSL- und CA-Zertifikate in SEB-Konfigurationsdateien eingebettet  und mittels Zertifikat-Pinning  die Sicherheit bei verschlüsselten Verbindungen mit Prüfungsservern erhöht werden (wenn SEB unter macOS 10.9 oder neuer läuft).</li>
-  <li>SEB benutzt nun eine private Zwischenablage, so können im Hintergrund laufende Hilfsprogramme und die Allgemeine Zwischenablage (Universal Clipboard, unter macOS 10.12 Sierra) nicht benutzt werden, um Inhalte in Prüfungen einzufügen oder aus Prüfungen zu kopieren.</li>
-  <li> WebAudio API ist nun aktiviert.  </li>
-  <li>Das Anzeigen von Panels und Fenstern durch im Hintergrund laufende Dritthersteller-Hilfsprogramme wird nun verhindert.</li>
-  <li>Die macOS-Bildschirmfreigabe wird nun blockiert.</li>
-  <li>Display-Mirroring kann  blockiert werden und eine neue Einstellung erlaubt, die Anzahl maximal benutzbarer Bildschirme zu begrenzen. Dies kann das Schummeln mittels drahtlosen Display-Lösungen verhindern.</li>
-  <li>Volle Unterstützung von Basic-/Digest- und NTLM-Authentifizierung hinzugefügt.</li>
-  <li>Mittels <span class="quote">seb(s)://</span>-Links verknüpfte Konfigurationsdateien können nun auch von Servern geladen werden, welche Authentifizierung verlangen. Dabei können auch indirekte Links verwendet werden (welche den Dateinamen mit  <span class="quote">.seb</span>-Endung nicht enthalten, beispielsweise sebs://example.com/download.php?id=2352). Dadurch können die Konfigurationsdateien beispielsweise zusammen mit einer Prüfung in einem Moodle-Kurs gespeichert werden. Die Login-Session wird  beibehalten, sodass sich Studierende  nicht zweimal einloggen müssen.</li>
-  <li>Neue Option in den Einstellungen zum Erzwingen einer minimalen macOS-Systemversion. Dies ist hilfreich, falls eine Webapplikation nicht kompatibel mit einer älteren WebKit-Browserversion ist (wie sie beispielsweise unter OS X 10.9 verwendet wird). Damit kann ebenfalls erzwungen werden, dass eingebettete Zertifikate und das Zertifikats-Pinning auf allen Prüfungsrechnern funktioniert, wenn als minimale macOS-Version 10.9 eingestellt wird.</li>
-  <li>Auf einem Trackpad  mit 'Force Touch' wird nun die Funktion 'Begriffe Nachschlagen' (ausgelöst mittels eines kräftigen Klicks auf ein Wort oder eine Textauswahl im Browserfenster)  blockiert, wenn die Einstellung 'Begriffe Nachschlagen erlauben' deaktiviert ist.</li>
-  <li>Eine Medienspieler-Applikation wie iTunes, welche unter Vollbildeinstellung beendet und nach dem Start von SEB mittels der Play-Funktionstaste wieder gestartet wird, kann nun den Bildschirm nicht mehr übernehmen.</li>
-  <li>Probleme im URL-Filter beseitigt: Host-Adressen mit oder ohne abschliessendes Pfadtrennzeichen '/' werden jetzt gleichwertig behandelt. Eine Filterregel mit abschliessendem Wildcard-Zeichen '/*' funktioniert nun auch bei einem Pfad ohne abschliessendes '/'-Zeichen.</li>
-  <li>Ein Fehler, der in Zusammenhang mit einer älteren WebKit-Version (unter OS X 10.10 oder älter) und falsch formatierten HTML-Elementen auftreten konnte, wurde beseitigt.</li>
-  <li>Wenn SEB über das Öffnen einer SEB-Konfigurationsdatei oder eines seb(s):// Links gestartet wird, dann werden die persistenten Client-Einstellungen nicht mehr im Haupt-Browserfenster im Bildschirmhintergrund geöffnet. Schlägt das Öffnen der neuen Einstellungen fehl (Ladefehler, Benutzer bricht ab, Entschlüsselung nicht möglich), wird SEB nun beendet, anstatt mit den persistenten Einstellungen weiter zu laufen.</li>
-  <li>Diverse kleinere Probleme früherer Versionen wurden  beseitigt. Das Bugfix-Release SEB 2.1.2 beseitigt darüber hinaus vorwiegend  Probleme, die in SEB 2.1.1 mit nicht-standardmässigen Bildschirm-Einstellungen und beim Starten einer unüblichen Konfiguration mittels .seb-Datei oder seb(s):// Link.</li>
-  </ul>
+  <li>Neue "Config Key"-Funktion, welche es einem Prüfungssystem erlaubt, zu überprüfen, ob SEB-Clients die korrekten Einstellungen benutzen. Der Config Key kann serverseitig generiert werden und ändert sich nicht, wenn dieselben Einstellungen in einer neueren SEB-Version geladen werden, in welcher neue Einstellungsoptionen hinzugefügt wurden (Aufwärts- und Abwärtskompatibilität).           
+  <li>Neue Einstellungsoptionen zum Deaktivieren von Siri und der Diktats-Funktion hinzugefügt.
+  <li> Touch Bar Textvorschläge werden während einer Prüfung ausgeschaltet.</li>
+  <li>Now refusing to re-enter an exam which hasn't been submitted properly before, for example because the Mac was force-rebooted.</li>
+  <li> URL filter now treats query strings consistently between SEB for macOS 2.1.3 and Windows 2.2.1.</li>
+  <li>Implemented functionality for separate Allow Reload / Show Reload Warning / Allow Navigating setting for exam and new browser windows.</li>
+  <li>Setting &quot;enable right mouse button&quot; now also works in SEB for macOS: Allows to use the right mouse button/context menu on special website elements.</li>
+  <li> Now loading SEBClientSettings.seb also from the /Library/Preferences directory: This directory is valid for all users on a Mac and usually only writable with administrator rights. This improvement makes it easier to configure managed SEB clients which are used by multiple users.</li>
+  <li>Fixed that SEB in some cases didn't switch off automatic spelling correction.</li>
+  <li>The screen sharing detector now also works correctly when connecting to a Mac using Apple ID (Back to My Mac).</li>
+  <li> Improved startup process: Now client settings saved persistently on the Mac are not considered at all when starting SEB by opening a config file or config link. </li>
+  <li>Fixed that double clicking a .seb config file several times could lock SEB.</li>
+  <li>The About SEB splash screen now cannot hide alerts and lock SEB if those were displayed modally.</li>
+  <li> Fixed modal lock when webpage tries to download a font.</li>
+  <li> In case SEB cannot terminate an implicitly prohibited process (trying to display an overlay/panel window), a lock screen is displayed requiring to enter the quit/unlock password.</li>
+</ul>
 <p>Andere Funktionen:</p>
 <ul id="seblist">
   <li>Unterstützung für verschlüsselte SEB-Konfigurationsdateien (Dateityp <span class="quote">.seb</span>), die es erlauben, SEB pro Prüfung individuell zu konfigurieren. Dieselben <span class="quote">.seb</span> Dateien können nun für das Starten von Prüfungen mit SEB 2.x auf Windows-Rechnern,  Macs und iPads/iOS-Geräten benutzt werden. </li>
@@ -382,7 +381,7 @@
 </ul>
 <p>Siehe <a href="macosx/mac_release_notes_de.html">Release Notes</a> für eine komplete Liste von neuen Funktionen und Änderungen.</p>
 
-<p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>*  Bemerkung: Unter OS&nbsp;X&nbsp;10.7 kann SEB nur als Prüfungs-Client benutzt werden, das Einstellungen-Fenster ist nicht verfügbar. Verwenden Sie SEB unter OS&nbsp;X&nbsp;10.8 oder neuer um eine <span class="quote">.seb</span> Konfigurationsdatei zu erstellen, die auch zum Konfigurieren von SEB-Clients unter OS&nbsp;X&nbsp;10.7 verwendet werden kann. </span></p>  
+<p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>*  Bemerkung: Unter macOS&nbsp;10.7 und 10.8 kann SEB nur als Prüfungs-Client benutzt werden, das Einstellungen-Fenster ist nicht verfügbar. Verwenden Sie SEB unter macOS&nbsp;10.9 oder neuer um eine <span class="quote">.seb</span> Konfigurationsdatei zu erstellen, die auch zum Konfigurieren von SEB-Clients unter macOS&nbsp;10.7 und 10.8 verwendet werden kann. </span></p>  
       </div>
       <!-- /Download Box -->
 
