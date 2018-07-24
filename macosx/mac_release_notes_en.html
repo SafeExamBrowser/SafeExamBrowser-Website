@@ -277,6 +277,11 @@
             <li> Added Win Registry setting insideSebEnableNetworkConnectionSelector to Security pane and Settings.</li>
             <li> Enabled all Function Keys in Hooked Keys (Win) default settings.</li>
           </ul>
+          <p>Changed in build 29E7:</p>
+          <ul>
+            <li> Improved performance and stability for reading system defaults (preferences for Siri, dictation). The previous implementation in SEB 2.1.3 build 29E5 could crash SEB while system load was very high (for example when SEB is automatically started by the system after a reboot/hard reset).</li>
+            <li> Changed default for setting browserWindowShowURL to never (to not leak exam URLs in case the are supposed to be kept secret in some exam environments).</li>
+          </ul>
           <p><strong>Known limitations.</strong> The following preferences options are not yet available in this version:</p>
           <ul id="seblist">
             <li>Applications pane: Monitor processes (new third party application handling and additional security feature) is not yet available. It's possible to add permitted and prohibited processes for SEB 2.x for Windows. SEB for macOS doesn't support directly starting and monitoring third party applications yet.</li>
