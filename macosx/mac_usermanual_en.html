@@ -248,12 +248,25 @@
               <li> <a href="#configuration">Configuration</a>
                 <ul class="nav">
                   <li><a href="#GeneralPane">General Pane</a></li>
-                  <li><a href="#ConfigFilePane">Config File Pane</a></li>
+                  
+                  <li><a href="#ConfigFilePane">Config File Pane</a>
+                    <ul class="nav">
+                      <li><a href="#ConfigDeployment">&nbsp;&nbsp;&nbsp;Deploying Settings</a></li>
+                    </ul>
+                  </li>
+                  
                   <li><a href="#AppearancePane">User Interface Pane</a></li>
                   <li><a href="#BrowserPane">Browser Pane</a></li>
                   <li><a href="#DownUploadsPane">Down/Uploads Pane</a></li>
                   <li><a href="#ExamPane">Exam Pane</a></li>
-                  <li><a href="#ApplicationsPane">Applications Pane</a></li>
+                  
+                  <li><a href="#ApplicationsPane">Applications Pane</a>
+                    <ul class="nav">
+                      <li><a href="#PermittedProcessesSection">&nbsp;&nbsp;&nbsp;Permitted Processes Section</a></li>
+                      <li><a href="#ProhibitedProcessesSection">&nbsp;&nbsp;&nbsp;Prohibited Processes Section</a></li>
+                    </ul>
+                  </li>
+                  
                   <li><a href="#NetworkPane">Network Pane</a>
                     <ul class="nav">
                       <li><a href="#NetworkPaneFilterSection">&nbsp;&nbsp;&nbsp;Filter Section</a></li>
@@ -288,7 +301,7 @@
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
-            Safe Exam Browser 2.1.2 for macOS
+            Safe Exam Browser 2.1.3 for macOS
           </h2>
     
           <p>Safe Exam Browser – SEB for macOS opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely.<span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several non-commercial and commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most web-based online quiz and e-assessment systems.</p>
@@ -483,8 +496,8 @@
             <li><span class="quote">Confirm administrator password</span>: Retype the administrator password. As long as it's not matching the administrator password typed in the field above, <span class="quote">Please enter correct confirm password</span> is displayed below and you cannot save the preferences.</li>
             <li><span class="quote">Allow user to quit SEB</span>: If selected, Users can quit SEB with <span class="quote">cmd-Q</span> or clicking the main browser window (the one that displays the exam) close button. Otherwise you can use a quit link in your exam system, shutdown or reset the computer or use the <span class="quote">Quit</span> button in this preferences window. In a computer room in a university or school you could for example use some tool to shutdown or reboot all computers after a exam and therefore not allow students to quit SEB themselves at all. </li>
             <li><span class="quote">Ignore exit keys</span> (Win): SEB ignores the exit keys and can only be quit manually by entering the quit password. Exit keys can only be set and used in the Windows version of SEB and are considered deprecated,  the prefered way to secure SEB from being quit is the quit password.</li>
-            <li><span class="quote">Quit password</span>: This password is prompted when users try to quit SEB with <span class="quote">cmd-Q</span> or the red close button in the browser window. If no quit password is set, then SEB just prompts <span class="quote">Are you sure you want to quit SEB?</span></li>
-            <li><span class="quote">Confirm quit password</span>: Retype the quit password. As long as it's not matching the quit password typed in the field above,<span class="quote"> Please enter correct confirm password</span> is displayed below and you cannot save the preferences.</li>
+            <li><span class="quote">Quit/unlock password</span>: This password is prompted when users try to quit SEB with <span class="quote">cmd-Q</span> or the red close button in the browser window. It is also used to unlock SEB in case an event relevant for security triggered the red lock screen to be displayed. If no quit password is set, then SEB just prompts <span class="quote">Are you sure you want to quit SEB?</span></li>
+            <li><span class="quote">Confirm quit/unlock password</span>: Retype the quit password. As long as it's not matching the quit password typed in the field above,<span class="quote"> Please enter correct confirm password</span> is displayed below and you cannot save the preferences.</li>
             <li><span class="quote">About</span>: Shows a window with SEB copyright information and  version number. Click somewhere into the window to close it.</li>
             <li><span class="quote">Help-Button &quot;?&quot;</span>: Displays this manual page in a new browser window.</li>
           </ul>
@@ -494,7 +507,7 @@
             <li><span class="quote">Restart SEB</span>: Saves preferences, eventually reconfigures and restarts SEB, displaying the webpage at start URL.</li>
             <li><span class="quote">Quit</span>: Saves preferences and exits SEB.</li>
           </ul>
-          <p>You can also exit SEB while applying changed settings using the item <span class="quote">Apply and Restart SEB</span> in the <span class="quote">Settings</span> menu.</p>
+          <p>You can also exit SEB while applying changed settings using the item <span class="quote">Apply and Restart SEB</span> in the <span class="quote">Settings</span> menu (menu bar or the context menu in the Preferences window title bar clicking the triangle symbol).</p>
           
           <h4 class="seb-section-header sebnavbar-link" id="ConfigFilePane">
             <a class="anchorjs-link" href="#ConfigFilePane"></a>
@@ -533,8 +546,19 @@
           
           <p><span class="quote">Local client settings</span> are saved according to macOS standards in the user's <span class="path">Library/Preferences/</span> directory (<span class="path">~/Library/Preferences/</span>, is by default invisible in Finder). Starting SEB version 2.0, it isn't anymore possible to deploy the <span class="path">org.safeexambrowser.Safe-Exam-Browser.plist</span> file from the Preferences folder to other machines (due to stronger, individual encryption per client). Instead, either deploy and open a .seb config file saved with the option 'Use SEB settings file for ... configuring a client'. This requires user interaction, because SEB will show an alert <em>'Local settings of this SEB client have been reconfigured. Do you want to continue working with SEB now or quit?'</em> and one of the buttons 'Continue' or 'Quit' has to be clicked. As an alternative, you can use the new pre-configuration feature when deploying SEB on managed systems which works similar like in SEB for Windows (and doesn't require user interaction): </p>
           
-          <p>While starting, SEB now checks if there is a configuration file named <span class="path">SebClientSettings.seb</span> in in the Preferences folder (<span class="path">~/Library/Preferences/</span>) and reconfigures itself silently (no user feedback) to the settings in that file, then the file is deleted. This works only if the administrator password in this file matches the one set in the local settings of the SEB client or if there isn't an administrator password set yet in the local settings. This means, if the SEB clients haven't been configured before (because SEB just got installed), you can set an arbitrary administrator password in the  <em>SebClientSettings.seb</em> file. The second time you reconfigure SEB clients with this method, the administrator password in the new <em>SebClientSettings.seb</em> file has to match the one used before, otherwise the client won't be reconfigured. The file can either be unencrypted or encrypted with a password that matches the administrator password set in the local settings of the SEB client (otherwise the password to decrypt the settings file will be prompted and the user has to enter it).</p>
-          
+          <h5 class="seb-section-header sebnavbar-link" id="ConfigDeployment">
+            <a class="anchorjs-link" href="#ConfigDeployment"></a>
+            Deploying Settings to Managed Macs
+          </h5>
+
+          <p>While starting, SEB  checks if there is a configuration file named <span class="path">SEBClientSettings.seb</span> in </p>
+          <ol>
+            <li> the Preferences folder of the machine (<span class="path">/Library/Preferences/</span>), or if none is found here, then</li>
+            <li>the Preferences folder of the current user (<span class="path">~/Library/Preferences/</span>). </li>
+          </ol>
+          <p>SEB then reconfigures itself silently (no user feedback) to the settings in that file. After that, the file is deleted, if SEB has write access to it. This is usually only the case if the <em>SEBClientSettings.seb</em> file was loaded from the user's preferences folder. </p>
+          <p>This managed configuration or reconfiguration works only if the administrator password in the <em>SEBClientSettings.seb</em>file matches the one set in existing persisted local settings of the SEB client or if there isn't an administrator password set yet in the local client settings. This means, if  SEB clients haven't been configured before (because SEB just got installed), you can set an arbitrary administrator password in the <em>SEBClientSettings.seb</em> file. The second time you reconfigure SEB clients with this method, the administrator password in the new <em>SEBClientSettings.seb</em> file has to match the one used before, otherwise the client won't be reconfigured. The file can either be unencrypted or encrypted with a password that matches the administrator password set in current SEB client settings. </p>
+          <p>If the administrator  password used in the <em>SEBClientSettings.seb</em> file or the settings password used for encrypting the <em>SEBClientSettings.seb</em> file don't match the administrator password set in current client settings (if those were already set before), then reconfiguring will silently fail. In this case SEB will use previous client settings or if there were none, then the SEB default settings, which display the  info page at https://safeexambrowser.org/start. If you need to change the SEB administrator password on managed clients, you first need to reset the existing SEB user defaults (see below).</p>
           <p>In the rare case you would have a problem with the local client settings of a client computer, for example if SEB crashes after starting, you should try to reset the local client settings. Since OS X 10.9 Mavericks this isn't possible by just deleting the <em>org.safeexambrowser.Safe-Exam-Browser.plist</em> file from the <em>Preferences</em> folder, because macOS caches those preferences. Instead use the command <span class="codetext">defaults delete org.safeexambrowser.Safe-Exam-Browser</span> from the Terminal app shell. Then you should be able to start SEB again, as local settings are  reset to the default values (there will be a message displayed indicating that local client settings were reset when you start SEB).</p>
           
           <h4 class="seb-section-header sebnavbar-link" id="AppearancePane">
@@ -570,7 +594,7 @@
 
             <li><span class="quote">Main browser window size</span>: You can set the width and height of the main SEB browser window as absolute points (pixel) values or a percentage of the screen width or height.  You can enter the dimensions (in points or percent values) in the text field or select one of the predefined values in the  popdown menu. </li>
             <li><span class="quote">Main browser window horizontal positioning</span>:  You can choose how the window will be positioned horizontally if it doesn't fill the full screen width: Left, Center, Right.</li>
-            <li><span class="quote">Enable browser window toolbar</span>: Indicaties if a toolbar is displayed on top of the browser window which can also be hidden by the user if it's disturbing. The toolbar containts the back/forward browsing buttons, page and text zoom buttons (if enabled) and the reload button.<br />
+            <li><span class="quote">Enable browser window toolbar</span>: Indicates if a toolbar is displayed on top of the browser window which can also be hidden by the user if it's disturbing. The toolbar containts the back/forward browsing buttons, page and text zoom buttons (if enabled) and the reload button. In SEB for macOS the toolbar isn't displayed on the main browser window if this is set to full screen mode.<br />
             </li>
             <li><span class="quote">Hide toolbar as default</span>: After SEB starts, the browser window toolbar is hidden. Users can unhide the toolbar in the view menu or the key combination cmd-alt-T. </li>
             <li><span class="quote">Show menu bar</span>: Show the macOS menu bar to allow accessing settings like Wi-Fi and for changing keyboard layouts.</li>
@@ -619,18 +643,37 @@
             <li><span class="quote">Enable JavaScript</span>:  Please note that most modern websites need JavaScript for full functionality.</li>
             <li><span class="quote">Enable Java</span>: Enables Java Applets. Starting SEB 2.0 this option is disabled by default because Java applets are considered a potential security risk.</li>
             <li><span class="quote">Block pop-up windows</span>: Disables pop-up windows (often advertisement) opened by JavaScript without an user action such as a button click.</li>
-            <li><span class="quote">Allow browsing back/forward</span>: Disabling browsing to previously visited pages (by cmd - Cursor left) increases security, because it might be possible to leave an exam by browsing back to an external start page. </li>
+            <li><span class="quote">Allow navigating back/forward in exam</span>: Disabling browsing to previously visited pages (by cmd+Cursor left) increases security, because it might be possible to leave an exam by browsing back to an external start page.</li>
+            <li><span class="quote">Allow navigating in additional windows</span>: Disabling browsing to previously visited pages (by cmd+Cursor left) might not be desired for additional resources and other content opening in additional browser windows, therefore this separate setting.</li>
+            <li><span class="quote">Allow reload in exam</span>: You can disable reload completely (reload button in task bar, browser tool bar, iOS side slider menu, keyboard shortcut cmd+R/F5 on Windows) with this setting, as  offline caching in some e-assessment systems might break when the user tries to reload a page without internet connection.</li>
+            <li><span class="quote">Allow reload in additional windows</span>:  For additional resources and other content opening in additional browser windows reload can be enabled/disabled separately with this setting.</li>
+            <li><span class="quote">Show reload warning in exam</span>: SEB shows a warning asking the user to confirm reloading the main browser containing the exam.</li>
+            <li><span class="quote">Show reload warning in additional windows</span>: You can disable/enable the reload warning for additional resources and other content opening in additional browser windows separately.</li>
             <li><span class="quote">Remove profile (Win)</span>: Removes XULRunner browser profile (containing caches and also local storage) when quitting SEB.</li>
-            <li><span class="quote">Disable local storage (Mac)</span>: Local storage (which is stored per origin, e.g. the combination of protocol, hostname, and port number as defined in the same origin policy) is meant to persist after a browser is closed. This might be a security issue though if you don't know how securely an exam system is handling information in localStorage. If your web application uses local storage, you have to be sure data is saved encrypted and removed when no longer needed as SEB doesn't remove local storage itself.</li>
-            <li><span class="quote">User agent</span>: Choose browser agent settings for SEB running on various operating systems and device types
-              <ul id="seblist">
-                <li><span class="quote">Default</span>: Default user agent string on this Mac (it depends on installed Safari/WebKit version and therefore can differ on exam clients!)</li>
-                <li><span class="quote">Custom</span>: Enter a custom user agent string (SEB appends its version number automatically)</li>
-              </ul>
-            </li>
-            <li><span class="quote">Use SEB without browser window</span>: If you intend to use another application for an exam and don't need to display any web content on the exam client, you can switch off the SEB browser with this option. Don't try to disable XULRunner in the <span class="quote">Application -&gt; Permitted Processes</span> tab, that isn't necessary when using this option. <strong>This feature is not yet available in SEB 2.1.2.</strong></li>
+            <li><span class="quote">Disable local storage (Mac)</span>: Local storage (which is stored per origin, e.g. the combination of protocol, hostname, and port number as defined in the same origin policy) is meant to persist after a browser is closed. This might be a security issue though if you don't know how securely an exam system is handling information in localStorage. If your web application uses local storage, you have to be sure data is saved encrypted and removed when no longer needed as SEB doesn't remove local storage itself.            </li>            
           </ul>
           
+          <h5>User Agent Settings</h5>
+          
+          <ul>
+            <li><span class="quote">Suffix to be added to any user agent</span>: Enter a string here which will be appended to any user agent string (independent from the other user agent settings below).</li>
+            <li><span class="quote">Standard user agent</span>: Choose browser agent settings for SEB running on various operating systems and device types
+              <ul id="seblist3">
+                <li><span class="quote">Default</span>: Default user agent string on this Mac (it depends on installed Safari/WebKit version and therefore can differ on exam clients!)</li>
+                <li><span class="quote">Custom</span>: Enter a custom user agent string (SEB appends its version number automatically)            </li>
+              </ul>
+            </li>
+            <li><span class="quote">Win: User agent for desktop mode</span>: Allows to switch between the default and a custom browser user agent string for SEB Windows running in  desktop mode. SEB appends its version number automatically to the selected user agent string.</li>
+            <li><span class="quote">Win: User agent for touch/tablet mode</span>: Allows to switch between the default, an iPad-like and a custom browser user agent string for SEB Windows running in  the touch optimized mode (on tablet computers). SEB appends its version number automatically to the selected user agent string.
+              <ul>
+                <li><span class="quote">iPad</span>: Use an iPad-like user agent string for the touch optimized/tablet mode, as many mobile optimized websites recognize this user agent, but not the Windows tablet touch user agent. </li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li><span class="quote">Use SEB without browser window</span>: If you intend to use another application for an exam and don't need to display any web content on the exam client, you can switch off the SEB browser with this option. Don't try to disable XULRunner in the <span class="quote">Application -&gt; Permitted Processes</span> tab, that isn't necessary when using this option. <strong>This feature is not yet available in SEB 2.1.3.</strong></li>
+          </ul>
+
           <h4 class="seb-section-header sebnavbar-link" id="DownUploadsPane">
             <a class="anchorjs-link" href="#DownUploadsPane"></a>
             Settings in the Down/Uploads Pane
@@ -688,10 +731,13 @@
             clients.      </li>
           </ul>
           
-          <h5 class="seb-section-header sebnavbar-link">Permitted Processes Section</h5>
+          <h5 class="seb-section-header sebnavbar-link" id="PermittedProcessesSection">
+            <a class="anchorjs-link" href="#PermittedProcessesSection"></a>
+            Permitted Processes Section
+          </h5>
           
           <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. </p>
-          <p><strong>Using permitted processes is not yet functional in SEB 2.1.2 for macOS</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
+          <p><strong>Using permitted processes is not yet functional in SEB 2.1.3 for macOS</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
           
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesApplications-PermittedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Permitted Processes Tab" />
@@ -709,7 +755,7 @@
             <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of permitted processes.</li> -->
           </ul>
           
-          <p class="seb-section-header quote">Selected Process details:</p>
+          <p class="seb-section-header quote">Selected Process Details:</p>
           
           <ul id="seblist">
             <li><span class="quote">Active</span>: Indicates if this permitted process item is active (can be used while testing).</li>
@@ -734,11 +780,14 @@
           
           <p>Java applications (like OpenOffice) can  be used as permitted processes, but require specific settings: The title of their main window must be defined in  the field <span class="quote">Permitted Processes -&gt; Identifier</span> (for example &quot;OpenOffice Calc&quot;), the required main executable in <span class="quote">Permitted Processes -&gt; Executable</span> (&quot;scalc.exe&quot;) and the process which is actually handling the main window in <span class="quote">Permitted Processes -&gt; Window Handling Process(es)</span> (&quot;soffice.bin&quot;). For this example the executable path should be entered as &quot;program&quot; in <span class="quote">Permitted Processes -&gt; Path</span>, as that is the relative path to the main executable from the OpenOffice main directory, which is registered in Windows <span class="quote">App Paths</span>.</p>
           
-          <h5 class="seb-section-header sebnavbar-link">Prohibited Processes Section</h5>
+          <h5 class="seb-section-header sebnavbar-link" id="ProhibitedProcessesSection">
+            <a class="anchorjs-link" href="#ProhibitedProcessesSection"></a>
+            Prohibited Processes Section
+          </h5>
       
           <p>List of processes which are prohibited to run during an exam  when <span class="quote">monitor processes</span> is enabled. This prohibited list of processes makes sense because SEB  usually allows to run system processes (SEB for macOS allows all processes and applications signed by Apple to run), but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the prohibited processes are killed by SEB.</p>
           
-          <p><strong>Using prohibited processes is not yet functional in SEB 2.1.2 for macOS</strong>. You can define and edit permitted processes for the Windows version of SEB here.</p>
+          <p><strong>Using prohibited processes is not yet functional in SEB 2.1.3 for macOS</strong>. You can define and edit permitted processes for the Windows version of SEB here.</p>
           
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesApplications-ProhibitedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Prohibited Processes Tab" />
@@ -749,7 +798,7 @@
                 <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of prohibited processes.</li>
            </ul> -->
               
-          <p class="quote">Selected Process details:</p>
+          <p class="quote">Selected Process Details:</p>
           
           <ul id="seblist">
             <li><span class="quote">Active</span>: Indicates if this prohibited process item is active.</li>
@@ -869,7 +918,7 @@ certificates extend the system trust store (as if you had manually added them to
             Proxies Section
           </h5>
           
-          <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not available in SEB 2.1.2 for macOS</strong>, you have to set proxy settings in System Preferences / Network on each client computer. SEB 2.1 and newer for Windows  supports  individual proxy settings which you can configure here.</p>
+          <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not available in SEB 2.1.3 for macOS</strong>, you have to set proxy settings in System Preferences / Network on each client computer. SEB 2.1 and newer for Windows  supports  individual proxy settings which you can configure here.</p>
           
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesNetwork-Proxies-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Proxies Tab" />
