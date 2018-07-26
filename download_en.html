@@ -359,14 +359,14 @@
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.3/SafeExamBrowser-2.1.3.dmg" target="_blank">Download</a> from new <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>. </p>
         <p><span class="half_linespace">This  version includes important security and stability improvements, updating soon is highly recommended.</span></p>
         <ul id="seblist">
-          <li>New "Config Key" feature allowing an exam system to verify that the correct settings are being used. The Config Key can be generated server-side and doesn't change if same settings are loaded in a new SEB version which adds new setting keys (the key is forward and backwards compatible).           
+          <li>New "<a href="macosx/mac_usermanual_en.html#ExamPane">Config Key</a>" feature allowing an exam system to verify that the correct settings are being used. The Config Key can be generated server-side and doesn't change if same settings are loaded in a new SEB version which adds new setting keys (the key is forward and backwards compatible).           
           <li>Added settings to disable Siri and dictation.           
           <li>Now blocking Touch Bar typing suggestions (predictive keyboard) during an exam.</li>
           <li>Now refusing to re-enter an exam which hasn't been submitted properly before, for example because the Mac was force-rebooted.</li> 
           <li> URL filter now treats query strings consistently between SEB for macOS 2.1.3 and Windows 2.2.1.</li>
           <li>Implemented functionality for separate Allow Reload / Show Reload Warning / Allow Navigating setting for exam and new browser windows.</li>
           <li>Setting &quot;enable right mouse button&quot; now also works in SEB for macOS: Allows to use the right mouse button/context menu on special website elements.</li>
-          <li> Now loading SEBClientSettings.seb also from the /Library/Preferences directory: This directory is valid for all users on a Mac and usually only writable with administrator rights. This improvement makes it easier to configure managed SEB clients which are used by multiple users.</li>
+          <li> Now loading SEBClientSettings.seb also from the /Library/Preferences directory: This directory is valid for all users on a Mac and usually only writable with administrator rights. This improvement makes it easier to <a href="macosx/mac_usermanual_en.html#ConfigDeployment">configure managed SEB clients</a> which are used by multiple users.</li>
           <li>Fixed that SEB in some cases didn't switch off automatic spelling correction.</li>
           <li>The screen sharing detector now also works correctly when connecting to a Mac using Apple ID (Back to My Mac).</li>
           <li> Improved startup process: Now client settings saved persistently on the Mac are not considered at all when starting SEB by opening a config file or config link. </li>
