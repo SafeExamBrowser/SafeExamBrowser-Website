@@ -20,11 +20,10 @@
     <meta name="theme-color" content="#ffffff">
 
 <!-- InstanceBeginEditable name="head" -->
-
 <!-- InstanceEndEditable -->
 
 <!-- InstanceBeginEditable name="doctitle" -->
-<title>Safe Exam Browser: Developer – Integration</title>
+    <title>Safe Exam Browser: Developer – Integration</title>
 <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -167,7 +166,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="../developer/overview.html">Developer Information</a>
+                                <a href="overview.html">Developer Information</a>
                             </li>
                     		<li>
                         		<a href="../support_en.html">Support Links</a>
@@ -188,18 +187,35 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-			<div class="page-header">
-				<h1>Integration of Safe Exam Browser into Exam Solutions</h1>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="list-group hidden-print"> 
-						<a href="overview.html" class="list-group-item">Overview</a>
-						<a href="seb-integration.html" class="list-group-item active">Integration</a> 
-						<a href="seb-file-format.html" class="list-group-item">File Format</a> 
-					</div>
-				</div>
-				<div class="col-md-9">
+
+    	<!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Developer Documentation <small>Integration</small></h1>
+            </div>
+        </div>
+        <!-- /.row -->
+        
+        <!-- Content Row -->
+        <div class="row">
+            
+        	<!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group hidden-print"> 
+                    <a href="overview.html" class="list-group-item">Overview</a>
+                    <a href="seb-integration.html" class="list-group-item active">Integration</a> 
+                    <a href="seb-config-key.html" class="list-group-item">Config Key</a> 
+                    <a href="seb-file-format.html" class="list-group-item">File Format</a> 
+                </div>
+            </div>
+      		<!-- /.row --> 
+      
+            <!-- Content Column -->
+            <div class="col-md-9" role="main">
+            
+                <!-- Content -->
+                <h3 class="page-header">Integration of Safe Exam Browser into Exam Solutions</h3>
+                
 					<p>SEB integration into learning management systems (LMS) and other exam solutions has the following objectives:</p>
 					<ol>
 						<li><span></span>Make sure a quiz can only be taken using Safe Exam Browser, display an error message if trying to open the quiz in another web browser.</span></li>
@@ -235,19 +251,20 @@
 					<p><span>If you strictly follow these rules, then no one should be able to access the exam with another browser than SEB and with different settings, because they cannot find out the URL without decrypting the exam config file in SEB (containing those legit settings).&nbsp;</span></p>
 					<p><span>As mentioned this method isn’t the safest. One reason for that is that you really need to strictly follow the security measures mentioned above. You would need to create a workflow to follow those security measures with acceptable effort for the exam administrator. Also in BYOD scenarios on student desktop OS computers risks of manipulating the installed SEB version are higher, therefore we recommend one of the more secure methods described below.</span></p>
 					<p><span>Exam administrators might want to make sure that only some specific SEB versions are used to access exams, for example only the newest official SEB version with the latest security patches. To achieve this, SEB can generate special key strings and send these to the exam system. The exam system can then verify if such a key matches the key which was entered by the exam administrator when setting up the exam or if it matches the key generated for the exam settings used for a particular exam.&nbsp;</span></p>
-					<p><span>Current SEB versions are using the <strong><a href="documents/SEB-Specification-BrowserExamKey.pdf" target="_blank">Browser Exam Key</a> (BEK)</strong>, which as its name suggests ensures that:</span></p>
+					<p><span>Current SEB versions are using the <strong><a href="documents/SEB-Specification-BrowserExamKey.pdf" target="_blank">Browser Exam Key</a> (BEK)</strong>, which as its name suggests is used to ensure that:</span></p>
 					<ul>
 						<li><span>the right version of Safe Exam <strong>Browser</strong> (SEB) is used to complete the exam;</span></li>
 						<li><span>the SEB exam client is correctly configured/secured for this specific <strong>exam</strong>.&nbsp;</span></li>
 					</ul>
-					<p><span>Exam administrators can copy the Browser Exam Key which is displayed in the SEB Config Tool or Preferences window in the Exam tab and paste it to the Exam/quiz settings inside of an e-assessment system which supports SEB. Whenever any of the setting options in SEB are changed, the BEK also changes. Therefore, you should first configure SEB appropriately, then save those settings as a config file and then copy-paste the BEK.</span></p>
+					<p><span>Exam administrators can copy the Browser Exam Key hash value which is displayed in the <a href="../windows/win_usermanual_en.html#ExamPane">SEB Config Tool</a> or <a href="../macosx/mac_usermanual_en.html#ExamPane">Preferences window</a> in the Exam tab and paste it to the Exam/quiz settings inside of an e-assessment system which supports SEB. Whenever any of the setting options in SEB are changed, the BEK also changes. Therefore, you should first configure SEB appropriately, then save those settings as a config file and then copy-paste the BEK.</span></p>
 					<p><span>In current (Windows/macOS) versions of SEB, the Browser Exam Key is different for each build version of SEB. Whenever you want students to use a new release of SEB, you have to load the settings used for that exam into the according new SEB version and copy-paste the new BEK to your exam system. Therefore all integrations for SEB using the BEK have to allow to enter several Browser Exam Keys. If you support several SEB versions, you need to copy-paste all required keys to your exam settings. This also applies to SEB versions for different platforms. SEB Config Files are compatible and usually you would only use one config for all platforms. But when using the BEK check,&nbsp;</span></p>
 					<ul>
 						<li><span>you need to save the config file in one SEB version,</span></li>
 						<li><span>then load the same config file in each SEB version on each platform you want to support and copy-paste each different BEK. <strong>In this step it is essential to not save the SEB Config File again</strong>, as that usually would alter the BEK for all other versions.</span></li>
 					</ul>
 					<p><span>For the Browser Exam Key to be secure, it is essential that it cannot easily be generated outside of the SEB application, that’s why you need to copy-paste it from each SEB version. This can be inconvenient if you create many exam configurations. If you don’t need to change SEB settings for every exam, then you could also use a general config file which uses a general link (for the SEB <em>Start URL</em> setting) and then forwards to the current exam or displays an exam portal page where students select the exam they are supposed to take. This would decrease the efforts for generating config files and copy-pasting its Browser Exam Keys.</span></p>
-					<p><span>Upcoming SEB versions will support two additional keys, which will help to overcome those disadvantages of the Browser Exam Key. Specifications will be provided soon.</span></p>
+					<p><span><span>You can find more information about how to implement support for the Browser Exam Key in the <a href="documents/SEB-Specification-BrowserExamKey.pdf" target="_blank">specification PDF document</a>.</span></span></p>
+					<p><span>Upcoming SEB versions will support two additional hash keys, which will help to overcome those disadvantages of the Browser Exam Key. The first of these new keys, the <a href="seb-config-key.html">Config Key</a>, is currently <a href="file:///Users/drs/developer/safeexambrowser.org/macosx/mac_usermanual_en.html#ExamPane">implemented in SEB for macOS</a>.</span></p>
 					<h4 class="seb-section-header"><strong>3. &nbsp; Quit SEB (and/or unlock the device) automatically after the exam was submitted</strong></h4>
 					<p><span>While an exam is running, examinees should not be able to leave SEB. Only after finishing/submitting the exam, students should be allowed to end the kiosk mode and quit SEB. At the same time, exam supporters must be able to quit SEB anytime in case of a technical problem. How to achieve this:</span></p>
 					<ul>
@@ -274,16 +291,22 @@
 					<h4 class="seb-section-header"><strong>5. &nbsp; Don’t display any navigation links which allow to exit from the exam</strong></h4>
 					<p><span>This point should be obvious, but especially when using quiz modules in widely customizable open source learning management systems like Moodle, you still might want to make sure that there are no links inside an exam which would allow to navigate to other sections of the LMS or even other websites. In the case of an LMS for example course navigation, link to the user's profile, logout, link to the University homepage (maybe inside a logo) etc. need to be disabled/hidden. Only the quiz navigation (to navigate to other questions) and the button or link to submit an exam should be visible.<br> </span></p>
 					<p><span>This part should be be done inside the exam system. Alternatively a URL filter could to be defined in SEB settings to only allow access to the exam.</span></p>
-				</div>
-			</div>
+                    
+            </div>
+            <!-- / Content Column -->
             
+        </div>
+        <!-- /.row (Content Row)-->
+        
+        <hr>
+
 <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2017 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2018 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>
@@ -306,4 +329,3 @@
 </body>
 
 <!-- InstanceEnd --></html>
-
