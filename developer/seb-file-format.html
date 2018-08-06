@@ -24,7 +24,7 @@
 <!-- InstanceEndEditable -->
 
 <!-- InstanceBeginEditable name="doctitle" -->
-		<title>Safe Exam Browser - File Format</title>
+		<title>Safe Exam Browser – Developer File Format</title>
 <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -167,7 +167,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Support<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="../developer/overview.html">Developer Information</a>
+                                <a href="overview.html">Developer Information</a>
                             </li>
                     		<li>
                         		<a href="../support_en.html">Support Links</a>
@@ -188,18 +188,34 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-			<div class="page-header">
-				<h1>Encrypted SEB Config Files Format</h1>
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="list-group hidden-print"> 
-						<a href="overview.html" class="list-group-item">Overview</a>
-						<a href="seb-integration.html" class="list-group-item">Integration</a> 
-						<a href="seb-file-format.html" class="list-group-item active">File Format</a> 
-					</div>
-				</div>
-				<div class="col-md-9">
+      
+    	<!-- Page Heading/Breadcrumbs -->
+      	<div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Developer Documentation <small>File Format</small></h1>
+            </div>
+      	</div>
+      	<!-- /.row --> 
+      
+      	<!-- Content Row -->
+        <div class="row">
+            
+        	<!-- Sidebar Column -->
+            <div class="col-md-3">
+                <div class="list-group hidden-print"> 
+                    <a href="overview.html" class="list-group-item">Overview</a>
+                    <a href="seb-integration.html" class="list-group-item">Integration</a> 
+                    <a href="seb-config-key.html" class="list-group-item">Config Key</a> 
+                    <a href="seb-file-format.html" class="list-group-item active">File Format</a> 
+                </div>
+            </div>
+            
+            <!-- Content Column -->
+            <div class="col-md-9" role="main">
+                
+                <!-- Content -->
+                <h3 class="page-header">Encrypted SEB Config File Format</h3>
+                
 					<p><span>Safe Exam Browser’s configuration files with the file name extension .seb containing exam configurations have to be encrypted because:</span></p>
 					<ul>
 						<li><span>examinees should not be able to alter the exam configuration;</span></li>
@@ -412,16 +428,22 @@
 						</tbody>
 					</table>
 					<p><span>Since human readability is not relevant for the .seb configuration file as users will never see it unencrypted, structure of the XML configuration files is reduced to the basic, essential plist-structure. Therefore there are <strong>no sections</strong> as in the old ini files. All keys in the root-level dictionary are unique (each key can only occur once).</span></p>
-				</div>
-			</div>
-			<hr />
+                    
+                </div>
+            <!-- / Content Column -->
+            
+        </div>
+        <!-- /.row (Content Row)-->
+        
+        <hr>
+        
 <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2017 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2018 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>
