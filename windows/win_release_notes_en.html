@@ -227,8 +227,62 @@
         <!-- Content -->
           <h2></h2>
     
-    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2: </h5>
-
+    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2.1: </h5>
+    <p>Safe Exam Browser 2.2.1 for Windows is a maintenance update for SEB 2.2 with some new features and many improvements:</p>
+    <ul>
+      <li>Added configurable spell checking, dictionaries can be embedded into SEB config files. </li>
+      <li>Added context menu for displaying word suggestions and selecting spell checking dictionary. Note: You have to enable the right mouse button in &quot;Hooked Keys&quot; config tool tab (from SEB 2.2 in default settings the right mouse button is enabled, but not in older versions).</li>
+      <li>Resolved issue with sometimes missing power options after SEB was quit</li>
+      <li>Added options for additional resources: 
+        <ul>
+          <li>Show button (to display the icon or menu entry for a resource)</li>
+          <li>Referrer filter for activation Link URL</li>
+          <li>Option &quot;Show confirm box&quot; with custom text which is displayed before loading a resource</li>
+          <li>Reset browser session (session cookies are deleted before loading a new resource)<br>
+          </li>
+        </ul>
+      </li>
+      <li>Fixed that the URL filter didn't treat query strings in URLs consistently in SEB for Windows 2.2/macOS. Added option to explicitly forbid any query part in checked URL: Indicate &quot;?.&quot; as query in your filter expression.</li>
+      <li>Fixed Browser Exam Key (BEK) check wasn't working correctly with some exam systems (because a trailing slash &quot;/&quot; was removed from the URL used to hash the BEK)</li>
+      <li>Fixed that SEB couldn't quit Firefox when starting. </li>
+      <li>Changed ProcessWatchDog to distinguish processes by ID in order to detect new instances of Firefox (not seb2) being started.</li>
+      <li>Prevent that SEB browser can be used to finish an exam if SafeExamBrowser.exe is terminated: The browser displays a red lock screen in this case, requiring to enter the quit/unlock password.</li>
+      <li>Improved user ID (SID) Handling in Registry Service, including when Service tries to reset Registry settings after rebooting the machine.</li>
+      <li>Extended SID handling to always try all available methods to retrieve a SID.</li>
+      <li>Fixed major bug which could lead to an invalid SID value being saved in the registry backup file.</li>
+      <li>Added group policy update to registry resetter, removed it from SEB service and improved its output logging</li>
+      <li>Replaced embedded Firefox with latest version 52.9.0 ESR.</li>
+      <li>Fixed changed browser user agent wasn't updated correctly</li>
+      <li>Fixed Desktop wallpaper wasn't restored sometimes after quitting SEB</li>
+      <li>Fixed Ctrl+1/2/3/.../9 allowed changing &quot;tabs&quot;, which could lead to users getting stuck on a white page if they pressed the key combination unwittingly</li>
+      <li>Fixed Basic Authentication login wasn't working</li>
+      <li>Now always removing trailing slash from Quit URL before comparing it with current URL</li>
+      <li>Changed default setting for all function keys to &quot;enabled&quot;.</li>
+      <li>Fixed SEB trying to close Firefox when opening a .seb file while SEB is already running</li>
+      <li>Fixed URL filters weren't saved for exam mode configs</li>
+      <li>Fixed reconfiguring from touch optimized to &quot;desktop&quot; mode: Taskbar stayed large</li>
+      <li>Fixed .seb config file as additional resource wasn't loaded by SEB</li>
+      <li>Fixed: Quit Link option &quot;Ask user to confirm quitting&quot; not working in some cases</li>
+      <li>Fixed: If canceling opening a seb(s):// link (inside SEB), the SEB browser tries to download the config file</li>
+      <li>Fixed: If blocked URL is opened as a new window, the message &quot;calling this URL is not allowed&quot; is displayed behind a white page</li>
+      <li>Improved logging and functionality of Registry Resetter</li>
+      <li>Now expanding environment variables in process arguments</li>
+      <li>Updated InstallShield installer to always perform a major update and disabled small/minor updates.</li>
+      <li>Fixed bug trying to kill the System Idle Process when an allowed application (Firefox) was running during startup in Create New Desktop mode.</li>
+      <li>Fixed bug in reconfiguration mechanism which caused unnecessary reconfiguration during startup.</li>
+      <li>Only show additional resource button if it is active.</li>
+      <li>Fixed bug not hiding additional resource details when deleting last resource.</li>
+      <li>Removed key KeyAdditionalResourcesIdentiﬁerCounter, which isn't actually used and in addition caused a problem because it was using a strange joint &quot;fi&quot; unicode character.</li>
+      <li>Fixed bug which deleted files from the temporary additional resources folder.</li>
+      <li>Fixed PDF response observer to ignore frame requests.</li>
+      <li>Renamed quit/restart password following the new terminology to &quot;quit/unlock password&quot;. </li>
+      <li>Changed wording of client configuration message.</li>
+      <li>Removed &quot;Interop.WUApiLib.dll&quot; binary no longer in use from creation of Browser Exam Key BEK and added new binaries.</li>
+      <li>Disabled seb.xul key commands (except F5 reload) on default</li>
+    </ul>
+    
+    <h5 id="sebh5">&nbsp;</h5>
+    <h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2: </h5>
 
     <p>SEB 2.2 for Windows is a major update with new features and many improvements. This version is replacing the SEB 2.1.x branch, with which it is compatible with one important exception: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2 for Windows.</p>
     <ul>
