@@ -257,8 +257,8 @@
           <li>Added configurable spell checking, dictionaries can be embedded into SEB config files. </li>
           <li>Added context menu for displaying word suggestions and selecting spell checking dictionary. Note: You might have to enable the right mouse button in your settings (&quot;Hooked Keys&quot; config tool tab).</li>
           <li>Resolved issue with sometimes missing power options after SEB was quit.</li>
-          <li>Added options for additional resources: 
-            <ul>
+          <li>Added options for <a href="windows/win_usermanual_en.html#AdditionalResources">Additional Resources</a>:
+<ul>
               <li>Show button (to display the icon or menu entry for a resource)</li>
               <li>Referrer filter for activation Link URL</li>
               <li>Option &quot;Show confirm box&quot; with custom text which is displayed before loading a resource</li>
@@ -275,36 +275,15 @@
           <li>Changed default setting for all function keys to &quot;enabled&quot;.</li>
         </ul>
         <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes. <span class="half_linespace">The <a href="windows/win_usermanual_en.html"> manual</a> is currently being updated for all new features</span></p>
-        <p>New features in SEB 2.2: </p>
-        <ul>
-          <li>Using  the powerful new feature "Additional Resources", webpages, websites and documents can   be accessed securely and easily  in  exams using icons in the SEB task bar (similar to permitted applications) or  hierarchical popup menus.</li>
-          <li>External Additional Resources use the <a href="windows/win_usermanual_en.html#NetworkPaneFilterSection">improved URL filter</a> to only allow displaying specific webpages, documents or sections of websites.</li>
-          <li>Additional Resources can be embedded into SEB configuration files. An exam administrator can add documents like PDF files and HTML documents, even full HTML5 web apps can be added  (to be used in a fully offline exam scenario).</li>
-          <li>You could deploy SEB Config Files containing an  HTML5/JavaScript exam player onto mobile devices and then perform an offline e-assessment. The commercial exam solution Inspera Assessment is already supporting this.</li>
-          <li><a href="windows/win_usermanual_en.html#NetworkPaneFilterSection">Improved URL filter</a> which allows to use simple filter rules to effectively allow specific web pages/sites/content and block all others.</li>
-          <li>Improved, refactored browser engine based on <a href="https://www.mozilla.org/en-US/firefox/organizations/" target="_blank">Firefox 52 ESR</a>. This is the last Firefox version compatible with the XUL browser engine application used in SEB. We are already working on the next generation of SEB for Windows, which will be using a Chromium based browser engine (but this SEB 3.x branch won't replace the current Firefox-based SEB before 2019).</li>
-          <li>Improved blocking of third party applications and tools for screen sharing and screen recording.</li>
-          <li>Now preventing SEB being run in a remote session (using Remote Desktop Connection or similar on an exam client).</li>
-          <li>Improved stability when setting and resetting Windows Registry settings to disable options like Task Manager, Switch User, Sign out and Shut down (accessible with the Ctrl+Alt+Del shortcut) during the exam and re-enabling them when quitting SEB.</li>
-          <li>Integrated secure viewer for PDF files.</li>
-          <li>Added <a href="windows/win_usermanual_en.html#AppearancePane">Audio Control Component</a> to SEB task bar, which allows to increase/decrease and mute system audio volume. Audio can be muted or the audio level preset when starting SEB.</li>
-          <li>SEB Config Files can now be loaded from servers using authentication (Basic, OAuth etc.) using seb(s):// links. This allows to store a SEB exam settings file for example into the same Moodle course as the quiz. The login session is remembered, therefore students don't have to login twice in SEB if you start an exam using a seb(s):// link to a config file on an authenticated server.</li>
-          <li>Added a page loading (network activity) indicator and optional browser window toolbar with reload and back/forward buttons.</li>
-          <li>Navigation in browser history (back/forward) can now be allowed/disabled separately for the exam and additional browser windows.</li>
-          <li>The browser user agent string now reflects the operating system SEB is running on and allows a custom suffix string to be added.</li>
-          <li>Added new asymmetric/symmetric encryption for config files using identity certificate for better performance when decrypting certificate encrypted config files.</li>
-          <li>Fixed on-screen keyboard wasn't displayed in latest versions of Windows 10. Now "Tablet Mode" needs to be activated in the system when using SEB in its "Touch optimized" mode.</li>
-        </ul>
-        <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes. <span class="half_linespace">The <a href="windows/win_usermanual_en.html"> manual</a> is currently being updated for all new features</span></p>
-        
         <p>Other features: </p>
         <ul id="seblist">
-          <li>Support for encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. The  configuration is compatible with both the Windows and Mac version of SEB. Use the separate SEB Windows configuration tool to create <span class="quote">.seb</span> settings.</li>
-          <li>Buttons in the SEB task bar for back to start, reload page, change keyboard layout, switch Wi-Fi network, change audio volume and a display for the current time improve usability in exams. </li>
+          <li>Using the powerful  feature "Additional Resources", external and embedded webpages, full or partial websites, HTML5 web applications and PDF documents can be accessed securely and easily in exams using icons in the SEB task bar (similar to permitted applications) or hierarchical popup menus.</li>
+          <li>Support for encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. The  configuration is compatible with  the Windows, Mac and iOS versions of SEB. Use the separate SEB Windows configuration tool to create <span class="quote">.seb</span> settings.</li>
+          <li>Buttons in the SEB task bar for back to start, reload page, change keyboard layout, switch Wi-Fi network, <a href="windows/win_usermanual_en.html#AppearancePane">change audio volume</a> and a display for the current time improve usability in exams. </li>
           <li>Feature to quit SEB after the exam is submitted by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by your LMS after submitting the exam.</li>
           <li>The <span class="quote">Browser Exam Key </span>allows an exam module to authenticate the connecting SEB version and its settings. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a> and <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a>, <a href="windows/win_usermanual_en.html#OpenOLAT">OpenOLAT</a> from version 10.2 has built-in support.</li>
           <li>Configurable options (per exam) in the user interface: Size and positioning of browser windows (main window with the quiz and additional browser windows) can be preset. The SEB main browser window can be displayed full screen or as a sizable and movable window.</li>
-          <li>Permitted third party applications are easy to start and to switch to (autostart together with SEB and by clicking on its icon in the  SEB task bar). Prohibited processes and applications  can be defined which are closed when SEB starts up.</li>
+          <li>Permitted third party applications are easy to start and to switch to (autostart together with SEB and by clicking on its icon in the  SEB task bar). Prohibited processes and applications  can be defined which are closed when SEB starts up. SEB contains a list of default prohibited processes too.</li>
           <li>PrintScreen can be blocked, the clipboard is cleaned when SEB is started and stopped. </li>
           <li>Security  feature  which monitors processes and hinders all non-permitted applications  to open, become active and display windows while SEB is running.</li>
           <li>Individual proxy settings, URL filters and server certificates can be used per exam.</li>
