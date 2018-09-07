@@ -252,58 +252,27 @@
         <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.2.1/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von unserer <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.2.1" target="_blank">GitHub Projekt-Seite</a>. <br />
         </p>
         <p>Safe Exam Browser 2.2.1 für Windows ist ein  Update für SEB 2.2 mit einigen neuen Funktionen und vielen Verbesserungen. Diese Version ersetzt  die SEB 2.1.x-Reihe, mit welcher SEB 2.2.1 <strong>kompatibel </strong>ist,<strong> mit einer wichtigen Ausnahme</strong>: Wenn Sie URL-Filterregeln in SEB 2.1.x für Windows erstellt haben, dann müssen Sie diese im SEB 2.2.1 Konfigurationstool erneut eingeben, gemäss dem neuen Filterregel-Schema. URL-Filterregeln, die mit SEB für macOS erstellt und gespeichert wurden, sind bereits kompatibel mit SEB 2.2.1 für Windows.</p>
-        <p><strong>Ab jetzt sollte Safe Exam Browser 2.2.1 eingesetzen werden, wir unterstützen ältere Versionen nicht mehr. </strong> </p>
-        <p>Hier eine Beschreibung der wichtigsten neuen Funktionen in SEB 2.2.1 auf englisch:        </p>
+        <p><strong>Ab jetzt sollte Safe Exam Browser 2.2.1 eingesetzt werden, wir werden ältere Versionen zukünftig nicht mehr unterstützen. </strong> </p>
+        <p>Wichtigste neue Funktionen in SEB 2.2.1: </p>
         <ul>
-          <li>Added configurable spell checking, dictionaries can be embedded into SEB config files. </li>
-          <li>Added context menu for displaying word suggestions and selecting spell checking dictionary. Note: You might have to enable the right mouse button in your settings (&quot;Hooked Keys&quot; config tool tab).</li>
-          <li>Resolved issue with sometimes missing power options after SEB was quit.</li>
-          <li>Added options for additional resources:
-            <ul>
-              <li>Show button (to display the icon or menu entry for a resource)</li>
-              <li>Referrer filter for activation Link URL</li>
-              <li>Option &quot;Show confirm box&quot; with custom text which is displayed before loading a resource</li>
-              <li>Reset browser session (session cookies are deleted before loading a new resource)<br>
-              </li>
-            </ul>
-          </li>
-          <li>Fixed that the URL filter didn't treat query strings in URLs consistently in SEB for Windows 2.2/macOS. Added option to explicitly forbid any query part in checked URL: Indicate &quot;?.&quot; as query in your filter expression.</li>
-          <li>Fixed Browser Exam Key (BEK) check wasn't working correctly with some exam systems (because a trailing slash &quot;/&quot; was removed from the URL used to hash the BEK)</li>
-          <li>Fixed that SEB couldn't quit Firefox when starting. </li>
-          <li> Prevent that SEB browser can be used to finish an exam if SafeExamBrowser.exe is terminated: The browser displays a red lock screen in this case, requiring to enter the quit/unlock password.</li>
-          <li>Improved  setting and resetting of Registry keys (Ctrl+Alt+Del Security Screen and power options), including when the SEB Windows Service tries to reset Registry settings after rebooting the machine. Added group policy update to registry resetter to reset power options reliably.</li>
-          <li>Replaced embedded Firefox with latest version 52.9.0 ESR.</li>
-          <li>Changed default setting for all function keys to &quot;enabled&quot;.</li>
-        </ul>
-        <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes. <span class="half_linespace">The <a href="windows/win_usermanual_en.html"> manual</a> is currently being updated for all new features</span></p>
-        <p>New features in SEB 2.2: </p>
-        <ul>
-          <li>Using  the powerful new feature "Additional Resources", webpages, websites and documents can   be accessed securely and easily  in  exams using icons in the SEB task bar (similar to permitted applications) or  hierarchical popup menus.</li>
-          <li>External Additional Resources use the <a href="windows/win_usermanual_en.html#NetworkPaneFilterSection">improved URL filter</a> to only allow displaying specific webpages, documents or sections of websites.</li>
-          <li>Additional Resources can be embedded into SEB configuration files. An exam administrator can add documents like PDF files and HTML documents, even full HTML5 web apps can be added  (to be used in a fully offline exam scenario).</li>
-          <li>You could deploy SEB Config Files containing an  HTML5/JavaScript exam player onto mobile devices and then perform an offline e-assessment. The commercial exam solution Inspera Assessment is already supporting this.</li>
-          <li><a href="windows/win_usermanual_en.html#NetworkPaneFilterSection">Improved URL filter</a> which allows to use simple filter rules to effectively allow specific web pages/sites/content and block all others.</li>
-          <li>Improved, refactored browser engine based on <a href="https://www.mozilla.org/en-US/firefox/organizations/" target="_blank">Firefox 52 ESR</a>. This is the last Firefox version compatible with the XUL browser engine application used in SEB. We are already working on the next generation of SEB for Windows, which will be using a Chromium based browser engine (but this SEB 3.x branch won't replace the current Firefox-based SEB before 2019).</li>
-          <li>Improved blocking of third party applications and tools for screen sharing and screen recording.</li>
-          <li>Now preventing SEB being run in a remote session (using Remote Desktop Connection or similar on an exam client).</li>
-          <li>Improved stability when setting and resetting Windows Registry settings to disable options like Task Manager, Switch User, Sign out and Shut down (accessible with the Ctrl+Alt+Del shortcut) during the exam and re-enabling them when quitting SEB.</li>
-          <li>Integrated secure viewer for PDF files.</li>
-          <li>Added <a href="windows/win_usermanual_en.html#AppearancePane">Audio Control Component</a> to SEB task bar, which allows to increase/decrease and mute system audio volume. Audio can be muted or the audio level preset when starting SEB.</li>
-          <li>SEB Config Files can now be loaded from servers using authentication (Basic, OAuth etc.) using seb(s):// links. This allows to store a SEB exam settings file for example into the same Moodle course as the quiz. The login session is remembered, therefore students don't have to login twice in SEB if you start an exam using a seb(s):// link to a config file on an authenticated server.</li>
-          <li>Added a page loading (network activity) indicator and optional browser window toolbar with reload and back/forward buttons.</li>
-          <li>Navigation in browser history (back/forward) can now be allowed/disabled separately for the exam and additional browser windows.</li>
-          <li>The browser user agent string now reflects the operating system SEB is running on and allows a custom suffix string to be added.</li>
-          <li>Added new asymmetric/symmetric encryption for config files using identity certificate for better performance when decrypting certificate encrypted config files.</li>
-          <li>Fixed on-screen keyboard wasn't displayed in latest versions of Windows 10. Now "Tablet Mode" needs to be activated in the system when using SEB in its "Touch optimized" mode.        </li>
+          
+          <li>Optionale Rechtschreibeprüfung mit konfigurierbaren Sprachen. Nicht in SEB mitgelieferte Wörterbücher können  in SEB-Konfigurationsdateien eingebettet werden.</li>
+            <li> Mit der rechten Maustaste einblendbares Kontextmenü  mit Wortvorschlägen. Dort kann auch Sprache für die Rechtschreibeprüfung ausgewählt werden. </li>
+            <li>Der URL-Filter behandelt nun Query-Strings in URLs in SEB für Windows identisch wie in SEB für macOS. </li>
+            <li>Ein Problem mit der &quot;Browser Exam Key&quot; (BEK) Überprüfung  in manchen Prüfungssystemen wurde beseitigt</li>
+            <li> SEB kann nun Firefox falls nötig selbstständig beenden </li>
+            <li>Es wird nun verhindert, dass der  SEB-Browser zum ungesicherten Beenden einer Prüfung benutzt werden kann, wenn SafeExamBrowser.exe terminiert wurde: Der Browser zeigt in diesem Fall einen roten Sperrbildschirm an, welcher die Eingabe des Quit/Unlock-Passworts verlangt.</li>
+            <li>Das Setzen und Rücksetzen der Registry-Einstellungen (für Ctrl+Alt+Del Security Screen und die &quot;Power Optionen&quot; im Startmenü) ist jetzt zuverlässiger, insbesondere auch nach einem erzwungenen Neustart während SEB lief. Der Registry Resetter führt jetzt ein &quot;Group Policy Update&quot; durch, damit die &quot;Power Optionen&quot; zuverlässig wiederhergestellt werden.        </li>
         </ul>
         <p>Allgemeine Funktionen:</p>
         <ul id="seblist2">
+          <li>Mittels der  Funktion <a href="windows/win_usermanual_en.html#AdditionalResources">zusätzliche Ressourcen (Additional Resources</a>) können einzelne  Webseiten, ganze  Websites oder Teile davon, HTML5-Webapplikationen und PDF-Dokumente sicher und bequem während einer Prüfung verwendet werden. Diese Ressourcen können entweder auf externen Servern liegen oder in  SEB-Konfigurationsdateien eingebettet werden.</li>
           <li>Safe Exam Browser kann mittels speziellen SEB-Hyperlinks auf SEB-Konfigurationsdateien mit individuellen Einstellungen pro Prüfung betrieben und aus einem Standard-Webbrowser heraus gestartet werden. </li>
           <li>Mit solchen SEB-Links und Konfigurationsdateien kann die SEB-Applikation auch konfiguriert werden, damit sie beim Starten jeweils die Startseite des von einer Institution verwendeten Prüfungssystems oder eine  Prüfungsportalseite anzeigt.</li>
           <li>Die SEB-Konfigurationsdateien und -Links sind kompatibel mit SEB für macOS und iOS.</li>
           <li>Safe Exam Browser enthält einen Touch-optimierten Modus für  Windows-Tablets. </li>
-          <li>Eine Sicherheitsfunktion überwacht Prozesse und verhindert, dass nicht erlaubte Applikationen geöffnet und aktiviert werden und Fenster anzeigen. </li>
-          <li>Schaltflächen zum Neustarten der Prüfung, Neuladen der Seite, Wechseln der Tastaturbelegung und eine Anzeige der aktuellen Zeit verbessern die Bedienbarkeit in Prüfungen.</li>
+          <li>Eine Sicherheitsfunktion überwacht Prozesse und verhindert, dass nicht erlaubte Applikationen geöffnet und aktiviert werden und Fenster anzeigen. SEB beinhaltet eine Liste von standardmässig verbotenen Prozessen.</li>
+          <li>Schaltflächen zum Neustarten der Prüfung, Neuladen der Seite, Wechseln der Tastaturbelegung, Verbinden mit WLAN-Netzwerken, Ändern der Lautstärke und eine Anzeige der aktuellen Zeit verbessern die Bedienbarkeit in Prüfungen.</li>
           <li> Individuelle Proxy-Einstellungen, URL-Filter und Server-Zertifikate können pro Prüfung benutzt werden. </li>
           <li>Das <span class="quote">SEB Config Tool</span> wurde überarbeitet und erlaubt nun das komfortable Bearbeiten und Testen von SEB-Konfigurationsdateien. </li>
         </ul>
