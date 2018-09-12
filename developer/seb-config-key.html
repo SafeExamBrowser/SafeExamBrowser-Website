@@ -259,7 +259,7 @@
                     <br/>
                     </li>
                 </ul>
-                <strong style="letter-spacing: 0.0px;">See an example SEB-JSON string below</strong><span style="letter-spacing: 0.0px;">. If you set the log level (Security exam preferences pane) to Verbose in SEB for macOS, the SEB-JSON string when loading or saving your settings will be saved into the SEB log, search for the string &quot;JSON for Config Key:&quot;.<br/>
+                <strong style="letter-spacing: 0.0px;">See an example SEB-JSON string below</strong><span style="letter-spacing: 0.0px;">. If you set the log level (<a href="../macosx/mac_usermanual_en.html#ExamPane">Security Exam preferences pane</a>) to Verbose in SEB for macOS, the SEB-JSON string when loading or saving your settings will be saved into the SEB log, search for the string &quot;JSON for Config Key:&quot;.<br/>
                      </span>
               </li>
               <li><strong style="letter-spacing: 0.0px;">Generate a SHA256 hash from the SEB-JSON string</strong><span style="letter-spacing: 0.0px;">.<br/>
@@ -268,7 +268,7 @@
             </ol>
                 <h4 class="seb-section-header">Checking the Config Key which SEB clients send with HTTP requests</h4>
                 <ol>
-              <li><strong>Create a SHA256 hash value from the absolute URL without Fragment part</strong><strong>with appended Config Key hash string</strong>. The absolute URL (as a <strong>UTF8 encoded string</strong>) is created by resolving the relative URL against its base according to the algorithm given in <a href="http://www.ietf.org/rfc/rfc1808.txt" target="_blank">RFC 1808</a>. If the absolute URL contains a Fragment (the last part of an URL starting with #, when using page anchors), the fragment needs to be removed from the URL. Then concatenate this URL string with the Config Key hash string and apply SHA256. The result is again a SHA256 hash value (32 Bytes, 64 chars string when encoded Base16).<br/>
+              <li><strong>Create a SHA256 hash value from the absolute URL without Fragment part</strong><strong> with appended Config Key hash string</strong>. The absolute URL (as a <strong>UTF8 encoded string</strong>) is created by resolving the relative URL against its base according to the algorithm given in <a href="http://www.ietf.org/rfc/rfc1808.txt" target="_blank">RFC 1808</a>. If the absolute URL contains a Fragment (the last part of an URL starting with #, when using page anchors), the fragment needs to be removed from the URL. Then concatenate this URL string with the Config Key hash string and apply SHA256. The result is again a SHA256 hash value (32 Bytes, 64 chars string when encoded Base16).<br/>
                      </li>
               <li><strong>Compare the resulting hash string with the one received in the custom header in each HTTP request</strong>: <br>
                 <code>&quot;X-SafeExamBrowser-ConfigKeyHash&quot; = <em>&lt;must be equal with the hash value created in 1.&gt;</em>;</code>
