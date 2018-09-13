@@ -250,6 +250,7 @@
                 <ol>
               <li><strong>Convert the plist XML of a decrypted/unencrypted SEB config file to a ordered JSON-like &quot;SEB-JSON&quot; object</strong>. Consider following special formatting details:                  
                 <ul>
+                  <li><strong>Remove the key &quot;originatorVersion&quot; first.</strong> This key is exempted from the SEB-JSON hash (it's a special key which doesn't have any functionality, it's just meta data indicating which SEB version saved the config file)</li>
                   <li>Don't add any whitespace or line formatting to the SEB-JSON string.</li>
                   <li>All &lt;dict&gt; elements from the plist XML must be ordered (alphabetically sorted) by their key names. Use a recursive method to apply ordering also to nested dictionaries contained in the root-level dictionary and in arrays.</li>
                   <li>All string elements must be UTF8 encoded.</li>
@@ -257,7 +258,7 @@
                   <li>&lt;data&gt; plist XML elements must be converted to <a href="http://en.wikipedia.org/wiki/Base64" target="_blank">Base64</a> strings.</li>
                   <li>&lt;date&gt; plist XML elements must be converted to <a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> formatted strings.<br/>
                     <br/>
-                    </li>
+                  </li>
                 </ul>
                 <strong style="letter-spacing: 0.0px;">See an example SEB-JSON string below</strong><span style="letter-spacing: 0.0px;">. If you set the log level (<a href="../macosx/mac_usermanual_en.html#ExamPane">Security Exam preferences pane</a>) to Verbose in SEB for macOS, the SEB-JSON string when loading or saving your settings will be saved into the SEB log, search for the string &quot;JSON for Config Key:&quot;.<br/>
                      </span>
