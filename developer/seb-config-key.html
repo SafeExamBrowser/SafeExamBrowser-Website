@@ -222,7 +222,7 @@
                 <ul>
               <li>SEB 2.1.3 for macOS</li>
               <li>SEB 2.2.2 for Windows</li>
-              <li>SEB 2.2 for iOS</li>
+              <li>SEB 2.1.13 for iOS</li>
             </ul>
                 <p><br/>
               To configure the Config Key feature, these steps are necessary:</p>
@@ -252,7 +252,7 @@
                 <ul>
                   <li><strong>Remove the key &quot;originatorVersion&quot; first.</strong> This key is exempted from the SEB-JSON hash (it's a special key which doesn't have any functionality, it's just meta data indicating which SEB version saved the config file)</li>
                   <li>Don't add any whitespace or line formatting to the SEB-JSON string. </li>
-                  <li><strong>Remove all character escaping</strong> (also backshlashes &quot;\&quot; as found in URL filter rules should not be escaped).</li>
+                  <li><strong>Don't add character escaping</strong> (also backshlashes &quot;\&quot; as found in URL filter rules should not be escaped).</li>
                   <li>All &lt;dict&gt; elements from the plist XML must be ordered (alphabetically sorted) by their key names. Use a recursive method to apply ordering also to nested dictionaries contained in the root-level dictionary and in arrays. <strong>Use non-localized, non-ASCII value based case insensitive ordering</strong>. For example the key 	&lt;key&gt;allowWlan&lt;/key&gt; comes before 	&lt;key&gt;allowWLAN&lt;/key&gt;. Cocoa/Obj-C and .NET/C# usually use this case insensitive ordering as default, but   PHP for example doesn't.</li>
                   <li><strong>Remove empty &lt;dict&gt; elements</strong> (key/value). Current versions of SEB clients should anyways not generate empty dictionaries, but this was possible with outdated versions. If config files have been generated that time, such elements might still be around.</li>
                   <li>All string elements must be UTF8 encoded.</li>
