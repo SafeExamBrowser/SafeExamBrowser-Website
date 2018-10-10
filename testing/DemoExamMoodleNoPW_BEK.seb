@@ -47,7 +47,7 @@
 	<key>allowVideoCapture</key>
 	<false/>
 	<key>allowVirtualMachine</key>
-	<false/>
+	<true/>
 	<key>allowWLAN</key>
 	<false/>
 	<key>allowedDisplayBuiltin</key>
@@ -209,7 +209,7 @@
 	<array/>
 	<key>examKeySalt</key>
 	<data>
-	CZlanrQF4m+u6yxQ9dgXM8d+ipSeV3h7JqGZnw23II4=
+	/+e9MJsusjIv+NEPPPC8NUjVSudySP8r99Sf1GpZLN8=
 	</data>
 	<key>exitKey1</key>
 	<integer>2</integer>
