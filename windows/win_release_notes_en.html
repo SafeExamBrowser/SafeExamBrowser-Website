@@ -227,6 +227,14 @@
         <!-- Content -->
           <h2></h2>
     
+    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2.2: </h5>
+    <p>Safe Exam Browser 2.2.2 for Windows is a maintenance update for SEB 2.2 with two bug fixes for SEB 2.2.1, some new features and many improvements:</p>
+    <ul>
+      <li>Fixed an issue in calculating the Browser Exam Key (BEK) in the SEB Config Tool, which happens when the config file contains explicit or implicit seb2 filter rules (key whitelistURLFilter and/or urlFilterTrustedContent, not visible in Config Tool). As this filter rules could slightly differ (Windows/macOS escape characters) or the key urlFilterTrustedContent can be undefined (because it doesn't have a function if URL filtering isn't enabled) and they were not updated in any case before calculating the BEK, it could differ in the SEB Config Tool vs. SEB Client.</li>
+      <li>Added a check for detecting additional files in SEB's program directory (which might have been left there when updating from an older SEB version) and displaying a warning in that case. Such left over files cause a wrong Browser Exam Key as well.</li>
+      <li>Fixed an issue when en-US was always selected as spell checking language, even if not allowed in settings, when starting SEB first time or after the contents of the Firefox Profiles folder were removed. </li>
+      <li>Added tool tips to Additional Resources tab in SEB Config Tool.</li>
+    </ul>
     <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2.1: </h5>
     <p>Safe Exam Browser 2.2.1 for Windows is a maintenance update for SEB 2.2 with some new features and many improvements:</p>
     <ul>

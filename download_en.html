@@ -244,18 +244,26 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.2.1/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.2.2/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.2.1 for Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.2.2 for Windows</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for Windows 7, 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: 47ec6b760e5798864f55c2e02be8655f15b6583a</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.2.1/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.2.1" target="_blank">GitHub project site</a>. <br />
+          <span class="codetext">SHA1: 8d0b1adfbafdf97f56a5913405e2857b4b676c37</span></p>
+        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.2.2/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.2.2" target="_blank">GitHub project site</a>. <br />
         </p>
-        <p>Safe Exam Browser 2.2.1 for Windows is a maintenance update for SEB 2.2 with some new features and many improvements. This version is replacing the SEB 2.1.x branch, with which it is <strong>compatible with one important exception</strong>: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2.1 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2.1 for Windows.</p>
-        <p><strong> Safe Exam Browser 2.2.1 should be used from now on, we don't support older versions anymore</strong>.        </p>
+        <p>Safe Exam Browser 2.2.2 for Windows is a maintenance update for SEB 2.2 with two bug fixes for SEB 2.2.1, some new features and many improvements.<strong> If you're using the Browser Exam Key (request header check) to verify if the correct SEB configuration and SEB version is used, you should definitely update to SEB 2.2.2.</strong></p>
+        <p>This version is replacing the SEB 2.1.x branch, with which it is <strong>compatible with one important exception</strong>: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2.2 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2.2 for Windows.</p>
+        <p><strong> Safe Exam Browser 2.2.2 should be used from now on, we don't support older versions anymore</strong>.        </p>
+        <p>New  in SEB 2.2.2:</p>
+        <ul>
+          <li> Fixed an issue in calculating the Browser Exam Key in the SEB Config Tool, which happened with specific config files.</li>
+          <li> Added a check for detecting additional files in SEB's program directory (which might have been left there when updating from an older SEB version) and displaying a warning in that case. Such left over files cause a wrong Browser Exam Key as well.</li>
+          <li> Fixed an issue when en-US was always selected as spell checking language, even if not allowed in settings, when starting SEB first time or after the contents of the Firefox Profiles folder were removed. </li>
+        </ul>
+
         <p>New  in SEB 2.2.1: </p>
         <ul>
           <li>Added configurable spell checking, dictionaries can be embedded into SEB config files. </li>
