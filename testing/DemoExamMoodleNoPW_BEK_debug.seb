@@ -228,6 +228,8 @@
 	<key>examKeySalt</key>
 	<data>
 	</data>
+	<key>examSessionClearSessionCookies</key>
+	<false/>
 	<key>exitKey1</key>
 	<integer>2</integer>
 	<key>exitKey2</key>
