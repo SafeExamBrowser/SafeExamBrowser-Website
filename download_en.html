@@ -244,19 +244,29 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.2.2/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.2.3/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.2.2 for Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.2.3 for Windows</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for Windows 7, 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: 8d0b1adfbafdf97f56a5913405e2857b4b676c37</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.2.2/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.2.2" target="_blank">GitHub project site</a>. <br />
+          <span class="codetext">SHA1: 02b5a4865960add45f4839bdbc9f1120c4343d99</span></p>
+        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.2.3/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.2.3" target="_blank">GitHub project site</a>. <br />
         </p>
-        <p>Safe Exam Browser 2.2.2 for Windows is a maintenance update for SEB 2.2 <span class="half_linespace">and contains  two bug fixes for SEB 2.2.1.</span><strong> If you're using the Browser Exam Key (request header check) to verify if the correct SEB configuration and SEB version is used, you should definitely update to SEB 2.2.2.</strong></p>
-        <p>This version is replacing the SEB 2.1.x branch, with which it is <strong>compatible with one important exception</strong>: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2.2 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2.2 for Windows.</p>
-        <p><strong> Safe Exam Browser 2.2.2 should be used from now on, we don't support older versions anymore</strong>.        </p>
+        <p>Safe Exam Browser 2.2.3 for Windows is an <strong>important security update</strong> for SEB 2.2.x and SEB 2.1.8.</p>
+        <p><strong>PLEASE UPDATE TO THIS VERSION AS SOON AS POSSIBLE! WE WILL REMOVE ALL OLDER SEB VERSIONS SOON.</strong></p>
+        <p><strong>Our new policy is: We will only support the latest SEB version and will remove all older SEB versions after a grace period.</strong> Please adjust your procedures accordingly. <strong>Only with updated SEB versions you can achieve the best possible security and stability of e-assessments. </strong>Therefore you have to keep your exam environment up to date, there is no alternative to regular updates.        </p>
+        <p>This version is replacing the SEB 2.1.x branch, with which it is <strong>compatible with one important exception</strong>: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2.3 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2.3 for Windows.        </p>
+        <p>New in SEB 2.2.3:</p>
+        <ul>
+          <li>Fixed an issue when calculating the Browser Exam Key (BEK) on Windows set to Swedish and probably Turkish. A different BEK was calculated on Windows set to such languages since SEB 2.2 and the check for detecting additional (irregular) files in SEB's program directory displayed a warning in SEB 2.2.2.</li>
+          <li>Added settings option to switch off detector for RDP/remote session (SEB Config Tool / Security / Allow screen sharing).</li>
+          <li>Security improvements important mainly when running SEB on managed computers.</li>
+          <li>The dialog "Open File With... Safe Exam Browser" is no longer displayed when downloading and opening .seb files.</li>
+          <li>Fixed download dialog so now it is not possible to close it if reconfiguration is in progress.</li>
+          <li>Added settings options for all settings of the macOS 2.1.3 version to Config Tool / Security pane.        </li>
+        </ul>
         <p>New  in SEB 2.2.2:</p>
         <ul>
           <li> Fixed an issue in calculating the Browser Exam Key in the SEB Config Tool, which happened with specific config files.</li>
@@ -475,7 +485,7 @@
     
     <hr>
     
-    <p><a href="download_releases_en.html"><strong>Outdated releases</strong></a></p>
+    <p><a href="download_releases_en.html"><strong>List of outdated releases</strong></a></p>
     <p>&nbsp;</p>	          
           <!-- / Content --> 
       </div>
