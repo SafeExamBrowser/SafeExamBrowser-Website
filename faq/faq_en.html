@@ -234,6 +234,84 @@
       </h3>          
 
       <ul id="seblist">
+        <li><span class="quote">Which antivirus/anti-malware software is compatible with SEB?<br>
+        </span> See below the list of AV/anti-malware software known to work with SEB on Windows 10 (1809).  The AV software tested are the most recent versions as of February 2019. Each antivirus software was used with default settings.<br>
+        <br>
+        <table class="table table-bordered" width="100%" border="1">
+          <tr>
+            <th><strong>Product Name</strong></th>
+            <th> Version</th>
+          </tr>
+          <tr>
+            <td><strong>Avast Free Antivirus</strong></td>
+            <td> 19.2.2364</td>
+          </tr>
+          <tr>
+            <th><strong>Avast Premier</strong></th>
+            <td> 19.2.2364</td>
+          </tr>
+          <tr>
+            <td><strong>Avira Free Security Suite</strong></td>
+            <td> 15.0.43.24</td>
+          </tr>
+          <tr>
+            <td><strong>Avira Prime</strong></td>
+            <td> 15.0.43.24</td>
+          </tr>
+          <tr>
+            <td><strong>Bitdefender Antivirus Plus</strong></td>
+            <td> 23.0.16.72</td>
+          </tr>
+          <tr>
+            <td><strong>Bitdefender Internet Security</strong></td>
+            <td> 23.0.16.72</td>
+          </tr>
+          <tr>
+            <td><strong>Eset NOD32 Antivirus</strong></td>
+            <td> 12.0.31.0</td>
+          </tr>
+          <tr>
+            <td><strong>Eset Smart Security Premium</strong></td>
+            <td>12.0.31.0</td>
+          </tr>
+          <tr>
+            <td><strong>G Data Antivirus</strong></td>
+            <td>25.5.2.6</td>
+          </tr>
+          <tr>
+            <td><strong>G Data Total Security</strong></td>
+            <td>25.5.2.6</td>
+          </tr>
+          <tr>
+            <td><strong>Kaspersky Free</strong></td>
+            <td>19.0.0.1088(d)</td>
+          </tr>
+          <tr>
+            <td><strong>McAfee Total Protection</strong></td>
+            <td>16.0</td>
+          </tr>
+          <tr>
+            <td><strong>Norton Security Deluxe</strong></td>
+            <td>22.16.2.22</td>
+          </tr>
+          <tr>
+            <td><strong>Norton Security Premium</strong></td>
+            <td>22.16.2.22</td>
+          </tr>
+          <tr>
+            <td><strong>Microsoft Defender</strong></td>
+            <td>OS Build 17763.292</td>
+          </tr>
+          <tr>
+            <td><strong>Sophos Enterprise Client</strong></td>
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        In our test only one product wasn't working at all together with SEB:<br>
+        <strong>Kaspersky Total Security</strong> Version 19.0.0.1088(d). When this software is installed and the Browser Exam Key check is enabled in SEB settings, then SEB displays an error message &quot;SEB installation is corrupted&quot; - &quot;irregular files were found in SEB's program directory&quot;. In this case the Browser Exam Key   is different than in a not manipulated SEB, which would usually prevent accessing an exam supporting the Browser Exam Key check. To prevent issues, Kaspersky Total Security must be uninstalled before an exam. <br>
+        In earlier versions of        <strong>Bitdefender Internet Security</strong> it was necessary to disable the feature scanning the encrypted (https) web traffic, otherwise a certificate error was displayed when starting an exam in SEB. We weren't able to reproduce this behavior in version 23.0.16.72 anymore.<br>
+        <strong>Please note:</strong> &quot;Security software&quot; scanning 
+        all https traffic has to break the end-to-end SSL/TLS encryption (effectively performing a so called <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">Man-In-The-Middle Attack</a>). <strong>We strongly recommend to disable https Internet traffic scanning before any exam</strong>, as the &quot;security software&quot; involved can decrypt all encrypted Internet traffic between browsers and secure servers, including the exam data and answers transferred between SEB and  an e-assessment server. You can prevent this to happen in SEB by embedding server certificates into your exam config and using the certificate pinning feature, see <a href="../windows/win_usermanual_en.html#NetworkPaneCertificatesSection">the manual</a>.</li>
         <li><span class="quote">What is SEB for Windows changing in the system?</span><br />
           While running, SEB changes  Windows Registry settings for the options in the Windows Security Screen invoked by Ctrl-Alt-Del (for details see <a href="../windows/win_usermanual_en.html#RegistryPane">this section</a> in the manual). In addition when running on Windows  versions before 10, SEB stops Windows updates while it is running using a Registry setting and re-enables them when being quit (when SEB 2.1.1 or later is running on Windows 10, only the Windows Update background service is stopped and restarted when SEB is quit). <br />
           SEB remembers the values for these Registry settings which were active on the exam client computer before running SEB and resets them to the original values when exiting regularly. In case the PC would be force reset while SEB is running or SEB would crash, these Registry settings are again reset to the original values:<br />
