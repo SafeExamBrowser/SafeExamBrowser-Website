@@ -272,25 +272,25 @@
               Concept
             </h3>
 
-            <p>Safe Exam Browser is a webbrowser-environment to carry out online exams safely. The software changes any computer into a secure workstation. It regulates  access to  resources like system functions, other websites and applications and prevents unauthorised resources being used during an exam.</p>
+            <p>Safe Exam Browser is a web browser environment to carry out e-assessments safely. The software  turns any computer temporarily into a secure workstation. It controls  access to  resources like system functions, other websites and applications and prevents unauthorized resources being used during an exam.</p>
                     
             <h4 class="seb-section-header sebnavbar-link" id="concept-general-concept">
               <a class="anchorjs-link " href="#concept-general-concept" aria-label="Anchor link for: concept general concept" ></a>
               General Concept
             </h4>
               
-            <p>SEB runs on a local computer and  it is connected via the internet to a learning management system (LMS).  Generally SEB works with any web based LMS and other kind of web based exam systems. Some learning management systems (LMS) like for example Moodle, ILIAS, OpenOLAT and exam suites as Inspera Assessment offer a quiz mode specifically compatible with SEB. </p>
+            <p>SEB runs on a local computer and  it is connected via the internet to a learning management system (LMS) or an e-assessment system.  Generally SEB works with any web based LMS and other kinds of web based exam systems. Some learning management systems (LMS) like for example Moodle, ILIAS, OpenOLAT and exam solutions as Inspera Assessment offer a quiz mode specifically compatible with SEB. </p>
             
             <h4 class="seb-section-header sebnavbar-link" id="concept-architecture">
               <a class="anchorjs-link " href="#concept-architecture" aria-label="Anchor link for: concept concept-architecture"></a>
               Architecture
             </h4>
               
-            <p>SEB consists of a kiosk application and a browser part, which are running on a examination computer or tablet device. The kiosk application locks down the examination computer, the browser part comunicates via the internet (or a LAN) with the quiz module of a LMS running on a server. </p>
+            <p>SEB consists of a kiosk application and a browser part, which are running on an examination computer or tablet device. The kiosk application locks down the examination computer, the browser part communicates over the internet (or a LAN) with the quiz module of an LMS running on a server. </p>
             
             <p><img src="Media/SEB-Architecture_thirdpartyapp_en.png" alt="Illustration of SEB architecture" class="img-responsive"/></p>
             
-            <p class="imagecaption"> Schematic illustration of a online exam with Safe Exam Browser and a LMS, for example ILIAS or Moodle. In addition a third party application can be allowed to run at the same time, for example Excel or R</p>
+            <p class="imagecaption"> Schematic illustration of an online exam with Safe Exam Browser and a LMS, for example ILIAS or Moodle. In addition a third party application can be allowed to run at the same time, for example Excel or R</p>
       
             <h4 class="seb-section-header sebnavbar-link" id="concept-components">
                <a class="anchorjs-link " href="#concept-components" aria-label="Anchor link for: concept-components"></a>
@@ -302,7 +302,7 @@
             <ol class="seblist" start="1" type="1">
               <li>The<strong> kiosk application</strong> locks down the computer and starts the SEB browser plus optional third party applications. Since this application has to control miscellaneous  OS functions, it is designed very  system specific. </li>
               <li>The<strong> SEB browser</strong> loads and displays  the LMS exam page using a preset URL and doesn't show any navigation elements like address bar, search engine field etc. The Windows version of SEB currently uses the Mozilla Gecko browser engine, either in the form of  Firefox or XULRunner. SEB for macOS and iOS use the WebKit browser engine.</li>
-              <li>The<strong> learning management systems</strong> contain so-called quiz modules, which are used for onlline exams. SEB relies on extensions/skins to the quiz modules in Moodle and ILIAS for secure exams. With these extensions the user interface of the LMS is reduced to just contain navigation for the exam (no links to other pages outside the quiz) and no other undesirable features like messaging. An exam can also be configured to run only with SEB, not another browser.   These SEB LMS extensions, which originally had to be installed separately to achive this connectivity with SEB, have been integrated into the LMS in  recent versions of ILIAS and Moodle.</li>
+              <li>The<strong> learning management systems</strong> contain so-called quiz modules, which are used for online exams. SEB relies on extensions/skins to the quiz modules in Moodle and ILIAS for secure exams. With these extensions the user interface of the LMS is reduced to just contain navigation for the exam (no links to other pages outside the quiz) and no other undesirable features like messaging. An exam can also be configured to run only with SEB, not another browser.   These SEB LMS extensions, which originally had to be installed separately to achieve this connectivity with SEB, have been integrated into the LMS in  recent versions of ILIAS and Moodle.</li>
             </ol>
             
             <h4 class="seb-section-header sebnavbar-link" id="concept-seb-windows">
@@ -310,14 +310,14 @@
               SEB for Windows
             </h4>
                 
-            <p>Safe Exam Browser for Windows consists of the SEB kiosk application, which opens an own Windows desktop and catches system commands like keyboard shortcuts (for example ALT+F4) and right mouse-button clicks. The second part is <a href="https://developer.mozilla.org/En/XULRunner" target="_blank">XULRunner</a>, a runtime package from the Mozilla Foundation  (Firefox version 3 and above is also based on XULRunner). The SEB browser part running on XULRunner  connects to the LMS and it doesn't contain navigation and status bars.</p>
+            <p>Safe Exam Browser for Windows consists of the SEB kiosk application, which opens an own Windows desktop and blocks system commands like keyboard shortcuts (for example ALT+F4) and right mouse button clicks. The second part is Firefox, running in a so-called XUL runtime mode. The SEB XUL browser application running on Firefox  connects to the LMS, using a pre-configured start URL. The SEB browser doesn't contain a URL or search field and navigation controls (back/forward, reload) can be disabledx.</p>
             
             <h4 class="seb-section-header sebnavbar-link" id="concept-seb-macOS">
               <a class="anchorjs-link " href="#concept-seb-macOS" aria-label="Anchor link for: Features"></a>
               SEB for macOS
             and iOS</h4>
             
-            <p>In contrast to the Windows version, Safe Exam Browser for macOS and iOS is a monolithic  application using a web browser framework instead of a browser runtime. It's using the <a href="http://webkit.org" target="_blank">WebKit</a> engine, on which  Safari and some  open source browsers  are based.   SEB for macOS/iOS connect to the Learning Management Systems in the same way as the Windows version.</p>
+            <p>In contrast to the Windows version, Safe Exam Browser for macOS and iOS is a monolithic  application using a web browser framework instead of a browser runtime. It's using the <a href="http://webkit.org" target="_blank">WebKit</a> engine, on which  Safari and some  open source browsers  are based.   Otherwise, SEB for macOS/iOS connect to the Learning Management Systems in the same way as the Windows version.</p>
             
             <h4 class="seb-section-header sebnavbar-link" id="concept-configuration">
               <a class="anchorjs-link " href="#concept-configuration" aria-label="Anchor link for: configuration"></a>
@@ -345,9 +345,14 @@
             </h4>
         
             <ul id="seblist">
-              <li>Fullscreen mode or multiple browser windows  which can be resized (without any navigation elements), browser tabs on iPad.</li>
-              <li>VM detector: SEB detects whether it is running on a virtual machine or a jailbreaked device and can refuse to start up.</li>
-              <li>Built-in connection to Moodle, ILIAS, OpenOLAT, Inspera Assessment and others, can be used with basically any web-based examination system.</li>
+              <li>Managed web browser, which can be configured using encrypted configuration files </li>
+              <li>Using special hyperlinks, SEB can be started from other web browsers and reconfigured individually per exam</li>
+              <li>Fullscreen mode or multiple browser windows  which can be resized (without any navigation elements), browser tabs on iPad</li>
+              <li>VM detector: SEB detects whether it is running on a virtual machine or a jailbreaked device and can refuse to start up</li>
+              <li>URL filter to allow accessing  only specific web sites, pages or resources</li>
+              <li>Certificate pinning to prevent man-in-the-middle attacks on the connection to exam servers</li>
+              <li>Spell checking and dictionary lookup is disabled, can optionally be  allowed</li>
+              <li>Built-in connection to Moodle, ILIAS, OpenOLAT, Inspera Assessment and others, can be used with basically any web-based examination system</li>
             </ul>
             
             <h4 class="seb-section-header sebnavbar-link" id="features-seb-windows">
@@ -356,29 +361,28 @@
             </h4>
         
             <ul id="seblist">
-              <li>Disabled actions (default):
+              <li>Disabled actions (in default settings):
                 <ul id="seblist">
-                  <li>Shortcuts/Keys as Win, CTRL+ALT+DEL (Windows XP), ALT+F4, F1, CTRL+P etc.</li>
-                  <li>Right-click</li>
-                  <li>Switch to other applications (unless permitted)</li>
-                  <li>Process monitoring and killing of not allowed  processes starting up while SEB is running</li>
-                  <li>Menu options on Windows Security Screen on Windows 7  removed while SEB is running</li>
-                  <li>VMware shade when using VMware Horizon View Client for VDI</li>
+                  <li>Windows Task Bar and the Start Menu</li>
+                  <li>Switch to other applications invoked by Alt+Tab or Windows+Tab (unless permitted)</li>
+                  <li>Menu options on the Windows Security Screen invoked with Ctrl+Alt+Delete are removed while SEB is running</li>
                   <li>Display and system idle sleep </li>
-                  <li>Print Screen</li>
+                  <li>Print Screen and some other keyboard shortcuts like  ALT+F4</li>
+                  <li>VMware shade (toolbar) when using VMware Horizon View Client for VDI</li>
                 </ul>
               </li>
-              <li>Separate configuration tool with graphical user interface.</li>
-              <li>Third party applications can be allowed to run together with SEB, it can be switched between them with an <span class="quote">App Chooser</span> window</li>
+              <li>Process monitoring  hides or terminates not allowed  processes  while SEB is running</li>
+              <li>Separate configuration tool with graphical user interface</li>
+              <li>Third party applications can be allowed to run together with SEB, they can be started or switched to with icons in a SEB taskbar or the Alt+Tab shortcut</li>
+              <li>Configurable spell checking dictionaries</li>
+              <li>Additional resources like web pages or whole sites, HTML and PDF documents, even full web applications can be used in exams</li>
             </ul>
             
             <h4 class="seb-section-header sebnavbar-link" id="features-seb-macOS">
               <a class="anchorjs-link " href="#features-seb-macOS" aria-label="Anchor link for: Features"></a>
               SEB for macOS
             </h4>
-        
             <ul id="seblist">
-              <li>Preferences window for easy set up, can be protected with an administrator password.</li>
               <li>Disabled actions:
                 <ul id="seblist">
                   <li>Quit SEB (can be disabled or protected by a quit password)</li>
@@ -388,13 +392,15 @@
                   <li>Normal reboot (ctrl+cmd+eject) and shutdown (ctrl+opt+cmd+eject)</li>
                   <li>Hiding the application or minimizing the window, printing and Exposé</li>
                   <li>Right-click (context menu)</li>
-                  <li>Optionally  hyperlinks requesting to be opened in a new window and links embedded in JavaScript or plug-ins  directing to another server than the one of the current host</li>
+                  <li>Optionally  hyperlinks requesting to be opened in a new window, optionally only such directing to another server than the one of the current host</li>
                   <li>Display and system idle sleep </li>
                   <li>Context menu options in Flash fullscreen video players</li>
                   <li>macOS screen capture</li>
                 </ul>
               </li>
-              <li>Third party applications can be allowed to run together with SEB (in an accordingly configured macOS user account)</li>
+              <li>Preferences window for easy set up, can be protected with an administrator password.</li>
+              <li>Teach mode to easily create URL filter rules for restricting access to particular web sites/pages/resources.</li>
+              <li>Third party applications can be allowed to run together with SEB, but only in an accordingly configured macOS user account</li>
             </ul>
             
           </div>
@@ -440,12 +446,14 @@
             <ul>
               <li>Supported operating systems: 
                 <ul>
-	              <li>macOS 10.13 High Sierra</li>
+	              <li>macOS 10.14 Mojave</li><li>macOS 10.13 High Sierra</li>
 	              <li>macOS 10.12 Sierra</li>
-    	          <li>OS X 10.11 El Capitan</li>
+    	          <li>OS X 10.11 El Capitan<br>
+    	            On these older OS versions, modern web pages might not be rendered correctly:
+    	          </li>
         	      <li>OS X 10.10 Yosemite</li>
             	  <li>OS X 10.9 Mavericks</li>
-	              <li>OS X 10.8 Mountain Lion (TLS/SSL/CA certificate embedding into SEB configuration files and certificate pinning not supported)</li>
+	              <li>OS X 10.8 Mountain Lion (only supported as client, preferences window not available, TLS/SSL/CA certificate embedding into SEB configuration files and certificate pinning not supported)</li>
     	          <li>OS X 10.7 Lion (only supported as client, preferences window not available. TLS/SSL/CA certificate embedding into SEB configuration files and certificate pinning not supported)</li>
                   <li>Mac OS X 10.6 Snow Leopard (only supported up to SEB 1.5.2)</li>
                 </ul>
@@ -460,8 +468,9 @@
             </h4>
             
             <ul>
-              <li>Operating System: 
+              <li>Operating systems: 
                 <ul>
+	              <li>iOS 12</li>
 	              <li>iOS 11</li>
     	          <li>iOS 10</li>
         	      <li>iOS 9.3.5</li>
@@ -483,8 +492,8 @@
               License
             </h3>
             
-          <p>Safe Exam Browser &copy; 2010-2018  <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, based on the original idea of Safe Exam Browser by Stefan Schneider, University of Giessen<br />
-          Project concept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  </p>
+          <p>Safe Exam Browser &copy; 2010-2019  <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, based on the original idea of Safe Exam Browser by Stefan Schneider, University of Giessen<br />
+          Project concept: Dr. Thomas Piendl, Daniel R. Schneider, Damian Büchel, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  </p>
           
           <p>Safe Exam Browser is released as freeware. The <a href="https://github.com/SafeExamBrowser" target="_blank">source code</a> is  subject to the <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (the  &quot;License&quot;); you may only use these files in compliance with the  License. You may obtain a copy of the License at <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> .</p>
               
