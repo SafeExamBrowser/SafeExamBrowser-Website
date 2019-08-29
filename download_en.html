@@ -405,7 +405,7 @@
           </li>
           <li>SEB now uses the full native resolution when running on iPad Pro devices with Face ID.‬
             ‪</li>
-          <li>SEB now supports Slide Over and Split View when not running in Single App Mode (for open book exams or when using other apps in exams on managed devices).‬<br>
+          <li>SEB now supports Slide Over and Split View on compatible iPads when not running in Single App Mode (for open book exams or when using other apps in exams on managed devices).‬<br>
             </li>
           <li> Added option &quot;Allow Picture in Picture Video&quot;. On iPad devices supporting PiP, the video plays in a movable and resizable overlay window. If not running SEB in Single App Mode (open book exams, using other apps in exams on managed devices), PiP video keeps playing even if switching to other apps.‬<br>
             </li>
@@ -421,19 +421,16 @@
             </li>
           <li> Added iOS 13 to the &quot;Allow Running on iOS Beta&quot; option.‬<br>
             </li>
-          <li> SEB for iOS now optionally supports downloading files (Settings/Downloads/Allow Downloading). Currently only website generated files (using the data: scheme) can be downloaded. This feature is meant for saving encrypted exam results in case network connection fails. Those files can be accessed in the Files app (&quot;On My iPad/iPhone&quot; location) and by using iTunes.‬<br>
+          <li> SEB for iOS now optionally supports downloading files (Settings/Downloads/Allow Downloading). Currently only website generated files (using the data: scheme) can be downloaded. This feature allows saving encrypted exam results in case network connection fails. Such downloaded files can be accessed in the Files app (&quot;On My iPad/iPhone&quot; location) and with iTunes.‬<br>
             </li>
-          <li> Support for encrypting config files with identity certificates. These have to be distributed by embedding them into a client config file.‬<br>
-            </li>
-          <li> New identities for encrypting and decrypting config files can easily be created in Settings/Network/Certificates/Choose Identity.‬<br>
-            </li>
-          <li> Identity certificates for decrypting SEB exam configs can be embedded into client configs. ‬<br>
-            </li>
-          <li> Added option to automatically create and embed an identity (Settings/Config File/Create &amp; Embed Identity, available when editing client config files). ‬<br>
+          <li>Added support for encrypting SEB config files with identity certificates. These certificates have to be distributed to exam devices by embedding them into a client config file. SEB exam config files encrypted with this certificate can afterwards be opened without students having to enter an SEB exam settings password.</li>
+          <li> New identity certificates for encrypting and decrypting config files can easily be created in Settings/Network/Certificates/Choose Identity.‬<br>
+          </li>
+          <li> Added option to automatically create and embed an identity certificate (Settings/Config File/Create &amp; Embed Identity, available when editing client config files). ‬<br>
             </li>
           <li> Option to auto-select latest created or imported identity for encrypting exam configs (Settings/Config File/Auto-Select Identity).‬<br>
             </li>
-          <li> Added options for links requesting to open in new tab (see Settings/Browser Features), compatible with SEB for macOS.‬<br>
+          <li> • Added options for links requesting to open in new tab: open in same or new tab, always block or block when on another server. See Settings/Browser Features, this functionality is compatible with SEB for macOS.‬<br>
             </li>
           <li> The Quit Link feature can now optionally restart an exam session instead of quitting it (Settings/Exam Session/Restart Instead of Quitting).‬<br>
             </li>
@@ -457,9 +454,9 @@
           also be started by  QR codes.</li>
           <li>SEB for iOS can be installed and configured using a mobile device management system, as it supports the iOS feature "MDM Managed Configuration".</li>
           <li>SEB for iOS is also compatible with <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">Apple Classroom</a>.</li>
-          <li>This  version contains some new features currently unique to the iOS version and almost all features of the macOS/Windows versions. Please check the <a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/22aea7b76c/" target="_blank">compatibility of SEB for iOS version 2.1.13</a> with your exam system.</li>
+          <li>This  version contains some new features currently unique to the iOS version and almost all features of the macOS/Windows versions. Please check the <a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/22aea7b76c/" target="_blank">compatibility of SEB for iOS version 2.1.14</a> with your exam system.</li>
         </ul>
-        <p>Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated for SEB 2.1.13). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
+        <p>Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated for SEB 2.1.14). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
       </div>
       <!-- /Download Box -->
 
