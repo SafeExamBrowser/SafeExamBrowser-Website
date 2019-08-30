@@ -244,57 +244,45 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.2.3/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.3/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.2.3 for Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.3 for Windows</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for Windows 7, 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: 02b5a4865960add45f4839bdbc9f1120c4343d99</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.2.3/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.2.3" target="_blank">GitHub project site</a>. <br />
+          <span class="codetext">SHA1: 91cd48bb8bc7fd104ecff994b9215f22c9a444f2</span></p>
+        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.3/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.3" target="_blank">GitHub project site</a>. <br />
         </p>
-        <p>Safe Exam Browser 2.2.3 for Windows is an <strong>important security update</strong> for SEB 2.2.x and SEB 2.1.8.</p>
+        <p>Safe Exam Browser 2.3 for Windows is an <strong>important security update</strong> for SEB 2.2.x and SEB 2.1.8.</p>
         <p><strong>PLEASE UPDATE TO THIS VERSION AS SOON AS POSSIBLE! WE WILL REMOVE ALL OLDER SEB VERSIONS SOON.</strong></p>
         <p><strong>Our new policy is: We will only support the latest SEB version and will remove all older SEB versions after a grace period.</strong> Please adjust your procedures accordingly. <strong>Only with updated SEB versions you can achieve the best possible security and stability of e-assessments. </strong>Therefore you have to keep your exam environment up to date, there is no alternative to regular updates.        </p>
         <p>This version is replacing the SEB 2.1.x branch, with which it is <strong>compatible with one important exception</strong>: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2.3 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2.3 for Windows.        </p>
-        <p>New in SEB 2.2.3:</p>
+        <p>New in SEB 2.3:</p>
         <ul>
-          <li>Fixed an issue when calculating the Browser Exam Key (BEK) on Windows set to Swedish and probably Turkish. A different BEK was calculated on Windows set to such languages since SEB 2.2 and the check for detecting additional (irregular) files in SEB's program directory displayed a warning in SEB 2.2.2.</li>
-          <li>Added settings option to switch off detector for RDP/remote session (SEB Config Tool / Security / Allow screen sharing).</li>
-          <li>Security improvements important mainly when running SEB on managed computers.</li>
-          <li>The dialog "Open File With... Safe Exam Browser" is no longer displayed when downloading and opening .seb files.</li>
-          <li>Closing the download dialog while loading a seb(s) link  doesn't prevent further reconfiguring anymore.</li>
-          <li>Added settings options for all settings of the macOS 2.1.3 version to Config Tool / Security pane.        </li>
-        </ul>
-        <p>New  in SEB 2.2.2:</p>
-        <ul>
-          <li> Fixed an issue in calculating the Browser Exam Key in the SEB Config Tool, which happened with specific config files.</li>
-          <li> Added a check for detecting additional files in SEB's program directory (which might have been left there when updating from an older SEB version) and displaying a warning in that case. Such left over files cause a wrong Browser Exam Key as well.</li>
-          <li> Fixed an issue when en-US was always selected as spell checking language, even if not allowed in settings, when starting SEB first time or after the contents of the Firefox Profiles folder were removed. </li>
-        </ul>
-
-        <p>New  in SEB 2.2.1: </p>
-        <ul>
-          <li>Added configurable spell checking, dictionaries can be embedded into SEB config files. </li>
-          <li>Added context menu for displaying word suggestions and selecting spell checking dictionary. Note: You might have to enable the right mouse button in your settings (&quot;Hooked Keys&quot; config tool tab).</li>
-          <li>Resolved issue with sometimes missing power options after SEB was quit.</li>
-          <li>Added options for <a href="windows/win_usermanual_en.html#AdditionalResources">Additional Resources</a>:
-<ul>
-              <li>Show button (to display the icon or menu entry for a resource)</li>
-              <li>Referrer filter for activation Link URL</li>
-              <li>Option &quot;Show confirm box&quot; with custom text which is displayed before loading a resource</li>
-              <li>Reset browser session (session cookies are deleted before loading a new resource)<br>
-              </li>
-            </ul>
+          <li>Implemented private clipboard (optional, see Security tab). When enabled, cut/copy/paste works only with content inside the SEB browser, the private clipboard doesn't accept content from other applications or tools.</li>
+          <li>Added zooming of browser windows using the Ctrl +/- shortcuts.</li>
+          <li>Now the option &quot;Allow downloading and uploading files&quot; is supported in SEB for Windows, at least downloads can be enabled/disabled with this option (Down-/Uploads tab).<br>
           </li>
-          <li>Fixed that the URL filter didn't treat query strings in URLs consistently in SEB for Windows 2.2/macOS. Added option to explicitly forbid any query part in checked URL: Indicate &quot;?.&quot; as query in your filter expression.</li>
-          <li>Fixed Browser Exam Key (BEK) check wasn't working correctly with some exam systems (because a trailing slash &quot;/&quot; was removed from the URL used to hash the BEK)</li>
-          <li>Fixed that SEB couldn't quit Firefox when starting. </li>
-          <li> Prevent that SEB browser can be used to finish an exam if SafeExamBrowser.exe is terminated: The browser displays a red lock screen in this case, requiring to enter the quit/unlock password.</li>
-          <li>Improved  setting and resetting of Registry keys (Ctrl+Alt+Del Security Screen and power options), including when the SEB Windows Service tries to reset Registry settings after rebooting the machine. Added group policy update to registry resetter to reset power options reliably.</li>
-          <li>Replaced embedded Firefox with latest version 52.9.0 ESR.</li>
-          <li>Changed default setting for all function keys to &quot;enabled&quot;.</li>
+          <li>The dialog &quot;Open File With... Safe Exam Browser&quot; is no longer displayed unless the option &quot;Open files after downloading&quot; is enabled (Down-/Uploads tab).<br>
+          </li>
+          <li>Enabled SpeechSynthesis API<br>
+          </li>
+          <li>Fixed issue when opening a PDF with a link to be opened in a new browser window (target = _blank or JavaScript open), a second, empty browser window was opened.<br>
+          </li>
+          <li>Deactivated printing in the built-in PDF.js viewer, as that opened a security hole.<br>
+          </li>
+          <li>Now it's possible to open an embedded PDF file (embedded Additional Resource) when starting a SEB session, instead of a Start URL.<br>
+          </li>
+          <li>mailto: links are now being ignored.<br>
+          </li>
+          <li>Fixed bug with last allowed application not starting and all started applications not closing when using SEB without browser.<br>
+          </li>
+          <li>SEB now can connect to some servers which are using Basic Authentication.<br>
+          </li>
+          <li>Fixed issue with quitting SEB when Firefox was running.<br>
+            </li>
+          <li>More eligible SSL/TLS certificates are displayed in the list &quot;Choose TLS/SSL certificate to embed into configuration...&quot; and the one for CA certificates in SEB Config Tool / Network / Certificates.</li>
         </ul>
         <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes. <span class="half_linespace">The <a href="windows/win_usermanual_en.html"> manual</a> is currently being updated for all new features</span></p>
         <p>Other features: </p>
