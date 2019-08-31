@@ -227,7 +227,35 @@
         <!-- Content -->
           <h2></h2>
     
-    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2.3: </h5>
+    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.3: </h5>
+    <p>SEB 2.3 for Windows offers new features, which increase security and usability significantly.</p>
+    <ul>
+      <li>Implemented private clipboard (optional, see Security tab). When enabled, cut/copy/paste works only with content inside the SEB browser, the private clipboard doesn't accept content from other applications or tools.</li>
+      <li>Added zooming of browser windows using the Ctrl +/- shortcuts.</li>
+      <li>Now the option &quot;Allow downloading and uploading files&quot; is supported in SEB for Windows, at least downloads can be enabled/disabled with this option (Down-/Uploads tab).<br>
+      </li>
+      <li>The dialog &quot;Open File With... Safe Exam Browser&quot; is no longer displayed unless the option &quot;Open files after downloading&quot; is enabled (Down-/Uploads tab).<br>
+      </li>
+      <li>Enabled SpeechSynthesis API<br>
+      </li>
+      <li>Fixed issue when opening a PDF with a link to be opened in a new browser window (target = _blank or JavaScript open), a second, empty browser window was opened.<br>
+      </li>
+      <li>Deactivated printing in the built-in PDF.js viewer, as that opened a security hole.<br>
+      </li>
+      <li>Now it's possible to open an embedded PDF file (embedded Additional Resource) when starting a SEB session, instead of a Start URL.<br>
+      </li>
+      <li>mailto: links are now being ignored.<br>
+      </li>
+      <li>Fixed bug with last allowed application not starting and all started applications not closing when using SEB without browser.<br>
+      </li>
+      <li>SEB now can connect to some servers which are using Basic Authentication.<br>
+      </li>
+      <li>Fixed issue with quitting SEB when Firefox was running.<br>
+      </li>
+      <li>More eligible SSL/TLS certificates are displayed in the list &quot;Choose TLS/SSL certificate to embed into configuration...&quot; and the one for CA certificates in SEB Config Tool / Network / Certificates.</li>
+    </ul>
+			
+    <h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2.3: </h5>
     <p>Safe Exam Browser 2.2.3 for Windows is an <strong>important security update</strong> for SEB 2.2.x and SEB 2.1.8.</p>
 <ul>
   <li>Fixed an issue when calculating the Browser Exam Key (BEK) on Windows set to Swedish and probably Turkish. A different BEK was calculated on Windows set to such languages since SEB 2.2 and the check for detecting additional (irregular) files in SEB's program directory displayed a warning in SEB 2.2.2.</li>
