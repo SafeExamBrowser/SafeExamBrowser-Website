@@ -233,51 +233,57 @@
       
       <table class="table table-bordered">
         <tr>
-          <th width="200"> Feature </th>
+          <th width="200"> Version/Feature </th>
           <th> Time Frame</th>
           <th> Comments </th>
         </tr>
         <tr>
-          <td>Integration of a <strong>virtual desktop client</strong> into a exam system based   on SEB.</td>
-          <td><p>Q3 2013</p></td>
-          <td>The   SEB kiosk application will be used together with a VDI client to achieve safe   exams together with third party applications using virtual desktops. On   Windows the VMware View Client can already be used, on Mac&nbsp;OS&nbsp;X this will also be possible with the SEB 2.0 final version.</td>
+          <td><strong>SEB 2.1.4 for macOS</strong></td>
+          <td><p>Q3 2019</p></td>
+          <td>Improves security and stability, final version of <a href="developer/seb-config-key.html">Config Key</a> feature to check validity of settings used for an exam. The Config Key can be generated automatically on an exam server.</td>
         </tr>
         <tr>
-          <td><strong>Concept   for using tablet computers</strong> for browser based online exams with a SEB version   ported to a tablet operating system </td>
-          <td>Q3 2013</td>
-          <td>Important   aspects of using touch based tablet computers for online exams (keyboard,   battery life and recharging, costs, LAN vs. WLAN, ergonomics, infrastructure)   need to be evaluated well as a first step before a possible porting.</td>
+          <td><strong>SEB 2.4 for Windows</strong> </td>
+          <td>Q4 2019</td>
+          <td><a href="developer/seb-config-key.html">Config Key</a> feature to check validity of settings used for an exam. Every SEB version generates the same Config Key, as long as the same settings (config files) are used. The Config Key will now be available in the macOS, iPadOS/iOS and Windows versions of SEB.</td>
         </tr>
         <tr>
-          <td><strong>Automatic   quitting</strong> (or activating a menu command/button for quitting) SEB after finishing a quiz.</td>
-          <td> Q4 2013</td>
-          <td>After the examinee finishes and submits the quiz, SEB can quit automatically. You won't need to communicate any secret quit password or key shortcut to exit SEB. This feature will be available in SEB 2.0 (in SEB 2.0 preview for Mac&nbsp;OS&nbsp;X already available).</td>
+          <td><strong>SEB 2.2 for macOS/iPadOS/iOS</strong></td>
+          <td> Q4 2019</td>
+          <td>Major release of SEB with a unified code base for macOS and iPadOS/iOS. Supports the <a href="windows/win_usermanual_en.html#AdditionalResources">Additional Resources</a> feature, better process monitoring (Mac), binary security module and integration with SEB Server.</td>
         </tr>
         <tr>
-          <td><strong>Individual, secure and simplified configuration of SEB </strong>by using encrypted<strong> .seb </strong>files.</td>
-          <td>Q4 2013</td>
-          <td>Provides an easy way to configure SEB individually per exam, especially when using unmanaged computers like student notebooks (in SEB 2.0 preview for Mac&nbsp;OS&nbsp;X already available).</td>
+          <td><strong>SEB 3.0 Base for Windows</strong></td>
+          <td>Q1/Q2 2020</td>
+          <td> Completely	refactored SEB version for Windows using a Chromium browser engine: Improved web compatibility, better integrated, faster. Improved stability and security architecture. Integration with SEB Server.</td>
         </tr>
         <tr>
-          <td><strong>SEB Starter: Code refactoring and porting to .NET.</strong></td>
-          <td>Q1 2014</td>
-          <td>The outdated code base will be modernized, which will also easen further development of SEB.</td>
+          <td><strong>SEB 3.1 Extended for Windows</strong></td>
+          <td>2020</td>
+          <td>Completely refactored SEB version for Windows with full functionality of SEB 2.x, for example <a href="windows/win_usermanual_en.html#AdditionalResources">Additional Resources</a>. Contains binary security module.</td>
         </tr>
         <tr>
-          <td><strong>URL filter</strong> (whitelist) with configuration interface. Filtering of specific content embedded in web pages.</td>
-          <td>Q2 2015</td>
-          <td>A URL filter   with a configurable whitelist makes SEB usable also for exam systems which   don't have a safe quiz mode (which shouldn't incorporate links to external   websites) and without using another firewall software or hardware. Some content (configurable) might also need to   be filtered by SEB, mainly on external websites which are allowed to be   opened during exams (see next feature).</td>
-        </tr>
-        
-        <tr>
-          <td><strong>Porting   SEB to iOS.</strong></td>
-          <td>Q2 2017</td>
-          <td> After SEB   2.1 will already be touch optimized for Windows 8  (Intel CPU based) tablets,  SEB for macOS  will be ported to iOS (iPad version). Porting to other tablet OS would require external   contributors. </td>
+          <td><strong>SEB 3.0 for macOS/iPadOS/iOS</strong></td>
+          <td>Q1/Q2 2020</td>
+          <td>Partially refactored SEB version using new WebKit 2 (WKWebView) browser engine for improved web compatibility, better performance and stability.</td>
         </tr>
         
         <tr>
-          <td>Option to open <strong>additional web pages or sites during an exam</strong> in separate SEB browser   tabs or windows: SEB 2.2</td>
-          <td>Q3 2017</td>
-          <td>In some exams it can be necessary to allow students to use some additional resources   available on the web. SEB will get an option to configure which sites or pages can be opened. The GUI will get elements to navigate on these web   pages, to arrange the browser windows on the screen or to switch between open   tabs.</td>
+          <td><strong> New SEB JavaScript API</strong></td>
+          <td> 2020</td>
+          <td> 	The SEB JavaScript API allows better and easier integration with exam and learning management systems.</td>
+        </tr>
+        
+        <tr>
+          <td><strong> Improved client monitoring</strong></td>
+          <td> 2020</td>
+          <td> 		Further security enhancements for improved monitoring of exam client devices which are connected to SEB Server or to an e-assessment system with built-in integration for these features (for example the new <strong>Signature Keys</strong>).</td>
+        </tr>
+        
+        <tr>
+          <td> <strong>Accessibility improvements</strong></td>
+          <td>2020</td>
+          <td>Improvements for visually impaired users. Built-in screen reader and improved support for third party tools.</td>
         </tr>
         
         <!--
