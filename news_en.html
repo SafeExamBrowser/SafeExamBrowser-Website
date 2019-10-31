@@ -230,6 +230,33 @@
         <div class="col-md-9">
         
           <!-- Content -->
+			
+          <h5 id="sebh5">October 31, 2019</h5>
+          <p class="half_linespace"><a href="download_en.html#MacOSX"><strong>Safe Exam Browser 2.1.4 for macOS released.</strong></a></p>
+          <p><span class="half_linespace">SEB 2.1.4 enhances exam security and improves usability. <strong>Please update as soon as possible</strong>, to maintain best possible macOS compatibilty and security. As mentioned before, we don't support older versions anymore.</span> <strong>Before asking any support question or reporting a bug, install the latest SEB version and try to reproduce the issue with the most recent version.</strong></p>
+          <ul id="seblist3">
+            <li>SEB 2.1.4 is fully compatible with macOS 10.15 Catalina.</li>
+            <li>The SEB application is now notarized and uses the Hardened Runtime security feature.</li>
+            <li> Set the default minimum required macOS version to 10.11 El Capitan. This means, if you want students to be able to use older macOS versions, you need to adjust that setting if you didn’t had it set in your config already (previous versions had the default setting of macOS 10.7 as the minimum version).  </li>
+            <li>SEB 2.1.4 uses the final implementation of the Config Key, to verify that an exam is using a correct, unmodified SEB configuration. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. Currently SEB for iOS supports the Config Key as well, a compatible Windows version will follow later this year.</li>
+            <li>Implemented key shortcuts for switching between open browser windows.<br>
+              Left Alt (Option) Key - Tab: Cycle forward through open browser windows<br>
+              Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open browser windows<br>
+              Right Alt (Option) Key (- Right Shift) - Tab keeps the standard function (cycle through website elements).</li>
+            <li>Custom App Controls and Quick Actions in Touch Bar with enabled Control Strip  are now disabled, even if BetterTouchTool is used. </li>
+            <li>Fixed that the Preferences / Exams tab in some cases displayed &quot;Save settings to display its Browser Exam / Config Key&quot; instead of the keys, even though settings were not modified by the user.</li>
+            <li>Fixed: Media player app (iTunes etc.) can block SEB, when in full screen and started using the Play key. The previous implementation didn't work properly on Mojave and newer.</li>
+            <li>Selecting multiple files for upload is now possible, controlled by the HTML input element (multiple-attribute).</li>
+            <li>Fixed downloads not working on macOS 10.14 Mojave or newer.</li>
+            <li>Fixed downloading and opening of SEB config files defined inline on a webpage with &quot;data:&quot; didn't work.</li>
+            <li>Fixed issue with the default location for the Downloads directory when running on Mojave or newer. If you created a SEB config file with a previous version of SEB, you might have to again select the Downloads directory in Preferences / Down/Uploads in case an error message is displayed when trying to download files in SEB.</li>
+            <li>Implemented blocking macOS screen recording (Cmd+Shift+5) introduced in Mojave, controlled with setting Preferences / Security / Allow screen capture.</li>
+            <li>Fixed: JavaScript confirm dialog didn't return false when cancel (or any secondary) button was clicked.</li>
+            <li>Red lock screen for &quot;SEB process was stopped&quot; is no longer displayed when Mac is set to sleep mode. </li>
+            <li>To prevent a modal lock (SEB freezes) when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode) while SEB doesn't have Accessibility permissions, before terminating SEB, save information that this happened and on which web page it happened (title and URL or placeholder). This will be displayed when SEB is started next time.          </li>
+          </ul>
+          <p class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</p>
+
           <h5 id="sebh5">September 19, 2019</h5>
           
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 2.1.15 for iOS released</strong></a>. </span>This version runs on iOS 13 by default and contains some minor bug fixes:</p>
