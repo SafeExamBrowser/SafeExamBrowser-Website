@@ -326,21 +326,24 @@
             
 <p id="half_linespace"><span class="half_linespace">Diese  Version beinhaltet wichtige Sicherheits- und Stabilitätsverbesserungen, ein zeitnahes Update wird deshalb dringend empfohlen.</span> Neue Funktionen siehe <a href="download_en.html">englische Download-Seite</a>. Neu seit SEB 2.1.3:</p>
 <ul id="seblist">
-  <li>Neue "<a href="macosx/mac_usermanual_en.html#ExamPane" target="_blank">Config Key</a>"-Funktion, welche es einem Prüfungssystem erlaubt, zu überprüfen, ob SEB-Clients die korrekten Einstellungen benutzen. Der Config Key kann serverseitig generiert werden und ändert sich nicht, wenn dieselben Einstellungen in einer neueren SEB-Version geladen werden, in welcher neue Einstellungsoptionen hinzugefügt wurden (Aufwärts- und Abwärtskompatibilität).           
-  <li>Neue Einstellungsoptionen zum Deaktivieren von Siri und der Diktats-Funktion hinzugefügt.
-  <li> Touch Bar Textvorschläge werden während einer Prüfung ausgeschaltet.</li>
-  <li>SEB verweigert, eine zuvor nicht korrekt beendete Prüfung wieder aufzunehmen (zuerst muss eine Prüfungsaufsichtsperson  das Entsperren-/Beenden-Passwort eingeben), beispielsweise nachdem der Rechner zwangsweise neu gestartet wurde.</li>
-  <li> Der URL-Filter behandelt den Query-Teil einer Adresse nun konsistent zwischen  SEB für macOS 2.1.3 und Windows 2.2.1.</li>
-  <li>Separate Einstellungen für Neuladen / Neuladen-Warnung /  Seiten-Navigation in Prüfung und neuen Browser-Fenstern hinzugefügt.</li>
-  <li>Die Einstellung  &quot;Rechte Maustaste erlauben&quot; funktioniert nun auch in SEB für macOS: Dies erlaubt, die rechte Maustaste/das Kontextmenü bei speziellen Webseiten-Elementen zu benutzen.</li>
-  <li> Die Client-Konfigurationsdatei SEBClientSettings.seb wird nun auch aus dem Systemverzeichnis /Library/Preferences geladen: Dieses Verzeichnis gilt für alle Benutzer auf einem Mac und darauf kann normalerweise nur mit Administrator-Rechten zugegriffen werden. Diese Verbesserung macht es einfacher, <a href="macosx/mac_usermanual_en.html#ConfigDeployment" target="_blank">zentral verwaltete Macs zu konfigurieren</a>, die von mehreren Benutzern genutzt werden.</li>
-  <li>Ein Fehler wurde beseitigt, bei dem die automatische Rechtschreiben-Korrektur in manchen Fällen nicht korrekt ausgeschaltet wurde.</li>
-  <li>Die Erkennung der Bildschirmfreigabe-Funktion funktioniert nun auch korrekt, wenn die Verbindung mittels Apple ID / Zugang zu meinem Mac aufgebaut wird.</li>
-  <li> Verbesserter Startprozess: Die fest auf dem Mac gespeicherten Client-Einstellungen werden nun nicht mehr beachtet, wenn  SEB mittels Öffnen einer Konfigurationsdatei oder eines Konfigurationslinks gestartet wird. </li>
-  <li>Korrigiert, dass mehrfaches Doppelklicken auf eine  .seb Konfigurationsdatei  SEB blockieren konnte.</li>
-  <li>Das &quot;Über SEB&quot;-Startfenster kann nun keine modalenMeldungen mehr verdecken und SEB blockieren.</li>
-  <li> Wenn eine Webseite versucht, eine Schriftart herunterzuladen, blockiert dies SEB nun nicht mehr.</li>
-  <li> Im Fall dass  SEB einen implizit verbotenen Prozess (welcher versucht, ein Panel-Fenster anzuzeigen) nicht beenden kann, wird ein Sperrbildschirm angezeigt, welcher die Eingabe des Entsperren-/Beenden-Passworts notwendig macht.</li>
+  <li>SEB 2.1.4 ist vollständig kompatibel mit  macOS 10.15 Catalina.</li>
+  <li>Die SEB-Applikation ist nun notarisiert und benutzt das &quot;Hardened Runtime&quot; Sicherheits-Feature.</li>
+  <li>Nun können Tastaturkürzel benutzt werden, um zwischen offenen Browserfenstern umzuschalten:<br>
+    Linke Alt- (Wahl-) Taste + Tab: Bringe nächstes Browserfenster in den Vordergrund.<br>
+    Line Alt- (Wahl-) Taste + Linke Shift- (Umschalt-) Taste + Tab: Bringe vorheriges Browserfenster in den Vordergrund.<br>
+  </li>
+  <li> Die Voreinstellung für die minimal erlaubte macOS-Version wurde auf 10.11 El Capitan gesetzt. Das bedeutet, wenn Sie wollen, dass Studierende ältere  macOS-Versionen benutzen können, müssen Sie diese Einstellung ändern (sofern diese nicht schon in älteren Konfigurationsdateien vorhanden war).</li>
+  <li>SEB 2.1.4 benutzt die endgültige Implementierung des Config Key, der dazu dient, um sicherzustellen, dass eine Prüfung nur mit  korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird. Momentan unterstützt SEB für iOS den Config Key bereits, eine damit kompatible Windows-Version wird später dieses Jahr folgen.</li>
+  <li>Eine benutzerdefinierte  Touch Bar in den Modi &quot;App-Steuerungen&quot; und &quot;Schnellaktionen&quot; mit eingeschaltetem Control-Strip  wird nun deaktiviert, auch wenn das Hilfsprogramm BetterTouchTool benutzt wird. </li>
+  <li>Die macOS-Bildschirmaufzeichnung (aufgerufen mit Cmd+Shift+5/Befehlstaste+Umschalttaste+5), eingeführt in macOS Mojave, wird jetzt blockiert. Dies kann mit der Option &quot;Einstellungen  / Sicherheit / Bildschirmfotos erlauben&quot; gesteuert werden.</li>
+  <li>Das Auswählen mehrere Dateien für Upload ist jetzt möglich, gesteuert mit dem HTML Input-Element (multiple-attribute).</li>
+  <li>Eine Medienspieler-Applikation wie iTunes, welche unter Vollbildeinstellung beendet und nach dem Start von SEB mittels der Play-Funktionstaste wieder gestartet wird, kann nun den Bildschirm auch unter macOS Mojave und neuer nicht mehr übernehmen oder den Mac blockieren.</li>
+  <li>Downloads funktionieren jetzt wieder unter macOS 10.14 Mojave und neuer.</li>
+  <li>Der Download und das Öffnen von  SEB-Konfigurationsdateien definiert innerhalb des Quellcodes einer Webseite mittels &quot;data:&quot;-URL funktioniert jetzt korrekt.</li>
+  <li>Die Standardeinstellung für das Download-Verzeichnis funktioniert jetzt auch unter macOS Mojave oder neuer korrekt. Falls Sie eine SEB-Konfigurationsdatei mit einer Vorgängerversion erstellt haben, müssen Sie eventuell das Download-Verzeichnis erneut auswählen in &quot;Einstellungen / Down/Uploads&quot;, falls eine Fehlermeldung angezeigt wird, wenn sie Dateien in SEB herunter laden.</li>
+  <li> JavaScript-Dialoge retournieren nun &quot;false&quot;, wenn die Abbrechen-(oder irgendeine andere zweite)-Schaltfläche angeclickt wird.</li>
+  <li>Der rote Sperrbildschirm &quot;SEB-Prozess wurde unterbrochen!&quot; wird nicht mehr angezeigt, wenn ein Mac in den Ruhezustand versetzt wird. </li>
+  <li>Um zu verhindern, dass SEB einfriert, wenn eine Webseite versucht, einen Zeichensatz herunterzuladen  (dabei wird ein durch den SEB-Kiosk-Modus  verdeckter Dialog angezeigt) während SEB die Erlaubnis zur Steuerung mittels Bedienungshilfen nicht besitzt: Bevor SEB beendet wird, werden Informationen zu diesem Ereignis gespeichert (unter anderem der Titel der betreffenden Webseite und die URL bzw. ein Platzhalter hierfür). Diese Informationen werden angezeigt, wenn SEB das nächste Mal gestartet wird. </li>
 </ul>
 <p>Andere Funktionen:</p>
 <ul id="seblist">
@@ -356,7 +359,7 @@
 </ul>
 <p>Siehe englische <a href="macosx/mac_release_notes_en.html">Release Notes</a> für eine komplete Liste von neuen Funktionen und Änderungen.</p>
 
-<p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>*  Bemerkung: Unter macOS&nbsp;10.7 und 10.8 kann SEB nur als Prüfungs-Client benutzt werden, das Einstellungen-Fenster ist nicht verfügbar. Verwenden Sie SEB unter macOS&nbsp;10.9 oder neuer um eine <span class="quote">.seb</span> Konfigurationsdatei zu erstellen, die auch zum Konfigurieren von SEB-Clients unter macOS&nbsp;10.7 und 10.8 verwendet werden kann. </span><span class="small sebnavbar-link">Mit Standardeinstellungen läuft SEB 2.1.4 erst ab macOS 10.11 El Capitan  (weil macOS 10.10 oder ältere Betriebssystemversionen eine klar veraltete, weniger kompatible WebKit-Browserengine verwenden). Diese Einstellung kann verändert werden, wenn gewünscht wird, dass Studierende ältere macOS-Versionen verwenden können.</span></p>  
+<p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>*  Bemerkung: Unter macOS&nbsp;10.7 und 10.8 kann SEB nur als Prüfungs-Client benutzt werden, das Einstellungen-Fenster ist nicht verfügbar. Verwenden Sie SEB unter macOS&nbsp;10.9 oder neuer um eine <span class="quote">.seb</span> Konfigurationsdatei zu erstellen, die auch zum Konfigurieren von SEB-Clients unter macOS&nbsp;10.7 und 10.8 verwendet werden kann. </span><span class="small sebnavbar-link">Mit Standardeinstellungen läuft SEB 2.1.4 erst ab macOS 10.11 El Capitan  (weil macOS 10.10 oder ältere Betriebssystemversionen eine klar veraltete, weniger kompatible WebKitBrowserengine verwenden). Diese Einstellung kann verändert werden, wenn gewünscht wird, dass Studierende ältere macOS-Versionen verwenden können.</span></p>  
       </div>
       <!-- /Download Box -->
 

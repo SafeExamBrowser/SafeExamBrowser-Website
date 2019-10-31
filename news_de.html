@@ -231,7 +231,32 @@
         <div class="col-md-9">
         
         <!-- Content -->
-          <h5 id="sebh5">19. September 2019</h5>
+			
+          <h5 id="sebh5">31. November 2019</h5>
+          <p id="half_linespace"><span class="half_linespace"><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 2.1.4 für macOS veröffentlicht</strong></a>. Diese  Version erhöht die Sicherheit in Prüfungen und verbessert die Bedienungsfreundlichkeit, beispielsweise beim Verwenden von zusätzlichen Ressourcen in mehreren Fenstern. <strong>Bitte führen Sie ein zeitnahes Update durch</strong>, um bestmögliche Sicherheit und Kompatibilität mit neuen macOS-Versionen sicherzustellen.</span> Wie zuvor kommuniziert, unterstützen wir keine älteren SEB-Versionen mehr. <strong>Bevor Sie  eine Support-Anfrage schreiben oder uns einen Fehler melden, installieren Sie bitte die neuste SEB-Version. Überprüfen Sie dann, ob das Problem auch noch mit der neusten Version nachvollziehbar ist.</strong></p>
+          <ul id="seblist2">
+            <li>SEB 2.1.4 ist vollständig kompatibel mit  macOS 10.15 Catalina.</li>
+            <li>Die SEB-Applikation ist nun notarisiert und benutzt das &quot;Hardened Runtime&quot; Sicherheits-Feature.</li>
+            <li>Nun können Tastaturkürzel benutzt werden, um zwischen offenen Browserfenstern umzuschalten:<br>
+              Linke Alt- (Wahl-) Taste + Tab: Bringe nächstes Browserfenster in den Vordergrund.<br>
+              Line Alt- (Wahl-) Taste + Linke Shift- (Umschalt-) Taste + Tab: Bringe vorheriges Browserfenster in den Vordergrund.<br>
+            </li>
+            <li> Die Voreinstellung für die minimal erlaubte macOS-Version wurde auf 10.11 El Capitan gesetzt. Das bedeutet, wenn Sie wollen, dass Studierende ältere  macOS-Versionen benutzen können, müssen Sie diese Einstellung ändern (sofern diese nicht schon in älteren Konfigurationsdateien vorhanden war).</li>
+            <li>SEB 2.1.4 benutzt die endgültige Implementierung des Config Key, der dazu dient, um sicherzustellen, dass eine Prüfung nur mit  korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird. Momentan unterstützt SEB für iOS den Config Key bereits, eine damit kompatible Windows-Version wird später dieses Jahr folgen.</li>
+            <li>Eine benutzerdefinierte  Touch Bar in den Modi &quot;App-Steuerungen&quot; und &quot;Schnellaktionen&quot; mit eingeschaltetem Control-Strip  wird nun deaktiviert, auch wenn das Hilfsprogramm BetterTouchTool benutzt wird. </li>
+            <li>Die macOS-Bildschirmaufzeichnung (aufgerufen mit Cmd+Shift+5/Befehlstaste+Umschalttaste+5), eingeführt in macOS Mojave, wird jetzt blockiert. Dies kann mit der Option &quot;Einstellungen  / Sicherheit / Bildschirmfotos erlauben&quot; gesteuert werden.</li>
+            <li>Das Auswählen mehrere Dateien für Upload ist jetzt möglich, gesteuert mit dem HTML Input-Element (multiple-attribute).</li>
+            <li>Eine Medienspieler-Applikation wie iTunes, welche unter Vollbildeinstellung beendet und nach dem Start von SEB mittels der Play-Funktionstaste wieder gestartet wird, kann nun den Bildschirm auch unter macOS Mojave und neuer nicht mehr übernehmen oder den Mac blockieren.</li>
+            <li>Downloads funktionieren jetzt wieder unter macOS 10.14 Mojave und neuer.</li>
+            <li>Der Download und das Öffnen von  SEB-Konfigurationsdateien definiert innerhalb des Quellcodes einer Webseite mittels &quot;data:&quot;-URL funktioniert jetzt korrekt.</li>
+            <li>Die Standardeinstellung für das Download-Verzeichnis funktioniert jetzt auch unter macOS Mojave oder neuer korrekt. Falls Sie eine SEB-Konfigurationsdatei mit einer Vorgängerversion erstellt haben, müssen Sie eventuell das Download-Verzeichnis erneut auswählen in &quot;Einstellungen / Down/Uploads&quot;, falls eine Fehlermeldung angezeigt wird, wenn sie Dateien in SEB herunter laden.</li>
+            <li> JavaScript-Dialoge retournieren nun &quot;false&quot;, wenn die Abbrechen-(oder irgendeine andere zweite)-Schaltfläche angeclickt wird.</li>
+            <li>Der rote Sperrbildschirm &quot;SEB-Prozess wurde unterbrochen!&quot; wird nicht mehr angezeigt, wenn ein Mac in den Ruhezustand versetzt wird. </li>
+            <li>Um zu verhindern, dass SEB einfriert, wenn eine Webseite versucht, einen Zeichensatz herunterzuladen  (dabei wird ein durch den SEB-Kiosk-Modus  verdeckter Dialog angezeigt) während SEB die Erlaubnis zur Steuerung mittels Bedienungshilfen nicht besitzt: Bevor SEB beendet wird, werden Informationen zu diesem Ereignis gespeichert (unter anderem der Titel der betreffenden Webseite und die URL bzw. ein Platzhalter hierfür). Diese Informationen werden angezeigt, wenn SEB das nächste Mal gestartet wird. </li>
+          </ul>
+          <p class="half_linespace">Weitere Infos zu allen Neuerungen finden sich in den<a href="macosx/mac_release_notes_de.html"> Release Notes.</a></p>
+          
+		  <h5 id="sebh5">19. September 2019</h5>
 		  <p class="half_linespace"><a href="https://github.com/SafeExamBrowser/seb-testing/tree/master/ios" target="_blank"><strong>Safe Exam Browser 2.1.15 für iOS veröffentlicht</strong></a>. Diese Version läuft mit Standardeinstellungen unter iOS 13 und behebt einige kleinere Fehler:</p>
           <ul>
             <li> Es ist nun möglich, selbst bei Client-Einstellungen mit gesetztem Quit-Passwort eine andere Prüfung mit eigenen Einstellungen zu starten oder SEB umzukonfigurieren, solange keine Prüfung läuft.</li>
