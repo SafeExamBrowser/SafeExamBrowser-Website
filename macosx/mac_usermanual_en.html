@@ -969,7 +969,7 @@ certificates extend the system trust store (as if you had manually added them to
 
           <p class="seb-section-header quote">OS Specific Settings: macOS</p>
           <ul id="seblist2">
-            <li><span class="quote">Enforce minimal macOS version</span>:  This is helpful if your web application isn't compatible with an older WebKit version (as for example used in OS X 10.7) or if you want to make sure that embedded certificates and certificate pinning work on all exam clients. In the latter case you should enforce the minimum macOS version 10.9.</li>
+            <li><span class="quote">Enforce minimal macOS version</span>:  This is helpful if your web application isn't compatible with an older WebKit version (as for example used in OS X 10.7) or if you want to make sure that embedded certificates and certificate pinning work on all exam clients. In the latter case you should enforce the minimum macOS version 10.9. Currently the default value for this setting is macOS 10.11.</li>
             <li><span class="quote">Disable app switcher when starting</span>: SEB checks for the command key being held down while SEB is starting up. This prevents using the application switcher to mess with SEB's kiosk mode.</li>
             <li><span class="quote">Force installation in Applications folder</span>: SEB enforces to be installed in an Applications folder (/Applications or ~/Applications</li>
             <li><span class="quote"> Allow also  user's ~/Applications folder</span>: SEB can also be installed in the Applications folder of the current user (~/Applications).</li>
@@ -1008,15 +1008,21 @@ certificates extend the system trust store (as if you had manually added them to
           <p>SEB for macOS is running on 64-bit Intel Macs with the following operating systems:</p>
                
           <ul id="seblist">
-            <li>macOS 10.14 Mojave Beta (not yet fully tested)</li>
+            <li>macOS 10.15 Catalina</li>
+            <li>macOS 10.14 Mojave</li>
             <li>macOS 10.13 High Sierra</li>
             <li>macOS 10.12 Sierra</li>
             <li>OS X 10.11 El Capitan</li>
+          </ul>
+          <p>Limited support (by changing default value for <span class="quote"><a href="#SecurityPane">minimal macOS version</a></span>):<br>
+          </p>
+          <ul>
             <li>OS X 10.10 Yosemite</li>
             <li>OS X 10.9 Mavericks</li>
             <li>OS X 10.8 Mountain Lion (TLS/SSL/CA certificate embedding and certificate pinning not supported)</li>
-            <li>OS X 10.7 Lion (only supported as client, preferences window not available. TLS/SSL/CA certificate embedding and certificate pinning not supported)</li>
-            <li>Mac OS X 10.6 Snow Leopard (only supported up to SEB 1.5.2)</li>
+            <li>OS X 10.7 Lion (only supported as client, preferences window not available. TLS/SSL/CA certificate embedding and certificate pinning not supported)<br>
+            </li>
+            <li>Only supported by SEB 1.5.2: Mac OS X 10.6 Snow Leopard</li>
           </ul>
 
         </div>
