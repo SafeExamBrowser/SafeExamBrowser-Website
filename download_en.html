@@ -333,28 +333,27 @@
         <span class="codetext">Build 2B66. SHA1: ec17d53570336c2b20f64be35e4855f80b487d1f</span></p>
             
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.1.4/SafeExamBrowser-2.1.4.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>. </p>
-        <p><span class="half_linespace">This  version includes important security and stability improvements, Please update soon, we don't support older versions anymore.</span></p>
+        <p>SEB 2.1.4 enhances exam security and improves usability. Please update soon, we don't support older versions anymore.</p>
         <ul id="seblist">
           <li>SEB 2.1.4 is fully compatible with macOS 10.15 Catalina.</li>
           <li>The SEB application is now notarized and uses the Hardened Runtime security feature.</li>
-          <li> Set default minimum required macOS version to 10.11 El Capitan. This means, if you want students to be able to use older macOS versions, you need to adjust that setting if you didn’t had it set in your config already (previous versions had macOS 10.7 as minimum default settings).  Many modern web applications won’t run correctly on old WebKit versions used in older macOS versions. Consider recommending to or demanding from your students to use a macOS version which is still getting security updates from Apple. Until the release of 10.15 Catalina, this was macOS 10.12 Sierra, from now on the oldest version still getting updates is 10.13 High Sierra.</li>
-          <li>SEB 2.1.4 uses the final implementation of the Config Key, to verify that an exam is using a correct, unmodified SEB configuration. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. Currently SEB for iOS supports the Config Key as well, the Windows version will follow later this year.</li>
+          <li> Set the default minimum required macOS version to 10.11 El Capitan. This means, if you want students to be able to use older macOS versions, you need to adjust that setting if you didn’t had it set in your config already (previous versions had the default setting of macOS 10.7 as the minimum version).  Many modern web applications won’t run correctly on old WebKit versions used in older macOS versions. Consider recommending to or demanding from your students to use a macOS version which is still getting security updates from Apple. Until the release of 10.15 Catalina, this was macOS 10.12 Sierra, from now on the oldest version still getting updates will be 10.13 High Sierra.</li>
+          <li>SEB 2.1.4 uses the final implementation of the Config Key, to verify that an exam is using a correct, unmodified SEB configuration. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. Currently SEB for iOS supports the Config Key as well, a compatible Windows version will follow later this year.</li>
           <li>Implemented key shortcuts for switching between open browser windows.<br>
-            Left Alt (Option) Key +Tab: Cycle forward through open browser windows<br>
-            Left Alt (Option) Key + Left Shift Key + Tab: Cycle backwards through open browser windows<br>
-            Right Alt (Option) Key (+ Right Shift) + Tab keeps the standard function (cycle through website elements).</li>
-          <li>Custom App Controls and Quick Actions in Touch Bar with Control Strip active are now disabled, even if BetterTouchTool is used. Added alert when App Control mode for Touch Bar couldn't be restored automatically, offering to open System Preferences / Keyboards so user can change the setting back manually.</li>
-          <li>Fixed Preferences / Exams in some cases displayed &quot;Save settings to display its Browser Exam / Config Key&quot; instead of the keys. </li>
-          <li>Fixed: Media player app can block SEB with play button. The previous implementation didn't work properly on Mojave and newer.</li>
+            Left Alt (Option) Key - Tab: Cycle forward through open browser windows<br>
+            Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open browser windows<br>
+            Right Alt (Option) Key (- Right Shift) - Tab keeps the standard function (cycle through website elements).</li>
+          <li>Custom App Controls and Quick Actions in Touch Bar with enabled Control Strip  are now disabled, even if BetterTouchTool is used. Added alert when App Control mode for Touch Bar can't be restored automatically, offering to open System Preferences / Keyboards, so users can change the setting back manually.</li>
+          <li>Fixed that the Preferences / Exams tab in some cases displayed &quot;Save settings to display its Browser Exam / Config Key&quot; instead of the keys, even though settings were not modified by the user.</li>
+          <li>Fixed: Media player app (iTunes etc.) can block SEB, when in full screen and started using the Play key. The previous implementation didn't work properly on Mojave and newer.</li>
           <li>Selecting multiple files for upload is now possible, controlled by the HTML input element (multiple-attribute).</li>
-          <li>Fixed downloads not working in macOS 10.14 Mojave or newer.</li>
+          <li>Fixed downloads not working on macOS 10.14 Mojave or newer.</li>
           <li>Fixed downloading and opening of SEB config files defined inline on a webpage with &quot;data:&quot; didn't work.</li>
-          <li>Fixed issue with the default ~/Downloads directory when running on Mojave or newer. If you created a SEB config file with a previous version of SEB, you might have to again select the Downloads directory in Preferences / Down/Uploads in case an error message is displayed when trying to download files is SEB.</li>
-          <li>Implemented blocking macOS screen recording (cmd+shift+5) introduced in Mojave, controlled with setting Preferences / Security / Allow screen capture (key enablePrintScreen).</li>
-          <li>Fixed: JavaScript confirm dialog doesn't return false when cancel (or any secondary) button is clicked.</li>
+          <li>Fixed issue with the default location for the Downloads directory when running on Mojave or newer. If you created a SEB config file with a previous version of SEB, you might have to again select the Downloads directory in Preferences / Down/Uploads in case an error message is displayed when trying to download files in SEB.</li>
+          <li>Implemented blocking macOS screen recording (Cmd+Shift+5) introduced in Mojave, controlled with setting Preferences / Security / Allow screen capture.</li>
+          <li>Fixed: JavaScript confirm dialog didn't return false when cancel (or any secondary) button was clicked.</li>
           <li>Red lock screen for &quot;SEB process was stopped&quot; is no longer displayed when Mac is set to sleep mode. </li>
-          <li>Removed global hotkeys for F3+F6 shortcut to open Preferences window (F3+F6 shortcut now only works if SEB is the active application). You can still also use the macOS standard shortcut for opening Preferences, which is cmd + , (comma key)</li>
-          <li>To prevent a modal lock when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode) and SEB doesn't have Accessibility permissions, before terminating SEB, save information that this happened and on which web page it happened (title and URL or placeholder). This will be displayed when SEB is started next time.</li>
+          <li>To prevent a modal lock (SEB freezes) when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode) while SEB doesn't have Accessibility permissions, before terminating SEB, save information that this happened and on which web page it happened (title and URL or placeholder). This will be displayed when SEB is started next time.</li>
           <li>Various bug fixes.
         </ul>
   <p>Main features: </p>
@@ -369,7 +368,7 @@
               <li>Enhanced URL filter including teaching mode to control access of the SEB browser to web links and resources. Saved settings files contain URL filter rules which also work in SEB for Windows.</li>
   </ul>
   <p>See <a href="macosx/mac_release_notes_en.html">release notes</a> for complete list of new features and changes.</p>
-  <p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>* Please note: On macOS&nbsp;10.7/10.8 SEB can only be used as an exam client, the preferences window is not available. Run SEB on macOS&nbsp;10.9 or higher to create a <span class="quote">.seb</span> configuration file to configure  SEB clients running on OS&nbsp;X&nbsp;10.7/10.8 as well. By default settings, SEB 2.1.4 runs only on macOS 10.11 El Capitan or newer (as macOS 10.10 or older provide a clearly outdated and instable WebKit browser engine), you can change this setting if you want students to be able to use older macOS versions.</span></p>
+  <p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>* Please note: On macOS&nbsp;10.7/10.8 SEB can only be used as an exam client, the preferences window is not available. Run SEB on macOS&nbsp;10.9 or higher to create a <span class="quote">.seb</span> configuration file to configure  SEB clients running on OS&nbsp;X&nbsp;10.7/10.8 as well. With default settings, SEB 2.1.4 runs only on macOS 10.11 El Capitan or newer (as macOS 10.10 or older provide a clearly outdated and less compatible WebKit browser engine). You can change this setting if you want students to be able to use older macOS versions.</span></p>
   
       </div>
       <!-- /Download Box -->
