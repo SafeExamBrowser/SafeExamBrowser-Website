@@ -231,6 +231,34 @@
         <!-- Content -->
           <h2></h2>
 
+          <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1.4</a>:</h5>
+          <ul id="seblist">
+            <li>SEB 2.1.4 is fully compatible with macOS 10.15 Catalina.</li>
+            <li>The SEB application is now notarized and uses the Hardened Runtime security feature.</li>
+            <li>Set default minimum required macOS version to 10.11 El Capitan. This means, if you want students to be able to use older macOS versions, you need to adjust that setting if you didn’t had it set in your config already (previous versions had macOS 10.7 as minimum default settings). SEB 2.1.4 still should run even on macOS 10.7, but we’re no longer testing it with such old versions. Also the WebKit browser engine depends on the macOS version. Many modern web applications won’t run correctly on old WebKit versions. Ideally don’t use macOS 10.10 or older. Consider recommending to or demanding from your students to use a macOS version which is still getting security updates from Apple. Until the release of 10.15 Catalina, this was macOS 10.12 Sierra, from now on the oldest version still getting updates is 10.13 High Sierra.</li>
+            <li>SEB 2.1.4 uses the final implementation of the Config Key, to verify that an exam is using a correct, unmodified SEB configuration. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. Currently SEB for iOS supports the Config Key as well, the Windows version will follow later this year.</li>
+            <li>Implemented key shortcuts for switching between open browser windows.<br>
+            Left Alt (Option) Key +Tab: Cycle forward through open browser windows<br>
+            Left Alt (Option) Key + Left Shift Key + Tab: Cycle backwards through open browser windows<br>
+          Right Alt (Option) Key (+ Right Shift) + Tab keeps the standard function (cycle through website elements).</li>
+            <li>Custom App Controls and Quick Actions in Touch Bar with Control Strip active are now disabled, even if BetterTouchTool is used. Added alert when App Control mode for Touch Bar couldn't be restored automatically, offering to open System Preferences / Keyboards so user can change the setting back manually.</li>
+            <li>Fixed Preferences / Exams in some cases displayed &quot;Save settings to display its Browser Exam / Config Key&quot; instead of the keys. </li>
+            <li>Fixed: Media player app can block SEB with play button. The previous implementation didn't work properly on Mojave and newer.</li>
+            <li>Selecting multiple files for upload is now possible, controlled by the HTML input element (multiple-attribute).</li>
+            <li>Fixed downloads not working in macOS 10.14 Mojave or newer.</li>
+            <li>Fixed downloading and opening of SEB config files defined inline on a webpage with &quot;data:&quot; didn't work.</li>
+            <li>Fixed issue with the default ~/Downloads directory when running on Mojave or newer. If you created a SEB config file with a previous version of SEB, you might have to again select the Downloads directory in Preferences / Down/Uploads in case an error message is displayed when trying to download files is SEB.</li>
+            <li>Implemented blocking macOS screen recording (cmd+shift+5) introduced in Mojave, controlled with setting Preferences / Security / Allow screen capture (key enablePrintScreen).</li>
+            <li>Fixed: JavaScript confirm dialog doesn't return false when cancel (or any secondary) button is clicked.</li>
+            <li>Don't display red lock screen for SEB process was stopped when Mac is set to sleep mode. Improved SIGSTOP detection in case system time is changed. Background of lock screen log view is again white also on Mojave.</li>
+            <li>Removed global hotkeys for F3+F6 shortcut to open Preferences window (F3+F6 shortcut now only works if SEB is the active application). You can still also use the macOS standard shortcut for opening Preferences, which is cmd + , (comma key)</li>
+            <li>To prevent a modal lock when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode) and SEB doesn't have Accessibility permissions, before terminating SEB, save information that this happened and on which web page it happened (title and URL or placeholder). This will be displayed when SEB is started next time.</li>
+            <li>When checking server trust with embedded certificates, resources in subdomains of already trusted domains are now trusted as well, according to behavior in other standard browsers.</li>
+            <li>Fixed opening an seb(s) link which requires authentication from another browser while SEB is running subsequently can fail: When the temporary browser window for authentication was closed (windows close button), then SEB ignored further external (as from the other browser) calls to open an seb(s) URL.</li>
+            <li>Now importing identity certificate with exportable private key when opening it in the Preferences window. </li>
+            <li>Now displaying error message when an identity couldn't be exported from the Keychain.</li>
+            <li>Fixed: Background of Dock buttons was highlighted when clicked and button was white instead of gray on Mojave or newer.</li>
+          </ul>
           <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1.3</a>:</h5>
           <ul id="seblist">
             <li> New &quot;Config Key&quot; feature allowing an exam system to verify that the correct settings are being used. The Config Key can be generated server-side and doesn't change if same settings are loaded in a new SEB version which adds new setting keys.</li>
