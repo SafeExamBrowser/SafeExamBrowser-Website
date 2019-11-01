@@ -353,7 +353,7 @@ Right Alt (Option) Key (- Right Shift) - Tab keeps the standard function (cycle 
           <li>Fixed that the Preferences / Exams tab in some cases displayed &quot;Save settings to display its Browser Exam / Config Key&quot; instead of the keys, even though settings were not modified by the user.</li>
           <li>Fixed: JavaScript confirm dialog didn't return false when cancel (or any secondary) button was clicked.</li>
           <li>Red lock screen for &quot;SEB process was stopped&quot; is no longer displayed when Mac is set to sleep mode. </li>
-          <li>To prevent a modal lock (SEB freezes) when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode) while SEB doesn't have Accessibility permissions, before terminating SEB, save information that this happened and on which web page it happened (title and URL or placeholder). This will be displayed when SEB is started next time.          </li>
+          <li>Improved preventing a modal lock (SEB freezes) when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode). When SEB doesn't have the needed Accessibility permissions to close the dialog, it is now terminated  after saving information on which webpage the font download was attempted (title and URL or placeholder). This is then displayed when SEB is started next time. </li>
         </ul>
   <p>Main features: </p>
   <ul id="seblist">
