@@ -241,9 +241,9 @@
             Left Alt (Option) Key +Tab: Cycle forward through open browser windows<br>
             Left Alt (Option) Key + Left Shift Key + Tab: Cycle backwards through open browser windows<br>
           Right Alt (Option) Key (+ Right Shift) + Tab keeps the standard function (cycle through website elements).</li>
-            <li>Custom App Controls and Quick Actions in Touch Bar with enabled Control Strip are now disabled, even if BetterTouchTool is used. Added alert when App Control mode for Touch Bar can't be restored automatically, offering to open System Preferences / Keyboards, so users can change the setting back manually.</li>
+            <li>Custom App Controls and Quick Actions in Touch Bar, also with enabled Control Strip,  are now disabled, even if BetterTouchTool is used.  Added alert displayed while quitting SEB, for the case when App Control mode for Touch Bar can't be restored automatically. This dialog offers to open System Preferences / Keyboards, so users can change the setting back manually.</li>
             <li>Fixed that the Preferences / Exams tab in some cases displayed &quot;Save settings to display its Browser Exam / Config Key&quot; instead of the keys, even though settings were not modified by the user. </li>
-            <li>Fixed: Media player app (iTunes etc.) can block SEB, when in full screen and started using the Play key. The previous implementation didn't work properly on Mojave and newer.</li>
+            <li>Fixed: Media player app (iTunes etc.) can block SEB, when set to full screen and started using the Play key. The previous implementation didn't work properly on Mojave and newer.</li>
             <li>Selecting multiple files for upload is now possible, controlled by the HTML input element (multiple-attribute).</li>
             <li>Fixed downloads not working on macOS 10.14 Mojave or newer.</li>
             <li>Fixed downloading and opening of SEB config files defined inline on a webpage with &quot;data:&quot; didn't work.</li>
@@ -254,7 +254,7 @@
             <li>Improved SIGSTOP detection in case system time is changed. </li>
             <li>Background of lock screen log view is again white also on Mojave.</li>
             <li>Removed global hotkeys for F3+F6 shortcut to open Preferences window (F3+F6 shortcut now only works if SEB is the active application). You can still also use the macOS standard shortcut for opening Preferences, which is cmd + , (comma key).</li>
-            <li>To prevent a modal lock (SEB freezes) when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode) while SEB doesn't have Accessibility permissions, before terminating SEB, save information that this happened and on which web page it happened (title and URL or placeholder). This will be displayed when SEB is started next time.</li>
+            <li>Improved preventing a modal lock (SEB freezes) when a webpage tries to download a font (displaying a dialog hidden by SEB's kiosk mode). When SEB doesn't have the needed Accessibility permissions to close the dialog, it is now terminated  after saving information on which webpage the font download was attempted (title and URL or placeholder). This is then displayed when SEB is started next time. </li>
             <li>When checking server trust with embedded certificates, resources in subdomains of already trusted domains are now trusted as well, according to behavior in other standard browsers.</li>
             <li>Fixed opening an seb(s) link which requires authentication subsequently from another browser, while SEB is running, can fail: When the temporary browser window for authentication was closed (windows close button), then SEB ignored further external calls (as from the other browser) to open an seb(s) URL.</li>
             <li>Now importing identity certificate with exportable private key when opening it in the Preferences window. </li>
