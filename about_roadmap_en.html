@@ -239,12 +239,6 @@
         </tr>
 		  
         <tr>
-          <td><strong>SEB 2.1.4 for macOS</strong></td>
-          <td><p>Q3 2019</p></td>
-          <td>Improves security and stability, final version of <a href="developer/seb-config-key.html">Config Key</a> feature to check validity of settings used for an exam. The Config Key can be generated automatically on an exam server.</td>
-        </tr>
-		  
-        <tr>
           <td><strong>SEB 2.4 for Windows</strong> </td>
           <td>Q1 2020</td>
           <td><a href="developer/seb-config-key.html">Config Key</a> feature to check validity of settings used for an exam. Every SEB version generates the same Config Key, as long as the same settings (config files) are used. The Config Key will now be available in the macOS, iPadOS/iOS and Windows versions of SEB. Support for new settings to disable clearing of session cookies when reconfiguring to exam config (so user stays logged in).</td>
@@ -266,42 +260,98 @@
         <tr>
           <td><strong>SEB 3.0 for Windows</strong></td>
           <td>Q2 2020</td>
-          <td> Refactored SEB version for Windows using a Chromium browser engine: Improved web compatibility, better integrated, faster. Improved stability and security architecture. </td>
+          <td>Completely refactored version of SEB for Windows:
+              <ul>
+                  <li>Support for browser-based exams in BYOD scenarios and managed computer labs.</li>
+                  <li>Replacement of browser engine. New Chromium-based browser engine implemented using CEF3 (Chromium Embed Framework) and CefSharp (.NET C#  wrapper). This is necessary because the currently used Firefox-based SEB browser in SEB 2.2 stops supporting the XUL runtime language used to implement the embedded SEB for Windows browser (following  decisions of the Mozilla foundation to revamp the Firefox browser).</li>
+                  <li>The new browser engine will be a browser framework embedded on API level which is similar to SEB for macOS and iOS. This allows better integration of browser functionality into the .NET SEB kiosk application and should increase stability, security and performance of SEB for Windows significantly.</li>
+                  <li>Switch the user interface system frameworks from Windows Forms to Windows Presentation Foundation (WPF) /XAML in the SEB client, as the new technology allows a more compatible and cleaner implementation of the SEB UI and is better supported in current Windows versions. This will also allow a UWP (Universal Windows Platform) SEB application which could be distributed through the Windows App Store.</li>
+                  <li>Supports Windows 8.1 and Windows 10</li>
+                  <li>Windows 7 support is deprecated</li>
+                </ul>
+ 			</td>
         </tr>
 		  
         <tr>
           <td><strong>SEB 3.0 for macOS/iPadOS/iOS</strong></td>
           <td>Q2 2020</td>
-          <td>Partially refactored SEB version using new WebKit 2 (WKWebView) browser engine for improved web compatibility, better performance and stability.</td>
+          <td><ul>
+            <li>New WebKit2 browser engines in SEB for macOS and iOS</li>
+            <li>The improved system browser framework is more performant, stable and allows better integration with web applications.</li>
+          </ul></td>
         </tr>
         
         <tr>
-          <td><strong>SEB 3.1 for Windows/macOS/iOS</strong></td>
+          <td><strong>SEB 3.1</strong></td>
           <td>Q3 2020</td>
-          <td>Feature parity for Windows, macOS and iOS/iPadOS, for example: Integration with SEB Server.
-            <ul>
-              <li>Improved user interface with browser tabs in addition to browser windows.</li>
-              <li>Text search on webpages and in PDF documents.</li>
-            </ul>
+          <td><ul>
+            <li>Feature parity for Windows, macOS and iOS</li>
+            <li>Improved user interface with browser tabs in addition to browser windows.</li>
+            <li>Text search on webpages and in PDF documents.</li>
+          </ul>
           </td>
         </tr>
 
 		<tr>
-          <td><strong> New SEB JavaScript API</strong></td>
-          <td> 2020</td>
-          <td> 	The SEB JavaScript API allows better and easier integration with exam and learning management systems.</td>
+          <th colspan="3">Outlook on SEB Development Areas 2021 - 2022</th>
+        </tr>
+        
+		<tr>
+          <td><strong> SEB 3.2</strong></td>
+          <td> 2021</td>
+          <td><ul>
+            <li>Support for Additional Resources (external and embedded), which can be opened with icons and popup menus in taskbar</li>
+            <li>Configurable spell checking</li>
+            <li>Embedding of server certificates into config files, certificate pinning</li>
+            <li>Refactored and redesigned SEB Config Tool with improved usability.</li>
+            <li>New security module inside SEB, which is distributed only in code-obfuscated, binary form.
+              <ul>
+                <li>This module will be used for generating the new Browser Signature Key and verifying integrity of the SEB client checking its code signature. </li>
+                <li>By keeping the source code of this security module secret and applying methods to make reverse engineering more difficult, we can protect SEB better against hacks and self-build, manipulated versions of SEB.</li>
+                <li>The security module is already available in SEB for iOS.</li>
+              </ul>
+            </li>
+            <li>Improved built-in accessibility features.</li>
+          </ul></td>
         </tr>
         
         <tr>
-          <td><strong> Improved client monitoring</strong></td>
-          <td> 2020</td>
-          <td> 		Further security enhancements for improved monitoring of exam client devices which are connected to SEB Server or to an e-assessment system with built-in integration for these features (for example the new <strong>Signature Keys</strong>).</td>
+          <td><strong>SEB JavaScript API</strong></td>
+          <td>2021</td>
+          <td>SEB JavaScript API for better integration with online exam and Learning Management Systems (LMS):
+            <ul>
+              <li>Can be used to check for the correct settings used in an SEB exam client using the new Config Key (see below) and verifying that a legitimate SEB version is used for the exam, using the existing Browser Exam Key and the new Browser Signature Key.</li>
+              <li>Checking for the correct keys send from SEB exam clients can be easier integrated into third party exam systems using this JavaScript API than the currently used HTTP request header check.</li>
+            </ul>
+          </td>
+        </tr>
+        
+		<tr>
+          <td><strong> Better integrity checks</strong></td>
+          <td>&nbsp;</td>
+          <td>Improved methods for checking integrity (code signature) of the SEB version used, especially important for BYOD scenarios: New standalone tool which can be run before/during an exam by proctors to verify the correct SEB version is used on a student device.</td>
         </tr>
         
         <tr>
-          <td> <strong>Accessibility improvements</strong></td>
-          <td>2020</td>
-          <td>Improvements for visually impaired users. Built-in screen reader and improved support for third party tools.</td>
+          <td><strong> Prohibited third party tools and applications</strong></td>
+          <td>&nbsp;</td>
+          <td>Centralized database for prohibited third party tools and applications, which should not run during an exam using SEB.
+            <ul>
+              <li>The database file can be imported into a SEB configuration file (or later directly downloaded by SEB)</li>
+              <li>SEB checks if a prohibited application from this &ldquo;blacklist&rdquo; is running and instructs the user to quit it first before starting an exam</li>
+              <li>This will prevent to use tools like screen recording or screen sharing during exam.</li>
+              <li>The prohibited applications database will be open for community submissions of potentially dangerous software on <a href="http://safeexambrowser.org/" rel="nofollow" target="_blank" data-ext-link-init="true">safeexambrowser.org</a> (but of course moderated by us). </li>
+          </ul></td>
+        </tr>
+        
+		<tr>
+          <td><strong>SEB Integration in LMS and E-Assessment Suites</strong></td>
+          <td>&nbsp;</td>
+          <td><ul>
+              <li>Encourage and support SEB integration for further e-assessment and learning management systems (requires SEB Consortium Gold Membership)</li>
+              <li>Extended documentation on how to achieve &ldquo;deeper&rdquo; integration for higher security and improved usability setting up exams, enabled by the new SEB API.</li>
+              <li>Foster cooperation with LMS communities and e-assessment suite vendors.</li>
+          </ul></td>
         </tr>
         
         <!--
