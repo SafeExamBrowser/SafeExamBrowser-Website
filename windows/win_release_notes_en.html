@@ -191,7 +191,7 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-    
+
       <!-- Page Heading/Breadcrumbs -->
       <div class="row">
         <div class="col-lg-12">
@@ -202,14 +202,14 @@
             <li><a href="win_release_notes_de.html">Deutsch</a>
             </li>
           </ol>
-    
+
         </div>
       </div>
-      <!-- /.row --> 
-    
+      <!-- /.row -->
+
       <!-- Content Row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group">
@@ -223,13 +223,13 @@
             <a href="../ios/ios_usermanual_en.html" class="list-group-item">Documentation iOS</a>
             <a href="../support_en.html" class="list-group-item">Support</a> </div>
           </div>
-        
+
         <!-- Content Column -->
         <div class="col-md-6" role="main">
-        
+
         <!-- Content -->
           <h2></h2>
-    
+
     <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.3: </h5>
     <p>SEB 2.3 for Windows offers new features, which increase security and usability significantly.</p>
     <ul>
@@ -257,7 +257,7 @@
       </li>
       <li>More eligible SSL/TLS certificates are displayed in the list &quot;Choose TLS/SSL certificate to embed into configuration...&quot; and the one for CA certificates in SEB Config Tool / Network / Certificates.</li>
     </ul>
-			
+
     <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2.3: </h5>
     <p>Safe Exam Browser 2.2.3 for Windows is an <strong>important security update</strong> for SEB 2.2.x and SEB 2.1.8.</p>
 <ul>
@@ -283,7 +283,7 @@
       <li>Added  spell checking with configurable languages, additional dictionaries can be embedded into SEB config files. </li>
       <li>Added context menu for displaying word suggestions and selecting spell checking dictionary. Note: You have to enable the right mouse button in &quot;Hooked Keys&quot; config tool tab (from SEB 2.2 in default settings the right mouse button is enabled, but not in older versions).</li>
       <li>Resolved issue with sometimes missing power options after SEB was quit</li>
-      <li>Added options for additional resources: 
+      <li>Added options for additional resources:
         <ul>
           <li>Show button (to display the icon or menu entry for a resource)</li>
           <li>Referrer filter for activation Link URL</li>
@@ -330,7 +330,7 @@
       <li>Removed &quot;Interop.WUApiLib.dll&quot; binary no longer in use from creation of Browser Exam Key BEK and added new binaries.</li>
       <li>Disabled seb.xul key commands (except F5 reload) by default</li>
     </ul>
-    
+
     <h5 id="sebh5">&nbsp;</h5>
     <h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.2: </h5>
 
@@ -524,7 +524,7 @@
     <li>If you changed settings, the Config Tool will ask you to save unsaved changes before quitting or reverting to other settings.</li>
     <li>SEB Config Tool now supports opening .seb config files with drag-and-drop (into the window or onto the application's icon).</li>
   </ul>
-  <p>Renamed Appearance tab to <strong>User Interface</strong>: 
+  <p>Renamed Appearance tab to <strong>User Interface</strong>:
   </p>
   <ul id="seblist">
       <li>Added option &quot;Touch optimized&quot; to Browser view modes to switch on the tablet mode of SEB.</li>
@@ -536,7 +536,7 @@
       <li>Added option to disable the browser spell check.</li>
       <li>Added setting option for new Mac-only feature &quot;Allow dictionary lookup&quot;.</li>
     </ul>
-  <p><strong>Browser</strong> tab in SEB Config Tool: 
+  <p><strong>Browser</strong> tab in SEB Config Tool:
   </p>
   <ul id="seblist">
       <li>Added settings to switch between default and custom browser user agent strings, separately for desktop and touch modes (and for SEB on Macs). </li>
@@ -553,7 +553,7 @@
       <li>You can select the option to protect the restart exam button with the quit/restart password. Exam support/invigilators could be told this password to be able to restart the exam if there is a problem.<br />
       </li>
     </ul>
-  <p><strong>Applications/Permitted Processes</strong> tab in SEB Config Tool: 
+  <p><strong>Applications/Permitted Processes</strong> tab in SEB Config Tool:
   </p>
   <ul id="seblist">
       <li>Added option &quot;Monitor processes while SEB is running&quot;. If enabled, SEB prevents non-permitted processes to display any windows (including alerts, message boxes etc.) by hiding them immediately. If SEB cannot hide such a process (because it is running with the rights of another user, for example SYSTEM) SEB terminates it. For the &quot;Disable Explorer Shell&quot; kiosk mode (see Security tab), &quot;Monitor processes...&quot; should always be activated (which was implicitly the case in former SEB versions), but in SEB 2.1 you can (and should in most cases) use this feature also with the &quot;Create new desktop&quot; kiosk mode. </li>
@@ -563,7 +563,7 @@
       <li>Improved handling of permitted processes and their open windows, when switching between them using the app/window chooser (Alt-Tab) or the icons of these permitted applications in the SEB task bar. Some applications (for example Adobe Acrobat or applications based on Java like Open Office or Eclipse) still need special settings in the Applications/Permitted Processes tab in SEB Config Tool in the fields &quot;Window handling process&quot; (the executable of the main process of that application) and &quot;Identifier&quot; (substring which is displayed in every window the application opens).<br />
       </li>
     </ul>
-  <p><strong>Network/Filter</strong> tab in SEB Config Tool: 
+  <p><strong>Network/Filter</strong> tab in SEB Config Tool:
   </p>
   <ul id="seblist">
       <li>Added tables for Allow and Block URL filter rules. </li>
@@ -571,7 +571,7 @@
       </li>
     </ul>
   <p><strong>Network/Certificates</strong> tab in SEB Config Tool: <br />
-    SEB 2.1 supports embedding TLS/SSL and encrypting identity certificates into .seb files. 
+    SEB 2.1 supports embedding TLS/SSL and encrypting identity certificates into .seb files.
   </p>
   <ul id="seblist">
       <li>Choose TLS/SSL certificate to embed into configuration... Here you can choose SSL server certificates which are stored in the Windows Certificate Store (if you have a certificate file, you first need to import it to the Windows Certificate Store, depending on the format you can just double click such a certificate file to invoke the Windows certificate import assistant). The certificates added to this table will be included into a .seb settings file when it is saved and used on the SEB clients which are started up with that .seb exam configuration. Users won't be presented a warning then when connecting to https servers with self-signed certificates and you don't need to distribute SSL certificates manually to the exam client computers.</li>
@@ -579,7 +579,7 @@
       <li>SEB now finds identities (and certificates) stored in the current user's and local machine Certificate Store.<br />
       </li>
     </ul>
-  <p><strong>Network/Proxies</strong> tab in SEB Config Tool: 
+  <p><strong>Network/Proxies</strong> tab in SEB Config Tool:
   </p>
   <ul id="seblist">
       <li>Now HTTP, HTTPS, FTP and SOCKS proxies (without authentication) are supported when using the option &quot;Use SEB proxy settings&quot;. </li>
@@ -780,7 +780,7 @@
 <h5 id="sebh5">Release notes for <a href="../download_en.html#Windows">SEB Windows 1.9.1</a>:</h5>
 <ul id="seblist">
   <li>New installation program:<br />
-    Due to problems when installing or uninstalling SEB using the Windows installer (<em><strong>SebWindowsInstall.msi</strong></em>),   a new installer was created, which is <strong>more reliable and stable</strong> (e.g. Rollback in case there is a problem during the   installation).      
+    Due to problems when installing or uninstalling SEB using the Windows installer (<em><strong>SebWindowsInstall.msi</strong></em>),   a new installer was created, which is <strong>more reliable and stable</strong> (e.g. Rollback in case there is a problem during the   installation).
     The new installer has fewer input dialogs and is <strong>digitally signed</strong> using the certificate of the &quot;<strong>Verified Publisher</strong>&quot; ETH Zurich.</li>
   <li>Improved configuration program:<br />
     The graphical editor <em><strong>SebWindowsConfig.exe</strong></em> was reworked thoroughly and now offers better comfort and better look. After starting, the default configuration files <em>SebStarter.ini</em> and <em>MsgHook.ini</em> are <strong>automatically</strong> loaded into the editor. Different fonts for better   readability. Buttons for <strong>restoring</strong> loaded and accidentally modified   settings, for simultaneously saving both configuration files and for   quitting the editor. <strong>Security settings</strong> (e.g. for the Task Manager) can now be defined for <strong>inside and outside</strong> SEB. </li>
@@ -843,24 +843,24 @@
   <p>Portable Firefox version. Fixes a bug regarding the logfile  (SEB startup problem when  LOGFILE=0 and logfile could not be created due to lack of write permission).</p>
 </li>
 </ul>
-          
-          <!-- / Content --> 
+
+          <!-- / Content -->
           <p>&nbsp;</p>
         </div>
-        <!-- / Content Column --> 
-        
+        <!-- / Content Column -->
+
       </div>
       <!-- /.row (Content Row)-->
-      
+
       <hr>
-      
+
   <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>

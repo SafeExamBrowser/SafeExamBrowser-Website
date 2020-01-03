@@ -185,12 +185,12 @@
       </div>
         <!-- /.container -->
     </nav>
-    
+
     <!-- Page Content -->
     <div class="container bs-docs-container">
 
 	  <!-- InstanceBeginEditable name="MainContent" -->
-  
+
       <!-- Page Heading/Breadcrumbs -->
       <div class="row">
         <div class="col-lg-12">
@@ -201,14 +201,14 @@
             <li class="active">Deutsch
             </li>
           </ol>
-    
+
         </div>
       </div>
-      <!-- /.row --> 
-      
+      <!-- /.row -->
+
       <!-- Content Row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group hidden-print">
@@ -224,7 +224,7 @@
             <a href="ios/ios_usermanual_en.html" class="list-group-item">Dokumentation iOS</a>
             <a href="support_de.html" class="list-group-item">Support</a>
 </div>
-          
+
           <!-- Sidebar Content Table -->
           <nav class="bs-docs-sidebar">
             <ul class="nav bs-docs-sidenav">
@@ -257,19 +257,19 @@
               <li> <a href="#privacy-statement">Datenschutzerklärung</a> </li>
               <li> <a href="#acknowledgement">Danksagung</a> </li>
             </ul>
-            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Zurück zum Seitenanfang </a> 
+            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Zurück zum Seitenanfang </a>
           </nav>
-          
+
         </div>
         <!-- /Sidebar Contents Table -->
 
         <!-- Content Column -->
         <div class="col-md-7">
-        
+
         <!-- Content -->
           <h2></h2>
 
-          <!-- Document Section --> 
+          <!-- Document Section -->
           <div class="bs-docs-section">
 
             <h3 id="concept" class="page-header sebnavbar-link">
@@ -285,81 +285,81 @@
             </h4>
 
             <p>SEB läuft lokal auf einem  Gerät und ist über das Internet mit einem Learning Management System verbunden. Generell läuft SEB mit jedem Web-basierten LMS und anderen Web-basierten Prüfungssystemen. Momentan bieten  weitverbreiteten Learning Management Systeme Moodle,  ILIAS und OpenOLAT und E-Assessment-Systeme wie Inspera Assessment einen ausdrücklich mit SEB kompatiblen Prüfungsmodus. </p>
-            
+
             <h4 class="seb-section-header sebnavbar-link" id="concept-architecture">
               <a class="anchorjs-link " href="#concept-architecture" aria-label="Anchor link for: concept concept-architecture"></a>
               Architektur
             </h4>
-              
+
             <p>SEB besteht  aus einer Kiosk-Applikation und einer Browser-Komponente, die auf einem Prüfungs-Rechner ausgeführt werden. Die Kiosk-Applikation ist für die Absicherung des Prüfungs-PC verantwortlich, wogegen die Browser-Komponente die Kommunikation über das Internet (oder internes LAN) mit dem Quiz-Teil eines LMS auf einem Server übernimmt.</p>
-            
+
             <img class="img-responsive" src="Media/SEB-Architecture_thirdpartyapp_de.png" alt="" />
-            
+
             <p class="imagecaption">Schematische Darstellung einer Online-Prüfung mit Safe Exam Browser und einem LMS, beispielsweise  ILIAS,  Moodle, OpenOLAT. Zusätzlich kann eine parallel laufende Drittapplikation zugelassen werden, z.B. Excel, Matlab oder R</p>
-            
+
             <h4 class="seb-section-header sebnavbar-link" id="concept-components">
                <a class="anchorjs-link " href="#concept-components" aria-label="Anchor link for: concept-components"></a>
                Komponenten
             </h4>
-            
+
             <p>Die obenstehende Abbildung  zeigt die beiden internen Komponenten, aus denen SEB besteht, die <strong>Kiosk-Anwendung</strong> und den <strong>Browser</strong>-Teil. Der dritte Bestandteil einer SEB-Prüfungsumgebung ist in den unterstützten <strong>LMS</strong> integriert. Optional sind auch eine oder mehrere <strong>Drittapplikationen</strong> möglich</p>
-            
+
             <ol class="seblist" start="1" type="1">
               <li>Die <strong>Kiosk-Anwendung</strong>, die den      Rechner absichert und den SEB-Browser plus optionale Drittapplikationen      startet. Da diese Applikation diverse Systemfunktionen während der      Ausführung von SEB unterbinden oder steuern muss, ist diese Komponente      sehr systemnah programmiert. </li>
               <li>Der <strong>SEB-Browser</strong>, der sich mit      der voreingestellten URL der LMS-Prüfungsseite verbindet und über keine      Navigationselemente wie Adresszeile, Suchmaschinen-Feld usw. verfügt. Die      Windows-Version von SEB verwendet das Browser-System Gecko der Firma Mozilla, entweder in der Form von  Firefox oder XULRunner. SEB für macOS und iOS    verwendet  das WebKit-Browsersystem. </li>
               <li><strong>LMS</strong> beinhalten sogenannte Quiz-Module, die  für Online-Prüfungen Verwendung finden. SEB stützt sich auf Erweiterungen zu diesen Modulen in Moodle und ILIAS, damit die Prüfungen sicher durchgeführt werden können. Die Erweiterungen, die inzwischen im Core-Code der Lernplattformen integriert sind, bestehen aus speziellen Skins (alternativen Benutzeroberflächen). Diese sind dafür verantwortlich, dass die  Navigation der LMS auf die Prüfung eingeschränkt wird, also keine Links auf Seiten ausserhalb der Prüfung führen. Ausserdem werden unerwünschte Funktionen wie der interne Nachrichtenaustausch ausgeschaltet . Ebenfalls stellen die Erweiterungen sicher, dass das Prüfungs-Quiz nur mit einem sicheren Browser wie  SEB durchgeführt werden kann. Diese Einstellungen lassen sich bei der Erstellung der Tests in den  Lernplattformen konfigurieren.</li>
             </ol>
-            
+
             <h4 class="seb-section-header sebnavbar-link" id="concept-seb-windows">
               <a class="anchorjs-link " href="#concept-seb-windows" aria-label="Anchor link for: Features"></a>
               SEB für Windows
             </h4>
-            
+
             <p>Safe Exam Browser für Windows besteht aus der SEB-Kiosk-Anwendung, die einen eigenen Windows-Desktop öffnet und Systembefehle wie Tastenkombinationen (zum Beispiel ALT+F4) und Klicks auf die rechte Maustaste abfängt. Der zweite Teil ist <a href="https://developer.mozilla.org/En/XULRunner" target="_blank">XULRunner</a>, eine Laufzeitumgebung der  Mozilla Foundation  (Firefox Version 3 und neuer basieren ebenfalls auf XULRunner). Der SEB Browser-Teil, der auf XULRunner läuft, enthält  keine Navigationselemente und Adress- und Statusleisten.</p>
-            
+
             <h4 class="seb-section-header sebnavbar-link" id="concept-seb-macOS">
               <a class="anchorjs-link " href="#concept-seb-macOS" aria-label="Anchor link for: Features"></a>
               SEB für macOS/iOS
             </h4>
-            
+
             <p>Im Gegensatz zur Windows-Version besteht Safe Exam Browser für macOS und iOS aus einer monolithischen Applikation, die API-Funktionen eines Webbrowser-Frameworks aufruft, anstatt eine  Browser-Applikation oder eine Browser-Laufzeitumgebung als separaten Prozess einzubinden. SEB für macOS und iOS benutzt das <a href="http://webkit.org" target="_blank">WebKit</a>-Browsersystem, das auch von Safari, Apple Mail und diversen neuen Open-Source Browsern  eingesetzt wird.  SEB für macOS und iOS verbindet sich auf dieselbe Weise mit den Learning Management Systemen wie die Windows-Version. </p>
-      
+
             <h5 class="seb-section-header sebnavbar-link" id="concept-configuration">
               <a class="anchorjs-link " href="#concept-configuration" aria-label="Anchor link for: configuration"></a>
               Konfiguration
            </h5>
-           
+
           <p><span class="half_linespace"><span class="quote">Safe Exam Browser 2.0</span>  und neuer ermöglicht sichere Prüfungen auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern und erleichtert die Konfiguration auch in zentral verwalteten Prüfungsumgebungen auf den drei Platformen Windows, macOS und iOS. </span><span class="half_linespace">Mit <span class="quote">SEB 2.x</span> wird eine individuelle Konfiguration pro Prüfung auf einfache Weise möglich, die  mit starker Verschlüsselung vor Manipulationen gesichert ist. Dank einer neuen Authentifizierungsmethode ist es möglich, in Prüfungssystemen sicherzustellen, dass nur  bestimmte, unveränderte SEB-Versionen mit den korrekten Sicherheitseinstellungen für die Prüfung verwendet werden. Dies ermöglicht sicheres Prüfen insbesondere auch auf nicht von der Hochschule verwalteten, privaten studentischen Rechnern.</span> </p>
-          
+
           <p><span class="quote">Safe Exam Browser 2.0</span> und neuer ist eine vereinheitlichte Version, welche dieselben Funktionen, Schnittstellen für Prüfungssysteme, Konfigurationsdateien und eine sehr ähnliche Benutzeroberfläche auf beiden unterstützten Plattformen zur Verfügung stellt. Dabei werden aber weiterhin Eigenheiten der Betriebssysteme und spezifische Funktionalitäten der Plattformen berücksichtigt.</p>
-            
+
           </div>
-          <!-- / Document Section --> 
-          
-          <!-- Document Section --> 
+          <!-- / Document Section -->
+
+          <!-- Document Section -->
           <div class="bs-docs-section">
-      
+
             <h3 id="features" class="page-header sebnavbar-link">
               <a class="anchorjs-link " href="#features" aria-label="Anchor link for: Features"></a>
               Funktionen
             </h3>
-        
+
             <h4 class="seb-section-header sebnavbar-link" id="features-common-features">
               <a class="anchorjs-link " href="#features-common-features" aria-label="Anchor link for: common features"></a>
               Gemeinsame Funktionen
             </h4>
-        
+
             <ul id="seblist">
               <li>Mehrere Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne jegliche Navigationselemente), Browser-Tabs auf iPads</li>
               <li>VM-Detektor: SEB erkennt, ob er in einer virtuellen oder &quot;nativen&quot; Umgebung oder auf einem Gerät mit Jailbreak läuft und verweigert notfalls das Starten einer Prüfung</li>
               <li>Eingebaute Anbindung an Moodle,  ILIAS, OpenOLAT, Inspera Assessment, grundsätzliche Kompatibilität zu jedem Web-basierten Prüfungssystem</li>
             </ul>
-      
+
             <h4 class="seb-section-header sebnavbar-link" id="features-seb-windows">
               <a class="anchorjs-link " href="#features-seb-windows" aria-label="Anchor link for: features seb windows"></a>
               SEB für Windows
             </h4>
-        
+
             <ul id="seblist">
               <li>Deaktivierbare (System-)Funktionen:
                 <ul id="seblist">
@@ -376,12 +376,12 @@
               <li>Separates Konfigurationswerkzeug mit grafischer Benutzeroberfläche.</li>
               <li>Zugelassene Drittapplikationen können gleichzeitig mit SEB laufen, und mittels <span class="quote">App Chooser</span> Fenster aufgerufen werden</li>
             </ul>
-            
+
             <h4 class="seb-section-header sebnavbar-link" id="features-seb-macOS">
               <a class="anchorjs-link " href="#features-seb-macOS" aria-label="Anchor link for: Features"></a>
               SEB für macOS
             </h4>
-            
+
             <ul id="seblist">
               <li>Mehrere   Webbrowser-Fenster oder Vollbildschirm-Ansicht (ohne Navigationsemlemente) auf dem Hauptbildschirm, können skaliert und verschoben werden, andere angeschlossenen Bildschirme werden mit einem schwarzen Hintergrund abgedeckt.</li>
               <li>Fenster <span class="quote">Einstellungen</span> für einfache Konfiguration, Zugang kann mit einem Administrator-Passwort geschützt werden.</li>
@@ -402,25 +402,25 @@
               </li>
               <li>Zugelassene Drittapplikationen können gleichzeitig mit SEB laufen (in einem entsprechend konfigurierten macOS Benutzerkonto)</li>
             </ul>
-            
+
           </div>
-          <!-- / Document Section --> 
-          
-          <!-- Document Section --> 
+          <!-- / Document Section -->
+
+          <!-- Document Section -->
           <div class="bs-docs-section">
-        
+
             <h3 id="details" class="page-header sebnavbar-link">
               <a class="anchorjs-link " href="#details" aria-label="Anchor link for: details"></a>
               Technische Details
             </h3>
-        
+
             <h4 class="seb-section-header sebnavbar-link" id="details-seb-windows">
               <a class="anchorjs-link " href="#details-seb-windows" aria-label="Details SEB Windows"></a>
               SEB für Windows
             </h4>
-        
+
             <ul>
-              <li>Betriebssystem:          
+              <li>Betriebssystem:
                 <ul>
                   <li>Microsoft Windows 7</li>
                   <li>Windows 8/8.1 </li>
@@ -429,7 +429,7 @@
               </li>
               <li>Lizenz: Mozilla Public License (MPL)</li>
               <li>Browser-System: Mozilla Gecko, worauf auch Firefox (bis Version 56) basiert </li>
-              <li>Programmiersprachen/Frameworks: 
+              <li>Programmiersprachen/Frameworks:
                 <ul>
                   <li>C# (.NET)</li>
                   <li>JavaScript</li>
@@ -437,14 +437,14 @@
                 </ul>
               </li>
             </ul>
-                          
+
             <h4 class="seb-section-header sebnavbar-link" id="details-seb-macOS">
               <a class="anchorjs-link " href="#details-seb-macOS" aria-label="Anchor link for: Details SEB macOS"></a>
               SEB für macOS
             </h4>
-            
+
             <ul>
-              <li>Betriebssystem: 
+              <li>Betriebssystem:
                 <ul>
 	              <li>macOS 10.13 High Sierra</li>
 	              <li>macOS 10.12 Sierra</li>
@@ -464,9 +464,9 @@
               <a class="anchorjs-link " href="#details-seb-iOS" aria-label="Anchor link for: Details SEB for iOS"></a>
               SEB für iOS
             </h4>
-            
+
             <ul>
-              <li>Betriebssystem: 
+              <li>Betriebssystem:
                 <ul>
 	              <li>iOS 11</li>
 	              <li>iOS 10</li>
@@ -477,70 +477,70 @@
               <li>Browser-System: In dem jeweiligen Betriessystem integrierte Version von WebKit (worauf auch Safari basiert)</li>
               <li>Programmiersprache/Framework: Objective-C (Cocoa)</li>
             </ul>
-            
+
           </div>
-          <!-- / Document Section --> 
-                    
-          <!-- Document Section --> 
+          <!-- / Document Section -->
+
+          <!-- Document Section -->
           <div class="bs-docs-section">
-      
+
             <h3 id="license" class="page-header sebnavbar-link">
               <a class="anchorjs-link " href="#license" aria-label="Anchor link for: License"></a>
               Lizenz
             </h3>
-            
+
           <p>Safe Exam Browser &copy; 2010-2018 <a href="http://www.ethz.ch" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a>, basierend auf der Originalidee des Safe Exam Browser von Stefan Schneider, Universität Giessen<br />
             Projekt-Konzept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr,  Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.          </p>
           <p>Safe Exam Browser ist als Freeware verfügbar. Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode</a> wird unter der <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (die  &quot;Lizenz&quot;) veröffentlicht,   diese Dateien dürfen nur unter Einhaltung der Lizenzbedingungen verwendet werden. Eine Kopie der Lizenz ist unter  <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> verfügbar.</p>
-              
+
           </div>
-          <!-- / Document Section --> 
-          
-          <!-- Document Section --> 
+          <!-- / Document Section -->
+
+          <!-- Document Section -->
           <div class="bs-docs-section">
-      
+
             <h3 id="privacy-statement" class="page-header sebnavbar-link">
               <a class="anchorjs-link " href="#privacy-statement" aria-label="Anchor link for: Privacy Statement"></a>Datenschutzerklärung</h3>
-            
+
             <p>SafeExamBrowser (SEB) liefert weder personenbezogene noch andere Daten an einen zentralen Server und ist mit keinem Webanalyse-Dienst (Web Analytics, User Tracking, Clickstream Analytics usw.) direkt verbunden.  SEB sammelt in der Standardeinstellung sogenannte Randdaten, die lokal auf dem jeweiligen Client-Rechner in einer Log-Datei gespeichert werden. Die Log-Dateien werden durch SEB nicht weitergeben, sondern verbleiben auf dem lokalen Rechner. Die Log-Dateien können manuell eingesammelt werden. Sie dienen dem Zweck der Fehleranalyse. Das Sammeln von Randdaten und des Erstellen der zugehörigen Log-Dateien kann in den SEB-Einstellungen deaktiviert werden (<a href="windows/win_usermanual_en.html#SecurityPane">Win</a>/<a href="macosx/mac_usermanual_en.html#SecurityPane">Mac</a>). SEB sammelt keine anderen Benutzerdaten, sondern lädt und zeigt nur Webseiten an und &quot;kennt&quot; deswegen keine Details über die jeweiligen Benutzer.  SEB arbeitet mit verschiedenen webbasierten Prüfungssystemen zusammen, die unter Umständen Benutzerdaten sammeln, hierfür sind die jeweiligen, produktbezogenen Datenschutzbestimmungen zu beachten.</p>
             <p>Weder für den Download von SEB noch für dessen Installation oder Nutzung ist eine irgendwie geartete Anmeldung notwendig. SEB hat keinerlei Verbindung zu einem Cloud-Service. SEB verbindet sich ausschließlich zu dem Server, der in den Einstellungen unter "Start URL" definiert wird. In der Standardeinstellung zeigt SEB diese <a href="http://safeexambrowser.org/start" target="_blank">Webseite</a>.</p>
             <p>Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>des Open-Source-Projekts SEB ist öffentlich verfügbar. Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>kann jederzeit  eingesehen und damit die gemachten Erklärungen unabhängig überprüft werden. Die SEB-Version für iOS enthält ein Sicherheitsmodul, welches dazu dient, die Integrität der Applikation und der iOS-Umgebung zu überprüfen. Dieses Modul wird nur in binärer Form verteilt und aus Sicherheitsgründen ist dessen Code nicht als Open Source verfügbar. Dieses Modul sammelt keine personenbezogene Daten und sendet keine solche Daten an zentrale Server, es greift weder auf lokale Netzwerke noch das Internet zu.<br>
             </p>
-              
+
           </div>
-          <!-- / Document Section --> 
-          
-          <!-- Document Section --> 
+          <!-- / Document Section -->
+
+          <!-- Document Section -->
           <div class="bs-docs-section">
-      
+
             <h3 id="acknowledgement" class="page-header sebnavbar-link">
               <a class="anchorjs-link " href="#acknowledgement" aria-label="Anchor link for: Acknowledgement"></a>
               Danksagung
             </h3>
-            
+
             <p>Dieses Projekt wurde  teilweise im Rahmen der von <a href="http://www.switch.ch" target="_blank">SWITCH</a> geleiteten Programms &quot;<a href="http://www.switch.ch/de/aaa" target="_blank">AAA/SWITCH – e-Infrastructure für e-Science</a>&quot; und des durch SWITCH koordinierten Kooperationsprojektes &quot;<a href="http://www.switch.ch/de/uni/projects/learn_infra/" target="_blank">Learning Infrastructure</a>&quot; (Teil des <a href="http://www.crus.ch/homenavigation/home.html?L=0" target="_blank">CRUS</a>-Programms &quot;<a href="http://www.crus.ch/information-programme/projekte-programme/suk-programm-2013-2016-p-2-wissenschaftliche-information-zugang-verarbeitung-und-speicherung.html?L=0" target="_blank">Wissenschaftliche Information: Zugang, Verarbeitung und Speicherung</a>&quot;) durchgeführt und erhielt finanzielle Unterstützung durch  den <a href="http://www.ethrat.ch/en" target="_blank">ETH-Rat</a>.<br />
             </p>
-            
+
           </div>
-          <!-- / Document Section --> 
-          
-          <!-- / Content --> 
+          <!-- / Document Section -->
+
+          <!-- / Content -->
           <p>&nbsp;</p>
         </div>
-        <!-- / Content Column --> 
-        
+        <!-- / Content Column -->
+
       </div>
       <!-- /.row (Content Row)-->
-      
+
       <hr>
-      
+
 <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a></p>
               </div>
           </div>
       </footer>

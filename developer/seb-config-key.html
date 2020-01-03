@@ -191,7 +191,7 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-      
+
     	<!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
@@ -199,26 +199,26 @@
             </div>
         </div>
         <!-- /.row -->
-        
+
         <!-- Content Row -->
         <div class="row">
 
         	<!-- Sidebar Column -->
             <div class="col-md-3">
-                <div class="list-group hidden-print"> 
+                <div class="list-group hidden-print">
                     <a href="overview.html" class="list-group-item">Overview</a>
                     <a href="seb-integration.html" class="list-group-item">Integration</a>
-                    <a href="seb-config-key.html" class="list-group-item active">Config Key</a> 
-                    <a href="seb-file-format.html" class="list-group-item">File Format</a> 
+                    <a href="seb-config-key.html" class="list-group-item active">Config Key</a>
+                    <a href="seb-file-format.html" class="list-group-item">File Format</a>
                 </div>
             </div>
-      
+
             <!-- Content Column -->
           <div class="col-md-9" role="main">
-                
+
                 <!-- Content -->
                 <h3 class="page-header">Request Hash For Validating SEB Config in the LMS/E-Assessment System</h3>
-                
+
                 <p>The <strong>Config Key</strong> feature can be used by the quiz module of a learning management system (LMS) or another e-assessment system to ensure that the Safe Exam Browser (SEB) exam client is correctly configured/secured (either client settings or settings for a specific exam<strong>)</strong>. <br/>
               To achieve this, a key is generated for the settings SEB is using. <br/>
               To use the Config Key feature, an e-assessment system has to have support for the Config Key feature built in and the following SEB versions (or later versions) must be used:</p>
@@ -241,17 +241,17 @@
                 <code>&quot;X-SafeExamBrowser-ConfigKeyHash&quot; = 81aad4ab9dfd447cc479e6a4a7c9a544e2cafc7f3adeb68b2a21efad68eca4dc;                </code>
                 <p><br>
                 The LMS then can verify the Config Key received in the HTTP request. For this, the Config Key generated server-side or saved in the quiz/exam settings has to be concatenated with the requested URL, SHA256 hashed and compared with the value received in the &quot;X-SafeExamBrowser-ConfigKeyHash&quot; header. </p>
-              
+
               <h4 class="seb-section-header">How the Config Key is generated in SEB</h4>
-              
+
               <p>Unlike the <a href="documents/SEB-Specification-BrowserExamKey.pdf" target="_blank">Browser Exam Key</a>, the Config Key uses a standardized method to generate a checksum of all setting key/values of a SEB config file. As long as the same method is used in all SEB versions and in e-assessment systems (server-side), then the generated Config Key will be identical. There is another important difference in how the Config Key is generated: The SEB client only uses setting key/values to calculate the checksum, which are actually contained in an opened config file. This is important in case the SEB exam client is updated and this new version introduces new setting options. If the new keys and their (default) values would be included to calculate the Config Key checksum, the key would change, even though the config file didn't change. That's why when calculating the Config Key, <strong>the SEB client</strong> skips newly introduced keys (as long as these have their default values, which are always defined as &quot;safe&quot; values). <strong>The exam system</strong> uses all key/values (exceptions see below) it generates for calculating the Config Key.<br/>
               When an existing config file is modified in the SEB preferences window or SEB Config Tool and then saved, the Config Key is re-calculated and then uses all keys the according SEB version supports. This new config file will then have another Config Key value, but when opened for an exam in an older SEB version, that version will still calculate this same new value for the Config Key (even though the older SEB version doesn't support the newly added setting keys). <br/>
             The standardized method to calculate the Config Key hash (checksum) converts SEB settings into <a href="https://en.wikipedia.org/wiki/JSON" target="_blank">JSON</a> objects, where the key/values in the root-level and all higher-level objects (dictionaries) are alphabetically sorted by their key names. This is necessary, because the order of elements when applying a hash function matters (if the order isn't same, the hash function will return a different value). As key/values in standard JSON objects aren't ordered by definition, you might have to implement a custom converter for transforming the SEB property list (<a href="http://en.wikipedia.org/wiki/Plist" target="_blank">plist</a>) XML into this sorted JSON-like (&quot;SEB-JSON&quot; object. It's also important to use the proper format for the single elements (key names, values) of the SEB-JSON object, see below.</p>
-              
+
               <h4 class="seb-section-header">Summary Config Key Generation</h4>
-              
+
                 <ol>
-              <li><strong>Convert the plist XML of a decrypted/unencrypted SEB config file to a ordered JSON-like &quot;SEB-JSON&quot; object</strong>. Consider following special formatting details:                  
+              <li><strong>Convert the plist XML of a decrypted/unencrypted SEB config file to a ordered JSON-like &quot;SEB-JSON&quot; object</strong>. Consider following special formatting details:
                 <ul>
                   <li><strong>Remove the key &quot;originatorVersion&quot; first.</strong> This key is exempted from the SEB-JSON hash (it's a special key which doesn't have any functionality, it's just meta data indicating which SEB version saved the config file)</li>
                   <li>Don't add any whitespace or line formatting to the SEB-JSON string. </li>
@@ -281,30 +281,30 @@
                 <br>
                 <br/>
               </li>
-              
+
               <li><strong>Refuse to start or abort the exam if the hash value in each HTTP request isn't equal with the calculated one.</strong> When the exam is being started and the hash values don't match, then display an error message and don't start the exam. If the exam was already running, then save all results entered until now, stop the exam and inform the user. It should not be possible to leave the quiz module (in case of an LMS) until an exam supervisor/administrator enters some special unlocking password or that user's blocked quiz is reset in the LMS backend. Otherwise the user could possibly enter into his LMS account, check some resources prepared beforehand and then inform the exam supervisor that there was some technical problem and ask for getting it unlocked and continue the exam.</li>
             </ol>
-                
+
                 <h4 class="seb-section-header">Example SEB-JSON String</h4>
-                
+
                 <pre><code>{&quot;additionalResources&quot;:[],&quot;allowAirPlay&quot;:false,&quot;allowBrowsingBackForward&quot;:false,&quot;allowDictation&quot;:false,&quot;allowDictionaryLookup&quot;:false,&quot;allowDisplayMirroring&quot;:false,&quot;allowDownUploads&quot;:false,&quot;allowedDisplayBuiltin&quot;:true,&quot;allowedDisplaysMaxNumber&quot;:1,&quot;allowFlashFullscreen&quot;:false,&quot;allowPDFPlugIn&quot;:false,&quot;allowPreferencesWindow&quot;:true,&quot;allowQuit&quot;:true,&quot;allowScreenSharing&quot;:false,&quot;allowSiri&quot;:false,&quot;allowSpellCheck&quot;:false,&quot;allowSwitchToApplications&quot;:true,&quot;allowUserAppFolderInstall&quot;:false,&quot;allowUserSwitching&quot;:true,&quot;allowVideoCapture&quot;:false,&quot;allowVirtualMachine&quot;:false,&quot;allowWLAN&quot;:false,&quot;blacklistURLFilter&quot;:&quot;&quot;,&quot;blockPopUpWindows&quot;:false,&quot;browserMessagingPingTime&quot;:120000,&quot;browserMessagingSocket&quot;:&quot;ws:\localhost:8706&quot;,&quot;browserScreenKeyboard&quot;:false,&quot;browserURLSalt&quot;:true,&quot;browserUserAgent&quot;:&quot;&quot;,&quot;browserUserAgentMac&quot;:0,&quot;browserUserAgentMacCustom&quot;:&quot;&quot;,&quot;browserUserAgentWinDesktopMode&quot;:0,&quot;browserUserAgentWinDesktopModeCustom&quot;:&quot;&quot;,&quot;browserUserAgentWinTouchMode&quot;:0,&quot;browserUserAgentWinTouchModeCustom&quot;:&quot;&quot;,&quot;browserViewMode&quot;:0,&quot;browserWindowAllowReload&quot;:true,&quot;browserWindowShowURL&quot;:0,&quot;chooseFileToUploadPolicy&quot;:0,&quot;configKeySalt&quot;:&quot;&quot;,&quot;createNewDesktop&quot;:true,&quot;detectStoppedProcess&quot;:true,&quot;downloadAndOpenSebConfig&quot;:true,&quot;downloadDirectoryOSX&quot;:&quot;/Users/drs/Downloads&quot;,&quot;downloadDirectoryWin&quot;:&quot;Desktop&quot;,&quot;downloadPDFFiles&quot;:false,&quot;embeddedCertificates&quot;:[],&quot;enableAltEsc&quot;:false,&quot;enableAltF4&quot;:false,&quot;enableAltMouseWheel&quot;:false,&quot;enableAltTab&quot;:true,&quot;enableAppSwitcherCheck&quot;:true,&quot;enableBrowserWindowToolbar&quot;:false,&quot;enableCtrlEsc&quot;:false,&quot;enableEsc&quot;:false,&quot;enableF1&quot;:false,&quot;enableF10&quot;:false,&quot;enableF11&quot;:false,&quot;enableF12&quot;:false,&quot;enableF2&quot;:false,&quot;enableF3&quot;:false,&quot;enableF4&quot;:false,&quot;enableF5&quot;:true,&quot;enableF6&quot;:false,&quot;enableF7&quot;:false,&quot;enableF8&quot;:false,&quot;enableF9&quot;:false,&quot;enableJava&quot;:false,&quot;enableJavaScript&quot;:true,&quot;enableLogging&quot;:true,&quot;enablePlugIns&quot;:true,&quot;enablePrintScreen&quot;:false,&quot;enablePrivateClipboard&quot;:true,&quot;enableRightMouse&quot;:false,&quot;enableSebBrowser&quot;:true,&quot;enableStartMenu&quot;:false,&quot;enableTouchExit&quot;:0,&quot;enableZoomPage&quot;:true,&quot;enableZoomText&quot;:true,&quot;examKeySalt&quot;:&quot;fOwye5rcju6okk1489PNuKKm5VLTObxNAIn35vZNNrc=&quot;,&quot;exitKey1&quot;:2,&quot;exitKey2&quot;:10,&quot;exitKey3&quot;:5,&quot;forceAppFolderInstall&quot;:true,&quot;hashedAdminPassword&quot;:&quot;155290511d5c4bfb1369217d6846c8eef1ed6a564579516eaf36cf5598ac92de&quot;,&quot;hashedQuitPassword&quot;:&quot;8577da2ea54085708b3b851bc50315a36bb740ba5135e747cfb12457b5d3060f&quot;,&quot;hideBrowserWindowToolbar&quot;:false,&quot;hookKeys&quot;:true,&quot;ignoreExitKeys&quot;:true,&quot;ignoreQuitPassword&quot;:false,&quot;insideSebEnableChangeAPassword&quot;:false,&quot;insideSebEnableEaseOfAccess&quot;:false,&quot;insideSebEnableLockThisComputer&quot;:false,&quot;insideSebEnableLogOff&quot;:false,&quot;insideSebEnableNetworkConnectionSelector&quot;:false,&quot;insideSebEnableShutDown&quot;:false,&quot;insideSebEnableStartTaskManager&quot;:false,&quot;insideSebEnableSwitchUser&quot;:false,&quot;insideSebEnableVmWareClientShade&quot;:false,&quot;killExplorerShell&quot;:false,&quot;logDirectoryOSX&quot;:&quot;&quot;,&quot;logDirectoryWin&quot;:&quot;&quot;,&quot;logLevel&quot;:4,&quot;mainBrowserWindowHeight&quot;:&quot;100%&quot;,&quot;mainBrowserWindowPositioning&quot;:1,&quot;mainBrowserWindowWidth&quot;:&quot;100%&quot;,&quot;minMacOSVersion&quot;:0,&quot;monitorProcesses&quot;:true,&quot;newBrowserWindowAllowReload&quot;:true,&quot;newBrowserWindowByLinkBlockForeign&quot;:false,&quot;newBrowserWindowByLinkHeight&quot;:&quot;100%&quot;,&quot;newBrowserWindowByLinkPolicy&quot;:2,&quot;newBrowserWindowByLinkPositioning&quot;:2,&quot;newBrowserWindowByLinkWidth&quot;:&quot;1000&quot;,&quot;newBrowserWindowByScriptBlockForeign&quot;:false,&quot;newBrowserWindowByScriptPolicy&quot;:2,&quot;newBrowserWindowNavigation&quot;:true,&quot;newBrowserWindowShowReloadWarning&quot;:false,&quot;openDownloads&quot;:false,&quot;oskBehavior&quot;:2,&quot;permittedProcesses&quot;:[{&quot;active&quot;:true,&quot;allowedExecutables&quot;:&quot;&quot;,&quot;allowUserToChooseApp&quot;:false,&quot;arguments&quot;:[],&quot;autostart&quot;:true,&quot;description&quot;:&quot;&quot;,&quot;executable&quot;:&quot;xulrunner.exe&quot;,&quot;iconInTaskbar&quot;:true,&quot;identifier&quot;:&quot;XULRunner&quot;,&quot;os&quot;:1,&quot;path&quot;:&quot;../xulrunner/&quot;,&quot;runInBackground&quot;:false,&quot;strongKill&quot;:true,&quot;title&quot;:&quot;SEB&quot;,&quot;windowHandlingProcess&quot;:&quot;&quot;}],&quot;pinEmbeddedCertificates&quot;:false,&quot;prohibitedProcesses&quot;:[],&quot;proxies&quot;:{&quot;AutoConfigurationEnabled&quot;:false,&quot;AutoConfigurationJavaScript&quot;:&quot;&quot;,&quot;AutoConfigurationURL&quot;:&quot;&quot;,&quot;AutoDiscoveryEnabled&quot;:false,&quot;ExceptionsList&quot;:[],&quot;ExcludeSimpleHostnames&quot;:false,&quot;FTPEnable&quot;:false,&quot;FTPPassive&quot;:true,&quot;FTPPassword&quot;:&quot;&quot;,&quot;FTPPort&quot;:21,&quot;FTPProxy&quot;:&quot;&quot;,&quot;FTPRequiresPassword&quot;:false,&quot;FTPUsername&quot;:&quot;&quot;,&quot;HTTPEnable&quot;:false,&quot;HTTPPassword&quot;:&quot;&quot;,&quot;HTTPPort&quot;:80,&quot;HTTPProxy&quot;:&quot;&quot;,&quot;HTTPRequiresPassword&quot;:false,&quot;HTTPSEnable&quot;:false,&quot;HTTPSPassword&quot;:&quot;&quot;,&quot;HTTPSPort&quot;:443,&quot;HTTPSProxy&quot;:&quot;&quot;,&quot;HTTPSRequiresPassword&quot;:false,&quot;HTTPSUsername&quot;:&quot;&quot;,&quot;HTTPUsername&quot;:&quot;&quot;,&quot;RTSPEnable&quot;:false,&quot;RTSPPassword&quot;:&quot;&quot;,&quot;RTSPPort&quot;:554,&quot;RTSPProxy&quot;:&quot;&quot;,&quot;RTSPRequiresPassword&quot;:false,&quot;RTSPUsername&quot;:&quot;&quot;,&quot;SOCKSEnable&quot;:false,&quot;SOCKSPassword&quot;:&quot;&quot;,&quot;SOCKSPort&quot;:1080,&quot;SOCKSProxy&quot;:&quot;&quot;,&quot;SOCKSRequiresPassword&quot;:false,&quot;SOCKSUsername&quot;:&quot;&quot;},&quot;proxySettingsPolicy&quot;:0,&quot;quitURL&quot;:&quot;&quot;,&quot;removeBrowserProfile&quot;:true,&quot;removeLocalStorage&quot;:false,&quot;restartExamPasswordProtected&quot;:true,&quot;restartExamText&quot;:&quot;&quot;,&quot;restartExamURL&quot;:&quot;&quot;,&quot;restartExamUseStartURL&quot;:false,&quot;sebConfigPurpose&quot;:1,&quot;sebMode&quot;:0,&quot;sebServerFallback&quot;:false,&quot;sebServerURL&quot;:&quot;&quot;,&quot;sebServicePolicy&quot;:2,&quot;sendBrowserExamKey&quot;:true,&quot;showInputLanguage&quot;:false,&quot;showMenuBar&quot;:true,&quot;showReloadButton&quot;:true,&quot;showReloadWarning&quot;:false,&quot;showTaskBar&quot;:true,&quot;showTime&quot;:true,&quot;startURL&quot;:&quot;http://www.safeexambrowser.org/exams&quot;,&quot;taskBarHeight&quot;:40,&quot;touchOptimized&quot;:false,&quot;URLFilterEnable&quot;:true,&quot;URLFilterEnableContentFilter&quot;:true,&quot;URLFilterIgnoreList&quot;:[],&quot;URLFilterMessage&quot;:1,&quot;urlFilterRegex&quot;:true,&quot;URLFilterRules&quot;:[{&quot;action&quot;:1,&quot;active&quot;:true,&quot;expression&quot;:&quot;safeexambrowser.org/exams&quot;,&quot;regex&quot;:false},{&quot;action&quot;:1,&quot;active&quot;:true,&quot;expression&quot;:&quot;safeexambrowser.org/css/*&quot;,&quot;regex&quot;:false},{&quot;action&quot;:1,&quot;active&quot;:true,&quot;expression&quot;:&quot;safeexambrowser.org/font-awesome/css/*&quot;,&quot;regex&quot;:false},{&quot;action&quot;:1,&quot;active&quot;:true,&quot;expression&quot;:&quot;safeexambrowser.org/images/*&quot;,&quot;regex&quot;:false},{&quot;action&quot;:1,&quot;active&quot;:true,&quot;expression&quot;:&quot;safeexambrowser.org/js/*&quot;,&quot;regex&quot;:false},{&quot;action&quot;:1,&quot;active&quot;:true,&quot;expression&quot;:&quot;safeexambrowser.org/exams/*&quot;,&quot;regex&quot;:false}],&quot;urlFilterTrustedContent&quot;:true,&quot;whitelistURLFilter&quot;:&quot;^.*?:\/\/((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/exams(()|(?.*?))$;^.*?:\/\/((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/((css\/.*?)|(css))(()|(?.*?))$;^.*?:\/\/((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/((font-awesome\/css\/.*?)|(font-awesome\/css))(()|(?.*?))$;^.*?:\/\/((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/((images\/.*?)|(images))(()|(?.*?))$;^.*?:\/\/((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/((js\/.*?)|(js))(()|(?.*?))$;^.*?:\/\/((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/((exams\/.*?)|(exams))(()|(?.*?))$&quot;,&quot;zoomMode&quot;:0}
 </code></pre>
 
 			</div>
             <!-- / Content Column -->
-            
+
         </div>
         <!-- /.row (Content Row)-->
-        
+
         <hr>
-        
+
     <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>

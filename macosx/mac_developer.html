@@ -222,7 +222,7 @@
             <li class="normal_line_height" id="half_linespace"><span class="codetext">PreferencesController</span><br />
                 Controller for the preferences window, populates it with panes.</li>
             <li class="normal_line_height"><span class="codetext">PrefsGeneralViewController</span><br />
-              Preferences General Pane: Settings for passwords to enter preferences and quit SEB, buttons to quit and restart SEB, show About panel and help. 
+              Preferences General Pane: Settings for passwords to enter preferences and quit SEB, buttons to quit and restart SEB, show About panel and help.
             Loads and saves preferences from the system's user defaults database and implements Cocoa Bindings for confirm password  check.</li>
             <li class="normal_line_height"><span class="codetext">PrefsAdvancedViewController</span><br />
               Preferences Advanced Pane: Settings for using third party applications together with SEB. Implemented with Cocoa Bindings to the Shared User Defaults Controller.</li>
@@ -356,17 +356,17 @@
           </p>
             <h4><a name="addingNewFrameworkVersions" id="addingNewFrameworkVersions"></a>Add new versions of the embedded WebKit frameworks</h4>
             <p id="quarter_linespace">To comply with version control, you first have to delete the old version of the frameworks in Xcode (remove it with the SVN command in terminal or in Xcode):</p>
-    <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptCore.framework</p>            
-    <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptGlue.framework</p>           
+    <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptCore.framework</p>
+    <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptGlue.framework</p>
             <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/WebCore.framework</p>
 <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/WebKit.framework</p>
 <p class="sourcecode" id="full_linespace">svn commit -m "deleted old WebKit frameworks" SafeExamBrowser-src</p>
     <p>Then you have to add the new frameworks to the <span class="codetext">SafeExamBrowser</span> project in Xcode. Important is to remove the <span class="codetext">WebCore.framework</span> from the <span class="quote"><strong>Link</strong> Binary With Libraries</span> build phase of the target Safe Exam Browser in Xcode, otherwise building will fail, since WebCore is only linked through its umbrella framework WebKit. The four frameworks also have to be in the <span class="quote">Copy Files</span> build phase.</p>
           <p>There is a <span class="quote">Code Signing</span> build setting in the <span class="codetext">SafeExamBrowser</span> Xcode project, which you will have to modify, because you don't have the <span class="quote">ETH Zurich</span> code signing identity. We will add an explanation about how to code sign the SEB binary to this manual after the implementation of further security measures in SEB based on checking code signatures of running processes.</p>
-            <p>So when you succeeded to build SEB with a new version of the WebKit frameworks, you can check if it is really used on <a href="http://www.webkit.org/misc/WebKitDetect.html" target="_blank">this page</a>. 
+            <p>So when you succeeded to build SEB with a new version of the WebKit frameworks, you can check if it is really used on <a href="http://www.webkit.org/misc/WebKitDetect.html" target="_blank">this page</a>.
             <script type="text/javascript">
 var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
-        </script> 
+        </script>
             If it displays <span class="quote">Your WebKit version is a nightly build</span>, then SEB is using the private embedded WebKit.</p>
             <p>The second target in the Xcode project, <span class="quote">Safe Exam Browser App</span> (which is used to build the Mac App Store version of SEB), is using the system's built-in WebKit framework. </p>
     <p>Use <a href="../Popup-Fenster.html">this page</a> if you want to test the JavaScript popup window opening settings in SEB 1.5.x.</p>
@@ -376,7 +376,7 @@ var CollapsiblePanel1 = new Spry.Widget.CollapsiblePanel("CollapsiblePanel1");
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>

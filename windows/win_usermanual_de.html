@@ -186,12 +186,12 @@
       </div>
         <!-- /.container -->
     </nav>
-    
+
     <!-- Page Content -->
     <div class="container bs-docs-container">
 
 	  <!-- InstanceBeginEditable name="MainContent" -->
-            
+
       <!-- Page Heading/Breadcrumbs -->
       <div class="row">
         <div class="col-lg-12">
@@ -202,14 +202,14 @@
             <li class="active">Deutsch
             </li>
           </ol>
-    
+
         </div>
       </div>
-      <!-- /.row --> 
-      
+      <!-- /.row -->
+
       <!-- Content Row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group">
@@ -224,16 +224,16 @@
             <a href="../support_de.html" class="list-group-item">Support</a>
           </div>
         </div>
-        
+
         <!-- Content Column -->
         <div class="col-md-9">
-        
+
           <!-- Content -->
           <h2></h2>
-    
+
           <p><a href="win_usermanual_en.html"><strong>Benutzerhandbuch für  Safe Exam Browser 2.0 und neuere Versionen</strong><br />
         </a>(momentan nur in Englisch verfügbar)</p>
-        
+
           <h2 class="page-header">Safe Exam Browser für Windows (ab Version 1.8)          </h2><div id="CollapsiblePanel1" class="CollapsiblePanel">
             <div class="CollapsiblePanelTab" tabindex="0"><strong>Inhalt</strong> <span class="textklein">Verbergen/Zeigen</span></div>
             <div class="CollapsiblePanelContent"> <a href="#ConfigurationFiles">Konfigurationsdateien</a><br />
@@ -241,12 +241,12 @@
                 <a href="#ConnectBrowserAndTest">Test und Browser verbinden</a><br />
                 <a href="#LMSExtensions">LMS-Erweiterungen</a> </div>
           </div>
-          
+
           <h3 class="page-header seb-section-header sebnavbar-link" id="ConfigurationFiles">
               <a class="anchorjs-link" href="#ConfigurationFiles"></a>
               Konfigurationsdateien
           </h3>
-                      
+
           <p>Es gibt zwei Konfigurationsdateien für SEB Windows: <span class="path">SebStarter.ini</span> und <span class="path">MsgHook.ini</span>. Diese befinden sich:<br />
           </p>
           <ul id="seblist">
@@ -516,7 +516,7 @@ SebStarter.exe<br />
             <p> Wenn wir nun die Variable <strong>B1</strong> auf 115 setzen:
           <div class="sourcecode"> <span class="sourcecode">B1=115</span> </div>
             <p>ändert sich die erste Funktionstaste, die gedrückt werden muss, von  F3
-            auf F4. Dies weil wir die <strong>erste</strong> Variable 
+            auf F4. Dies weil wir die <strong>erste</strong> Variable
             B1 geändert haben und 115 der Dezimalwert des virtuellen Tastencodes für F4 ist.
             Weil wir B2 und B3 nicht geändert haben, bleiben die zweite und dritte Funktionstaste gleich; die Sequenz zum Verlassen von SEB ändert sich also vom Standard  F3_F11_F6 zur benutzerdefinierten Sequenz F4_F11_F6. </p>
             <p>Mit B2 und B3 kann man natürlich auch die anderen beiden Funktionstasten ändern, beispielsweise:<br/>
@@ -534,7 +534,7 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
 </p>
             <p><strong>Bemerkungen:<br />
               <br />
-            </strong>1.) 
+            </strong>1.)
             Wenn Drittapplikationen von SEB erlaubt werden sollen, muss auch die Tastenkombination  Alt_Tab zugelassen werden:</p>
             <div class="sourcecode">
             <p class="sourcecode">EnableAltTab=1</p>
@@ -559,12 +559,12 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
             </p>
             <p> in <span class="path">SebStarter.ini</span> setzen.<br />
             </p>
-            
+
           <h3 class="page-header seb-section-header sebnavbar-link" id="Certificates">
               <a class="anchorjs-link" href="#Certificates"></a>
               Zertifikate
           </h3>
-            
+
             <p>In SEB  mit XULRunner (Version 1.4 und neuer) können Probleme mit SSL-Zertifikaten auftreten:</p>
             <ul id="seblist">
             <li>Wenn Sie die Kommunikation zum Prüfungsserver/LMS mit SSL schützen, kann es
@@ -577,43 +577,43 @@ Falls Sie <strong>aus dem SEB nicht mehr herauskommen</strong> und nach Drücken
                 Weitere Informationen finden Sie im Handbuch Ihres Webservers: <a href="http://httpd.apache.org/docs/2.2/mod/mod_ssl.html#sslcertificatechainfile" target="_blank">Apache 2.2</a>, <a href="http://support.microsoft.com/kb/954755" target="_blank">IIS</a>.</li>
             <li>Selbst-signierte Zertifikate müssen in SEBs XULRunner importiert werden. Da XULRunner keine einfache Möglichkeit bietet, für nicht generell vertrauenswürdige Zertifikate Ausnahmen hinzuzufügen, können Sie die Seite in Firefox öffnen, das Zertifikat akzeptieren und dann die Datei  <strong>cert_override.txt</strong> in das XULRunner-Anwendungsprofil kopieren. </li>
           </ul>
-          
+
           <h3 class="page-header seb-section-header sebnavbar-link" id="ConnectBrowserAndTest">
               <a class="anchorjs-link" href="#ConnectBrowserAndTest"></a>
               Test und Browser verbinden
           </h3>
-            
+
             <p>Bevor Sie SEB starten, sollten Sie die Startseite Ihrer Online-Prüfung festlegen, und welche Tastenkombinationen während der Online-Prüfung durch SEB unterdrückt werden sollen. Diese wurden oben im Abschnitt <a href="#ConfigurationFiles">Konfigurationsdateien</a> beschrieben. Für's erste können Sie auch die Standard-Vorgabewerte benutzen, die im heruntergeladenen SEB schon vorhanden sind.<br />
               <br />
           Die Start-URL von SEB ändert man, indem man in der Datei <em>SebStarter.ini</em> den Wert <em>ExamUrl</em> auf die entsprechende Web-Adresse setzt, z.B.</p>
             <div class="sourcecode">
               <p class="sourcecode">ExamUrl=http://www.safeexambrowser.org/</p>
             </div>
-            
+
           <h3 class="page-header seb-section-header sebnavbar-link" id="LMSExtensions">
               <a class="anchorjs-link" href="#LMSExtensions"></a>
               LMS-Erweiterungen
           </h3>
-            
+
             <p>In aktuellen Versionen von ILIAS und Moodle werden keine Erweiterungen mehr benötigt, um Safe Exam Browser zu verwenden. Die Verbindungsmöglichkeit mit SEB ist bereits in diesen LMS eingebaut. Falls eine ältere ILIAS-Version benutzt wird, finden sich Informationen, wie das Skin &quot;Naviless&quot; in ILIAS installiert wird, im <span class="quote">ILIAS Information Center</span>. Und für ältere Moodle-Versionen finden sich Informationen zur Installation der Erweiterung in der Readme-Datei, die an die Download-Datei angehängt ist.</p>
 
-          <!-- / Content --> 
+          <!-- / Content -->
           <p>&nbsp;</p>
         </div>
-        <!-- / Content Column --> 
-        
+        <!-- / Content Column -->
+
       </div>
       <!-- /.row (Content Row)-->
-      
+
       <hr>
-      
+
 <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch" target="_blank">ETH Zürich</a>, <a href="http://www.let.ethz.ch" target="_blank">Lehrentwicklung und -technologie (LET)</a></p>
               </div>
           </div>
       </footer>

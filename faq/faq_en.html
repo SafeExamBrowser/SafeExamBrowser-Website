@@ -190,7 +190,7 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-        
+
       <!-- Page Heading/Breadcrumbs -->
       <div class="row">
         <div class="col-lg-12">
@@ -203,11 +203,11 @@
           </ol>
         </div>
       </div>
-      <!-- /.row --> 
-    
+      <!-- /.row -->
+
       <!-- Content Row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group">
@@ -222,19 +222,19 @@
             <a href="faq_en.html" class="list-group-item active">Support – FAQ</a>
           </div>
         </div>
-        
+
         <!-- Content Column -->
         <div class="col-md-9" role="main">
-        
+
         <!-- Content -->
           <h2></h2>
 
           <h2 class="page-header sebnavbar-link">FAQ  for <a href="#Windows" title="Jump down to Windows versions">Windows</a> and <a href="#MacOSX" title="Jump down to Mac versions">macOS</a></h2>
-          
+
       <h3 class="page-header seb-section-header sebnavbar-link" id="Windows">
         <a class="anchorjs-link" href="#Windows"></a>
         Safe Exam Browser for Windows
-      </h3>          
+      </h3>
 
       <ul id="seblist">
         <li><span class="quote">Which antivirus/anti-malware software is compatible with SEB?<br>
@@ -313,7 +313,7 @@
         In our test only one product wasn't working at all together with SEB:<br>
         <strong>Kaspersky Total Security</strong> Version 19.0.0.1088(d). When this software is installed and the Browser Exam Key check is enabled in SEB settings, then SEB displays an error message &quot;SEB installation is corrupted&quot; - &quot;irregular files were found in SEB's program directory&quot;. In this case the Browser Exam Key   is different than in a not manipulated SEB, which would usually prevent accessing an exam supporting the Browser Exam Key check. To prevent issues, Kaspersky Total Security must be uninstalled before an exam. <br>
         In earlier versions of        <strong>Bitdefender Internet Security</strong> it was necessary to disable the feature scanning the encrypted (https) web traffic, otherwise a certificate error was displayed when starting an exam in SEB. We weren't able to reproduce this behavior in version 23.0.16.72 anymore.<br>
-        <strong>Please note:</strong> &quot;Security software&quot; scanning 
+        <strong>Please note:</strong> &quot;Security software&quot; scanning
         all https traffic has to break the end-to-end SSL/TLS encryption (effectively performing a so called <a href="https://en.wikipedia.org/wiki/Man-in-the-middle_attack" target="_blank">Man-In-The-Middle Attack</a>). <strong>We strongly recommend to disable https Internet traffic scanning before any exam</strong>, as the &quot;security software&quot; involved can decrypt all encrypted Internet traffic between browsers and secure servers, including the exam data and answers transferred between SEB and  an e-assessment server. You can prevent this to happen in SEB by embedding server certificates into your exam config and using the certificate pinning feature, see <a href="../windows/win_usermanual_en.html#NetworkPaneCertificatesSection">the manual</a>.</li>
         <li><span class="quote">What is SEB for Windows changing in the system?</span><br />
           While running, SEB changes  Windows Registry settings for the options in the Windows Security Screen invoked by Ctrl-Alt-Del (for details see <a href="../windows/win_usermanual_en.html#RegistryPane">this section</a> in the manual). In addition when running on Windows  versions before 10, SEB stops Windows updates while it is running using a Registry setting and re-enables them when being quit (when SEB 2.1.1 or later is running on Windows 10, only the Windows Update background service is stopped and restarted when SEB is quit). <br />
@@ -344,15 +344,15 @@
             </li>
           </ul>
         </li>
-        These directories and possible contents are <strong>not removed</strong> automatically when SEB is uninstalled. 
+        These directories and possible contents are <strong>not removed</strong> automatically when SEB is uninstalled.
       </ul>
-      
+
       <!-- macOS FAQ -->
       <h3 class="page-header seb-section-header sebnavbar-link" id="MacOSX">
         <a class="anchorjs-link" href="#MacOSX"></a>
         Safe Exam Browser for macOS
       </h3>
-      
+
       <ul id="seblist">
         <li><span class="quote">What is SEB for macOS changing in the system?</span><br />
           SEB doesn't perform any real changes in macOS (this is comprehensible as there is no administrator password necessary when starting SEB for macOS the first time). One global setting (user defaults) change is performed while SEB is running: The path where screen shots are saved is temporarily changed when SEB starts and set back to the user's preset when SEB is quit. If the Mac would be force restarted while SEB is running or SEB would crash, starting and quitting SEB resets the screen shot path again to the original user's preset. In the unlikely case this should ever fail, it is easy to reset this screen shot location to the system's default (the desktop folder) with the following command line in the terminal:<br />
@@ -370,24 +370,24 @@
   <p><a href="https://sourceforge.net/p/seb/discussion/" target="_blank">Forum</a></p>
       <p><a href="https://sourceforge.net/p/seb/feature-requests/" target="_blank">Feature Requests</a></p>
       <p><a href="https://sourceforge.net/p/seb/bugs/" target="_blank">Bug Report</a></p>
-          
-          <!-- / Content --> 
+
+          <!-- / Content -->
           <p>&nbsp;</p>
         </div>
-        <!-- / Content Column --> 
-        
+        <!-- / Content Column -->
+
       </div>
       <!-- /.row (Content Row)-->
-      
+
       <hr>
-      
+
 <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>

@@ -210,14 +210,14 @@
             <li><a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/e7e542a5/" target="_blank">Pre-Release Testing</a>
             </li>
           </ol>
-    
+
         </div>
       </div>
-      <!-- /.row --> 
-    
+      <!-- /.row -->
+
       <!-- Content Row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Left Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group hidden-print hidden-xs hidden-sm">
@@ -230,9 +230,9 @@
             <a href="ios_usermanual_en.html" class="list-group-item">iOS – User Manual</a>
             <a href="ios_tutorial_en.html" class="list-group-item active">iOS – Tutorial</a>
             <a href="ios_release_notes_en.html" class="list-group-item">iOS – Release Notes</a>
-            <a href="../support_en.html" class="list-group-item">Support</a> 
+            <a href="../support_en.html" class="list-group-item">Support</a>
           </div>
-                    
+
           <!-- Sidebar Contents Table -->
           <nav class="bs-docs-sidebar">
             <ul class="nav bs-docs-sidenav">
@@ -248,7 +248,7 @@
                 </ul>
               -->
               </li>
-              <!--             
+              <!--
               <li> <a href="#starting">Starting and Quitting</a> </li>
 
               <li> <a href="#configuration">Configuration</a>
@@ -274,70 +274,70 @@
                   <li><a href="#SecurityPane">Security Pane</a></li>
                 </ul>
               </li>
-                            
+
               <li><a href="#operating_system">Operating System</a></li>
               <li><a href="#license">License</a></li>
                             -->
 
             </ul>
-            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Back to top </a> 
+            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Back to top </a>
           </nav>
-          
+
       </div>
       <!-- /Sidebar Contents Table -->
-      
+
       <!-- Content Column -->
       <div class="col-md-9" role="main">
-      
+
         <!-- Content -->
 
-        <!-- Document Section --> 
+        <!-- Document Section -->
         <div class="bs-docs-section">
-      
+
           <h2></h2>
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
             Tutorial SEB for iOS
           </h2>
-    
+
           <p><strong>The following tutorial explains   how to configure and use SEB for iOS from the perspective of exam administrators.</strong> SEB is a very flexible and modular tool, therefore documentation for examinees on how to use SEB with individual exam setups and the various exam systems it works with should be provided by the institution using SEB, or their e-assessment solution provider.</p>
           <p><strong>To better understand this tutorial, you should also study the <a href="ios_usermanual_en.html">SEB for iOS manual</a>.</strong><br />
           </p>
 
         </div>
-        <!-- / Document Section --> 
-    
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <h3 class="page-header sebnavbar-link" id="StartingAndQuittingExam">
             <a class="anchorjs-link" href="#StartingAndQuittingExam"></a>
             Starting and Quitting an Exam
           </h3>
-          
+
           <p>Being a kiosk browser, SEB doesn't have an address  field to enter website URLs. As an exam administrator, you have to configure which website is loaded by SEB. This so called Start URL setting can either be the address of your exam system, where students would log in and be presented the exam they are scheduled to conduct. You could also configure SEB to show an exam portal page outside of your exam system, this might be a simple HTML webpage or be displayed by a content management system (CMS). On this exam portal page, you would then add a list of links to current exams. This has the advantage that you can use links to SEB Config Files stored on a web server, which then contain the Start URLs of your exams. Like this you can use an individual SEB configuration per exam. These links differ from regular http/https web links, you should use the custom URL protocols seb/sebs instead. Tapping such a seb(s):// link opens it in SEB, even if the exam portal page is displayed in another (regular) web browser or you sent an SEB link to your students in an email. Usually the other browser or operating system asks to confirm opening the link in SEB, see the picture below. Here the exam portal page was opened in Safari and  the <a href="seb://safeexambrowser.org/exams/DemoExamGeneral.seb">SEB Demo Exam</a> link was tapped.</p>
 
           <img class="img-responsive" src="images/SEB_TutorialOpeningSEBLink.png" />
 
           <p>After confirming, SEB is opened and loads the SEB Config File from the link's target URL <a href="seb://safeexambrowser.org/exams/DemoExamGeneral.seb">seb://safeexambrowser.org/exams/DemoExamGeneral.seb</a>. Because a settings password was set when saving this Config File, SEB  requests to enter it. When the correct password is entered, SEB decrypts the Config File and is reconfigured  temporary using the settings contained in the Config File.</p>
           <p>As the Config File has a quit password set, SEB now tries to start a single app mode (also called <span class="quote">kiosk mode</span> or <span class="quote">lock down mode</span>). In this case the iPad isn't owned and managed (supervised) by an organisation, it's owned by the student. Therefore the <span class="quote">&quot;App Self-Lock&quot; (AAC) Single App Mode</span> is invoked, which needs to be confirmed in the dialog displayed in the picture below.</p>
-          
+
           <img class="img-responsive" src="images/SEB_TutorialAppSelfLock.png" />
-          
+
           <p>If starting the Single App Mode is confirmed, then the exam is loaded. If App Self-Lock is denied, then SEB displays an error alert with the option to retry starting the Single App Mode or to quit this exam session. </p>
           <p>When the Single App Mode is started, students cannot switch to other apps and can't access the notification and control center. If they try to quit SEB manually by using the Quit Button in the lower right corner of the screen (in the SEB Dock bar), then SEB asks to enter the Quit Password. The <a href="ios_usermanual_en.html#GeneralPane" target="_blank">Quit Password</a> is defined in these exam settings and   only exam invigilators/supporters  know it (in case of a technical problem they could use it to quit or restart the exam).</p>
           <p>After completing and submitting the exam (in this case a Moodle quiz), a feedback page is displayed. On this page the exam administrator placed a  hyperlink &quot;Unlock Device&quot;. As the URL of this link was also added to the used SEB exam settings as the <a href="ios_usermanual_en.html#ExamPane" target="_blank">Quit URL</a> parameter, tapping this link allows to quit the exam session without having to enter the Quit Password. Then SEB closes the exam and ends the Single App Mode, which unlocks the device.</p>
 
           <img class="img-responsive" src="images/SEB_TutorialQuitLink.png" />
-          
+
         </div>
-        <!-- / Document Section --> 
-    
-   
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <h3 class="page-header sebnavbar-link" id="UsingWithClassroom">
             <a class="anchorjs-link" href="#UsingWithClassroom"></a>
             Using SEB  with Classroom
@@ -345,91 +345,91 @@
           <p>Using SEB with Apple's <a href="https://itunes.apple.com/app/classroom/id1085319084?mt=8" target="_blank">Classroom</a> solution allows you to easily start secured exams on iPads. This will work with  most web-based assessment solutions. As an exam administrator,  first create a SEB Config File for your exam, containing its address as Start URL. Configure a Quit Password and a Quit URL in these settings and use the mode <a href="ios_usermanual_en.html#ConfigFilePane" target="_blank">for starting Exams</a>. Then upload the shared SEB Config File to a web server. If you like to use an exam portal page, then place a hyperlink to your exam there, using the protocol/scheme seb(s) instead of http(s). Below you can see an example of such an exam portal page (the actual page is available at <a href="http://safeexambrowser.org/exams/" target="_blank">http://safeexambrowser.org/exams/</a>).</p>
 
           <img class="img-responsive" src="images/SEB_TutorialExamPortal.png" />
-            
+
           <p>Open Safari on your iPad and create a bookmark with the same seb(s) URL of the exam Config File on your server. In Safari on iOS you first have to tap the Share button, select "Add Bookmark" and then edit the bookmark to change its URL to the seb(s) address of the exam Config File.</p>
-                   
+
             <img class="img-responsive" src="images/SEB_TutorialClassroomSafariBookmark.png" />
-            
+
           <p>Now you can start your class in Classroom. Use the Navigate button, go to Safari …</p>
-          
+
             <img class="img-responsive" src="images/SEB_TutorialClassroomNavigate.png" />
-            
+
           <p>… and select the bookmark for the SEB exam.</p>
-          
+
           <img class="img-responsive" src="images/SEB_TutorialClassroomNavigateBookmark.png" />
-            
+
           <p>On your students' iPads, SEB will be started, loads the exam Config File and asks for the exam password. You can wait until all students have the password prompt on their screen and communicate the password then. </p>
           <p>Using  default <a href="ios_usermanual_en.html#Security" target="_blank">Security</a> settings in SEB, the &quot;App Self-Lock&quot; (AAC) Single App Mode will be used. Students have to confirm this and their devices will then be locked into SEB until they submit the exam and tap the <a href="#StartingAndQuittingExam">Quit Link on the feedback page</a>. Then their iPads will be unlocked automatically. </p>
-          
+
           <img class="img-responsive" src="images/SEB_TutorialAppSelfLock.png" />
-            
+
           <p>Using  App Self-Lock Single App Mode might have two disadvantages:</p>
           <ul>
             <li>With the latest iOS 10 versions, you cannot use Classroom's Screens View feature (activated with the &quot;Screens&quot; button) to see an overview of all student screens during the exam or to view a single screen in full size.</li>
             <li>If  some students  submit the exam ahead of a  time limit (preset in your exam system), they can use other apps on their devices, what might not be desired.</li>
           </ul>
           <p>This is the reason why another procedure sometimes might be better. For this you need to create another SEB Config File, where you <a href="ios_usermanual_en.html#Security" target="_blank">change the Single App Mode settings</a> as follows:</p>
-          
+
           <img class="img-responsive" src="images/SEB_TutorialClassroomSAM.png" />
-            
+
           <ul>
             <li>Disable the "Use AAC/ASAM If Available" setting</li>
             <li>Enable the &quot;Allow Single App Mode&quot; setting</li>
           </ul>
           <p>Share and save this Config File in the same way as the first one and create a bookmark for it in Safari. </p>
           <p>When you navigate to this bookmark in Classroom, then again on your students' iPads SEB will be opened, loads the exam Config File and asks for the exam password.</p>
-          
+
           <img class="img-responsive" src="images/SEB_TutorialClassroomNavigateBookmarkSAM.png" />
-            
+
           <p>But this time, after students enter the exam password, SEB will wait for the Single App Mode to be started by Classroom, displaying the message &quot;Waiting for Single App Mode&quot;:</p>
-          
+
           <img class="img-responsive" src="images/SEB_TutorialClassroomWaitingForSAM.png" />
-            
+
           <p>Now you need to use the Open App button in Classroom and select SEB, while activating the &quot;Lock in app after opening&quot; switch below.</p>
 
           <img class="img-responsive" src="images/SEB_TutorialClassroomOpenSEB.png" />
-            
+
           <p>This command will lock students' iPads into SEB, remote activating the Single App Mode. In case you didn't use the lock feature in Classroom on your students' iPads before, they will have to confirm this first.</p>
-          
+
           <img class="img-responsive" src="images/SEB_TutorialClassroomLockDevice.png" />
-            
+
           <p>Students can now again answer questions in their exam and submit it when they are finished, but you will be able to use the Screen View feature in Classroom to observe their screens during the exam.</p>
           <p>After submitting the exam and taping the &quot;Quit Safe Exam Browser&quot; Quit Link on the feedback page, students' iPads won't be unlocked, instead SEB will display an alert with the message &quot;Waiting For Single App Mode to End – You will be able to work with other apps after Single App Mode is switched off by your administrator.&quot;. </p>
           <p>Now you can decide when  to unlock  devices of all students at the same time, using the Unlock button in Classroom. </p>
 
           <img class="img-responsive" src="images/SEB_TutorialClassroomUnlockDevice.png" />
-            
+
           <p>&nbsp;</p>
-          
+
           <p>These are only two possible ways of how to use Classroom to start secure exams with SEB. You could also configure SEB on all devices to display an exam portal page and place a link to the current exam there. Then you would just need to use the &quot;Open App&quot; button in Classroom. </p>
         </div>
-        <!-- / Document Section --> 
-    
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <p>Please let us know if you have questions or suggestions for other tutorial topics in our <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">discussion board</a>.</p>
 
         </div>
-        <!-- / Document Section --> 
+        <!-- / Document Section -->
 
-          <!-- / Content --> 
+          <!-- / Content -->
           <p>&nbsp;</p>
         </div>
-        <!-- / Content Column --> 
-        
+        <!-- / Content Column -->
+
       </div>
       <!-- /.row (Content Row)-->
-      
+
       <hr>
-      
+
 <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>

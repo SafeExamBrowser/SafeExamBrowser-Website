@@ -210,14 +210,14 @@
             <li><a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/e7e542a5/" target="_blank">Pre-Release Testing</a>
             </li>
           </ol>
-    
+
         </div>
       </div>
-      <!-- /.row --> 
-    
+      <!-- /.row -->
+
       <!-- Content Row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Left Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group hidden-print hidden-xs hidden-sm">
@@ -230,9 +230,9 @@
             <a href="ios_usermanual_en.html" class="list-group-item active">iOS – User Manual</a>
             <a href="ios_tutorial_en.html" class="list-group-item">iOS – Tutorial</a>
             <a href="ios_release_notes_en.html" class="list-group-item">iOS – Release Notes</a>
-            <a href="../support_en.html" class="list-group-item">Support</a> 
+            <a href="../support_en.html" class="list-group-item">Support</a>
           </div>
-                    
+
           <!-- Sidebar Contents Table -->
           <nav class="bs-docs-sidebar">
             <ul class="nav bs-docs-sidenav">
@@ -247,8 +247,8 @@
                 </ul>
               </li>
               <li> <a href="#download">Installation</a> </li>
-              
-              <!--             
+
+              <!--
               <li> <a href="#starting">Starting and Quitting</a> </li>
               -->
 
@@ -261,7 +261,7 @@
                   <li><a href="#UserInterfacePane">User Interface Pane</a></li>
                   <li><a href="#BrowserPane">Browser Pane</a></li>
                   <li><a href="#ExamPane">Exam Pane</a></li>
-              <!--             
+              <!--
                   <li><a href="#ApplicationsPane">Applications Pane</a></li>
                   <li><a href="#NetworkPane">Network Pane</a>
                     <ul class="nav">
@@ -274,22 +274,22 @@
                   <li><a href="#SecurityPane">Security Pane</a></li>
                 </ul>
               </li>
-                            
+
               <li><a href="#operating_system">Operating System</a></li>
               <li><a href="#license">License</a></li>
             </ul>
-            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Back to top </a> 
+            <a class="back-to-top hidden-print hidden-xs hidden-sm" href=#top> Back to top </a>
           </nav>
-          
+
       </div>
       <!-- /Sidebar Contents Table -->
-      
+
       <!-- Content Column -->
       <div class="col-md-9" role="main">
-      
-        <!-- Document Section --> 
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-      
+
           <!-- Content -->
           <h2></h2>
 
@@ -297,23 +297,23 @@
             <a class="anchorjs-link" href="#introduction"></a>
             SafeExamBrowser 2.1.14 for iOS
           </h2>
-    
+
           <p><strong>This manual is currently being updated for SEB 2.1.14.</strong></p>
           <p>SafeExamBrowser (SEB) is a secure kiosk web browser environment used to carry out e-assessments that run on exam servers. SEB opens a web browser without an address and search bar, loads a pre-configured webpage and locks an iPad (or iPhone or iPod Touch) into a single app kiosk mode. This mode prevents students from switching to other apps, accessing websites and communicating with other students during an exam. SEB enables secure exams on unmanaged iOS devices like students' own iPads as well as on iOS devices owned and managed by an institution. SEB doesn't use a centralized server or cloud service; it can be configured with an API, config files and config links. It can be used with most web-based quiz and e-assessment systems. For improved security and usability, some exam systems provide additional built-in support for SEB. Currently, SEB integrates especially well with learning management systems (LMS) such as Moodle, ILIAS and OpenOLAT and with several non-commercial and commercial exam systems, such as Inspera Assessment.</p>
           <p><strong>The following manual explains how to configure and use SEB for iOS from the perspective of exam administrators.</strong> SEB is a very flexible and modular tool, therefore documentation for examinees on how to use SEB with individual exam setups and the various exam systems it works with should be provided by the institution using SEB or their e-assessment provider.<br />
           </p>
 
         </div>
-        <!-- / Document Section --> 
-    
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <h3 class="page-header sebnavbar-link" id="features">
             <a class="anchorjs-link" href="#features"></a>
             Features
           </h3>
-          
+
           <p>To prevent switching to other apps or interrupting an exam, SEB for iOS uses <a href="#SecurityPane">one of the single app modes</a> provided by the iOS operating system. After  an exam is submitted, SEB  can automatically end the app self-lock (or ASAM) kiosk mode (an exam invigilator could also use a quit password to end the SEB browser session and unlock the device before an exam is finished). </p>
           <p>SEB features an optional Dock displaying an icon for the SEB browser. Tapping this icon or swiping right from the left screen edge reveals a left slider menu with a list of open browser tabs and commands. With these commands in the slider menu and  buttons in the dock you can  (if enabled in settings) quit a browser session, jump back to the start page of an exam, reload the page, navigate back/forward in the browsing history of the exam or  on web pages which are open in additional browser tabs. </p>
           <p>Depending on the single app mode used, auto-correction and predictive text are always or optionally disabled during an exam.  Auto-lock and display  idle sleep is also disabled by default while SEB is running. </p>
@@ -323,99 +323,99 @@
 
           Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x.
         </div>
-        <!-- / Document Section --> 
-    
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <h3 class="page-header sebnavbar-link" id="LMS">
             <a class="anchorjs-link" href="#LMS"></a>
             Using SEB with Supported LMS
           </h3>
-          
+
           <p>Some learning management systems require plugins to be installed to fully support secure exams taken with SEB, others have built-in support. <strong><span class="red">Please note that you  have to configure your exam system correctly to be locked down securely.</span></strong> SEB is generally  locking down exam client devices only, not the exam system or the quiz module of a learning management system. <strong>Check documentation for your exam/learning management system on how to lock it down correctly for an exam.</strong></p>
 
           <h4 class="seb-section-header sebnavbar-link" id="moodle">
             <a class="anchorjs-link" href="#moodle"></a>
             Using SEB with Moodle</strong>
           </h4>
-          
+
           <p> SEB support in Moodle has the following objectives:</p>
           <ol>
             <li>Don't display any links during an exam which would allow to navigate to other sections of Moodle or even other websites. This means the course navigation, link to the user's Moodle profile, logout, link to the University homepage etc. needs to be disabled/hidden. Only the quiz navigation (to navigate to other questions) and the &quot;Finish attempt...&quot; link  should be visible </li>
             <li>Make sure a quiz can only be taken using Safe Exam Browser, display an error message if trying to open the quiz in another web browser. </li>
             <li>Optionally check if the correct version of SEB and  legitimate SEB settings are used.</li>
           </ol>
-          
+
           <p>There are two options how to activate SEB support in Moodle. Both achieve the above objectives 1 and 2. Only the second option also ensures objective 3 is met:</p>
-          
+
           <ol>
             <li>Enable the &quot;classic&quot;  SEB support in Moodle: <a href="https://docs.moodle.org/28/en/Safe_exam_browser" target="_blank">How to activate the SEB secure browser mode in a Moodle quiz</a>. Then configure the quiz at <span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Browser security / Require the use of Safe Exam Browser</span>. This option uses only a basic, not very secure check for the used browser. This may be safe enough if students can only access the exam from centrally managed university computers inside a computer lab/exam room. For other scenarios like BYOD you should use the second option.</li>
             <li> Use the <span class="quote"> Browser Exam Key</span> authentication in Moodle for the connecting SEB version and its settings by installing the <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">quiz access rule plugin</a> in Moodle. In addition you will have to copy the Browser Exam Key hash code string into the quiz settings (<span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Allowed browser keys</span>). This key is generated by SEB when you save the settings you intend to use for the exam. As this key includes a hash (checksum) of both the saved exam settings and the code signature of the used SEB version, you may have to generate and copy several Browser Exam Keys into the Moodle quiz settings, for example one for the Windows version of SEB and one for the Mac version.</li>
           </ol>
-          
+
           <p>Sometimes hiding course navigation, link to the user's Moodle profile, logout etc. doesn't work as expected because <span class="red">some custom Moodle themes don't support the secure browser mode of Moodle correctly, they display links with which students can get out of the quiz during an exam.</span> If this happens only with your customized theme and not the standard Moodle theme, then your theme is not implemented correctly. In that case you should fix the problem in your custom Moodle theme.  You may also create URL filter rules which only allow to access the exam and no other parts of Moodle, but this is not trivial and we cannot provide you with any support on that. </p>
           <p>You may find additional information and help in the discussion boards for <a href="https://sourceforge.net/p/seb/discussion/" target="_blank">SEB</a> and <a href="https://moodle.org/mod/forum/view.php?id=737" target="_blank">Moodle</a>.</p>
-              
+
           <h4 class="seb-section-header sebnavbar-link" id="ILIAS">
             <a class="anchorjs-link" href="#ILIAS"></a>
             <strong>Using SEB with ILIAS</strong>
           </h4>
-          
+
           <p>You can find information about how to install the ILIAS plugin for SEB support <a href="https://github.com/hrz-unimr/Ilias.SEBPlugin" target="_blank">here</a>. Use the regular quiz mode with support for Safe Exam Browser which is integrated in ILIAS.</p>
-          
+
           <p>Please note that currently  support for Safe Exam Browser in ILAS can only be switched on for some roles of a whole installation, not a single exam/course.</p>
-          
+
           <h4 class="seb-section-header sebnavbar-link" id="OpenOLAT">
             <a class="anchorjs-link" href="#OpenOLAT"></a>
             <strong>Using SEB with OpenOLAT</strong>
           </h4>
-          
+
           <p>An assessment mode has been added to the OpenOLAT standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOLAT courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOLAT course elements can be configured for such an exam setting. </p>
-          
+
           <p>One of the many security features is the enforced usage of  Safe Exam Browser. An exam setting can be configured with multiple <a href="#ExamPane">Browser Exam Key</a> keys.</p>
-          
+
           <p>No additional software needs to be installed in order to use the assessment mode together with  Safe Exam Browser. The assessment mode is globally enabled / disabled in Administration -&gt; Modules -&gt; Assessment mode. Within the courses the configuration is done in the course menu. </p>
-          
+
           <p><a href="https://confluence.openolat.org/display/OO103EN/Assessment+mode" target="_blank">More information and a video tutorial about the assessment mode</a>.<br />
           </p>
-          
+
           <p><a href="http://www.openolat.org" target="_blank">More information about OpenOLAT</a>.</p>
-                    
+
         </div>
-        <!-- / Document Section --> 
-    
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <h3 class="page-header sebnavbar-link" id="download">
             <a class="anchorjs-link" href="#download"></a>
             Install SEB for iOS
           </h3>
-          
+
           <p><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank">SafeExamBrowser for iOS is available in the iOS App Store</a> (as freeware). </p>
           <p>If you are interested in testing future versions, you can <a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/e7e542a5/" target="_blank">contact us</a> in the SEB discussion board.<br />
           </p>
-          
+
         </div>
-        <!-- / Document Section --> 
-    
-    
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
 
           <h3 class="page-header sebnavbar-link" id="configuration">
             <a class="anchorjs-link" href="#configuration"></a>
             Configuration
           </h3>
-        
+
           <p>Configuring SEB for iOS works quite similar as in the SEB desktop versions for macOS and Windows. As the .seb Config Files and seb(s):// config links are generally compatible (platform-independent), you can generate configuration files in SEB for macOS or Windows and use it also for the iOS version. However, in the current desktop versions, the setting options specific to the iOS version cannot be configured yet. If you need to change the default values for these iOS SEB setting options, you have to use the built-in settings editor in SEB for iOS. Below you'll find information about how SEB for iOS can be configured generally and a description of all setting options. </p>
 
           <h4 class="seb-section-header sebnavbar-link" id="InitialConfigurationAssistant">
             <a class="anchorjs-link" href="#InitialConfigurationAssistant"></a>
             Initial Configuration Assistant
           </h4>
-        
+
           <p>When the SEB app is started the first time, then a new Initial Configuration Assistant is displayed (instead of the <a href="http://safeexambrowser.org/start" target="_blank">default start web page</a> which older SEB versions display). </p>
           <p>The reason SEB displays such a configuration assistant when it is started is simple: SEB doesn't use any centralized server or cloud service. You don't need to register or buy licenses (and enter license keys after installing) to use SEB. Instead your examinees </p>
           <ul>
@@ -428,7 +428,7 @@
           <p>The current version of the Initial Configuration Assistant shows you four options for starting an exam or configuring SEB for your institution:</p>
 
           <img class="img-responsive" src="images/SEB_InitialConfigurationAssistant.png" />
- 
+
           <ul>
             <li><strong>Open an SEB exam or configuration link from Safari, Mail or a messenger app: </strong>To try this out, you can switch to Safari (as at this point SEB isn't yet running  in a single app mode) and open the <a href="http://safeexambrowser.org/exams/" target="_blank">demo exam portal page</a> there. If you now click one of the  links on this page, iOS will open the  SEB app (after confirming this in the alert Safari displays) and the Config File referred to by the config link will be opened in SEB. This is one way of starting SEB with an individual exam configuration, by opening an seb(s):// link from Safari/Mail or another app. This method is often being used in the macOS and Windows versions, SEB for iOS is compatible with this.</li>
             <li><strong>Enter a URL of an institution which supports SEB:</strong> This is a new feature, called &quot;Automatic Client Configuration&quot;. An institution can place an SEB Config File at a specific path on their web server. SEB will search those predefined paths (there are three variations possible) when the main URL of that institution is typed in. You can try to enter <span class="quote">safeexambrowser.github.io</span>, SEB will then be reconfigured to display the demo exam portal page mentioned above (this is for demonstration, usually you would set up Automatic Client Configuration to work with the top-level URL of your institution, so for example with &quot;myuniversity.edu&quot;).</li>
@@ -440,7 +440,7 @@
             <a class="anchorjs-link" href="#UsingInAppSettings"></a>
             Using In-App Settings
           </h4>
-        
+
           <p>When you start SEB the first time, you can use the <span class="quote">Edit Settings</span> button in the Initial Configuration Assistant. If you already changed the configuration of SEB and it doesn't display the Initial Configuration Assistant anymore, you can  go to the Settings app, find SEB's setting options and enable either the <span class="quote">Allow Editing</span> or <span class="quote">Initiate Settings Reset</span> options. After returning to SEB, you'll have to enter the SEB Admin Password to edit settings or for settings being reset to its default values (then the Initial Configuration Assistant will be displayed again). If you forgot the SEB Admin Password, then you need to delete the SEB app  and re-install it.  </p>
           <p>In the demo settings mentioned above the SEB Admin Password is &quot;seb&quot;. You can also change client settings of SEB for iOS by reconfiguring it with the link <a href="seb://safeexambrowser.org/exams/ClientConfigTesting.seb">Configure Client for Administrators / SEB Testing</a>  on the <a href="http://safeexambrowser.org/exams/" target="_blank">demo portal page,</a> then in the left slider menu (tap SEB logo in the SEB dock at the bottom of the screen or swipe right from left display edge) you will find a command <span class="quote">Edit Settings</span>. The SEB Admin Password used in the demo settings is &quot;seb&quot;, the Quit Password &quot;quit&quot;.</p>
           <p>SEB is generally  customizable to a large extend, to allow  various  use cases and to be compatible to basically every web based examination system. But for the beginning, you often would only need to set the three options in the root settings pane (Start URL, Admin Password, Quit Password).  </p>
@@ -449,9 +449,9 @@
             <a class="anchorjs-link" href="#GeneralPane"></a>
             Settings in the General Pane
           </h4>
-          
+
           <img class="img-responsive" src="images/SEB_SettingsGeneral.png" />
-          
+
           <ul id="seblist">
             <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
             <li><span class="quote">Admin Password</span>: Password required to edit or reset settings. Also if trying to reconfigure SEB with a link &quot;for configuring a client&quot;, if the Admin Passwords in current and new settings don't match, the current Admin Password needs to be entered. It's recommended to always set an SEB administrator password.</li>
@@ -466,9 +466,9 @@
             <a class="anchorjs-link" href="#ConfigFilePane"></a>
             Settings in the Config File Pane
           </h4>
-          
+
           <img class="img-responsive" src="images/SEB_SettingsConfigFile.png" alt="SEB Settings in Config File Section" />
-          
+
           <ul id="seblist">
             <li><span class="quote">File Name</span>: The file name of the SEB Config File containing exported settings (using the Share button in the root pane with <a href="#GeneralPane">General Settings</a>. A Config File uses the file extension &quot;.seb&quot; when saving it for <span class="quote">Starting Exam</span> or <span class="quote">Configuring Clients</span> and &quot;.plist&quot; when saving for &quot;MDM Managed Configuration&quot; (see below).</li>
             <li><span class="quote">Use Config File for ... Starting Exam</span>: A Config File saved with this option will open the exam in SEB,  temporary using the  settings saved in this Config File. The   settings of the SEB app won't be changed permanently.</li>
@@ -481,14 +481,14 @@
             <li><span class="quote">Settings password</span>: Password used to encrypt the Config File, if one is set then it will be prompted when SEB opens the settings. You should use a settings password when a Config File is shared for starting exams. Encryption prevents settings to be altered and to access the exam before communicating the password to examinees.</li>
             <li><span class="quote">Show Settings In App</span>: Shows the  <span class="quote">Edit Settings</span> command in the left slider menu. If this option is enabled in the client configuration, in-app settings will also be available after opening an exam config. Use this for easier setting up and testing.</li>
           </ul>
-                  
+
           <h4 class="seb-section-header sebnavbar-link" id="UserInterfacePane">
             <a class="anchorjs-link" href="#UserInterfacePane"></a>
               Settings in the User Interface Pane
           </h4>
-          
+
           <img class="img-responsive" src="images/SEB_SettingsUserInterface.png" alt="SEB Settings in User Interface Section" />
-          
+
           <ul id="seblist">
             <li><span class="quote">Status Bar Appearance</span>:  Here you can select the iOS Status Bar appearance:
               <ul>
@@ -502,9 +502,9 @@
           </ul>
           <ul id="seblist">
             <li><span class="quote"> <a id="DockAndSlider"></a>SEB Dock and Slider</span>:  The SEB Dock is displaying an icon for the SEB browser on its left. Tapping this icon or swiping right from the left screen edge reveals a left slider menu with a list of open browser tabs and commands. The rightmost icon in the SEB Dock is the Quit Button, for quitting the current exam/browser session. This closes all possibly opened additional browser tabs, reopens the start URL in the exam tab and resets the browser session cookies. Additional command item buttons in the Dock can be enabled or disabled in the sub-pane described below.</li>
-          
+
              <p><img class="img-responsive" src="images/SEB_SettingsDockAndSlider.png" alt="SEB Settings for SEB Dock and Slider" />
-               
+
              </p>
             <ul id="seblist">
               <li><span class="quote">Show Dock</span>: If  SEB Dock isn't enabled, then you can still access command items in the left slider menu. The slider can always be accessed by swiping right from the left display edge.<br>
@@ -520,13 +520,13 @@
             </li>
             <li><span class="quote">Allow Auto-Correction</span>: In AAC/ASAM single app modes, auto-correction and predictive text are always disabled (currently there is no way in iOS of optionally activating these options during these single app modes).</li>
           </ul>
-          
+
           <h4 class="seb-section-header sebnavbar-link" id="BrowserPane">
             <a class="anchorjs-link" href="#BrowserPane"></a>Settings in the Browser Pane
           </h4>
-          
+
           <img class="img-responsive" src="images/SEB_SettingsBrowser.png" alt="SEB Settings in Browser Section" />
-          
+
           <ul id="seblist">
             <li><span class="quote">Restrictions in Exam Tab</span>: The  four options described below are valid in the browser tab displaying the exam. The exam tab is always  topmost in the list of open browser tabs in the left slider menu and its title is displayed in black  color.</li>
             <li><span class="quote">Restrictions in New Tabs</span>: The four options described below are valid in additional browser tabs. New tabs are opened when a link requests to be opened in a new browser window/tab (and their titles are displayed in white color in the slider menu).</li>
@@ -548,9 +548,9 @@
           <h4 class="seb-section-header sebnavbar-link" id="ExamPane">
             <a class="anchorjs-link" href="#ExamPane"></a>Settings in the Exam Pane
           </h4>
-          
+
           <img class="img-responsive" src="images/SEB_SettingsExam.png" alt="SEB Settings in Exam Section" />
-          
+
           <ul id="seblist">
             <li><strong>Quit Link</strong>
               <ul>
@@ -570,27 +570,27 @@
               </ul>
             </li>
           </ul>
-      
+
             <!--
           <h4 class="seb-section-header sebnavbar-link" id="ApplicationsPane">
             <a class="anchorjs-link" href="#ApplicationsPane"></a>
             Settings in the Applications Pane
           </h4>
-          
+
           <ul id="seblist">
             <li><span class="quote">Monitor processes </span>(Winows): If enabled, SEB monitors which processes/applications are running during an exam.  When SEB is started,  an alert/dialogue window is displayed to tell the user to quit the currently running applications (which are not in the list of  permitted processes) and to restart SEB afterwards or to let SEB kill the applications risking that there could be data loss. Prohibited background processes are killed automatically, without user confirmation. Applications which allow to be terminated nicely in macOS are automatically terminated (also without asking the user).<br />
             clients.      </li>
           </ul>
-          
+
           <h5 class="seb-section-header sebnavbar-link">Permitted Processes Section</h5>
-          
+
           <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. </p>
           <p><strong>Using permitted processes is not yet functional in SEB 2.1.2 for macOS</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
-          
+
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesApplications-PermittedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Permitted Processes Tab" />
           </div>
-          
+
           <ul id="seblist">
             <li><span class="quote">Allow  switching to third party applications</span>: If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">cmd-tab</span>) will work, so it's possible to switch to other running applications.<br />
               Use this option only when running SEB in a user account managed by parental controls, with only SEB and the desired applications allowed. Also you should switch on <span class="quote">Simple Finder</span> and don't give users access to other accounts with administrator rights on that computer (see <a href="#secure_environment">Secure Environment</a>).<br />
@@ -602,9 +602,9 @@
             <li><span class="quote">Choose Application...</span> Displays a file requester for choosing an application (or a process executable file) which will be added to the list of permitted processes.</li>
             <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of permitted processes.</li>
           </ul>
-          
+
           <p class="seb-section-header quote">Selected Process details:</p>
-          
+
           <ul id="seblist">
             <li><span class="quote">Active</span>: Indicates if this permitted process item is active (can be used while testing).</li>
             <li><span class="quote">Title</span>: Application title which is displayed in the application chooser.</li>
@@ -625,15 +625,15 @@
               This flag should not be set for macOS applications which allow to be terminated nicely (they are anyways automatically terminated, without asking the user).</li>
             <!--<li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process/application, multiple signatures can be added. This isn't necessary if the processes/applications are signed with a trusted signature (on OS X), because the signature identifies an application independently of the program version. Also you can generate code signatures here. <strong>Not yet available in SEB 2.0.</strong></li>
           </ul>
-          
+
           <p>Java applications (like OpenOffice) can  be used as permitted processes, but require specific settings: The title of their main window must be defined in  the field <span class="quote">Permitted Processes -&gt; Identifier</span> (for example &quot;OpenOffice Calc&quot;), the required main executable in <span class="quote">Permitted Processes -&gt; Executable</span> (&quot;scalc.exe&quot;) and the process which is actually handling the main window in <span class="quote">Permitted Processes -&gt; Window Handling Process(es)</span> (&quot;soffice.bin&quot;). For this example the executable path should be entered as &quot;program&quot; in <span class="quote">Permitted Processes -&gt; Path</span>, as that is the relative path to the main executable from the OpenOffice main directory, which is registered in Windows <span class="quote">App Paths</span>.</p>
-          
+
           <h5 class="seb-section-header sebnavbar-link">Prohibited Processes Section</h5>
-      
+
           <p>List of processes which are prohibited to run during an exam  when <span class="quote">monitor processes</span> is enabled. This prohibited list of processes makes sense because SEB  usually allows to run system processes (SEB for macOS allows all processes and applications signed by Apple to run), but some of them might not be wanted during an exam. With prohibited processes you can prevent some specific background processes and applications from running together with SEB. Use this with care, test if the system continues to run safely when the prohibited processes are killed by SEB.</p>
-          
+
           <p><strong>Using prohibited processes is not yet functional in SEB 2.1.2 for macOS</strong>. You can define and edit permitted processes for the Windows version of SEB here.</p>
-          
+
           <!--
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesApplications-ProhibitedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Prohibited Processes Tab" />
@@ -643,9 +643,9 @@
                 <li><span class="quote">Choose Executable...</span> Displays a file requester for choosing  a process executable or application which will be added to the list of prohibited processes.</li>
                 <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of prohibited processes.</li>
            </ul>
-              
+
           <p class="quote">Selected Process details:</p>
-          
+
           <ul id="seblist">
             <li><span class="quote">Active</span>: Indicates if this prohibited process item is active.</li>
             <li><span class="quote">Executable</span>: Process name, usually the filename of the executable.</li>
@@ -659,23 +659,23 @@
             <li><span class="quote">Force quit</span>: Indicates whether an application/process may be terminated in a not-nice way, what may cause data loss if the application had unsaved data in memory or was just writing to a persistent memory/drive. If this application is safe to be terminated anytime, then enabling this setting  helps to avoid bothering users: Because if this setting is disabled and the application is running when SEB is started, then an alert/dialogue window is displayed to ask the user to quit this prohibited application together with  permitted applications and to restart SEB afterwards (or to let SEB terminate the applications risking that there could be data loss).<br />
               Disabling this setting  does not mean that processes are not killed: Depending on the platform's capabilities, SEB first tries to terminate prohibited processes nicely or asking the user to do it themselves, if this doesn't work then it terminates them anyways (as long as <em>monitor processes</em> is enabled). But enabling <em>Force quit</em> will speed up this process.<br />
               This flag should not be set for macOS applications which allow to be terminated nicely (they are anyways automatically terminated, without asking the user).</li>
-              
+
             <li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process binary/application, multiple signatures can be added. This isn't necessary if the process binaries/applications are signed with a trusted signature (on OS X by Apple), because the signature identifies an application independently of the program version. Also you can generate code signatures here.</li>
           </ul>
           <h4 class="seb-section-header sebnavbar-link" id="NetworkPane">
             <a class="anchorjs-link" href="#NetworkPane"></a>
             Settings in the Network Pane
           </h4>
-          
+
           <h5 class="seb-section-header sebnavbar-link" id="NetworkPaneFilterSection">
             <a class="anchorjs-link" href="#NetworkPaneFilterSection"></a>
             Filter Section
           </h5>
-          
+
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesNetwork-Filter-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Filter Tab" />
           </div>
-      
+
           <ul id="seblist">
             <li><span class="quote">Activate URL filtering</span>: Filter URLs when loading web pages using the filter set defined below.<br />
             </li>
@@ -683,11 +683,11 @@
           </ul>
           <p>The table contains  URL filter rules, consisting of a <span class="quote">allow</span> or <span class="quote">block</span> action. The URL filter always first processes rules with the block action, if one matches, then the according http request is discarded. If no block rule matched, then rules with an allow action are processed. If one matches, then the request is loaded. If no allow rule matched, then the request is discarded.<br />
           Discarding a http request means that a link with the URL is not followed and the user is notified with an alert. When content filtering is enabled, an embedded resource with the according URL is not loaded, in this case there's no notification about that, but it is written to the log (log level Warning on Mac). Create a new rule  by clicking the<span class="codetext">'+'</span> button below the table. Remove a rule by selecting it in the table and clicking the <span class="codetext">'-'</span> button.</p>
-          
+
           <p>SEB automatically creates an allow filter rule for the exact address of the <span class="quote">Start URL</span> defined in these settings. This means that if your <span class="quote">Start URL</span> is <span class="path">example.com</span>, then all pages and resources in the domain example.com  will be allowed. If your <span class="quote">Start URL</span> is <span class="path">example.com/exams/engineering2015-1.html</span>, then only the pages with this exact address will be allowed. In this case you have to manually add an allow filter rule so all pages and resources your exam uses will be allowed (like <span class="path">example.com/exams/*</span>).</p>
-          
+
           <p class="seb-section-header quote">Rules</p>
-          
+
           <ul id="seblist">
             <li><span class="quote">Active</span>:
               Indicates if the rule is active.</li>
@@ -729,24 +729,24 @@
                 <li><span class="codetext"><strong>'*.net'</strong></span> matches all host with any kind of subdomains in the .net top level domain like <span class="codetext">'example.net'</span>, <span class="codetext">'www.example.net'</span>, <span class="codetext">'www.mail.example.net'</span></li>
                 <li><span class="codetext"><strong>'*/*.net'</strong></span> matches all files with a <span class="codetext">'.net'</span> file extension on any host<br />
                   <br />
-                  You should consider using a regular expression if performing complex filtering (when a simple filter doesn't cover all possible cases how that complex URL could be formatted) or split the expression into several filter rules.  
-      
+                  You should consider using a regular expression if performing complex filtering (when a simple filter doesn't cover all possible cases how that complex URL could be formatted) or split the expression into several filter rules.
+
       The order of filter rules is not relevant.<br />
                   <br />
                 </li>
               </ul>
             </li>
           </ul>
-      
+
           <h5 class="sebnavbar-link" id="NetworkPaneCertificatesSection">
             <a class="anchorjs-link" href="#NetworkPaneCertificatesSection"></a>
             Certificates Section
           </h5>
-          
+
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesNetwork-Certificates-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Certificates Tab" />
           </div>
-          
+
           <ul id="seblist">
             <li><span class="quote">Choose TLS/SSL  certificate to embed into settings:</span>  Lists valid TLS/SSL certificates from the macOS keychain (if a TLS/SSL certificate isn't listed here, use the &quot;Advanced…&quot; option below). Selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning when connecting to  https servers with self-signed certificates and you  don't need to distribute TLS/SSL certificates manually to the exam client computers.</li>
             <li><span class="quote">Choose CA  certificate to embed into settings:</span>  Lists valid certificate authority certificates from the macOS keychain (if a CA certificate isn't listed here, use the &quot;Advanced…&quot; option below). Selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning when connecting to  https servers with  certificates which rely on a certificate authority which isn't included in the system's root certificate store. You  don't need to distribute CA certificates manually to the exam client computers when embedding them into a SEB config file.</li>
@@ -757,25 +757,25 @@ certificates extend the system trust store (as if you had manually added them to
             <li><span class="red">SEB only supports embedding TLS/SSL and CA certificates and using certificate pinning if running on macOS 10.9 or later versions.</span> If you want to make sure that embedded certificates and certificate pinning work on all exam clients, then you should enforce the minimum macOS version 10.9 in the Security pane. </li>
             <li>You can also choose <span class="quote">cryptographic identities</span> from the keychain which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). Those will also be added to the .seb settings file. <strong>Use this feature  for creating a .seb file for configuring a client and add the identity or identities you like to use for encrypting SEB config files for starting exams later. Thanks to this feature you won't need to export the identities in Keychain Access and install it on your SEB clients manually</strong>.</li>
           </ul>
-          
+
           <h5 class="seb-section-header sebnavbar-link" id="NetworkPaneProxiesSection">
             <a class="anchorjs-link" href="#NetworkPaneProxiesSection"></a>
             Proxies Section
           </h5>
-          
+
           <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients. <strong>Using those SEB proxy settings is not available in SEB 2.1.2 for macOS</strong>, you have to set proxy settings in System Preferences / Network on each client computer. SEB 2.1 and newer for Windows  supports  individual proxy settings which you can configure here.</p>
-          
+
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesNetwork-Proxies-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Proxies Tab" />
           </div>
           -->
-          
+
           <h4 class="seb-section-header sebnavbar-link" id="SecurityPane">
             <a class="anchorjs-link" href="#SecurityPane"></a>Settings in the Security Pane
           </h4>
-          
+
           <img class="img-responsive" src="images/SEB_SettingsSecurity.png" alt="SEB Settings in Security Section" />
-          
+
           <p>SEB supports the following iOS single app (kiosk/lock down) modes: </p>
           <ul>
             <li><strong>Automatic Assessment Configuration (AAC)</strong>: Named &quot;app self-lock&quot; in the alert presented to the user. This single app mode can be invoked by assessment apps like SEB even when using unmanaged devices owned by students (for bring-your-own-device BYOD scenarios). The examinee needs to confirm starting AAC in an alert. This is the recommended kiosk mode, as it automatically applies all  required restrictions (for example restricting keyboard and dictionary functions).</li>
@@ -793,57 +793,57 @@ certificates extend the system trust store (as if you had manually added them to
             <li><span class="quote">Allow Running on iOS Beta</span>: If you want to test SEB on the beta version of an iOS major release, then you need to explicitly allow this beta version (default value  is &quot;None&quot;). The reason for this setting is, that an iOS beta version might not guarantee full security of the kiosk mode (as it sometimes is the case with the first  beta releases). Also SEB might not yet be adapted to changes in the next iOS major release. With the option &quot;None&quot;, SEB will still run on the final release of for example iOS 13, when we release an adapted SEB version before the public release of iOS 13. With the option &quot;iOS 13&quot;, even if you don't change that setting later, SEB won't run on the beta version of the subsequent major iOS release. You would need to again allow that iOS beta explicitly in settings.</li>
           </ul>
         </div>
-        <!-- / Document Section --> 
-    
-    
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <h3 class="page-header sebnavbar-link" id="operating_system">
             <a class="anchorjs-link" href="#operating_system"></a>
             Operating System
           </h3>
-          
+
           <p>SEB for iOS is running on iPad, iPhone or iPod touch with iOS 9.3.5 or newer.</p>
 
         </div>
-        <!-- / Document Section --> 
-       
-        <!-- Document Section --> 
+        <!-- / Document Section -->
+
+        <!-- Document Section -->
         <div class="bs-docs-section">
-        
+
           <h3 class="page-header sebnavbar-link" id="license">
             <a name="license"></a>
             License
           </h3>
-          
-          <p>Safe Exam Browser for iOS: &copy; 2010-2019 Daniel R. Schneider, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, based on the original idea of Safe Exam Browser by Stefan Schneider, University of Giessen<br />
+
+          <p>Safe Exam Browser for iOS: &copy; 2010-2020 Daniel R. Schneider, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, based on the original idea of Safe Exam Browser by Stefan Schneider, University of Giessen<br />
           Project concept: Thomas Piendl, Daniel R. Schneider, Damian Büchel, Andreas Hefti,  Dirk Bauer, Michael Kern, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  </p>
-          
+
           <p>Safe Exam Browser is released as freeware. The <a href="https://github.com/SafeExamBrowser/seb-mac" target="_blank">source code</a> is  subject to the <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (the  &quot;License&quot;); you may only use these files in compliance with the  License. You may obtain a copy of the License at <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> .</p>
           <p>Important parts of this project have been carried out as part of the  program &quot;<a href="http://www.switch.ch/aaa/" target="_blank">AAA/SWITCH –<br />
       e-Infrastructure for e-Science</a>&quot;  led by <a href="http://www.switch.ch/" target="_blank">SWITCH</a>, the Swiss National Research and Education Network and  the cooperative project &quot;<a href="http://www.switch.ch/uni/projects/learn_infra/" target="_parent">Learning Infrastructure</a>&quot;  (part of the <a href="http://www.crus.ch/homenavigation/home.html?L=2" target="_blank">CRUS</a> program &quot;<a href="http://www.crus.ch/information-programmes/projets-programmes/programme-cus-2013-2016-p-2-information-scientifique-acces-traitement-et-sauvegarde.html?L=1" target="_blank">Information  scientifique: accès, traitement et sauvegarde</a>&quot;) coordinated by  SWITCH, and was supported by funds from the <a href="http://www.ethrat.ch/en" target="_blank">ETH Board</a> and the <a href="http://www.sbfi.admin.ch/?lang=en">State Secretariat for Education, Research  and Innovation</a> (SERI).</p>
 
         </div>
-        <!-- / Document Section --> 
+        <!-- / Document Section -->
 
-          <!-- / Content --> 
+          <!-- / Content -->
           <p>&nbsp;</p>
         </div>
-        <!-- / Content Column --> 
-        
+        <!-- / Content Column -->
+
       </div>
       <!-- /.row (Content Row)-->
-      
+
       <hr>
-      
+
 <!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2019 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>
