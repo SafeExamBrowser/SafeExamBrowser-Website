@@ -228,8 +228,30 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
-          <h2></h2>
     
+    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.4: </h5>
+    <p>SEB 2.4 for Windows is the last feature update before we switch completely to SEB 3.x. It supports the Config Key and session cookie settings, compatible with the SEB-Moodle Deeper Integration, coming in Moodle 3.9.</p>
+    <ul>
+      <li>Config Key feature, hash checksum value to verify settings used by SEB. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. <br>
+        </li>
+      <li> Implemented setting keys to control clearing cookies when starting/ending a session (examSessionClearCookiesOnStart / examSessionClearCookiesOnEnd). This can be used to keep users logged in (SEB started with client settings) after an exam session was started.<br>
+        </li>
+      <li> Now TLS 1.2 is supported for downloading .seb files using sebs:// links.<br>
+        </li>
+      <li> Added more default prohibited processes. As a reminder: You cannot remove these default prohibited processes (SEB Config Tool / Applications / Prohibited Processes), you can just deactivate them by unchecking the &quot;Active&quot; property.<br>
+        </li>
+      <li> Private clipboard should now also work correctly with rich-text editors like TinyMCE (fixed double pasting of text). <br>
+        </li>
+      <li> Fixed two minor issues regarding port and path filtering in URL filter.<br>
+        </li>
+      <li> Fixed: SEB Client crashes when loading client settings which don't contain all key/values.<br>
+        </li>
+      <li> Fixed wrong error message in case service fails to set registry values.<br>
+        </li>
+      <li> Fixed an index out of range exception when starting additional resource with application.<br>
+        </li>
+      <li> Renamed setting Security / &quot;Enable screen capture / PrintScreen&quot; to &quot;Allow screen capture / PrintScreen&quot;.</li>
+    </ul>
     <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.3: </h5>
     <p>SEB 2.3 for Windows offers new features, which increase security and usability significantly.</p>
     <ul>

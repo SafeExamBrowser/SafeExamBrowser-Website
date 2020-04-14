@@ -231,6 +231,23 @@
         
           <!-- Content -->
 			
+		  <h5 id="sebh5">April 14, 2020</h5>
+		  <p><a href="download_en.html#Windows"><strong>Safe Exam Browser 2.4 for Windows released. </strong></a>This version is the last feature update before we switch completely to SEB 3.x. It supports the Config Key and new session cookie settings, compatible with the SEB-Moodle Deeper Integration, coming in Moodle 3.9!.</p>
+          <p>New in SEB 2.4:</p>
+          <ul>
+            <li>Config Key feature, hash checksum value to verify settings used by SEB. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. <br>
+            </li>
+            <li> Implemented setting keys to control clearing cookies when starting/ending a session (examSessionClearCookiesOnStart / examSessionClearCookiesOnEnd). This can be used to keep users logged in (SEB started with client settings) after an exam session was started.<br>
+            </li>
+            <li> Now TLS 1.2 is supported for downloading .seb files using sebs:// links.<br>
+            </li>
+            <li> Added more default prohibited processes. <br>
+            </li>
+            <li> Private clipboard should now also work correctly with rich-text editors like TinyMCE (fixed double pasting of text). <br>
+            </li>
+            <li> Additional bugfixes.</li>
+          </ul>
+          <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes.</p>
 		  <h5 id="sebh5">March 17, 2020</h5>
           <p class="half_linespace">
 			  <strong>Public beta of SEB 3.0.0 for Windows:</strong> The next major version for Windows is now in public beta and can be <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/tag/3.0.0-beta">downloaded from GitHub</a>. SEB 3.x for Windows has been completely refactored and uses Chromium as integrated browser engine. However, SEB 3.0 does not yet provide the complete feature set of SEB 2.x (e.g. no Additional Resources). Below a list of the most prominent new features and changes:
@@ -397,7 +414,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
                 <li>Regular web links to a supported system open directly in SEB. </li>
                 <li>If SEB isn't installed yet, the link opens in Safari and a smart banner shows a button to install SEB from the App Store.</li>
                 <li> Universal Links also work with QR codes: You can print one QR code which users can scan with the camera app (starting with iOS 11). This will then allow examinees to install SEB and start an exam on your system with just one QR code.<br>
-                  </li>
+                </li>
               </ul>
             </li>
             <li> The title of the currently visible webpage tab is displayed underlined in the left side menu. </li>
