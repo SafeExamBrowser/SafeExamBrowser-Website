@@ -227,10 +227,40 @@
         <!-- Content Column -->
         <div class="col-md-9">
         
+          <span class="h5">
+
           <!-- Content -->
-          <h2></h2>
+          Release Notes für <a href="../download_de.html#Windows">SEB 2.4 für Windows</a>:
+		  </span>
+            <p>Safe Exam Browser 2.4 für Windows ist das letzte Update mit neuen Funktionen, bevor wir komplett auf SEB 3.x wechseln. </p>
+            <p><strong>Bitte beachten Sie unsere  Update-Strategie: Wir unterstützen nur die neuste SEB-Version und werden die Download-Links für alle älteren Versionen nach einer Übergangsfrist entfernen.</strong> Nur mit aktuellen SEB-Versionen können Sie die bestmögliche Sicherheit und Stabilität Ihrer Prüfungsumgebung erzielen. <strong> Bevor Sie eine Support-Frage stellen oder einen Fehler melden möchten, installieren Sie bitte die neuste Version und testen Sie, ob das Problem mit der aktuellen Version immer noch auftritt.  </strong>Wir können in Zukunft keine Supportfragen mehr beantworten, wenn die benutzte Version nicht erwähnt wird und nicht bestätigt wird, dass das Problem mit der neusten Version überprüft wurde.</p>
+          <p>Neue Funktionen in SEB 2.4:</p>
+            <ul>
+              <li>Unterstützung des Config Key, mit welchem  sichergestellt werden kann, dass eine Prüfung nur mit korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird.</li>
+              <li>Neue Einstellungs-Optionen, um das Löschen von Cookies beim Starten und Beenden einer Session zu steuern. Diese können dazu benutzt werden, Benutzer eingeloggt zu lassen (SEB mit Client-Einstellungen gestartet), wenn eine Prüfungs-Session gestartet wird.</li>
+              <li>TLS 1.2 wird jetzt beim Laden von .seb-Dateien mittels sebs:// Links unterstützt.</li>
+              <li>Weitere Standard-Applikationen zu der Liste der verbotenen Prozesse hinzugefügt.</li>
+              <li>Die private Zwischenablage funktioniert nun auch  mit Richtext-Editoren wie TinyMCE korrekt (kein doppeltes Einfügen von Text).</li>
+            </ul>
+            <p>Siehe die englischen <a href="https://safeexambrowser.org/windows/win_release_notes_en.html">Release Notes</a> für alle neuen Funktionen.</p>
  
-    <h5 id="sebh5"> Release Notes für <a href="../download_de.html#Windows">SEB 2.2.3 für Windows</a>:</h5>
+    
+			<h5>Release Notes für <a href="../download_de.html#Windows">SEB 2.3 für Windows</a>:</h5>
+          <p>SEB 2.3 bietet neue Funktionen, welche die Sicherheit verbessern und zu besserer Bedienungsfreundlichkeit beitragen.          </p>
+          <p>Neu in SEB 2.3:</p>
+          <ul>
+            <li>Private Zwischenablage (optional, siehe Security-Tab)</li>
+            <li>Inhalte im Browserfenster können mit den Ctrl +/- Tastenkombinationen vergrössert/verkleinert werden</li>
+            <li>Downloads können mit der Option "Allow downloading and uploading files" ein-/ausgeschaltet werden.</li>
+            <li>Der Dialog "Datei öffnen mit... Safe Exam Browser" wird nicht mehr angezeigt, ausser die Einstellung "Open files after downloading" ist eingeschaltet (Down-/Uploads Tab).</li>
+            <li>SpeechSynthesis API kann nun benutzt werden.</li>
+            <li>Wenn PDFs in einem neuen neuen Fenster geöffnet werden sollen, erscheint kein zusätzliches, leeres Browserfenster mehr.</li>
+            <li>Druckfunktion im eingebauten PDF.js Viewer wurde deaktiviert. </li>
+            <li>mailto: Links werden nun ignoriert</li>
+            <li>Sicherheitsproblem beim Beenden von SEB wurde beseitigt, wenn gleichzeitig eine Firefox-Instanz lief.</li>
+          </ul>
+          <p>Siehe die englischen <a href="https://safeexambrowser.org/windows/win_release_notes_en.html">Release Notes</a> für alle neuen Funktionen.</p>
+    <h5 id="sebh5">Release Notes für <a href="../download_de.html#Windows">SEB 2.2.3 für Windows</a>:</h5>
     <p>Safe Exam Browser 2.2.3 für Windows ist ein  wichtiges Sicherheitsupdate für SEB 2.2.x und 2.1.8.</p>
     <ul>
       <li>Fehler bei der Berechnung des Browser Exam Keys wurde beseitigt, welcher auf Windows System mit gewissen Spracheinstellungen auftrat (Schwedisch, möglicherweise Türkisch). Auf diesen Systemen wurde auch die Warnmeldung betreffen irregulären Dateien im SEB-Programmverzeichnis dargestellt.</li>
@@ -352,8 +382,8 @@
                 Aufgrund von Problemen beim Installieren bzw. Deinstallieren von SEB mit dem Windows-Installer (<span class="path">SebWindowsInstall.msi</span>)   wurde ein neuer Installer erstellt, der <strong>zuverlässiger und stabiler</strong> ist (z.B. Rollback, falls es ein Problem während der Installation   gibt). Der neue Installer hat weniger Eingabedialoge und ist <strong>digital signiert</strong>, <span class="half_linespace"> mit dem Zertifikat des &quot;<strong>Verified Publisher</strong>&quot; ETH Zürich</span>.</li>
               <li>Verbessertes Konfigurationsprogramm:<br />
                 Der graphische Editor <span class="path">SebWindowsConfig.exe</span> wurde gründlich überarbeitet und bietet jetzt besseren Komfort und   besseres Aussehen. Nach dem Starten werden die   Standard-Konfigurations-Dateien <em>SebStarter.ini</em> und <em>MsgHook.ini</em> <strong>automatisch</strong> in den Editor geladen. Verschiedene Schriftarten für bessere Lesbarkeit. Schaltflächen zum <strong>Wiederherstellen</strong> geladener und versehentlich geänderter Werte, zum gleichzeitigen Abspeichern beider   Konfigurations-Dateien und zum Verlassen des Editors. <strong>Sicherheitseinstellungen</strong> (z.B. für den Task Manager) können jetzt für <strong>innerhalb und ausserhalb</strong> von SEB definiert werden.</li>
-              <li><span class="half_linespace">Neue Browserkomponente:<br />
-                mit verbessertem, aktualisierten XulRunner, u.a. können nun zusätzliche Browser-Fenster geöffnet werden. <strong>Popup-Fenster</strong> öffnen nicht im Vollbildmodus, sondern füllen den Bildschirm nur teilweise aus, mit Möglichkeit zum <strong>Minimieren und Maximieren</strong> des Fensters. Das Herunterladen von Dateien sollte jetzt ebenfalls funktionieren.</span></li>
+              <li class="half_linespace">Neue Browserkomponente:<br />
+                mit verbessertem, aktualisierten XulRunner, u.a. können nun zusätzliche Browser-Fenster geöffnet werden. <strong>Popup-Fenster</strong> öffnen nicht im Vollbildmodus, sondern füllen den Bildschirm nur teilweise aus, mit Möglichkeit zum <strong>Minimieren und Maximieren</strong> des Fensters. Das Herunterladen von Dateien sollte jetzt ebenfalls funktionieren.</li>
               <li>Fehlerbehebung:  Bei vorzeitiger Beendigung oder Absturz des SEB blieben die Registry-Werte (für den blauen <em>Windows-Sicherheits-Bildschirm</em>) <strong>verstellt </strong>(z.B. war der Task Manager jetzt auch im normalen Betrieb gesperrt). Jetzt kann der Benutzer bei der SEB-Konfiguration nicht nur die Werte für <strong>innerhalb</strong>, sondern auch für <strong>ausserhalb</strong> von SEB festlegen. Geht etwas beim SEB-Betrieb schief und sind die Registry-Werte verstellt, startet man SEB einfach nochmals und verlässt ihn mit der <strong>SEB-Austritts-Sequenz</strong> (z.B. F3_F11_F6)<strong> </strong>wieder. Dies setzt die Registry-Werte wieder auf die normalen Werte zurück, und der Task Manager ist wieder verfügbar.</li>
             </ul>
 <h5 id="sebh5">Release Notes für <a href="../download_de.html#Windows">SEB Windows 1.8.2</a>:</h5>
