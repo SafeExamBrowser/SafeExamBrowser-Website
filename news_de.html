@@ -231,8 +231,28 @@
         <div class="col-md-9">
         
         <!-- Content -->
+
+		  <h5 id="sebh5">2. Mai 2020</h5>
+			
+		  <p class="half_linespace"><a href="https://github.com/SafeExamBrowser/seb-testing/tree/master/ios" target="_blank"><strong>Safe Exam Browser 2.1.16 für iOS veröffentlicht</strong></a>. Diese Version läuft mit Standardeinstellungen unter iOS 13 und behebt einige kleinere Fehler:</p>
+          <ul>
+            
+            <li> Verbesserungen für Barrierefreiheit, vor allem bei Benutzung von VoiceOver. </li>
+            <li>Unterstützung von Tastaturkürzeln auf Hardware-Tastaturen, zum Umschalten zwischen offenen Browsertabs (Ctrl-Tab/Shift-Ctrl-Tab).</li>
+            <li>Tastaturkürzel zum Öffnen/Schliessen des seitlichen Menüs (Befehlstaste/Cmd-M).</li>
+            <li>Verbesserungen bei der Konfiguration mittels MDM-Server (Managed App Configuration).</li>
+            <li>Neue Einstellungsoption zum Sperren von SEB, wenn versucht wird, den Bildschirminhalt aufzunehmen.</li>
+            <li>Neue Option zum Sperren von SEB, wenn eine iPad-Hülle geschlossen wird mit iOS &lt; 13 (da der dann angezeigte iOS-Sperrbildschirm einen Spickzettel beinhalten könnte).</li>
+            <li>Separate Einstellungen zur Kontrolle des Löschens von Cookies zu Beginn und beim Beenden einer Browser-Session. Dies erlaubt, dass Benutzer eingeloggt bleiben können, wenn beispielsweise eine Prüfung mit individuellen Einstellungen in unterstützten Learning Management und Prüfungs-Systemen gestartet wird.</li>
+            <li>Problem beim Berechnen des Config Key mit gewissen Konfigurationsdateien gelöst. Mit dem Config Key kann ein kompatibles Prüfungssystem automatisiert überprüfen, ob auf eine Prüfung mit SEB und den korrekten Einstellungen zugegriffen wird.</li>
+            <li>SEB-Konfigurationsdateien können nun direkt vom iCloud Drive geöffnet werden (mittels Files-App).</li>
+            <li>Problem bei der Behandlung der Query-Parameter im URL-Filter beseitigt (vollständige Kompatibilität mit SEB auf anderen Plattformen).</li>
+          </ul>
+          <p><span class="half_linespace">Siehe die englischsprachigen <a href="ios/ios_release_notes_en.html">Release Notes</a> für alle Änderungen.</span> Das englischsprachige <a href="ios/ios_usermanual_en.html">Benutzerhandbuch</a> wird momentan aktualisiert. In unserem Diskussionsforum gibt es einen <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">Abschnitt</a> für Fragen zu SEB für iOS.</p>
+
 			
  		  <h5 id="sebh5">14. April 2020</h5>
+			
 		  <p><a href="download_de.html#Windows"><strong>Safe Exam Browser 2.4 für Windows</strong></a> ist das letzte Update mit neuen Funktionen, bevor wir komplett auf SEB 3.x wechseln. Neue Funktionen in SEB 2.4:</p>
           <ul>
             <li>Unterstützung des Config Key, mit welchem  sichergestellt werden kann, dass eine Prüfung nur mit korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird.</li>
@@ -243,7 +263,9 @@
           </ul>
           <p class="half_linespace">Weitere Infos zu allen Neuerungen finden sich in den<a href="macosx/mac_release_notes_de.html"> Release Notes.</a></p>
 			
+			
           <h5 id="sebh5">17. März 2020</h5>
+			
           <p class="half_linespace">
 			  <strong>Öffentliche Beta-Version von SEB 3.0.0 für Windows:</strong> Eine erste Beta-Version der nächsten Hauptversion von SEB für Windows wurde veröffentlicht und kann von <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/tag/3.0.0-beta">GitHub heruntergeladen werden</a>. SEB 3.x für Windows wurde komplett erneuert und benutzt Chromium als integrierte Browser-Engine. Version 3.0 beinhaltet jedoch noch nicht den kompletten Funktionsumfang von SEB 2.x (z.B. keine Additional Resources). Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:
 		  </p>
@@ -263,11 +285,15 @@
 			  Bitte beachten Sie, dass Entwicklung und Testing noch nicht abgeschlossen sind. Die Beta-Version ist deshalb unter keinen Umständen für den Einsatz in einem Produktivsystem vorgesehen! Fehler oder Verbesserungsvorschläge können auf <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/issues">GitHub gemeldet werden</a>. Die Veröffentlichung der finalen Version ist im Moment für die erste Woche im Mai 2020 geplant.
 		  </p>
 			
+			
         <h5 id="sebh5">9. März 2020 </h5>
+			
         <p class="half_linespace">Das <a href="consortium/members.html">Safe Exam Browser Konsortium</a> <span lang="DE-CH">bietet jetzt die neue Platin-Mitgliedschaft an, welche für Organisationen wichtig ist, die individualisierte Versionen von Safe Exam Browser wünschen. Zu den Vorteilen der Platin-Mitgliedschaft gehören das Vorschlagen von SEB-Entwicklungszielen, Mitwirkung beim Definieren der Liste von neuen Funktionalitäten und persönliches Consulting durch die SEB-Entwickler (inklusive für das Erstellen von individualisierten SEB-Versionen). Als Platin-Mitglied haben Sie neu die Möglichkeit, individualisierte SEB-Versionen mit Ihrer Codesignatur zu versehen, und trotzdem alle Sicherheitsfunktionen zu nutzen.</span></p>
         Das SEB-Konsortium ermöglicht und finanziert die nachhaltige Weiterentwicklung und Pflege  des Safe Exam Browser Open Source Projektes. Die Stiftung SWITCH (Technologie- und Dienstleistungsplattform der Schweizer Hochschulen) und die ETH Zürich haben  das <a href="consortium/members.html">SEB-Konsortium</a>  im Jahr 2016 gegründet, welches momentan aus 20 Mitgliedern aus verschiedenen europäischen Ländern, Australien und der USA besteht. Das Konsortium steht weiteren Mitgliedern aus dem Bereich der Bildungsinstitutionen, Unternehmen, Behörden sowie Stiftungen offen. Mit der Beteiligung weiterer Konsortiumsmitglieder und der SEB Open Source Community wird die weitere Zukunft der SEB Open-Source Software sichergestellt. 
             
+			
           <h5 id="sebh5">31. Oktober 2019</h5>
+			
           <p id="half_linespace"><span class="half_linespace"><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 2.1.4 für macOS veröffentlicht</strong></a>. Diese  Version erhöht die Sicherheit in Prüfungen und verbessert die Bedienungsfreundlichkeit, beispielsweise beim Verwenden von zusätzlichen Ressourcen in mehreren Fenstern. <strong>Bitte führen Sie ein zeitnahes Update durch</strong>, um bestmögliche Sicherheit und Kompatibilität mit neuen macOS-Versionen sicherzustellen.</span> Wie zuvor kommuniziert, unterstützen wir keine älteren SEB-Versionen mehr. <strong>Bevor Sie  eine Support-Anfrage schreiben oder uns einen Fehler melden, installieren Sie bitte die neuste SEB-Version. Überprüfen Sie dann, ob das Problem auch noch mit der neusten Version nachvollziehbar ist.</strong></p>
           <ul id="seblist2">
             <li>SEB 2.1.4 ist vollständig kompatibel mit  macOS 10.15 Catalina.</li>
@@ -291,7 +317,9 @@
           </ul>
           <p class="half_linespace">Weitere Infos zu allen Neuerungen finden sich in den<a href="macosx/mac_release_notes_de.html"> Release Notes.</a></p>
           
+			
 		  <h5 id="sebh5">19. September 2019</h5>
+			
 		  <p class="half_linespace"><a href="https://github.com/SafeExamBrowser/seb-testing/tree/master/ios" target="_blank"><strong>Safe Exam Browser 2.1.15 für iOS veröffentlicht</strong></a>. Diese Version läuft mit Standardeinstellungen unter iOS 13 und behebt einige kleinere Fehler:</p>
           <ul>
             <li> Es ist nun möglich, selbst bei Client-Einstellungen mit gesetztem Quit-Passwort eine andere Prüfung mit eigenen Einstellungen zu starten oder SEB umzukonfigurieren, solange keine Prüfung läuft.</li>
@@ -301,7 +329,9 @@
           </ul>
           <p><span class="half_linespace">Siehe die <a href="ios/ios_release_notes_en.html">Release Notes</a> für alle Änderungen des vorherigen Feature-Updates 2.1.14.</span> Das englischsprachige <a href="ios/ios_usermanual_en.html">Benutzerhandbuch</a> wird momentan aktualisiert. In unserem Diskussionsforum gibt es einen <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">Abschnitt</a> für Fragen zu SEB für iOS.</p>
 
+			
 		  <h5 id="sebh5">30. August 2019</h5>
+			
           <p><strong><a href="download_de.html#Windows">Safe Exam Browser 2.3 für Windows veröffentlicht</a></strong>. SEB 2.3   bietet neue Funktionen, welche die Sicherheit verbessern und zu besserer Bedienungsfreundlichkeit beitragen.</p>
           <p><strong>Bitte beachten Sie unsere neue Update-Strategie: Wir unterstützen nur die neuste SEB-Version und werden die Download-Links für alle älteren Versionen nach einer Übergangsfrist entfernen.</strong> Nur mit aktuellen SEB-Versionen können Sie die bestmögliche Sicherheit und Stabilität Ihrer Prüfungsumgebung erzielen. <strong>Bevor Sie  eine Support-Anfrage schreiben oder uns einen Fehler melden, installieren Sie bitte die neuste SEB-Version. Überprüfen Sie dann, ob das Problem auch noch mit der neusten Version nachvollziehbar ist.</strong></p>
           <p>Neu in SEB 2.3:</p>
@@ -318,7 +348,9 @@
           </ul>
           <p>Siehe  die englischen <a href="windows/win_release_notes_en.html">Release Notes</a> für alle neuen Funktionen.</p>
 			
+			
           <h5 id="sebh5">27. August 2019</h5>
+			
 		  <p class="half_linespace"><a href="https://github.com/SafeExamBrowser/seb-testing/tree/master/ios" target="_blank"><strong>Safe Exam Browser 2.1.14 für iOS veröffentlicht</strong></a>. Trotz des nur kleinen Versionsnummersprungs (bedingt durch die laufende Harmonisierung der SEB Funktionalität und Versionsnummern zwischen den unterstützten Plattformen), beinhaltet diese Version&nbsp;wichtige neue Funktionen und Verbesserungen. Diese erlauben, Web-basierte Prüfungen auf iOS-Geräten mit der höchst möglichen Absicherung durchzuführen. SEB 2.1.14 für iOS bietet fast alle Funktionen der Desktop-Versionen von Safe Exam Browser und sollte voll kompatibel sein mit Prüfungs- und Learning Management Systemen mit bereits eingebauter SEB-Unterstützung. Einige neue Funktionen sind  momentan sogar nur in der iOS-Version vorhanden,  werden in Zukunft aber auch in der Mac und Windows-Version verfügbar sein.</p>
 		  <p>Neue Funktionalität in SEB 2.1.14:</p>
           <ul>
