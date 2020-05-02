@@ -230,8 +230,36 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
-          <h2></h2>
-
+          <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.16</a>:</h5>
+          <ul id="seblist">
+            <li>Improved accessibility when using VoiceOver: Added accessibility labels and hints to buttons and excluded unnecessary UI elements. After opening the left side menu,  VoiceOver focus moves to the first browser tab entry</li>
+            <li> Added keyboard shortcut Cmd-M to toggle left side menu (show/hide).</li>
+            <li>Now supporting hardware keyboard shortcuts (Ctrl-Tab/Shift-Ctrl-Tab) to switch browser tabs.</li>
+            <li> Improved reconfiguration with MDM Managed App Configuration by changing policy when to reconfigure with MDM settings:
+              <ol>
+                <li> When reconfiguring (back) to client settings</li>
+                <li> When opening in-app settings, SEB indicates if MDM settings were received and asks if those should be applied.</li>
+                <li> When SEB is running with client settings, there is only one browser tab (with the exam web page) open and the current URL (still) is the Start URL. Please note that this won't work if your Start URL redirects to another page.</li>
+                <li> When secure client settings were quit and SEB is waiting to start another session.<br>
+                  </li>
+                <li> When opening SEB or returning back to the SEB app, cases 3 or 4 apply or in-app settings are open (user is asked if MDM settings should be applied).</li>
+              </ol>
+            </li>
+          
+            <li> Added new option to lock SEB when it's attempted to capture the screen, for example when connecting it by cable to a Mac and using QuickTime Player.</li>
+            <li> Added new option to lock SEB when closing an iPad case on iOS &lt;13, as the displayed iOS lock screen could contain a cheat sheet. Before unlocking, exam supervisors/proctors should check if the lock screen wallpaper of the device is displaying a cheat sheet. Then they can unlock SEB by entering the quit/unlock password. This lock screen is controlled by the new setting <em>mobileSleepModeLockScreen</em>  (InAppSettings: Security / Lock Screen After Sleep Mode).</li>
+            <li> Implemented separate settings to control clearing cookies when starting/ending session   (keys <em>examSessionClearCookiesOnStart</em> / <em>examSessionClearCookiesOnEnd</em>). This allows users to stay logged-in, for example when logging in after SEB was started with client settings and then an exam with individual settings is started in some learning management and exam systems. This prevents security issues with users staying logged-in after reconfiguring SEB with new settings, if this wasn't actually intended.</li>
+            <li>Fixed issues when calculating the Config Key hash with specific settings. Compatible assessment systems can use this hash value to automatically verify that an exam is accessed with correct settings.</li>
+            <li> Allow to open SEB config files from iCloud Drive (using Files app). In previous versions, the file needed to be downloaded manually before opening it in SEB.</li>
+            <li> Fixed that the URL filter didn't treat query strings consistently between SEB versions on Mac and Windows.</li>
+            <li> Fixed client configuration encrypted with password wasn't compatible between the iOS/macOS and the Windows SEB versions.</li>
+            <li> Fixed setting Browser Features / &quot;Show URLs: Always&quot; couldn't be selected in In-App-Settings and activating this option wasn't showing the page URL in the side menu.</li>
+            <li> If checking server trust with embedded certificates, resources in subdomains of already trusted domains are now trusted as well, according to behavior in other web browsers.</li>
+            <li>Replaced key string mobileShowSettings with string showSettingsInApp in default settings.</li>
+            <li>Added error message in case AAC couldn't be started properly on older iOS versions, suggesting to restart the device.</li>
+            <li>Changed left side menu &quot;SafeExamBrowser version number&quot; title to a button which closes the side menu for better accessibility.</li>
+            <li>Activated text scaling (Dynamic Type) for most UI strings (currently  commands in the left side menu are not yet scaled, this will be added in a later version).</li>
+          </ul>
           <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.15</a>:</h5>
           <ul id="seblist">
             <li>Runs on iOS 13 with default settings  (without having to set the &quot;Allow Running on iOS Beta&quot; option in Settings/Security to iOS 13).</li>
@@ -304,29 +332,29 @@
             <li>QR codes can now contain an optional query string, for example to identify a specific user or exam.<br>
             </li>
             <li>Specific assessment systems can be accessed using Universal Links: <br>
-              </li>
+            </li>
             <li>A regular web link to a supported system opens directly in SEB. <br>
-              </li>
+            </li>
             <li>If the user doesn’t have SEB installed yet, the link opens in Safari and a smart banner shows a button to install SEB from the App Store.<br>
-              </li>
+            </li>
             <li>Using deep linking, SEB can open direct links to all pages of a website. <br>
-              </li>
+            </li>
             <li>Universal Links also work with QR codes: You can print one QR code which users can scan with the camera app (starting with iOS 11). This will then allow examinees to install SEB and start an exam on your system with just one QR code.<br>
-              </li>
+            </li>
             <li>On supported systems, users can log in with their passwords saved in iCloud Keychain. <br>
-              </li>
+            </li>
             <li>The title of the currently visible webpage tab is displayed underlined in the left side menu. <br>
-              </li>
+            </li>
             <li>Fixed a hyperlink compatibility issue. This solves problems with some website features previously not working in SEB for iOS.<br>
-              </li>
+            </li>
             <li>Fixed a security issue when accessing the settings editor.<br>
-              </li>
+            </li>
             <li>SEB for iOS now can use embedded TLS and CA server certificates and certificate pinning for higher security when accessing exam servers. Use config files saved in the SEB versions for supported desktop platforms.<br>
-              </li>
+            </li>
             <li>You can configure a minimum required iOS version. SEB will then refuse to run on an older iOS version, for example for security reasons and to ensure availability of latest web technologies in the iOS WebKit browser engine.<br>
-              </li>
+            </li>
             <li>New setting for a browser user agent suffix, which is appended to all regular user agent strings.<br>
-              </li>
+            </li>
             <li>Stability and security improvements.<!-- / Content -->          </li>
           </ul>
           <p>&nbsp;</p>
