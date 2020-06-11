@@ -232,12 +232,15 @@
         
         <!-- Content -->
 
-		  <h5 id="sebh5">04. Juni, 2020</h5>
+		  <h5 id="sebh5">11. Juni 2020</h5>
+          <p class="half_linespace"> Eine kleine Zahl der rund 130'000 Benutzer, welche bereits Safe Exam Browser 3.0 herunter geladen haben, meldeten uns Probleme beim Starten und nach dem Beenden der Applikation. Wir haben diese Fälle untersucht und es scheint, dass in allen eine Antivirus/Anti-Malware Software diese Probleme verursacht hat. Manche dieser Sicherheitstools haben SEB fälschlicherweise als Schadsoftware identifiziert (falsch positive Erkennung mittels Heuristiken und ähnlichen Algorithmen). Dies hat wahrscheinlich mit den verbesserten Sicherheitsfunktionen in SEB zu tun, wie der konstanten Überwachung der Registry-Einstellungen, welche SEB während der Prüfung anpasst. Die betreffenden Antiviren-Programme blockieren Teile von SEB, wie den SEB Windows Service (Hintergrunddienst). Dies führt dann dazu, dass SEB nicht starten kann oder in manchen Fällen gewisse Registry-Einstellungen nicht mehr zurücksetzen kann (letzteres scheint nur dann aufzutreten, wenn zusätzlich noch der Windows-Aktualisierungs-Prozess läuft, wenn SEB gestartet wurde).</p>
+          <p class="half_linespace"><strong>Wir arbeiten an einer Lösung für diese Probleme und haben ausserdem die Hersteller der uns gemeldeten Antiviren-Programme aufgefordert, die falsch positive Klassifizierung von SEB zu korrigieren. Um solche Probleme zu vermeiden, empfehlen wir momentan <a href="download_de.html#Windows">SEB 2.4</a> zu benutzen.</strong></p>
+          
+		  <h5 id="sebh5">04. Juni 2020</h5>
           <p class="half_linespace">
 		  <strong><a href="download_en.html#Windows">Chrominimum 1.0.0 für Windows</a></strong>: Da SEB 3.0 noch keine WebRTC-Funktionalität unterstützt (z.B. Zugriff auf die Webkamera durch Web-Applikationen), haben wir einen minimalen Browser implementiert, der WebRTC unterstützt und als Drittapplikation in eine SEB-Konfiguration eingebunden werden kann. Chrominimum kann von <a href="https://github.com/SafeExamBrowser/Chrominimum/releases/tag/1.0.0">GitHub</a> heruntergeladen werden.</p>
 			
 		  <h5 id="sebh5">28. Mai 2020</h5>
-			
           <p class="half_linespace">
 			  <strong><a href="download_de.html#Windows">Safe Exam Browser 3.0.0 für Windows</a></strong>: Die neue Hauptversion von SEB für Windows wurde veröffentlicht. SEB 3.x für Windows wurde komplett überarbeitet und benutzt Chromium als integrierte Browser-Engine.  Dies erlaubt eine bessere Integration der Browser-Funktionalität in die SEB Applikation und verbesserte Stabilität, Sicherheit und Geschwindigkeit. Die aktuelle Chromium Browser-Engine garantiert ausserdem sehr gute Kompatibilität mit modernen  Web-Applikationen. Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:
 		  </p>
@@ -256,7 +259,6 @@
 		  <p><span class="half_linespace">Version 3.0 beinhaltet  noch nicht den kompletten Funktionsumfang von SEB 2.x.</span> <span class="half_linespace">Weitere Infos  finden sich in den<a href="/windows/win_release_notes_en.html"> Release Notes.</a></span></p>
 			
 		  <h5 id="sebh5">2. Mai 2020</h5>
-			
 		  <p class="half_linespace"><a href="https://github.com/SafeExamBrowser/seb-testing/tree/master/ios" target="_blank"><strong>Safe Exam Browser 2.1.16 für iOS veröffentlicht</strong></a>. Diese Version unterstützt Tastaturkürzel auf Hardware-Tastaturen, verbessert die Barrierefreiheit, Sicherheit und MDM-Verteilung/Konfiguration. Die Integrierung in Learning Management Systeme wird erleichtert und verbessert, beispielsweise ist SEB 2.1.16 vollständig kompatibel mit der massiv verbesserten SEB-Moodle Integration in der kommenden Moodle-Version 3.9.</p><ul>
             
             <li> Verbesserungen für Barrierefreiheit, vor allem bei Benutzung von VoiceOver. </li>
