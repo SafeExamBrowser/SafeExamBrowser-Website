@@ -226,8 +226,18 @@
         
         <!-- Content Column -->
         <div class="col-md-9">
+			<h5 id="sebh5">Release Notes für <a href="../download_en.html#Windows">SEB 3.0.1 für Windows</a>:</h5>
+			<p>Version 3.0.1 behebt ein Problem von SEB 3.0.0 welches vor allem einige Benutzer in BYOD-Szenarien gemeldet haben. Die neue Version sollte verhindern, dass Anti-Malware-Software SEB fälschlicherweise als Malware detektiert (False-Positive-Erkennung durch Heuristik und ähnliche Algorithmen). In manchen Fällen führte dies dazu, dass der SEB-Windows-Service Einstellungen in der Windows Registry nicht korrekt setzen resp. zurücksetzen konnte (z.B. für die Ein/Aus-Optionen) und führte dazu, dass SEB 3.0.0 nicht erfolgreich gestartet werden konnte. Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:</p>
+			<ul>
+				  <li>Der SEB-Service wird nun standardmässig ignoriert.</li>
+				  <li>Browser-Engine auf Version 81.3.100 (Chromium-Version 81.0.4044.138) aktualisiert.</li>
+				  <li>Problem mit inkorrekter Erkennung einer virtuellen Maschine behoben.</li>
+				  <li>Problem mit Leerzeichen in Dateipfaden von SEB-Konfigurationen behoben.</li>
+				  <li>Problem mit Favicon behoben.</li>
+				  <li>Problem mit Audio/Video-Wiedergabe beim Schliessen eines Browser-Fensters behoben.</li>
+			</ul>
 			
-			<span class="h5">Release Notes für <a href="../download_de.html#Windows">SEB 3.0 für Windows</a>:</span>
+			<span class="h5">Release Notes für <a href="../download_de.html#Windows">SEB 3.0.0 für Windows</a>:</span>
 		  	<p>Die nächste Hauptversion von SEB für Windows. SEB 3.x für Windows wurde komplett erneuert und benutzt Chromium als integrierte Browser-Engine. Version 3.0 beinhaltet jedoch noch nicht den kompletten Funktionsumfang von SEB 2.x (siehe unten). Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:</p>
 		  	<ul>
 			  <li>Neue, integrierte Browser-Engine (Chromium Version 79.0.3945.130 für SEB 3.0).</li>

@@ -243,6 +243,40 @@
         <a class="anchorjs-link" href="#Windows"></a>
         Windows
       </h3>
+			
+	  <!-- Download Box SEB 3.x -->
+      <div class="well">
+        <p>
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_3.0.1/SEB_3.0.1.163_SetupBundle.exe/download" target="_blank" alt="Download SEB for Windows">
+            <span class="glyphicon glyphicon-download seb-button-icon"></span>
+            <span class="seb-button-text">Safe Exam Browser 3.0 für Windows</span>
+          </a>
+        </p>
+        <p><strong>Safe Exam Browser 3.0.1 für Windows 8.1 and 10</strong><br />
+          <span class="codetext">SHA1: 8d7e987bd4997b0350a7afcba4b51c3dcfed52b9</span></p>
+       	<p><a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/download/3.0.1/SEB_3.0.1.163_SetupBundle.exe" target="_blank">Download</a> von unserer <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/tag/3.0.1" target="_blank">GitHub Projekt-Seite</a>. <br />
+        </p>
+        <p>Die nächste Hauptversion von SEB für Windows. SEB 3.x für Windows wurde komplett erneuert und benutzt Chromium als integrierte Browser-Engine. Version 3.0 beinhaltet jedoch noch nicht den kompletten Funktionsumfang von SEB 2.x (z.B. keine Additional Resources). Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:
+		  </p>
+		  <ul>
+			  <li>Neue, integrierte Browser-Engine (Chromium Version 81.0.4044.138).</li>
+			  <li>Dezidierte Kompilierung für 32-bit und 64-bit Betriebssysteme.</li>
+			  <li>Unterstützt den Wechsel des Kiosk-Modus beim Umkonfigurieren (z.B. von Create New Desktop zu Disable Explorer Shell).</li>
+			  <li>Action Center (Seitenmenü) mit gleicher Funktionalität wie die Taskbar (d.h. Zugriff auf Applikationen und Systemeinstellungen).</li>
+			  <li>Sperrbildschirm der aktiviert wird wenn ein verbotener Prozess nicht beendet werden kann.</li>
+			  <li>Zugriff auf die Entwickler-Tools der Browser-Engine (für Webentwickler).</li>
+			  <li>Echtzeit-Zugriff auf das Applikations-Protokoll von SEB (z.B. zum Testen des URL-Filters).</li>
+			  <li>Neue Einstellungen zur Kontrolle der Browser-Session (für die SEB-Moodle Deeper Integration).</li>
+			  <li>Verbesserte Benutzeroberfläche mit neuen Funktionen (z.B. Vorschau von offenen Fenstern in der Taskview [ALT+TAB]).</li>
+			  <li>Komplett automatisiertes Build-System mit Unit-Tests</li>
+		  </ul>
+		  <p>Version 3.0.1 behebt ein Problem von SEB 3.0.0 welches vor allem einige Benutzer in BYOD-Szenarien gemeldet haben. Die neue Version sollte verhindern, dass Anti-Malware-Software SEB fälschlicherweise als Malware detektiert (False-Positive-Erkennung durch Heuristik und ähnliche Algorithmen).</p>
+		  <p>SEB 3.0.1 greift standardmässig nicht mehr auf die Registry zu. Das heisst, dass die Ein/Aus-Optionen (z.B. Herunterfahren oder Neustarten) nicht mehr blockiert und die Optionen auf dem Windows Security Screen (erreichbar via Ctrl+Alt+Del) nicht entfernt werden.</p>
+		  <p>SEB verhindert weiterhin den Zugriff auf den TaskManager. Um das aktuelle Verhalten beizubehalten kann die neue Einstellung "Ignore SEB Service" (setting key sebServiceIgnore = false) im Konfigurationstool deaktiviert werden. Wenn man den SEB Windows Service weiterhin benutzt, kann es sein, dass einige Studenten ihre Anti-Malware-Software deaktivieren oder gar deinstallieren müssen, um SEB starten zu können wenn diese Softwares SEB nicht korrekt erkennen und nicht blockieren. Wir haben die Hersteller von Anti-Malware-Applikationen gebeten, die falsche Erkennung von SEB 3.0 zu korrigieren und haben bis jetzt von Avast wie auch Bitdefender eine positive Rückmeldung erhalten. Bitte informieren Sie uns über allfällige andere Anti-Malware-Hersteller, welche SEB blockieren (Produkt Name und Version).</p>
+        <p><span class="half_linespace">Weitere Infos in den <a href="windows/win_release_notes_de.html">Release Notes</a> und im englischen <a href="windows/win_usermanual_en.html">Handbuch</a>.</span></p>
+		<p>Da SEB 3.0 noch keine WebRTC-Funktionalität unterstützt (z.B. Zugriff auf die Webkamera durch Web-Applikationen), haben wir einen minimalen Browser mit WebRTC implementiert, der als Drittapplikation in eine SEB-Konfiguration eingebunden werden kann. Mehr Informationen sind bei <a href="https://github.com/SafeExamBrowser/Chrominimum/releases/tag/1.0.0">Chrominimum auf GitHub</a> zu finden.</p>
+      </div>
+      <!-- /Download Box -->
       
       <!-- Download Box SEB 2.x -->
       <div class="well">
@@ -253,7 +287,7 @@
           </a> 
         </p>
         
-        <p><strong>Aktuelle Version von Safe Exam Browser für Windows 7, 8.1 und 10</strong><br />
+        <p><strong>Safe Exam Browser 2.4.0 für Windows 7, 8.1 und 10</strong><br />
           <span class="codetext">SHA1: 8c50344da1ab9abadde90d8b269b068feaf79e6d</span></p>
         <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.4/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von unserer <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.4" target="_blank">GitHub Projekt-Seite</a>. <br />
         </p>
@@ -282,41 +316,6 @@
         </ul>
         <p><span class="half_linespace">Weitere Infos in den <a href="windows/win_release_notes_de.html">Release Notes</a> und im englischen <a href="windows/win_usermanual_en.html">Handbuch</a>.</span></p>
         
-      </div>
-      <!-- /Download Box -->
-
-      <!-- Download Box SEB 3.x -->
-      <div class="well">
-        <h4>Safe Exam Browser 3.0 für Windows
-			<!--
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_3.0/SEB_3.0.0.151_SetupBundle.exe/download" target="_blank" alt="Download SEB for Windows">
-            <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.0 für Windows</span>
-          </a> -->
-        </h4>
-        <p><strong>Aktuelle Version von Safe Exam Browser für Windows 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: a67444c668f52c8880e2b6cb81f4cff70f6c6338</span></p>
-        <p class="half_linespace"><strong>Wichtiger Hinweis: Eine kleine Zahl der rund 130'000 Benutzer, welche bereits Safe Exam Browser 3.0 herunter geladen haben, meldeten uns Probleme beim Starten und nach dem Beenden der Applikation.</strong> Wir haben diese Fälle untersucht und es scheint, dass in allen eine Antivirus/Anti-Malware Software diese Probleme verursacht hat. Manche dieser Sicherheitstools haben SEB fälschlicherweise als Schadsoftware identifiziert (falsch positive Erkennung mittels Heuristiken und ähnlichen Algorithmen). Dies hat wahrscheinlich mit den verbesserten Sicherheitsfunktionen in SEB zu tun, wie der konstanten Überwachung der Registry-Einstellungen, welche SEB während der Prüfung anpasst. Die betreffenden Antiviren-Programme blockieren Teile von SEB, wie den SEB Windows Service (Hintergrunddienst). Dies führt dann dazu, dass SEB nicht starten kann oder in manchen Fällen gewisse Registry-Einstellungen nicht mehr zurücksetzen kann (letzteres scheint nur dann aufzutreten, wenn zusätzlich noch der Windows-Aktualisierungs-Prozess läuft, wenn SEB gestartet wurde).</p>
-        <p class="half_linespace">Wir arbeiten an einer Lösung für diese Probleme und haben ausserdem die Hersteller der uns gemeldeten Antiviren-Programme gebeten, die falsch positive Klassifizierung von SEB zu korrigieren.<strong> Um solche Probleme zu vermeiden, empfehlen wir momentan <a href="download_de.html#Windows">Safe Exam Browser 2.4</a> zu benutzen.</strong></p>
-        <p class="half_linespace">Falls Sie trotzdem SEB 3.0 benutzen möchten, können Sie Studierende, welche auf Probleme stossen, anweisen Antivirus-Software zu deaktivieren, wenn sie SEB installieren und starten.</p>
-        <p><a href="https://sourceforge.net/projects/seb/files/seb/SEB_3.0/SEB_3.0.0.151_SetupBundle.exe/download" target="_blank">Download von Safe Exam Browser 3.0</a> von unserer SourceForge Projekt-Seite. <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/download/3.0.0/SEB_3.0.0.151_SetupBundle.exe" target="_blank">Download</a> von unserer <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/tag/3.0.0" target="_blank">GitHub Projekt-Seite</a>. <br />
-        </p>
-        <p>Die nächste Hauptversion von SEB für Windows. SEB 3.x für Windows wurde komplett erneuert und benutzt Chromium als integrierte Browser-Engine. Version 3.0 beinhaltet jedoch noch nicht den kompletten Funktionsumfang von SEB 2.x (z.B. keine Additional Resources). Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:
-		  </p>
-		  <ul>
-			  <li>Neue, integrierte Browser-Engine (Chromium Version 79.0.3945.130 für SEB 3.0).</li>
-			  <li>Dezidierte Kompilierung für 32-bit und 64-bit Betriebssysteme.</li>
-			  <li>Unterstützt den Wechsel des Kiosk-Modus beim Umkonfigurieren (z.B. von Create New Desktop zu Disable Explorer Shell).</li>
-			  <li>Action Center (Seitenmenü) mit gleicher Funktionalität wie die Taskbar (d.h. Zugriff auf Applikationen und Systemeinstellungen).</li>
-			  <li>Sperrbildschirm der aktiviert wird wenn ein verbotener Prozess nicht beendet werden kann.</li>
-			  <li>Zugriff auf die Entwickler-Tools der Browser-Engine (für Webentwickler).</li>
-			  <li>Echtzeit-Zugriff auf das Applikations-Protokoll von SEB (z.B. zum Testen des URL-Filters).</li>
-			  <li>Neue Einstellungen zur Kontrolle der Browser-Session (für die SEB-Moodle Deeper Integration).</li>
-			  <li>Verbesserte Benutzeroberfläche mit neuen Funktionen (z.B. Vorschau von offenen Fenstern in der Taskview [ALT+TAB]).</li>
-			  <li>Komplett automatisiertes Build-System mit Unit-Tests</li>
-		  </ul>
-        <p><span class="half_linespace">Weitere Infos in den <a href="windows/win_release_notes_de.html">Release Notes</a> und im englischen <a href="windows/win_usermanual_en.html">Handbuch</a>.</span></p>
-		<p>Da SEB 3.0 noch keine WebRTC-Funktionalität unterstützt (z.B. Zugriff auf die Webkamera durch Web-Applikationen), haben wir einen minimalen Browser mit WebRTC implementiert, der als Drittapplikation in eine SEB-Konfiguration eingebunden werden kann. Mehr Informationen sind bei <a href="https://github.com/SafeExamBrowser/Chrominimum/releases/tag/1.0.0">Chrominimum auf GitHub</a> zu finden.</p>
       </div>
       <!-- /Download Box -->
 			
