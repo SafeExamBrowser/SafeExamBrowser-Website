@@ -228,7 +228,18 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.0: </h5>
+		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.0.1:</h5>
+		<p>Version 3.0.1 contains a fix for the issues some users of SEB 3.0.0 observed specifically in BYOD environments. The new version should prevent that anti-malware software falsely identifies SEB 3.0 as malware (false-positive detection using heuristics and similar algorithms). In some cases this blocked the SEB Windows Service from setting, resetting and monitoring specific settings in the Windows Registry, and prevented SEB 3.0.0 from starting or from resetting the power options. Following a list of the most prominent new features and changes:</p>
+        <ul>
+			  <li>Implemented new default behavior to bypass SEB service as default.</li>
+			  <li>Updated browser engine to version 81.3.100 (Chromium version 81.0.4044.138).</li>
+			  <li>Fixed issue with incorrect virtual machine detection.</li>
+			  <li>Fixed handling of spaces in configuration file paths.</li>
+			  <li>Fixed issue with favicon.</li>
+			  <li>Fixed audio / video playback not stopping when closing additional browser window.</li>
+	  	</ul>
+			
+		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.0.0: </h5>
 		<p>The next major version of Safe Exam Browser for Windows. SEB 3.x for Windows has been completely refactored and uses Chromium as integrated browser engine. However, SEB 3.0.0 does not yet provide the complete feature set of SEB 2.x (see below). Following a list of the most prominent new features and changes:</p>
         <ul>
 			  <li>New, embedded browser engine (Chromium Version 79.0.3945.130 for SEB 3.0.0).</li>
