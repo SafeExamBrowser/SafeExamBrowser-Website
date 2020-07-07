@@ -262,7 +262,18 @@
 			<li>WebRTC functionality (e.g. access to the webcam by web applications)</li>
 		</ul>
 			
-    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.4: </h5>
+    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.4.1: </h5>
+    <p>SEB 2.4.1 for Windows is a maintenance release, which can be used if the refactored, more modern version SEB 3.0.1 misses a feature you need. SEB 2.4.1 fixes an issue which was reported to happen when using the SEB-Moodle Deeper Integration (available by default in Moodle 3.9 and as plugin for Moodle 3.7 and 3.8).</p>
+    <ul>
+      <li>Fixed issue when the old browser window stayed open while reconfiguring with seb(s) link, together with the Firefox file open dialog. Should fix issues when using SEB-Moodle Deeper Integration.<br>
+        </li>
+      <li> Implemented fix for VMware Windows Registry error issue: The Registry value for &quot;Enable VMware Client Shade&quot; will now only be set if the active configuration explicitly says so (see new setting in SEB Config Tool / Registry / &quot;Set VMware configuration&quot;. Don't enable this setting if you are not running SEB in a VMware Horizon View virtual desktop.<br>
+        </li>
+      <li> Added Zoom to list of prohibited applications. If you want to use Zoom together with SEB, you have to set its &quot;Active&quot; property to false (Applications / Prohibited Processes).<br>
+        </li>
+      <li> Added expansion of environment variables in path of permitted processes. This allows to configure applications to run as permitted process, which need to be installed in subdirectories of the user directory, for example %AppData%.</li>
+    </ul>
+    <h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.4: </h5>
     <p>SEB 2.4 for Windows is the last feature update before we switch completely to SEB 3.x. It supports the Config Key and session cookie settings, compatible with the SEB-Moodle Deeper Integration, coming in Moodle 3.9.</p>
     <ul>
       <li>Config Key feature, hash checksum value to verify settings used by SEB. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. <br>
@@ -285,6 +296,7 @@
         </li>
       <li> Renamed setting Security / &quot;Enable screen capture / PrintScreen&quot; to &quot;Allow screen capture / PrintScreen&quot;.</li>
     </ul>
+			
     <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.3: </h5>
     <p>SEB 2.3 for Windows offers new features, which increase security and usability significantly.</p>
     <ul>

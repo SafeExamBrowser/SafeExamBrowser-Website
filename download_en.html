@@ -266,7 +266,7 @@
 			  <li>Lock Screen, which is activated if a prohibited application can’t be terminated.</li>
 			  <li>Access to developer tools of browser engine (for web developers).</li>
 			  <li>Real-time access to SEB application log (e.g. to test features like the URL filter).</li>
-			  <li>New settings to control browser session (for SEB-Moodle Deeper Integration).</li>
+			  <li>New settings to control browser session (for SEB-Moodle Deeper Integration, available  in Moodle 3.9 and as <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">plugin for Moodle 3.7 and 3.8</a>).</li>
 			  <li>Improved user interface with new features (e.g. thumbnails of open windows in task view [ALT+TAB]).</li>
 			  <li>Completely automated build system with unit tests.</li>
 		  </ul>
@@ -281,19 +281,29 @@
       <!-- Download Box SEB 2.x -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.4/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.4.1/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.4 for Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.4.1 for Windows</span>
           </a> 
         </p>
         
-        <p><strong>Safe Exam Browser 2.4.0 for Windows 7, 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: 8c50344da1ab9abadde90d8b269b068feaf79e6d</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.4/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.4" target="_blank">GitHub project site</a>. <br />
+        <p><strong>Safe Exam Browser 2.4.1 for Windows 7, 8.1 and 10</strong><br />
+          <span class="codetext">SHA1: aec3ef8a45a40942f8675e7ab77b896e1ce05dba</span></p>
+        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.4.1/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.4.1" target="_blank">GitHub project site</a>. <br />
         </p>
-        <p>SEB 2.4 for Windows is the last feature update before we switch completely to SEB 3.x. It supports the Config Key and session cookie settings, compatible with the SEB-Moodle Deeper Integration, coming in Moodle 3.9!.</p>
+        <p>SEB 2.4.1 for Windows is a maintenance release, which can be used if the refactored, more modern version SEB 3.0.1 misses a feature you need. SEB 2.4.1 fixes an issue which was reported to happen when using the SEB-Moodle Deeper Integration (available by default in Moodle 3.9 and as <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">plugin for Moodle 3.7 and 3.8</a>).</p>
         <p><strong>Please note our new update policy: We will only support the latest SEB version and will remove all older SEB versions after a grace period.</strong> Only with updated SEB versions you can achieve the best possible security and stability of e-assessments. <strong>Before asking any support question or reporting a bug, install the latest SEB version and try to reproduce the issue with the most recent version. </strong>We can't answer questions anymore when the SEB version isn't mentioned or when you don't confirm you tried it with the current version. </p>
-        <p>New in SEB 2.4:</p>
+        <p>New in SEB 2.4.1:</p>
+        <ul>
+          <li>Fixed issue when the old browser window stayed open while reconfiguring with seb(s) link, together with the Firefox file open dialog. Should fix issues when using SEB-Moodle Deeper Integration.<br>
+            </li>
+          <li> Implemented fix for VMware Windows Registry error issue: The Registry value for &quot;Enable VMware Client Shade&quot; will now only be set if the active configuration explicitly says so (see new setting in SEB Config Tool / Registry / &quot;Set VMware configuration&quot;. Don't enable this setting if you are not running SEB in a VMware Horizon View virtual desktop.<br>
+          </li>
+          <li> Added Zoom to list of prohibited applications. If you want to use Zoom together with SEB, you have to set its &quot;Active&quot; property to false (Applications / Prohibited Processes).<br>
+            </li>
+          <li> Added expansion of environment variables in path of permitted processes. This allows to configure applications to run as permitted process, which need to be installed in subdirectories of the user directory, for example %AppData%.</li>
+        </ul>
+        <p>New since SEB 2.4:</p>
         <ul>
           <li>Config Key feature, hash checksum value to verify settings used by SEB. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. <br>
           </li>

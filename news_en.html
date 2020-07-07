@@ -231,6 +231,19 @@
         
           <!-- Content -->
 			
+		  <h5 id="sebh5">July 7, 2020</h5>
+		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 2.4.1 for Windows released</a></strong>: This  is a maintenance update, which can be used if the refactored, more modern version SEB 3.0.1 misses a feature you need. SEB 2.4.1 fixes an issue which was reported to happen when using the SEB-Moodle Deeper Integration (available by default in Moodle 3.9 and as <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">plugin for Moodle 3.7 and 3.8</a>):</p>
+		  <ul>
+		    <li>Fixed issue when the old browser window stayed open while reconfiguring with seb(s) link, together with the Firefox file open dialog. This should fix issues when using SEB-Moodle Deeper Integration.<br>
+	        </li>
+		    <li> Implemented fix for VMware Windows Registry error issue.<br>
+	        </li>
+		    <li> Added Zoom to list of prohibited applications. If you want to use Zoom together with SEB, you have to set its &quot;Active&quot; property to false (Applications / Prohibited Processes).<br>
+	        </li>
+		    <li> Added expansion of environment variables in path of permitted processes. This allows to configure applications to run as permitted process, which need to be installed in subdirectories of the user directory, for example %AppData%.</li>
+	      </ul>
+		  <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes.</p>
+			
 		  <h5 id="sebh5">June 26, 2020</h5>
 		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.0.1 for Windows released</a></strong>: This update contains a fix for the issues some users of SEB 3.0.0 observed specifically in BYOD environments. The new version should prevent that anti-malware software falsely identifies SEB 3.0 as malware (false-positive detection using heuristics and similar algorithms).</p>
 		  <p>SEB 3.0.1 does no longer access the Windows Registry by default. This means that power options (shutdown, reboot) are no longer disabled and the options is the Windows Security Screen (accessed by Ctrl+Alt+Del) are not removed. </p>
