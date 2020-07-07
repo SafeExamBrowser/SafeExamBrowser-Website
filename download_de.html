@@ -266,7 +266,7 @@
 			  <li>Sperrbildschirm der aktiviert wird wenn ein verbotener Prozess nicht beendet werden kann.</li>
 			  <li>Zugriff auf die Entwickler-Tools der Browser-Engine (für Webentwickler).</li>
 			  <li>Echtzeit-Zugriff auf das Applikations-Protokoll von SEB (z.B. zum Testen des URL-Filters).</li>
-			  <li>Neue Einstellungen zur Kontrolle der Browser-Session (für die SEB-Moodle Deeper Integration).</li>
+			  <li>Neue Einstellungen zur Kontrolle der Browser-Session (für die erweiterte SEB-Moodle Integration, verfügbar in Moodle 3.9 und als <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">Plugin für Moodle 3.7 und 3.8</a>).</li>
 			  <li>Verbesserte Benutzeroberfläche mit neuen Funktionen (z.B. Vorschau von offenen Fenstern in der Taskview [ALT+TAB]).</li>
 			  <li>Komplett automatisiertes Build-System mit Unit-Tests</li>
 		  </ul>
@@ -281,19 +281,28 @@
       <!-- Download Box SEB 2.x -->
       <div class="well">
         <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.4/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
+          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.4.1/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.4 für Windows</span>
+            <span class="seb-button-text">Safe Exam Browser 2.4.1 für Windows</span>
           </a> 
         </p>
         
-        <p><strong>Safe Exam Browser 2.4.0 für Windows 7, 8.1 und 10</strong><br />
-          <span class="codetext">SHA1: 8c50344da1ab9abadde90d8b269b068feaf79e6d</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.4/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von unserer <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.4" target="_blank">GitHub Projekt-Seite</a>. <br />
+        <p><strong>Safe Exam Browser 2.4.1 für Windows 7, 8.1 und 10</strong><br />
+          <span class="codetext">SHA1: aec3ef8a45a40942f8675e7ab77b896e1ce05dba</span></p>
+        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.4.1/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von unserer <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.4.1" target="_blank">GitHub Projekt-Seite</a>. <br />
         </p>
-        <p>Safe Exam Browser 2.4 für Windows ist das letzte Update mit neuen Funktionen, bevor wir komplett auf SEB 3.x wechseln.        </p>
-        <p>Ab jetzt sollte Safe Exam Browser 2.4 eingesetzt werden, wir werden ältere Versionen zukünftig nicht mehr unterstützen und auch die Download-Links  nach einer Übergangsfrist entfernen. Nur mit aktuellen SEB-Versionen können Sie die bestmögliche Sicherheit und Stabilität Ihrer Prüfungsumgebung erzielen. <strong> Bevor Sie eine Support-Frage stellen oder einen Fehler melden möchten, installieren Sie bitte die neuste Version und testen Sie, ob das Problem mit der aktuellen Version immer noch auftritt. </strong>Wir können in Zukunft keine Supportfragen mehr beantworten, wenn die benutzte Version nicht erwähnt wird und nicht bestätigt wird, dass das Problem mit der neusten Version überprüft wurde.</p>
-        <p>Neue Funktionen in SEB 2.4:</p>
+        <p>Safe Exam Browser 2.4.1 für Windows ist ein Wartungsupdate, welches verwendet werden kann, wenn die komplett erneuerte Version SEB 3.0 eine benötigte Funktion noch nicht enthält. In SEB 2.4.1 wurde ein Fehler beseitigt, welcher uns im Zusammenhang mit der erweiterten SEB-Moodle Integration gemeldet wurde (standardmässig verfügbar in Moodle 3.9 und als <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">Plugin für Moodle 3.7 und 3.8</a>).</p>
+        <p>Bitte beachten: Wir werden ältere Versionen zukünftig nicht mehr unterstützen und auch die Download-Links  nach einer Übergangsfrist entfernen. Nur mit aktuellen SEB-Versionen können Sie die bestmögliche Sicherheit und Stabilität Ihrer Prüfungsumgebung erzielen. <strong> Bevor Sie eine Support-Frage stellen oder einen Fehler melden möchten, installieren Sie bitte die neuste Version und testen Sie, ob das Problem mit der aktuellen Version immer noch auftritt. </strong>Wir können in Zukunft keine Supportfragen mehr beantworten, wenn die benutzte Version nicht erwähnt wird und nicht bestätigt wird, dass das Problem mit der neusten Version überprüft wurde.</p>
+        <p>Neue Funktionen in SEB 2.4.1:</p>
+        <ul>
+          <li>Fehler korrigiert, bei welchem das alte Browserfenster zusammen mit dem Firefox Datei Öffnen Dialog offen blieb, wenn mittels seb(s)-Link umkonfiguriert wurde. Dies sollte Fehler im Zusammenhang mit der erweiterten SEB-Moodle Integration lösen.</li>
+          <li>Fehler in Zusammenhang mit einer VMware Windows Registry Einstellung behoben: Diese wird nur vorgenommen, wenn dies in der  Konfiguration ausdrücklich erwünscht ist (siehe neue Einstellung im SEB Config Tool / Registry / &quot;Set VMware configuration&quot;). Diese Einstellung sollte nicht aktiviert werden, sofern SEB nicht  in einem virtuellen VMware Horizon View  Desktop benutzt wird.</li>
+          <li>Die Videokonferenz-Lösung Zoom wurde zu den standardmässig verbotenen Prozessen hinzugefügt. Wenn Sie SEB zusammen mit Zoom benutzen möchten, müssen sie die &quot;Active&quot;
+            
+          -Einstellung für Zoom in Applications / Prohibited Processes deaktivieren.</li>
+          <li>Unterstützung für Umgebungsvariablen in der Pfad-Angabe von erlaubten Prozessen hinzugefügt. Dies erlaubt es, Applikationen als erlaubte Prozesse zu starten, welche in einem Unterverzeichnis des Benutzerverzeichnisses installiert werden (z.B. %AppData%).</li>
+        </ul>
+        <p>Neue Funktionen seit SEB 2.4:</p>
         <ul>
           <li>Unterstützung des Config Key, mit welchem  sichergestellt werden kann, dass eine Prüfung nur mit korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird.</li>
           <li>Neue Einstellungs-Optionen, um das Löschen von Cookies beim Starten und Beenden einer Session zu steuern. Diese können dazu benutzt werden, Benutzer eingeloggt zu lassen (SEB mit Client-Einstellungen gestartet), wenn eine Prüfungs-Session gestartet wird.</li>
