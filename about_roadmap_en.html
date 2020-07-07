@@ -239,14 +239,8 @@
         </tr>
 		  
         <tr>
-          <td><strong>SEB 2.4 for Windows</strong> </td>
-          <td>Q1 2020</td>
-          <td><a href="developer/seb-config-key.html">Config Key</a> feature to check validity of settings used for an exam. Every SEB version generates the same Config Key, as long as the same settings (config files) are used. The Config Key will now be available in the macOS, iPadOS/iOS and Windows versions of SEB. Support for new settings to disable clearing of session cookies when reconfiguring to exam config (so user stays logged in).</td>
-        </tr>
-		  
-        <tr>
           <td><strong>SEB 2.2 for macOS/iPadOS/iOS</strong></td>
-          <td> Q2 2020</td>
+          <td> Q3 2020</td>
           <td>Major release of SEB with a unified code base for macOS and iPadOS/iOS and feature parity for example:
             <ul>
               <li>Disable clearing of session cookies </li>
@@ -255,21 +249,6 @@
               <li>Enhanced process monitoring and <a href="macosx/mac_usermanual_en.html#ProhibitedProcessesSection">prohibited processes settings</a> (Mac)</li>
               <li>Integration with SEB Server</li>
             </ul>          </td>
-        </tr>
-		  
-        <tr>
-          <td><strong>SEB 3.0 for Windows</strong></td>
-          <td>Q2 2020</td>
-          <td>Completely refactored version of SEB for Windows:
-              <ul>
-                  <li>Support for browser-based exams in BYOD scenarios and managed computer labs.</li>
-                  <li>Replacement of browser engine. New Chromium-based browser engine implemented using CEF3 (Chromium Embed Framework) and CefSharp (.NET C#  wrapper). This is necessary because the currently used Firefox-based SEB browser in SEB 2.2 stops supporting the XUL runtime language used to implement the embedded SEB for Windows browser (following  decisions of the Mozilla foundation to revamp the Firefox browser).</li>
-                  <li>The new browser engine will be a browser framework embedded on API level which is similar to SEB for macOS and iOS. This allows better integration of browser functionality into the .NET SEB kiosk application and should increase stability, security and performance of SEB for Windows significantly.</li>
-                  <li>Switch the user interface system frameworks from Windows Forms to Windows Presentation Foundation (WPF) /XAML in the SEB client, as the new technology allows a more compatible and cleaner implementation of the SEB UI and is better supported in current Windows versions. This will also allow a UWP (Universal Windows Platform) SEB application which could be distributed through the Windows App Store.</li>
-                  <li>Supports Windows 8.1 and Windows 10</li>
-                  <li>Windows 7 support is deprecated</li>
-                </ul>
- 			</td>
         </tr>
 		  
         <tr>
