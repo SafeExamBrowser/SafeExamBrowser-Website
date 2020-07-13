@@ -237,8 +237,9 @@
 				  <li>Problem mit Audio/Video-Wiedergabe beim Schliessen eines Browser-Fensters behoben.</li>
 			</ul>
 			
-			<span class="h5">Release Notes für <a href="../download_de.html#Windows">SEB 3.0.0 für Windows</a>:</span>
-		  	<p>Die nächste Hauptversion von SEB für Windows. SEB 3.x für Windows wurde komplett erneuert und benutzt Chromium als integrierte Browser-Engine. Version 3.0 beinhaltet jedoch noch nicht den kompletten Funktionsumfang von SEB 2.x (siehe unten). Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:</p>
+			<h5 id="sebh5">Release Notes für <a href="../download_de.html#Windows">SEB 3.0.0 für Windows</a>:
+		  </h5>
+			<p>Die nächste Hauptversion von SEB für Windows. SEB 3.x für Windows wurde komplett erneuert und benutzt Chromium als integrierte Browser-Engine. Version 3.0 beinhaltet jedoch noch nicht den kompletten Funktionsumfang von SEB 2.x (siehe unten). Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:</p>
 		  	<ul>
 			  <li>Neue, integrierte Browser-Engine (Chromium Version 79.0.3945.130 für SEB 3.0).</li>
 			  <li>Dezidierte Kompilierung für 32-bit und 64-bit Betriebssysteme.</li>
@@ -260,13 +261,22 @@
 				<li>WebRTC-Funktionalität (z.B. Zugriff auf die Webkamera durch Web-Applikationen)</li>
 			</ul>
         
-          <span class="h5">
+          <h5 id="sebh5">Release Notes für <a href="../download_de.html#WindowsLegacy">SEB 2.4.1 für Windows</a>:
+	      </h5>
+          <p>Safe Exam Browser 2.4.1 für Windows ist ein Wartungsupdate, welches verwendet werden kann, wenn die komplett erneuerte Version SEB 3.0 eine benötigte Funktion noch nicht enthält. In SEB 2.4.1 wurde ein Fehler beseitigt, welcher uns im Zusammenhang mit der erweiterten SEB-Moodle Integration gemeldet wurde (standardmässig verfügbar in Moodle 3.9 und als <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">Plugin für Moodle 3.7 und 3.8</a>).          </p>
+          <p>Neue Funktionen in SEB 2.4.1:</p>
+          <ul>
+            <li>Fehler korrigiert, bei welchem das alte Browserfenster zusammen mit dem Firefox Datei Öffnen Dialog offen blieb, wenn mittels seb(s)-Link umkonfiguriert wurde. Dies sollte Fehler im Zusammenhang mit der erweiterten SEB-Moodle Integration lösen.</li>
+            <li>Fehler in Zusammenhang mit einer VMware Windows Registry Einstellung behoben: Diese wird nur vorgenommen, wenn dies in der  Konfiguration ausdrücklich erwünscht ist (siehe neue Einstellung im SEB Config Tool / Registry / &quot;Set VMware configuration&quot;). Diese Einstellung sollte nicht aktiviert werden, sofern SEB nicht  in einem virtuellen VMware Horizon View  Desktop benutzt wird.</li>
+            <li>Die Videokonferenz-Lösung Zoom wurde zu den standardmässig verbotenen Prozessen hinzugefügt. Wenn Sie SEB zusammen mit Zoom benutzen möchten, müssen sie die &quot;Active&quot;
+              
+              -Einstellung für Zoom in Applications / Prohibited Processes deaktivieren.</li>
+            <li>Unterstützung für Umgebungsvariablen in der Pfad-Angabe von erlaubten Prozessen hinzugefügt. Dies erlaubt es, Applikationen als erlaubte Prozesse zu starten, welche in einem Unterverzeichnis des Benutzerverzeichnisses installiert werden (z.B. %AppData%).</li>
+          </ul>
 
-          <!-- Content -->
-          Release Notes für <a href="../download_de.html#Windows">SEB 2.4 für Windows</a>:
-		  </span>
-            <p>Safe Exam Browser 2.4 für Windows ist das letzte Update mit neuen Funktionen, bevor wir komplett auf SEB 3.x wechseln. </p>
-            <p><strong>Bitte beachten Sie unsere  Update-Strategie: Wir unterstützen nur die neuste SEB-Version und werden die Download-Links für alle älteren Versionen nach einer Übergangsfrist entfernen.</strong> Nur mit aktuellen SEB-Versionen können Sie die bestmögliche Sicherheit und Stabilität Ihrer Prüfungsumgebung erzielen. <strong> Bevor Sie eine Support-Frage stellen oder einen Fehler melden möchten, installieren Sie bitte die neuste Version und testen Sie, ob das Problem mit der aktuellen Version immer noch auftritt.  </strong>Wir können in Zukunft keine Supportfragen mehr beantworten, wenn die benutzte Version nicht erwähnt wird und nicht bestätigt wird, dass das Problem mit der neusten Version überprüft wurde.</p>
+		  <h5 id="sebh5">Release Notes für <a href="../download_de.html#WindowsLegacy">SEB 2.4 für Windows</a>:
+            </h5>
+            <p>Safe Exam Browser 2.4 für Windows ist das letzte Update mit neuen Funktionen, bevor wir komplett auf SEB 3.x wechseln.          </p>
           <p>Neue Funktionen in SEB 2.4:</p>
             <ul>
               <li>Unterstützung des Config Key, mit welchem  sichergestellt werden kann, dass eine Prüfung nur mit korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird.</li>
@@ -278,7 +288,7 @@
             <p>Siehe die englischen <a href="https://safeexambrowser.org/windows/win_release_notes_en.html">Release Notes</a> für alle neuen Funktionen.</p>
  
     
-			<h5>Release Notes für <a href="../download_de.html#Windows">SEB 2.3 für Windows</a>:</h5>
+			<h5 id="sebh5">Release Notes für <a href="../download_de.html#Windows">SEB 2.3 für Windows</a>:</h5>
           <p>SEB 2.3 bietet neue Funktionen, welche die Sicherheit verbessern und zu besserer Bedienungsfreundlichkeit beitragen.          </p>
           <p>Neu in SEB 2.3:</p>
           <ul>

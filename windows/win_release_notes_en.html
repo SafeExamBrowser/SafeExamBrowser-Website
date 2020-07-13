@@ -227,7 +227,6 @@
         <!-- Content Column -->
         <div class="col-md-6" role="main">
         
-        <!-- Content -->
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.0.1:</h5>
 		<p>Version 3.0.1 contains a fix for the issues some users of SEB 3.0.0 observed specifically in BYOD environments. The new version should prevent that anti-malware software falsely identifies SEB 3.0 as malware (false-positive detection using heuristics and similar algorithms). In some cases this blocked the SEB Windows Service from setting, resetting and monitoring specific settings in the Windows Registry, and prevented SEB 3.0.0 from starting or from resetting the power options. Following a list of the most prominent new features and changes:</p>
         <ul>
@@ -262,7 +261,7 @@
 			<li>WebRTC functionality (e.g. access to the webcam by web applications)</li>
 		</ul>
 			
-    <h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.4.1: </h5>
+    <h5 id="sebh5">Release notes <a href="../download_en.html#WindowsLegacy">Safe Exam Browser for Windows</a> version 2.4.1: </h5>
     <p>SEB 2.4.1 for Windows is a maintenance release, which can be used if the refactored, more modern version SEB 3.0.1 misses a feature you need. SEB 2.4.1 fixes an issue which was reported to happen when using the SEB-Moodle Deeper Integration (available by default in Moodle 3.9 and as plugin for Moodle 3.7 and 3.8).</p>
     <ul>
       <li>Fixed issue when the old browser window stayed open while reconfiguring with seb(s) link, together with the Firefox file open dialog. Should fix issues when using SEB-Moodle Deeper Integration.<br>
@@ -273,7 +272,7 @@
         </li>
       <li> Added expansion of environment variables in path of permitted processes. This allows to configure applications to run as permitted process, which need to be installed in subdirectories of the user directory, for example %AppData%.</li>
     </ul>
-    <h5>Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 2.4: </h5>
+    <h5 id="sebh5">Release notes <a href="../download_en.html#WindowsLegacy">Safe Exam Browser for Windows</a> version 2.4: </h5>
     <p>SEB 2.4 for Windows is the last feature update before we switch completely to SEB 3.x. It supports the Config Key and session cookie settings, compatible with the SEB-Moodle Deeper Integration, coming in Moodle 3.9.</p>
     <ul>
       <li>Config Key feature, hash checksum value to verify settings used by SEB. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. <br>
