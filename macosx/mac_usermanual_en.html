@@ -358,10 +358,11 @@
           <ol>
             <li>Don't display any links during an exam which would allow to navigate to other sections of Moodle or even other websites. This means the course navigation, link to the user's Moodle profile, logout, link to the University homepage etc. needs to be disabled/hidden. Only the quiz navigation (to navigate to other questions) and the &quot;Finish attempt...&quot; link  should be visible </li>
             <li>Make sure a quiz can only be taken using Safe Exam Browser, display an error message if trying to open the quiz in another web browser. </li>
-            <li>Optionally check if the correct version of SEB and  legitimate SEB settings are used.</li>
+            <li>Check if   legitimate SEB settings or optionally if the correct version of SEB are used.</li>
           </ol>
           
-          <p>There are two options how to activate SEB support in Moodle. Both achieve the above objectives 1 and 2. Only the second option also ensures objective 3 is met:</p>
+          <p><strong>Since Moodle 3.9, there is very comfortable support for Safe Exam Browser directly available in Moodle's quiz settings.</strong> The new &quot;deeper integration&quot; is <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">also available as plugin for Moodle 3.7 and 3.8</a>. If possible, use this new SEB support in Moodle. Refer to the <a href="https://docs.moodle.org/39/en/Safe_Exam_Browser" target="_blank">official Moodle documentation</a> for details. Please note that our SEB support cannot answer specific Moodle  questions, use the <a href="https://docs.moodle.org/39/en/Main_page" target="_blank">documentation on moodle.org</a> and the <a href="https://moodle.org/course/" target="_blank">Moodle community forums</a>.</p>
+          <p>See below the two older options how to activate SEB support in Moodle, which are  no longer available  (or don't make sense) in current Moodle versions:</p>
           
           <ol>
             <li>Enable the &quot;classic&quot;  SEB support in Moodle: <a href="https://docs.moodle.org/28/en/Safe_exam_browser" target="_blank">How to activate the SEB secure browser mode in a Moodle quiz</a>. Then configure the quiz at <span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Browser security / Require the use of Safe Exam Browser</span>. This option uses only a basic, not very secure check for the used browser. This may be safe enough if students can only access the exam from centrally managed university computers inside a computer lab/exam room. For other scenarios like BYOD you should use the second option.</li>
