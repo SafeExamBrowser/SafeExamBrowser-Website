@@ -231,6 +231,23 @@
         
           <!-- Content -->
 			
+          <h5 id="sebh5">August 28, 2020</h5>
+          <p class="half_linespace"><a href="download_en.html#MacOSX"><strong>Safe Exam Browser 2.2 for macOS released.</strong></a> This version is a major update, improving security by blocking prohibited processes, adding new capabilities and offering full compatibility to enhanced integrations with learning management systems, like the one available in Moodle 3.9.</p>
+          <ul id="seblist4">
+            <li> Prohibited Processes settings for blocking specific processes and applications from running together with SEB. </li>
+            <li> Preset prohibited processes covering communication, screen sharing and recording apps. Let us know if you would like to suggest applications and tools to be added to those preset prohibited processes (we need information about the software and its name and Bundle Identifier (if applicable).</li>
+            <li> Added settings to allow to reconfigure SEB, even it is already running in a secure exam session.</li>
+            <li> Implemented setting keys to control clearing cookies when starting/ending an exam session (examSessionClearCookiesOnStart / examSessionClearCookiesOnEnd). This can be used to keep users logged in from the previous session after an exam session was started (and SEB reconfigured with new settings).</li>
+            <li> Added setting to enable Web Inspector (web developer tools) in Preferences/Browser (same settings key allowDeveloperConsole as in SEB for Windows 3.0. If enabled and right click isn't disabled (see Preferences/Security/Hooked Keys/Enable Right Mouse), you can right click/ctrl-left click on a web page element and open Web Inspector with 'Inspect Element'.</li>
+            <li> Added Mac-specific settings for blocking screen shots and screen recording. The separate settings allow to run SEB correctly in parallel with some remote proctoring tools.</li>
+            <li> Added separate Mac setting for the Private Clipboard feature.</li>
+            <li> Added Mac-specific setting for blocking screen sharing over the network (VNC): key screenSharingMacEnforceBlocked (default: false, then the value of the existing key allowScreenSharing is used).</li>
+            <li> Added all SEB for iOS settings in Preferences window.</li>
+            <li> Fixed that a wrong <a href="developer/seb-config-key.html">Config Key</a> was calculated because of specific new default settings added in a new SEB version. This was the cause why SEB 2.1.4 did not work correctly with the new SEB integration in Moodle 3.9.</li>
+          </ul>
+          <p class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</p>
+
+			
 		  <h5 id="sebh5">July 7, 2020</h5>
 		  <p><strong><a href="download_en.html#WindowsLegacy">Safe Exam Browser 2.4.1 for Windows released</a></strong>: This  is a maintenance update, which can be used if the refactored, more modern version SEB 3.0.1 misses a feature you need. SEB 2.4.1 fixes an issue which was reported to happen when using the SEB-Moodle Deeper Integration (available by default in Moodle 3.9 and as <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">plugin for Moodle 3.7 and 3.8</a>):</p>
 		  <ul>
