@@ -231,6 +231,27 @@
         <!-- Content -->
           <h2></h2>
 
+          <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2</a>:</h5>
+          <ul id="seblist">
+            <li> Prohibited Processes settings for blocking specific processes and applications from running together with SEB. </li>
+            <li> Preset prohibited processes covering communication, screen sharing and recording apps. Let us know if you would like to suggest applications and tools to be added to those preset prohibited processes (we need information about the software and its name and Bundle Identifier (if applicable).</li>
+            <li> Added settings to allow to reconfigure SEB, even it is already running in a secure exam session.</li>
+            <li> Implemented setting keys to control clearing cookies when starting/ending an exam session (examSessionClearCookiesOnStart / examSessionClearCookiesOnEnd). This can be used to keep users logged in from the previous session after an exam session was started (and SEB reconfigured with new settings).</li>
+            <li> Added setting to enable Web Inspector (web developer tools) in Preferences/Browser (same settings key allowDeveloperConsole as in SEB for Windows 3.0. If enabled and right click isn't disabled (see Preferences/Security/Hooked Keys/Enable Right Mouse), you can right click/ctrl-left click on a web page element and open Web Inspector with 'Inspect Element'.</li>
+            <li> Added Mac-specific settings for blocking screen shots and screen recording. The separate settings allow to run SEB correctly in parallel with some remote proctoring tools.</li>
+            <li> Added separate Mac setting for the Private Clipboard feature.</li>
+            <li> Added Mac-specific setting for blocking screen sharing over the network (VNC): key screenSharingMacEnforceBlocked (default: false, then the value of the existing key allowScreenSharing is used).</li>
+            <li> Added all SEB for iOS settings in Preferences window.</li>
+            <li> Fixed that a wrong <a href="developer/seb-config-key.html">Config Key</a> was calculated because of specific new default settings added in a new SEB version. This was the cause why SEB 2.1.4 did not work correctly with the new SEB integration in Moodle 3.9.</li>
+            <li> Fixed: Overriding check for specific processes in lock screen didn't work.</li>
+            <li> Fixed: Client config encrypted with password wasn't compatible between Win vs. Mac+iOS.</li>
+            <li> Fixed: Loading config file with different SEB admin password in Preferences didn't work.</li>
+            <li> Fixed that an SEB config without proper MIME type wasn't recognized: Added &quot;text/xml&quot; as alternative MIME type for SEB config files when a seb(s) link is opened.</li>
+            <li> Removed ARDAgent from detecting Remote Management: ARDAgent is running always when Remote Management is enabled in System Preferences / Sharing, which made it necessary to always disable Remote Management. Now this is not necessary, as long as no VNC client tries to connect to the SEB client (in that case the according red lock screen is displayed and requires the quit/unlock password to be entered).</li>
+            <li> Removed setting for disabling Local Storage (in Browser pane). Local Storage is now always enabled.</li>
+            <li> Replaced key string mobileShowSettings with string showSettingsInApp in default settings. </li>
+          </ul>
+			
           <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1.4</a>:</h5>
           <ul id="seblist">
             <li>SEB 2.1.4 is fully compatible with macOS 10.15 Catalina.</li>
