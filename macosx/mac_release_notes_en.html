@@ -231,7 +231,7 @@
         <!-- Content -->
           <h2></h2>
 
-          <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2</a>:</h5>
+          <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2.1</a>:</h5>
           <ul id="seblist">
             <li> Prohibited Processes settings for blocking specific processes and applications from running together with SEB. </li>
             <li> Preset prohibited processes covering communication, screen sharing and recording apps. Let us know if you would like to suggest applications and tools to be added to those preset prohibited processes (we need information about the software and its name and Bundle Identifier (if applicable).</li>
@@ -250,6 +250,13 @@
             <li> Removed ARDAgent from detecting Remote Management: ARDAgent is running always when Remote Management is enabled in System Preferences / Sharing, which made it necessary to always disable Remote Management. Now this is not necessary, as long as no VNC client tries to connect to the SEB client (in that case the according red lock screen is displayed and requires the quit/unlock password to be entered).</li>
             <li> Removed setting for disabling Local Storage (in Browser pane). Local Storage is now always enabled.</li>
             <li> Replaced key string mobileShowSettings with string showSettingsInApp in default settings. </li>
+          </ul>
+          <p>Fixed SEB 2.2 issues in SEB 2.2.1:</p>
+          <ul  id="seblist">
+            <li> Couldn't open Moodle 3.9 (Deeper Integration) quiz by starting SEB with indirect sebs:// link from another browser.</li>
+            <li> Browser Exam and Config Key were not displayed correctly when opening the Preferences/Exams pane directly after loading an exam configuration.</li>
+            <li> Starting SEB by loading configs from indirect sebs:// Links works now regardless of URL filter in client settings.</li>
+            <li> Embedded SSL debug certificate  with wildcard domains didn't work.</li>
           </ul>
 			
           <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.1.4</a>:</h5>

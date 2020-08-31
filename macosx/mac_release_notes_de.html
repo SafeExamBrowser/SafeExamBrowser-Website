@@ -230,10 +230,10 @@
           <!-- Content -->
           <h2></h2>
 
-            <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 2.2</a>:</h5>
+            <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 2.2.1</a>:</h5>
             <ul id="seblist">
               <li>Einstellung für verbotene Prozesse, welche verhindert, dass bestimmte Prozesse und Applikationen zusammen mit SEB verwendet werden. </li>
-              <li>SEB 2.2 beinhaltet voreingestellte verbotene Prozesse, welche Programme für Kommunikation, Bildschirmfreigabe und Bildschirmaufnahme umfassen. Gerne nehmen wir in zukünftigen Versionen bei Hinweisen aus der Nutzer-Community weitere Prozesse in diese Liste auf (wir benötigen Informationen zu den Applikationen wie Dateiname und Bundle Identifier).</li>
+              <li>SEB 2.2.1 beinhaltet voreingestellte verbotene Prozesse, welche Programme für Kommunikation, Bildschirmfreigabe und Bildschirmaufnahme umfassen. Gerne nehmen wir in zukünftigen Versionen bei Hinweisen aus der Nutzer-Community weitere Prozesse in diese Liste auf (wir benötigen Informationen zu den Applikationen wie Dateiname und Bundle Identifier).</li>
               <li>Neue Einstellungen, um SEB innerhalb einer Prüfungssession umkonfigurieren zu können.</li>
               <li>Separate Einstellungen zur Kontrolle des Löschens von Cookies zu Beginn und beim Beenden einer Browser-Session. Dies erlaubt, dass Benutzer eingeloggt bleiben können, wenn beispielsweise eine Prüfung mit individuellen Einstellungen in unterstützten Learning Management und Prüfungs-Systemen gestartet wird.</li>
               <li>Einstellung zum Erlauben des Web Inspectors (Hilfsprogramm für Web-Entwickler) in Einstellungen/Browser (gleicher Einstellungsschlüssel allowDeveloperConsole, welche auch in SEB 3.0 für Windows benutzt wird). Wenn erlaubt und der Rechtsklick nicht deaktiviert ist (siehe Sicherheit/Abgefangene Tasten/Rechte Maustaste erlauben), dann kann mittels Rechtsklick/ctrl-Linksklick auf ein Element einer Webseite der Web Inspector mittels 'Inspect Element' angezeigt werden. </li>
@@ -241,8 +241,15 @@
               <li>Separate Einstellungsoption zum Blockieren der privaten Zwischenablage auf dem Mac.</li>
               <li>Mac-spezifische Option zum Blockieren der macOS-Bildschirmfreigabe (VNC-basiert)</li>
               <li>Alle individuellen Einstellungsoptionen der iOS-Version können nun im Mac-Einstellungen-Fenster gesteuert werden.</li>
-              <li>SEB 2.2 benutzt die endgültige Implementierung des <a href="developer/seb-config-key.html">Config Key</a>, der dazu dient, um sicherzustellen, dass eine Prüfung nur mit  korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird. </li>
+              <li>SEB 2.2.1 benutzt die endgültige Implementierung des <a href="developer/seb-config-key.html">Config Key</a>, der dazu dient, um sicherzustellen, dass eine Prüfung nur mit  korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird. </li>
             </ul>
+        <p>In SEB 2.2.1 gelöste SEB 2.2 Probleme:</p>
+        <ul id="seblist">
+          <li> Eine Moodle 3.9 Prüfung konnte nicht korrekt geöffnet werden, wenn SEB mittels indirekten sebs:// Link aus einem anderen Browser heraus gestartet wurde.</li>
+          <li> Browser Exam und Config Key wurden nicht korrekt dargestellt, wenn das Tab Prüfungen in den Einstellungen direkt nach dem Laden einer neuen Prüfungskonfiguration geöffnet wurde.</li>
+          <li> SEB kann jetzt mittels Konfigurationsdateien über indirekte sebs:// Links geöffnet werden, unabhängig von URL-Filter-Regeln in den Client-Einstellungen.</li>
+          <li> Eingebettete SSL Debug-Zertifikate  mit Wildcard-Domains haben nicht funktioniert.</li>
+        </ul>
             <p>Für vollständige Liste siehe englische <a href="mac_release_notes_en.html">Release Notes</a>. </p>
 			
             <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 2.1.4</a>:</h5>
