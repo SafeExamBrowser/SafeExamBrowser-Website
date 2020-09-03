@@ -12,6 +12,8 @@
 	<integer>0</integer>
 	<key>URLFilterRules</key>
 	<array/>
+	<key>additionalResources</key>
+	<array/>
 	<key>allowBrowsingBackForward</key>
 	<false/>
 	<key>allowDictation</key>
@@ -38,6 +40,8 @@
 	<false/>
 	<key>allowSwitchToApplications</key>
 	<false/>
+	<key>allowUserAppFolderInstall</key>
+	<false/>
 	<key>allowUserSwitching</key>
 	<true/>
 	<key>allowVideoCapture</key>
@@ -46,6 +50,8 @@
 	<true/>
 	<key>allowWLAN</key>
 	<true/>
+	<key>allowWlan</key>
+	<false/>
 	<key>allowedDisplayBuiltin</key>
 	<false/>
 	<key>allowedDisplaysMaxNumber</key>
@@ -64,6 +70,8 @@
 	<false/>
 	<key>browserExamKey</key>
 	<string></string>
+	<key>browserMediaAutoplay</key>
+	<false/>
 	<key>browserMessagingPingTime</key>
 	<integer>120000</integer>
 	<key>browserMessagingSocket</key>
@@ -100,7 +108,16 @@
 	<integer>0</integer>
 	<key>chooseFileToUploadPolicy</key>
 	<integer>0</integer>
+	<key>configFileCreateIdentity</key>
+	<false/>
+	<key>configFileEncryptUsingIdentity</key>
+	<false/>
+	<key>configKeySalt</key>
+	<data>
+	</data>
 	<key>createNewDesktop</key>
+	<true/>
+	<key>detectStoppedProcess</key>
 	<true/>
 	<key>downloadAndOpenSebConfig</key>
 	<true/>
@@ -200,6 +217,14 @@
 	<data>
 	oS0kAlyaDNd5sLBtui+1CB2mFt0UFeiw1tna4uzv3oI=
 	</data>
+	<key>examSessionClearCookiesOnEnd</key>
+	<true/>
+	<key>examSessionClearCookiesOnStart</key>
+	<true/>
+	<key>examSessionReconfigureAllow</key>
+	<false/>
+	<key>examSessionReconfigureConfigURL</key>
+	<string></string>
 	<key>exitKey1</key>
 	<integer>2</integer>
 	<key>exitKey2</key>
@@ -228,6 +253,8 @@
 	<false/>
 	<key>insideSebEnableLogOff</key>
 	<false/>
+	<key>insideSebEnableNetworkConnectionSelector</key>
+	<false/>
 	<key>insideSebEnableShutDown</key>
 	<false/>
 	<key>insideSebEnableStartTaskManager</key>
@@ -235,6 +262,40 @@
 	<key>insideSebEnableSwitchUser</key>
 	<false/>
 	<key>insideSebEnableVmWareClientShade</key>
+	<false/>
+	<key>jitsiMeetAudioMuted</key>
+	<true/>
+	<key>jitsiMeetAudioOnly</key>
+	<false/>
+	<key>jitsiMeetEnable</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagChat</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagCloseCaptions</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagDisplayMeetingName</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagRaiseHand</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagRecording</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagTileView</key>
+	<false/>
+	<key>jitsiMeetRoom</key>
+	<string></string>
+	<key>jitsiMeetServerURL</key>
+	<string></string>
+	<key>jitsiMeetSubject</key>
+	<string></string>
+	<key>jitsiMeetToken</key>
+	<string></string>
+	<key>jitsiMeetUserInfoAvatarURL</key>
+	<string></string>
+	<key>jitsiMeetUserInfoDisplayName</key>
+	<string></string>
+	<key>jitsiMeetUserInfoEMail</key>
+	<string></string>
+	<key>jitsiMeetVideoMuted</key>
 	<false/>
 	<key>killExplorerShell</key>
 	<false/>
@@ -244,6 +305,8 @@
 	<string></string>
 	<key>logLevel</key>
 	<integer>3</integer>
+	<key>logSendingRequiresAdminPassword</key>
+	<false/>
 	<key>mainBrowserWindowHeight</key>
 	<string>100%</string>
 	<key>mainBrowserWindowPositioning</key>
@@ -254,9 +317,15 @@
 	<integer>0</integer>
 	<key>mobileAllowGuidedAccess</key>
 	<false/>
+	<key>mobileAllowInlineMediaPlayback</key>
+	<true/>
+	<key>mobileAllowPictureInPictureMediaPlayback</key>
+	<false/>
 	<key>mobileAllowQRCodeConfig</key>
 	<false/>
 	<key>mobileAllowSingleAppMode</key>
+	<false/>
+	<key>mobileCompactAllowInlineMediaPlayback</key>
 	<false/>
 	<key>mobileEnableASAM</key>
 	<true/>
@@ -266,6 +335,8 @@
 	<true/>
 	<key>mobileShowSettings</key>
 	<false/>
+	<key>mobileSleepModeLockScreen</key>
+	<true/>
 	<key>mobileStatusBarAppearance</key>
 	<integer>2</integer>
 	<key>mobileStatusBarAppearanceExtended</key>
@@ -319,7 +390,7 @@
 	<key>openDownloads</key>
 	<false/>
 	<key>originatorVersion</key>
-	<string>SEB_OSX_2.1.12_10891</string>
+	<string>SEB_iOS_2.1.50_12365</string>
 	<key>oskBehavior</key>
 	<integer>2</integer>
 	<key>outsideSebEnableChangeAPassword</key>
@@ -375,6 +446,22 @@
 	</array>
 	<key>pinEmbeddedCertificates</key>
 	<false/>
+	<key>proctoringAIEnable</key>
+	<false/>
+	<key>proctoringDetectFaceAngleDisplay</key>
+	<true/>
+	<key>proctoringDetectFaceCount</key>
+	<true/>
+	<key>proctoringDetectFaceCountDisplay</key>
+	<true/>
+	<key>proctoringDetectFacePitch</key>
+	<true/>
+	<key>proctoringDetectFaceYaw</key>
+	<true/>
+	<key>proctoringDetectTalking</key>
+	<true/>
+	<key>proctoringDetectTalkingDisplay</key>
+	<true/>
 	<key>prohibitedProcesses</key>
 	<array/>
 	<key>proxies</key>
@@ -460,6 +547,10 @@
 	<string>http://www.safeexambrowser.org/quit</string>
 	<key>quitURLConfirm</key>
 	<true/>
+	<key>quitURLRestart</key>
+	<false/>
+	<key>remoteProctoringViewShow</key>
+	<integer>0</integer>
 	<key>removeBrowserProfile</key>
 	<false/>
 	<key>removeLocalStorage</key>
@@ -476,6 +567,17 @@
 	<integer>0</integer>
 	<key>sebMode</key>
 	<integer>0</integer>
+	<key>sebServerConfiguration</key>
+	<dict>
+		<key>apiDiscovery</key>
+		<string></string>
+		<key>clientName</key>
+		<string></string>
+		<key>clientSecret</key>
+		<string></string>
+		<key>institution</key>
+		<string></string>
+	</dict>
 	<key>sebServerFallback</key>
 	<false/>
 	<key>sebServerURL</key>
@@ -492,6 +594,10 @@
 	<true/>
 	<key>showNavigationButtons</key>
 	<false/>
+	<key>showProctoringViewButton</key>
+	<true/>
+	<key>showQuitButton</key>
+	<true/>
 	<key>showReloadButton</key>
 	<true/>
 	<key>showReloadWarning</key>
@@ -505,7 +611,9 @@
 	<key>showTime</key>
 	<true/>
 	<key>startURL</key>
-	<string>https://seb.let.ethz.ch/moodle/mod/quiz/view.php</string>
+	<string>https://safeexambrowser.moodle.ch/lms/course/view.php</string>
+	<key>startURLAllowDeepLink</key>
+	<false/>
 	<key>startURLAppendQueryParameter</key>
 	<true/>
 	<key>taskBarHeight</key>
