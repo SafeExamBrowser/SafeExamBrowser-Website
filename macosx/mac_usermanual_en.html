@@ -770,9 +770,25 @@
             <li><span class="quote">Link to quit SEB after exam</span>: Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> (full URL starting with http:// or https://) and placing this on the summary page displayed by the LMS after submitting the exam (or just using the URL of the summary page as quit URL). If a Quit Link is entered, it works regardless of other quit settings in the General pane (<span class="quote">Allow user to quit SEB</span> and the <span class="quote">Quit password</span> is ignored when a quit link is clicked).</li>
             <li><span class="quote">Ask user to confirm quitting</span>: If not selected, then SEB is quit immediately after a Quit Link is detected, without users having to confirm.</li>
             <li><span class="quote">Restart instead of quitting </span>(iOS): Exam session in SEB is restarted, after the quit URL has been detected, instead of quitting SEB.</li>
+          </ul>
+
+		  <h5>Back to Start Button</h5>
+          <ul>
             <li><span class="quote">Back to Start button</span>: Either check the &quot;<span class="quote">Use Start URL</span>&quot; option or enter a link to which the exam is redirected when the Back to Start button is pressed. The browser session is not restarted using this feature (session cookies are not cleared; a logged in user isn't logged out). The Back to Start button is displayed in the SEB dock/task bar when either the &quot;Use Start URL&quot; option is selected or a link is entered.</li>
             <li><span class="quote">Title/tool tip text for the Back to Start button</span>: This text is displayed as the title of the confirmation alert and as tool tip on the icon. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
             <li><span class="quote">Protect  Back to Start button with the quit/restart password</span>: The quit/restart password (if set, see <a href="mac_usermanual_en.html#GeneralPane">General</a><a href="win_usermanual_en.html#GeneralPane"></a> pane) must be entered when the Back to Start button was tapped. Exam support/invigilators should be told this password to be able to return to the start of the exam if there is a problem.</li>
+          </ul>
+      
+		  <h5>Reconfiguring Exam Session</h5>
+          <ul>
+            <li><span class="quote">Allow Reconfiguring</span>: Allow reconfiguring in Secure Mode (= quit password set) while using a client config or during an exam session by loading an SEB exam config file.</li>
+            <li><span class="quote">Reconfiguring URL</span>: The URL of the seb(s) link which invokes reconfiguring has to be matched by this string.</li>
+          </ul>
+      
+		  <h5>Session Cookies</h5>
+          <ul>
+            <li><span class="quote">Clear on session start</span>: Session cookies should be cleared when starting the current exam session (when reconfiguring SEB).</li>
+            <li><span class="quote">Clear on session end</span>: Session cookies should be cleared when ending the current exam session (when reconfiguring SEB).</li>
           </ul>
       
           <h4 class="seb-section-header sebnavbar-link" id="ApplicationsPane">
