@@ -779,9 +779,10 @@
             <li><span class="quote">Protect  Back to Start button with the quit/restart password</span>: The quit/restart password (if set, see <a href="mac_usermanual_en.html#GeneralPane">General</a><a href="win_usermanual_en.html#GeneralPane"></a> pane) must be entered when the Back to Start button was tapped. Exam support/invigilators should be told this password to be able to return to the start of the exam if there is a problem.</li>
           </ul>
       
-		  <h5>Reconfiguring Exam Session</h5>
+		  <h5>Reconfiguring Secure/Exam Session</h5>
+		  <p>Allow reconfiguring by loading an SEB config file (while using the client config or during an exam session). If the running session is secure (has a quit password set), indicate the allowed URL of the new exam config in Reconfiguring URL (wildcard character '*' can be used).</p>
           <ul>
-            <li><span class="quote">Allow Reconfiguring</span>: Allow reconfiguring a secure session (= quit password set) while using a client config or during any exam session (secure or not secure) by loading an SEB exam config file.</li>
+            <li><span class="quote">Allow reconfiguring secure/exam session</span>: Allow reconfiguring a secure session (= quit password set) while using a client config or during any exam session (secure or not secure) by loading an SEB exam config file.</li>
             <li><span class="quote">Reconfiguring URL</span>: The URL of the seb(s) link which invokes reconfiguring has to be matched by this string when reconfiguring a secure session.</li>
           </ul>
       
@@ -811,8 +812,8 @@
           
           <h5 class="seb-section-header sebnavbar-link" id="PermittedProcessesSection">
             <a class="anchorjs-link" href="#PermittedProcessesSection"></a>
-            Permitted Processes Section
-          </h5>
+          Setting <span class="quote">Attempt to quit prohibited applications</span>: See <a href="#ProhibitedProcessesSection">Prohibited Processes Section</a>.</h5>
+          <h5 class="seb-section-header sebnavbar-link">Permitted Processes Section </h5>
           
           <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser, they can be used during an exam in addition to the SEB browser. </p>
           <p><strong>Using permitted processes is not supported in SEB  for macOS</strong>. You can define and edit permitted processes for SEB for Windows here.</p>
