@@ -900,7 +900,7 @@
             <li><span class="quote">Force quit</span>: Indicates whether an application/process may be terminated in a not-nice way, what may cause data loss if the application had unsaved data in memory or was just writing to a persistent memory/drive. If this application is safe to be terminated anytime, then enabling this setting  helps to avoid bothering users: Because if this setting is disabled and the application is running when SEB is started, then an alert/dialogue window is displayed to ask the user to quit this prohibited application together with  permitted applications and to restart SEB afterwards (or to let SEB terminate the applications risking that there could be data loss).<br />
               Disabling this setting  does not mean that processes are not killed: Depending on the platform's capabilities, SEB first tries to terminate prohibited processes nicely or asking the user to do it themselves, if this doesn't work then it terminates them anyways (as long as <em>monitor processes</em> is enabled). But enabling <em>Force quit</em> will speed up this process.<br />
               This flag should not be set for macOS applications which allow to be terminated nicely (they are anyways automatically terminated, without asking the user).</li>
-            <li><span class="quote">Ignore in AAC</span>: When using the  AAC (Autonomous Assessment Configuration or simpler Assessment Mode) kiosk mode which prevents network and screen access for other processes, ignore this prohibited process. AAC will be available in SEB 2.3 for macOS when running on macOS Catalina 10.15.4 or newer. When this macOS built-in single app mode is used, terminating most processes is unnecessary.</li>
+            <li><span class="quote">Ignore in AAC</span>: When using the  AAC (Automatic Assessment Configuration or simpler Assessment Mode) kiosk mode which prevents network and screen access for other processes, ignore this prohibited process. AAC will be available in SEB 2.3 for macOS when running on macOS Catalina 10.15.4 or newer. When this macOS built-in single app mode is used, terminating most processes is unnecessary.</li>
               <!--
             <li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process binary/application, multiple signatures can be added. This isn't necessary if the process binaries/applications are signed with a trusted signature (on OS X by Apple), because the signature identifies an application independently of the program version. Also you can generate code signatures here.</li> -->
           </ul>
@@ -1066,18 +1066,16 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
             <li><span class="quote">Use built-in display</span>: Use the built-in display (if available) when only one display is allowed or when switching off display mirroring.</li>
           </ul>
 			
-          <p class="seb-section-header quote">OS Specific Settings: Settings  for SEB iOS</p>
+          <p class="seb-section-header quote">OS Specific Settings: Settings   SEB for iOS</p>
           
           <ul id="seblist">
-            <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
-            <li><span class="quote">Registry</span>: Select which options in the Windows Security Screen invoked by Ctrl-Alt-Del should be available while SEB is running (switch user, lock this computer, change a password, start Task Manager, log off, shut down, ease of access). In addition the Registry setting <span class="quote">Enable VMware Client Shade</span> activates the 'Shade' bar at the upper edge of a virtual desktop. If you're not using VMware, this setting doesn't have any effect.</li>
-            <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled.  Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.<br>
-              <strong>One setting in the Hooked Keys pane 
-            has an effect in SEB for macOS:</strong>
-              <ul>
-                <li><span class="quote">Enable Right Mouse</span>: In SEB for macOS this  enables right mouse button/context menu on special website elements, Javascript, browser plugins and video players etc. (not on regular website elements) and when using Web Inspector (see <a href="#BrowserPane">Browser pane</a>).</li>
-              </ul>
-            </li>
+            <li><span class="quote">Use AAC/ASAM if available</span>: Uses either Automatic Assessment Configuration, also called Assessment Mode (for BYOD) or requires device to be supervised and having SEB set as an allowed app to invoke Autonomous Single App Mode (ASAM, which takes priority over AAC). </li>
+            <li><span class="quote">Allow Single App Mode</span>: Use Single App Mode invoked by Classroom, an MDM system or Apple Configurator instead of ASAM/AAC.</li>
+            <li><span class="quote">Guided Access Compatibility</span>: Transforms specific HTTP requests for clicked links to prevent the 'Guided Access is enabled' message being displayed when clicking all links.</li>
+            <li><span class="quote">Prevent auto-lock</span>: While SEB is running, the display isn't switched off and the device isn't locked. </li>
+            <li><span class="quote">Lock screen after sleep mode</span>: On devices with iOS &lt;= 12, sleep mode can be activated while in AAC by for example closing an iPad case. Use this option to display a lock screen when the device is woken up.</li>
+            <li><span class="quote">Allow running from iOS version</span>: SEB refused to run on an older iOS version than selected here.</li>
+            <li><span class="quote">Allow running on iOS beta</span>: SEB refuses to run on a major iOS beta version, unless it is allowed here.</li>
           </ul>
           
 		  <p class="seb-section-header quote">OS Specific Settings: Settings mostly for SEB Windows</p>
