@@ -1034,10 +1034,16 @@ certificates extend the system trust store (as if you had manually added them to
             </ul>
                 <strong>SEB  for macOS doesn't  use a SEB Service.</strong> This setting has an effect in SEB for Windows only.<br />&nbsp;
             <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).</li>
-            <li><span class="quote">Allow screen sharing</span>: Allows macOS screen sharing to be used. If this option isn't enabled,  SEB shows an alert and refuses to start up. If screen sharing is detected while SEB is running, a red lock screen is displayed and SEB can only be unlocked after  the screen sharing session has been stopped and then  the restart/quit password is entered (therefore exam supervision/support should know this password!).<br>
-            To avoid that SEB locks itself during an exam when it detects that screen sharing started, it's best to switch off 'Screen Sharing' and 'Remote Management' in System Preferences/Sharing. The macOS features 'Back to My Mac' (iCloud settings) and 'Share Screen' using the Message app can also trigger the alert/lock screen.</li>
-            <li><span class="quote">Enable screen capture</span>: Controls macOS screen capture (invoked with Cmd-Shift-3 and Cmd-Shift-4), corresponds with Enable Print Screen in Windows. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
+            <li><span class="quote">Allow screen capture/recording</span>:  Allows macOS screen capture (screen shots) and recording (cmd-shift-3/-4/-5) to be used. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
+            <li><span class="quote">Allow window capture (screen shots)</span>:  Shows or hides SEB windows on macOS screen shots (invoked with cmd-shift-3/-4/-5).</li>
+            <li><span class="quote">Block screen shots (Legacy)</span>:  Use legacy method to block macOS screen shots (invoked with cmd+shift+3/+4/+5). Disable together with enabling settings 'Allow screen capture/recording' and 'Allow window capture (screen shots)' will allow to take screen shots on Mac. Use 'Enable Print Screen' in Hooked Keys tab to allow screen shots to be taken in SEB for Windows.</li>
+            <li><span class="quote">Allow network screen sharing</span>: Allows macOS screen sharing (VNC based) to be used. If this option isn't enabled,  SEB shows an alert and refuses to start up. If screen sharing is detected while SEB is running, a red lock screen is displayed and SEB can only be unlocked after  the screen sharing session has been stopped and then  the restart/quit password is entered (therefore exam supervision/support should know this password!).<br>
+To avoid that SEB locks itself during an exam when it detects that screen sharing started, it's best to switch off 'Screen Sharing' and 'Remote Management' in System Preferences/Sharing. The macOS features 'Back to My Mac' (iCloud settings in older macOS versions) and 'Share Screen' using the Message app can also trigger the alert/lock screen.<br>
+Please note that internet bots can cause the screen sharing lock screen to be triggered. In insufficiently protected networks those bots try to connect to the ports used for VNC and to log in using trivial passwords.
+            If this happens, you can ask your network security experts to block access to VNC ports.</li>
+            <li><span class="quote">Enforce blocking screen sharing on Mac</span>:  Overrides the original screen sharing setting on Mac clients.</li>
             <li><span class="quote">Use private clipboard</span>: Prevents utilities running in the background and Universal Clipboard (on macOS 10.12 Sierra) to be used to copy-paste contents into or out of exams. Private clipboard should always be used besides when working with third party applications in a managed user account.</li>
+            <li><span class="quote">Enforce private clipboard on Mac</span>:  If enabled, overrides the old setting 'Use private clipboard&quot; and enforces the private clipboard, so contents can only be copy-pasted inside SEB browser windows.</li>
             <li><span class="quote">Enable logging</span>: The log can help in debugging SEB (if you send it to the developers) and to find out about possible manipulations. You can save the log to a network drive mounted on all exam client computers, since the log's name is unique and contains the machine's name and IP address. </li>
             <li><span class="quote">Log level</span>: The log level indicates which information gets saved. <strong>Error</strong> includes fatal application and browser level errors, <strong>Warning</strong> are non-fatal but non-expected or security affecting events. <strong>Info</strong> includes most user actions including all browser navigation actions like addresses of opened web pages. <strong>Debug</strong> is reserved for information which is only necessary for in-deep program code debugging. The log will contain the selected log level plus all levels with a lower value, a log with the <strong>Verbose</strong> level contains events of all levels.. Default is Warning (error and warning messages).  <strong>Debug</strong> and <strong>Verbose</strong> are meant for debugging (send such a log file to the SEB developers to find out details about a problem). <br>
             <strong>Note:</strong> If using Debug or Verbose log levels and having the Console system app open, you can experience delays when starting SEB.</li>
@@ -1047,7 +1053,7 @@ certificates extend the system trust store (as if you had manually added them to
           </ul>
 
           <p class="seb-section-header quote">OS Specific Settings: macOS</p>
-          <ul id="seblist2">
+          <ul id="seblist">
             <li><span class="quote">Enforce minimal macOS version</span>:  This is helpful if your web application isn't compatible with an older WebKit version (as for example used in OS X 10.7) or if you want to make sure that embedded certificates and certificate pinning work on all exam clients. In the latter case you should enforce the minimum macOS version 10.9. Currently the default value for this setting is macOS 10.11.</li>
             <li><span class="quote">Disable app switcher when starting</span>: SEB checks for the command key being held down while SEB is starting up. This prevents using the application switcher to mess with SEB's kiosk mode.</li>
             <li><span class="quote">Force installation in Applications folder</span>: SEB enforces to be installed in an Applications folder (/Applications or ~/Applications</li>
@@ -1059,17 +1065,32 @@ certificates extend the system trust store (as if you had manually added them to
             <li><span class="quote">Maximum allowed number of connected displays</span>: If more displays are connected, these are blanked with an orange full screen window. Disabling display mirroring and allowing only one display can prevent wireless displays  be used to cheat or leak exam content.</li>
             <li><span class="quote">Use built-in display</span>: Use the built-in display (if available) when only one display is allowed or when switching off display mirroring.</li>
           </ul>
-          <p class="seb-section-header quote">OS Specific Settings: Settings mostly for SEB Windows</p>
+			
+          <p class="seb-section-header quote">OS Specific Settings: Settings  for SEB iOS</p>
           
           <ul id="seblist">
             <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
             <li><span class="quote">Registry</span>: Select which options in the Windows Security Screen invoked by Ctrl-Alt-Del should be available while SEB is running (switch user, lock this computer, change a password, start Task Manager, log off, shut down, ease of access). In addition the Registry setting <span class="quote">Enable VMware Client Shade</span> activates the 'Shade' bar at the upper edge of a virtual desktop. If you're not using VMware, this setting doesn't have any effect.</li>
-            <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled. Note: <span class="quote">Enable Print Screen</span> corresponds with <span class="quote">Enable screen capture</span> in macOS (changing one settings also changes the other). Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.<br>
-              Besides Enable Print Screen, another setting in the Hooked Keys pane 
-            has an effect in SEB for macOS:
-                <ul>
-                  <li><span class="quote">Enable Right Mouse</span>: In SEB for macOS this  enables right mouse button/context menu on special website elements, Javascript, browser plugins and video players etc. (not on regular website elements)</li>
-                </ul>
+            <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled.  Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.<br>
+              <strong>One setting in the Hooked Keys pane 
+            has an effect in SEB for macOS:</strong>
+              <ul>
+                <li><span class="quote">Enable Right Mouse</span>: In SEB for macOS this  enables right mouse button/context menu on special website elements, Javascript, browser plugins and video players etc. (not on regular website elements) and when using Web Inspector (see <a href="#BrowserPane">Browser pane</a>).</li>
+              </ul>
+            </li>
+          </ul>
+          
+		  <p class="seb-section-header quote">OS Specific Settings: Settings mostly for SEB Windows</p>
+          
+          <ul id="seblist">
+            <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
+            <li><span class="quote">Registry</span>: Select which options in the Windows Security Screen invoked by Ctrl-Alt-Del should be available while SEB is running (switch user, lock this computer, change a password, start Task Manager, log off, shut down, ease of access). In addition the Registry setting <span class="quote">Enable VMware Client Shade</span> activates the 'Shade' bar at the upper edge of a virtual desktop. If you're not using VMware, this setting doesn't have any effect.</li>
+            <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled.  Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.<br>
+              <strong>One setting in the Hooked Keys pane 
+            has an effect in SEB for macOS:</strong>
+              <ul>
+                <li><span class="quote">Enable Right Mouse</span>: In SEB for macOS this  enables right mouse button/context menu on special website elements, Javascript, browser plugins and video players etc. (not on regular website elements) and when using Web Inspector (see <a href="#BrowserPane">Browser pane</a>).</li>
+              </ul>
             </li>
           </ul>
           
