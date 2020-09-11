@@ -781,14 +781,27 @@
       
 		  <h5>Reconfiguring Exam Session</h5>
           <ul>
-            <li><span class="quote">Allow Reconfiguring</span>: Allow reconfiguring in Secure Mode (= quit password set) while using a client config or during an exam session by loading an SEB exam config file.</li>
-            <li><span class="quote">Reconfiguring URL</span>: The URL of the seb(s) link which invokes reconfiguring has to be matched by this string.</li>
+            <li><span class="quote">Allow Reconfiguring</span>: Allow reconfiguring a secure session (= quit password set) while using a client config or during any exam session (secure or not secure) by loading an SEB exam config file.</li>
+            <li><span class="quote">Reconfiguring URL</span>: The URL of the seb(s) link which invokes reconfiguring has to be matched by this string when reconfiguring a secure session.</li>
           </ul>
       
 		  <h5>Session Cookies</h5>
+		  <p>Disable clearing session cookies when ending the first session and when starting the second session. Then users stay logged in if they already were in the previous session.</p>
           <ul>
             <li><span class="quote">Clear on session start</span>: Session cookies should be cleared when starting the current exam session (when reconfiguring SEB).</li>
             <li><span class="quote">Clear on session end</span>: Session cookies should be cleared when ending the current exam session (when reconfiguring SEB).</li>
+          </ul>
+      
+		  <h5>Query String Parameter (iOS)</h5>
+		  <p>The seb(s):// link to the config file can contain an additional query string, separated from the main URL by '?' or '??' (if the URL itself doesn't contain a query). SEB will then append this query string to the Start URL. This feature can for example be used to pass an individual login token to an exam system when SEB is started by opening an seb(s) link  in another browser, without having to generate an individual config file for each user.</p>
+		  <ul>
+            <li><span class="quote">Allow Query Parameter</span>: If a seb(s):// link contains an additional query string, SEB appends it to the exam's Start URL. Currently only supported in SEB for iOS.</li>
+          </ul>
+      
+		  <h5>Exam Deep Linking (iOS)</h5>
+		  <p>Deep linking allows to directly open various exams using just one exam config file placed somewhere in the path hierarchy of a sebs:// or Universal Link (those links need to start with the URL used in Start URL). </p>
+		  <ul>
+            <li><span class="quote">Allow Deep Linking for Exams</span>: If using a Universal Link or an indirect seb(s):// link, SEB will search its path hierarchy for specifically named config files, when this setting is enabled and the seb(s) link  doesn't directly point to an SEB config file.  Those config files must either be named <em>SEBSettings.seb</em> (which can contain either a client or exam config) or <em>SEBExamSettings.seb</em> (SEB searches for this only if <em>SEBSettings.seb</em> was found and contained a client config). By using both <em>SEBSettings.seb</em> containing a client config and <em>SEBExamSettings.seb</em> containing an exam config, you can start an exam and at the same time reconfigure SEB's client settings with with only one Universal Link or sebs deep link.</li>
           </ul>
       
           <h4 class="seb-section-header sebnavbar-link" id="ApplicationsPane">
