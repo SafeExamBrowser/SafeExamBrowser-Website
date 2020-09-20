@@ -419,33 +419,29 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 2.1.16 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 2.1.17 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS 9.3.5 and newer<a href="#RemarkOSX10-7"></a></strong></p>
         <p>SEB for iOS opens a web browser without an address and search bar, loads a pre-configured webpage and locks an iPad (or iPhone or iPod Touch) into a single app kiosk mode. </p>
-        <p>New in SEB 2.1.16 for iOS:</p>
-<ul id="seblist">
-          
-          <li>Improved accessibility when using VoiceOver.</li>
-              <li>Now supporting hardware keyboard shortcuts (Ctrl-Tab/Shift-Ctrl-Tab) to switch browser tabs.</li>
-              <li> Added keyboard shortcut Cmd-M to toggle left side menu (show/hide).</li>
-              <li> Improved reconfiguration with MDM Managed App Configuration, to facilitate deployment of SEB settings.</li>
-              <li> Added new option to lock SEB when it's attempted to capture the screen.</li>
-              <li> Added new option to lock SEB when closing an iPad case on iOS &lt;13. as the displayed iOS lock screen could contain a cheat sheet. </li>
-              <li> Implemented separate settings to control clearing cookies when starting/ending session. This allows users to stay logged-in, for example when starting an exam with individual settings in some learning management and exam systems.</li>
-              <li>Fixed issues when calculating the Config Key hash with specific settings. Compatible assessment systems can use this hash value to automatically verify that an exam is accessed with correct settings.</li>
-              <li> Allow to open SEB config files from iCloud Drive (using Files app).</li>
-              <li> Fixed URL filter didn't treat query strings consistently between SEB versions on other platforms.<br>
-                </li>
-              <li> Fixed client configuration encrypted with password wasn't compatible between SEB versions on some platforms.<br>
-                </li>
-              <li>Fixed setting Browser Features / &quot;Show URLs: Always&quot; couldn't be selected in In-App-Settings and activating this option wasn't showing the page URL in the side menu.<br>
-                </li>
-              <li>If checking server trust with embedded certificates, resources in subdomains of already trusted domains are now trusted as well, according to behavior in other web browsers. </li>
-</ul>
-<p>Main Features:</p>
+        <p>New in SEB 2.1.17 for iOS:</p>
+        <ul>
+          <li>SEB 2.1.17 runs by default on iOS 14, removed check for running on iOS beta.</li>
+          <li> New scroll lock button for better usability while using some drag-and-drop and drawing question types.<br>
+          </li>
+          <li> Now displaying a disclaimer about the requirement to add an issue description before sending log files to the SEB developers in the integrated mail composer.<br>
+          </li>
+          <li> Now writing SEB and iOS version and device info into log files.<br>
+          </li>
+          <li> Fixed that a different Config Key was calculated on iOS 9/10 than on iOS 13/14 with some rare configuration files containing a deprecated setting.<br>
+          </li>
+          <li> Error message in case AAC couldn't be started properly and device needs to be restarted will only show on iOS versions older than iOS 13.0.<br>
+          </li>
+          <li> Fixed that SEB assumed an opened URL could be a Universal Link if decrypting the config from that URL failed.<br>
+          </li>
+          <li> Fixed a common crash when the &quot;Search Network&quot; button in the Initial Configuration Assistant is tapped.</li></ul>
+        <p>Main Features:</p>
         <ul id="seblist">
           <li>The single app kiosk mode used by SEB is built into the iOS operating system and therefore provides a high level of security. </li>
           <li>Students cannot switch to other apps, access other websites or communicate with other students during an exam. </li>
