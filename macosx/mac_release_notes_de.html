@@ -228,8 +228,21 @@
         <div class="col-md-9">
         
           <!-- Content -->
-          <h2></h2>
 
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 2.2.2</a>:</h5>
+            <ul id="seblist">
+              <li>Korrigiert, dass PDF-Dokumente nicht dargestellt wurden, wenn der Acrobat PDF Reader installiert war.</li>
+              <li>Das Einstellungen-Fenster kann nun nicht mehr geöffnet werden, wenn in Moodle 3.9 automatisch erzeugte SEB-Einstellungen benutzt werden (Option "Manuell Konfigurieren"). SEB benutzt nun die Standardeinstellung <em>allowPreferencesWindow=false</em> in Prüfungs-Konfigurationsdateien (Client-Konfigurationen haben weiterhin <em>allowPreferencesWindow=true </em>als Standardeinstellung).</li>
+              <li>Korrigiert: SEB konnte nicht durch das Öffnen einer .seb-Datei gestartet werden auf macOS &lt;= 10.12.</li>
+              <li>Falsch-positive Erkennung eines nicht erlaubten Prozesses korrigiert, wenn ein Teil des Prozessnamens mit einem verbotenen Prozess übereingestimmt hat.</li>
+              <li> Das Einstellungen-Fenster kann nun kontrolliert vergrössert oder verkleinert werden, abhängig vom angezeigten Inhalt.</li>
+              <li>Übergrosse Einstellungen-Tabs werden nun von Anfang an angezeigt, wenn sie das erste Mal geöffnet werden.</li>
+              <li>Korrigiert: Die Höhe des Benutzeroberfläche-Tabs konnte nicht verändert werden.</li>
+              <li>Es wird jetzt eine Fehlermeldung angezeigt, wenn auf ein Identitätszertifikat zum Entschlüsseln einer SEB-Konfiguration nicht zugegriffen werden kann.</li>
+              <li>Versuchte Korrektur eines nicht immer reproduzierbaren Fehlers beim Überprüfen der Code-Signatur von einigen im Vordergrund sichtbaren Applikationen, wodurch das Starten von SEB verlangsamt oder blockiert wird.</li>
+            </ul>
+			
+			
             <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 2.2.1</a>:</h5>
             <ul id="seblist">
               <li>Einstellung für verbotene Prozesse, welche verhindert, dass bestimmte Prozesse und Applikationen zusammen mit SEB verwendet werden. </li>

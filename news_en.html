@@ -230,7 +230,18 @@
         <div class="col-md-9">
         
           <!-- Content -->
-			
+
+		  <h5 id="sebh5">Oktober 16, 2020</h5>
+		  <p><a href="download_en.html#MacOSX"><strong>Safe Exam Browser 2.2.2 for macOS released.</strong></a> This version is a maintenance update for SEB 2.2.1, with some improvements and bug fixes:</p>
+		  <ul id="seblist5">
+		    <li>Fixed that PDF documents were not displayed when Acrobat PDF viewer is installed.</li>
+		    <li>Prevent Preferences window to be opened in Moodle 3.9 when using automatically generated settings (option "Configure manually"). SEB now uses the default setting <em>allowPreferencesWindow=false</em> in exam configuration files (client configs still have <em>allowPreferencesWindow=true</em> as default setting).</li>
+		    <li>Fixed: Cannot start SEB by opening .seb file on macOS &lt;= 10.12.</li>
+		    <li>Fixed false positive detection of not allowed process because of partial match of process executable name.</li>
+		    <li>Now controlling resizing of Preferences panels and scrolling oversized  panels to the top when displaying them the first time</li>
+	      </ul>
+		  <p><span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
+
           <h5 id="sebh5">Oktober 6, 2020</h5>
           <p>We created the  video  <a href="https://www.youtube.com/watch?v=6GEn_NWnZe8" target="_blank">Remote Exams With Safe Exam Browser</a>, which is available on the new <a href="https://www.youtube.com/channel/UCc_DK52R-5oAOMjFbPsKznw" target="_blank">SafeExamBrowser YouTube Channel</a>. <span dir="auto">It demonstrates the new built-in remote proctoring features in Safe Exam Browser and SEB Server. </span>Our goal is to replicate the situation in an exam hall, where proctors/invigilators walk around and  observe students taking a test. The new live proctoring features allow to monitor exam candidates during the exam using the webcam and microphone in their devices. Proctors or an educator/teacher can also communicate by live video/audio stream or the built-in chat with exam candidates. They can for example give last-minute instructions before the exam starts. Or they can help single students in case of problems during the exam. Future versions will also support live viewing and recording the display of exam devices. </p>
           <p>AI proctoring features allow to optionally track face movements and the number of faces visible in the camera stream. Face detection and tracking is performed on-device, not in any cloud service. Detected events are logged, displayed with a symbol in the video stream and send to a SEB Server instance if connected to one.</p>
