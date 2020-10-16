@@ -229,7 +229,19 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
-          <h2></h2>
+
+    <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2.2</a>:</h5>
+          <ul id="seblist">
+            <li>Fixed that PDF documents were not displayed when Acrobat PDF viewer is installed.</li>
+            <li>Prevent Preferences window to be opened in Moodle 3.9 when using automatically generated settings (option "Configure manually"). SEB now uses the default setting <em>allowPreferencesWindow=false</em> in exam configuration files (client configs still have <em>allowPreferencesWindow=true</em> as default setting).</li>
+            <li>Fixed: Cannot start SEB by opening .seb file on macOS &lt;= 10.12.</li>
+            <li>Fixed false positive detection of not allowed process because of partial match of process executable name.</li>
+            <li>Now controlling resizing of Preferences panels: Don't allow to resize those without scroll view and allow to resize the ones with scroll view only to the maximum size of their content.</li>
+            <li>Now scrolling oversized Preferences panels to the top when displaying them the first time.</li>
+            <li>Fixed User Interface Preferences Panel didn't resize vertically.</li>
+            <li>Fixed missing error message when identity certificate to decrypt SEB config cannot be accessed.</li>
+            <li>Attempted to fix (not always reproducible) checking code signature of some visible apps delays or blocks starting SEB. </li>
+          </ul>
 
           <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2.1</a>:</h5>
           <ul id="seblist">
@@ -435,7 +447,7 @@
             <li>Fixed several English and German user interface tooltips in the preferences window. Changed title of Appearance pane to User Interface/Benutzeroberfläche.</li>
             <li>Fixed bug changed passwords in the General prefs pane were not saved when saving settings (commands Save or Save As).</li>
             <li>Added  comma separated proxy exception list in Network -&gt; Proxies prefs pane.</li>
-            </ul>
+    </ul>
           <p><strong>Known limitations.</strong> The following preferences options are not yet available in this version:</p>
           <ul id="seblist">
             <li>Applications pane: Monitor processes (new third party application handling and additional security feature) is not yet available. It's possible to  add permitted and prohibited processes for SEB 2.x for Windows. SEB for macOS doesn't support directly starting and monitoring third party applications yet.</li>
@@ -475,7 +487,7 @@
             <li>Adapted format of the encrypted SEB configuration files to be compatible with the SEB 2.0RC version for Windows. You can now use the same .seb files for starting exams on SEB 2.0RC Windows clients and SEB 2.0pre3 macOS clients. <strong>Note:</strong> SEB settings files written with SEB 2.0pre1 or 2.0pre2 cannot be read with this version.</li>
             <li>Fixed a bug in calculating the Browser Exam Key when loading a .seb file for starting an exam.</li>
             <li>Fixed a bug which caused the SEB browser window to be invisible when starting the new SEB version and old, incompatible settings were read from the Preferences folder of the system. <strong>Note:</strong> These outdated local client settings are cleared when this new SEB version is started first, you will have to configure SEB freshly. </li>
-            </ul>
+    </ul>
           <p><strong>Known issues.</strong> The following features are not yet functional/disabled and will be activated only after extensive testing in upcoming releases:</p>
           <ul id="seblist">
             <li>Config Files preferences pane: File handling buttons like open, save and revert are disabled.</li>
@@ -497,7 +509,7 @@
             <li>Implemented new preferences panes which include all new configuration options for the 2.0 final release. Extended  .seb settings format for these new features. Improved handling of .seb files for compatibility with .seb files created with the upcoming Windows version of SEB 2.0.</li>
             <li>Fixed bug when <span class="quote">About</span> modal window sometimes was staying in front of alerts or preferences window when starting SEB.</li>
             <li>Added option to run SEB inside virtual machine (switch off the VM detector).</li>
-            </ul>
+    </ul>
           <p><strong>Known issues.</strong> The following features are not yet functional/disabled and will be activated only after extensive testing in upcoming releases:</p>
           <ul id="seblist">
             <li>Config Files preferences pane: File handling buttons like open, save and revert are disabled and not yet final because the settings file handling is currently being migrated to the OS X 10.7+ auto saving document architecture.</li>
