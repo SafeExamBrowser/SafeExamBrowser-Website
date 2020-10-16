@@ -360,17 +360,29 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb-macos_2.2.1/SafeExamBrowser-2.2.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.2.2/SafeExamBrowser-2.2.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.2.1 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.2.2 for macOS</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for macOS 10.15, 10.14, 10.13, 10.12, 10.11 (limited support for 10.10, 10.9, <a href="#RemarkOSX10-7">10.8*</a> and <a href="#RemarkOSX10-7">10.7*</a>)</strong><br />
-        <span class="codetext">Build 2E48. SHA1: 6ea7500893d77d2ceb1329557108872f02b0701c</span></p>
+        <span class="codetext">Build 2EAD. SHA1: 50da8b61c17d56a88b29a40f61dc6379d605b4f0</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.2.1/SafeExamBrowser-2.2.1.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
-        <p>SEB 2.2.1 for macOS is a major update, improving security by blocking prohibited processes, adding new capabilities and offering full compatibility to enhanced integrations with learning management systems, like the one available in Moodle 3.9.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.2.2/SafeExamBrowser-2.2.2.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p>SEB 2.2.2 for macOS is a maintenance update for SEB 2.2.1, with some improvements and bug fixes:</p>
+          <ul id="seblist">
+            <li>Fixed that PDF documents were not displayed when Acrobat PDF viewer is installed.</li>
+            <li>Prevent Preferences window to be opened in Moodle 3.9 when using automatically generated settings (option "Configure manually"). SEB now uses the default setting <em>allowPreferencesWindow=false</em> in exam configuration files (client configs still have <em>allowPreferencesWindow=true</em> as default setting).</li>
+            <li>Fixed: Cannot start SEB by opening .seb file on macOS &lt;= 10.12.</li>
+            <li>Fixed false positive detection of not allowed process because of partial match of process executable name.</li>
+            <li>Now controlling resizing of Preferences panels: Don't allow to resize those without scroll view and allow to resize the ones with scroll view only to the maximum size of their content.</li>
+            <li>Now scrolling oversized Preferences panels to the top when displaying them the first time.</li>
+            <li>Fixed User Interface Preferences Panel didn't resize vertically.</li>
+            <li>Fixed missing error message when identity certificate to decrypt SEB config cannot be accessed.</li>
+            <li>Attempted to fix (not always reproducible) checking code signature of some visible apps delays or blocks starting SEB.        </li>
+          </ul>
+        <p>New since the major update SEB 2.2 for macOS:</p>
         <ul id="seblist">
           <li> Prohibited Processes settings for blocking specific processes and applications from running together with SEB. </li>
           <li> Preset prohibited processes covering communication, screen sharing and recording apps. Let us know if you would like to suggest applications and tools to be added to those preset prohibited processes (we need information about the software and its name and Bundle Identifier (if applicable).</li>
@@ -381,16 +393,9 @@
           <li> Added separate Mac setting for the Private Clipboard feature.</li>
           <li> Added Mac-specific setting for blocking screen sharing over the network (VNC): key screenSharingMacEnforceBlocked (default: false, then the value of the existing key allowScreenSharing is used).</li>
           <li> Added all SEB for iOS settings in Preferences window.</li>
-          <li> Fixed that a wrong <a href="developer/seb-config-key.html">Config Key</a> was calculated because of specific new default settings added in a new SEB version. This was the cause why SEB 2.1.4 did not work correctly with the new SEB integration in Moodle 3.9.</li>
+          <li> Fixed that a wrong <a href="developer/seb-config-key.html">Config Key</a> was calculated because of specific new default settings added in a new SEB version. This was the cause why SEB 2.1.4 did not work correctly with the new SEB integration in Moodle 3.9.  </li>
         </ul>
-        <p>Fixed SEB 2.2 issues in SEB 2.2.1:</p>
-        <ul  id="seblist">
-          <li> Couldn't open Moodle 3.9 (Deeper Integration) quiz by starting SEB with indirect sebs:// link from another browser.</li>
-          <li> Browser Exam and Config Key were not displayed correctly when opening the Preferences/Exams pane directly after loading an exam configuration.</li>
-          <li> Starting SEB by loading configs from indirect sebs:// Links works now regardless of URL filter in client settings.</li>
-          <li> Embedded SSL debug certificate  with wildcard domains didn't work.</li>
-        </ul>
-  <p>Main features: </p>
+        <p>Main features: </p>
   <ul id="seblist">
               <li>Support for encrypted SEB setting files (file type <span class="quote">.seb</span>) which allow to individually configure SEB per exam. You can  use the same .seb files for starting exams on SEB  Windows clients and SEB clients on macOS. </li>
               <li>Comfortable built-in editor for the platform-independent SEB configuration files, which can also set all additional individual settings for the Windows version. </li>
