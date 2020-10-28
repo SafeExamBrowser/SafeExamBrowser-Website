@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <script type="text/javascript" src="webkit_version_xl.js"></script>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>WebKit version detection sample page</title>
+</head>
+
+<body>
+  <h1>
+  </h1>
+  <div id="foo"></div>
+    <script type="text/javascript">
+      var version = get_webkit_version();
+      
+      document.write(version['major'] + "." + version['minor'] + " " + version['browser']);
+/*      if (version['is_nightly'])
+        document.write(" nightly build");
+      else
+        document.write(" system WebKit"); */
+        
+      document.getElementById("foo").innerHTML = version['major'];
+    </script>
+</body>
+</html>
