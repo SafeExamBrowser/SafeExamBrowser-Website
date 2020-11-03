@@ -242,6 +242,7 @@
                   <li><a href="#features-common-features">Common Features</a></li>
                   <li><a href="#features-seb-windows">SEB for Windows</a></li>
                   <li><a href="#features-seb-macOS">SEB for macOS</a></li>
+                  <li><a href="#features-seb-iOS">SEB for iOS</a></li>
                 </ul>
               </li>
               <li> <a href="#details">Technical Details</a>
@@ -406,6 +407,22 @@
               <li>Third party applications can be allowed to run together with SEB, but only in an accordingly configured macOS user account</li>
             </ul>
 
+            <h4 class="seb-section-header sebnavbar-link" id="features-seb-iOS">
+              <a class="anchorjs-link " href="#features-seb-iOS" aria-label="Anchor link for: Features"></a>
+              SEB for iOS
+            </h4>
+            <ul id="seblist">
+              <li>Using the iOS built-in Assessment Mode (Automatic Assessment Configuration – AAC), which disables all unwanted system features even with BYOD. Also blocking screen capture using AirPlay or Lightning/USB-C cable.</li>
+              <li>Students cannot switch to other apps, access other websites or communicate with other students during an exam. <strong>Note that you need to set up a SEB Quit Password for the secure mode to be active!</strong></li>
+              <li>Notifications, FaceTime/voice calls and screen shots are also blocked. </li>
+              <li>In-app settings for easy set up, can be protected with an administrator password.</li>
+            </ul>
+            <ul>
+              <li>QR codes can be used to start exams with individual settings or to configure the SEB client to load an individual exam system start/portal page.</li>
+              <li>Supporting deployment of SEB settings using a mobile device management system, as it supports the iOS feature "MDM Managed Configuration".</li>
+            </ul>
+
+
           </div>
           <!-- / Document Section -->
 
@@ -425,18 +442,17 @@
             <ul>
               <li>Supported operating systems:
                 <ul>
-                  <li>Microsoft   Windows 7</li>
-                  <li>Windows 8/8.1 </li>
+                  <li>Windows 8.1 </li>
                   <li>Window 10</li>
                 </ul>
               </li>
               <li> License: Mozilla Public License (MPL)</li>
-              <li>Browser engine: Mozilla Gecko, which is used in Firefox (until Firefox 56).</li>
+              <li>Browser engine: Mozilla Gecko, which is used in Firefox (until Firefox 56). SEB 3.x: Chromium Blink.</li>
               <li>Programming languages and frameworks:
                 <ul>
                   <li>C# (.NET)</li>
                   <li>JavaScript</li>
-                  <li>Mozilla XULRunner/Firefox</li>
+                  <li>Mozilla XULRunner/Firefox. SEB 3.x: Cef Sharp (Chromium Embed Framework CEF3).</li>
                 </ul>
               </li>
             </ul>
@@ -475,6 +491,7 @@
             <ul>
               <li>Operating systems:
                 <ul>
+                <li>iOS 14</li>
                 <li>iOS 13</li>
 	              <li>iOS 12</li>
 	              <li>iOS 11</li>
@@ -484,7 +501,7 @@
               </li>
               <li> License:  Mozilla Public License (MPL)</li>
               <li>Browser engine: WebKit  (as Safari). SEB uses the WebKit version installed on the system (WebKit version depends on iOS  version). Currently UIWebView is used.</li>
-              <li>Programming language: Objective-C</li>
+              <li>Programming languages: Objective-C, Swift</li>
             </ul>
 
           </div>
@@ -498,7 +515,7 @@
               License
             </h3>
 
-          <p>Safe Exam Browser &copy; 2010-2019  <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, based on the original idea of Safe Exam Browser by Stefan Schneider, University of Giessen<br />
+          <p>Safe Exam Browser &copy; 2010-2020  <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, based on the original idea of Safe Exam Browser by Stefan Schneider, University of Giessen<br />
           Project concept: Dr. Thomas Piendl, Daniel R. Schneider, Damian Büchel, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  </p>
 
           <p>Safe Exam Browser is released as freeware. The <a href="https://github.com/SafeExamBrowser" target="_blank">source code</a> is  subject to the <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (the  &quot;License&quot;); you may only use these files in compliance with the  License. You may obtain a copy of the License at <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> .</p>
