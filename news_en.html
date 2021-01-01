@@ -187,7 +187,7 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-    
+
       <!-- Page Heading/Breadcrumbs -->
       <div class="row">
         <div class="col-lg-12">
@@ -202,14 +202,14 @@
             <li class="active"><a href="https://twitter.com/safeexambrowser" target="_blank">Follow SEB on Twitter</a>
             </li>
           </ol>
-    
+
         </div>
       </div>
-      <!-- /.row --> 
-      
+      <!-- /.row -->
+
       <!-- Content Row -->
-      <div class="row"> 
-        
+      <div class="row">
+
         <!-- Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group">
@@ -222,14 +222,18 @@
             <a href="ios/ios_usermanual_en.html" class="list-group-item">Documentation iOS</a>
             <a href="support_en.html" class="list-group-item">Support</a> </div>
 		</div>
-        
+
         <!-- Content Column -->
         <div class="col-md-9">
-        
+
           <!-- Content -->
-		  <h5 id="sebh5">December, 17 2020</h5>
-		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.1.1 for Windows released</a></strong>: This update adds new functionality for the SEB Server integration with Moodle and fixes a few issues reported by the community. Please visit the <a href="windows/win_release_notes_en.html">release notes</a> for a list of all changes.</p>
-			
+          <h5 id="sebh5">January, 1 2021</h5>
+    		  <p><strong><a href="alliance/members.html">SEB Alliance started.</a></strong> From 2016-2020, the successful SEB Consortium supported financing the SEB open source project. Due to changes in Swiss VAT regulations, which would have caused significant administrative overhead, we now discontinued the SEB Consortium.</p>
+          <p>On January 1st,  2021 we started the SEB Alliance instead. The SEB Alliance is the new legal entity which sustains the ongoing funding of the Safe Exam Browser open source project to continue its maintenance, development and support activities.</p>
+
+          <h5 id="sebh5">December, 17 2020</h5>
+    		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.1.1 for Windows released</a></strong>: This update adds new functionality for the SEB Server integration with Moodle and fixes a few issues reported by the community. Please visit the <a href="windows/win_release_notes_en.html">release notes</a> for a list of all changes.</p>
+
 		  <h5 id="sebh5">November 9, 2020</h5>
 		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.1.0 for Windows released</a></strong>: This feature update adds basic support for SEB Server, text search for the integrated browser and a first step towards feature parity of SEB for all three operating systems (Windows, macOS and iOS). Please visit the <a href="windows/win_release_notes_en.html">release notes</a> for a list of all changes.</p>
 
@@ -269,9 +273,9 @@
             <li> Fixed a common crash when the &quot;Search Network&quot; button in the Initial Configuration Assistant is tapped.<br>
             </li>
           </ul>
-          <p> The <a href="ios/ios_usermanual_en.html">manual</a> is currently being updated. There is a <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">forum section</a> for questions and discussions about the 
+          <p> The <a href="ios/ios_usermanual_en.html">manual</a> is currently being updated. There is a <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">forum section</a> for questions and discussions about the
 		  SEB for iOS version as well. </p>
-			
+
           <h5 id="sebh5">August 31, 2020</h5>
           <p class="half_linespace"><a href="download_en.html#MacOSX"><strong>Safe Exam Browser 2.2.1 for macOS released.</strong></a> This version is a major update, improving security by blocking prohibited processes, adding new capabilities and offering full compatibility to enhanced integrations with learning management systems, like the one available in Moodle 3.9.</p>
           <ul id="seblist4">
@@ -288,7 +292,7 @@
           </ul>
           <p class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes. The <a href="macosx/mac_usermanual_en.html">user manual</a> has been updated for SEB 2.2.1 and contains<strong> <a href="macosx/mac_usermanual_en.html#ChangesIn2.2">important information about new features and settings in SEB 2.2.1</a>, which might require you to update your SEB configuration files.</strong></p>
 
-			
+
 		  <h5 id="sebh5">July 7, 2020</h5>
 		  <p><strong><a href="download_en.html#WindowsLegacy">Safe Exam Browser 2.4.1 for Windows released</a></strong>: This  is a maintenance update, which can be used if the refactored, more modern version SEB 3.0.1 misses a feature you need. SEB 2.4.1 fixes an issue which was reported to happen when using the SEB-Moodle Deeper Integration (available by default in Moodle 3.9 and as <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">plugin for Moodle 3.7 and 3.8</a>):</p>
 		  <ul>
@@ -301,12 +305,12 @@
 		    <li> Added expansion of environment variables in path of permitted processes. This allows to configure applications to run as permitted process, which need to be installed in subdirectories of the user directory, for example %AppData%.</li>
 	      </ul>
 		  <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes.</p>
-			
+
 		  <h5 id="sebh5">June 26, 2020</h5>
 		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.0.1 for Windows released</a></strong>: This update contains a fix for the issues some users of SEB 3.0.0 observed specifically in BYOD environments. The new version should prevent that anti-malware software falsely identifies SEB 3.0 as malware (false-positive detection using heuristics and similar algorithms).</p>
 		  <p>SEB 3.0.1 does no longer access the Windows Registry by default. This means that power options (shutdown, reboot) are no longer disabled and the options is the Windows Security Screen (accessed by Ctrl+Alt+Del) are not removed. </p>
 		  <p>SEB still prevents the TaskManager to be used. If you prefer the current behavior, you can disable the new setting "Ignore SEB Service" (setting key sebServiceIgnore = false). If you are using the SEB Windows Service, some of your students might again have to disable or uninstall anti-malware tools to run SEB, unless that software correctly recognizes SEB and doesn’t block it. We requested vendors of reported anti-malware applications to correct the false-positive detection of SEB 3.0 and so far got a positive answer from Avast and Bitdefender. Please inform us if you about other anti-malware products which block SEB (product name and version).</p>
-			
+
 		  <h5 id="sebh5">June 11, 2020</h5>
           <p>A small number of the around 130'000 users which already downloaded  Safe Exam Browser 3.0 encountered issues when  starting it. We investigated these issues and it seems that in all cases anti-malware software caused these. Some of these security software tools falsely identified SEB 3.0 as malware (false-positive detection using heuristics and similar algorithms). This most likely has to do with the improved security features in SEB 3.0, like constant monitoring of the Windows Registry settings which SEB changes during an exam. The affected anti-malware tools block parts of SEB, like the SEB Windows Service. Then SEB either can't start or cannot restore some of the Registry settings (the latter might only happen when Windows tried to run the system update process at the same time SEB was started).</p>
           <p>We are working on solving these issues and also requested  vendors of  reported anti-malware applications to correct the false-positive detection of SEB 3.0.<strong> To prevent such issues, we recommend  using <a href="download_en.html#Windows">SEB 2.4</a> for the moment. </strong></p>
@@ -314,7 +318,7 @@
 		  <h5 id="sebh5">June 04, 2020</h5>
           <p class="half_linespace">
 		  <strong><a href="download_en.html#Windows">Chrominimum 1.0.0 for Windows</a></strong>: As SEB 3.0 does not yet support WebRTC functionality (e.g. access to the webcam by web applications), we implemented a barebone browser which has WebRTC enabled and can be used as third-party application in a SEB configuration. Chrominimum can be downloaded from <a href="https://github.com/SafeExamBrowser/Chrominimum/releases/tag/1.0.0">GitHub</a>.</p>
-			
+
 		  <h5 id="sebh5">May 28, 2020</h5>
           <p class="half_linespace">
 		  <strong><a href="download_en.html#Windows">Safe Exam Browser 3.0.0 for Windows</a></strong>: The next major version for Windows has been published. SEB 3.x for Windows is completely refactored and uses Chromium as integrated browser engine. This allows  better integration of  browser functionality into the  SEB       application and  increased stability, security and performance. The up-to-date Chromium browser engine also guarantees great compatibility with modern e-assessment web applications.</p>
@@ -332,9 +336,9 @@
 			  <li>Completely automated build system with unit tests.</li>
 		  </ul>
 		  <p><span class="half_linespace"> SEB 3.0 does not yet provide the complete feature set of SEB 2.x.</span> See <a href="windows/win_release_notes_en.html">release notes</a> for details.</p>
-			
+
           <h5 id="sebh5">May 2, 2020</h5>
-          
+
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 2.1.16 for iOS released</strong></a>. </span>This version adds keyboard shortcuts, improves accessibility, security &amp; MDM deployment and facilitates integration into learning management systems. It is fully compatible with the SEB-Moodle Deeper Integration, coming in Moodle 3.9!</p>
             <ul>
               <li>Improved accessibility when using VoiceOver.</li>
@@ -350,10 +354,10 @@
               </li>
           </ul>
           <p><span class="half_linespace">See <a href="ios/ios_release_notes_en.html">release notes</a> for all changes.</span> The <a href="ios/ios_usermanual_en.html">manual</a> is currently being updated. There is a <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">forum section</a> for questions and discussions about the SEB for iOS version as well. </p>
-			
-			
+
+
 		  <h5 id="sebh5">April 14, 2020</h5>
-			
+
 		  <p><a href="download_en.html#WindowsLegacy"><strong>Safe Exam Browser 2.4 for Windows released. </strong></a>This version is the last feature update before we switch completely to SEB 3.x. It supports the Config Key and new session cookie settings, compatible with the SEB-Moodle Deeper Integration, coming in Moodle 3.9!</p>
           <p>New in SEB 2.4:</p>
           <ul>
@@ -389,10 +393,10 @@
           <p class="half_linespace">
 			  Please note that development and bug fixing is still in progress, so the beta version is in no case meant to be used in a production environment! If you find anything, feel free to create an <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/issues">issue on GitHub</a>. The final release is currently scheduled for the first week of May 2020.
 		  </p>
-			
-			
+
+
           <h5 id="sebh5">March 9, 2020</h5>
-			
+
           <p class="half_linespace">The <a href="consortium/members.html"><strong>Safe Exam Browser Consortium</strong></a> is now offering a new Platinum membership level, which is important if you plan to build a customized Safe Exam Browser version. The new membership level has following benefits: Suggest SEB development goals, build a feature list for SEB, get direct, personal consultancy by the SEB developers (including for customizing SEB), logo of institution is placed on consortium website.  In addition to extended consultancy, the Platinum Membership allows individual code signing of a customized SEB version, while being able to use all security features. </p>
           <p class="half_linespace"> The SEB Consortium is the body which sustains ongoing funding of the Safe Exam Browser open source project to continue its  development, maintenance and support activities. ETH Zurich and the SWITCH foundation launched the SEB Consortium in 2016, which currently consists of 20 members from  Europe, Australia and the USA. The Consortium invites further bodies, which may range from educational institutions to companies and public authorities, to join and work together on the promising future of the SEB open source tool: <a href="consortium/members.html">safeexambrowser.org/consortium</a>.</p>
 
@@ -419,9 +423,9 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
           </ul>
           <p class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</p>
 
-			
+
           <h5 id="sebh5">September 19, 2019</h5>
-          
+
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 2.1.15 for iOS released</strong></a>. </span>This version runs on iOS 13 by default and contains some minor bug fixes:</p>
             <ul>
               <li>It's now possible to start an exam with individual settings or to reconfigure SEB even if using client settings with a quit password, as long as no exam is running.</li>
@@ -430,10 +434,10 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
               <li>Now clearing cookie store when starting SEB, to prevent that some authentication logins persist.</li>
             </ul>
           <p><span class="half_linespace">See <a href="ios/ios_release_notes_en.html">release notes</a> for all changes of the previous 2.1.14 feature update.</span> The <a href="ios/ios_usermanual_en.html">manual</a> is currently being updated. There is a <a href="https://sourceforge.net/p/seb/discussion/seb-ios/" target="_blank">forum section</a> for questions and discussions about the SEB for iOS version as well. </p>
-			
-			
+
+
           <h5 id="sebh5">August 30, 2019</h5>
-          
+
           <p><span class="half_linespace"><a href="download_en.html#WindowsLegacy"><strong>Safe Exam Browser 2.3 for Windows released</strong></a>. SEB 2.3 for Windows offers new features which increase security and usability significantly</span>.</p>
           <p><strong>Please note our new update policy: We will only support the latest SEB version and will remove all older SEB versions after a grace period.</strong> Only with updated SEB versions you can achieve the best possible security and stability of e-assessments. <strong>Before asking any support question or reporting a bug, install the latest SEB version and try to reproduce the issue with the most recent version. </strong></p>
           <p>New in SEB 2.3:</p>
@@ -450,9 +454,9 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li>More eligible SSL/TLS certificates are displayed in the list &quot;Choose TLS/SSL certificate to embed into configuration...&quot; and the one for CA certificates in SEB Config Tool / Network / Certificates.</li>
           </ul>
           <p><span class="half_linespace">See <a href="windows/win_release_notes_en.html">release notes</a></span> for all changes.</p>
-			
+
           <h5 id="sebh5">August 27, 2019</h5>
-          
+
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 2.1.14 for iOS released</strong></a>. </span>Despite the minor change in version number (which is due to harmonizing SEB features and version numbers throughout the supported platforms), this release includes major improvements. These allow to run web-based exams on iOS devices with the best security possible. SEB 2.1.14 for iOS offers  almost all features of the desktop versions of Safe Exam Browser and should be fully compatible to exam and learning management systems with built-in SEB support. Some new features and improvements are currently only available in the iOS version, but will be added to future releases of the Mac and Windows versions of SEB.</p>
           <p><span class="half_linespace">SEB 2.1.14</span> adds these important SEB features:</p>
           <ul>
@@ -477,7 +481,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             </li>
             <li>Deep linking for exams now also works with sebs:// links (in addition to Universal Links).<br>
             </li>
-          
+
             <li>SEB for iOS now saves log files, which can help when analyzing issues. Those logs can be emailed   to the SEB developers or to an exam administrator. </li>
             <li>Improved reliability of MDM Managed Configuration, important for iPads owned, deployed and managed by an institution.</li>
             <li>Added iOS 13 to the "Allow Running on iOS Beta" option.</li>
@@ -527,7 +531,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li> Fixed an issue when en-US was always selected as spell checking language, even if not allowed in settings, when starting SEB first time or after the contents of the Firefox Profiles folder were removed.          </li>
           </ul>
           <p>See the updated <a href="windows/win_usermanual_en.html">SEB 2.2.2 manual</a> and <a href="windows/win_release_notes_en.html">release notes</a> for all changes.</p>
-          
+
           <h5 id="sebh5">September 25, 2018</h5>
           <p class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 2.1.12 for iOS released</strong></a>. SEB 2.1.12  runs on iOS 12 and makes use of the full screen size of all iPhone X devices. In addition it contains improvements for configuring  SEB clients and starting exams. Most of these features will be available  in future   SEB versions for all platforms. These configuration improvements are particularly helpful for developers and exam administrators integrating SEB into their assessment environments.</p>
           <ul id="seblist2">
@@ -536,7 +540,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li>The Initial Configuration Assistant now allows to search the local network for SEB settings by just tapping a button (when an institution supports this feature). </li>
             <li>Improved information for users in some of the dialogs displayed when configuring SEB and finishing an exam.</li>
             <li> QR codes can now contain an optional query string, for example to identify a specific user or exam.</li>
-            <li> Specific assessment systems can be accessed using Universal Links: 
+            <li> Specific assessment systems can be accessed using Universal Links:
               <ul>
                 <li>Regular web links to a supported system open directly in SEB. </li>
                 <li>If SEB isn't installed yet, the link opens in Safari and a smart banner shows a button to install SEB from the App Store.</li>
@@ -548,7 +552,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li> Stability and security improvements.</li>
           </ul>
           <p class="half_linespace">See <a href="download_en.html#iOS">release notes</a> for all changes. <!--The <a href="macosx/mac_usermanual_en.html">updated manual</a> covers all SEB 2.1 features.--></p>
-          
+
           <h5 id="sebh5">September 5, 2018</h5>
           <p class="half_linespace"><a href="download_en.html#Windows"><strong>Safe Exam Browser 2.2.1 for Windows released</strong></a>. SEB 2.2.1  is a maintenance update for SEB 2.2 with some new features and many improvements. Safe Exam Browser 2.2.1 should be used from now on, we won't provide support for older versions anymore.</p>
           <ul id="seblist2">
@@ -564,11 +568,11 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li>Improved setting and resetting of Registry keys (for Ctrl+Alt+Del Security Screen and power options), including when the SEB Windows Service tries to reset Registry settings after rebooting the machine. Added group policy update to registry resetter to reset power options reliably.</li>
           </ul>
           <p class="half_linespace">See <a href="windows/win_release_notes_en.html">release notes</a> for all changes. <!--The <a href="macosx/mac_usermanual_en.html">updated manual</a> covers all SEB 2.1 features.--></p>
-          
+
           <h5 id="sebh5">July 23, 2018</h5>
           <p class="half_linespace"><a href="download_en.html#MacOSX"><strong>Safe Exam Browser 2.1.3 for macOS released.</strong></a> This version includes important security and stability improvements,  updating soon is highly recommended.</p>
           <ul id="seblist2">
-            <li>New "<a href="macosx/mac_usermanual_en.html#ExamPane">Config Key</a>" feature allowing an exam system to verify that the correct settings are being used. The Config Key can be generated server-side and doesn't change if same settings are loaded in a new SEB version which adds new setting keys.           
+            <li>New "<a href="macosx/mac_usermanual_en.html#ExamPane">Config Key</a>" feature allowing an exam system to verify that the correct settings are being used. The Config Key can be generated server-side and doesn't change if same settings are loaded in a new SEB version which adds new setting keys.
             <li>Added settings to disable Siri and dictation.
             <li>Now blocking Touch Bar typing suggestions (predictive keyboard) during an exam.</li>
             <li>Improved compatibility of URL filter  between SEB for macOS 2.1.3 and Windows 2.2.1.</li>
@@ -578,13 +582,13 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li> Improved startup process and reconfiguration, for example  double clicking a .seb config file several times can't lock SEB anymore.</li>
           </ul>
           <p class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes. <!--The <a href="macosx/mac_usermanual_en.html">updated manual</a> covers all SEB 2.1 features.--></p>
-          
+
           <h5 id="sebh5">February 20, 2018</h5>
           <p><a href="download_en.html#Windows"><strong>Safe Exam Browser 2.2 for Windows released</strong></a>. SEB 2.2 for Windows is a major update with new features and many improvements. Using the powerful new feature <a href="windows/win_usermanual_en.html#AdditionalResources">Additional Resources</a>, specific webpages, full or partial websites, HTML5 web applications and documents can  be accessed securely and easily  in exams. Those resources can  either be located on external servers or embedded into SEB configuration files. In the first case, the  <a href="windows/win_usermanual_en.html#NetworkPaneFilterSection">improved URL filter</a> with its simple filter rules effectively allows access to specific content and blocks all other. In the second case,  resources  embedded in SEB configuration files allow fully offline exam scenarios. See the <a href="windows/win_usermanual_en.html">SEB 2.2 manual</a> and <a href="windows/win_release_notes_en.html">release notes</a> for all changes.</p>
           <p>This version is replacing the SEB 2.1.x branch, with which it is <strong>compatible with one important exception</strong>: If you defined URL filter rules in SEB 2.1.x for Windows, then you'll have to re-enter those in the 2.2 SEB Config Tool, following the new filter rule scheme. URL filter rules created and saved with SEB for macOS are already compatible with SEB 2.2 for Windows. </p>
-          
+
           <h5 id="sebh5">December 21, 2017</h5>
-          <p><a href="./developer/overview.html">Developer documentation</a> published, which covers resources and information particularly 
+          <p><a href="./developer/overview.html">Developer documentation</a> published, which covers resources and information particularly
 		 for developers of learning management systems and e-assessment solutions looking to integrate SEB into their environment.</p>
 
           <h5 id="sebh5">December 1, 2017</h5>
@@ -606,16 +610,16 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
           <p class="half_linespace"> SafeExamBrowser for iOS is now <a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank">available in the App Store</a>. SEB for iOS opens a web browser without an address and search bar, loads a pre-configured webpage and locks an iPad (or iPhone or iPod Touch) into a single app kiosk mode. This  kiosk mode is built into the iOS operating system and therefore provides a high level of security. Students cannot switch to other apps, access other websites  or communicate with other students during an exam. Notifications,   FaceTime/voice calls and screen shots are also blocked. SEB for iOS works both on unmanaged iOS devices like students' own iPads as well as on iOS devices owned and managed by an institution. </p>
           <p class="half_linespace">SEB for iOS is compatible with the existing versions for macOS and Windows. You can use the same SEB config links and files to start exams in SEB from Safari or Mail or to configure SEB to display your institution's exam system start/portal page. This first version contains some new features currently unique to the iOS version and some features of the macOS/Windows versions are not yet available. Please check the <a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/06bb1c1e/" target="_blank">compatibility of SEB for iOS version 2.1.10</a> with your exam system.</p>
           <p class="half_linespace">Check out the SEB for iOS <a href="ios/ios_usermanual_en.html">manual</a> which explains all features. In addition, we  published a first version of a <a href="ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
-          
+
           <h5 id="sebh5">June 5, 2017</h5>
           <p class="half_linespace">The first version of SafeExamBrowser for iOS will shortly be released in the App Store. You can already now <a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/e7e542a5/?limit=25" target="_blank">get access to pre-release versions</a> if you are interested in testing and in giving us feedback. Check out the <a href="ios/ios_usermanual_en.html">manual</a> and a <a href="ios/ios_tutorial_en.html">tuturial</a> about SEB for iOS.</p>
-          
+
           <h5 id="sebh5">May 2, 2017</h5>
           <p class="half_linespace">Thanks to financial support from the <a href="consortium/members.html">SEB Consortium</a> we have been able to welcome a further SEB developer to the team: Damian Büchel. Damian will be working on the SEB Windows platform (desktop und tablets).</p>
-          
+
           <h5 id="sebh5">April 24, 2017</h5>
           <p class="half_linespace">Although SafeExamBrowser and its source code is freely available without requiring any registration with personal details, we received a few requests for a <a href="about_overview_en.html#privacy-statement">privacy statement</a> for the SEB application. The fact that SEB only connects to the exam server that you configured is actually one major advantage of SEB compared to commercial secure exam solutions. Using SEB is probably the best practice for data privacy available in the market, especially for organizations where privacy regulations are strict and exam candidates' data needs to stay inside the organization.</p>
-          
+
           <h5 id="sebh5">April 13, 2017</h5>
           <p class="half_linespace">We published a revised and updated technical report about <a href="http://safeexambrowser.org/vdi/Competence-Oriented_Exams_VDI+SEB_ETH-LET_2017_03.pdf" target="_blank">competence-oriented exams using virtual desktop infrastructure (VDI)</a>. This   description of a general concept for exams using VDI and Safe Exam Browser contains process descriptions for planning and conducting  exams using even complex Windows third party applications in a secured environment.  Checklists and technical details on how to configure and use VDI with SEB are also included. How to use third party applications in exams is also  covered generally in an <a href="windows/win_usermanual_en.html">updated section in the SEB user manual</a>.</p>
 
@@ -631,7 +635,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
           <h5 id="sebh5">November 1, 2016</h5>
           <p class="half_linespace"><a href="download_en.html#MacOSX">Safe Exam Browser 2.1.2 for macOS</a> fixes some issues of the recent release SEB 2.1.1 which could occur in non-default screen configurations and when starting SEB by opening specific settings. It also contains a usability improvement: When starting SEB by opening a .seb config file or a seb(s):// link, the start URL from persistent  settings of the SEB client isn't opened first anymore, instead the new settings are directly applied. In case loading or decrypting  these  settings isn’t successful (load error, canceled by the user, wrong decryption credentials etc.), SEB  quits instead of continuing with the persistent client settings.</p>
           <p class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes. The <a href="macosx/mac_usermanual_en.html">updated manual</a> covers all SEB 2.1.2 features.</p>
-          
+
           <h5 id="sebh5">October 26, 2016</h5>
           <p class="half_linespace"><a href="download_en.html#MacOSX">Safe Exam Browser 2.1.1 for macOS</a> offers new features, usability enhancements and includes major security improvements: </p>
           <ul id="seblist">
@@ -653,7 +657,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li>Fixed various minor issues.          </li>
           </ul>
           <p class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes. <!--The <a href="macosx/mac_usermanual_en.html">updated manual</a> covers all SEB 2.1 features.--></p>
-          
+
           <h5 id="sebh5">September 22 and 23, 2016</h5>
           <p class="half_linespace">Safe Exam Browser has been presented at the <a href="http://www.inspera.com/conference2016" target="_blank">Inspera Seminar 2016</a>, Scandinavia's leading e-assessment seminar which took place on September 22 and 23 in Oslo, Norway. The seminar gathered e-assessment specialists and users from Norway, Sweden, Denmark,  UK, Germany and other countries. SEB was subject in four presentations and workshops. </p>
 
@@ -726,7 +730,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
           <h5 id="sebh5">August 21, 2014</h5>
           <p class="half_linespace"><a href="download_en.html#Windows">Safe Exam Browser 2.0.1</a> for Windows updates the integrated browser, contains several bug fixes and new functionality for removing the embedded browser session data (cache, cookies, local browser storage etc.) when exiting SEB. See <a href="windows/win_release_notes_en.html">release notes</a> for all changes.</p>
           <h5 id="sebh5">June 2, 2014</h5>
-          <p class="half_linespace">The much anticipated final release of <a href="download_en.html#Windows">Safe Exam Browser 2.0</a> for Windows 7 and 8 is now available. 
+          <p class="half_linespace">The much anticipated final release of <a href="download_en.html#Windows">Safe Exam Browser 2.0</a> for Windows 7 and 8 is now available.
             Check out the completely re-engineered SEB 2.0 with a full range of new features and superior usability. Please <a href="https://sourceforge.net/p/seb/discussion/3704033/" target="_blank">let us know</a> about your experiences using SEB 2.0 especially in BYOD  exam environments. <a href="download_en.html#MacOSXpre">SEB 2.0 for macOS</a> is on its way to be released later this year, the current stable preview version is already compatible with the final release version  for Windows.</p>
           <h5 id="sebh5">March 21, 2014</h5>
           <p class="half_linespace">In the stable preview version <a href="download_en.html#MacOSXpre">SEB for macOS 2.0pre3</a><a href="download_en.html#Windows"></a> the format of <span class="quote">.seb</span> setting files was adapted to be compatible with SEB 2.0 RC Windows. You can now use the same .seb files for starting exams  on Windows  and  macOS exam client computers. The Browser Exam Key authentication for insuring that the correct exam settings are used for a specific exam is now also compatible with the release candidate version of SEB 2.0 for Windows.</p>
@@ -774,7 +778,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li>New browser component:<br />
               with improved, updated XULRunner. <strong>Additional browser windows</strong> can now be opened and <strong>popup windows</strong> do work correctly (starting up not in fullscreen mode but partially filling the screen, with the option to minimise or maximise).</li>
           </ul>
-          <p>After a comprehensive testing phase, we 
+          <p>After a comprehensive testing phase, we
             hereby provide the Final Release of version 1.9.1, which offers (in comparison to 1.9.1 Beta Release) some minor improvements regarding the browser component XulRunner (e.g. regarding popup windows).</p>
           <h5 id="sebh5">January 30, 2013</h5>
           <p class="half_linespace">SEB has been <a href="http://www.eduhub.ch/events/days/13jan30-days/e_poster_session.html" target="_blank">presented</a> at <a href="http://www.eduhub.ch/events/days/13jan30-days/" target="_blank">eduhub days 2013</a>. The electronic poster session illustrated how the new Safe Exam Browser 2.0 enables BYOD for exams and <a href="http://www.safeexambrowser.org/eduhubdays/" target="_blank">explains  one possible scenario of how SEB can be used on students' computers</a>.</p>
@@ -795,7 +799,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li>New browser component:<br />
               with improved, updated XULRunner. <strong>Additional browser windows</strong> can now be opened and <strong>popup windows</strong> do work correctly (starting up not in fullscreen mode but partially filling the screen, with the option to minimise or maximise).</li>
           </ul>
-          <p>Since the tests are very comprehensive and have not yet been finished, we 
+          <p>Since the tests are very comprehensive and have not yet been finished, we
             hereby provide a beta version, which can be tested by interested users. The final release is planned for mid of January. </p>
           <h5 id="sebh5">November 30, 2012 </h5>
           <p class="half_linespace">SEB has been showcased at <a href="http://www.online-educa.com" target="_blank">Online-Educa</a> 2012 in Berlin. The presentation at the <span class="quote">18th International Conference on Technology Supported Learning &amp; Training</span> which is the &quot;the largest global e-learning conference for the corporate, education and public service sectors&quot; and a publication in the Book of Abstracts titled &quot;The Safe Exam Browser: Innovative Open Source Software for Online Examinations&quot; raised awareness about SEB at an international level. </p>
@@ -811,7 +815,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             <li>New browser component:<br />
               with improved, updated XULRunner which can open additional browser windows now and popup windows are opening correctly. </li>
           </ul>
-          <p>Since the tests are very comprehensive and there is demand for an improved installer, we 
+          <p>Since the tests are very comprehensive and there is demand for an improved installer, we
             hereby provide a beta version, which can be tested by interested users. The final release is planned for later. </p>
           <h5 id="sebh5">September 12, 2012 </h5>
           <p class="half_linespace">Safe Exam Browser has been presented at the anual conference of the &quot;Gesellschaft für Medien in der Wissenschaft&quot; <a href="http://www.gmw2012.at">GMW 2012</a> at TU Vienna. </p>
@@ -862,7 +866,7 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
           <h5 id="sebh5">May 12, 2011</h5>
           <p> <strong>SEB Windows 1.5.1 </strong> further simplifies SEB installation by automatically starting the Windows Service at the end of the installation (no computer reboot or manual start of Windows   Service as administrator required anymore).</p>
           <h5 id="sebh5"> April 30, 2011</h5>
-          <p><strong>SEB MacOSX 1.1</strong> features a new preferences window with panes, which offers additional configuration options. 
+          <p><strong>SEB MacOSX 1.1</strong> features a new preferences window with panes, which offers additional configuration options.
             It is now possible  to run additional applications during an exam together with SEB MacOSX.</p>
           <h5 id="sebh5"> April 29, 2011</h5>
           <p>The user documentation and other information about SEB for Windows and macOS on the SEB website have been revised and are completely translated to German. </p>
@@ -936,17 +940,17 @@ Left Alt (Option) Key - Left Shift Key - Tab: Cycle backwards through open brows
             &nbsp;</p>
           <h5 id="sebh5">December 1, 2008</h5>
           <p>Extensions fitting the Learning Management Systems Moodle and ILIAS are now available.</p>
-          
-          <!-- / Content --> 
+
+          <!-- / Content -->
           <p>&nbsp;</p>
         </div>
-        <!-- / Content Column --> 
-        
+        <!-- / Content Column -->
+
       </div>
       <!-- /.row (Content Row)-->
-      
+
       <hr>
-      
+
   <!-- InstanceEndEditable -->
 
       <!-- Footer -->
