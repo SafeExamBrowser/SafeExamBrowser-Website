@@ -357,7 +357,7 @@
           
           <h4 class="seb-section-header sebnavbar-link" id="ILIAS">
             <a class="anchorjs-link" href="#ILIAS"></a>
-            <strong>Using SEB with ILIAS</strong>
+            Using SEB 2.4 with ILIAS
           </h4>
           
           <p>You can find information about how to install the ILIAS plugin for SEB support <a href="https://github.com/hrz-unimr/Ilias.SEBPlugin" target="_blank">here</a>. </p>
@@ -366,7 +366,7 @@
           
           <h4 class="seb-section-header sebnavbar-link" id="OpenOLAT">
             <a class="anchorjs-link" href="#OpenOLAT"></a>
-            <strong>Using SEB with OpenOLAT</strong>
+            Using SEB 2.4 with OpenOLAT
           </h4>
           
           <p>An assessment mode has been added to the OpenOLAT standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOLAT courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOLAT course elements can be configured for such an exam setting. </p>
@@ -391,15 +391,15 @@
             Download/Installation
           </h3>
           
-          <p>You can download the SEB for Windows Installation setup program (also containing the SEB Windows configuration tool) <a href="../download_en.html#Windows">here</a>. Just start <span class="path">SafeExamBrowserInstaller.exe</span> and follow the steps in the installation program. </p>
+          <p>You can download the SEB 2.4 for Windows Installation setup program (also containing the SEB Windows configuration tool) <a href="../download_en.html#Windows">here</a>. Just start <span class="path">SafeExamBrowserInstaller.exe</span> and follow the steps in the installation program. </p>
           
           <p>SEB for Windows containing the main application executable <span class="path">SafeExamBrowser.exe</span> and the configuration tool <span class="path">SebWindowsConfig.exe</span> are placed in the SEB application folder named <span class="path">SafeExamBrowser</span> which will be installed into the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). Also a <span class="path">Safe Exam Browser</span> program  entry will be placed into your Start Menu.</p>
           <p>If you require an MSI package for installing SEB using a deployment system, then you can extract it from the <span class="path">SafeExamBrowserInstaller.exe</span> bundle using the following command (in cmd.exe):</p>
           <pre>SafeExamBrowserInstaller.exe /s /x /b"C:\FolderInWhichMSIWillBeExtracted" /v"/qn"</pre>
           <p>(replace  <em>C:\FolderInWhichMSIWillBeExtracted</em> with the folder path you want the MSI file to be extracted to)</p>
           <p>We are not proving the SEB installer as an MSI file, because the current versions require the .NET 4.5 framework to be installed on the Windows machine. The installer bundle can automatically download and install this .NET version if it isn't yet installed,  an MSI package cannot. We also can't provide any support regarding packaging of the SEB application together with the client config file (that's a task for Windows deployment specialists).</p>
-          <p><strong>Updating:</strong> In most cases you can just run the installer of the new SEB version and it will automatically update from the previous to the new version. The client configuration (see below) will not be removed or replaced, as it is compatible with any new SEB version. If you were using a significantly older SEB version (2.1.x, especially 2.1 or older) or the older SEB installation got corrupted, you should uninstall the old SEB version using the <em>Windows Control Panel</em>. As the <em>Windows Installer</em> usually leaves some files behind, you should afterwards delete the SEB application directory in <span class="path">C:\Program Files (x86)</span>\ manually <strong>(IMPORTANT: Always FIRST UNINSTALL, then delete)</strong>.  Then install the new SEB version.</p>
-          <p><strong>Uninstalling:</strong> Use the <em>Windows Control Panel</em> to uninstall SEB. As the <em>Windows Installer</em> usually leaves some files behind, you can delete the SEB application directory in <span class="path">C:\Program Files (x86)</span>\ manually <strong>(IMPORTANT: Always FIRST UNINSTALL, then delete)</strong>. If uninstalling using the <em>Windows Control Panel</em> doesn't work, then you can try to use the installer of the exact same SEB version you had installed (<a href="../support_en.html">contact us</a> if you don't have that installer version anymore and it's no longer available for download). Just start it and select the remove/uninstall option. If this still doesn't work, then your Windows system got corrupted. SEB is using the standard <em>Windows Installer</em> procedures for installing and uninstalling and those can fail in some cases, which is not connected to SEB itself. You can also remove the directory  <span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span>  (exact path using Windows path variables:
+          <p><strong>Updating:</strong> In most cases you can just run the installer of the new SEB version and it will automatically update from the previous to the new version. The client configuration (see below) will not be removed or replaced, as it is compatible with any new SEB version. If you were using a significantly older SEB version (2.1.x, especially 2.1 or older) or the older SEB installation got corrupted, you should uninstall the old SEB version using the <em>Windows Control Panel</em>(or likewise <em>Settiings - Apps &amp; features</em>). As the <em>Windows Installer</em> usually leaves some files behind, you should afterwards delete the SEB application directory in <span class="path">C:\Program Files (x86)</span>\ manually <strong>(IMPORTANT: Always FIRST UNINSTALL, then delete)</strong>.  Then install the new SEB version.</p>
+          <p><strong>&nbsp;Uninstalling:</strong> Use the <em>Windows Control Panel</em> (or likewise Settiings - Apps &amp; features) to uninstall SEB. As the <em>Windows Installer</em> usually leaves some files behind, you can delete the SEB application directory in <span class="path">C:\Program Files (x86)</span>\ manually <strong>(IMPORTANT: Always FIRST UNINSTALL, then delete)</strong>. If uninstalling using the <em>Windows Control Panel</em> doesn't work, then you can try to use the installer of the exact same SEB version you had installed (<a href="../support_en.html">contact us</a> if you don't have that installer version anymore and it's no longer available for download). Just start it and select the remove/uninstall option. If this still doesn't work, then your Windows system got corrupted. SEB is using the standard <em>Windows Installer</em> procedures for installing and uninstalling and those can fail in some cases, which is not connected to SEB itself. You can also remove the directory  <span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span>  (exact path using Windows path variables:
           <span class="path">%APPDATA%\SafeExamBrowser\)</span>, where the SebClientConfig.seb client config file, log and browser session data files are saved.
         </div>
         <!-- / Document Section --> 
@@ -409,8 +409,7 @@
         
           <h3 class="page-header sebnavbar-link" id="starting">
             <a class="anchorjs-link" href="#starting"></a>
-            Starting and Quitting SEB
-          </h3>
+          Starting and Quitting SEB 2.4 </h3>
           
           <p>When you start SEB, all currently running applications, the Windows Task Bar and the desktop are hidden. On the main screen SEB opens its web browser window filling the whole screen (optionally the window can be resized and moved or switched to fullscreen). SEB opens the webpage at the preset Start URL, which might take some seconds. As default, as long as you don't set another <span class="quote">Start URL</span> (see <a href="#configuration">Configuration</a>), SEB for Windows opens <a href="https://safeexambrowser.org/start/" target="_blank">this page</a> with initial instructions. </p>
           <p>SEB doesn't have any navigation buttons, but the optional reload button in the SEB taskbar, the browser toolbar (if activated) or the key  <strong>F5</strong>   can be used to reload the current page.</p>
@@ -481,7 +480,7 @@
             <li><span class="quote">Use SEB settings file for ... configuring a client</span>: <span class="red">A SEB settings file saved with this option is used to change  persistent settings of a SEB client</span>. This means, next time SEB is started by double clicking its shortcut from the desktop (or opening SafeExamBrowser.exe from the Program Files folder), it will use these settings.<strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong> (using an empty password prevents people from having to enter a password just when SEB is starting, unless you want this to prevent SEB being started unintentionally for example in a computer lab when there is no exam happening).<br />
               When this <span class="quote">.seb</span> file is opened, for example by double clicking it in Windows Explorer, then SEB is started and settings from this file are copied into the file <span class="path">SebClientSettings.seb</span> which is placed in the hidden <span class="quote"> Application Data</span> folder of the current user (see below for exact path). <br />
               <br />
-              <span class="red">You can also copy this file manually or with a deployment system one of the following directories</span>:</p>
+              <span class="red">You can also copy this file manually or with a deployment system to one of the following directories</span>:</p>
               <p>
               <pre>
                       <p><span class="path">C:\ProgramData\SafeExamBrowser\</span><br />Exact path using Windows path variables:<br /><span class="path">%PROGRAMDATA%\SafeExamBrowser\SebClientSettings.seb</span></p>
