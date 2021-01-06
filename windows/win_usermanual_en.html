@@ -289,7 +289,7 @@
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
-            Safe Exam Browser 2.3 for Windows
+            Safe Exam Browser 2.4 for Windows
           </h2>
     
           <p>Safe Exam Browser – SEB for Windows opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several commercial and non-commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most  web-based online quiz and e-assessment systems.          </p>
@@ -307,17 +307,17 @@
             Features
           </h3>
           
-        <p>SEB disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock (this Computer)</strong>, <strong>Switch User</strong>, <strong>Sign out (Log off</strong>), <strong>Change a password</strong>, <strong>(Start) Task Manager</strong>, <strong>Shut down, Restart </strong>and <strong>Ease of Access</strong>. It disables the <strong>Windows Task Bar</strong> and the <strong>Start Menu</strong> (button in the lower left corner of the screen), the <strong>App/Task/Window Switcher</strong> (invoked by Alt-Tab and Windows-Tab),  printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
+        <p>SEB 2.4 disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock (this Computer)</strong>, <strong>Switch User</strong>, <strong>Sign out (Log off</strong>), <strong>Change a password</strong>, <strong>(Start) Task Manager</strong>, <strong>Shut down, Restart </strong>and <strong>Ease of Access</strong>. It disables the <strong>Windows Task Bar</strong> and the <strong>Start Menu</strong> (button in the lower left corner of the screen), the <strong>App/Task/Window Switcher</strong> (invoked by Alt-Tab and Windows-Tab),  printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
         
-        <p>Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
+        <p>Its possible to configure SEB 2.4 to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
         
         <p>In the browser window there is no right mouse (or Shift-F10) click popup window available. Besides that, the browser is supporting  Java and Flash content (as long as the required  plugins are installed on the system). </p>
         
-        <p>SEB detects when it was started in a virtual instead of a native environment and refuses to run. This virtual machine detector hinders manipulating SEB further when used in unmanaged environments.</p>
+        <p>SEB 2.4 detects when it was started in a virtual instead of a native environment and refuses to run. This virtual machine detector hinders manipulating SEB further when used in unmanaged environments.</p>
         
-        <p>SEB for Windows is based on the <em><strong>Mozilla Firefox/Gecko</strong></em> engine (in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
+        <p>SEB 2.4 for Windows is based on the <em><strong>Mozilla Firefox/Gecko</strong></em> engine (in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
         
-        <p> SEB for Windows can be used together with additional (third party) applications during an exam. You can download and open files linked in your online exam, edit it in a third party application and then upload the results to your online quiz/LMS again. </p>
+        <p> SEB 2.4 for Windows can be used together with additional (third party) applications during an exam. You can download and open files linked in your online exam, edit it in a third party application and then upload the results to your online quiz/LMS again. </p>
         <p>From version 2.0 SEB uses encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x.</p>
         <p><strong><span class="red">Please understand that you also have to configure your exam system correctly to be locked down securely.</span></strong> SEB is generally  locking down exam client computers only, not the exam system or the quiz module of a learning management system. <strong>Check documentation for your exam/learning management system on how to lock it down correctly.</strong></p>
         </div>
@@ -328,14 +328,14 @@
         
           <h3 class="page-header sebnavbar-link" id="LMS">
             <a class="anchorjs-link" href="#LMS"></a>
-            Using SEB with Supported LMS
+            Using SEB 2.4 with Supported LMS
           </h3>
           
           <p>Some learning management systems require plugins to be installed to fully support secure exams taken with SEB, others have built-in support.</p>
 
           <h4 class="seb-section-header sebnavbar-link" id="moodle">
             <a class="anchorjs-link" href="#moodle"></a>
-            Using SEB with Moodle</strong>
+            Using SEB 2.4 with Moodle</strong>
           </h4>
           
           <p> SEB support in Moodle has the following objectives:</p>
@@ -348,7 +348,8 @@
           <p>See below the two older options how to activate SEB support in Moodle, which are  no longer available  (or don't make sense) in current Moodle versions:</p>
           <ol>
             <li>Enable the &quot;classic&quot;  SEB support in Moodle: <a href="https://docs.moodle.org/28/en/Safe_exam_browser" target="_blank">How to activate the SEB secure browser mode in a Moodle quiz</a>. Then configure the quiz at <span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Browser security / Require the use of Safe Exam Browser</span>. This option uses only a basic, not very secure check for the used browser. This may be safe enough if students can only access the exam from centrally managed university computers inside a computer lab/exam room. For other scenarios like BYOD you should use the second option.</li>
-            <li>Use the  <span class="quote"> Browser Exam Key</span> authentication in Moodle for the connecting SEB version and its settings by installing the <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">quiz access rule plugin</a> in Moodle. In addition you will have to copy the Browser Exam Key hash code string into the quiz settings (<span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Allowed browser keys</span>). This key is generated by SEB when you save the settings you intend to use for the exam. As this key includes a hash (checksum) of both the saved exam settings and the code signature of the used SEB version, you may have to generate and copy several Browser Exam Keys into the Moodle quiz settings, for example one for the Windows version of SEB and one for the Mac version.</li>
+            <li>Use the <span class="quote"> Browser Exam Key</span> authentication in Moodle for the connecting SEB version and its settings by installing the <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">quiz access rule plugin</a> in Moodle. In addition you will have to copy the Browser Exam Key hash code string into the quiz settings (<span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Allowed browser keys</span>). This key is generated by SEB when you save the settings you intend to use for the exam. As this key includes a hash (checksum) of both the saved exam settings and the code signature of the used SEB version, you may have to generate and copy several Browser Exam Keys into the Moodle quiz settings, for example one for the Windows version of SEB and one for the Mac version.</li>
+            <li>As an alternative, you may use the <strong>Config Key </strong>instead of the Browser Exam key. Basically, the Config Key works like the Brwoser Exam Key, but without including the SEB version string in the hash key. This way you would at best only have to copy one key to your Moodle settings, even if you are using different versions of SEB (e.g. Mac/Windows).</li>
           </ol>
           
           <p>Sometimes hiding course navigation, link to the user's Moodle profile, logout etc. doesn't work as expected because <span class="red">some custom Moodle themes don't support the secure browser mode of Moodle correctly, they display links with which students can get out of the quiz during an exam.</span> If this happens only with your customized theme and not the standard Moodle theme, then your theme is not implemented correctly. In that case you should fix the problem in your custom Moodle theme.  You may also create URL filter rules which only allow to access the exam and no other parts of Moodle, but this is not trivial and we cannot provide you with any support on that. </p>
