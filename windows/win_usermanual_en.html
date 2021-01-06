@@ -664,19 +664,43 @@
             <a class="anchorjs-link" href="#ExamPane"></a>Settings in the Exam Pane
           </h4>
           
-          <img class="img-responsive" src="images/SEB_Preferences_06_Exam.png" />
+          <img class="img-responsive" src="../SEB CT Exam.png" />
+          <p><span class="quote">Browser Exam Key / Config Key</span></p>
+            <p>The Browser Exam Key and the Config Key allow to verfify different aspects of an exam. They both depend on all configuration values defined for a file, i.e. they change whenever&nbsp; a configuration value changes. The keys can be used independently from each other, but both are sent with every HTTP request if activated. Copy a key to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in.</p>
+          <p>IMPORTANT: Always copy the (key(s) as a last step, after the configuration file was saved!&nbsp;</p>
+      <ul id="seblist">      
+            <li> <span class="quote">Use Browser Exam Key and Config Key</span>: Enables using the Browser Exam Key or Config Key. The key is sent in an HTTP header to authenticate the SEB client and its settings to a compatible exam system.</li>
+            <li><span class="quote">Browser Exam Key</span>: Copy the Exam Key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a>, <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a> and OpenOLAT. These have a built-in SEB support.<br>
+              <strong>Important: First save your final exam settings in a .seb settings file and then  copy the browser exam key to your exam system's quiz settings as the Browser Exam Key changes when you change any setting</strong>. <br>
+              Please note that if you want to use the same <span class="quote">.seb</span> file with Windows and Mac clients, you should not alter the file anymore when you're copying the Browser Exam Key hashes to your exam settings in your quiz module. Re-saving it will change the Browser Exam Key of that file also in the SEB version on the other platform. The keys for the Mac and the Windows version will in any case be different, so you have to load the final <span class="quote">.seb</span> file into both versions and copy both keys to your quiz settings. <br>
+  <strong class="red">PLEASE NOTE:</strong> <span class="red">Every new SEB version generates a different Browser Exam Key</span> (as code and configuration option changes are reflected in the key, this is the idea of the request header check using this key together with compatible exam systems). If you want to use an existing exam configuration with a new SEB version, you have to re-calculate the Browser Exam Key with the new version and copy the new key to the quiz settings in your SEB compatible examination system (Moodle,  ILIAS and OpenOLAT allow you to specify several keys in case you want to  allow your examinees to use for example the current and previous SEB version). </li>
+          <li><span class="quote">Config Key</span>: Copy the Config Key string (which depends on your SEB configuration only, the SEB version is not included!) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems Moodle, ILIAS and OpenOLAT. These have&nbsp;a built-in SEB support. <br>
+              <strong>Important: First save your final exam settings in a .seb settings file and then copy the browser exam key to your exam system's quiz settings as the Config Key changes when you change any setting. <br>
+              </strong>Use the Config key instead of the Exam Key in sceanrios where mroe than one verdsion of SEB (e.g. Mac an Windows) are used, or your exam settings should be tolerant to a future update of SEB (to e certain extend).</li>
+	</ul>
+	<p><span class="quote">Session Handling</span></p>
+	<p>Use the following parameter to control whether a browser session shall be persited on disk, e.g. to keep users logged in after a reconfiguration.</p>
+	<ul id="seblist">
+		<li > <span class="quote">Clear browser session when starting an exam or starting SEB</span></li>
+		<li > <span class="quote">Clear browser session when ending an exam or terminating SEB (prevents deletion of browser cache if deactivated)</span></li>
+		</ul>
+	<p><span class="quote">Link to quit SEB after exam</span></p>
+	
+It is possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> (full URL starting with http:// or https://) and placing this on the summary page displayed by the LMS after submitting the exam.
+            <ul id="seblist">
+		<li ><span class="quote">Ask user to confirm quitting</span>: If not selected, then SEB quits immediately after a Quit Link is detected, without users having to confirm.</p>
+	</li>
+		</ul>
 
-          <ul id="seblist">
-            <li> <span class="quote">Use Browser Exam Key (send in HTTP header)</span>: Enables using the Browser Exam Key, it is sent in an HTTP header to authenticate the SEB client and its settings to a compatible exam system.</li>
-            <li><span class="quote">Browser Exam Key</span>: Copy the exam key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a>, <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a> and OpenOLAT has a built-in SEB support.<br />
-            <strong>Important: First save your final exam settings in a .seb settings file and then  copy the browser exam key to your exam system's quiz settings as the Browser Exam Key changes when you change any setting</strong>. <br />
-            Please note that if you want to use the same <span class="quote">.seb</span> file with Windows and Mac clients, you should not alter the file anymore when you're copying the Browser Exam Key hashes to your exam settings in your quiz module. Re-saving it will change the Browser Exam Key of that file also in the SEB version on the other platform. The keys for the Mac and the Windows version will in any case be different, so you have to load the final <span class="quote">.seb</span> file into both versions and copy both keys to your quiz settings. <br />
-            <strong class="red">PLEASE NOTE:</strong> <span class="red">Every new SEB version generates a different Browser Exam Key</span> (as code and configuration option changes are reflected in the key, this is the idea of the request header check using this key together with compatible exam systems). If you want to use an existing exam configuration with a new SEB version, you have to re-calculate the Browser Exam Key with the new version and copy the new key to the quiz settings in your SEB compatible examination system (Moodle,  ILIAS and OpenOLAT allow you to specify several keys in case you want to  allow your examinees to use for example the current and previous SEB version).      </li>
-            <li><span class="quote">Link to quit SEB after exam</span>: Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> (full URL starting with http:// or https://) and placing this on the summary page displayed by the LMS after submitting the exam.</li>
-            <li><span class="quote">Ask user to confirm quitting</span>: If not selected, then SEB is quit immediately after a Quit Link is detected, without users having to confirm.</li>
+			<p><span class="quote">Back to Start Button</span></p>
+	<ul id="seblist">
+
             <li><span class="quote">Back to Start button</span>: Either check the &quot;<span class="quote">Use Start URL</span>&quot; option or enter a link to which the exam is redirected when the Back to Start button is pressed. The browser session is not restarted using this feature (session cookies are not cleared; a logged in user isn't logged out). The Back to Start button is displayed in the SEB taskbar when either the &quot;Use Start URL&quot; option is selected or a link is entered.</li>
             <li><span class="quote">Title/tool tip text for the Back to Start button</span>: This text is displayed as the title of the confirmation alert and as tool tip on the icon. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
             <li><span class="quote">Protect  Back to Start button with the quit/restart password</span>: The quit/restart password (if set, see <a href="win_usermanual_en.html#GeneralPane">General</a> pane) must be entered when the Back to Start button was tapped. Exam support/invigilators should be told this password to be able to return to the start of the exam if there is a problem.</li>
+          </ul>
+          <ul>
+            &nbsp;
           </ul>
       
           <h4 class="seb-section-header sebnavbar-link" id="ApplicationsPane">
