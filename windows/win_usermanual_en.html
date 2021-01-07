@@ -664,7 +664,7 @@
             <a class="anchorjs-link" href="#ExamPane"></a>Settings in the Exam Pane
           </h4>
           
-          <img class="img-responsive" src="../seb_ct_exam.png" />
+          <img class="img-responsive" src="images/SEB_Preferences_06_Exam.png" />
           <p><span class="quote">Browser Exam Key / Config Key</span></p>
             <p>The Browser Exam Key and the Config Key allow to verfify different aspects of an exam. They both depend on all configuration values defined for a file, i.e. they change whenever&nbsp; a configuration value changes. The keys can be used independently from each other, but both are sent with every HTTP request if activated. Copy a key to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in.</p>
           <p>IMPORTANT: Always copy the (key(s) as a last step, after the configuration file was saved!&nbsp;</p>
@@ -978,7 +978,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
             <a class="anchorjs-link" href="#SecurityPane"></a>Settings in the Security Pane
           </h4>
           
-          <img class="img-responsive" src="../seb_ct_security.png" />
+          <img class="img-responsive" src="images/SEB_Preferences_10_Security.png" />
 
           <ul id="seblist">
             <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (as administrator), which is necessary to block and unblock some system features (the options in the Windows Security Screen invoked by Ctrl-Alt-Del) and pausing Windows Update<em></em>.  SEB Windows Service is installed automatically together with the SEB application and started afterwards, but it might happen in rare cases that the service gets stopped. After a reboot of the computer it should get started again, also you could use  Windows Task Manager to restart the service manually (in the Services tab). <br />
@@ -1034,38 +1034,39 @@ It is possible to configure SEB to quit after the exam is submitted without havi
             <a class="anchorjs-link" href="#RegistryPane"></a>Settings in the Registry Pane
           </h4>
 
-          <img class="img-responsive" src="../seb_ct_registry.png" />
+          <img class="img-responsive" src="images/SEB_Preferences_11_Registry.png" />
       
           <p>Options in the Windows Security Screen invoked by Ctrl-Alt-Del:</p>
           <ul id="seblist">
-            <li><strong>Enable Switch User<br />
-              </strong>activates the button &quot;Switch User&quot; or &quot;Benutzer wechseln&quot;, respectively.<br />
+            <li><strong>Enable Switch User:
+              </strong>Activates the button &quot;Switch User&quot; or &quot;Benutzer wechseln&quot;, respectively.<br />
             </li>
-            <li><strong>Enable Lock this computer<br />
-              </strong>activates the button &quot;Lock this computer&quot; or &quot;Computer sperren&quot;, respectively.<br />
+            <li><strong>Enable Lock this computer:&nbsp;
+              </strong>Activates the button &quot;Lock this computer&quot; or &quot;Computer sperren&quot;, respectively.<br />
             </li>
-            <li><strong>Enable Change a password<br />
-              </strong>activates the button &quot;Change a password...&quot; or &quot;Kennwort ändern...&quot;, respectively.<br />
+            <li><strong>Enable Change a password:
+              </strong>Activates the button &quot;Change a password...&quot; or &quot;Kennwort ändern...&quot;, respectively.<br />
             </li>
-            <li><strong>Enable Start Task Manager<br />
-              </strong>activates the button &quot;Start Task Manager&quot; or &quot;Task-Manager starten&quot;, respectively.<br />
+            <li><strong>Enable Start Task Manager: </strong>Activates the button &quot;Start Task Manager&quot; or &quot;Task-Manager starten&quot;, respectively.<br />
               Note: Normally it makes no sense to permit the Task Manager inside SEB (thus during an online exam). Furthermore SEB is usually started in a new desktop (see option <span class="quote">CreateNewDesktop</span> in the <a href="win_usermanual_en.html#SecurityPane">Security Pane</a>), which would cover an eventual Task Manager window and make it invisible. In case you want to permit the Task Manager in SEB anyhow, <span class="quote">CreateNewDesktop</span> and <span class="quote">Monitor processes</span> must be disabled. An alternative possibility is to add the Task Manager as a third-party application <span class="codetext">TaskManager,taskmgr.exe;</span> to the <span class="quote">PermittedApplications</span> (see below).<br />
               </li>
-            <li><strong>Enable Log off<br />
-              </strong>activates the button  &quot;Log off&quot; or &quot;Abmelden&quot;, respectively.<br />
+            <li><strong>Enable Log off:&nbsp;
+              </strong>Activates the button  &quot;Log off&quot; or &quot;Abmelden&quot;, respectively.<br />
               </li>
-            <li><strong>Enable Shut down<br />
-              </strong>activates the button  &quot;Shutdown&quot; or &quot;Herunterfahren&quot; in the lower right corner.<br />
+            <li><strong>Enable Shut down:&nbsp;
+              </strong>Activates the button  &quot;Shutdown&quot; or &quot;Herunterfahren&quot; in the lower right corner.<br />
               </li>
-            <li><strong>Enable Ease of Access<br />
-              </strong>activates the button &quot;Ease of Access&quot; or &quot;Erleichterter Zugriff&quot;  in the lower left corner, which offers help e.g. to visually or aurally handicapped persons, like the Magnifier Glass.<br />
-              </li>
-            <li><strong>Set VMware configuration</strong><br>
-            Determines whether  the configuration value for VMware Client Shade will be set by SEB </li>
+            
+            <li><strong>Set VMware configuration:</strong>Determines whether  the configuration value for VMware Client Shade will be set by SEB </li>
             <ul><li><strong>
-              Enable VMware Client Shade</strong><br>
-              activates  the &quot;Shade&quot; bar at the upper edge of a virtual desktop, if existent. If you're not using VMware, this setting doesn't have any effect.            </li>
-			  </ul>	
+              Enable VMware Client Shade:&nbsp;</strong>Activates  the &quot;Shade&quot; bar at the upper edge of a virtual desktop, if existent. If you're not using VMware, this setting doesn't have any effect.</li>
+			</ul>	
+			<li><strong>Enable Ease of Access:&nbsp;
+              </strong>Activates the button &quot;Ease of Access&quot; or &quot;Erleichterter Zugriff&quot;  in the lower left corner, which offers help e.g. to visually or aurally handicapped persons, like the Magnifier Glass.<br />
+            </li>
+			 <li><strong>Enable network connection selector:&nbsp;
+              </strong>Activates the button which allows to connect to WiFi networks, introduced in Windows 10. <br />
+            </li>
           </ul>
           <p>These Windows Registry options define the values while SEB is running. SEB remembers the settings which were active on the exam client computer before running SEB and resets them to the original values when exiting regularly. In case  SEB would crash or the user would enforce a reset of the machine while SEB was running, these options are reset to the original values:</p>
           <ul id="seblist">
