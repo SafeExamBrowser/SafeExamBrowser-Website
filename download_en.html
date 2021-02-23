@@ -349,37 +349,58 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.2.2/SafeExamBrowser-2.2.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.3/SafeExamBrowser-2.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.2.2 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.3 for macOS</span>
           </a> 
         </p>
         
-        <p><strong>Current version of Safe Exam Browser for macOS 10.15, 10.14, 10.13, 10.12, 10.11 (limited support for 10.10, 10.9, <a href="#RemarkOSX10-7">10.8*</a> and <a href="#RemarkOSX10-7">10.7*</a>)</strong><br />
-        <span class="codetext">Build 2EAD. SHA1: 50da8b61c17d56a88b29a40f61dc6379d605b4f0</span></p>
+        <p><strong>Current version of Safe Exam Browser for macOS 11, 10.15, 10.14, 10.13, 10.12, 10.11 (<a href="#RemarkOSX10-7">limited support*</a> for 10.10, 10.9, 10.8 and 10.7)</strong><br />
+        <span class="codetext">Build 2EAD. SHA1: 5ee996710bbc7a1f9c5f337f2d57ff5f2428c58a</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.2.2/SafeExamBrowser-2.2.2.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
-        <p>SEB 2.2.2 for macOS is a maintenance update for SEB 2.2.1, with some improvements and bug fixes:</p>
-          <ul id="seblist">
-            <li>Fixed that PDF documents were not displayed when Acrobat PDF viewer is installed.</li>
-            <li>Prevent Preferences window to be opened in Moodle 3.9 when using automatically generated settings (option "Configure manually"). SEB now uses the default setting <em>allowPreferencesWindow=false</em> in exam configurations (client configs still have <em>allowPreferencesWindow=true</em> as default setting).</li>
-            <li>Fixed: Cannot start SEB by opening .seb file on macOS &lt;= 10.12.</li>
-            <li>Fixed false positive detection of not allowed process because of partial match of process executable name.</li>
-            <li>Now controlling resizing of Preferences panels and scrolling oversized  panels to the top when displaying them the first time</li>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.3/SafeExamBrowser-2.3.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <div>
+          <p>SEB 2.3 for macOS is a major update, which improves security massively by supporting the Automatic Assessment Configuration (AAC) macOS Assessment Mode, available from macOS 10.15.4. SEB 2.3 also adds new capabilities, improves the user interface for students and exam administrators and fixes several issues.</p>
+          <ul>
+            <li>
+              <p>Support for Automatic Assessment Configuration (AAC) macOS Assessment Mode. AAC is used by default if running on macOS 10.15.4 or newer. Assessment Mode blocks various macOS features which shouldn't be accessible during exams. Also no other applications and processes running in the background can access the network while Assessment Mode is active.</p>
+            </li>
+            <li>
+              <p>Optionally, the old SEB kiosk mode can be used also on latest macOS versions (see Preferences / Security / "Use Assessment Mode (AAC) if available", settings key enableAAC), as AAC doesn't support optionally enabling features like like screen capture/sharing, Siri and Dictation. Assessment Mode also cannot be used if you want to run a video conferencing solution in the background during an exam for proctoring.</p>
+            </li>
+            <li>
+              <p>New options to enforce using the internal (built-in) display of a MacBook or iMac but optionally still allowing to use the external display on a Mac without built-in display (Mac Mini, Mac Pro).</p>
+            </li>
+            <li>
+              <p>Fixed an issue when calculating the Config Key for configuration files containing prohibited processes entries for both macOS and Windows.</p>
+            </li>
+            <li>
+              <p>New battery indicator in the SEB Dock, automatically displayed on devices with battery when the macOS menu bar with its battery indicator is disabled. This specifically applies when using Assessment Mode, as then the menu bar is always hidden.</p>
+            </li>
+            <li>
+              <p>Full compatibility with macOS 11 Big Sur.</p>
+            </li>
+            <li>
+              <p>Native support for Apple Silicon (universal binary).</p>
+            </li>
+            <li>
+              <p>Preferences window can be opened by holding the option/alt key when starting SEB (also when dropping a SEB configuration file onto the SEB icon).</p>
+            </li>
+            <li>
+              <p>Fixed drag-and-drop of configuration files onto the Preferences window. Note that files in iCloud drive need to be downloaded first (click the cloud icon in Finder's list view).</p>
+            </li>
+            <li>
+              <p>Added SEB 3.x for Windows settings to the Preferences window.</p>
+            </li>
+            <li>
+              <p>Improved starting SEB by opening settings, fixed some related issues.</p>
+            </li>
+            <li>
+              <p>Improved workaround for SEB freezing when a webpage tries to download a font.</p>
+            </li>
           </ul>
-        <p>New since the major update SEB 2.2 for macOS:</p>
-        <ul id="seblist">
-          <li> Prohibited Processes settings for blocking specific processes and applications from running together with SEB. </li>
-          <li> Preset prohibited processes covering communication, screen sharing and recording apps. Let us know if you would like to suggest applications and tools to be added to those preset prohibited processes (we need information about the software and its name and Bundle Identifier (if applicable).</li>
-          <li> Added settings to allow to reconfigure SEB, even it is already running in a secure exam session.</li>
-          <li> Implemented setting keys to control clearing cookies when starting/ending an exam session (examSessionClearCookiesOnStart / examSessionClearCookiesOnEnd). This can be used to keep users logged in from the previous session after an exam session was started (and SEB reconfigured with new settings).</li>
-          <li> Added setting to enable Web Inspector (web developer tools) in Preferences/Browser (same settings key allowDeveloperConsole as in SEB for Windows 3.0. If enabled and right click isn't disabled (see Preferences/Security/Hooked Keys/Enable Right Mouse), you can right click/ctrl-left click on a web page element and open Web Inspector with 'Inspect Element'.</li>
-          <li> Added Mac-specific settings for blocking screen shots and screen recording. The separate settings allow to run SEB correctly in parallel with some remote proctoring tools.</li>
-          <li> Added separate Mac setting for the Private Clipboard feature.</li>
-          <li> Added Mac-specific setting for blocking screen sharing over the network (VNC): key screenSharingMacEnforceBlocked (default: false, then the value of the existing key allowScreenSharing is used).</li>
-          <li> Added all SEB for iOS settings in Preferences window.</li>
-          <li> Fixed that a wrong <a href="developer/seb-config-key.html">Config Key</a> was calculated because of specific new default settings added in a new SEB version. This was the cause why SEB 2.1.4 did not work correctly with the new SEB integration in Moodle 3.9.  </li>
-        </ul>
+        </div>
+        <div></div>
         <p>Main features: </p>
   <ul id="seblist">
               <li>Support for encrypted SEB setting files (file type <span class="quote">.seb</span>) which allow to individually configure SEB per exam. You can  use the same .seb files for starting exams on SEB  Windows clients and SEB clients on macOS. </li>
@@ -391,8 +412,8 @@
               <li>SEB can optionally display the standard macOS menu bar and a tool bar in browser windows, functions like 'About SEB', quit, open preferences, reload page, zoom page/text and browsing back/forward are therefore easier accessible.</li>
               <li>Enhanced URL filter including teaching mode to control access of the SEB browser to web links and resources. Saved settings files contain URL filter rules which also work in SEB for Windows.</li>
   </ul>
-  <p><span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes and<strong> important information about new features and settings in SEB 2.2.1, which might require you to update your SEB configuration files.</strong></span></p>
-  <p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>* Please note: On macOS&nbsp;10.7/10.8 SEB can only be used as an exam client, the preferences window is not available. Run SEB on macOS&nbsp;10.9 or higher to create a <span class="quote">.seb</span> configuration file to configure  SEB clients running on OS&nbsp;X&nbsp;10.7/10.8 as well. With default settings, SEB 2.1.4 runs only on macOS 10.11 El Capitan or newer (as macOS 10.10 or older provide a clearly outdated and less compatible WebKit browser engine). You can change this setting if you want students to be able to use older macOS versions.</span></p>
+  <p><span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
+  <p><span class="small sebnavbar-link"><a id="RemarkOSX10-7"></a>* Please note: On macOS&nbsp;10.7 - 10.10 SEB can only be used as an exam client, the preferences window is not available. Run SEB on macOS&nbsp;10.11 or higher to create a <span class="quote">.seb</span> configuration file to configure  SEB clients running on older macOS versions as well. With default settings, SEB 2.3 runs only on macOS 10.11 El Capitan or newer (as macOS 10.10 or older provide a clearly outdated and less compatible WebKit browser engine). You can change this setting if you want students to be able to use older macOS versions.</span></p>
   
       </div>
       <!-- /Download Box -->
