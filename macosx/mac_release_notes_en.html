@@ -227,7 +227,34 @@
         
         <!-- Content -->
 
-    <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2.2</a>:</h5>
+    <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.3</a>:</h5>
+    <ul id="seblist2">
+      <li>Support for Automatic Assessment Configuration (AAC) macOS Assessment Mode. AAC is used by default if running on macOS 10.15.4 or newer. Assessment Mode blocks various macOS features which shouldn't be accessible during exams. Also no other applications and processes running in the background can access the network while Assessment Mode is active. </li>
+      <li>Optionally, the old SEB kiosk mode can be used also on latest macOS versions (see Preferences / Security / &quot;Use Assessment Mode (AAC) if available&quot;, settings key enableAAC), as AAC doesn't support optionally enabling features like like screen capture/sharing, Siri and Dictation. Assessment Mode also cannot be used if you want to run a video conferencing solution in the background during an exam for proctoring.</li>
+      <li>New options to enforce using the internal (built-in) display of a MacBook or iMac but optionally still allowing to use the external display on a Mac without built-in display (Mac Mini, Mac Pro).</li>
+      <li>Fixed an issue when calculating the Config Key for configuration files containing prohibited processes entries for both macOS and Windows.</li>
+      <li>New battery indicator in the SEB Dock, automatically displayed on devices with battery when the macOS menu bar with its battery indicator is disabled. This specifically applies when using Assessment Mode, as then the menu bar is always hidden.</li>
+      <li>Full compatibility with macOS 11 Big Sur.</li>
+      <li>Native support for Apple Silicon (universal binary).</li>
+      <li>Preferences window can be opened by holding the option/alt key when starting SEB (also when dropping a SEB configuration file onto the SEB icon).</li>
+      <li>Fixed drag-and-drop of configuration files onto the Preferences window. Note that files in iCloud drive need to be downloaded first (click the cloud icon in Finder's list view).</li>
+      <li>Added SEB 3.x for Windows settings to the Preferences window.</li>
+      <li>Improved starting SEB by opening settings, fixed some related issues.</li>
+      <li>Improved workaround for SEB freezing when a webpage tries to download a font.</li>
+      <li>Now scaling text of Dock Time item according to Dock height</li>
+      <li>Fixed a security issue regarding client settings in Preferences.</li>
+      <li>Changed default option/button for confirming quitting to &quot;Quit&quot; (helps if mouse control is lost).</li>
+      <li>Fixed code signature check for system processes in macOS 11.<br>
+      </li>
+      </ul>
+    <p>Known issues while using Assessment Mode in macOS 11:</p>
+    <ul>
+      <li>When switching Preferences panes, the Preferences window sometimes disappear. Press cmd - , (comma key) in that case and the window appears again.</li>
+      <li>In the file dialog, you cannot change the file name when using &quot;Save As&quot;. </li>
+      </ul>
+    <p>Use the new feature to open the Preferences window without locking SEB: Hold the option/alt key when starting SEB by opening the app icon (or dropping a .seb configuration file onto the SEB app icon).</p>
+    <h5>&nbsp; </h5>
+    <h5>Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2.2</a>:</h5>
           <ul id="seblist">
             <li>Fixed that PDF documents were not displayed when Acrobat PDF viewer is installed.</li>
             <li>Prevent Preferences window to be opened in Moodle 3.9 when using automatically generated settings (option "Configure manually"). SEB now uses the default setting <em>allowPreferencesWindow=false</em> in exam configurations (client configs still have <em>allowPreferencesWindow=true</em> as default setting).</li>
