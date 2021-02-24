@@ -1070,19 +1070,14 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
           
           <ul id="seblist">
             <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
-            <li>
-              <div class="mac_prefs_screenshot"></div>
               <ul id="seblist2">
                 <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (with administrator rights), which is necessary to block and unblock some system features. You can define the policy that applies when the SEB Service isn't running (for whatever reason): </li>
                 <ul id="seblist2">
                   <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service, it will only be noted in the log that the service was not securing the computer during the exam.</li>
                   <li><span class="quote">warn when service is not running</span>: A warning is displayed when the service is not installed/running, but the exam can be started.</li>
-                  <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is installed. <br />
-                  </li>
+                  <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is installed. </li>
                 </ul>
-                <strong>SEB  for macOS doesn't  use a SEB Service.</strong> This setting has an effect in SEB for Windows only.
               </ul>
-            </li>
             <li><span class="quote">Registry</span>: Select which options in the Windows Security Screen invoked by Ctrl-Alt-Del should be available while SEB is running (switch user, lock this computer, change a password, start Task Manager, log off, shut down, ease of access). In addition the Registry setting <span class="quote">Enable VMware Client Shade</span> activates the 'Shade' bar at the upper edge of a virtual desktop. If you're not using VMware, this setting doesn't have any effect.</li>
             <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled.  Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.<br>
               <strong>One setting in the Hooked Keys pane 
