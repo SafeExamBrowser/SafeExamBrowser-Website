@@ -302,7 +302,7 @@
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
-            Safe Exam Browser 2.2.1 for macOS
+            Safe Exam Browser 2.3 for macOS
           </h2>
     
           <p>Safe Exam Browser – SEB for macOS opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle, OpenOLAT, ILIAS and several non-commercial and commercial exam systems, as for example Inspera Assessment, Dugga, Exam.net or EvaExam. Generally it can easily be used with most web-based online quiz and e-assessment systems.</p>
@@ -485,12 +485,12 @@
 			
           <h4 class="seb-section-header sebnavbar-link" id="ChangesIn2.2">
             <a class="anchorjs-link" href="#ChangesIn2.2"></a>
-            Changes in Safe Exam Browser 2.2.1
-          </h4>
-          <p>SEB 2.2.1 for macOS includes changes which could require you to modify your SEB settings:</p>
+            Changes in Safe Exam Browser 2.3
+          and 2.2</h4>
+          <p>SEB 2.3 for macOS includes changes which could require you to modify your SEB settings (some of these changes were introduced with SEB 2.2.1):</p>
 <ul id="seblist4">
-          <li><strong>SEB 2.2.1 for macOS uses a different policy to decide if it can be reconfigured when a seb(s) URL is opened and a .seb config file downloaded: </strong>When running in a secure session (a quit password is set in the currently active settings), SEB 2.2.1 cannot be reconfigured, even if it's using the persisted client settings. Earlier versions could always be reconfigured when using client settings. If you want to allow reconfiguring SEB by opening a seb(s) URL while running in a secure session, then you need to use the &quot;Allow Reconfiguring&quot; and &quot;Reconfiguring Config URL&quot; options in the <a href="#ExamPane">Exam pane</a>. For the same behavior as in previous versions, you can enable &quot;Allow Reconfiguring&quot; and set &quot;Reconfiguring Config URL&quot; to &quot;*&quot; (wildcard symbol, meaning any seb(s) URL or download URL of a .seb config file is allowed to reconfigure SEB) in your SEB client settings. This policy settings for reconfiguring are already used by SEB for iOS and will also be introduced in SEB 3.1 for Windows.           </li>
-            <li><strong>Preset prohibited processes are required to be quit before starting an exam and are automatically added to any config you open with SEB 2.2.1.</strong> This doesn't alter the Config Key hash. The Browser Exam Key hash value is changed, but that key you anyways have to determine by loading the according SEB config file in SEB 2.2.1 and copy-paste the key from the <a href="#ExamPane">Exam pane</a>. You cannot remove those preset prohibited processes, but you can deactivate them individually using their &quot;Active&quot; parameter. You can change other properties of the prohibited process, although not all of these parameters are used by SEB for macOS. See the <a href="#ProhibitedProcessesSection">Applications/Prohibited Processes pane</a>.  </li>
+          <li><strong>SEB &gt;= 2.2.1 for macOS uses a different policy to decide if it can be reconfigured when a seb(s) URL is opened and a .seb config file downloaded: </strong>When running in a secure session (a quit password is set in the currently active settings), SEB 2.2.1 cannot be reconfigured, even if it's using the persisted client settings. Earlier versions could always be reconfigured when using client settings. If you want to allow reconfiguring SEB by opening a seb(s) URL while running in a secure session, then you need to use the &quot;Allow Reconfiguring&quot; and &quot;Reconfiguring Config URL&quot; options in the <a href="#ExamPane">Exam pane</a>. For the same behavior as in previous versions, you can enable &quot;Allow Reconfiguring&quot; and set &quot;Reconfiguring Config URL&quot; to &quot;*&quot; (wildcard symbol, meaning any seb(s) URL or download URL of a .seb config file is allowed to reconfigure SEB) in your SEB client settings. This policy settings for reconfiguring are already used by SEB for iOS and will also be introduced in SEB 3.1 for Windows.           </li>
+            <li><strong>Preset prohibited processes are required to be quit before starting an exam and are automatically added to any config you open with SEB &gt;= 2.2.1.</strong> This doesn't alter the Config Key hash. The Browser Exam Key hash value is changed, but that key you anyways have to determine by loading the according SEB config file in SEB 2.2.1 and copy-paste the key from the <a href="#ExamPane">Exam pane</a>. You cannot remove those preset prohibited processes, but you can deactivate them individually using their &quot;Active&quot; parameter. You can change other properties of the prohibited process, although not all of these parameters are used by SEB for macOS. See the <a href="#ProhibitedProcessesSection">Applications/Prohibited Processes pane</a>.  </li>
           <li><strong>New separate Mac setting for the Private Clipboard feature</strong>, <a href="#SecurityPane">Security pane</a> &quot;Enforce private clipboard on Mac&quot; (settings key enablePrivateClipboardMacEnforce), by default enabled. If enabled, then the private clipboard is used, even if the old setting in the <a href="#SecurityPane">Security pane</a> &quot;Use private clipboard&quot; is disabled. The reason for the separate Mac setting is, that enabling private clipboard in the Windows version sometimes causes web compatibility issues (which isn't the case in the Mac version). If you intentionally disabled &quot;Use private clipboard&quot; (key enablePrivateClipboard=false) for the Mac version, then you have to set enablePrivateClipboardMacEnforce=false in addition.</li>
           <li><strong>New separate SEB for macOS settings for allowing screen capture/recording</strong>, window capture and to use the legacy method for blocking screen shots. SEB 2.2.1 for macOS is no longer using the old setting &quot;Enable screen capture&quot; which corresponded with the setting &quot;Enable Print Screen&quot; in Windows. Instead, these new settings allow to control access to the screen while SEB is running in a gradual way. The new setting &quot;Allow screen capture/recording&quot; (key allowScreenCapture) controls a system process, which since macOS 10.14 Mojave is used for the macOS screen recording feature (cmd+shift+5) and for screen shots. The new setting &quot;Allow window capture (screen shots)&quot; (key allowWindowCapture) controls if other processes are able to read the contents of the windows displayed by SEB. Depending which system APIs are used to read window or screen contents, those settings have a different effect: If allowScreenCapture=true and allowWindowCapture=false, then macOS screen shots using cmd-shift-3 and -4 can still be taken, but don't show SEB's windows (only the desktop background). On screen recording videos taken with cmd-shift-5, SEB's windows will still be visible, unless allowScreenCapture is set to false. When the new setting &quot;Block screen shots (Legacy)&quot; (key blockScreenShotsLegacy) is enabled, then SEB uses the method to redirect and delete screen shots which had to be used with macOS 10.9 and older. Those separate settings may allow to use SEB with specific remote proctoring solutions which need access to the screen and SEB's window contents.</li>
           <li><strong>New SEB for macOS setting &quot;Enforce blocking screen sharing on Mac&quot;</strong> (key screenSharingMacEnforceBlocked, default value true/enabled), which overrides the original screen sharing setting &quot;Allow (network) screen sharing&quot; (key allowScreenSharing) on Mac clients. This allows for example SEB for Windows to be used in Windows remote sessions (RDP), while still blocking VNC-based macOS screen sharing and remote management on Mac SEB clients. </li>
@@ -618,7 +618,8 @@
             <li><span class="quote">Show SEB dock</span>:  The SEB dock is displaying an icon for the SEB browser with controls for its open browser windows and a quit button, plus additional optional buttons and information widgets (see below and in the <a href="mac_usermanual_en.html#ExamPane">Exam pane</a> for the back to start button). Clicking the SEB icon in the dock and holding the left mouse button down or a secondary (right mouse button) click displays a popup menu with all open browser windows, the main browser window is at the bottom. With this menu you can switch between open browser windows.
               <ul id="seblist">
                 <li><span class="quote">Dock height</span>: SEB Dock height in points (pixel height x 2 on Retina HiDPI displays). In SEB for Windows display DPI settings are now also taken in account, in touch optimized mode task bar is scaled up in addition.</li>
-                <li><span class="quote">Show Wi-Fi control</span> (Win): Allows to reconnect to Wi-Fi networks which have previously been connected to.</li>
+                <li><span class="quote">Show scroll lock button</span> (iOS): Shows the scroll lock button in the Dock if the scroll lock feature is enabled (iOS only).</li>
+                <li><span class="quote">Enable scroll lock</span> (iOS): With the scroll lock button and/or side menu item, web page scrolling, selecting text and the text magnifier can be disabled. This can facilitate using drag-and-drop and drawing question types. (iOS only)</li>
                 <li><span class="quote">Show Back to Start button</span>: Shows the Back to Start button, if this feature in configured in the Exam pane.</li>
                 <li><span class="quote">Show navigation buttons</span> (iOS): Shows navigation buttons (back/forward) in the SEB for iOS Dock. Otherwise these buttons are displayed in the browser toolbar (if enabled), or in the side menu.</li>
                 <li><span class="quote">Show reload button</span>: This button  reloads the current web page. Shows warning if enabled in the Browser  pane.</li>
@@ -626,13 +627,14 @@
                 <li><span class="quote">Show time</span>: Displays current time in SEB task bar: This is for example helpful if you decide to ban personal watches in exams (because of smartwatches).</li>
                 <li><span class="quote">Show keyboard layout</span> (Win): Shows current keyboard layout and allows to switch to other keyboard layouts which have been enabled in Windows.</li>
                 <li><span class="quote">Show quit button</span>: Shows the Quit SEB/Session (iOS) Dock button.</li>
+                <li><span class="quote">Show Wi-Fi control</span> (Win): Allows to reconnect to Wi-Fi networks which have previously been connected to.</li>
               </ul>
             </li>
             <li><span class="quote">Enable page zoom</span>: Pages can be zoomed with Cmd +/- or the commands in the view menu and buttons in browser window toolbar (Mac) or with Ctrl-Mousewheel (Win).</li>
             <li><span class="quote">Enable text zoom</span>: Text in browser windows can be zoomed with Ctrl - Cmd +/- or the commands in the view menu and buttons in browser window toolbar (Mac) or with Ctrl-Mousewheel (Win).</li>
             <li><span class="quote">Zoom Mode</span> (Win): Zoom whole web pages or just text using Ctrl-Mousewheel (only in Windows version)</li>
             <li><span class="quote">Allow spell checking</span>: Allow using check spelling/grammar and 'correct spelling automatically'</li>
-            <li><span class="quote">Allow dictionary look up</span>: Allow looking up text elements on a web site using the 3-finger tap on a trackpad or Ctrl-Cmd-D</li>
+            <li><span class="quote">Allow dictionary look up</span>: Allow looking up text elements on a web site using the 3-finger tap on a trackpad or Ctrl-Cmd-D. Not possible with the AAC macOS kiosk mode.</li>
           </ul>
           
           <h4 class="seb-section-header sebnavbar-link" id="BrowserPane">
@@ -790,10 +792,10 @@
             <li><span class="quote">Clear on session end</span>: Session cookies should be cleared when ending the current exam session (when reconfiguring SEB).</li>
           </ul>
       
-		  <h5>Query String Parameter (iOS)</h5>
+		  <h5>Query String Parameter</h5>
 		  <p>The seb(s):// link to the config file can contain an additional query string, separated from the main URL by '?' or '??' (if the URL itself doesn't contain a query). SEB will then append this query string to the Start URL. This feature can for example be used to pass an individual login token to an exam system when SEB is started by opening an seb(s) link  in another browser, without having to generate an individual config file for each user.</p>
 		  <ul>
-            <li><span class="quote">Allow Query Parameter</span>: If a seb(s):// link contains an additional query string, SEB appends it to the exam's Start URL. Currently only supported in SEB for iOS.</li>
+            <li><span class="quote">Allow Query Parameter</span>: If a seb(s):// link contains an additional query string, SEB appends it to the exam's Start URL.</li>
           </ul>
       
 		  <h5>Exam Deep Linking (iOS)</h5>
@@ -839,7 +841,7 @@
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
             <li><span class="quote">OS</span>: Indicates on which operating system the permitted process runs (currently only the option <span class="quote">Win</span> works).</li>
             <li><span class="quote">Executable</span>: File name of the executable, <strong>which should not contain any parts of a file system path</strong>, only the filename of the exe file (like <span class="quote">calc.exe</span>).</li>
-            <li><span class="quote">Window Handling Process</span>: Process executable which is actually handling the main window, this is necessary to indicate for Java and some other applications (for example OpenOffice, Eclipse, Adobe Acrobat).</li>
+            <li><span class="quote">Original Name</span>: Original file name of the executable (Win). Some files don't have this metadata information. If it is available, SEB will prioritize this string over the Executable file name string.</li>
             <li><span class="quote">Path</span>: Optional filesystem path (formatted system specific) to the process executable's directory <strong>excluding the filename, see field executable</strong>. If the path is not given or relative, then SEB searches the system provided paths for applications. For applications which have been installed and properly registered in Windows  App Paths you don't need to specify the path.</li>
             <li><span class="quote">Arguments</span> to append to the executable  of the application when starting it. You can select if an argument is <span class="quote">active</span> or not (for testing). You can add and remove arguments using the <span class="quote">+/-</span> buttons.</li>
             <li><span class="quote">Icon in task bar</span>: Mainly useful for background processes (not requiring user interaction) which you want to autostart when SEB is run.</li>
@@ -890,14 +892,13 @@
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
             <li><span class="quote">OS</span>: Indicates on which operating system SEB should watch for the prohibited process  (currently only <span class="quote">Win</span> works).</li>
             <li><span class="quote">Identifier:</span> Bundle Identifier string of the process  in reverse domain notation (Mac) or the string or substring of the main window title of a process which doesn't have a MainWindow handle (Win), this is usually the case with Java applications (use for example 'OpenOffice' for OpenOffice Calc). </li>
-            <li><span class="quote">User</span><br />
-              Username  under which this process is running.  If no user is indicated, then the process is killed regardless under which user it's running. Instead of this identifier also check box current user can be used. <strong>Not used in current SEB versions.</strong></li>
             <li><span class="quote">Current user</span><br />
               Boolean indicating that the prohibited process has to run under the currently logged in user. Use it instead of indicating the user identifier (<em>user</em> field). <strong>Not used in current SEB versions.</strong></li>
+            <li><span class="quote">Original Name</span>: Original file name of the executable (Win). Some files don't have this metadata information. If it is available, SEB will prioritize this string over the Executable file name string.</li>
             <li><span class="quote">Force quit</span>: Indicates whether an application/process may be terminated in a not-nice way, what may cause data loss if the application had unsaved data in memory or was just writing to a persistent memory/drive. If this application is safe to be terminated anytime, then enabling this setting  helps to avoid bothering users: Because if this setting is disabled and the application is running when SEB is started, then an alert/dialogue window is displayed to ask the user to quit this prohibited application together with  permitted applications and to restart SEB afterwards (or to let SEB terminate the applications risking that there could be data loss).<br />
               Disabling this setting  does not mean that processes are not killed: Depending on the platform's capabilities, SEB first tries to terminate prohibited processes nicely or asking the user to do it themselves, if this doesn't work then it terminates them anyways (as long as <em>monitor processes</em> is enabled). But enabling <em>Force quit</em> will speed up this process.<br />
               This flag should not be set for macOS applications which allow to be terminated nicely (they are anyways automatically terminated, without asking the user).</li>
-            <li><span class="quote">Ignore in AAC</span>: When using the  AAC (Automatic Assessment Configuration or simpler Assessment Mode) kiosk mode which prevents network and screen access for other processes, ignore this prohibited process. AAC will be available in SEB 2.3 for macOS when running on macOS Catalina 10.15.4 or newer. When this macOS built-in single app mode is used, terminating most processes is unnecessary.</li>
+            <li><span class="quote">Ignore in AAC</span>: When using the  AAC (Automatic Assessment Configuration or simpler Assessment Mode) kiosk mode which prevents network and screen access for other processes, ignore this prohibited process,  when running on macOS Catalina 10.15.4 or newer. When this macOS built-in single app mode is used, terminating most processes is unnecessary.</li>
               <!--
             <li><span class="quote">Code Signatures</span>: Displays detail information about the code signatures which allow to undoubtedly identify the process or application. To cover different versions of a process binary/application, multiple signatures can be added. This isn't necessary if the process binaries/applications are signed with a trusted signature (on OS X by Apple), because the signature identifies an application independently of the program version. Also you can generate code signatures here.</li> -->
           </ul>
@@ -1017,20 +1018,10 @@ certificates extend the system trust store (as if you had manually added them to
           </h4>
           
           <div class="mac_prefs_screenshot">
-            <img class="img-responsive" src="images/SEB_PreferencesSecurityOSSpecific-en.png" width="762" alt="SEB Preferences Window Security Pane, System Lockdown Tab" />
+            <img class="img-responsive" src="images/SEB_PreferencesSecurityOSSpecific-en.png" width="762" alt="SEB Preferences Window Security Pane, System Lockdown Tab" /><br />&nbsp;
           </div>
-          
           <ul id="seblist">
-            <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (with administrator rights), which is necessary to block and unblock some system features. You can define the policy that applies when the SEB Service isn't running (for whatever reason):
-          </li>
-              <ul id="seblist">
-                <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service, it will only be noted in the log that the service was not securing the computer during the exam.</li>
-                <li><span class="quote">warn when service is not running</span>: A warning is displayed when the service is not installed/running, but the exam can be started.</li>
-                <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is installed. <br />
-                </li>
-            </ul>
-                <strong>SEB  for macOS doesn't  use a SEB Service.</strong> This setting has an effect in SEB for Windows only.<br />&nbsp;
-            <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).</li>
+          <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).</li>
             <li><span class="quote">Allow screen capture/recording</span>:  Allows macOS screen capture (screen shots) and recording (cmd-shift-3/-4/-5) to be used. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
             <li><span class="quote">Allow window capture (screen shots)</span>:  Shows or hides SEB windows on macOS screen shots (invoked with cmd-shift-3/-4/-5).</li>
             <li><span class="quote">Block screen shots (Legacy)</span>:  Use legacy method to block macOS screen shots (invoked with cmd+shift+3/+4/+5). Disable together with enabling settings 'Allow screen capture/recording' and 'Allow window capture (screen shots)' will allow to take screen shots on Mac. Use 'Enable Print Screen' in Hooked Keys tab to allow screen shots to be taken in SEB for Windows.</li>
@@ -1079,6 +1070,19 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
           
           <ul id="seblist">
             <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
+            <li>
+              <div class="mac_prefs_screenshot"></div>
+              <ul id="seblist2">
+                <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (with administrator rights), which is necessary to block and unblock some system features. You can define the policy that applies when the SEB Service isn't running (for whatever reason): </li>
+                <ul id="seblist2">
+                  <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service, it will only be noted in the log that the service was not securing the computer during the exam.</li>
+                  <li><span class="quote">warn when service is not running</span>: A warning is displayed when the service is not installed/running, but the exam can be started.</li>
+                  <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is installed. <br />
+                  </li>
+                </ul>
+                <strong>SEB  for macOS doesn't  use a SEB Service.</strong> This setting has an effect in SEB for Windows only.
+              </ul>
+            </li>
             <li><span class="quote">Registry</span>: Select which options in the Windows Security Screen invoked by Ctrl-Alt-Del should be available while SEB is running (switch user, lock this computer, change a password, start Task Manager, log off, shut down, ease of access). In addition the Registry setting <span class="quote">Enable VMware Client Shade</span> activates the 'Shade' bar at the upper edge of a virtual desktop. If you're not using VMware, this setting doesn't have any effect.</li>
             <li><span class="quote">Hooked Keys</span>: Here you can select which special and function keys are blocked or enabled.  Same as in macOS, if users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when Print Screen is disabled.<br>
               <strong>One setting in the Hooked Keys pane 
@@ -1103,19 +1107,19 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
           <p>SEB for macOS is running on 64-bit Intel Macs with the following operating systems:</p>
                
           <ul id="seblist">
-            <li>macOS 10.15 Catalina</li>
+            <li>macOS 11 Big Sur</li><li>macOS 10.15 Catalina</li>
             <li>macOS 10.14 Mojave</li>
             <li>macOS 10.13 High Sierra</li>
             <li>macOS 10.12 Sierra</li>
             <li>OS X 10.11 El Capitan</li>
           </ul>
-          <p>Limited support (by changing default value for <span class="quote"><a href="#SecurityPane">minimal macOS version</a></span>):<br>
+          <p>Limited support (by changing default value for <span class="quote"><a href="#SecurityPane">minimal macOS version</a></span>), only supported as client, preferences window not available:<br>
           </p>
           <ul>
             <li>OS X 10.10 Yosemite</li>
             <li>OS X 10.9 Mavericks</li>
             <li>OS X 10.8 Mountain Lion (TLS/SSL/CA certificate embedding and certificate pinning not supported)</li>
-            <li>OS X 10.7 Lion (only supported as client, preferences window not available. TLS/SSL/CA certificate embedding and certificate pinning not supported)<br>
+            <li>OS X 10.7 Lion (TLS/SSL/CA certificate embedding and certificate pinning not supported)<br>
             </li>
             <li>Only supported by SEB 1.5.2: Mac OS X 10.6 Snow Leopard</li>
           </ul>
