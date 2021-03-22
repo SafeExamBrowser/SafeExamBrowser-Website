@@ -227,6 +227,25 @@
         
         <!-- Content -->
 
+	<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.3.1</a>:</h5>
+    <p>SEB 2.3.1 is a maintenance update, which disables Automatic Assessment Configuration (AAC) macOS Assessment Mode in default settings, as it has a major issue when used on macOS 11 Big Sur. We recommend to not use AAC until this issue will be fixed in an upcoming macOS Big Sur update.</p>
+    <ul>
+      <li>Changed default setting for AAC to disabled, using a new settings key enableMacOSAAC.</li>
+      <li>Block screen capture also when AAC is used (as AAC currently doesn't prevent screen capture reliably).</li>
+      <li>Fixed URL String from pasteboard to copy to Preferences/General/Start URL is not saved when SEB is started in AAC.</li>
+      <li>Clicking the close button of the running prohibited processes list window now quits SEB/the exam session.</li>
+      <li>Fixed force &quot;Quit All Processes&quot; alert was sometimes displayed behind process list window.</li>
+      <li>Fixed security issue with &quot;Revert to Client Settings&quot; and &quot;Configure Client&quot; in Preferences: Don't ask for client settings admin password if none is set.      </li>
+    </ul>
+    <p>Known issues while using Assessment Mode in macOS 11:</p>
+    <ul>
+      <li>When running on macOS 11 Big Sur, DNS lookup fails while AAC is enabled. This is why SEB fails to load URLs with a different domain than the Start URL the first time it tries to connect to that URL. Usually it would connect to the according domain after quitting and starting SEB again (as the DNS lookup result is cached). The domain of the Start URL should always be loadable, as SEB reaches out to the Start URL before activating AAC.</li>
+      <li>When switching Preferences panes, the Preferences window sometimes disappear. Press cmd - , (comma key) in that case and the window appears again.</li>
+      <li>In the file dialog, you cannot change the file name when using &quot;Save As&quot;. </li>
+      </ul>
+    <p>Use the new feature to open the Preferences window without locking SEB: Hold the option/alt key when starting SEB by opening the app icon (or dropping a .seb configuration file onto the SEB app icon).</p>
+
+			
     <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.3</a>:</h5>
     <ul id="seblist2">
       <li>Support for Automatic Assessment Configuration (AAC) macOS Assessment Mode. AAC is used by default if running on macOS 10.15.4 or newer. Assessment Mode blocks various macOS features which shouldn't be accessible during exams. Also no other applications and processes running in the background can access the network while Assessment Mode is active. </li>
@@ -253,7 +272,6 @@
       <li>In the file dialog, you cannot change the file name when using &quot;Save As&quot;. </li>
       </ul>
     <p>Use the new feature to open the Preferences window without locking SEB: Hold the option/alt key when starting SEB by opening the app icon (or dropping a .seb configuration file onto the SEB app icon).</p>
-    <h5>&nbsp; </h5>
     <h5>Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.2.2</a>:</h5>
           <ul id="seblist">
             <li>Fixed that PDF documents were not displayed when Acrobat PDF viewer is installed.</li>
