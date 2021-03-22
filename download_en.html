@@ -349,24 +349,33 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.3/SafeExamBrowser-2.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.3.1/SafeExamBrowser-2.3.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.3 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.3.1 for macOS</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for macOS 11, 10.15, 10.14, 10.13, 10.12, 10.11 (<a href="#RemarkOSX10-7">limited support*</a> for 10.10, 10.9, 10.8 and 10.7)</strong><br />
-        <span class="codetext">Build 2EAD. SHA1: 5ee996710bbc7a1f9c5f337f2d57ff5f2428c58a</span></p>
+        <span class="codetext">Build 313F. SHA1: f50a31b531a9bdd18bfc78f51ca6c6c77295ccf1</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.3/SafeExamBrowser-2.3.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.3.1/SafeExamBrowser-2.3.1.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
-          <p>SEB 2.3 for macOS is a major update, which improves security massively by supporting the Automatic Assessment Configuration (AAC) macOS Assessment Mode, available from macOS 10.15.4. SEB 2.3 also adds new capabilities, improves the user interface for students and exam administrators and fixes several issues.</p>
+          <p>SEB 2.3.1 is a maintenance update for SEB 2.3, which disables Automatic Assessment Configuration (AAC) macOS Assessment Mode in default settings, as it has a major issue when used on macOS 11 Big Sur. We recommend to not use AAC until this issue will be fixed in an upcoming macOS Big Sur update.</p>
+          <ul>
+            <li>Changed default setting for AAC to disabled, using a new settings key <em>enableMacOSAAC</em>.</li>
+            <li> Blocks screen capture also when AAC is used (as AAC currently doesn't prevent screen capture reliably).</li>
+            <li> Fixed URL String from pasteboard to copy to Preferences/General/Start URL is not saved when SEB is started in AAC.</li>
+            <li> Clicking the close button of the running prohibited processes list window now quits SEB/the exam session.</li>
+            <li> Fixed force &quot;Quit All Processes&quot; alert was sometimes displayed behind process list window.</li>
+            <li> Fixed security issue with &quot;Revert to Client Settings&quot; and &quot;Configure Client&quot; in Preferences: Don't ask for client settings admin password if none is set.</li>
+          </ul>
+          <p>SEB 2.3 added new capabilities, improved the user interface for students and exam administrators and fixed several issues:</p>
           <ul>
             <li>
-              <p>Support for Automatic Assessment Configuration (AAC) macOS Assessment Mode. AAC is used by default if running on macOS 10.15.4 or newer. Assessment Mode blocks various macOS features which shouldn't be accessible during exams. Also no other applications and processes running in the background can access the network while Assessment Mode is active.</p>
+              <p>Support for Automatic Assessment Configuration (AAC) macOS Assessment Mode. AAC can be used  optionally if running on macOS 10.15.4 or newer. Assessment Mode blocks various macOS features which shouldn't be accessible during exams. Also no other applications and processes running in the background can access the network while Assessment Mode is active.</p>
             </li>
             <li>
-              <p>Optionally, the old SEB kiosk mode can be used also on latest macOS versions (see Preferences / Security / "Use Assessment Mode (AAC) if available", settings key enableAAC), as AAC doesn't support optionally enabling features like like screen capture/sharing, Siri and Dictation. Assessment Mode also cannot be used if you want to run a video conferencing solution in the background during an exam for proctoring.</p>
+              <p>By default, the old SEB kiosk mode is still used also on latest macOS versions (see Preferences / Security / "Use Assessment Mode (AAC) if available", settings key <em>enableMacOSAAC</em>), as AAC doesn't support optionally enabling features like like screen capture/sharing, Siri and Dictation. Assessment Mode also cannot be used if you want to run a video conferencing solution in the background during an exam for proctoring.</p>
             </li>
             <li>
               <p>New options to enforce using the internal (built-in) display of a MacBook or iMac but optionally still allowing to use the external display on a Mac without built-in display (Mac Mini, Mac Pro).</p>
