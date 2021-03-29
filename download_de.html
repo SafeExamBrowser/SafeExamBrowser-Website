@@ -331,19 +331,25 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.3.1/SafeExamBrowser-2.3.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.3.2/SafeExamBrowser-2.3.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.3.1 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 2.3.2 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 11, 10.15, 10.14, 10.13, 10.12, 10.11, (<a href="#RemarkOSX10-7">eingeschränkter Support*</a> von macOS 10.10, 10.9, 10.8 und 10.7)</strong><br />
-        <span class="codetext">Build 313F. SHA1: f50a31b531a9bdd18bfc78f51ca6c6c77295ccf1</span></p>
+        <span class="codetext">Build 3140. SHA1: b5fa2826411aa8e8448b26ec8aa28d2d5c50aad4</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.3.1/SafeExamBrowser-2.3.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.3.2/SafeExamBrowser-2.3.2.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p><strong>Neuigkeiten in SEB 2.3.1<a href="download_en.html#MacOSX"> siehe englische Seite</a></strong>. Neu seit SEB 2.2.2 für macOS:</p>
+          <p>SEB 2.3.2 ist ein Wartungsupdate, welches eine Fehlerbeseitigung enthält: </p>
+          <ul>
+            <li>Auf Intel CPU basierten Macs wurden Systemprozesse, welche Elemente einer Benutzeroberfläche im Vordergrund anzeigen zu versuchen, von SEB nicht als Betriebssystemapplikationen erkannt und beendet oder SEB wurde gesperrt (roter Sperrbildschirm angezeigt), falls SEB diese nicht beenden konnte. Nun werden Systemprocesse sowohl auf Intel als auch Apple Silicon basierte Macs korrekt identifiziert.</li>
+            <li>SEB 2.3.1: Der Kiosk-Modus Automatic Assessment Configuration (AAC) bzw. <strong>macOS Assessment Mode</strong> wird nicht mehr standardmässig aktiviert, weil dieser unter macOS 11 Big Sur ein grundlegendes funktionales Problem aufweist. <br>
+            </li>
+          </ul>
+          <p><strong>Neuigkeiten in SEB 2.3<a href="download_en.html#MacOSX"> siehe englische Seite</a></strong>. Neu seit SEB 2.2.2 für macOS:</p>
           <ul>
             <li>Korrigiert, dass PDF-Dokumente nicht dargestellt wurden, wenn der Acrobat PDF Reader installiert war.</li>
             <li>Das Einstellungen-Fenster kann nun nicht mehr geöffnet werden, wenn in Moodle 3.9 automatisch erzeugte SEB-Einstellungen benutzt werden (Option "Manuell Konfigurieren"). SEB benutzt nun die Standardeinstellung <em>allowPreferencesWindow=false</em> in Prüfungs-Einstellungen (Client-Konfigurationen haben weiterhin <em>allowPreferencesWindow=true </em>als Standardeinstellung).</li>
