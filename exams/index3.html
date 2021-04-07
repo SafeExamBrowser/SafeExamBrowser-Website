@@ -564,7 +564,11 @@
 
 <!-- InstanceBeginEditable name="scripts" -->
 
-    <script src="../js/ekko-lightbox.js"></script>
+<script language="javascript">
+document.write (SafeExamBrowser.configkey);
+</script>
+
+		<script src="../js/ekko-lightbox.js"></script>
     
 	<script type="text/javascript">
 		$(document).on('click', '[data-toggle="lightbox"]', function(event) {
