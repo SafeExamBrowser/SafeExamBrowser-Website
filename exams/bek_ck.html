@@ -14,8 +14,8 @@
         function readFromSEBAPI () {
             var pageConfigKey = SafeExamBrowser.security.configKey;
             var pageBrowserExamKey = SafeExamBrowser.security.browserExamKey;
-            var sebClientVersion = SafeExamBrowser.security.clientVersion
-            alert('SEB Security Information: CK: '+pageConfigKey+'\nBEK: '+pageBrowserExamKey+'\nApplication version: '+sebClientVersion);
+            var sebClientVersion = SafeExamBrowser.security.appVersion;
+            alert('SEB Security Information:\nCK: '+pageConfigKey+'\nBEK: '+pageBrowserExamKey+'\nApplication version: '+sebClientVersion);
         }
     </script>
 </head>
