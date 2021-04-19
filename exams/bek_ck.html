@@ -11,7 +11,15 @@
                     
                 }
             
-            function readFromSEBAPI () {
+            function displaySEBSecurityInfo () {
+                var pageConfigKey = SafeExamBrowser.security.configKey;
+                var pageBrowserExamKey = SafeExamBrowser.security.browserExamKey;
+                var sebClientVersion = SafeExamBrowser.security.appVersion;
+                var securityInformation = 'SEB Security Information:\nCK: '+pageConfigKey+'\nBEK: '+pageBrowserExamKey+'\nApplication version: '+sebClientVersion;
+                document.getElementById("securityInformation").innerHTML = securityInformation;
+            }
+            
+            function displaySEBSecurityInfoAlert () {
                 var pageConfigKey = SafeExamBrowser.security.configKey;
                 var pageBrowserExamKey = SafeExamBrowser.security.browserExamKey;
                 var sebClientVersion = SafeExamBrowser.security.appVersion;
@@ -19,16 +27,21 @@
             }
             </script>
     </head>
-    <body>
+    <body onload="displaySEBSecurityInfo()">
         <!--    <p>-->
         <!--        <input type="text" name="testdata" id="testdata" value="" placeholder="">-->
         <!--    </p>-->
         <!--    <p>-->
         <!--        <button onclick="addToLocalStorage()">Store</button>-->
         <!--    </p>-->
-        <p>This is a testing page for the SEB JavaScript API (works only on SEB clients supporting the new SEB API and only if the modern WebView is used in SEB settings).</p>
+        <h1>Testing page for Safe Exam Browser JavaScript API</h1>
+        <p>This page works only on SEB clients supporting the new SEB API and only if the modern WebView is used in SEB settings.</p>
+        
+        <h2>Security Information</h2>
+        <p id="securityInformation">Could not read security information!</p>
+        
         <p>
-        <button onclick="readFromSEBAPI()">Read Security Information</button>
+        <button onclick="displaySEBSecurityInfoAlert()">Read Security Information</button>
         </p>
     </body>
 </html>
