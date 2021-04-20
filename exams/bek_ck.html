@@ -4,17 +4,12 @@
             <title>Testing SEB JavaScript API</title>
             <script src="https://code.jquery.com/jquery-1.11.1.js" type="text/javascript"></script>
             <script type="text/javascript">
-                function addToLocalStorage () {
-                    var input = SafeExamBrowser.security.browserExamKey;
-                    localStorage.setItem('testitem', input);
-                    alert('added to storage: '+input);
-                    
-                }
             
             function displaySEBSecurityInfo () {
+                SafeExamBrowser.security.updateKeys();
                 var pageConfigKey = SafeExamBrowser.security.configKey;
                 var pageBrowserExamKey = SafeExamBrowser.security.browserExamKey;
-                var sebClientVersion = SafeExamBrowser.security.appVersion;
+                var sebClientVersion = SafeExamBrowser.version;
                 var securityInformation = 'SEB Security Information:\nCK: '+pageConfigKey+'\nBEK: '+pageBrowserExamKey+'\nApplication version: '+sebClientVersion;
                 document.getElementById("securityInformation").innerHTML = securityInformation;
             }
@@ -22,7 +17,7 @@
             function displaySEBSecurityInfoAlert () {
                 var pageConfigKey = SafeExamBrowser.security.configKey;
                 var pageBrowserExamKey = SafeExamBrowser.security.browserExamKey;
-                var sebClientVersion = SafeExamBrowser.security.appVersion;
+                var sebClientVersion = SafeExamBrowser.version;
                 alert('SEB Security Information:\nCK: '+pageConfigKey+'\nBEK: '+pageBrowserExamKey+'\nApplication version: '+sebClientVersion);
             }
             </script>
