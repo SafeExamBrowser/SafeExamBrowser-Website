@@ -13,7 +13,8 @@
                 var pageConfigKey = SafeExamBrowser.security.configKey;
                 var pageBrowserExamKey = SafeExamBrowser.security.browserExamKey;
                 var sebClientVersion = SafeExamBrowser.version;
-                var securityInformation = 'SEB Security Information:\nCK: '+pageConfigKey+'\nBEK: '+pageBrowserExamKey+'\nApplication version: '+sebClientVersion;                document.getElementById("securityInformation").innerHTML = securityInformation;
+                var securityInformation = 'SEB Security Information:\nCK: '+pageConfigKey+'\nBEK: '+pageBrowserExamKey+'\nApplication version: '+sebClientVersion;
+                document.getElementById("securityInformation").innerHTML = securityInformation;
             }
             
             function displaySEBSecurityInfoAlert () {
