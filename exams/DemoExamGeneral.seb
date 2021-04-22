@@ -1228,7 +1228,7 @@
 	<key>showTime</key>
 	<true/>
 	<key>startURL</key>
-	<string>https://safeexambrowser.moodle.ch/lms/mod/quiz/view.php?id=1296</string>
+	<string>https://safeexambrowser.moodle.ch/lms/course/view.php?id=14</string>
 	<key>startURLAllowDeepLink</key>
 	<false/>
 	<key>startURLAppendQueryParameter</key>
