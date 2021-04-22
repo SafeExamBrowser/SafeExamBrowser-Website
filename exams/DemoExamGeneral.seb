@@ -221,7 +221,7 @@
 	<true/>
 	<key>examKeySalt</key>
 	<data>
-	7AyT3UI7y9i1ea18bh4AY6Bkb9pNvwzgJkbkcffQ4iw=
+	Ghp1Kq6J5yPNd8O9SXIQHGTstXpO8KeNHiIZXZZ2+Ko=
 	</data>
 	<key>examSessionClearCookiesOnEnd</key>
 	<false/>
@@ -230,7 +230,7 @@
 	<key>examSessionReconfigureAllow</key>
 	<true/>
 	<key>examSessionReconfigureConfigURL</key>
-	<string>https://safeexambrowser.moodle.ch/lms/*</string>
+	<string>sebs://safeexambrowser.moodle.ch/lms/*</string>
 	<key>exitKey1</key>
 	<integer>2</integer>
 	<key>exitKey2</key>
