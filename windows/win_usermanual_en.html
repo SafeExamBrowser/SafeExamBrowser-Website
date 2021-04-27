@@ -289,9 +289,10 @@
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
-            Safe Exam Browser 2.4 for Windows
+            Safe Exam Browser 2.4.1 for Windows
           </h2>
     
+          <p><strong>Note: This is the manual for the legacy version of Safe Exam Browser for Windows. Until the manual is updated for SEB 3.x, please check tool tips (hover mouse cursor over new controls) for new options in the Configuration Tool.</strong></p>
           <p>Safe Exam Browser – SEB for Windows opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several commercial and non-commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most  web-based online quiz and e-assessment systems.          </p>
           <p><strong>The following manual explains how to configure and use SEB for Windows from the perspective of exam administrators.</strong> SEB is a very flexible and modular tool, therefore documentation for examinees on how to use SEB with individual exam setups and the various exam systems it works with should be provided by the institution using SEB or their e-assessment provider.</p>
 
@@ -307,17 +308,17 @@
             Features
           </h3>
           
-        <p>SEB 2.4 disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock (this Computer)</strong>, <strong>Switch User</strong>, <strong>Sign out (Log off</strong>), <strong>Change a password</strong>, <strong>(Start) Task Manager</strong>, <strong>Shut down, Restart </strong>and <strong>Ease of Access</strong>. It disables the <strong>Windows Task Bar</strong> and the <strong>Start Menu</strong> (button in the lower left corner of the screen), the <strong>App/Task/Window Switcher</strong> (invoked by Alt-Tab and Windows-Tab),  printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
+        <p>SEB disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock (this Computer)</strong>, <strong>Switch User</strong>, <strong>Sign out (Log off</strong>), <strong>Change a password</strong>, <strong>(Start) Task Manager</strong>, <strong>Shut down, Restart </strong>and <strong>Ease of Access</strong>. It disables the <strong>Windows Task Bar</strong> and the <strong>Start Menu</strong> (button in the lower left corner of the screen), the <strong>App/Task/Window Switcher</strong> (invoked by Alt-Tab and Windows-Tab),  printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
         
-        <p>Its possible to configure SEB 2.4 to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
+        <p>Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
         
         <p>In the browser window there is no right mouse (or Shift-F10) click popup window available. Besides that, the browser is supporting  Java and Flash content (as long as the required  plugins are installed on the system). </p>
         
-        <p>SEB 2.4 detects when it was started in a virtual instead of a native environment and refuses to run. This virtual machine detector hinders manipulating SEB further when used in unmanaged environments.</p>
+        <p>SEB detects when it was started in a virtual instead of a native environment and refuses to run. This virtual machine detector hinders manipulating SEB further when used in unmanaged environments.</p>
         
-        <p>SEB 2.4 for Windows is based on the <em><strong>Mozilla Firefox/Gecko</strong></em> engine (in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
+        <p>SEB for Windows is based on the <em><strong>Mozilla Firefox/Gecko</strong></em> engine (in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
         
-        <p> SEB 2.4 for Windows can be used together with additional (third party) applications during an exam. You can download and open files linked in your online exam, edit it in a third party application and then upload the results to your online quiz/LMS again. </p>
+        <p> SEB for Windows can be used together with additional (third party) applications during an exam. You can download and open files linked in your online exam, edit it in a third party application and then upload the results to your online quiz/LMS again. </p>
         <p>From version 2.0 SEB uses encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x.</p>
         <p><strong><span class="red">Please understand that you also have to configure your exam system correctly to be locked down securely.</span></strong> SEB is generally  locking down exam client computers only, not the exam system or the quiz module of a learning management system. <strong>Check documentation for your exam/learning management system on how to lock it down correctly.</strong></p>
         </div>
@@ -328,14 +329,14 @@
         
           <h3 class="page-header sebnavbar-link" id="LMS">
             <a class="anchorjs-link" href="#LMS"></a>
-            Using SEB 2.4 with Supported LMS
+            Using SEB with Supported LMS
           </h3>
           
           <p>Some learning management systems require plugins to be installed to fully support secure exams taken with SEB, others have built-in support.</p>
 
           <h4 class="seb-section-header sebnavbar-link" id="moodle">
             <a class="anchorjs-link" href="#moodle"></a>
-            Using SEB 2.4 with Moodle</strong>
+            Using SEB with Moodle</strong>
           </h4>
           
           <p> SEB support in Moodle has the following objectives:</p>
@@ -357,7 +358,7 @@
           
           <h4 class="seb-section-header sebnavbar-link" id="ILIAS">
             <a class="anchorjs-link" href="#ILIAS"></a>
-            Using SEB 2.4 with ILIAS
+            Using SEB with ILIAS
           </h4>
           
           <p>You can find information about how to install the ILIAS plugin for SEB support <a href="https://github.com/hrz-unimr/Ilias.SEBPlugin" target="_blank">here</a>. </p>
@@ -366,7 +367,7 @@
           
           <h4 class="seb-section-header sebnavbar-link" id="OpenOLAT">
             <a class="anchorjs-link" href="#OpenOLAT"></a>
-            Using SEB 2.4 with OpenOLAT
+            Using SEB with OpenOLAT
           </h4>
           
           <p>An assessment mode has been added to the OpenOLAT standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOLAT courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOLAT course elements can be configured for such an exam setting. </p>
@@ -391,7 +392,7 @@
             Download/Installation
           </h3>
           
-          <p>You can download the SEB 2.4 for Windows Installation setup program (also containing the SEB Windows configuration tool) <a href="../download_en.html#Windows">here</a>. Just start <span class="path">SafeExamBrowserInstaller.exe</span> and follow the steps in the installation program. </p>
+          <p>You can download the SEB for Windows Installation setup program (also containing the SEB Windows configuration tool) <a href="../download_en.html#Windows">here</a>. Just start <span class="path">SafeExamBrowserInstaller.exe</span> and follow the steps in the installation program. </p>
           
           <p>SEB for Windows containing the main application executable <span class="path">SafeExamBrowser.exe</span> and the configuration tool <span class="path">SebWindowsConfig.exe</span> are placed in the SEB application folder named <span class="path">SafeExamBrowser</span> which will be installed into the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). Also a <span class="path">Safe Exam Browser</span> program  entry will be placed into your Start Menu.</p>
           <p>If you require an MSI package for installing SEB using a deployment system, then you can extract it from the <span class="path">SafeExamBrowserInstaller.exe</span> bundle using the following command (in cmd.exe):</p>
@@ -409,7 +410,7 @@
         
           <h3 class="page-header sebnavbar-link" id="starting">
             <a class="anchorjs-link" href="#starting"></a>
-          Starting and Quitting SEB 2.4 </h3>
+          Starting and Quitting SEB </h3>
           
           <p>When you start SEB, all currently running applications, the Windows Task Bar and the desktop are hidden. On the main screen SEB opens its web browser window filling the whole screen (optionally the window can be resized and moved or switched to fullscreen). SEB opens the webpage at the preset Start URL, which might take some seconds. As default, as long as you don't set another <span class="quote">Start URL</span> (see <a href="#configuration">Configuration</a>), SEB for Windows opens <a href="https://safeexambrowser.org/start/" target="_blank">this page</a> with initial instructions. </p>
           <p>SEB doesn't have any navigation buttons, but the optional reload button in the SEB taskbar, the browser toolbar (if activated) or the key  <strong>F5</strong>   can be used to reload the current page.</p>
@@ -424,9 +425,9 @@
 
           <h3 class="page-header sebnavbar-link" id="configuration">
             <a class="anchorjs-link" href="#configuration"></a>
-          Configuration of SEB 2.4 </h3>
+          Configuration </h3>
         
-          <p>SEB 2.4 for Windows has a comfortable configuration tool which should be used for configuring SEB. You can find <span class="path">SEBConfigTool.exe </span>in the SEB application folder <span class="path">SafeExamBrowser</span> which is placed in the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). </p>
+          <p>SEB for Windows has a comfortable configuration tool which should be used for configuring SEB. You can find <span class="path">SEBConfigTool.exe </span>in the SEB application folder <span class="path">SafeExamBrowser</span> which is placed in the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). </p>
           
           <p>In the SEB configuration<em><strong></strong></em> tool window, settings are grouped in several panes. There you can set  the parameters described below.</p>
           
@@ -1107,7 +1108,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
             Operating System
           </h3>
           
-              <p> SEB for Windows is running  on 32-bit and 64-bit PCs with the following operating systems:</p>
+              <p> SEB for Windows 2.4.1 is running  on 32-bit and 64-bit PCs with the following operating systems:</p>
                 <ul>
                   <li>Windows 7</li>
                   <li>Windows 8/8.1 </li>
@@ -1125,7 +1126,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
             License
           </h3>
           
-          <p>Safe Exam Browser for Windows: &copy; 2010-2018 Damian Büchel, Daniel R. Schneider, Dirk Bauer, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, Pascal Wyss, Viktor Tomas, Stefan Schneider, Oliver  Rahs, based on the original idea of Safe Exam Browser by Stefan Schneider,  University of Giessen<br />
+          <p>Safe Exam Browser for Windows: &copy; 2010-2021 Damian Büchel, Daniel R. Schneider, Dirk Bauer, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, Pascal Wyss, Viktor Tomas, Stefan Schneider, Oliver  Rahs, based on the original idea of Safe Exam Browser by Stefan Schneider,  University of Giessen<br />
           Project concept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  French localization: Nicolas Dunand<br />
           </p>
           <p>Safe Exam Browser is released as freeware. The <a href="https://github.com/SafeExamBrowser/seb-win" target="_blank">source code</a> is  subject to the <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (the  &quot;License&quot;); you may only use these files in compliance with the  License. You may obtain a copy of the License at <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> .</p>
