@@ -243,7 +243,7 @@
 			<li>Basic support for SEB server.</li>
 			<li>Text search for browser application.</li>
 			<li>Access restriction for file system dialog (when downloading or uploading).</li>
-			<li>Support for Secure Sessions.</li>
+			<li>Added settings to allow to reconfigure SEB, even it is already running in a secure  session (a quit password is set in the currently active settings).</li>
 			<li>Option to reset browser via Quit URL.</li>
 			<li>Query string parameter feature for seb(s) URLs.</li>
 			<li>Option to restrict visibility of URLs in browser windows.</li>
@@ -259,7 +259,9 @@
 			<li>Added support for application URI schemes.</li>
 			<li>Fixed issue with SEB service startup.</li>
 			<li>Updated browser engine to version 85.3.13 (Chromium version 85.0.4183.121).</li>
-	  	</ul>
+		  </ul>
+        <p><strong>IMPORTANT: SEB 3.1 for Windows uses a different policy to decide if it can be reconfigured when a seb(s) URL is opened and a .seb config file downloaded: </strong>When running in a secure session (a quit password is set in the currently active settings), SEB 3.1 cannot be reconfigured, even if it's using the persisted client settings. Earlier versions could always be reconfigured when using client settings. If you want to allow reconfiguring SEB by opening a seb(s) URL while running in a secure session, then you need to use the "Allow Reconfiguring" and "Reconfiguring Config URL" options in Preferences/Exam. For the same behavior as in previous versions, you can enable "Allow Reconfiguring" and set "Reconfiguring Config URL" to "*" (wildcard symbol, meaning any seb(s) URL or download URL of a .seb config file is allowed to reconfigure SEB) in your SEB client settings. This policy settings for reconfiguring are already used by SEB for macOS and iOS.</p>
+        <br>
         
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.0.1:</h5>
 		<p>Version 3.0.1 contains a fix for the issues some users of SEB 3.0.0 observed specifically in BYOD environments. The new version should prevent that anti-malware software falsely identifies SEB 3.0 as malware (false-positive detection using heuristics and similar algorithms). In some cases this blocked the SEB Windows Service from setting, resetting and monitoring specific settings in the Windows Registry, and prevented SEB 3.0.0 from starting or from resetting the power options. Following a list of the most prominent new features and changes:</p>
