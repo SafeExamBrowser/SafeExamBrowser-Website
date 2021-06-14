@@ -376,6 +376,358 @@
         <key>os</key>
         <integer>1</integer>
         <key>executable</key>
+        <string>UCBrowser.exe</string>
+        <key>originalName</key>
+        <string>UCBrowser.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>slimjet.exe</string>
+        <key>originalName</key>
+        <string>slimjet.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>browser.exe</string>
+        <key>originalName</key>
+        <string>browser.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Opera.exe</string>
+        <key>originalName</key>
+        <string>Opera.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Vivaldi.exe</string>
+        <key>originalName</key>
+        <string>Vivaldi.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Chromium.exe</string>
+        <key>originalName</key>
+        <string>Chromium.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Chrome.exe</string>
+        <key>originalName</key>
+        <string>Chrome.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>webexmta.exe</string>
+        <key>originalName</key>
+        <string>webexmta.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Teams.exe</string>
+        <key>originalName</key>
+        <string>Teams.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Telegram.exe</string>
+        <key>originalName</key>
+        <string>Telegram.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Zoom.exe</string>
+        <key>originalName</key>
+        <string>Zoom.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>slack.exe</string>
+        <key>originalName</key>
+        <string>slack.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Discord.exe</string>
+        <key>originalName</key>
+        <string>Discord.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>vncserver.exe</string>
+        <key>originalName</key>
+        <string>vncserver.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>TeamViewer.exe</string>
+        <key>originalName</key>
+        <string>TeamViewer.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
+        <string>Skype.exe</string>
+        <key>originalName</key>
+        <string>Skype.exe</string>
+        <key>description</key>
+        <string />
+        <key>identifier</key>
+        <string />
+        <key>windowHandlingProcess</key>
+        <string />
+        <key>user</key>
+        <string />
+      </dict>
+      <dict>
+        <key>active</key>
+        <true />
+        <key>currentUser</key>
+        <true />
+        <key>strongKill</key>
+        <false />
+        <key>os</key>
+        <integer>1</integer>
+        <key>executable</key>
         <string>ptoneclk.exe</string>
         <key>originalName</key>
         <string>ptoneclk.exe</string>
@@ -1898,5 +2250,7 @@
     <false />
     <key>lockOnMessageSocketClose</key>
     <true />
+    <key>allowedDisplaysIgnoreFailure</key>
+    <false />
   </dict>
 </plist>
