@@ -227,6 +227,55 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
+		  <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.0</a>:</h5>
+		  <ul>
+		    <li> Support for the modern WebKit browser engine, which increases performance, stability and compatibility with web applications.</li>
+		    <li>Access to camera/microphone via WebRTC on iOS 14.3 or newer.</li>
+		    <li> SEB 3.0 for iOS can now also be started with seb(s) links to servers requiring authentication.</li>
+		    <li> With the SEB integration in Moodle 3.9 or newer, you can now use the &quot;Launch Safe Exam Browser&quot; button to open the quiz in SEB for iOS.<br>
+	        </li>
+		    <li> SEB JavaScript API, currently for querying app version details, ConfigKey and BrowserExamKey security elements.<br>
+	        </li>
+		    <li> Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. </li>
+		    <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.<br>
+	        </li>
+		    <li> Support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.</li>
+		    <li>Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. SEB doesn't use any centralized server instances and the according features are by default disabled.<br>
+	        </li>
+		    <li> Fix for &quot;Back to Safari&quot; button/link function in visible Status Bar on iOS 14 before 14.5 in AAC kiosk mode.</li>
+		    <li>SEB doesn't show context menu on phone numbers detected by the web view anymore.</li>
+		    <li>Full support for Basic Authentication (+Digest+NTLM) for seb(s) links and in WebViews (in classic WebView, set the key <em>sendBrowserExamKey=true</em> or use embedded certificates).</li>
+		    <li>The modern WebKit browser engine (WKWebView) currently doesn't support URL content filters and sending the Config Key and Browser Exam Key in HTTP headers (the latter feature will not be possible with WKWebView at all, so you will need to transition to the SEB JavaScript API). If one of these settings (<em>sendBrowserExamKey=true</em> or <em>URLFilterEnableContentFilter=true</em>) is enabled, the classic WebView is used depending on the new setting <em>Browser Features/&quot;Select Browser Engine Policy&quot;</em> (key <em>browserWindowWebView</em>), <em>&quot;Prefer Modern in New Tab+Different Host&quot; (value 2)</em>, ensures that you still can use testing systems/LMS like Moodle which use the Browser Exam/Config Key test for SEB connecting to the exam (as they open in the classic WebView), but webpages opened in new tabs, which have another host than the exam system, open in WKWebView.<br>
+		      <br>
+	        SEB JavaScript API:<br></li>
+		    <li>Function <span class="codetext">void SafeExamBrowser.security.updateKeys(function callback)</span><br>
+	        This function needs to be invoked first (for example in <span class="codetext">&lt;body onload="..."&gt;</span>). Indicate a callback function (see this <a href="http://safeexambrowser.org/exams/bek_ck.html" target="_blank">demo page</a>) as parameter, which will be called asynchronously by SEB after updating the variables below:</li>
+		    <li> Variable <span class="codetext">SafeExamBrowser.security.browserExamKey</span></li>
+		    <li>Variable <span class="codetext">SafeExamBrowser.security.configKey</span><br>
+		      which are the BEK and CK hashed with the URL of the page. The keys are identical to the ones send in the HTTP request header when the classic WebView is used. Use this new JS API in an assessment web app with BEK/CK and WKWebView. Also set the key <em>browserWindowWebView</em> to the policy "Prefer Modern" <em>(value 3)</em>.</li>
+		    <li>Variable <span class="codetext">SafeExamBrowser.version</span> with format <span class="codetext">appDisplayName_iOS_versionString_buildNumber_bundleID<br>
+		    </span> This variable is set regardless whether <span class="codetext">updateKeys()</span> is  called.</li>
+	      </ul>
+			
+		  <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.17</a>:</h5>
+		  <ul>
+		    <li>SEB 2.1.17 runs by default on iOS 14, removed check for running on iOS beta.</li>
+		    <li> New scroll lock button for better usability while using some drag-and-drop and drawing question types.<br>
+	        </li>
+		    <li> Now displaying a disclaimer about the requirement to add an issue description before sending log files to the SEB developers in the integrated mail composer.<br>
+	        </li>
+		    <li> Now writing SEB and iOS version and device info into log files.<br>
+	        </li>
+		    <li> Fixed that a different Config Key was calculated on iOS 9/10 than on iOS 13/14 with some rare configuration files containing a deprecated setting.<br>
+	        </li>
+		    <li> Error message in case AAC couldn't be started properly and device needs to be restarted will only show on iOS versions older than iOS 13.0.<br>
+	        </li>
+		    <li> Fixed that SEB assumed an opened URL could be a Universal Link if decrypting the config from that URL failed.<br>
+	        </li>
+		    <li> Fixed a common crash when the &quot;Search Network&quot; button in the Initial Configuration Assistant is tapped.</li>
+	      </ul>
+
+			
           <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.16</a>:</h5>
           <ul id="seblist">
             <li>Improved accessibility when using VoiceOver: Added accessibility labels and hints to buttons and excluded unnecessary UI elements. After opening the left side menu,  VoiceOver focus moves to the first browser tab entry</li>
