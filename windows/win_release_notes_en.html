@@ -224,6 +224,22 @@
         <!-- Content Column -->
         <div class="col-md-9" role="main">
 			
+		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.0:</h5>
+		<p>Version 3.3.0 introduces live proctoring with Zoom, adds support for basic screen sharing in the integrated browser and fixes various issues reported by the community.</p>
+        <ul>
+			<li>Added live proctoring support for Zoom and improved live proctoring integration with SEB Server.</li>
+			<li>Added support for basic screen sharing in the integrated browser.</li>
+			<li>Implemented temporary file download and upload directory for integrated browser.</li>
+			<li>Improved handshake procedure with SEB Server.</li>
+			<li>Fixed possible data leak in proctoring implementation.</li>
+			<li>Improved error message for display monitoring.</li>
+			<li>Improved generic start error message to always include the log files of the affected session.</li>
+			<li>Extended default list of prohibited applications.</li>
+			<li>Fixed issue where links in PDF documents didn't work due to a bug in the browser engine (see https://bitbucket.org/chromiumembedded/cef/issues/3143/pdf-link-navigation-not-working).</li>
+			<li>Updated browser engine to version 91.1.21 (Chromium version 91.0.4472.114).</li>
+			<li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+	  	</ul>
+			
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.2.0:</h5>
 		<p>Version 3.2.0 introduces live proctoring with Jitsi Meet, enables WebRTC for the integrated browser engine and fixes issues reported by the community.</p>
         <ul>
