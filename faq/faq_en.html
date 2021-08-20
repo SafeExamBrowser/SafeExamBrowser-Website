@@ -373,9 +373,12 @@ Did you try the keyboard shortcut Cmd-Q? <strong>If SEB asks for the Quit Passwo
 1. Try to press the Touch ID button (that's the power button on current Macs, other models might still have a dedicated power button) for 6 seconds, your Mac will switch off then. <br>
 2. Wait a minute or two and press the power button again, your Mac will boot up again. <br>
 3. SEB should not be started automatically. Proceed to step 5. If SEB is started automatically and you still cannot quit it, then proceed to step 4.<br>
-4. Again press the power button for 6 seconds to turn off your Mac, wait a minute, press the power button again and immediately press and hold the Shift key as your Mac starts up (this is called <a href="https://support.apple.com/en-us/HT201262" target="_blank">safe mode</a>).<br>
+4. Again press the power button for 6 seconds to turn off your Mac, wait a minute, press the power button again and immediately press and hold the Shift key as your Mac starts up (this is called <a href="https://support.apple.com/en-us/HT201262" target="_blank">safe mode</a>). On Macs with Apple silicon:
+a) Shut down your Mac.
+b) Turn on your Mac and continue to press and hold the power button until you see the startup options window.
+c) Select your startup disk, then press and hold the Shift key while clicking “Continue in Safe Mode.”<br>
 5. Open the Terminal app (you can use the Spotlight search icon on the upper right in your menu bar to find Terminal).<br>
-6. Type/copy paste this text: <span class="codetext">defaults delete org.safeexambrowser.Safe-Exam-Browser</span>. This deletes the client configuration of the Safe Exam Browser application, so when starting it is showing the same information page like when it was installed first<br>
+6. Type/copy paste this text:<span class="codetext"> defaults delete org.safeexambrowser.SafeExamBrowser</span> (for SEB 2.3 and newer) or <span class="codetext">defaults delete org.safeexambrowser.Safe-Exam-Browser</span> (SEB versions before SEB 2.3) This deletes the client configuration of the Safe Exam Browser application, so when starting it is showing the same information page like when it was installed first<br>
 7. You can do your exam again, make sure your Mac is fully charged or use a power adapter.<br>
         SEB cannot &quot;damage&quot; your computer, software or documents. But with a force restart, you can loose unsaved changes to documents or in the worst case the file system on a hard drive/SSD needs to be repaired by some third-party software. Always save all documents you work on before starting SEB and ideally quit applications with open documents. As always when working with any computer and any software, regularly make backups of your documents and system.</li>
         <li><span class="quote">What is SEB for macOS changing in the system?</span><br />
