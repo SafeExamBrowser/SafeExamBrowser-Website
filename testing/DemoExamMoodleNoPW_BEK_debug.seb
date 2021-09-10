@@ -20,6 +20,8 @@
 	<false/>
 	<key>allowBrowsingBackForward</key>
 	<false/>
+	<key>allowDeveloperConsole</key>
+	<false/>
 	<key>allowDictation</key>
 	<false/>
 	<key>allowDictionaryLookup</key>
@@ -27,15 +29,25 @@
 	<key>allowDisplayMirroring</key>
 	<true/>
 	<key>allowDownUploads</key>
-	<false/>
+	<true/>
 	<key>allowFlashFullscreen</key>
 	<false/>
+	<key>allowMacOSVersionNumberCheckFull</key>
+	<false/>
+	<key>allowMacOSVersionNumberMajor</key>
+	<integer>10</integer>
+	<key>allowMacOSVersionNumberMinor</key>
+	<integer>11</integer>
+	<key>allowMacOSVersionNumberPatch</key>
+	<integer>0</integer>
 	<key>allowPDFPlugIn</key>
 	<false/>
 	<key>allowPreferencesWindow</key>
 	<true/>
 	<key>allowQuit</key>
 	<true/>
+	<key>allowScreenCapture</key>
+	<false/>
 	<key>allowScreenSharing</key>
 	<false/>
 	<key>allowSiri</key>
@@ -56,10 +68,16 @@
 	<true/>
 	<key>allowWLAN</key>
 	<false/>
+	<key>allowWindowCapture</key>
+	<false/>
 	<key>allowWlan</key>
 	<false/>
 	<key>allowedDisplayBuiltin</key>
 	<false/>
+	<key>allowedDisplayBuiltinEnforce</key>
+	<true/>
+	<key>allowedDisplayBuiltinExceptDesktop</key>
+	<true/>
 	<key>allowedDisplaysMaxNumber</key>
 	<integer>3</integer>
 	<key>allowiOSBetaVersionNumber</key>
@@ -78,12 +96,22 @@
 	<false/>
 	<key>audioVolumeLevel</key>
 	<integer>25</integer>
+	<key>autoQuitApplications</key>
+	<true/>
 	<key>blacklistURLFilter</key>
 	<string></string>
 	<key>blockPopUpWindows</key>
 	<false/>
+	<key>blockScreenShotsLegacy</key>
+	<false/>
 	<key>browserExamKey</key>
 	<string></string>
+	<key>browserMediaAutoplay</key>
+	<true/>
+	<key>browserMediaAutoplayAudio</key>
+	<true/>
+	<key>browserMediaAutoplayVideo</key>
+	<true/>
 	<key>browserMessagingPingTime</key>
 	<integer>120000</integer>
 	<key>browserMessagingSocket</key>
@@ -120,8 +148,14 @@
 	<integer>0</integer>
 	<key>browserWindowTitleSuffix</key>
 	<string></string>
+	<key>browserWindowWebView</key>
+	<integer>2</integer>
 	<key>chooseFileToUploadPolicy</key>
 	<integer>0</integer>
+	<key>configFileCreateIdentity</key>
+	<false/>
+	<key>configFileEncryptUsingIdentity</key>
+	<false/>
 	<key>configKeySalt</key>
 	<data>
 	</data>
@@ -165,6 +199,8 @@
 	<true/>
 	<key>enableBrowserWindowToolbar</key>
 	<false/>
+	<key>enableChromeNotifications</key>
+	<false/>
 	<key>enableCtrlEsc</key>
 	<false/>
 	<key>enableDrawingEditor</key>
@@ -201,14 +237,20 @@
 	<true/>
 	<key>enableLogging</key>
 	<true/>
+	<key>enableMacOSAAC</key>
+	<false/>
 	<key>enablePlugIns</key>
 	<true/>
 	<key>enablePrintScreen</key>
 	<false/>
 	<key>enablePrivateClipboard</key>
 	<true/>
+	<key>enablePrivateClipboardMacEnforce</key>
+	<true/>
 	<key>enableRightMouse</key>
 	<false/>
+	<key>enableScrollLock</key>
+	<true/>
 	<key>enableSebBrowser</key>
 	<true/>
 	<key>enableStartMenu</key>
@@ -219,6 +261,8 @@
 	<false/>
 	<key>enableURLFilter</key>
 	<false/>
+	<key>enableWindowsUpdate</key>
+	<false/>
 	<key>enableZoomPage</key>
 	<true/>
 	<key>enableZoomText</key>
@@ -227,9 +271,18 @@
 	<array/>
 	<key>examKeySalt</key>
 	<data>
+	ule24rvafRg3PHGBSTeq14eCQ+QhVnEctub4Zya5TSk=
 	</data>
+	<key>examSessionClearCookiesOnEnd</key>
+	<true/>
+	<key>examSessionClearCookiesOnStart</key>
+	<true/>
 	<key>examSessionClearSessionCookies</key>
 	<false/>
+	<key>examSessionReconfigureAllow</key>
+	<false/>
+	<key>examSessionReconfigureConfigURL</key>
+	<string></string>
 	<key>exitKey1</key>
 	<integer>2</integer>
 	<key>exitKey2</key>
@@ -270,6 +323,48 @@
 	<false/>
 	<key>insideSebEnableVmWareClientShade</key>
 	<false/>
+	<key>jitsiMeetAudioMuted</key>
+	<false/>
+	<key>jitsiMeetAudioOnly</key>
+	<false/>
+	<key>jitsiMeetEnable</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagChat</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagCloseCaptions</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagDisplayMeetingName</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagRaiseHand</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagRecording</key>
+	<false/>
+	<key>jitsiMeetFeatureFlagTileView</key>
+	<false/>
+	<key>jitsiMeetReceiveAudio</key>
+	<false/>
+	<key>jitsiMeetReceiveVideo</key>
+	<false/>
+	<key>jitsiMeetRoom</key>
+	<string></string>
+	<key>jitsiMeetSendAudio</key>
+	<true/>
+	<key>jitsiMeetSendVideo</key>
+	<true/>
+	<key>jitsiMeetServerURL</key>
+	<string></string>
+	<key>jitsiMeetSubject</key>
+	<string></string>
+	<key>jitsiMeetToken</key>
+	<string></string>
+	<key>jitsiMeetUserInfoAvatarURL</key>
+	<string></string>
+	<key>jitsiMeetUserInfoDisplayName</key>
+	<string></string>
+	<key>jitsiMeetUserInfoEMail</key>
+	<string></string>
+	<key>jitsiMeetVideoMuted</key>
+	<false/>
 	<key>killExplorerShell</key>
 	<false/>
 	<key>lockOnMessageSocketClose</key>
@@ -280,6 +375,8 @@
 	<string></string>
 	<key>logLevel</key>
 	<integer>3</integer>
+	<key>logSendingRequiresAdminPassword</key>
+	<false/>
 	<key>mainBrowserWindowHeight</key>
 	<string>100%</string>
 	<key>mainBrowserWindowPositioning</key>
@@ -288,11 +385,19 @@
 	<string>100%</string>
 	<key>minMacOSVersion</key>
 	<integer>0</integer>
+	<key>minMacOSVersionNumberMinor</key>
+	<integer>0</integer>
 	<key>mobileAllowGuidedAccess</key>
+	<false/>
+	<key>mobileAllowInlineMediaPlayback</key>
+	<true/>
+	<key>mobileAllowPictureInPictureMediaPlayback</key>
 	<false/>
 	<key>mobileAllowQRCodeConfig</key>
 	<false/>
 	<key>mobileAllowSingleAppMode</key>
+	<false/>
+	<key>mobileCompactAllowInlineMediaPlayback</key>
 	<false/>
 	<key>mobileEnableASAM</key>
 	<true/>
@@ -302,6 +407,8 @@
 	<true/>
 	<key>mobileShowSettings</key>
 	<false/>
+	<key>mobileSleepModeLockScreen</key>
+	<true/>
 	<key>mobileStatusBarAppearance</key>
 	<integer>1</integer>
 	<key>mobileStatusBarAppearanceExtended</key>
@@ -355,7 +462,7 @@
 	<key>openDownloads</key>
 	<false/>
 	<key>originatorVersion</key>
-	<string>SEB_OSX_2.1.3_29E7</string>
+	<string>SEB_iOS_3.0b2_3356</string>
 	<key>oskBehavior</key>
 	<integer>2</integer>
 	<key>outsideSebEnableChangeAPassword</key>
@@ -413,11 +520,747 @@
 	</array>
 	<key>pinEmbeddedCertificates</key>
 	<false/>
+	<key>proctoringAIEnable</key>
+	<false/>
+	<key>proctoringDetectFaceAngleDisplay</key>
+	<true/>
+	<key>proctoringDetectFaceCount</key>
+	<true/>
+	<key>proctoringDetectFaceCountDisplay</key>
+	<true/>
+	<key>proctoringDetectFacePitch</key>
+	<true/>
+	<key>proctoringDetectFaceYaw</key>
+	<true/>
+	<key>proctoringDetectTalking</key>
+	<true/>
+	<key>proctoringDetectTalkingDisplay</key>
+	<true/>
 	<key>prohibitedProcesses</key>
 	<array>
 		<dict>
 			<key>active</key>
 			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>zoom.us</string>
+			<key>identifier</key>
+			<string>us.zoom.xos</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Skype</string>
+			<key>identifier</key>
+			<string>com.skype.skype</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Skype for Business</string>
+			<key>identifier</key>
+			<string>com.microsoft.SkypeForBusiness</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Microsoft Communicator</string>
+			<key>identifier</key>
+			<string>com.microsoft.Communicator</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Microsoft Lync</string>
+			<key>identifier</key>
+			<string>com.microsoft.Lync</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Element (Riot)</string>
+			<key>identifier</key>
+			<string>im.riot.app</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>FaceTime</string>
+			<key>identifier</key>
+			<string>com.apple.FaceTime</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Messages</string>
+			<key>identifier</key>
+			<string>com.apple.iChat</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Telegram</string>
+			<key>identifier</key>
+			<string>ru.keepcoder.Telegram</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>GoToMeeting</string>
+			<key>identifier</key>
+			<string>com.logmein.GoToMeeting</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Join.me</string>
+			<key>identifier</key>
+			<string>com.logmein.join.me</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Slack</string>
+			<key>identifier</key>
+			<string>com.tinyspeck.slackmacgap</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Teams</string>
+			<key>identifier</key>
+			<string>com.microsoft.teams</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>webexmta</string>
+			<key>identifier</key>
+			<string>com.cisco.webex.webexmta</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Adium</string>
+			<key>identifier</key>
+			<string>com.adiumX.adiumX</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>TeamViewer</string>
+			<key>identifier</key>
+			<string>com.TeamViewer.TeamViewer</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>currentUser</key>
+			<true/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>vncserver</string>
+			<key>identifier</key>
+			<string></string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string>vncserver</string>
+			<key>os</key>
+			<integer>1</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+			<key>windowHandlingProcess</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Chicken</string>
+			<key>identifier</key>
+			<string>com.geekspiff.chickenofthevnc</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Chicken</string>
+			<key>identifier</key>
+			<string>net.sourceforge.chicken</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Screenconnect</string>
+			<key>identifier</key>
+			<string>com.elsitech.screenconnect.client</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Camtasia*</string>
+			<key>identifier</key>
+			<string>com.techsmith.camtasia*</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Alfred*</string>
+			<key>identifier</key>
+			<string>com.runningwithcrayons.Alfred*</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string>This stops video conferencing and screen sharing, without having to quit the browser.</string>
+			<key>executable</key>
+			<string>Safari Networking</string>
+			<key>identifier</key>
+			<string>com.apple.WebKit.Networking</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string>This stops video conferencing and screen sharing, without having to quit the browser.</string>
+			<key>executable</key>
+			<string>Chromium Helper</string>
+			<key>identifier</key>
+			<string></string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string>This stops video conferencing and screen sharing, without having to quit the browser.</string>
+			<key>executable</key>
+			<string>Brave Browser Helper</string>
+			<key>identifier</key>
+			<string></string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string>This stops video conferencing and screen sharing, without having to quit the browser.</string>
+			<key>executable</key>
+			<string>Opera Helper</string>
+			<key>identifier</key>
+			<string></string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string>This stops video conferencing and screen sharing, without having to quit the browser.</string>
+			<key>executable</key>
+			<string>Vivaldi Helper</string>
+			<key>identifier</key>
+			<string></string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string>This stops video conferencing and screen sharing, without having to quit the browser.</string>
+			<key>executable</key>
+			<string>Microsoft Edge Helper</string>
+			<key>identifier</key>
+			<string></string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>Discord</string>
+			<key>identifier</key>
+			<string>com.hnc.Discord*</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string>Firefox: This stops video conferencing and screen sharing, without having to quit the browser. Users have to restore their open tabs afterwards though.</string>
+			<key>executable</key>
+			<string>plugin-container</string>
+			<key>identifier</key>
+			<string>org.mozilla.plugincontainer</string>
+			<key>ignoreInAAC</key>
+			<true/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
 			<key>currentUser</key>
 			<true/>
 			<key>description</key>
@@ -626,28 +1469,6 @@
 			<string></string>
 			<key>originalName</key>
 			<string>vncviewer</string>
-			<key>os</key>
-			<integer>1</integer>
-			<key>strongKill</key>
-			<false/>
-			<key>user</key>
-			<string></string>
-			<key>windowHandlingProcess</key>
-			<string></string>
-		</dict>
-		<dict>
-			<key>active</key>
-			<true/>
-			<key>currentUser</key>
-			<true/>
-			<key>description</key>
-			<string></string>
-			<key>executable</key>
-			<string>vncserver</string>
-			<key>identifier</key>
-			<string></string>
-			<key>originalName</key>
-			<string>vncserver</string>
 			<key>os</key>
 			<integer>1</integer>
 			<key>strongKill</key>
@@ -851,6 +1672,10 @@
 	<string>http://www.safeexambrowser.org/quit</string>
 	<key>quitURLConfirm</key>
 	<true/>
+	<key>quitURLRestart</key>
+	<false/>
+	<key>remoteProctoringViewShow</key>
+	<integer>0</integer>
 	<key>removeBrowserProfile</key>
 	<true/>
 	<key>removeLocalStorage</key>
@@ -863,18 +1688,35 @@
 	<string></string>
 	<key>restartExamUseStartURL</key>
 	<true/>
+	<key>screenSharingMacEnforceBlocked</key>
+	<false/>
 	<key>sebConfigPurpose</key>
 	<integer>0</integer>
 	<key>sebMode</key>
 	<integer>0</integer>
+	<key>sebServerConfiguration</key>
+	<dict>
+		<key>apiDiscovery</key>
+		<string></string>
+		<key>clientName</key>
+		<string></string>
+		<key>clientSecret</key>
+		<string></string>
+		<key>institution</key>
+		<string></string>
+	</dict>
 	<key>sebServerFallback</key>
 	<false/>
 	<key>sebServerURL</key>
 	<string></string>
+	<key>sebServiceIgnore</key>
+	<true/>
 	<key>sebServicePolicy</key>
 	<integer>2</integer>
 	<key>sendBrowserExamKey</key>
 	<true/>
+	<key>setVmwareConfiguration</key>
+	<false/>
 	<key>showBackToStartButton</key>
 	<false/>
 	<key>showInputLanguage</key>
@@ -883,12 +1725,18 @@
 	<true/>
 	<key>showNavigationButtons</key>
 	<false/>
+	<key>showProctoringViewButton</key>
+	<true/>
+	<key>showQuitButton</key>
+	<true/>
 	<key>showReloadButton</key>
 	<true/>
 	<key>showReloadWarning</key>
 	<true/>
 	<key>showScanQRCodeButton</key>
 	<false/>
+	<key>showScrollLockButton</key>
+	<true/>
 	<key>showSettingsInApp</key>
 	<false/>
 	<key>showTaskBar</key>
@@ -898,13 +1746,15 @@
 	<key>startResource</key>
 	<string></string>
 	<key>startURL</key>
-	<string>https://demo.safeexambrowser.org/moodle/mod/quiz/view.php?id=7</string>
+	<string>https://safeexambrowser.moodle.ch/lms</string>
 	<key>startURLAllowDeepLink</key>
 	<true/>
 	<key>startURLAppendQueryParameter</key>
 	<false/>
 	<key>taskBarHeight</key>
 	<integer>40</integer>
+	<key>terminateProcesses</key>
+	<false/>
 	<key>touchOptimized</key>
 	<false/>
 	<key>urlFilterRegex</key>
@@ -914,7 +1764,7 @@
 	<key>useAsymmetricOnlyEncryption</key>
 	<false/>
 	<key>whitelistURLFilter</key>
-	<string>^https:\/\/((demo\.safeexambrowser\.org)|(.*?\.demo\.safeexambrowser\.org))\/moodle\/mod\/quiz\/view\.php\?id=7$</string>
+	<string></string>
 	<key>zoomMode</key>
 	<integer>0</integer>
 </dict>
