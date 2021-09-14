@@ -462,7 +462,7 @@
 	<key>openDownloads</key>
 	<false/>
 	<key>originatorVersion</key>
-	<string>SEB_iOS_3.0b2_3356</string>
+	<string>SEB_iOS_3.0b2_3359</string>
 	<key>oskBehavior</key>
 	<integer>2</integer>
 	<key>outsideSebEnableChangeAPassword</key>
@@ -1068,7 +1068,7 @@
 		</dict>
 		<dict>
 			<key>active</key>
-			<true/>
+			<false/>
 			<key>allowedExecutables</key>
 			<string></string>
 			<key>currentUser</key>
