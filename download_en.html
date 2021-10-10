@@ -346,60 +346,29 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_2.3.2/SafeExamBrowser-2.3.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.0/SafeExamBrowser-3.0.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.3.2 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.0 for macOS</span>
           </a> 
         </p>
         
-        <p><strong>Current version of Safe Exam Browser for macOS 11, 10.15, 10.14, 10.13, 10.12, 10.11 (<a href="#RemarkOSX10-7">limited support*</a> for 10.10, 10.9, 10.8 and 10.7)</strong><br />
-        <span class="codetext">Build 3140. SHA1: b5fa2826411aa8e8448b26ec8aa28d2d5c50aad4</span></p>
+        <p><strong>Current version of Safe Exam Browser for macOS 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
+        <span class="codetext">Build 3140. SHA1: 03a761833c4dbb808c0fb7fc3d8324b591f8435b</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/2.3.2/SafeExamBrowser-2.3.2.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.0/SafeExamBrowser-3.0.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
-          <p>SEB 2.3.2 is a minor update for 2.3.1 with one bug fix:</p>
+          <p>SEB 3.0 for macOS is a major update, supporting the modern WebKit browser engine and access to camera/microphone via WebRTC.</p>
           <ul>
-            <li>When running on macOS 11 Big Sur on Intel CPU based Macs (tested on macOS 11.2.3), system processes displaying UI in the foreground were not recognized as system applications and terminated by SEB or locked SEB (displaying a red lock screen) if SEB couldn't terminate them. Now system processes should be identified correctly both on Intel and Apple Silicon based Macs.</li>
-            <li>SEB 2.3.1: Changed default setting for AAC to disabled, using a new settings key <em>enableMacOSAAC</em>.</li>
-          </ul>
-          <p>SEB 2.3 added new capabilities, improved the user interface for students and exam administrators and fixed several issues:</p>
-          <ul>
-            <li>
-              <p>Support for Automatic Assessment Configuration (AAC) macOS Assessment Mode. AAC can be used  optionally if running on macOS 10.15.4 or newer. Assessment Mode blocks various macOS features which shouldn't be accessible during exams. Also no other applications and processes running in the background can access the network while Assessment Mode is active.</p>
-            </li>
-            <li>
-              <p>By default, the old SEB kiosk mode is still used also on latest macOS versions (see Preferences / Security / "Use Assessment Mode (AAC) if available", settings key <em>enableMacOSAAC</em>), as AAC doesn't support optionally enabling features like like screen capture/sharing, Siri and Dictation. Assessment Mode also cannot be used if you want to run a video conferencing solution in the background during an exam for proctoring.</p>
-            </li>
-            <li>
-              <p>New options to enforce using the internal (built-in) display of a MacBook or iMac but optionally still allowing to use the external display on a Mac without built-in display (Mac Mini, Mac Pro).</p>
-            </li>
-            <li>
-              <p>Fixed an issue when calculating the Config Key for configuration files containing prohibited processes entries for both macOS and Windows.</p>
-            </li>
-            <li>
-              <p>New battery indicator in the SEB Dock, automatically displayed on devices with battery when the macOS menu bar with its battery indicator is disabled. This specifically applies when using Assessment Mode, as then the menu bar is always hidden.</p>
-            </li>
-            <li>
-              <p>Full compatibility with macOS 11 Big Sur.</p>
-            </li>
-            <li>
-              <p>Native support for Apple Silicon (universal binary).</p>
-            </li>
-            <li>
-              <p>Preferences window can be opened by holding the option/alt key when starting SEB (also when dropping a SEB configuration file onto the SEB icon).</p>
-            </li>
-            <li>
-              <p>Fixed drag-and-drop of configuration files onto the Preferences window. Note that files in iCloud drive need to be downloaded first (click the cloud icon in Finder's list view).</p>
-            </li>
-            <li>
-              <p>Added SEB 3.x for Windows settings to the Preferences window.</p>
-            </li>
-            <li>
-              <p>Improved starting SEB by opening settings, fixed some related issues.</p>
-            </li>
-            <li>
-              <p>Improved workaround for SEB freezing when a webpage tries to download a font.</p>
-            </li>
+            <li>Support for the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications. </li>
+            <li>Access to camera/microphone (getUserMedia_ Web API) via WebRTC on macOS 11.1 Big Sur and newer. You can use web-based video conferencing and remote proctoring solutions, as long as the requirements explained below are met, so that SEB can use the modern WebView. Note: Apple currently doesn't support _getDisplayMedia_ in WKWebView for screen sharing.</li>
+            <li>Due to refactored code using newer APIs, SEB 3.0 requires macOS 10.11 or later. We recommend to only use macOS versions which still receive security updates from Apple (the three most recent, currently macOS 10.14, 10.15 and 11).</li>
+            <li>When using the modern WebKit browser engine (WKWebView), SEB currently doesn't support _URL content filters_ (only URL filters for links and page loading) and _sending the Config Key and Browser Exam Key in HTTP headers_ (the latter feature will not be possible with WKWebView at all, so you will need to transition to the SEB JavaScript API in your web applications, see the <a href="https://safeexambrowser.org/developer/seb-config-key.html">developer documentation</a>). If one of the settings _sendBrowserExamKey=true_ or _URLFilterEnableContentFilter=true_ is enabled, the classic WebView is used depending on the new setting _Preferences/ Browser/&quot;Select Browser Engine Policy&quot;_ (key _browserWindowWebView_), _&quot;Prefer Modern in New Tab+Different Host&quot;_ (value 2), ensures that you still can use testing systems/LMS like Moodle which use the Browser Exam/Config Key test for SEB connecting to the exam (as they open in the classic WebView), but webpages opened in new tabs, which have another host than the exam system, open in WKWebView.</li>
+            <li>Support for the new <a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.0/SafeExamBrowser-3.0.dmg">SEB JavaScript API</a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements).</li>
+            <li>Support for restart session (Preferences/Exam/Link to <a href="https://safeexambrowser.org/developer/seb-config-key.html">quit SEB after exam/Restart instead of quitting</a>) and quit SEB/session features, which are mostly interesting for managed Macs and kiosk environments:  If client settings are secure (have a quit password set), SEB was not started with a seb(s) link or .seb file and an exam session is quit, SEB is not quit (terminated), but only the exam session (SEB is restarted with client settings).</li>
+            <li>Fixes security issue with &quot;Revert to Client Settings&quot; and &quot;Configure Client&quot; in Preferences window.</li>
+            <li>Private Clipboard is also supported when using the modern WebView (WKWebView) and working with commands in menu bar / Edit. </li>
+            <li>Added setting in Preferences / Security (allowMacOSVersionNumberCheckFull) for full control about minimal allowed macOS version (major/minor/patch version numbers, keys allowMacOSVersionNumberMajor/ allowMacOSVersionNumberMinor/ allowMacOSVersionNumberPatch).</li>
+            <li>Using AAC kiosk mode only on macOS 15.4+ and 11.4+ (except 11.0 - 11.3), as there was an issue with DNS lookup. This caused pages with yet unknown domains to not load.</li>
           </ul>
         </div>
         <div></div>
