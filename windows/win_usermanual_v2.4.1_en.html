@@ -198,8 +198,9 @@
             </li>
             <li><a href="http://safeexambrowser.org/presentations/HowTo_SEB2.0.pdf" target="_blank">SEB 2.x How To</a>
             </li>
-            <li><a href="win_usermanual_V2.4.1_en.html">SEB 2.4.1 </a></li>
-          </ol>
+            <li><a href="win_usermanual_v2.1.8_en.html">SEB</a><a href="win_usermanual_en.html"> </a><a>3.2</a>
+            </li>
+         </ol>
     
         </div>
       </div>
@@ -288,25 +289,12 @@
 
           <h2 class="page-header sebnavbar-link" id="introduction">
             <a class="anchorjs-link" href="#introduction"></a>
-            Safe Exam Browser 3.2 for Windows
+            Safe Exam Browser 2.4.1 for Windows
           </h2>
     
-          <p>Safe Exam Browser – SEB for Windows opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several commercial and non-commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most  web-based online quiz and e-assessment systems. </p>
-          <p>With Version 3, the Safe Exam Browser underwent a comprehensive refactoring. The SEB was recoded from scratch according to current standards. The basic functionality was retained. Some of the  changes are</p>
-          <ul>
-            <li>&nbsp;New embedded browser engine (Chromium)</li>
-            <li>&nbsp;Dedicated builds for 32-bit and 64-bit operating systems</li>
-            <li>&nbsp;Access to developer tools of browser engine (for web developers)</li>
-            <li>&nbsp;Real-time access to SEB application log (e.g. to test features like the URL filter)</li>
-            <li>&nbsp;Completely automated build system with unit tests.</li>
-            <li>&nbsp;Replaced VC++ 2015 Redistributable with VC++ Redistributable 2015-2019 in setup bundle.</li>
-            <li>&nbsp;SEB "Deeper Integration" features for Moodle 3.9 and later</li>
-            <li> Support for <a href="https://seb-server.readthedocs.io/en/stable/">SEB Server</a>, including support for online-procotring using Jitsi (experimental)</li>
-            
-          </ul>
-
-          <p>Please refer to the release notes for a comprehensive list of all features. The full range of functions of SEB 2.4.x is expected to be available from version 3.3 onwards</p>
-<p><strong>The following manual explains how to configure and use SEB 3.2 for Windows from the perspective of exam administrators.</strong> SEB is a very flexible and modular tool, therefore documentation for examinees on how to use SEB with individual exam setups and the various exam systems it works with should be provided by the institution using SEB or their e-assessment provider.</p>
+          <p><strong>Note: This is the manual for the legacy version of Safe Exam Browser for Windows. Until the manual is updated for SEB 3.x, please check tool tips (hover mouse cursor over new controls) for new options in the Configuration Tool.</strong></p>
+          <p>Safe Exam Browser – SEB for Windows opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several commercial and non-commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most  web-based online quiz and e-assessment systems.          </p>
+          <p><strong>The following manual explains how to configure and use SEB for Windows from the perspective of exam administrators.</strong> SEB is a very flexible and modular tool, therefore documentation for examinees on how to use SEB with individual exam setups and the various exam systems it works with should be provided by the institution using SEB or their e-assessment provider.</p>
 
 
         </div>
@@ -317,22 +305,22 @@
         
           <h3 class="page-header sebnavbar-link" id="features">
             <a class="anchorjs-link" href="#features"></a>
-          Features of SEB </h3>
+            Features
+          </h3>
           
-        <p>SEB disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock (this Computer)</strong>, <strong>Switch User</strong>, <strong>Sign out (Log off</strong>), <strong>Change a password</strong>, <strong>(Start) Task Manager</strong>, <strong>Shut down, Restart </strong>and <strong>Ease of Access</strong>. It disables the <strong>Windows Task Bar</strong> and the <strong>Start Menu</strong> (button in the lower left corner of the screen), the <strong>App/Task/Window Switcher</strong> (invoked by Alt-Tab and Windows-Tab), as well as printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
+        <p>SEB disables the options of the <strong>Windows Security Screen</strong> (invoked by pressing Ctrl+Alt+Del), namely <strong>Lock (this Computer)</strong>, <strong>Switch User</strong>, <strong>Sign out (Log off</strong>), <strong>Change a password</strong>, <strong>(Start) Task Manager</strong>, <strong>Shut down, Restart </strong>and <strong>Ease of Access</strong>. It disables the <strong>Windows Task Bar</strong> and the <strong>Start Menu</strong> (button in the lower left corner of the screen), the <strong>App/Task/Window Switcher</strong> (invoked by Alt-Tab and Windows-Tab),  printing.  It can also be set whether  users can quit SEB and if it is required to enter a quit password to do so.</p>
         
-        <p>Its possible to configure SEB  to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
+        <p>Its possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by the LMS after submitting the exam.</p>
         
-        <p>In the browser window there is no right mouse (or Shift-F10) click popup window available. </p>
+        <p>In the browser window there is no right mouse (or Shift-F10) click popup window available. Besides that, the browser is supporting  Java and Flash content (as long as the required  plugins are installed on the system). </p>
         
-        <p>SEB detects when it was started in a virtual instead of a native environment and refuses to run, if not explicitly allowed to. This virtual machine detection helps avoiding manipulation of the exam environment when SEB is used in unmanaged environments.</p>
+        <p>SEB detects when it was started in a virtual instead of a native environment and refuses to run. This virtual machine detector hinders manipulating SEB further when used in unmanaged environments.</p>
         
-        <p>SEB for Windows is now based on the Chromium Embedded Framework<b><i>&nbsp;CEF </i></b>(in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
+        <p>SEB for Windows is based on the <em><strong>Mozilla Firefox/Gecko</strong></em> engine (in contrast to the  <em><strong>WebKit</strong></em> browser engine used by SEB for macOS, which is also used by Safari and some open source browsers). </p>
         
         <p> SEB for Windows can be used together with additional (third party) applications during an exam. You can download and open files linked in your online exam, edit it in a third party application and then upload the results to your online quiz/LMS again. </p>
-        <p>SEB uses encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. Also see the <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x.</p>
-        <p>SEB allows to manage exam startup and SEB configuration in many ways, so a wide area of scenarios is supported, depending on your specific needs.</p>
-<p><strong><span class="red">Please understand that you also have to configure your exam system correctly to be locked down securely.</span></strong> SEB is generally  locking down exam client computers only, not the exam system or the quiz module of a learning management system. <strong>Check documentation for your exam/learning management system on how to lock it down correctly.</strong></p>
+        <p>From version 2.0 SEB uses encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. Also see the  <a href="../presentations/HowTo_SEB2.0.pdf" target="_blank">how to use SEB 2.0 document</a> explaining the concept behind SEB 2.x.</p>
+        <p><strong><span class="red">Please understand that you also have to configure your exam system correctly to be locked down securely.</span></strong> SEB is generally  locking down exam client computers only, not the exam system or the quiz module of a learning management system. <strong>Check documentation for your exam/learning management system on how to lock it down correctly.</strong></p>
         </div>
         <!-- / Document Section --> 
     
@@ -341,14 +329,14 @@
         
           <h3 class="page-header sebnavbar-link" id="LMS">
             <a class="anchorjs-link" href="#LMS"></a>
-            Using SEB  with Supported LMS
+            Using SEB with Supported LMS
           </h3>
           
           <p>Some learning management systems require plugins to be installed to fully support secure exams taken with SEB, others have built-in support.</p>
 
           <h4 class="seb-section-header sebnavbar-link" id="moodle">
             <a class="anchorjs-link" href="#moodle"></a>
-            Using SEB  with Moodle</strong>
+            Using SEB with Moodle</strong>
           </h4>
           
           <p> SEB support in Moodle has the following objectives:</p>
@@ -357,20 +345,20 @@
             <li>Make sure a quiz can only be taken using Safe Exam Browser, display an error message if trying to open the quiz in another web browser. </li>
             <li>Check if   legitimate SEB settings or optionally if the correct version of SEB are used.</li>
           </ol>
-		
-          <p><strong>Since Moodle 3.9, there is support for Safe Exam Browser configuration directly available in Moodle's quiz settings.</strong> The new &quot;deeper integration&quot; is <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">also available as plugin for Moodle 3.7 and 3.8</a>. If possible, use this new SEB support in Moodle. Refer to the <a href="https://docs.moodle.org/39/en/Safe_Exam_Browser" target="_blank">official Moodle documentation</a> for details. Please note that our SEB support cannot answer specific Moodle  questions, use the <a href="https://docs.moodle.org/39/en/Main_page" target="_blank">documentation on moodle.org</a> and the <a href="https://moodle.org/course/" target="_blank">Moodle community forums</a>.</p>
+          <p><strong>Since Moodle 3.9, there is very comfortable support for Safe Exam Browser directly available in Moodle's quiz settings.</strong> The new &quot;deeper integration&quot; is <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">also available as plugin for Moodle 3.7 and 3.8</a>. If possible, use this new SEB support in Moodle. Refer to the <a href="https://docs.moodle.org/39/en/Safe_Exam_Browser" target="_blank">official Moodle documentation</a> for details. Please note that our SEB support cannot answer specific Moodle  questions, use the <a href="https://docs.moodle.org/39/en/Main_page" target="_blank">documentation on moodle.org</a> and the <a href="https://moodle.org/course/" target="_blank">Moodle community forums</a>.</p>
           <p>See below the two older options how to activate SEB support in Moodle, which are  no longer available  (or don't make sense) in current Moodle versions:</p>
           <ol>
             <li>Enable the &quot;classic&quot;  SEB support in Moodle: <a href="https://docs.moodle.org/28/en/Safe_exam_browser" target="_blank">How to activate the SEB secure browser mode in a Moodle quiz</a>. Then configure the quiz at <span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Browser security / Require the use of Safe Exam Browser</span>. This option uses only a basic, not very secure check for the used browser. This may be safe enough if students can only access the exam from centrally managed university computers inside a computer lab/exam room. For other scenarios like BYOD you should use the second option.</li>
-            <li>Use the <span class="quote"> Browser Exam Key</span> authentication in Moodle for the connecting SEB version and its settings by installing the <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">quiz access rule plugin</a> in Moodle. In addition you will have to copy the Browser Exam Key hash code string into the quiz settings (<span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Allowed browser keys</span>). This key is generated by SEB when you save the settings you intend to use for the exam. As this key includes a hash (checksum) of both the saved exam settings and the code signature of the used SEB version, you may have to generate and copy several Browser Exam Keys into the Moodle quiz settings, for example one for the Windows version of SEB and one for the Mac version. As an alternative, you may use the <strong>Config Key </strong>instead of the Browser Exam key. Basically, the Config Key works like the Brwoser Exam Key, but without including the SEB version string in the hash key. This way you would at best only have to copy one key to your Moodle settings, even if you are using different versions of SEB (e.g. Mac/Windows).</li>
+            <li>Use the <span class="quote"> Browser Exam Key</span> authentication in Moodle for the connecting SEB version and its settings by installing the <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">quiz access rule plugin</a> in Moodle. In addition you will have to copy the Browser Exam Key hash code string into the quiz settings (<span class="quote">Administration / Quiz administration / Edit settings / Extra restrictions on attempts / Allowed browser keys</span>). This key is generated by SEB when you save the settings you intend to use for the exam. As this key includes a hash (checksum) of both the saved exam settings and the code signature of the used SEB version, you may have to generate and copy several Browser Exam Keys into the Moodle quiz settings, for example one for the Windows version of SEB and one for the Mac version.</li>
+            <li>As an alternative, you may use the <strong>Config Key </strong>instead of the Browser Exam key. Basically, the Config Key works like the Brwoser Exam Key, but without including the SEB version string in the hash key. This way you would at best only have to copy one key to your Moodle settings, even if you are using different versions of SEB (e.g. Mac/Windows).</li>
           </ol>
           
-          <p>Sometimes hiding of the course navigation, link to the user's Moodle profile, logout etc. doesn't work as expected because <span class="red">some custom Moodle themes don't support the secure browser mode of Moodle correctly, they display links with which students can get out of the quiz during an exam.</span> If this happens only with your customized theme and not the standard Moodle theme, then your theme is not implemented correctly. In that case you should fix the problem in your custom Moodle theme.  You may also create URL filter rules in the SEB configuration to only allow access to the exam and no other parts of Moodle, but this is not trivial and we cannot provide you with any support on that. </p>
+          <p>Sometimes hiding course navigation, link to the user's Moodle profile, logout etc. doesn't work as expected because <span class="red">some custom Moodle themes don't support the secure browser mode of Moodle correctly, they display links with which students can get out of the quiz during an exam.</span> If this happens only with your customized theme and not the standard Moodle theme, then your theme is not implemented correctly. In that case you should fix the problem in your custom Moodle theme.  You may also create URL filter rules which only allow to access the exam and no other parts of Moodle, but this is not trivial and we cannot provide you with any support on that. </p>
           <p>You may find additional information and help in the discussion boards for <a href="https://sourceforge.net/p/seb/discussion/" target="_blank">SEB</a> and <a href="https://moodle.org/mod/forum/view.php?id=737" target="_blank">Moodle</a>.</p>
           
           <h4 class="seb-section-header sebnavbar-link" id="ILIAS">
             <a class="anchorjs-link" href="#ILIAS"></a>
-            Using SEB  with ILIAS
+            Using SEB with ILIAS
           </h4>
           
           <p>You can find information about how to install the ILIAS plugin for SEB support <a href="https://github.com/hrz-unimr/Ilias.SEBPlugin" target="_blank">here</a>. </p>
@@ -379,7 +367,7 @@
           
           <h4 class="seb-section-header sebnavbar-link" id="OpenOLAT">
             <a class="anchorjs-link" href="#OpenOLAT"></a>
-            Using SEB  with OpenOLAT
+            Using SEB with OpenOLAT
           </h4>
           
           <p>An assessment mode has been added to the OpenOLAT standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOLAT courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOLAT course elements can be configured for such an exam setting. </p>
@@ -404,15 +392,15 @@
             Download/Installation
           </h3>
           
-          <p>You can download the SEB 3.2 for Windows Installation setup program (also containing the SEB Windows configuration tool) <a href="../download_en.html#Windows">here</a>. Just start <span class="path">SEB_xxx_SetupBundle.exe</span> and follow the steps in the installation program </p>
+          <p>You can download the SEB for Windows Installation setup program (also containing the SEB Windows configuration tool) <a href="../download_en.html#Windows">here</a>. Just start <span class="path">SafeExamBrowserInstaller.exe</span> and follow the steps in the installation program. </p>
           
           <p>SEB for Windows containing the main application executable <span class="path">SafeExamBrowser.exe</span> and the configuration tool <span class="path">SebWindowsConfig.exe</span> are placed in the SEB application folder named <span class="path">SafeExamBrowser</span> which will be installed into the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). Also a <span class="path">Safe Exam Browser</span> program  entry will be placed into your Start Menu.</p>
           <p>If you require an MSI package for installing SEB using a deployment system, then you can extract it from the <span class="path">SafeExamBrowserInstaller.exe</span> bundle using the following command (in cmd.exe):</p>
           <pre>SafeExamBrowserInstaller.exe /s /x /b"C:\FolderInWhichMSIWillBeExtracted" /v"/qn"</pre>
           <p>(replace  <em>C:\FolderInWhichMSIWillBeExtracted</em> with the folder path you want the MSI file to be extracted to)</p>
-          <p>We are not providing the SEB installer as an MSI file, because the current versions require the .NET 4.5 framework to be installed on the Windows machine. The installer bundle can automatically download and install this .NET version if it isn't yet installed,  an MSI package cannot. We also can't provide any support regarding packaging of the SEB application together with the client config file (that's a task for Windows deployment specialists).</p>
+          <p>We are not proving the SEB installer as an MSI file, because the current versions require the .NET 4.5 framework to be installed on the Windows machine. The installer bundle can automatically download and install this .NET version if it isn't yet installed,  an MSI package cannot. We also can't provide any support regarding packaging of the SEB application together with the client config file (that's a task for Windows deployment specialists).</p>
           <p><strong>Updating:</strong> In most cases you can just run the installer of the new SEB version and it will automatically update from the previous to the new version. The client configuration (see below) will not be removed or replaced, as it is compatible with any new SEB version. If you were using a significantly older SEB version (2.1.x, especially 2.1 or older) or the older SEB installation got corrupted, you should uninstall the old SEB version using the <em>Windows Control Panel</em>(or likewise <em>Settiings - Apps &amp; features</em>). As the <em>Windows Installer</em> usually leaves some files behind, you should afterwards delete the SEB application directory in <span class="path">C:\Program Files (x86)</span>\ manually <strong>(IMPORTANT: Always FIRST UNINSTALL, then delete)</strong>.  Then install the new SEB version.</p>
-          <p><strong>Uninstalling:</strong> Use the <em>Windows Control Panel</em> (or likewise Settiings - Apps &amp; features) to uninstall SEB. As the <em>Windows Installer</em> usually leaves some files behind, you can delete the SEB application directory in <span class="path">C:\Program Files (x86)</span>\ manually <strong>(IMPORTANT: Always FIRST UNINSTALL, then delete)</strong>. If uninstalling using the <em>Windows Control Panel</em> doesn't work, then you can try to use the installer of the exact same SEB version you had installed (<a href="../support_en.html">contact us</a> if you don't have that installer version anymore and it's no longer available for download). Just start it and select the remove/uninstall option. If this still doesn't work, then your Windows system got corrupted. SEB is using the standard <em>Windows Installer</em> procedures for installing and uninstalling and those can fail in some cases, which is not connected to SEB itself. You can also remove the directory  <span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span>  (exact path using Windows path variables:
+          <p><strong>&nbsp;Uninstalling:</strong> Use the <em>Windows Control Panel</em> (or likewise Settiings - Apps &amp; features) to uninstall SEB. As the <em>Windows Installer</em> usually leaves some files behind, you can delete the SEB application directory in <span class="path">C:\Program Files (x86)</span>\ manually <strong>(IMPORTANT: Always FIRST UNINSTALL, then delete)</strong>. If uninstalling using the <em>Windows Control Panel</em> doesn't work, then you can try to use the installer of the exact same SEB version you had installed (<a href="../support_en.html">contact us</a> if you don't have that installer version anymore and it's no longer available for download). Just start it and select the remove/uninstall option. If this still doesn't work, then your Windows system got corrupted. SEB is using the standard <em>Windows Installer</em> procedures for installing and uninstalling and those can fail in some cases, which is not connected to SEB itself. You can also remove the directory  <span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\</span>  (exact path using Windows path variables:
           <span class="path">%APPDATA%\SafeExamBrowser\)</span>, where the SebClientConfig.seb client config file, log and browser session data files are saved.
         </div>
         <!-- / Document Section --> 
@@ -424,7 +412,7 @@
             <a class="anchorjs-link" href="#starting"></a>
           Starting and Quitting SEB </h3>
           
-          <p>When you start SEB, all currently running applications, the Windows Task Bar and the desktop are hidden. On the main screen SEB opens its web browser window filling the whole screen (optionally the browser window can be resized and moved or switched to fullscreen). SEB opens the webpage at the preset Start URL, which might take some seconds. As default, as long as you don't set another <span class="quote">Start URL</span> (see <a href="#configuration">Configuration</a>), SEB for Windows opens <a href="https://safeexambrowser.org/start/" target="_blank">this page</a> with initial instructions. </p>
+          <p>When you start SEB, all currently running applications, the Windows Task Bar and the desktop are hidden. On the main screen SEB opens its web browser window filling the whole screen (optionally the window can be resized and moved or switched to fullscreen). SEB opens the webpage at the preset Start URL, which might take some seconds. As default, as long as you don't set another <span class="quote">Start URL</span> (see <a href="#configuration">Configuration</a>), SEB for Windows opens <a href="https://safeexambrowser.org/start/" target="_blank">this page</a> with initial instructions. </p>
           <p>SEB doesn't have any navigation buttons, but the optional reload button in the SEB taskbar, the browser toolbar (if activated) or the key  <strong>F5</strong>   can be used to reload the current page.</p>
           
           <p>To quit SEB (while it's using the default settings), just press the <span class="quote">Quit</span> button in the SEB taskbar, keys <span class="quote">Ctrl-Q</span> or the red close button in the browser window. Quitting SEB can optionally be switched off or password protected, also the function key exit sequence which was used in former SEB versions is still supported optionally. When SEB quits, the applications which were running before starting it will get unhidden again (as long as settings didn't force to quit those applications).</p>
@@ -437,20 +425,21 @@
 
           <h3 class="page-header sebnavbar-link" id="configuration">
             <a class="anchorjs-link" href="#configuration"></a>
-          Configuration of SEB </h3>
+          Configuration </h3>
         
-          <p>SEB 3.2 for Windows has a comfortable configuration tool which should be used for configuring SEB. You can find <span class="path">SEBConfigTool.exe </span>in the Windows start menu or in the SEB application folder <span class="path">SafeExamBrowser</span>, which is placed in the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). </p>
+          <p>SEB for Windows has a comfortable configuration tool which should be used for configuring SEB. You can find <span class="path">SEBConfigTool.exe </span>in the SEB application folder <span class="path">SafeExamBrowser</span> which is placed in the standard program folder of your computer (usually <span class="path">C:\Program Files</span> or <span class="path">C:\Program Files (x86)</span>, depending on whether you have a 32-bit or 64-bit machine). </p>
           
           <p>In the SEB configuration<em><strong></strong></em> tool window, settings are grouped in several panes. There you can set  the parameters described below.</p>
           
           <ul id="seblist">
-            <li>In the <span class="quote">General</span> pane you'll find  basic settings like the URL which SEB opens at startup and the passwords to  open a config file for editing and to quit/restart SEB. When first time using SEB, you might only have to change these general settings, as the default values for all other settings should reflect the more &quot;secure&quot; option.</li>
+            <li>In the <span class="quote">General</span> pane you'll find  basic settings like the URL which SEB opens and the passwords to  open a config file for editing and to quit/restart SEB. When first time using SEB, you might only have to change these general settings, as the default values for all other settings should reflect the more &quot;secure&quot; option.</li>
             <li><span class="quote">Config File</span> contains details about encryption of the SEB <span class="quote">.seb</span> configuration files plus all functions to deal with opening, saving, reverting, duplicating and applying settings. These commands can also be accessed in the menu bar above the tab bar. </li>
             <li><span class="quote">User Interface</span> contains general SEB user interface settings; </li>
             <li><span class="quote">Browser</span> all detail settings for the built-in SEB web browser. </li>
             <li><span class="quote">Down/Uploads</span> refers to   file downloads and uploads;</li>
             <li> <span class="quote">Exam</span> handles the connection to  exam systems and exam specific settings. </li>
             <li><span class="quote">Application</span> is for handling  permitted and prohibited processes; </li>
+            <li><span class="quote">Additional Resources</span> is for adding webpages, websites or documents which can be opened during the exam; </li>
             <li><span class="quote">Network</span> about the URL filter, certificates and proxies; </li>
             <li><span class="quote">Security</span> contains detail settings about how SEB locks down security relevant system features. </li>
             <li><span class="quote">Registry</span> allows to control  options in the Windows Security Screen invoked by Ctrl-Alt-Del and an option when using VMware Horizon View while SEB is running. </li>
@@ -462,25 +451,27 @@
             Settings in the General Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_01_General.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_01_General.png" />
  
            <ul id="seblist">
             <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
             <li><span class="quote">Administrator password</span>: Password required to open a config file for editing in the config tool. You should set an administrator password if you don't want that someone could  open and examine a <span class="quote">.seb</span> configuration file, after knowing the encryption credentials (for example after an exam). <br />
-              <strong>If you're using macOS or iOS SEB clients  for exams as well, you definitely should set an administrator password</strong>, as otherwise students could open the preferences window (which is build into SEB for macOS/iOS)  and change settings during the exam.</li>
+              <strong>If you're using macOS SEB clients  for exams as well, you definitely should set an administrator password</strong>, as otherwise students could open the preferences window (which is build into SEB for macOS)  and change settings during the exam.</li>
             <li><span class="quote">Confirm administrator password</span>: Retype the administrator password. As long as it's not matching the administrator password typed in the field above, <span class="quote">&quot;Please enter correct confirm password</span>&quot; is displayed below and you cannot save the configuration file.</li>
             <li><span class="quote">Allow user to quit SEB</span>: If selected, Users can quit SEB with the <strong>Quit button</strong> in the SEB taskbar, by pressing the keys <strong>Ctrl-Q</strong> or by clicking the <strong>main browser window</strong> (the one that displays the exam) <strong>close button</strong>. Otherwise you can shutdown or reboot the computer. In a computer room in a university or school you could for example use some tool to shutdown or reboot all computers after a exam and therefore not allow students to quit SEB themselves at all. <strong>This setting has no influence on a Quit Link</strong> (if one is set, see <a href="win_usermanual_en.html#ExamPane">Exam Pane</a>).</li>
+            <li><span class="quote">Ignore exit keys</span>: If selected, SEB ignores the exit keys and can only be quit manually by entering the quit password after clicking the Quit button in the SEB taskbar, by pressing the keys Ctrl-Q or by clicking the main browser window close button.</li>
             <li><span class="quote">Quit/unlock password</span>: This password is prompted when users try to quit SEB with the Quit button, <span class="quote">Ctrl-Q</span> or the red close button in the main browser window (if not in full screen mode).   If no quit password is set, then SEB just prompts &quot;Are you sure you want to quit SEB?&quot;. The password is not prompted when using a <strong>Quit Link</strong>.<br />
             This password is also prompted if the <span class="quote">restart exam button</span> is used (if activated and configured to be password protected, see <a href="win_usermanual_en.html#ExamPane">Exam Pane</a>). </li>
             <li><span class="quote">Confirm quit/unlock password</span>: Retype the quit password. As long as it's not matching the quit/unlock password typed in the field above, <span class="quote">&quot;Please enter correct confirm password</span>&quot; is displayed below and you cannot save settings.</li>
-           </ul>
+            <li><span class="quote">Exit sequence</span>: Function keys which have to be pressed and held down together   to exit SEB. This works only if <span class="quote">ignore exit keys</span> is not selected. Some combinations don't work as Windows doesn't allow to use some keys/combinations, this also differs depending on hardware and key map, so you should test the exit key combination on all the clients you use. <span class="red">We recommend to no longer use exit keys, this feature will probably be removed in future SEB versions.</span> <strong>Note: SEB for macOS doesn't support exit keys, so in mixed environments you should anyways prefer using a quit password for manually quitting  SEB.</strong></li>
+          </ul>
           
           <h4 class="seb-section-header sebnavbar-link" id="ConfigFilePane">
             <a class="anchorjs-link" href="#ConfigFilePane"></a>
             Settings in the Config File Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_02_ConfigFile.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_02_ConfigFile.png" />
           
           <ul id="seblist">
             <li><span class="quote">Use SEB settings file for ... starting an exam</span>: <span class="red">A configuration file saved with this option will start the exam</span> with the according settings, but won't change  local SEB settings.</li>
@@ -503,8 +494,6 @@
 
                   (writable with user rights, second priority)
               </p>
-            </li>
-            <li>
               <p><strong>Please note:</strong> On a managed exam computer you probably should copy the default client settings file <span class="path">SebClientSettings.seb</span>  to the <strong class="path">\ProgramData\SafeExamBrowser\</strong> directory. If such a file exists in this location, this will be read by SEB with first priority and another file at the <span class="quote">Local Application Data</span> folder of the current user will be ignored. As the PROGRAMDATA directory usually is writable only with administrator rights, regular users cannot change the exam computer's default settings, which is the desired case on a managed computer. <br>
               <strong>You should only use a client settings file<span class="path">SebClientSettings.seb</span> in the <span class="path">\ProgramData\SafeExamBrowser\</span> directory on deployed exam client machines, not on your admin workstation, as SEB will ignore all local client settings which you configure in the Config Tool </strong>(&quot;Use Current Settings to Configure Client&quot;, &quot;Revert Settings to Local Client Settings&quot; and  &quot;Apply and Restart SEB&quot; won't work as expected,  see also below)<strong>!</strong></p>
             </li>
@@ -513,9 +502,6 @@
             <li><span class="quote">Use old asymmetric-only encryption (for SEB &lt; 2.2)</span>: Starting in SEB 2.2,  a new encryption method for identity-encrypted config files can be used, which can decrypt large settings much faster. This is especially important if you embed large additional resources into config files. But if you need to save config files compatible to earlier SEB versions  (before 2.2, also current macOS versions of SEB) then you should use this setting.</li>
             <li><span class="quote">Settings password</span>: Password to decrypt the settings file, if one is set then it will be prompted when SEB reads the settings. <span class="red"><strong>Local client settings</strong></span><strong> (saved on every exam client, at one of the two possible standard paths, see above) <span class="red">should be saved with the option &quot;Use SEB settings file for ... configuring a client&quot;, so you (and examinees when starting SEB) don't have to enter any settings password</span>.</strong> Then a standard password is used for encrypting these settings. This is not very safe, but you should anyways not store any really secret information (like critical admin and quit passwords or a secret exam URL) in the local client settings, for that you should use  separate settings files saved with the option <span class="quote">&quot;Use SEB settings file for ... starting an exam</span>&quot;.</li>
             <li><span class="quote">Confirm settings password</span>: Retype the settings password.</li>
-          </ul>
-	<p><span class="quote">Config File Editing</span></p>
-          <ul>
             <li><span class="quote">Open Settings... </span>Lets you choose a <span class="quote">.seb</span> settings file which will be loaded into memory, so you can edit the settings.</li>
             <li><span class="quote">Save Settings (As...)</span> Saves the SEB settings using the same file name or lets you choose a file name and location for the SEB settings file. You have to either enter a password or choose a cryptographic identity with which the SEB settings file will be encrypted. Use the saved encrypted settings file  to either start the exam in SEB or to  change the local settings of a SEB client, depending on the <span class="quote">Use SEB settings file for ...</span> option. </li>
           </ul>
@@ -529,7 +515,8 @@
           <ul id="seblist">
             <li><span class="quote">Edit Duplicate</span>: Creates a duplicate of the current settings and continues editing those.</li>
             <li><span class="quote">Configure Client</span>: Configures the client using settings from the <span class="quote">.seb</span> file which is currently being edited  (overwriting current local client settings) and SEB switches to editing local client settings. </li>
-            
+            <li><span class="quote">Apply and Restart SEB</span>: Saves current settings, closes the SEB Config Tool and starts SEB. If local client settings were edited, then SEB is started and loads those (same as when double clicking the SEB icon). If some  config file was edited, then SEB is started as when double clicking that <span class="quote">.seb</span> config file. <br>
+            <strong>Note:</strong> If you're editing  client settings (at <span class="path">%APPDATA%\SafeExamBrowser\SebClientSettings.seb</span>) and there is also a client settings file<span class="path">SebClientSettings.seb</span> in the <strong class="path">\ProgramData\SafeExamBrowser\</strong> directory, then <span class="quote">Apply and Restart SEB</span> does not apply the currently edited file, as this function simulates what will happen when you start SEB either by clicking its icon (starting the application directly, then client settings are used) or by opening another SEB config file (then SEB is started opening those settings inside that config file). <strong>You should only use a client settings file<span class="path">SebClientSettings.seb</span> in the <span class="path">\ProgramData\SafeExamBrowser\</span> directory on deployed exam client machines, not on your admin workstation!</strong></li>
           </ul>
           
           <h4 class="seb-section-header sebnavbar-link" id="AppearancePane">
@@ -537,7 +524,7 @@
               Settings in the User Interface Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_03_UserInterface.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_03_UserInterface.png" />
           
           <span class="quote">Browser view mode</span>
 <ul>
@@ -549,18 +536,16 @@
               <br>
               The Windows on-screen keyboard is not working with the Create New Desktop kiosk mode, that's why you have to use the Disable Explorer Shell kiosk mode. <strong>You cannot just use exam settings with Disable Explorer Shell, you also have to reconfigure  SEB client settings to this mode.</strong><br>
               <br>
-              The SEB setting option &quot;Automatic on-screen keyboard behavior&quot; from previous SEB versions was removed from SEB<br>
-as of SEB 2.2, as now always the former option &quot;Detect physical keyboard&quot; is active. This means, if a physical keyboard is connected, SEB doesn't show the on-screen keyboard. <br>
-<br>
-Touch optimized mode features are:
-<ul id="seblist">
+              The SEB setting option &quot;Automatic on-screen keyboard behavior&quot; from previous SEB versions was removed from SEB 2.2, as now always the former option &quot;Detect physical keyboard&quot; is active. This means, if a physical keyboard is connected, SEB doesn't show the on-screen keyboard.
+              Touch optimized mode features:
+                <ul id="seblist">
               <li> Larger buttons in the SEB taskbar</li>
-              <li>Touch optimized message boxes (alerts, dialogs) with larger buttons</li>
-              <li>The Windows on-screen keyboard is displayed when the user touches a text field on a browser page or when SEB asks to enter a password. If a physical keyboard is connected, SEB doesn't show the on-screen keyboard.</li>
-              <li> New web pages open in full screen 'windows', switch between open pages with the open windows chooser popup menu invoked by tapping the SEB icon in the SEB taskbar. With the close button below each window in this window chooser you can close open browser full screen 'windows'.</li>
+                <li>Touch optimized message boxes (alerts, dialogs) with larger buttons</li>
+                <li>The Windows on-screen keyboard is displayed when the user touches a text field on a browser page or when SEB asks to enter a password. If a physical keyboard is connected, SEB doesn't show the on-screen keyboard.</li>
+                <li> New web pages open in full screen 'windows', switch between open pages with the open windows chooser popup menu invoked by tapping the SEB icon in the SEB taskbar. With the close button below each window in this window chooser you can close open browser full screen 'windows'.</li>
               </ul>
             </li>
-            
+            <li><span class="quote">Enable touch exit</span>: When enabled, SEB can be quit in touch optimized mode with a swipe down from the upper display edge (helpful when the SEB taskbar with the quit button is not used).            </li>
           </ul>
           <span class="quote">Main browser window size and position</span>
           <ul>
@@ -569,32 +554,22 @@ Touch optimized mode features are:
           </ul>
           <span class="quote">Browser Window Toolbar</span>
           <ul>
-            <li><span class="quote">Enable browser window toolbar</span>: Indicates if a toolbar is displayed on top of the browser window, a browser menu at the right end, and a reload button at the left end of the toolbar. The browser menu entries can be configured using the respective options in this pane (<span class="quote">Enable zoom (Win/Mac)</span>, <span class="quote">Show developer tools in window menu (Win)</span>) or on the Browser pane (<span class="quote">Allow text search</span>) .You can also configure the toolbar to show back/forward buttons by enabling navigation in the Browser pane. <br />Note that the browser toolbar will also be displayed when <span class="quote">Show reload button</span> is activated, since the reload button was moved from the taskbar to the browser toolbar (so both options essentially do the same thing now).<br />
-				The following options can be used to fine tune the browser toolbar:
-				<ul>
-					<li> <span class="quote">Allow adress bar for main window (Win)</span>: Displays the browser's adress field in the main window. This field, if displayed, is editable!
-					</li>
-					<li> <span class="quote">Allow adress bar for main window (Win)</span>: Displays the browser's adress field in additional browser windows (these can be allowed on the Browser pane). This field, if displayed, is editable!
-					</li>
-					<li> <span class="quote">Show developer tools in window menu (Win)</span>: Displays the browser's adress field in additional browser windows (these can be allowed on the Browser pane). This field, if displayed, is editable!
-					</li>
-					<li> <span class="quote">Hide toolbar as default (Mac)</span>:  After SEB starts, the browser window toolbar is hidden. Users can unhide the toolbar in the view menu or the contextual menu on the browser window title bar.
-					</li>
-				</ul>
+            <li><span class="quote">Enable browser window toolbar</span>: Indicates if a toolbar is displayed on top of the browser window, with back/forward buttons (if navigation is enabled) and a reload button.<br />
             </li>
-            <li><span class="quote">Show menu bar (Mac)</span>: The menu bar can be used in SEB for macOS to access menu bar widgets like changing keyboard layouts, re-connecting to a WiFi network etc.</li>
+            <li><span class="quote">Hide toolbar as default</span>  (Mac only): After SEB starts, the browser window toolbar is hidden. Users can unhide the toolbar in the view menu or the contextual menu on the browser window title bar. </li>
+            <li><span class="quote">Show menu bar</span>  (Mac only): The menu bar can be used in SEB for macOS to access menu bar widgets like changing keyboard layouts, re-connecting to a WiFi network etc.</li>
           </ul>
-          <span class="quote">Taskbar / Dock / Side Menu</span>
+          <span class="quote">SEB taskbar/dock</span>
           <ul>
-            <li><span class="quote">Show taskbar / dock</span>: Usually to be used when you permit third party applications, which are displayed as icons. Clicking on the icon of an application starts it (if it wasn't running yet), brings the application to foreground or maximizes its window if it was minimized before. The taskbar is not required, users can also switch to third party applications using the task switcher with keys Alt-Tab. But if users quit a third party application,  they can restart it only by using its taskbar icon (or by opening a file which is linked in an exam and gets opened by that application).
-             <li><span class="quote">Show side menu</span>: The side menu, if enabled, appears on the left side of the SEB window when WINDOWS-key + A is pressed (like the windows 10 action menu). Pressing tghose keys again will hide the side menu. In the side menu, all options and information from the SEB taskbar are presented in a design inspired by the Windows 10 action menu. If you need maximum vertical space for your browser window, you can disable the SEB toolbar completly, relying on the side menu alone showing up only when needed. </li>
-             <li><span class="quote">Show Wi-Fi control</span>: Allows to reconnect to Wi-Fi networks which have previously been connected to.</li>
-             <li><span class="quote">Show reload button</span>: This button in the SEB taskbar reloads the current web page. Shows warning if so enabled in Browser settings tab. Note that the browser toolbar will also be displayed when this option is activated, even if option <span class="quote">Enable browser window toolbar</span> is disabled. </li>
-             <li><span class="quote">Show time</span>: Displays current time in SEB taskbar: This is for example helpful if you decide to ban personal watches in exams (because of smartwatches).</li>
-             <li><span class="quote">Show keyboard layout</span>: Shows current keyboard layout and allows to switch to other keyboard layouts which have been enabled in Windows.</li>
-	</ul>
-     <span class="quote">Enable zoom (Win/Mac)</span>
-	<ul>
+            <li><span class="quote">Show SEB taskbar</span>: Usually to be used when you permit third party applications, which are displayed as icons. Clicking on the icon of an application starts it (if it wasn't running yet), brings the application to foreground or maximizes its window if it was minimized before. The taskbar is not required, users can also switch to third party applications using the task switcher with keys Alt-Tab. But if users quit a third party application,  they can restart it only by using its taskbar icon (or by opening a file which is linked in an exam and gets opened by that application).
+              <ul id="seblist">
+                <li><span class="quote">Taskbar/dock height</span>: Taskbar height in pixels can  be changed for high resolution displays (display DPI settings are now also taken in account, in touch optimized mode taskbar is scaled up in addition).</li>
+                <li><span class="quote">Show Wi-Fi control</span>: Allows to reconnect to Wi-Fi networks which have previously been connected to.</li>
+                <li><span class="quote">Show reload button</span>: This button in the SEB taskbar reloads the current web page. Shows warning if enabled in Browser settings tab.</li>
+                <li><span class="quote">Show time</span>: Displays current time in SEB taskbar: This is for example helpful if you decide to ban personal watches in exams (because of smartwatches).</li>
+                <li><span class="quote">Show keyboard layout</span>: Shows current keyboard layout and allows to switch to other keyboard layouts which have been enabled in Windows.</li>
+              </ul>
+            </li>
             <li><span class="quote">Enable page zoom</span>: Pages can be zoomed with Ctrl-Mousewheel (Win) or cmd +/- or the commands in the view menu and buttons in browser window toolbar (Mac)</li>
             <li><span class="quote">Enable text zoom</span>: Text in browser windows can be zoomed with Ctrl-Mousewheel (Win) or ctrl - cmd +/- or the commands in the view menu and buttons in browser window toolbar (Mac)</li>
             <li><span class="quote">Zoom Mode</span> (Win): Zoom whole web pages or just text using Ctrl-Mousewheel (only in Windows version)</li>
@@ -610,55 +585,54 @@ Touch optimized mode features are:
             <li><span class="quote">Allow spell checking</span>: Spell checking in the SEB browser underlines incorrectly spelled words and displays word suggestions (right mouse button needs to be enabled in Hooked Keys tab). </li>
             <li><span class="quote">Allow dictionary look up</span> (Mac): Allow looking up text elements on a web site using the 3-finger tap on a trackpad or ctrl-cmd-D</li>
           </ul>
-          
+          <p>The list underneath these options shows all dictionaries currently available for spell checking. SEB comes with a list of standard dictionaries which cannot be removed, but may be deactivated. The dictionaries contained in SEB have a license which is compatible with SEB's MPL license. <strong>Many other dictionaires are  using the GPL license, which isn't compatible with SEB's license and therefore we cannot distribute these dictionaries together with SEB.</strong> But it is possible to embed additional dictionaries to be used for spell checking. Please make sure to use the correct file formats, namely a .aff and a .dic file per language. You can download compatible dictionaries for many languages on <a href="https://addons.thunderbird.net/nn-no/thunderbird/language-tools/" target="_blank">this Mozilla Thunderbird page</a>.</p>
+          <ul>
+            <li><span class="quote">Add Dictionary</span>: Displays a file dialog where you have to select both dictionary files with the file extensions .aff and .dic.</li>
+            <li><span class="quote">Remove Selected</span>: Removes the selected dictionary from the SEB config.</li>
+          </ul>
           <h4 class="seb-section-header sebnavbar-link" id="BrowserPane">
             <a class="anchorjs-link" href="#BrowserPane"></a>Settings in the Browser Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_04_Browser.png" />
-<span class="quote">Links requesting to be opened in a new browser window...</span>: Choose how SEB shall treat links requesting to be opened in a new browser window:
-
-            
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_04_Browser.png" />
+                  
+          <ul id="seblist">
+            <li><span class="quote">Links requesting to be opened in a new browser window... </span>(Mac only): This popup list offers three policies:</li>
             <ul id="seblist">
-            <li >get generally blocked</li>
-            <li >open in same window</li>
-            <li >open in new window</li>
-	</ul>	
-            <span class="quote">Block when directing to a different server</span>: Hyperlinks which direct to a different host than the one of the current  page will be ignored. <br />		
-	
-            <p><span class="quote">New browser window size and position</span>: You can enter the dimensions (in pixels or percent values) in the text field manually or select one of the predefined values from the drop down list.
-	<ul>
-		<li><span class="quote">Width</span>: Set the width of an new browser window in percentage of the current screen width or in pixel</li>
-		<li><span class="quote">Height</span>: Set the height of an new browser window in percentage of the current screen height or in pixel</li>
-		<li><span class="quote">Horizontal positioning</span>: Set the horizontal positioning of the new window, if size is not fullscreen	</li>
-	</ul>
-	<p class="quote">Browser Security</p>
+            <li class="quote">get generally blocked</li>
+            <li class="quote">open in same window</li>
+            <li class="quote">open in new window</li>
+            </ul>
+            <li><span class="quote">Block when directing to a different server</span>: Hyperlinks which direct to a different host than the one of the current  page will be ignored.</li>
+            <li><span class="quote">New browser window size</span>: You can set the width and height of  new browser windows as absolute pixel values or a percentage of the screen width or height.  You can enter the dimensions (in pixels or percent values) in the text field or select one of the predefined values in the  pop down menu. </li>
+            <li><span class="quote">New browser window horizontal positioning</span>:  You can choose how the window will be positioned horizontally if it doesn't fill the full screen width: Left, Center, Right.</li>
+            <li><span class="quote">Block when directing to a different server</span>: Hyperlinks which direct to a different host than the one of the current  page will be ignored. This can also filter unwanted cross-site content on a page, but redirections might also not work. Test this option carefully with your exam before using it!</li>
+          </ul>
+          <span class="quote">Browser Security</span>
           <ul>
-            <li><span class="quote">Allow text search</span>: Enables the search feature in the browser menu, located in the browser toolbar. This feature needs the browser toolbar to be enabled. </li>
-            <li><span class="quote">Allow toolbar of internal PDF reader (Win)</span>: Be aware, that this also enables access to the print and download functions of the PDF reader.</li>
-            <li><span class="quote">Delete cache when re-configuring or terminating SEB (Win)</span>&nbsp; This feature will dismiss all&nbsp; session information when re-configuring or restarting SEB. This setting only works, if <span class="quote">Clear browser session when ending ...</span> is activated on the Exam pane.  </li>
-           </ul>
-	<p  class="quote">Restriction in Exam Windows / Restriction in Additional Windows</p>
-			  <ul>
+            <li><span class="quote">Enable plug-ins</span>: Enables web plugins like Flash. For security reasons it's recommended to disable this option if you don't use any plugin content.</li>
+            <li><span class="quote">Enable JavaScript</span>: Please note that most modern websites need JavaScript for full functionality.</li>
+            <li><span class="quote">Enable Java</span>: Enables Java Applets. Starting SEB 2.0 this option is disabled by default because Java applets are considered a potential security risk.  <span class="red"><strong>Note:</strong> Only applets with the highest Java security level will run in SEB for Windows</span>.</li>
+            <li><span class="quote">Block pop-up windows</span>: Disables pop-up windows (often advertisement) opened by JavaScript without an user action such as a button click.</li>
+            <li><span class="quote">Allow video capture (webcam)</span>: Allow web applications to access camera (using HMTL 5 APIs).</li>
+            <li><span class="quote">Allow audio capture (microphone)</span>: Allow web applications to access microphone (using HMTL 5 APIs).</li>
             <li><span class="quote">Allow navigating back/forward in exam</span>: Disabling browsing to previously visited pages (by Ctrl-Cursor left) increases security, because it might be possible to leave an exam by browsing back to an external start page.</li>
             <li><span class="quote">Allow navigating in additional windows</span>: Disabling browsing to previously visited pages (by Ctrl-Cursor left) might not be desired for additional resources and other content opening in additional browser windows, therefore this separate setting.</li>
             <li><span class="quote">Allow reload in exam</span>: You can disable reload completely (reload button in taskbar, browser tool bar, iOS side slider menu, keyboard shortcut F5/cmd+R) with this setting, as  offline caching in some e-assessment systems might break when the user tries to reload a page without internet connection.</li>
             <li><span class="quote">Allow reload in additional windows</span>:  For additional resources and other content opening in additional browser windows reload can be enabled/disabled separately with this setting.</li>
-            <li><span class="quote">Show reload warning</span>: SEB shows a warning asking the user to confirm reloading the main browser containing the exam.</li>
+            <li><span class="quote">Show reload warning in exam</span>: SEB shows a warning asking the user to confirm reloading the main browser containing the exam.</li>
             <li><span class="quote">Show reload warning in additional windows</span>: You can disable/enable the reload warning for additional resources and other content opening in additional browser windows separately.</li>
-            <li><font color="#666666"><b>Show URL's</b></font>: This setting controls if or how the URL of your exam web page is displayed in the browser's windows title. Depending on your exam scenario you migth want to keep the URL secret.</li>
+            <li><span class="quote">Remove profile</span> (Win only): Deletes contents of the seb XULRunner embedded browser profile directory (cache, cookies, local browser storage etc.) when quitting SEB.</li>
           </ul>
-	<p><span class="quote">Use SEB without browser window</span>: If you intend to use another application for an exam and don't need to display any web content on the exam client, you can switch off the SEB browser with this option.</p>
           <span class="quote">User Agent Settings</span>
           <ul>
-            
+            <li><span class="quote">Suffix to be added to any user agent</span>: Enter a string here which will be appended to any user agent string (independent from the other user agent settings below).</li>
             <li><span class="quote">User agent for desktop mode</span>: Allows to switch between the default and a custom browser user agent string for SEB Windows running in  desktop mode. SEB appends its version number automatically to the selected user agent string.</li>
-             <li><span class="quote">User agent (Mac)</span>: Allows to switch between the default and a custom browser user agent string in SEB for macOS running in  desktop mode. The default string depends on the installed Safari/WebKit version and therefore can differ on exam clients. SEB for macOS also appends its version number automatically to the selected user agent string.</li>
-
-			  <li><span class="quote">User agent for touch/tablet mode</span>: Allows to switch between the default, an iPad-like and a custom browser user agent string for SEB Windows running in  the touch optimized mode (on tablet computers). SEB appends its version number automatically to the selected user agent string.</li>
-		    <li><span class="quote">Suffix to be added to any user agent</span>: Enter a string here which will be appended to any user agent string (independent from the other user agent settings below).</li>
-            
-
+            <li><span class="quote">User agent for touch/tablet mode</span>: Allows to switch between the default, an iPad-like and a custom browser user agent string for SEB Windows running in  the touch optimized mode (on tablet computers). SEB appends its version number automatically to the selected user agent string.</li>
+            <li> <span class="quote">iPad</span>: Use an iPad-like user agent string for the touch optimized/tablet mode, as many mobile optimized websites recognize this user agent, but not the Windows tablet touch user agent. </li>
+            <li><span class="quote">User agent (Mac)</span>: Allows to switch between the default and a custom browser user agent string in SEB for macOS running in  desktop mode. The default string depends on the installed Safari/WebKit version and therefore can differ on exam clients. SEB for macOS also appends its version number automatically to the selected user agent string.</li>
+            <li><span class="quote">Use SEB without browser window</span>: If you intend to use another application for an exam and don't need to display any web content on the exam client, you can switch off the SEB browser with this option. Don't try to disable XULRunner in the Application -&gt; Permitted Processes tab, that isn't necessary when using this option.</li>
+            <li><span class="quote">Suffix to be added to every browser window</span>: Enter a string to append to every browser window title.</li>
           </ul>
           
           <h4 class="seb-section-header sebnavbar-link" id="DownUploadsPane">
@@ -666,14 +640,14 @@ Touch optimized mode features are:
             Settings in the Down/Uploads Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_05_DownUploads.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_05_DownUploads.png" />
                   
           <ul id="seblist">
-            <li><span class="quote">Allow downloading and uploading files</span>: Usually to be used with permitted third party applications for which you want to provide files to be downloaded. Uploading can only be blocked by SEB when the website is using standard form elements (this is a restriction of the used Firefox browser engine).</li>
+            <li><span class="quote">Allow downloading and uploading files</span>: Usually to be used with permitted third party applications for which you want to provide files to be downloaded. <strong>Starting SEB 2.3, this option  also works on Windows.</strong> Uploading can only be blocked by SEB when the website is using standard form elements (this is a restriction of the used Firefox browser engine).</li>
           </ul>
           <ul id="seblist">
-            <li><span class="quote">Choose download / upload directory</span>: Choose the download directory with this button, which displays a file/directory chooser dialog. In the  path displayed afterwards righthand of the button, SEB automatically replaces sections with a Windows environment variable, so paths are portable to other computers, for instance with another user account name (if you for example select your <span class="path">Documents</span> folder, the path becomes <span class="path">%USERPROFILE%\Documents</span>). An empty path means SEB uses the user's default <span class="path">Download</span> folder.</li>
-            <li><span class="quote">Allow user to select custom download / upload directory</span>: With this option activated, SEB will bring up a simple dialog when download is starting. The user can then choose any folder from the local file system</li>
+            <li><span class="quote">Save downloaded files to</span>: Choose the download directory with this button, which displays a file/directory chooser dialog. In the  path displayed afterwards righthand of the button, SEB automatically replaces sections with a Windows environment variable, so paths are portable to other computers, for instance with another user account name (if you for example select your <span class="path">Documents</span> folder, the path becomes <span class="path">%USERPROFILE%\Documents</span>). An empty path means SEB uses the <span class="path">Download</span> folder.</li>
+            <li><span class="quote">Open files after downloading</span>: Downloaded files will be opened with the according application, which has to be set correctly in the system for each used file type.<strong> In SEB for Windows starting version 2.3, when this setting is disabled, then the dialog "Open File With... Safe Exam Browser" isn't  displayed</strong> (files are directly saved to the configured download directory).</li>
             <li><span class="quote">Choose file to upload…</span>  (Mac only): SEB can let the user choose the file to upload manually (as usual) or automatically choose the same file which was downloaded before. There are three possible policies to choose the file to upload:</li>
                 <ul id="seblist">
             <li class="quote">manually with file requester</li>
@@ -681,16 +655,16 @@ Touch optimized mode features are:
             <li><span class="quote">by only allowing to upload the same file downloaded before</span>: 
               If the file is not found,  an error message is presented. This setting might bring additional security, because only files which have been downloaded before (in the same browser session, means since SEB was started) can be uploaded. If several files have been downloaded, pressing the <span class="quote">choose file</span> (or similarly named) button  in the browser window will first choose the file most recently downloaded, pressing the button several times will cycle through all the files downloaded in this session.<br />
             </ul>
-            <li><span class="quote">Download and open PDF files instead of displaying them inline</span>: PDF files will not be displayed by SEB but downloaded and opened  (usually Preview or Adobe Acrobat). This option is useful when you <span class="quote">allow to switch to third party applications</span> and e.g. want to use some PDF forms which have to be filled out by  the examinees/users.</li>
-            <li><span class="quote">Allow using Acrobat Reader PDF plugin (insecure! Mac only)</span>: The Adobe Acrobat Reader browser plugin should only be used on secured managed Mac computers, as it allows to access the file system and  cloud services.</li>
-            <li><span class="quote">Download and open SEB config files</span>: Controls if *.seb config files are downloaded and opened (regardless if downloading and opening other file types is allowed) and if SEB can be started by opening seb(s)://* config links or  SEB config files. This option basically controls wether an already running SEB instance can be reconfigured / restared using another SEB config. If the SEB instance already running has a secured configuration, the the option <strong>Allow to reconfigure secure/exam session</strong> on the <strong>Exam pane</strong> also applies!</li>
+            <li><span class="quote">Download and open PDF files instead of displaying them inline</span>  (Mac only): PDF files will not be displayed by SEB but downloaded and opened (if <span class="quote">Open files after downloading</span> is active!) by the application set in Finder (usually Preview or Adobe Acrobat). This option is useful when you <span class="quote">allow to switch to third party applications</span> and want to use some PDF forms which have to be filled out by  the examinees/users.</li>
+            <li><span class="quote">Allow using Acrobat Reader PDF plugin (insecure)</span>: The Adobe Acrobat Reader browser plugin should only be used on secured managed Mac computers, as it allows to access the file system and  cloud services.</li>
+            <li><span class="quote">Download and open SEB config files</span>: Controls if .seb config files are downloaded and opened (regardless if downloading and opening other file types is allowed) and if SEB can be started with opening seb(s):// config links and SEB config files.</li>
           </ul>
       
           <h4 class="seb-section-header sebnavbar-link" id="ExamPane">
             <a class="anchorjs-link" href="#ExamPane"></a>Settings in the Exam Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_06_Exam.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_06_Exam.png" />
           <p><span class="quote">Browser Exam Key / Config Key</span></p>
             <p>The Browser Exam Key and the Config Key allow to verfify different aspects of an exam. They both depend on all configuration values defined for a file, i.e. they change whenever&nbsp; a configuration value changes. The keys can be used independently from each other, but both are sent with every HTTP request if activated. Copy a key to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in.</p>
           <p>IMPORTANT: Always copy the (key(s) as a last step, after the configuration file was saved!&nbsp;</p>
@@ -704,11 +678,6 @@ Touch optimized mode features are:
               <strong>Important: First save your final exam settings in a .seb settings file and then copy the browser exam key to your exam system's quiz settings as the Config Key changes when you change any setting. <br>
               </strong>Use the Config key instead of the Exam Key in sceanrios where mroe than one verdsion of SEB (e.g. Mac an Windows) are used, or your exam settings should be tolerant to a future update of SEB (to e certain extend).</li>
 	</ul>
-	<p><span class="quote">Reconfiguring Secure/Exam Session</span></p>
-	<p>&quot;Secure session&quot; in this case is a session based on a SEB config file with a quit password set. If currently no quit password is set, this option does not apply. With a quit passwords set, SEB allows to reconfigure/restart, if the option <strong>Allow reconfiguring secure/exam session</strong> is set. If an URL pattern is set in field <strong>Reconfiguring URL</strong> (URL may contain the wildcard character *), then the download link will be checked against this URL pattern.</p>
-	<p><strong class="red">PLEASE NOTE:</strong> In order for this option to work at all, the option<strong> Download and open SEB Config Files</strong> on the <strong>Down/Uploads</strong> pane 
-	  has to be activated! </pre>
-	</p>
 	<p><span class="quote">Session Handling</span></p>
 	<p>Use the following parameter to control whether a browser session shall be persited on disk, e.g. to keep users logged in after a reconfiguration.</p>
 	<ul id="seblist">
@@ -730,15 +699,9 @@ It is possible to configure SEB to quit after the exam is submitted without havi
             <li><span class="quote">Title/tool tip text for the Back to Start button</span>: This text is displayed as the title of the confirmation alert and as tool tip on the icon. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
             <li><span class="quote">Protect  Back to Start button with the quit/restart password</span>: The quit/restart password (if set, see <a href="win_usermanual_en.html#GeneralPane">General</a> pane) must be entered when the Back to Start button was tapped. Exam support/invigilators should be told this password to be able to return to the start of the exam if there is a problem.</li>
           </ul>
-<p><span class="quote">Query String Parameter</span></p>
-<p>Allows to transfer paramters in the URL of a SEB- file link
-  to the Start URL configered for SEB. This feature e.g. allows to personalize the Start URL by adding some user id form another web applikation that is providing the SEB-Link.
-</p>
-<ul>
-	<li><span class="quote">Allow Query Parameter</span>: If activated, query parameters from the seb-Link are appended to the Start URL. If not activated, any query parameter with the seb-Link are ignored.</li>
-</ul>
-</p>
-          
+          <ul>
+            &nbsp;
+          </ul>
       
           <h4 class="seb-section-header sebnavbar-link" id="ApplicationsPane">
             <a class="anchorjs-link" href="#ApplicationsPane"></a>
@@ -766,7 +729,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
 
           <p>Third party applications and processes which are permitted to run during an exam. Permitted applications show up in the application chooser with their icon and their application name set with the parameter <span class="quote">title</span>, they can be used during an exam in addition to the SEB browser. </p>
       
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_07a_Applications_PermittedProcesses.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_07a_Applications_PermittedProcesses.png" />
  
           <ul id="seblist">
             <li><span class="quote">Allow  switching to third party applications</span> (Mac only): If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">Cmd-Tab</span>) will work, so it's possible to switch to other running applications.<br />
@@ -816,7 +779,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
           <p><strong>Since SEB 2.1.7, some default processes are blocked by SEB automatically, as they could be used for cheating and should not be running during exams.</strong> These default prohibited processes are added automatically to any SEB settings both when editing these settings in the SEB Config Tool and when starting the SEB client. They cannot be removed from  the prohibited processes list (if you try, the SEB client will automatically add them again). But you can deactivate SEB checking for them by unchecking the &quot;Active&quot; checkbox for that prohibited process in your SEB settings. So if you change  parameters like &quot;Active&quot; for such processes, SEB will use your preference. </p>
           <p>For processes for which it doesn't matter if they are terminated by SEB (like  applications implementing proper autosave or if they don't contain any user inputed data which might be lost if they are terminated), you can set the parameter  &quot;Force quit&quot;. Then SEB doesn't ask the user to quit the process, but just terminates it silently.</p>
           <p>It might be an inconvenience having to quit running applications before starting an exam, but this is the only possible way for SEB to prevent that some specific applications could be used for cheating. <strong>The safest exam environment would be if students would quit ALL applications before the exam.</strong></p>
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_07b_Applications_ProhibitedProcesses.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_07b_Applications_ProhibitedProcesses.png" />
       <!--<br />
       <ul id="seblist">
             <!--<li><span class="quote">Choose Executable...</span> Displays a file requester for choosing  a process executable or application which will be added to the list of prohibited processes. <strong>Not yet available in SEB 2.0.</strong></li>
@@ -844,9 +807,59 @@ It is possible to configure SEB to quit after the exam is submitted without havi
       
           <h4 class="seb-section-header sebnavbar-link" id="AdditionalResources">
             <a class="anchorjs-link" href="#AdditionalResources"></a>
-            Additional Resources 
-          Pane (not present at the moment)</h4>
-          <p>While most of the features of SEB 2 have been migrated to SEB 3, the &quot;Additional Ressources&quot; feature still was not migrated due to high priority of other new features (SEB server integration). It is planned, however, to provide this feature again with a later version 3.x of SEB.</p>
+            Settings in the Additional Resources Pane
+          </h4>
+          
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_08_AdditionalResources.png" />
+                  
+          <p>Using the powerful new feature Additional Resources, you can configure  SEB to access specific webpages, full or partial websites and documents   securely and easily in exams. These resources can  be located</p>
+          <ul>
+            <li> on an external server and linked using an URL. External Additional Resources use the improved URL filter to only allow displaying specific webpages, documents or sections of websites</li>
+            <li> embedded   into the SEB configuration file. Using this method, resources like for example like PDF files or HTML documents can be deployed ahead of the exam to SEB exam clients. Even full HTML5 web apps can be added as embedded Additional Resources, which allows to use web content in a fully offline exam scenario.</li>
+          </ul>
+          <p>Additional resources can be opened:</p>
+<ul>
+          <li>Automatically, when SEB/the exam is started</li>
+          <li> Manually, using icons in the SEB taskbar (similar to permitted applications) or with hierarchical popup menus</li>
+          <li>Triggered by a Link URL, similar to the <a href="#ExamPane">Quit URL</a> which triggers quitting SEB</li>
+          </ul>
+<p>See below the desciption of all Additional Resources settings grouped by sections:</p>
+<span class="quote">Hierarchical list of resource items</span>
+<ul>
+  <li><span class="quote">&quot;+&quot;</span>: Add a resource item</li>
+  <li><span class="quote">&quot;-&quot;</span>: Remove the selected resource item </li>
+  <li><span class="quote">&quot;(+&quot;</span>: Add a sub or child resource. By creating an &quot;empty&quot; resource just with a title and a custom icon if desired, you can add sub/child resources to this root/parent resource. Resources on the root level are displayed as icons in the SEB taskbar, the next level is displayed as a popup menu on the root level icon. You can add another (third) level, which is displayed as a sub-menu in this popup menu.</li>
+  <li><span class="quote">&quot;^&quot;</span>: Move a resource item up in the list</li>
+  <li><span class="quote">&quot;v&quot;</span>: Move a resource item down in the list</li>
+</ul>
+<span class="quote">Selected Resource</span>
+<ul>
+  <li><span class="quote">Active</span>: Indicates if this resource item is active. By deactivating a resource, it won't be displayed, also its child resources (if some exist) won't be visible. URL filter rules (see below) defined for the deactivated resource also won't be active.</li>
+</ul>
+<span class="quote">Appearance</span>
+          <ul id="seblist">
+            <li><span class="quote">Title</span>: Will be displayed either as a tool tip when hovering over the additional resource icon in the SEB taskbar or as a menu entry in the additional resource popup menu if the resource is placed on the second or third hierarchy level.</li>
+            <li><span class="quote">Icon</span>: You can  select a image file used as an icon for the resource. If you define an external resource using its URL  (see section Behavior), then the SEB Config Tool tries to load the Favicon of the website at that URL and uses it as the icon for the resource.</li>
+          </ul>
+          <span class="quote">Activation</span>
+          <ul>
+            <li><span class="quote">Auto open</span>: SEB opens the resource after starting automatically.</li>
+            <li><span class="quote">Show button</span>: Shows the icon for the resource or its pop-up menu entry. If you're using a activation link URL to open the resource, you might not want users to be able to manually open the resource.</li>
+            <li><span class="quote">Link URL</span>: SEB opens the resource when it detects the URL entered here. You can place a link with this URL inside your exam, which the examinees can click to open that resource. Or you use the URL of a specific page of the exam (or a page displayed after the exam was finished) to automatically trigger opening the resource.</li>
+            <li><span class="quote">Referrer filter</span>: The activation link URL works only on a web page with this referrer filter URL. You can also use the '*' wildcard character in this referrer filter.</li>
+            <li><span class="quote">Key</span>: This key shortcut can be used to open the resource.</li>
+            <li><span class="quote">Modifier</span>: This modifier key has to be pressed together with the key.</li>
+          </ul>
+          <span class="quote">Behavior</span>
+          <ul>
+            <li><span class="quote">URL</span>: Enter the URL of an external resource here. SEB will create a matching URL filter rule (see below) and activate URL filtering in the <a href="#NetworkPaneFilterSection">Network / Filter Pane</a>. Usually you may need to alter that URL filter rule or add additional rules so that all the web pages and resources belonging to the external web resource are allowed by the URL filter.</li>
+            <li><span class="quote">Show confirm box</span>: Before opening the resource, the user has to confirm this in a message box.</li>
+            <li><span class="quote">Confirm box text</span>: Custom text for the confirm message box.</li>
+            <li><span class="quote">Reset browser session</span>: When opening the resource, the browser session is reset, which for example logs our users.</li>
+            <li><span class="quote">Embedded Resource – Choose File</span>: Select a single file to embed into the SEB Config File. After choosing a file, the filename and the setting <span class="quote">Lauch with </span> is displayed. In the popup list you can select <span class="quote">SEB</span> (the internal SEB browser will be used to display the resource, this has to have a document type which can be displayed by the browser) or one of the permitted third party applications if there are some defined in the <a href="#PermittedProcessesSection">Permitted Processes Pane</a>.</li>
+            <li><span class="quote">Embedded Resource – Choose Folder</span>: Select a folder to be embedded into the SEB Config File. After choosing a folder, a setting  called <span class="quote">Filename/File to launch</span> and the setting <span class="quote">Lauch with </span> is displayed. In the <span class="quote">File to launch</span> popup list, all files in the embedded folder (and its subfolders) are listed, you have to select one (for example an <em>index.html</em> file) which then is loaded by SEB or the permitted third party application selected in the <span class="quote">Lauch with</span> popup list.<br>
+            You could deploy complex HTML based documents consisting of many files or  a self-contained HTML5/JavaScript exam player onto mobile devices and then perform an offline e-assessment.</li>
+          </ul>
       
 
          <h4 class="seb-section-header sebnavbar-link" id="NetworkPane">
@@ -859,7 +872,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
             Filter Section
           </h5>
           
-        <img class="img-responsive" src="images/3.2/SEB_Preferences_09a_Network_Filter.png" />
+        <img class="img-responsive" src="images/2.4/SEB_Preferences_09a_Network_Filter.png" />
 
           <ul id="seblist">
             <li><span class="quote">Activate URL filtering</span>: Filter URLs when loading web pages using the filter set defined below and in additional resources.<br />
@@ -930,7 +943,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
             Certificates Section
           </h5>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_09b_Network_Certificates.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_09b_Network_Certificates.png" />
 
           <ul id="seblist">
             <li><span class="quote">Choose TLS/SSL certificate to embed into configuration... </span>Here you can choose <span class="quote">SSL server certificates</span> which are stored in the <em>Windows Certificate Store</em> (if you  have a certificate file, usually in the<strong> .cer</strong> format, you first need to import it to the <em>Windows Certificate Store</em>, depending on the format you can just double click such a certificate file to invoke the Windows certificate import assistant). The  certificates added to this table will be embedded into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning then when connecting to  https servers with those self-signed certificates and you  don't need to distribute SSL certificates manually to the exam client computers<strong>.</strong></li>
@@ -959,68 +972,69 @@ It is possible to configure SEB to quit after the exam is submitted without havi
           
           <p>In this pane you can configure proxy settings for the exam client computers which  override the system's proxy settings on the clients.  You can currently specify a proxy server address and port manually for HTTP, HTTPS, FTP and SOCKS proxies (without authentication), use auto proxy discovery and automatic proxy configuration. You can also add  host/domain addresses to the bypass/exception list.</p>
 
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_09c_Network_Proxies.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_09c_Network_Proxies.png" />
           
           <h4 class="seb-section-header sebnavbar-link" id="SecurityPane">
             <a class="anchorjs-link" href="#SecurityPane"></a>Settings in the Security Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_10_Security.png" /><span class="quote">SEB Service</span> (Win): The SEB Service is a background process running with elevated privileges (as administrator), which is necessary to block and unblock some system features (the options in the Windows Security Screen invoked by Ctrl-Alt-Del) and pausing Windows Update<em></em>.  SEB Windows Service is installed automatically together with the SEB application and started afterwards, but it might happen in rare cases that the service gets stopped. After a reboot of the computer it should get started again, also you could use  Windows Task Manager to restart the service manually (in the Services tab). 
-              <ul>
-                <li><span class="quote">Ignore SEB Service</span><br>
-                  To be able to prevent  problems on unknown devices (e.g. with certain virus protection software), it is possible to ignore if SEB Service is running or not. </li>
-                <li><span class="quote">SEB Service Policy</span>
-                  <br>
-                  If SEB Service is not set to be ignored, you can define the policy that applies when an exam client doesn't have the SEB Service running: 
-                  <ul>
-                    <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service running, it will only be noted in the log that the service was not securing the computer during the exam.</li>
-                    <li><span class="quote">warn when service is not running</span>: A warning is displayed when the service is not running, but the exam can be started.</li>
-                    <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is running. <br />
-                    </li>
-                  </ul>
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_10_Security.png" />
+
+          <ul id="seblist">
+            <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (as administrator), which is necessary to block and unblock some system features (the options in the Windows Security Screen invoked by Ctrl-Alt-Del) and pausing Windows Update<em></em>.  SEB Windows Service is installed automatically together with the SEB application and started afterwards, but it might happen in rare cases that the service gets stopped. After a reboot of the computer it should get started again, also you could use  Windows Task Manager to restart the service manually (in the Services tab). <br />
+          You can define the policy that applies when an exam client doesn't have the SEB Service running: </li>
+              <ul id="seblist">
+                <li><span class="quote">allow to use SEB without service</span>:  SEB  is allowed to run without the SEB Service running, it will only be noted in the log that the service was not securing the computer during the exam.</li>
+                <li><span class="quote">warn when service is not running</span>: A warning is displayed when the service is not running, but the exam can be started.</li>
+                <li><span class="quote">allow to use SEB only with service</span>:  SEB  is only allowed to run when the SEB Service is running. <br />
                 </li>
-                <li><span class="quote">Allow Windows Update to run while SEB is running</span>: Allows windows to run updates in the background, which possibly can lead to disruption of network connection or other services relevant for the exam.</li>
-                <li><span class="quote">Allow notifications from Chrome browser</span>: This optoin only applies if Chrome is used as an external Application.</li>
-                <li><span class="quote">Allow remote session/screen sharing</span>: Allows Windows remote sessions (e.g. when RDP is needed) and macOS screen sharing to be used.</li>
               </ul>
-          <p><span class="quote">Kiosk mode</span>: This setting reflects how the computer is locked down into SEB.<br />
-          </p>
-              <ul>
+            <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulation).</li>
+            <li><span class="quote">Allow screen capture / PrintScreen</span>: Controls PrintScreen and macOS screen capture (invoked with cmd-3 and cmd-4), this setting corresponds with Enable PrintScreen in the <a href="win_usermanual_en.html#HookedKeysPane">Hooked Keys</a> pane. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when PrintScreen is disabled.</li>
+            <li><span class="quote">Allow remote session/screen sharing</span>: Allows Windows remote sessions and macOS screen sharing to be used.</li>
+            <li><span class="quote">Use private clipboard</span>: When enabled, cut/copy/paste works only with content inside the SEB browser, the private clipboard doesn't accept content from other applications or tools. This prevents utilities running in the background and cloud clipboard features to be used to copy-paste contents into or out of exams. Private clipboard should always be used besides when working with third party applications in a managed user account.</li>
+            <li>
+              <p><span class="quote">Enable logging</span>: The log can help in debugging SEB (if you send it to the developers) and to find out about possible manipulations. There are three log files:</p>
+
+<p>SafeExamBrowser main application, located at </p>
+<p>
+              <pre>
+                    <p><span class="path">%APPDATA%\SafeExamBrowser\SebClient.log</span><br />usually:<br /><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\SebClient.log</span></p>
+                </pre>
+              </p><br>
+
+<p>SafeExamBrowser browser, located at </p>
+<p>
+              <pre>
+                    <p><span class="path">%APPDATA%\SafeExamBrowser\seb.log</span><br />usually:<br /><span class="path">C:\Users\&lt;username&gt;\AppData\Roaming\SafeExamBrowser\seb.log</span></p>
+                </pre>
+              </p><br>
+
+<p>SEB Windows Service, located at </p>
+<p>
+              <pre>
+                    <p><span class="path">%INSTALLDIR%\SafeExamBrowser\SebWindowsServiceWCF\sebwindowsservice.log</span><br />usually:<br /><span class="path">C:\Program Files&nbsp;(x86)\SafeExamBrowser\SebWindowsServiceWCF\sebwindowsservice.log</span></p>
+                </pre>
+              </p>
+            </li>
+
+            <li><span class="quote">Kiosk mode</span>: This setting reflects how the computer is locked down into SEB.<br />
+              <ul id="seblist">
                 <li><span class="quote">Create new desktop</span>:  SEB  and all permitted applications are started on a new desktop. Switching to the standard desktop is not possible, so other applications are invisible and cannot be reached during the exam. This kiosk mode may prevent specific third party software to run correctly together with SEB, like some screen recording software or the Windows on-screen keyboard (this is why this kiosk mode cannot be used with  touch optimized mode).</li>
                 <li><span class="quote">Disable Explorer Shell</span>: The Windows Explorer is closed when the exam starts and restarted afterwards. All other applications running on the computer are hidden, prohibited applications are closed. Windows of all not permitted applications/processes are hidden (or if that's not possible those applications are killed) when they  open or try to come to the foreground. This kiosk mode is compatible with some screen recording/proctoring  software (like ObserveIt) and the Windows on-screen keyboard.</li>
                 <li><span class="quote">None</span>: SEB runs without kiosk mode, switching to other applications is possible. Use this for debugging purposes only.</li>
               </ul>
-          <p><strong>Note: The kiosk mode is a SEB environment setting.</strong> This means it is not possible to change the kiosk mode when starting an exam or reconfiguring SEB. An alert window will inform users that the local client settings of SEB need to be reconfigured with the correct kiosk mode settings if they try to start an exam with another kiosk mode  than the one set in the current local SEB client settings. SEB will have to be quit and manually restarted when the kiosk mode is reconfigured in local client settings</p>
-          <p><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulation).</p>
-          <p><span class="quote">Allow screen capture / PrintScreen</span>: Controls PrintScreen and macOS screen capture (invoked with cmd-3 and cmd-4), this setting corresponds with Enable PrintScreen in the <a href="win_usermanual_en.html#HookedKeysPane">Hooked Keys</a> pane. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when PrintScreen is disabled.</p>
-          <p><span class="quote">Allow remote session/screen sharing</span>: Allows Windows remote sessions and macOS screen sharing to be used.</p>
-          <p><span class="quote">Use private clipboard (Mac)</span>: When enabled, cut/copy/paste works only with content inside the SEB browser, the private clipboard doesn't accept content from other applications or tools. This prevents utilities running in the background and cloud clipboard features to be used to copy-paste contents into or out of exams. Private clipboard should always be used besides when working with third party applications in a managed user account.</p>
-<p><span class="quote">macOS specific settings</span>: Please refer to the respective section of the <a href="https://safeexambrowser.org/macosx/mac_usermanual_en.html#SecurityPane"> macOS manual </a>.</p>
-          <p><span class="quote">Maximum allowed number of connected displays:</span> SEB tries to control the number of displays connected to the client computer in order to supply additional protection against cheating in exams.</p>
-          <ul>
-            <li><span class="quote">Allow only internal displays (laptops)</span>: Prevent the use of additional external displays with laptops</li>
-            <li><span class="quote">Ignore errors when validating display configuration</span>. Needs to be activated when using SEB inside a virtual machine, because display detection then will not work properly. This option will virtually switch off display detection.</li>
-          </ul>
-          <p><span class="quote">Allow access to application log (Win)</span> / Show log button in taskbar:  This options displays the output to the log files in a console window in real time. This feature was added for testing and debugging purposes.</p>
-          <p>Of course, you can access the logfiles at any time and without SEB running in</p>
-          <pre><p><span class="path">%APPDATA%\Local\SafeExamBrowser\Logs\</span><br />usually:<br /><span class="path">C:\Users\&lt;username&gt;\AppData\Local\SafeExamBrowser\Logs\</span></p>
-                </pre>
-          </p>
-          Corresponding to the architecture of SEB 3, there are three log files:
-         
-          <li>xxx_Client.log: Logfile of the actual SEB GUI applikation (which manages toolbar and action menu, external applications, browser engine etc.)</li>
-          <li>xxx_Runtime.log: Logfile of the SEB Runtime (which manages SEB Service, lock down/Kiosk mode, Session handling and client application)</li>
-          <li>xxx_Browser.log: Logfile of the actual browser engine used within the GUI Application (which manages browser navigation and toolbar, URL filtering etc.)</li>
-          <p></p>
-          
-Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&quot;, which stands for a date-and-time signature.<br />
+              <p><br />
+                <strong>Note: The kiosk mode is a SEB environment setting.</strong> This means it is not possible to change the kiosk mode when starting an exam or reconfiguring SEB. An alert window will inform users that the local client settings of SEB need to be reconfigured with the correct kiosk mode settings if they try to start an exam with another kiosk mode  than the one set in the current local SEB client settings. SEB will have to be quit and manually restarted when the kiosk mode is reconfigured in local client settings.<br />
+              </p>
+            </li>
           </ul>
                     
           <h4 class="seb-section-header sebnavbar-link" id="RegistryPane">
             <a class="anchorjs-link" href="#RegistryPane"></a>Settings in the Registry Pane
           </h4>
 
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_11_Registry.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_11_Registry.png" />
       
           <p>Options in the Windows Security Screen invoked by Ctrl-Alt-Del:</p>
           <ul id="seblist">
@@ -1059,10 +1073,10 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
             <li>when SEB is restarted once again and <strong>properly</strong> quit; </li>
             <li>or when uninstalling SEB. </li>
           </ul>
-          <p><span class="red">There is also a  command line tool which can be used to reset those values for the unlikely case that the SEB Windows Service didn't work properly or was damaged and can't be run anymore.</span> This tool can be found in the Windows start menu or at the following directory path in your Program Files directory:</p>
+          <p><span class="red">There is also a  command line tool which can be used to reset those values for the unlikely case that the SEB Windows Service didn't work properly or was damaged and can't be run anymore.</span> This tool can be found at the following directory path in your Program Files directory:</p>
           
           <pre>
-                <p class="path">SafeExamBrowser\Reset\<span class="red">SafeExamBrowser.ResetUtility.exe</span>.exe</p>
+                <p class="path">SafeExamBrowser\SebWindowsServiceWCF\<span class="red">SebRegistryResetter</span>.exe</p>
           </pre>
           
           <p>You need to execute this tool as administrator (right mouse button context menu &quot;<span class="quote">Run as administrator</span>&quot;). In case the original values for the Registry Settings aren't found anymore, they will be reset to the Windows default values (all enabled). In this latter unlikely case you would also need to enter <strong>the short user name of the user in which account SEB was run</strong>, when the problem occurred. If you were running SEB in your administrator account, the short user name you have to enter usually isn't &quot;Admin&quot; or similar. It is the user name of the account which has the administrator role. The short user name is the same as the <strong>name of the user's home directory</strong> (if you go to C:\Users\ in a Windows Explorer window, you can see all user account names on this computer). If you have spaces in your short user name, enter it as it is, <strong>without quotes</strong>.</p>
@@ -1071,7 +1085,7 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
             <a class="anchorjs-link" href="#HookedKeysPane"></a>Settings in the Hooked Keys Pane
           </h4>
           
-          <img class="img-responsive" src="images/3.2/SEB_Preferences_12_HookedKeys.png" />
+          <img class="img-responsive" src="images/2.4/SEB_Preferences_12_HookedKeys.png" />
       
           <ul id="seblist">
             <li><span class="quote">Special Keys</span>: Settings to enable or block (hook)  keys, key combinations and  mouse buttons.</li>
@@ -1094,7 +1108,7 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
             Operating System
           </h3>
           
-              <p> SEB for Windows is running  on 32-bit and 64-bit PCs with the following operating systems:</p>
+              <p> SEB for Windows 2.4.1 is running  on 32-bit and 64-bit PCs with the following operating systems:</p>
                 <ul>
                   <li>Windows 7</li>
                   <li>Windows 8/8.1 </li>
@@ -1112,7 +1126,7 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
             License
           </h3>
           
-          <p>Safe Exam Browser for Windows: &copy; 2010-2018 Damian Büchel, Daniel R. Schneider, Dirk Bauer, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, Pascal Wyss, Viktor Tomas, Stefan Schneider, Oliver  Rahs, based on the original idea of Safe Exam Browser by Stefan Schneider,  University of Giessen<br />
+          <p>Safe Exam Browser for Windows: &copy; 2010-2021 Damian Büchel, Daniel R. Schneider, Dirk Bauer, <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch" target="_blank">Educational Development and Technology (LET)</a>, Pascal Wyss, Viktor Tomas, Stefan Schneider, Oliver  Rahs, based on the original idea of Safe Exam Browser by Stefan Schneider,  University of Giessen<br />
           Project concept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr, Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.  French localization: Nicolas Dunand<br />
           </p>
           <p>Safe Exam Browser is released as freeware. The <a href="https://github.com/SafeExamBrowser/seb-win" target="_blank">source code</a> is  subject to the <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (the  &quot;License&quot;); you may only use these files in compliance with the  License. You may obtain a copy of the License at <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> .</p>
@@ -1138,7 +1152,7 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
       <footer>
           <div class="row">
               <div class="col-lg-12">
-                  <p>Copyright &copy; 2010-2020 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
+                  <p>Copyright &copy; 2010-2021 <a href="http://www.ethz.ch/index_EN" target="_blank">ETH Zurich</a>, <a href="http://www.let.ethz.ch/index_EN" target="_blank">Educational Development and Technology (LET)</a></p>
               </div>
           </div>
       </footer>
