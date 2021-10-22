@@ -223,6 +223,23 @@
         
         <!-- Content Column -->
         <div class="col-md-9" role="main">
+		
+		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.1:</h5>
+		<p>Version 3.3.1 improves the performance of the SEB-Server integration, adds a raise hand functionality for the live remote proctoring with SEB-Server and fixes various minor issues.</p>
+        <ul>
+			<li>Implemented raise hand functionality for live remote proctoring with SEB-Server.</li>
+			<li>Improved performance of SEB-Server integration.</li>
+			<li>Changed handling of WebView2 dependency in setup bundle to circumvent MSFT's continuing changes to the bootstrapper.</li>
+			<li>Added new configuration option for middle mouse button.</li>
+			<li>Ensured the main browser window always has input focus after startup.</li>
+			<li>Fixed issue in URL filter when processing mailto links.</li>
+			<li>Updated integration of Zoom for live remote proctoring.</li>
+			<li>Changed transmission of LMS session identifier to SEB-Server to only take place once when the identifier changes.</li>
+			<li>Fixed visibility of reload button in browser windows to be according to active configuration value.</li>
+			<li>Removed obsolete browser zoom options in configuration tool.</li>
+			<li>Updated browser engine to version 92.0.25 (Chromium version 92.0.4515.131).</li>
+			<li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+	  	</ul>
 			
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.0:</h5>
 		<p>Version 3.3.0 introduces live proctoring with Zoom, adds support for basic screen sharing in the integrated browser and fixes various issues reported by the community.</p>

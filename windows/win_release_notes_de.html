@@ -223,6 +223,23 @@
         
         <!-- Content Column -->
         <div class="col-md-9">
+		
+			<h5 id="sebh5">Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.3.1:</h5>
+			<p>Version 3.3.1 verbessert die Performanz der SEB-Server-Anbindung, bietet eine Handhebe-Funktion für die Echtzeit-Fernüberwachung mit SEB-Server und beinhaltet einige weitere Verbesserungen.</p>
+			<ul>
+				<li>Handhebe-Funktion für Echtzeit-Fernüberwachung mit SEB-Server implementiert.</li>
+				<li>Performanz der SEB-Server-Anbindung verbessert.</li>
+				<li>Handhabung der WebView2-Abhängigkeit im Setup-Bundle geändert um die wiederkehrenden Änderungen von MSFT am Bootstrapper zu umgehen.</li>
+				<li>Neue Konfigurations-Option für mittlere Maustaste hinzugefügt.</li>
+				<li>Sichergestellt dass das Hauptfenster des Browsers Eingabefokus hat nach dem Aufstarten.</li>
+				<li>Fehler im URL-Filter beim Prozessieren von mailto-Links behoben.</li>
+				<li>Integration von Zoom für Echtzeit-Fernüberwachung aktualisiert.</li>
+				<li>Übertragung vom LMS-Sitzungsidentifikator geändert sodass diese nur einmal wenn dieser sich ändert erfolgt.</li>
+				<li>Sichtbarkeit der Neuladen-Schaltfläche im Browser-Fenster korrigiert sodass diese mit dem aktiven Konfigurationswert übereinstimmt.</li>
+				<li>Obsolete Konfigurationsoptionen bezüglich Browser-Zoom aus dem Konfigurationstool entfernt.</li>
+				<li>Browser-Engine auf Version 92.0.25 (Chromium-Version 92.0.4515.131) aktualisiert.</li>
+				<li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe MicrosoftEdge/WebView2Feedback#960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
+			</ul>
 			
 			<h5 id="sebh5">Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.3.0:</h5>
 			<p>Version 3.3.0 bietet Echtzeit-Überwachung mit Zoom, aktiviert Desktop-Übertragung für die intergrierte Browser-Engine und behebt Probleme, welche von der Community gemeldet wurden.</p>
