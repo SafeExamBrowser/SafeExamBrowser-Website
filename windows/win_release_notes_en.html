@@ -224,6 +224,25 @@
         <!-- Content Column -->
         <div class="col-md-9" role="main">
 		
+		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.2:</h5>
+		<p>Version 3.3.2 adds a new JavaScript API to query the browser exam key (BEK) and configuration key (CK), improves the SEB-Server integration and fixes various issues.</p>
+        <ul>
+			<li>Implemented JavaScript API to query browser exam key (BEK) and configuration key (CK).</li>
+    		<li>Extended permissive configuration for configuration resources which require authentication.</li>
+    		<li>Fixed bug where file system dialog failed to load network paths.</li>
+    		<li>Improved termination mechanism for kiosk mode Disable Explorer Shell.</li>
+    		<li>Fixed bug where embedded DisplayPort monitors weren't recognized as internal displays.</li>
+    		<li>Fixed bug with reconfiguration mechanism and SEB service component.</li>
+    		<li>Implemented correct language header for browser.</li>
+    		<li>Improved resource probing for network configuration resources.</li>
+    		<li>Implemented transmission of computer information to SEB Server.</li>
+    		<li>Implemented reading ping interval from SEB Server connection configuration.</li>
+    		<li>Implemented transmission of a notification to SEB Server when power supply connection changes.</li>
+    		<li>Updated browser engine to version 97.1.11 (Chromium version 97.0.4692.71).</li>
+			<li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+			<li>Known issue: Browser window popups opened via JavaScript do not work as expected, see https://github.com/SafeExamBrowser/seb-win-refactoring/issues/240.</li>
+	  	</ul>
+		
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.1:</h5>
 		<p>Version 3.3.1 improves the performance of the SEB-Server integration, adds a raise hand functionality for the live remote proctoring with SEB-Server and fixes various minor issues.</p>
         <ul>
