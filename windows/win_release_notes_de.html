@@ -225,7 +225,7 @@
         <div class="col-md-9">
 		
 			<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.3.2:</h5>
-			<p>Version 3.3.2 enthält ein neues JavaScript API um den Browser Exam Key (BEK) und den Configuration Key (CK) abzufragen, verbessert die SEB-Server-Integration und beinhaltet einige weitere Verbesserungen.</p>
+			<p>Version 3.3.2 enthält ein neues JavaScript API um den Browser Exam Key (BEK) und den Configuration Key (CK) abzufragen, verbessert die optionale SEB-Server-Integration und beinhaltet einige weitere Verbesserungen.</p>
 			<ul>
 				<li>JavaScript-API zur Abfrage des Browser Exam Key (BEK) und Configuration Key (CK) implementiert.</li>
 				<li>Permissive Konfiguration für Ressourcen, welche Authentifizierung benötigen, erweitert.</li>
@@ -235,57 +235,63 @@
 				<li>Fehler bei der Rekonfiguration mit der SEB-Servicekomponente behoben.</li>
 				<li>Korrekte Sprachen-Kopfzeile für Browser implementiert.</li>
 				<li>Verfügbarkeitsabfrage für Netzwerk-Konfigurationsressourcen verbessert.</li>
-				<li>Übertragung von Computer-Informationen zu SEB-Server implementiert.</li>
-				<li>Auslesen des Ping-Intervals von SEB-Server-Konfigurationen implementiert.</li>
-				<li>Übertragung von Notifikationen an SEB-Server für Verbindungsänderung der Stromversorgung implementiert.</li>
 				<li>Browser-Engine auf Version 97.1.11 (Chromium-Version 97.0.4692.71) aktualisiert.</li>
-				<li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
-				<li>Bekanntes Problem: Browserfenster-Popups, welche via JavaScript geöffnet werden, funktioniern nicht wie erwartet, siehe https://github.com/SafeExamBrowser/seb-win-refactoring/issues/240.</li>
 			</ul>
+			<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und standardmässig deaktiviert sind:</p>
+			<ul>
+			  <li>Übertragung von Computer-Informationen zu SEB-Server implementiert.</li>
+			  <li>Auslesen des Ping-Intervals von SEB-Server-Konfigurationen implementiert.</li>
+			  <li>Übertragung von Notifikationen an SEB-Server für Verbindungsänderung der Stromversorgung implementiert.</li>
+			  <li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
+			  <li>Bekanntes Problem: Browserfenster-Popups, welche via JavaScript geöffnet werden, funktionieren nicht wie erwartet, siehe https://github.com/SafeExamBrowser/seb-win-refactoring/issues/240.</li>
+		  </ul>
 		
 			<h5 id="sebh5">Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.3.1:</h5>
-			<p>Version 3.3.1 verbessert die Performanz der SEB-Server-Anbindung, bietet eine Handhebe-Funktion für die Echtzeit-Fernüberwachung mit SEB-Server und beinhaltet einige weitere Verbesserungen.</p>
+			<p>Version 3.3.1 verbessert die Performanz der optionale SEB-Server-Anbindung, bietet eine Handhebe-Funktion für die optionale Echtzeit-Fernüberwachung mit SEB-Server und beinhaltet einige weitere Verbesserungen.</p>
 			<ul>
-				<li>Handhebe-Funktion für Echtzeit-Fernüberwachung mit SEB-Server implementiert.</li>
-				<li>Performanz der SEB-Server-Anbindung verbessert.</li>
 				<li>Handhabung der WebView2-Abhängigkeit im Setup-Bundle geändert um die wiederkehrenden Änderungen von MSFT am Bootstrapper zu umgehen.</li>
 				<li>Neue Konfigurations-Option für mittlere Maustaste hinzugefügt.</li>
 				<li>Sichergestellt dass das Hauptfenster des Browsers Eingabefokus hat nach dem Aufstarten.</li>
 				<li>Fehler im URL-Filter beim Prozessieren von mailto-Links behoben.</li>
-				<li>Integration von Zoom für Echtzeit-Fernüberwachung aktualisiert.</li>
-				<li>Übertragung vom LMS-Sitzungsidentifikator geändert sodass diese nur einmal wenn dieser sich ändert erfolgt.</li>
 				<li>Sichtbarkeit der Neuladen-Schaltfläche im Browser-Fenster korrigiert sodass diese mit dem aktiven Konfigurationswert übereinstimmt.</li>
 				<li>Obsolete Konfigurationsoptionen bezüglich Browser-Zoom aus dem Konfigurationstool entfernt.</li>
 				<li>Browser-Engine auf Version 92.0.25 (Chromium-Version 92.0.4515.131) aktualisiert.</li>
-				<li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe MicrosoftEdge/WebView2Feedback#960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
 			</ul>
+			<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und standardmässig deaktiviert sind:</p>
+			<ul>
+			  <li>Integration von Zoom für Echtzeit-Fernüberwachung aktualisiert.</li>
+			  <li>Handhebe-Funktion für Echtzeit-Fernüberwachung mit SEB-Server implementiert.</li>
+              <li>Performanz der SEB-Server-Anbindung verbessert.</li>
+              <li>Übertragung vom LMS-Sitzungsidentifikator geändert sodass diese nur einmal wenn dieser sich ändert erfolgt.</li>
+              <li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe MicrosoftEdge/WebView2Feedback#960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
+	      </ul>
 			
 			<h5 id="sebh5">Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.3.0:</h5>
-			<p>Version 3.3.0 bietet Echtzeit-Überwachung mit Zoom, aktiviert Desktop-Übertragung für die intergrierte Browser-Engine und behebt Probleme, welche von der Community gemeldet wurden.</p>
+			<p>Version 3.3.0 bietet optionale Echtzeit-Überwachung mit Zoom, aktiviert Desktop-Übertragung für die intergrierte Browser-Engine und behebt Probleme, welche von der Community gemeldet wurden.</p>
 			<ul>
-				<li>Echtzeit-Überwachung mit Zoom und Verbesserung der Echtzeit-Überwachung mit SEB Server.</li>
 				<li>Unterstützung für Desktop-Übertragung im integrierten Browser.</li>
 				<li>Temporäres Download- und Upload-Verzeichnis für den integrierten Browser.</li>
-				<li>Fehlermeldung für Bildschirm-Überwachung verbessert.</li>
+				<li>Fehlermeldung für Überwachung der Anzahl und des Typs der angeschlossenen Bildschirme verbessert.</li>
 				<li>Generische Fehlermeldung beim Starten verbessert, diese gibt nun immer die Protokolldateien der aktiven Sitzung an.</li>
-				<li>Handshake-Prozedur mit SEB Server verbessert.</li>
-				<li>Mögliches Datenleck in Echtzeit-Überwachung behoben.</li>
 				<li>Liste der standardmässig verbotenen Applikationen erweitert.</li>
 				<li>Problem mit Links in PDF-Dokumenten in der Browser-Engine behoben (siehe https://bitbucket.org/chromiumembedded/cef/issues/3143/pdf-link-navigation-not-working).</li>
 				<li>Browser-Engine auf Version 91.1.21 (Chromium-Version 91.0.4472.114) aktualisiert.</li>
-				<li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe MicrosoftEdge/WebView2Feedback#960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
 			</ul>
+			<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und standardmässig deaktiviert sind:</p>
+			<ul>
+			  <li>Echtzeit-Überwachung mit Zoom und Verbesserung der Echtzeit-Überwachung mit SEB Server.</li>
+			  <li>Mögliches Datenleck in Echtzeit-Überwachung behoben.</li>
+			  <li>Handshake-Prozedur mit SEB Server verbessert.</li>
+			  <li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe MicrosoftEdge/WebView2Feedback#960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
+          </ul>
 			
 			<h5 id="sebh5">Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.2.0:</h5>
-			<p>Version 3.2.0 bietet Echtzeit-Überwachung mit Jitsi Meet, aktiviert WebRTC für die intergrierte Browser-Engine und behebt Probleme, welche von der Community gemeldet wurden.</p>
+			<p>Version 3.2.0 bietet optionale Echtzeit-Überwachung mit Jitsi Meet, aktiviert WebRTC für die intergrierte Browser-Engine und behebt Probleme, welche von der Community gemeldet wurden.</p>
 			<ul>
-				<li>Echtzeit-Überwachung mit Jitsi Meet und Erweiterungen für Echtzeit-Überwachung für die SEB-Server-Integration. Diese Funktionalität ist experimentell.</li>
 				<li>WebRTC für die integrierte Browser-Engine aktiviert.</li>
 				<li>Problem mit System-Auswahlschalter der Eingabesprache in Kiosk-Modus Create New Desktop behoben.</li>
 				<li>Absturz bei Navigation via Link in PDF behoben.</li>
 				<li>Navigation mit Tastatur-Kombinationen unterbunden.</li>
-				<li>Erkennung von Moodle-Session für SEB-Server-Integration behoben.</li>
-				<li>Generische Methode zum Erhalt der LMS-Session für SEB-Server-Integration hinzugefügt.</li>
 				<li>Problem behoben bei welchem Konfigurations-Dateien dargestellt statt heruntergeladen wurden.</li>
 				<li>Bemerkung über Laufzeit-Abhängigkeiten zur Bestätigungsseite vom Setup hinzugefügt und Fehlermeldung vom Setup-Bundle erweitert.</li>
 				<li>Grundlegende Überwachung von Anzahl und Typ der angeschlossenen Bildschirme.</li>
@@ -300,26 +306,34 @@
 				<li>Problem mit der Zeichenketten-Umwandlung beim Laden der Icons im Dateisystem-Dialog behoben.</li>
 				<li>Browser-Engine auf Version 90.6.5 (Chromium-Version 90.0.4430.93) aktualisiert.</li>
 				<li>Bekanntes Problem: Links in PDF-Dokumenten funktionieren nicht aufgrund eines Problems in der Browser-Engine (siehe https://bitbucket.org/chromiumembedded/cef/issues/3143/pdf-link-navigation-not-working).</li>
-				<li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe MicrosoftEdge/WebView2Feedback#960).</li>
 			</ul>
+			<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und standardmässig deaktiviert sind:</p>
+			<ul>
+			  <li>Echtzeit-Überwachung mit Jitsi Meet und Erweiterungen für Echtzeit-Überwachung für die SEB-Server-Integration. Diese Funktionalität ist experimentell.</li>
+			  <li>Erkennung von Moodle-Session für SEB-Server-Integration behoben.</li>
+              <li>Generische Methode zum Erhalt der LMS-Session für SEB-Server-Integration hinzugefügt.</li>
+			  <li>Bekanntes Problem: Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe MicrosoftEdge/WebView2Feedback#960).</li>
+	      </ul>
 			
 			<h5 id="sebh5">Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.1.1:</h5>
-			<p>Version 3.1.0 beinhaltet neue Funktionalität für die SEB-Server Integartion mit Moodle und behebt einige Probleme, welche von der Community gemeldet wurden.</p>
+			<p>Version 3.1.0 beinhaltet neue Funktionalität für die optionale SEB-Server Integration mit Moodle und behebt einige Probleme, welche von der Community gemeldet wurden.</p>
 			<ul>
-				<li>Unterstützung von exam ID in SEB-Server Konfigurationen.</li>
-				<li>Unterstützung für abgesicherte Quizzes mit SEB Server und Moodle 3.9 (Deeper Integration).</li>
-				<li>Unterstützung für Loggen von Batterie- und WLAN-Status mit SEB-Server.</li>
 				<li>Sichergestellt dass fehlende Maschinen-Info den Start von SEB nicht verhindert.</li>
 				<li>Sichergestellt dass Remote-Verbindungen beim Start von SEB erkannt werden.</li>
 				<li>Probleme mit CORS behoben.</li>
 				<li>VC++ 2015 Redistributable mit VC++ Redistributable 2015-2019 ersetzt im Setup Bundle.</li>
 				<li>Browser-Engine auf Version 86.0.24 (Chromium-Version 86.0.4240.198) aktualisiert.</li>
 			</ul>
+			<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und standardmässig deaktiviert sind:</p>
+			<ul>
+			  <li>Unterstützung von exam ID in SEB-Server Konfigurationen.</li>
+			  <li>Grundlegende Unterstützung für abgesicherte Quizzes mit SEB Server und Moodle 3.9 (Deeper Integration).</li>
+			  <li>Unterstützung für Loggen von Batterie- und WLAN-Status mit SEB-Server.</li>
+		  </ul>
 			
 			<h5 id="sebh5">Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.1.0:</h5>
-			<p>Version 3.1.0 beinhaltet grundlegende Unterstützung für den SEB Server, Textsuche für den integrierten Browser und einen ersten Schritt in Richtung Funktionsparität von SEB für alle drei Betriebssysteme (Windows, macOS und iOS).</p>
+			<p>Version 3.1.0 beinhaltet grundlegende, optionale Unterstützung für den SEB Server, Textsuche für den integrierten Browser und einen ersten Schritt in Richtung Funktionsparität von SEB für alle drei Betriebssysteme (Windows, macOS und iOS).</p>
 			<ul>
-				<li>Grundlegende Unterstützung für SEB-Server.</li>
 				<li>Textsuche für die Browser-Applikation.</li>
 				<li>Zugriffsbeschränkung für den Dateisystem-Dialog (beim herunterladen oder hochladen).</li>
 				<li>Unterstützung für Secure Sessions.</li>
@@ -340,6 +354,10 @@
 				<li>Problem beim Start vom SEB-Service behoben.</li>
 				<li>Browser-Engine auf Version 85.3.13 (Chromium-Version 85.0.4183.121) aktualisiert.</li>
 			</ul>
+			<p>Optionale Funktion, welche individuell konfiguriert werden muss und standardmässig deaktiviert ist:</p>
+			<ul>
+			  <li>Grundlegende Unterstützung für SEB-Server.</li>
+		  </ul>
 			
 			<h5 id="sebh5">Release Notes für <a href="../download_en.html#Windows">SEB 3.0.1 für Windows</a>:</h5>
 			<p>Version 3.0.1 behebt ein Problem von SEB 3.0.0 welches vor allem einige Benutzer in BYOD-Szenarien gemeldet haben. Die neue Version sollte verhindern, dass Anti-Malware-Software SEB fälschlicherweise als Malware detektiert (False-Positive-Erkennung durch Heuristik und ähnliche Algorithmen). In manchen Fällen führte dies dazu, dass der SEB-Windows-Service Einstellungen in der Windows Registry nicht korrekt setzen resp. zurücksetzen konnte (z.B. für die Ein/Aus-Optionen) und führte dazu, dass SEB 3.0.0 nicht erfolgreich gestartet werden konnte. Nachfolgend eine Liste der wichtigsten neuen Funktionen und Änderungen:</p>

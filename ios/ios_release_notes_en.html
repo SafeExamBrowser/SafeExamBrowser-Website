@@ -241,12 +241,6 @@
 	        </li>
 		    <li> SEB JavaScript API, currently for querying app version details, ConfigKey and BrowserExamKey security elements.<br>
 	        </li>
-		    <li> Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. </li>
-		    <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.<br>
-	        </li>
-		    <li> Support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.</li>
-		    <li>Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. SEB doesn't use any centralized server instances and the according features are by default disabled.<br>
-	        </li>
 		    <li> Fix for &quot;Back to Safari&quot; button/link function in visible Status Bar on iOS 14 before 14.5 in AAC kiosk mode.</li>
 		    <li>SEB doesn't show context menu on phone numbers detected by the web view anymore.</li>
 		    <li>Full support for Basic Authentication (+Digest+NTLM) for seb(s) links and in WebViews (in classic WebView, set the key <em>sendBrowserExamKey=true</em> or use embedded certificates).</li>
@@ -260,6 +254,14 @@
 		      which are the BEK and CK hashed with the URL of the page. The keys are identical to the ones send in the HTTP request header when the classic WebView is used. Use this new JS API in an assessment web app with BEK/CK and WKWebView. Also set the key <em>browserWindowWebView</em> to the policy "Prefer Modern" <em>(value 3)</em>.</li>
 		    <li>Variable <span class="codetext">SafeExamBrowser.version</span> with format <span class="codetext">appDisplayName_iOS_versionString_buildNumber_bundleID<br>
 		    </span> This variable is set regardless whether <span class="codetext">updateKeys()</span> is  called.</li>
+	      </ul>
+		  <p>Optional features, which need to be individually configured and are disabled by default: </p>
+		  <ul>
+		    <li>Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. </li>
+		    <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.<br>
+	        </li>
+		    <li> Support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.</li>
+		    <li>Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. SEB doesn't use any centralized server instances and the according features are by default disabled.</li>
 	      </ul>
 			
 		  <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.17</a>:</h5>

@@ -227,6 +227,74 @@
         
         <!-- Content -->
 
+	<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.0</a>:</h5>
+    <p>SEB 3.0 for macOS is a major update, supporting the modern WebKit browser engine and access to camera/microphone via WebRTC.</p>
+    <ul>
+      <li>
+        <p>Support for the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications.</p>
+      </li>
+      <li>
+        <p>Access to camera/microphone (<em>getUserMedia</em> Web API) via WebRTC on macOS 11.1 Big Sur and newer. You can use web-based video conferencing and remote proctoring solutions, as long as the requirements explained below are met, so that SEB can use the modern WebView. Note: Apple currently doesn't support <em>getDisplayMedia</em> in WKWebView for screen sharing.</p>
+      </li>
+      <li>
+        <p>Due to refactored code using newer APIs, SEB 3.0 requires macOS 10.11 or later. We recommend to only use macOS versions which still receive security updates from Apple (the three most recent, currently macOS 10.14, 10.15 and 11).</p>
+      </li>
+      <li>
+        <p>When using the modern WebKit browser engine (WKWebView), SEB currently doesn't support <em>URL content filters</em>(only URL filters for links and page loading) and <em>sending the Config Key and Browser Exam Key in HTTP headers</em> (the latter feature will not be possible with WKWebView at all, so you will need to transition to the SEB JavaScript API in your web applications, see the <a href="https://safeexambrowser.org/developer/seb-config-key.html" rel="nofollow">developer documentation</a>). If one of the settings <em>sendBrowserExamKey=true</em> or <em>URLFilterEnableContentFilter=true</em> is enabled, the classic WebView is used depending on the new setting <em>Preferences/ Browser/"Select Browser Engine Policy"</em> (key <em>browserWindowWebView</em>), <em>"Prefer Modern in New Tab+Different Host"</em> (value 2), ensures that you still can use testing systems/LMS like Moodle which use the Browser Exam/Config Key test for SEB connecting to the exam (as they open in the classic WebView), but webpages opened in new tabs, which have another host than the exam system, open in WKWebView.</p>
+      </li>
+      <li>
+        <p>Support for the new <a href="https://safeexambrowser.org/developer/seb-config-key.html" rel="nofollow">SEB JavaScript API</a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements).</p>
+      </li>
+      <li>
+        <p>Support for restart session (<a href="https://safeexambrowser.org/macosx/mac_usermanual_en.html#link-to-quit-seb-after-exam" rel="nofollow">Preferences/Exam/Link to quit SEB after exam/Restart instead of quitting</a>) and quit SEB/session features, which are mostly interesting for managed Macs and kiosk environments: If client settings are secure (have a quit password set), SEB was not started with a seb(s) link or .seb file and an exam session is quit, SEB is not quit (terminated), but only the exam session (SEB is restarted with client settings).</p>
+      </li>
+      <li>
+        <p>Fixes security issue with "Revert to Client Settings" and "Configure Client" in Preferences window.</p>
+      </li>
+      <li>
+        <p>Private Clipboard is also supported when using the modern WebView (WKWebView) and working with commands in menu bar / Edit.</p>
+      </li>
+      <li>
+        <p>Added setting in Preferences / Security (allowMacOSVersionNumberCheckFull) for full control about minimal allowed macOS version (major/minor/patch version numbers, keys allowMacOSVersionNumberMajor/ allowMacOSVersionNumberMinor/ allowMacOSVersionNumberPatch).</p>
+      </li>
+      <li>
+        <p>Fixed issue with setting Preferences / Security / Enforce minimal macOS version.</p>
+      </li>
+      <li>
+        <p>Again asking for Admin password when settings aren't encrypted.</p>
+      </li>
+      <li>
+        <p>Use AAC kiosk mode only on macOS 15.4+ and 11.4+ (except 11.0 - 11.3, as there was an issue with DNS lookup. This caused pages with yet unknown domains to not load).</p>
+      </li>
+      <li>
+        <p>No longer using AAC modal alert workaround on macOS 12 Monterey (as an issue causing application modal alerts to be invisible was fixed there).</p>
+      </li>
+      <li>
+        <p>Page and text zoom now also fully work with WKWebView.</p>
+      </li>
+      <li>
+        <p>Fixed repeated drag-and-drop onto Preferences window. Note: files in iCloud drive need to be downloaded first in Finder (cloud icon in list view) before they can be dragged-dropped.</p>
+      </li>
+      <li>
+        <p>Fixed double toolbar icon for "General" pane when opening settings when the Preferences window already was open.</p>
+      </li>
+      <li>
+        <p>Fixed check if reconfiguring is allowed when a .seb config file is opened while SEB is running already (considering the Exam / Allow Reconfiguring setting).</p>
+      </li>
+      <li>
+        <p>Now also supporting gzip compressed, unencrypted .seb files.</p>
+      </li>
+      <li>
+        <p>Updated Network / Filter / Teach URL Filter feature for modern WebView (WKWebView). Note: If content filtering is enabled, classic WebView is used.</p>
+      </li>
+      <li>
+        <p>Fixed Teach URL Filter feature on macOS 11+ also for classic WebView.</p>
+      </li>
+      <li>
+        <p><a href="https://safeexambrowser.org/macosx/mac_usermanual_en.html#BrowserPane" rel="nofollow">Setting to enable WebInspector</a> (developer tools) and remote inspection (only when running a debug build) is now functional in WKWebView, although the "Inspect Element" context menu (<a href="https://safeexambrowser.org/macosx/mac_usermanual_en.html#SecurityPane" rel="nofollow">right mouse click must be enabled in settings</a> as well) doesn't work correctly with WKWebView.</p>
+      </li>
+    </ul>
+
 	<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.3.2</a>:</h5>
     <p>SEB 2.3.2 is a minor update for 2.3.1 with one bug fix:</p>
     <ul>

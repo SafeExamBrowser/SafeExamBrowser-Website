@@ -251,7 +251,7 @@
 		</p>
 		<p><strong>Safe Exam Browser 3.3.2 for Windows 8.1, 10 and 11</strong><br /><span class="codetext">SHA1: 5b1afe353aefe48942822f89d9f1e2b1f9833750</span></p>
 		<p><a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/download/3.3.2/SEB_3.3.2.413_SetupBundle.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/releases/tag/3.3.2" target="_blank">GitHub project site</a>.<br /></p>
-		<p>This update adds a new JavaScript API to query the browser exam key (BEK) and configuration key (CK), improves the SEB-Server integration and fixes various issues. Below a list of the most prominent new features and changes:</p>
+		<p>This update adds a new JavaScript API to query the browser exam key (BEK) and configuration key (CK), improves the optional SEB-Server integration (which needs to be individually configured and is never enabled by default) and fixes various issues. Below a list of the most prominent new features and changes:</p>
 		<ul>
 			<li>Implemented JavaScript API to query browser exam key (BEK) and configuration key (CK).</li>
     		<li>Extended permissive configuration for configuration resources which require authentication.</li>
@@ -359,7 +359,7 @@
           <ul>
             <li>Support for the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications. </li>
             <li>Access to camera/microphone via WebRTC on macOS 11.1 Big Sur and newer. You can use web-based video conferencing and remote proctoring solutions, as long as the requirements explained in <a href="macosx/mac_release_notes_en.html">release notes</a> are met, so that SEB can use the modern WebView. Note: Apple currently doesn't support <em>getDisplayMedia</em> in WKWebView for screen sharing. </li>
-            <li>Due to refactored code using newer APIs, SEB 3.0 requires macOS 10.11 or later (using the modern WebView requires macOS 10.13 or later). We recommend to only use macOS versions which still receive security updates from Apple (the three most recent, currently macOS 10.14, 10.15 and 11). </li>
+            <li>Due to refactored code using newer APIs, SEB 3.0 requires macOS 10.11 or later (using the modern WebView requires macOS 10.13 or later). We recommend to only use macOS versions which still receive security updates from Apple (the three most recent, currently macOS 10.15, 11 and 12). </li>
             <li>Support for the new <a href="developer/seb-config-key.html" rel="nofollow">SEB JavaScript API</a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements). </li>
             <li>Support for restart session <em>(</em><a href="macosx/mac_usermanual_en.html#link-to-quit-seb-after-exam" rel="nofollow"><em>Preferences/Exam/Link to quit SEB after exam/Restart instead of quitting</em></a><em>)</em> and quit SEB/session features, which are mostly interesting for managed Macs and kiosk environments: If client settings are secure (have a quit password set), SEB was not started with a seb(s) link or .seb file and an exam session is quit, SEB is not quit (terminated), but only the exam session (SEB is restarted with client settings). </li>
             <li>Added setting in <em><a href="macosx/mac_usermanual_en.html#SecurityPane">Preferences / Security</a> / Check full macOS version number</em> for full control about minimal allowed macOS version (major/minor/patch version numbers). </li>
@@ -399,7 +399,7 @@
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 11 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>The  major update SEB 3 for iOS supports the modern WebKit browser engine, access to camera/microphone via WebRTC on iOS 14.3, SEB Server and live remote proctoring. </p>
+        <p>The  major update SEB 3 for iOS supports the modern WebKit browser engine, access to camera/microphone via WebRTC on iOS 14.3, and the optional, by default disabled features SEB Server and live remote proctoring. </p>
         <p>New in SEB 3.0.1 for iOS:</p>
           <ul>
             <li>SEB 3.0.1 runs by default on iOS/iPadOS 15 </li>
@@ -412,17 +412,20 @@
           <li> SEB 3.0 for iOS can now also be started with seb(s) links to servers requiring authentication (including Basic Auth).</li>
           <li> With the SEB integration in Moodle 3.9 or newer, you can now use the &quot;Launch Safe Exam Browser&quot; button to open the quiz in SEB for iOS.<br>
           </li>
-          <li> SEB JavaScript API, currently for querying app version details, ConfigKey and BrowserExamKey security elements.<br>
-          </li>
+          <li> SEB JavaScript API, currently for querying app version details, ConfigKey and BrowserExamKey security elements.</li>
+          <li> Fix for &quot;Back to Safari&quot; button/link function in visible Status Bar on iOS 14 before 14.5 in AAC kiosk mode.</li>
+          <li>SEB doesn't show context menu on phone numbers detected by the web view anymore.</li>
+        </ul>
+        <p>Optional features, which need to be individually configured and are disabled by default:<br>
+        </p>
+        <ul>
           <li> Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. You can use any Jitsi Meet server to test this feature, for example https://meet.jit.si (or install your own Jitsi Meet server).</li>
           <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.<br>
           </li>
           <li> Support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.<br>
           </li>
-          <li> Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. SEB doesn't use any centralized server instances and the according features are by default disabled.<br>
+          <li> Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. <strong>SEB doesn't use any centralized server instances and the according features are by default disabled.</strong><br>
           </li>
-          <li> Fix for &quot;Back to Safari&quot; button/link function in visible Status Bar on iOS 14 before 14.5 in AAC kiosk mode.</li>
-          <li>SEB doesn't show context menu on phone numbers detected by the web view anymore.</li>
         </ul>
         <p>Main Features:</p>
         <ul id="seblist">

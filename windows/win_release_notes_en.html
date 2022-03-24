@@ -225,7 +225,7 @@
         <div class="col-md-9" role="main">
 		
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.2:</h5>
-		<p>Version 3.3.2 adds a new JavaScript API to query the browser exam key (BEK) and configuration key (CK), improves the SEB-Server integration and fixes various issues.</p>
+		<p>Version 3.3.2 adds a new JavaScript API to query the browser exam key (BEK) and configuration key (CK), improves the optional SEB-Server integration and fixes various issues.</p>
         <ul>
 			<li>Implemented JavaScript API to query browser exam key (BEK) and configuration key (CK).</li>
     		<li>Extended permissive configuration for configuration resources which require authentication.</li>
@@ -235,57 +235,63 @@
     		<li>Fixed bug with reconfiguration mechanism and SEB service component.</li>
     		<li>Implemented correct language header for browser.</li>
     		<li>Improved resource probing for network configuration resources.</li>
-    		<li>Implemented transmission of computer information to SEB Server.</li>
-    		<li>Implemented reading ping interval from SEB Server connection configuration.</li>
-    		<li>Implemented transmission of a notification to SEB Server when power supply connection changes.</li>
     		<li>Updated browser engine to version 97.1.11 (Chromium version 97.0.4692.71).</li>
-			<li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
-			<li>Known issue: Browser window popups opened via JavaScript do not work as expected, see https://github.com/SafeExamBrowser/seb-win-refactoring/issues/240.</li>
-	  	</ul>
+            <li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+            <li>Known issue: Browser window popups opened via JavaScript do not work as expected, see https://github.com/SafeExamBrowser/seb-win-refactoring/issues/240.</li>
+   		  </ul>
+        <p>Optional features, which need to be individually configured and are disabled by default:</p>
+        <ul>
+          <li>Implemented transmission of computer information to SEB Server.</li>
+          <li>Implemented reading ping interval from SEB Server connection configuration.</li>
+          <li>Implemented transmission of a notification to SEB Server when power supply connection changes.</li>
+        </ul>
 		
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.1:</h5>
-		<p>Version 3.3.1 improves the performance of the SEB-Server integration, adds a raise hand functionality for the live remote proctoring with SEB-Server and fixes various minor issues.</p>
+		<p>Version 3.3.1 improves the performance of the optional SEB-Server integration, adds a raise hand functionality for the optional live remote proctoring with SEB-Server and fixes various minor issues.</p>
         <ul>
-			<li>Implemented raise hand functionality for live remote proctoring with SEB-Server.</li>
-			<li>Improved performance of SEB-Server integration.</li>
 			<li>Changed handling of WebView2 dependency in setup bundle to circumvent MSFT's continuing changes to the bootstrapper.</li>
 			<li>Added new configuration option for middle mouse button.</li>
 			<li>Ensured the main browser window always has input focus after startup.</li>
 			<li>Fixed issue in URL filter when processing mailto links.</li>
-			<li>Updated integration of Zoom for live remote proctoring.</li>
-			<li>Changed transmission of LMS session identifier to SEB-Server to only take place once when the identifier changes.</li>
 			<li>Fixed visibility of reload button in browser windows to be according to active configuration value.</li>
 			<li>Removed obsolete browser zoom options in configuration tool.</li>
 			<li>Updated browser engine to version 92.0.25 (Chromium version 92.0.4515.131).</li>
-			<li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
-	  	</ul>
+		  </ul>
+        <p>Optional features, which need to be individually configured and are disabled by default:</p>
+        <ul>
+          <li>Implemented raise hand functionality for live remote proctoring with SEB-Server.</li>
+          <li>Improved performance of SEB-Server integration.</li>
+          <li>Changed transmission of LMS session identifier to SEB-Server to only take place once when the identifier changes.</li>
+          <li>Updated integration of Zoom for live remote proctoring.</li>
+          <li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+        </ul>
 			
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.0:</h5>
-		<p>Version 3.3.0 introduces live proctoring with Zoom, adds support for basic screen sharing in the integrated browser and fixes various issues reported by the community.</p>
+		<p>Version 3.3.0 introduces optional live proctoring with Zoom, adds support for basic screen sharing in the integrated browser and fixes various issues reported by the community.</p>
         <ul>
-			<li>Added live proctoring support for Zoom and improved live proctoring integration with SEB Server.</li>
 			<li>Added support for basic screen sharing in the integrated browser.</li>
 			<li>Implemented temporary file download and upload directory for integrated browser.</li>
-			<li>Improved handshake procedure with SEB Server.</li>
-			<li>Fixed possible data leak in proctoring implementation.</li>
 			<li>Improved error message for display monitoring.</li>
 			<li>Improved generic start error message to always include the log files of the affected session.</li>
 			<li>Extended default list of prohibited applications.</li>
 			<li>Fixed issue where links in PDF documents didn't work due to a bug in the browser engine (see https://bitbucket.org/chromiumembedded/cef/issues/3143/pdf-link-navigation-not-working).</li>
 			<li>Updated browser engine to version 91.1.21 (Chromium version 91.0.4472.114).</li>
-			<li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
-	  	</ul>
+		  </ul>
+        <p>Optional features, which need to be individually configured and are disabled by default:</p>
+        <ul>
+          <li>Added live proctoring support for Zoom and improved live proctoring integration with SEB Server.</li>
+          <li>Improved handshake procedure with SEB Server.</li>
+          <li>Fixed possible data leak in proctoring implementation.</li>
+          <li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+        </ul>
 			
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.2.0:</h5>
-		<p>Version 3.2.0 introduces live proctoring with Jitsi Meet, enables WebRTC for the integrated browser engine and fixes issues reported by the community.</p>
+		<p>Version 3.2.0 introduces optional live proctoring with Jitsi Meet, enables WebRTC for the integrated browser engine and fixes issues reported by the community.</p>
         <ul>
-			<li>Added live proctoring support with Jitsi Meet and live proctoring extensions for SEB Server integration. This feature is still experimental.</li>
 			<li>Enabled WebRTC for integrated browser engine.</li>
 			<li>Fixed issue with input language switch of Windows being rendered in kiosk mode Create New Desktop.</li>
 			<li>Fixed crash when navigating via link in PDF.</li>
 			<li>Fixed handling of navigation with keyboard modifiers.</li>
-			<li>Extended detection of Moodle session for SEB Server integration.</li>
-			<li>Added generic method to retrieve LMS session identifier for SEB Server integration.</li>
 			<li>Fixed issue where configuration files were rendered instead of being downloaded.</li>
 			<li>Added remark about runtime dependencies to setup confirmation page and extended error message of setup bundle.</li>
 			<li>Added basic display monitoring verifying count and type of connected displays.</li>
@@ -300,26 +306,34 @@
 			<li>Fixed issue with string marshalling when loading icons for file system dialog.</li>
 			<li>Updated browser engine to version 90.6.5 (Chromium version 90.0.4430.93).</li>
 			<li>Known issue: Links in PDF documents don't work due to an issue in the browser engine (see https://bitbucket.org/chromiumembedded/cef/issues/3143/pdf-link-navigation-not-working).</li>
-			<li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960).</li>
-	  	</ul>
+		  </ul>
+        <p>Optional features, which need to be individually configured and are disabled by default:</p>
+        <ul>
+          <li>Added live proctoring support with Jitsi Meet and live proctoring extensions for SEB Server integration. This feature is still experimental.</li>
+          <li>Extended detection of Moodle session for SEB Server integration.</li>
+          <li>Added generic method to retrieve LMS session identifier for SEB Server integration.</li>
+          <li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960).</li>
+        </ul>
 			
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.1.1:</h5>
-		<p>Version 3.1.0 adds new functionality for the SEB Server integration with Moodle and fixes a few issues reported by the community.</p>
+		<p>Version 3.1.0 adds new functionality for the optional SEB Server integration with Moodle and fixes a few issues reported by the community.</p>
         <ul>
-			<li>Added support for exam ID in SEB Server configurations.</li>
-			<li>Added support for secured quizzes with SEB Server and Moodle 3.9 (Deeper Integration).</li>
-			<li>Added support for battery and WLAN status logging with SEB Server.</li>
 			<li>Ensured missing machine info doesn't prevent startup.</li>
 			<li>Ensured remote connections are recognized during startup.</li>
 			<li>Fixed CORS issues.</li>
 			<li>Replaced VC++ 2015 Redistributable with VC++ Redistributable 2015-2019 in setup bundle.</li>
 			<li>Updated browser engine to version 86.0.24 (Chromium version 86.0.4240.198).</li>
-	  	</ul>
+		  </ul>
+        <p>Optional features, which need to be individually configured and are disabled by default:</p>
+        <ul>
+          <li>Added support for exam ID in SEB Server configurations.</li>
+          <li>Added basic support for secured quizzes with SEB Server and Moodle 3.9 (Deeper Integration).</li>
+          <li>Added support for battery and WLAN status logging with SEB Server.</li>
+        </ul>
 			
 		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.1.0:</h5>
-		<p>Version 3.1.0 adds basic support for SEB Server, text search for the integrated browser and a first step towards feature parity of SEB for all three operating systems (Windows, macOS and iOS).</p>
+		<p>Version 3.1.0 adds basic optional support for SEB Server, text search for the integrated browser and a first step towards feature parity of SEB for all three operating systems (Windows, macOS and iOS).</p>
         <ul>
-			<li>Basic support for SEB server.</li>
 			<li>Text search for browser application.</li>
 			<li>Access restriction for file system dialog (when downloading or uploading).</li>
 			<li>Added settings to allow to reconfigure SEB, even it is already running in a secure  session (a quit password is set in the currently active settings).</li>
@@ -339,6 +353,10 @@
 			<li>Fixed issue with SEB service startup.</li>
 			<li>Updated browser engine to version 85.3.13 (Chromium version 85.0.4183.121).</li>
 		  </ul>
+        <p>Optional feature, which needs to be individually configured and is disabled by default:</p>
+        <ul>
+          <li>Basic support for SEB server.</li>
+        </ul>
         <p><strong>IMPORTANT: SEB 3.1 for Windows uses a different policy to decide if it can be reconfigured when a seb(s) URL is opened and a .seb config file downloaded: </strong>When running in a secure session (a quit password is set in the currently active settings), SEB 3.1 cannot be reconfigured, even if it's using the persisted client settings. Earlier versions could always be reconfigured when using client settings. If you want to allow reconfiguring SEB by opening a seb(s) URL while running in a secure session, then you need to use the "Allow Reconfiguring" and "Reconfiguring Config URL" options in SEB Configuration Tool/Exam. For the same behavior as in previous versions, you can enable "Allow Reconfiguring" and set "Reconfiguring Config URL" to "*" (wildcard symbol, meaning any seb(s) URL or download URL of a .seb config file is allowed to reconfigure SEB) in your SEB client settings. This policy settings for reconfiguring are already used by SEB for macOS and iOS.</p>
         <br>
         
