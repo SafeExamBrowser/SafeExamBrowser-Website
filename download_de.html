@@ -262,60 +262,7 @@
       </div>
       <!-- /Download Box -->
       
-	  <h3 class="page-header seb-section-header sebnavbar-link" id="WindowsLegacy">
-        <a href="#WindowsLegacy" class="anchorjs-link"></a>
-        Windows Legacy
-      </h3>
-			
-      <!-- Download Box SEB 2.x -->
-      <div class="well">
-        <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.4.1/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
-            <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.4.1 für Windows</span>
-          </a> 
-        </p>
-        
-        <p><strong>Safe Exam Browser 2.4.1 für Windows 7, 8.1 und 10</strong><br />
-          <span class="codetext">SHA1: aec3ef8a45a40942f8675e7ab77b896e1ce05dba</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.4.1/SafeExamBrowserInstaller.exe" target="_blank">Download</a> von unserer <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.4.1" target="_blank">GitHub Projekt-Seite</a>. <br />
-        </p>
-        <p>Safe Exam Browser 2.4.1 für Windows ist ein Wartungsupdate, welches verwendet werden kann, wenn die komplett erneuerte Version SEB 3.0 eine benötigte Funktion noch nicht enthält. In SEB 2.4.1 wurde ein Fehler beseitigt, welcher uns im Zusammenhang mit der erweiterten SEB-Moodle Integration gemeldet wurde (standardmässig verfügbar in Moodle 3.9 und als <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">Plugin für Moodle 3.7 und 3.8</a>).</p>
-        <p>Bitte beachten: Wir werden ältere Versionen zukünftig nicht mehr unterstützen und auch die Download-Links  nach einer Übergangsfrist entfernen. Nur mit aktuellen SEB-Versionen können Sie die bestmögliche Sicherheit und Stabilität Ihrer Prüfungsumgebung erzielen. <strong> Bevor Sie eine Support-Frage stellen oder einen Fehler melden möchten, installieren Sie bitte die neuste Version und testen Sie, ob das Problem mit der aktuellen Version immer noch auftritt. </strong>Wir können in Zukunft keine Supportfragen mehr beantworten, wenn die benutzte Version nicht erwähnt wird und nicht bestätigt wird, dass das Problem mit der neusten Version überprüft wurde.</p>
-        <p>Neue Funktionen in SEB 2.4.1:</p>
-        <ul>
-          <li>Fehler korrigiert, bei welchem das alte Browserfenster zusammen mit dem Firefox Datei Öffnen Dialog offen blieb, wenn mittels seb(s)-Link umkonfiguriert wurde. Dies sollte Fehler im Zusammenhang mit der erweiterten SEB-Moodle Integration lösen.</li>
-          <li>Fehler in Zusammenhang mit einer VMware Windows Registry Einstellung behoben: Diese wird nur vorgenommen, wenn dies in der  Konfiguration ausdrücklich erwünscht ist (siehe neue Einstellung im SEB Config Tool / Registry / &quot;Set VMware configuration&quot;). Diese Einstellung sollte nicht aktiviert werden, sofern SEB nicht  in einem virtuellen VMware Horizon View  Desktop benutzt wird.</li>
-          <li>Die Videokonferenz-Lösung Zoom wurde zu den standardmässig verbotenen Prozessen hinzugefügt. Wenn Sie SEB zusammen mit Zoom benutzen möchten, müssen sie die &quot;Active&quot;
-            
-          -Einstellung für Zoom in Applications / Prohibited Processes deaktivieren.</li>
-          <li>Unterstützung für Umgebungsvariablen in der Pfad-Angabe von erlaubten Prozessen hinzugefügt. Dies erlaubt es, Applikationen als erlaubte Prozesse zu starten, welche in einem Unterverzeichnis des Benutzerverzeichnisses installiert werden (z.B. %AppData%).</li>
-        </ul>
-        <p>Neue Funktionen seit SEB 2.4:</p>
-        <ul>
-          <li>Unterstützung des Config Key, mit welchem  sichergestellt werden kann, dass eine Prüfung nur mit korrekten, nicht modifizierten Einstellungen zugänglich ist. Der Config Key kann automatisch von einem kompatiblen Prüfungssystem generiert werden, zusammen mit der SEB-Konfigurationsdatei für eine Prüfung. Alle SEB-Versionen, welche den Config Key unterstützen, generieren denselben Schlüssel, sofern dieselbe SEB-Konfigurationsdatei benutzt wird.</li>
-          <li>Neue Einstellungs-Optionen, um das Löschen von Cookies beim Starten und Beenden einer Session zu steuern. Diese können dazu benutzt werden, Benutzer eingeloggt zu lassen (SEB mit Client-Einstellungen gestartet), wenn eine Prüfungs-Session gestartet wird.</li>
-          <li>TLS 1.2 wird jetzt beim Laden von .seb-Dateien mittels sebs:// Links unterstützt.</li>
-          <li>Weitere Standard-Applikationen zu der Liste der verbotenen Prozesse hinzugefügt.</li>
-          <li>Die private Zwischenablage funktioniert nun auch  mit Richtext-Editoren wie TinyMCE korrekt (kein doppeltes Einfügen von Text).</li>
-          <li>Weitere Fehler beseitigt.</li>
-        </ul>
-        <p>Allgemeine Funktionen:</p>
-        <ul id="seblist2">
-          <li>Mittels der  Funktion <a href="windows/win_usermanual_en.html#AdditionalResources">zusätzliche Ressourcen (Additional Resources</a>) können einzelne  Webseiten, ganze  Websites oder Teile davon, HTML5-Webapplikationen und PDF-Dokumente sicher und bequem während einer Prüfung verwendet werden. Diese Ressourcen können entweder auf externen Servern liegen oder in  SEB-Konfigurationsdateien eingebettet werden.</li>
-          <li>Safe Exam Browser kann mittels speziellen SEB-Hyperlinks auf SEB-Konfigurationsdateien mit individuellen Einstellungen pro Prüfung betrieben und aus einem Standard-Webbrowser heraus gestartet werden. </li>
-          <li>Mit solchen SEB-Links und Konfigurationsdateien kann die SEB-Applikation auch konfiguriert werden, damit sie beim Starten jeweils die Startseite des von einer Institution verwendeten Prüfungssystems oder eine  Prüfungsportalseite anzeigt.</li>
-          <li>Die SEB-Konfigurationsdateien und -Links sind kompatibel mit SEB für macOS und iOS.</li>
-          <li>Safe Exam Browser enthält einen Touch-optimierten Modus für  Windows-Tablets. </li>
-          <li>Eine Sicherheitsfunktion überwacht Prozesse und verhindert, dass nicht erlaubte Applikationen geöffnet und aktiviert werden und Fenster anzeigen. SEB beinhaltet eine Liste von standardmässig verbotenen Prozessen.</li>
-          <li>Schaltflächen zum Neustarten der Prüfung, Neuladen der Seite, Wechseln der Tastaturbelegung, Verbinden mit WLAN-Netzwerken, Ändern der Lautstärke und eine Anzeige der aktuellen Zeit verbessern die Bedienbarkeit in Prüfungen.</li>
-          <li> Individuelle Proxy-Einstellungen, URL-Filter und Server-Zertifikate können pro Prüfung benutzt werden. </li>
-          <li>Das <span class="quote">SEB Config Tool</span> wurde überarbeitet und erlaubt nun das komfortable Bearbeiten und Testen von SEB-Konfigurationsdateien. </li>
-        </ul>
-        <p><span class="half_linespace">Weitere Infos in den <a href="windows/win_release_notes_de.html">Release Notes</a> und im englischen <a href="windows/win_usermanual_en.html">Handbuch</a>.</span></p>
-        
-      </div>
-      <!-- /Download Box -->
+
 			
       <!-- macOS Downloads -->
       <h3 class="page-header seb-section-header sebnavbar-link" id="MacOSX">
@@ -326,19 +273,20 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.0/SafeExamBrowser-3.0.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.1/SafeExamBrowser-3.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.0 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.1 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
-        <span class="codetext">Build 343F. SHA1: 03a761833c4dbb808c0fb7fc3d8324b591f8435b</span></p>
+        <span class="codetext">Build 343F. SHA1: c0f80e7c935b570538ca9a8dd204b41690520901</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.0/SafeExamBrowser-3.0.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.1/SafeExamBrowser-3.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.0 ist ein grosses Funktionsupdate, welches  neu die modernisierte WebKit-Browser-Engine und Zugriff auf Kamera/Mikrofon via das WebRTC-Protokoll unterstützt.</p>
+          <p>SEB 3.1 verbessert die Unterstützung für die moderne WebKit-Browser-Engine und für Barrierefreiheit/VoiceOver, fügt eine Textsuche in Browserfenstern hinzu und bietet viele Stabilitätsverbesserungen. Neu ist auch die optionale Unterstützung des <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>, zur einfachen Konfiguration und Überwachung von Prüfungsclients.</p>
+          <p>Neu seit SEB 3.0 für macOS:</p>
           <ul id="seblist">
             <li>Unterstützung  der modernisierten WebKit-Browser-Engine verbessert Leistung, Stabilität und Kompatibilität mit Webapplikationen.</li>
             <li>In Browserfenstern, welche die modernen WebKit-Engine verwenden (siehe <a href="macosx/mac_release_notes_en.html">Release Notes</a> betreffend notwendigen Voraussetzungen) ist Zugriff auf Kamera/Mikrofon via das WebRTC-Protokoll auf macOS 11.1 Big Sur und neuer möglich. </li>
@@ -372,29 +320,26 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.0.1 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.1 für iOS im App Store</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 11 und neuer</strong></p>
                 
-<p>Das grosse <span class="half_linespace">Funktionsupdate</span> SEB 3 für iOS unterstützt neu die modernisierte WebKit-Browser-Engine, Zugriff auf Kamera/Mikrofon via das WebRTC-Protokoll auf iOS 14.3 und optional <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> und Echtzeit-Überwachung (Live Remote Proctoring).</p>
-<p>Neu in SEB 3.0.1 für iOS:</p>
+<p>SEB 3.1 ist ein wichtiges Stabilitätsupdate, das die Unterstützung für die moderne WebKit-Browser-Engine und den optionalen <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> verbessert. Jetzt auch auf Deutsch!</p>
+<p>Neu seit SEB 3.0 für iOS:</p>
 <ul>
-  <li>Läuft standardmässig auf iOS/iPadOS 15.</li>
-  <li>Korrigiert den Fehler, dass ein benutzerdefinierter User Agent  oder -Suffix beim Umkonfigurieren nicht übernommen wurde.</li>
-</ul>
-<p>Neu in SEB 3.0 für iOS:</p>
-<ul id="seblist">
   <li> Unterstützung  der modernisierten WebKit-Browser-Engine, welche Leistung, Stabilität und Kompatibilität mit Webapplikationen erhöht.</li>
+</ul>
+<ul id="seblist">
   <li>Zugriff auf Kamera/Mikrofon via das WebRTC-Protokoll auf iOS 14.3 oder neuer.</li>
   <li> SEB 3.0 für iOS kann nun auch mittels seb(s) Links auf Server, welche Authentifizierung benötigen, gestartet werden (inklusive Basic Authentication).</li>
   <li> Mit der SEB-Integration in Moodle 3.9 oder neuer kann nun die Schaltfläche &quot;Safe Exam Browser starten&quot;  benutzt werden, um die Prüfung direkt in SEB für iOS zu öffnen.<br>
   </li>
   <li> SEB JavaScript API, welche momentan zur Abfrage der App-Versionsdetails und der ConfigKey/BrowserExamKey Sicherheitselemente benutzt werden kann.</li>
   <li> Fehlerkorrektur für den &quot;Zurück zu Safari&quot;-Link in der Statusleiste, welcher im AAC-Kioskmodus unter iOS 14 vor 14.5 funktionsfähig blieb (sofern die Statusleiste nicht mittels SEB-Konfiguration unsichtbar gemacht wurde).</li>
-  </ul>
+</ul>
 <p>Optionale Funktionen, welche individuell konfiguriert werden müssen und standardmässig deaktiviert sind:<br>
 </p>
 <ul>

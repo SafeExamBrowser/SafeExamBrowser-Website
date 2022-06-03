@@ -262,78 +262,6 @@
       </div>
       <!-- /Download Box -->
       
-	  <h3 class="page-header seb-section-header sebnavbar-link" id="WindowsLegacy">
-        <a href="#WindowsLegacy" class="anchorjs-link"></a>
-        Windows Legacy
-      </h3>
-			
-      <!-- Download Box SEB 2.x -->
-      <div class="well">
-        <p>
-          <a class="btn btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb/SEB_2.4.1/SafeExamBrowserInstaller.exe/download" target="_blank" alt="Download SEB for Windows">
-            <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 2.4.1 for Windows</span>
-          </a> 
-        </p>
-        
-        <p><strong>Safe Exam Browser 2.4.1 for Windows 7, 8.1 and 10</strong><br />
-          <span class="codetext">SHA1: aec3ef8a45a40942f8675e7ab77b896e1ce05dba</span></p>
-        <p> <a href="https://github.com/SafeExamBrowser/seb-win/releases/download/v2.4.1/SafeExamBrowserInstaller.exe" target="_blank">Download</a> from <a href="https://github.com/SafeExamBrowser/seb-win/releases/tag/v2.4.1" target="_blank">GitHub project site</a>. <br />
-        </p>
-        <p>SEB 2.4.1 for Windows is a maintenance release, which can be used if the refactored, more modern version SEB 3.0.1 misses a feature you need. SEB 2.4.1 fixes an issue which was reported to happen when using the SEB-Moodle Deeper Integration (available by default in Moodle 3.9 and as <a href="https://moodle.org/plugins/quizaccess_seb" target="_blank">plugin for Moodle 3.7 and 3.8</a>).</p>
-        <p><strong>Please note our new update policy: We will only support the latest SEB version and will remove all older SEB versions after a grace period.</strong> Only with updated SEB versions you can achieve the best possible security and stability of e-assessments. <strong>Before asking any support question or reporting a bug, install the latest SEB version and try to reproduce the issue with the most recent version. </strong>We can't answer questions anymore when the SEB version isn't mentioned or when you don't confirm you tried it with the current version. </p>
-        <p>New in SEB 2.4.1:</p>
-        <ul>
-          <li>Fixed issue when the old browser window stayed open while reconfiguring with seb(s) link, together with the Firefox file open dialog. Should fix issues when using SEB-Moodle Deeper Integration.<br>
-            </li>
-          <li> Implemented fix for VMware Windows Registry error: The Registry value for &quot;Enable VMware Client Shade&quot; will now only be set if the active configuration explicitly says so (see new setting in SEB Config Tool / Registry / &quot;Set VMware configuration&quot;. Don't enable this setting if you are not running SEB in a VMware Horizon View virtual desktop.<br>
-          </li>
-          <li> Added Zoom to list of prohibited applications. If you want to use Zoom together with SEB, you have to set its &quot;Active&quot; property to false (Applications / Prohibited Processes).<br>
-            </li>
-          <li> Added expansion of environment variables in path of permitted processes. This allows to configure applications to run as permitted process, which need to be installed in subdirectories of the user directory, for example %AppData%.</li>
-        </ul>
-        <p>New since SEB 2.4:</p>
-        <ul>
-          <li>Config Key feature, hash checksum value to verify settings used by SEB. The Config Key can be generated automatically by a compatible exam system together with the SEB config to be used for an exam. All SEB versions supporting the Config Key generate the same key, as long as the same SEB config file is used. <br>
-          </li>
-          <li> Implemented setting keys to control clearing cookies when starting/ending a session (examSessionClearCookiesOnStart / examSessionClearCookiesOnEnd). This can be used to keep users logged in (SEB started with client settings) after an exam session was started.<br>
-          </li>
-          <li> Now TLS 1.2 is supported for downloading .seb files using sebs:// links.<br>
-          </li>
-          <li> Added more default prohibited processes. <br>
-          </li>
-          <li> Private clipboard should now also work correctly with rich-text editors like TinyMCE (fixed double pasting of text). <br>
-          </li>
-          <li> Additional bugfixes.</li>
-        </ul>
-        <p>See <a href="windows/win_release_notes_en.html">release notes</a> for all changes.</p>
-        <p>Other features: </p>
-        <ul id="seblist">
-          <li>Using the powerful  feature "Additional Resources", external and embedded webpages, full or partial websites, HTML5 web applications and PDF documents can be accessed securely and easily in exams using icons in the SEB task bar (similar to permitted applications) or hierarchical popup menus.</li>
-          <li>Support for encrypted <span class="quote">.seb</span> setting files which allow to individually configure SEB per exam. The  configuration is compatible with  the Windows, Mac and iOS versions of SEB. Use the separate SEB Windows configuration tool to create <span class="quote">.seb</span> settings.</li>
-          <li>Buttons in the SEB task bar for back to start, reload page, change keyboard layout, switch Wi-Fi network, <a href="windows/win_usermanual_en.html#AppearancePane">change audio volume</a> and a display for the current time improve usability in exams. </li>
-          <li>Feature to quit SEB after the exam is submitted by specifying a <span class="quote">quit link</span> and placing this on the summary page displayed by your LMS after submitting the exam.</li>
-          <li>The <span class="quote">Browser Exam Key </span>allows an exam module to authenticate the connecting SEB version and its settings. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a> and <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a>, <a href="windows/win_usermanual_en.html#OpenOLAT">OpenOLAT</a> from version 10.2 has built-in support.</li>
-          <li>Configurable options (per exam) in the user interface: Size and positioning of browser windows (main window with the quiz and additional browser windows) can be preset. The SEB main browser window can be displayed full screen or as a sizable and movable window.</li>
-          <li>Permitted third party applications are easy to start and to switch to (autostart together with SEB and by clicking on its icon in the  SEB task bar). Prohibited processes and applications  can be defined which are closed when SEB starts up. SEB contains a list of default prohibited processes too.</li>
-          <li>PrintScreen can be blocked, the clipboard is cleared when SEB is started and stopped. </li>
-          <li>Security  feature  which monitors processes and hinders all non-permitted applications  to open, become active and display windows while SEB is running.</li>
-          <li>Individual proxy settings, URL filters and server certificates can be used per exam.</li>
-          <li>SEB config files saved for configuring a client can contain embedded cryptographic identities (X.509 certificates with private key) which will be installed in the Windows Certificate Store and  then can be used to decrypt <span class="quote">.seb</span> config files without having to use a settings password.</li>
-          <li>Screen saver and idle sleep  are paused while SEB is running to prevent having to enter an screen unlock password before the exam starts. </li>
-        </ul>
-        <p> SEB configuration editor for creating and modifying <span class="quote">.seb</span> settings files for Safe Exam Browser:</p>
-        <ul id="seblist">
-          <li>Allows to define all options for the Windows and Mac versions of SEB 2.x.</li>
-          <li>Can save <span class="quote">.seb</span> files for individual configuration per exam and per exam client, which are protected by  strong encryption against manipulation. </li>
-          <li>Configuration files can  configure a SEB exam client to show for example a portal page with the current exams.</li>
-          <li>Configuration files can be used to start an exam with individual configuration (like specific security and user interface options, permitted third party applications and additional resources, Browser Exam Key for authenticating these settings and the SEB application to an exam server, Quit Link to close SEB automatically when an exam is submitted etc.).</li>
-          <li>Supports <span class="quote">.seb</span> files encrypted with password or  X.509 (public/private key cryptography) certificates. For debugging purposes .seb configuration files can be saved unencrypted in an human readable XML format.</li>
-        </ul>
-        <p><span class="half_linespace">See <a href="windows/win_release_notes_en.html">release notes</a> for all changes and read the <a href="windows/win_usermanual_en.html"> manual</a> for more information.</span></p>
-        
-      </div>
-      <!-- /Download Box -->
 		
       <!-- macOS Downloads -->
       <h3 class="page-header seb-section-header sebnavbar-link" id="MacOSX">
@@ -344,18 +272,19 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.0/SafeExamBrowser-3.0.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.1/SafeExamBrowser-3.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.0 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.1 for macOS</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for macOS 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
-        <span class="codetext">Build 343F. SHA1: 03a761833c4dbb808c0fb7fc3d8324b591f8435b</span></p>
+        <span class="codetext">Build 343F. SHA1: c0f80e7c935b570538ca9a8dd204b41690520901</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.0/SafeExamBrowser-3.0.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.1/SafeExamBrowser-3.1.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
-          <p>SEB 3.0 for macOS is a major update, supporting the modern WebKit browser engine and access to camera/microphone via WebRTC.</p>
+          <p>SEB 3.1 improves support for the modern WebKit browser engine and for accessibility/VoiceOver, adds text search in browser windows and many stability improvements. Also new is the optional support for SEB Server, for easy configuration and monitoring of exam clients.</p>
+          <p>New since SEB 3.0:</p>
           <ul>
             <li>Support for the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications. </li>
             <li>Access to camera/microphone via WebRTC on macOS 11.1 Big Sur and newer. You can use web-based video conferencing and remote proctoring solutions, as long as the requirements explained in <a href="macosx/mac_release_notes_en.html">release notes</a> are met, so that SEB can use the modern WebView. Note: Apple currently doesn't support <em>getDisplayMedia</em> in WKWebView for screen sharing. </li>
@@ -394,20 +323,17 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.0.1 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.1 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 11 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>The  major update SEB 3 for iOS supports the modern WebKit browser engine, access to camera/microphone via WebRTC on iOS 14.3, and the optional, by default disabled features <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> and live remote proctoring. </p>
-        <p>New in SEB 3.0.1 for iOS:</p>
+        <p>SEB 3.1 for iOS is an important stability update, improving support for the modern WebKit browser engine (also adding page zoom), adding text search on web pages and improvements for the optional <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> integration (disabled by default). </p>
+        <p>New since SEB 3.0 for iOS:</p>
           <ul>
-            <li>SEB 3.0.1 runs by default on iOS/iPadOS 15 </li>
-            <li>Fixed that a custom user agent and suffix wasn't updated when reconfiguring SEB.</li>
+            <li> Support for the modern WebKit browser engine, which increases performance, stability and compatibility with web applications.</li>
           </ul>
-        <p>New in SEB 3.0 for iOS:</p>
         <ul>
-          <li> Support for the modern WebKit browser engine, which increases performance, stability and compatibility with web applications.</li>
           <li>Access to camera/microphone via WebRTC on iOS 14.3 or newer.</li>
           <li> SEB 3.0 for iOS can now also be started with seb(s) links to servers requiring authentication (including Basic Auth).</li>
           <li> With the SEB integration in Moodle 3.9 or newer, you can now use the &quot;Launch Safe Exam Browser&quot; button to open the quiz in SEB for iOS.<br>
@@ -440,7 +366,7 @@
           <li>SEB for iOS is also compatible with <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">Apple Classroom</a>.</li>
           <li>This  version contains some new features currently unique to the iOS version and almost all features of the macOS/Windows versions. Please check the <a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/22aea7b76c/" target="_blank">compatibility of SEB for iOS version 2.1.14</a> with your exam system.</li>
         </ul>
-        <p>See <a href="ios/ios_release_notes_en.html">release notes</a> for complete list of new features and changes. Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated for SEB 3.0). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
+        <p>See <a href="ios/ios_release_notes_en.html">release notes</a> for complete list of new features and changes. Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated for SEB 3.1). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
       </div>
       <!-- /Download Box -->
 
