@@ -224,10 +224,88 @@
         
         <!-- Content Column -->
         <div class="col-md-6" role="main">
+          <h5 id="sebh"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.1</a>:</h5>
+          <p>SEB 3.1 adds support for accessibility/VoiceOver, text search in browser windows, optional support for SEB Server and many stability improvements.</p>
+          <ul>
+            <li>Implemented accessibility support using VoiceOver and tabulator keyboard navigation (if keyboard navigation in System Preferences/Keyboard/Shortcuts is activated).</li>
+            <li>Added new setting Preferences / Browser / &quot;Tab focuses links&quot; (key tabFocusesLinks, enabled by default) to allow to use tabulator key to move between links and controls on a web page.</li>
+            <li>Improved accessibility in Preferences: Fixed tabbing to controls only worked in first preferences pane displayed. Fixed tab order of some buttons in Config pane.</li>
+            <li>Refactored SEB Javascript API to update the SafeExamBrowser.security.browserExamKey and security.configKey variables directly when loading a web page, without having to call the security.updateKeys(callback) function.</li>
+            <li>Added a custom reload() method to the SEB macOS WKWebView, so that the BEK/CK variables are set correctly also after a reload of a web page.</li>
+            <li>Now updateKeys() can also be called without a callback method.</li>
+            <li>Now supporting page zoom with pinch-to-zoom on a Mac trackpad (when using modern WebView and page zoom is enabled in SEB settings).</li>
+            <li>Added settings for default page level (defaultPageZoomLevel) and default text zoom level (defaultTextZoomLevel) in Preferences / User Interface.</li>
+            <li>Now also limiting zoom to predefined minimum and maximum levels. These settings currently only work in the modern WebView.</li>
+            <li>Added new macOS 12/iOS 15 API to prevent the repeatedly displayed WebRTC permissions dialog for a website to use camera/microphone access.</li>
+            <li>Added text search for web pages: Use the search icon in the browser window toolbar or cmd-F. This feature is not available in the full screen mode main window. Search in PDFs works only in modern WebView and macOS &gt;=11 / iOS &gt;= 14.</li>
+            <li>Added preset prohibited process for Universal Control.</li>
+            <li>Added missing SEB for Windows (3.3.2) settings to Preferences.</li>
+            <li>Added basic settings for SEB Server to Preferences / General.</li>
+            <li>Added automatic reload when web content process terminated in modern WebView.</li>
+            <li>Added separate macOS setting for allowing right mouse click: Preferences / Browser / Enable right mouse, key enableRightMouseMac.<br>
+              Implemented Javascript text input panel (see issue #163 ).</li>
+            <li>Fixed clearing cookies and web cashes etc. when quitting SEB.</li>
+            <li>Now logging macOS version in SEB logs.</li>
+            <li>Changed log level of very repetitive events to Verbose, to improve usefulness of logs when using SEB Server.</li>
+            <li>Fixed starting SEB with exam configuration when client settings are secure (have a quit password set).</li>
+            <li>Fixed keyboard shortcuts and menu bar menu items for reload and page/text zoom.</li>
+            <li>Removed/updated SEB Win 2.x settings in Browser pane (Allow video/audio capture), User Interface pane (&quot;Enable touch exit (Win)&quot;,<br>
+              &quot;Zoom mode Win (Ctrl-Mousewheel)&quot;) and Security pane / Hooked Keys (Enable right mouse now only for Win).</li>
+            <li>Updated text (and tool tip) for SEB Win 2.x settings &quot;Remote profile (Win&quot; in Browser pane to &quot;Clear cache (Win)&quot;.</li>
+            <li>Fixed conditional reload button display, reload warning and navigation settings.</li>
+            <li>Fixed web page title/URL wasn't updated after reload in modern WebView.</li>
+            <li>Now supporting the settings <em>browserWindowShowURL/newBrowserWindowShowURL = browserWindowShowURLAlways</em> also in SEB for macOS.</li>
+            <li>Fixed: SEB attempts to download PDF file instead of displaying it.</li>
+            <li>Fixed: Session cookies not persisted in Moodle from webpage in WKWebView to downloading config to page in WKWebView.</li>
+            <li>Fixed another rare case of session cookies not persisted in Moodle from webpage with WKWebView to another page with WKWebView.</li>
+            <li>Attempt to fix SEBOSXWKWebViewController didReceiveAuthenticationChallenge randomly crashes on Apple Silicon (see issue #176 ).</li>
+            <li>Updated alert text to &quot;Force Quit window or another system frontmost dialog&quot;.</li>
+            <li>Safe Exam Browser Xcode build Scheme (macOS) is now set to &quot;shared&quot; and contained in the repository.</li>
+            <li>Fixed: Opening downloaded files doesn't work.</li>
+            <li>No longer transferring session cookies with same name and domain from NSHTTPCookieStorage to WKWebView httpCookieStore.</li>
+            <li>Fixed: Downloads didn't work.</li>
+            <li>Fixed PDF files with &quot;download&quot; tag parameter were not downloaded but displayed in modern WebView.</li>
+            <li>If downloading is disabled, PDF files with &quot;download&quot; tag parameter are displayed in a new browser window (and their file name is used as webpage/window title).</li>
+            <li>Fixed setting &quot;download and open PDF files instead of displaying&quot; didn't open downloaded PDF.</li>
+            <li>Fixed determining filenames which contain a space from &quot;Content-Disposition&quot; &quot;attachment; filename=&quot;...&quot;</li>
+            <li>Fixed PDF files which should be downloaded (&quot;download&quot; tag parameter) might not have been recognized.</li>
+            <li>Fixed saving paths of downloaded files for automatically choosing files for upload.</li>
+            <li>Fixed: Settings Preferences / Browser / &quot;Enable JavaScript&quot; and &quot;Block pop-up windows&quot; in modern WebView.</li>
+            <li>Fixed: (Apple) Messages app set as prohibited process is not quit by SEB.</li>
+            <li>Fixed: Time is truncated in SEB dock/taskbar when changing dock size for various dock sizes.</li>
+            <li>Fixed: SEB crashes when restarting while using full screen mode.</li>
+            <li>Fixed: Spellchecking not disabled in Moodle rich-text editor when using WKWebView.
+              </li>
+            <li>Fixed: Legacy screen shot blocking not working.
+              </li>
+            <li>Opted-out of Dark Mode in SEB for macOS.
+              </li>
+            <li>Fixed: Copy-paste into text fields in Preferences window doesn't work.</li>
+            <li>Fixed: Paste from saved clipboard doesn't work when SEB is started with held option/alt key (to directly open the Preferences window).</li>
+            <li>SEB crashes when opening file upload dialogue: Fixed and added alert for uploading/downloading not allowed.</li>
+            <li>Fixed: Content-Disposition 'inline; ' interpreted as 'attachment; filename=...'</li>
+            <li>Fixed: Load error in WKWebView (at least for startURL) is not displayed.</li>
+            <li>Now stopping media playback when closing tab or quitting session (incl. fullscreen and PiP) in modern WebView (WKWebView) also when running on macOS 11.3 or newer.</li>
+            <li>&quot;Prohibited Process Locked SEB&quot; doesn't show process name/URL: Now process name and appURL information should always be displayed if it was available.</li>
+            <li>Attempting to fix unnecessarily displayed lock screen for process couldn't be terminated.</li>
+            <li>Added additional preset default prohibited process for AnyDesk.<br>
+              Fixed toolbar Reload button width in older macOS versions.</li>
+          </ul>
+          <p>Optional features which need to be individually configured and are disabled by default</p>
+          <ul>
+            <li>Support for lock screen notifications when connected to SEB Server. The notification is displayed with a bell symbol in front of the user name in the Running Exam monitoring view. Clicking the user name shows the error message which invoked a lock screen.</li>
+            <li>Lock screens can be unlocked from SEB Server (without having to communicate the Quit/Unlock password to students). Note that you have to confirm all pending lock screen notifications for a user if there are several before the lock screen closes.</li>
+            <li>Now sending computer/environment information to SEB Server (ONLY when connecting to an SEB Server instance is configured in individual settings): Local short user/account name, operating system version and device type (iPhone, iPad, iPod Touch), SEB version and machine name.</li>
+            <li>Now supporting battery monitoring by SEB Server.</li>
+            <li>Prevent reconfiguring an SEB Server exam with an exam config containing SEB Server connection settings.</li>
+            <li>Fixed implementation of general integration approach to receive the user identifier from an LMS and finish the handshake with SEB Server (currently supported by development versions of OpenOLAT and Ans).</li>
+            <li>Implemented workaround for receiving Moodle user identifier when using a SSO system like AAI/Shibboleth (requires a special Moodle PHP script, temporary solution until the full SEB Server integration for Moodle is implemented).</li>
+          </ul>
         
         <!-- Content -->
 
-	<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.0</a>:</h5>
+	<h5 id="sebh5">&nbsp; </h5>
+	<h5>Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.0</a>:</h5>
     <p>SEB 3.0 for macOS is a major update, supporting the modern WebKit browser engine and access to camera/microphone via WebRTC.</p>
     <ul>
       <li>
