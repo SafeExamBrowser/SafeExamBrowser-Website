@@ -218,8 +218,8 @@
                 <h3 class="page-header">Automatic Client Configuration</h3>
                 
 					<p>This feature is currently supported by the iOS version of Safe Exam Browser, but is supposed to be available soon also in the other SEB versions. It is available in the <span class="seb-section-header sebnavbar-link">Initial Configuration Assistant,</span> which is displayed by SEB for iOS when the SEB app is started directly (using its icon) the first time or hasn't been configured with persistent client settings (which are then used everytime the app is started directly with its icon).</p>
-					<p>An institution can place an SEB Config File at a specific path on their web server. SEB will search those predefined paths (there are several variations possible) when the main URL of that institution is typed in. You can try to enter <span class="quote">safeexambrowser.org</span>, SEB will then be reconfigured to display the demo exam portal page.</p>
-					<p>To support Automatic Client Configuration for your institution, you must be able to place an SEB configuration file (saved with for configurating client) named <strong>SEBClientSettings.seb</strong> in one of the following paths of your institution's web server:</p>
+					<p>An institution can place an SEB Config File at a specific path on their web server. SEB will search those predefined paths (there are several variations possible) when the main URL of that institution is typed in. You can try to enter <span class="quote">safeexambrowser.org</span>, SEB will then be reconfigured to display the <a href="http://safeexambrowser.org/exams/" target="_blank">demo exam portal page</a>.</p>
+					<p>To support Automatic Client Configuration for your institution, you must be able to place an SEB configuration file (saved for <a href="../ios/ios_usermanual_en.html#ConfigFilePane">configuring client</a>) named <strong>SEBClientSettings.seb</strong> in one of the following paths of your institution's web server:</p>
 					<ul>
 					  <li><strong>seb.</strong>institution.org/safeexambrowser/</li>
                       <li><strong>safeexambrowser.</strong>institution.org/safeexambrowser/</li>
@@ -229,7 +229,7 @@
 			  <p>Automatic Client Configuration will search all these paths in this order to find a <strong>SEBClientSettings.seb</strong> file and then configure the SEB client to use these settings. </p>
 					<p>Automatic Client Configuration works  if you enter the institution's main URL in the text field <strong>Enter a URL of an institution which supports SEB</strong>. Main URL refers to a host domain URL with optional subdomains. In the  examples above, you could also replace &quot;institution.org&quot; with &quot;subdomain.institution.org&quot; or &quot;subsubdomain.subdomain.institution.org&quot;.</p>
 					<p>Automatic Client Configuration also works with the feature &quot;Search Network&quot; as long as the device is connected to a Wi-Fi network or using VPN with a cellular connection (VPN for this feature is supported starting SEB 3.1.1 for iOS).
-            So when students are connected with your institution's network, they can configure SEB by just taping the &quot;Search Network&quot; button as long as you support Automatic Client Configuration.</p></div>
+            So when students are connected with your institution's network, they can configure SEB by just taping the &quot;Search Network&quot; button if you support Automatic Client Configuration.</p></div>
             <!-- / Content Column -->
             
         </div>
