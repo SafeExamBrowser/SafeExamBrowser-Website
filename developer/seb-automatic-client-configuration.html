@@ -23,7 +23,7 @@
 <!-- InstanceEndEditable -->
 
 <!-- InstanceBeginEditable name="doctitle" -->
-	<title>Safe Exam Browser - Developer Information</title>
+    <title>Safe Exam Browser: Developer – Integration</title>
 <!-- InstanceEndEditable -->
 
     <!-- Bootstrap Core CSS -->
@@ -187,44 +187,57 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-      
+
     	<!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Developer Documentation <small>Overview</small></h1>
+                <h1 class="page-header">Developer Documentation <small>Client Configuration</small></h1>
             </div>
         </div>
         <!-- /.row -->
         
         <!-- Content Row -->
         <div class="row">
-
+            
         	<!-- Sidebar Column -->
             <div class="col-md-3">
                 <div class="list-group hidden-print"> 
-                    <a href="overview.html" class="list-group-item active">Overview</a>
+                    <a href="overview.html" class="list-group-item">Overview</a>
                     <a href="seb-integration.html" class="list-group-item">Integration</a> 
                     <a href="seb-config-key.html" class="list-group-item">Config Key</a> 
                     <a href="seb-file-format.html" class="list-group-item">File Format</a> 
-                    <a href="seb-automatic-client-configuration.html" class="list-group-item">Automatic Client Configuration</a> 
+                    <a href="seb-automatic-client-configuration.html" class="list-group-item active">Automatic Client Configuration</a> 
                 </div>
             </div>
+      		<!-- /.row --> 
       
             <!-- Content Column -->
             <div class="col-md-9" role="main">
+            
+                <!-- Content -->
+                <h3 class="page-header">Automatic Client Configuration</h3>
                 
-                <!-- Content -->                
-                <p>This section of the website provides access to resources and information for developers, particularly for developers of learning management systems and e-assessment solutions looking to integrate SEB into their environment.</p>
-                
-            </div>
+					<p>This feature is currently supported by the iOS version of Safe Exam Browser, but is supposed to be available soon also in the other SEB versions. It is available in the <span class="seb-section-header sebnavbar-link">Initial Configuration Assistant,</span> which is displayed by SEB for iOS when the SEB app is started directly (using its icon) the first time or hasn't been configured with persistent client settings (which are then used everytime the app is started directly with its icon).</p>
+					<p>An institution can place an SEB Config File at a specific path on their web server. SEB will search those predefined paths (there are several variations possible) when the main URL of that institution is typed in. You can try to enter <span class="quote">safeexambrowser.org</span>, SEB will then be reconfigured to display the demo exam portal page.</p>
+					<p>To support Automatic Client Configuration for your institution, you must be able to place an SEB configuration file (saved with for configurating client) named <strong>SEBClientSettings.seb</strong> in one of the following paths of your institution's web server:</p>
+					<ul>
+					  <li><strong>seb.</strong>institution.org/safeexambrowser/</li>
+                      <li><strong>safeexambrowser.</strong>institution.org/safeexambrowser/</li>
+                      <li>institution.org/<strong>safeexambrowser/</strong></li>
+					  <li>institution.org/<strong>.well-known/</strong></li>
+			  </ul>
+			  <p>Automatic Client Configuration will search all these paths in this order to find a <strong>SEBClientSettings.seb</strong> file and then configure the SEB client to use these settings. </p>
+					<p>Automatic Client Configuration works  if you enter the institution's main URL in the text field <strong>Enter a URL of an institution which supports SEB</strong>. Main URL refers to a host domain URL with optional subdomains. In the  examples above, you could also replace &quot;institution.org&quot; with &quot;subdomain.institution.org&quot; or &quot;subsubdomain.subdomain.institution.org&quot;.</p>
+					<p>Automatic Client Configuration also works with the feature &quot;Search Network&quot; as long as the device is connected to a Wi-Fi network or using VPN with a cellular connection (VPN for this feature is supported starting SEB 3.1.1 for iOS).
+            So when students are connected with your institution's network, they can configure SEB by just taping the &quot;Search Network&quot; button as long as you support Automatic Client Configuration.</p></div>
             <!-- / Content Column -->
             
         </div>
         <!-- /.row (Content Row)-->
         
         <hr>
-        
-    <!-- InstanceEndEditable -->
+
+<!-- InstanceEndEditable -->
 
       <!-- Footer -->
       <footer>
