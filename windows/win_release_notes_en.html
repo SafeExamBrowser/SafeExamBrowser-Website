@@ -223,8 +223,46 @@
         
         <!-- Content Column -->
         <div class="col-md-9" role="main">
+			
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.4.0</b></h5>
+		<p>Version 3.4.0 introduces major accessibility improvements, fixes the parent-child relationship for popup windows, further improves the SEB-Server integration and provides various other important improvements.</p>
+		<p><span class="red">Starting with this release version, the Browser Exam Key of SEB for Windows is now also platform-specific, i.e. its value is different for the 32-bit (x86) and 64-bit (x64) build of the same version!</span></p>
+        <ul>
+			<li>Accessibility improvements providing compatibility with screen readers & improved keyboard navigation.</li>
+    		<li>Fixed parent-child relationship for popup windows.</li>
+			<li>Implemented new network control showing wired as well as wireless network information.</li>
+			<li>Implemented keyboard activator for taskbar (WIN key).</li>
+			<li>Implemented new module to verify application integrity.</li>
+			<li>Changed Browser Exam Key calculation to use algorithm provided by the integrity module by default.</li>
+			<li>Implemented new configuration option to control printing of web content.</li>
+			<li>Implemented new registry setting to suppress find printer option in system print dialog.</li>
+   			<li>Removed animated border of runtime window in attempt to fix performance issue in virtualized environments.</li>
+     		<li>Added Windows 11 to system info and list of supported OS versions.</li>
+     		<li>Changed and improved load error handling (resource requests do not trigger error message anymore).</li>
+     		<li>Implemented functionality to automatically re-perform text search on browser navigation or reload.</li>
+     		<li>Fixed keyboard system component to correctly display all installed keyboard layouts / input languages.</li>
+     		<li>Added status strip to Configuration Tool showing version and build number of the local SEB installation.</li>
+     		<li>Fixed issues with internal PDF reader toolbar.</li>
+     		<li>Implemented verification of BIOS manufacturer & name for VM detection.</li>
+     		<li>Fixed setting all display settings of permissive configuration for browser configuration resource.</li>
+     		<li>Fixed usage of unencrypted HTTP links.</li>
+     		<li>Updated browser engine to version 103.0.12 (Chromium version 103.0.5060.134).</li>
+		</ul>
+		<p>The following optional features and changes are disabled by default and need to be configured individually:</p>
+		<ul>
+    		<li>Ensured re-attempting to start a SEB Server session doesn't fail.</li>
+     		<li>Improved stability of SEB Server connection by automatically updating OAuth2 token if it expires.</li>
+     		<li>Now sending OS and SEB version information to SEB Server as early as possible.</li>
+     		<li>Ensured SEB can't (re-)connect to a SEB Server if it already has an established connection to a SEB Server.</li>
+     		<li>Disabled pre-join page for Jitsi Meet proctoring integration.</li>
+		</ul>
+		<p>Known issues:</p>
+		<ul>
+			<li>Screen readers NVDA and JAWS are not compatible with kiosk mode Create New Desktop. If their usage is required, please use kiosk mode Disable Explorer Shell where they should work as expected.</li>
+    		<li>Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+	  	</ul>
 		
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.2:</h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.3.2</b></h5>
 		<p>Version 3.3.2 adds a new JavaScript API to query the Browser Exam Key (BEK) and Config Key (CK), improves the optional SEB-Server integration and fixes various issues.</p>
         <ul>
 			<li>Implemented JavaScript API to query browser exam key (BEK) and configuration key (CK).</li>
@@ -246,7 +284,7 @@
           <li>Implemented transmission of a notification to SEB Server when power supply connection changes.</li>
         </ul>
 		
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.1:</h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.3.1</b></h5>
 		<p>Version 3.3.1 improves the performance of the optional SEB-Server integration, adds a raise hand functionality for the optional live remote proctoring with SEB-Server and fixes various minor issues.</p>
         <ul>
 			<li>Changed handling of WebView2 dependency in setup bundle to circumvent MSFT's continuing changes to the bootstrapper.</li>
@@ -266,7 +304,7 @@
           <li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
         </ul>
 			
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.3.0:</h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.3.0</b></h5>
 		<p>Version 3.3.0 introduces optional live proctoring with Zoom, adds support for basic screen sharing in the integrated browser and fixes various issues reported by the community.</p>
         <ul>
 			<li>Added support for basic screen sharing in the integrated browser.</li>
@@ -285,7 +323,7 @@
           <li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
         </ul>
 			
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.2.0:</h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.2.0</b></h5>
 		<p>Version 3.2.0 introduces optional live proctoring with Jitsi Meet, enables WebRTC for the integrated browser engine and fixes issues reported by the community.</p>
         <ul>
 			<li>Enabled WebRTC for integrated browser engine.</li>
@@ -315,7 +353,7 @@
           <li>Known issue: Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see MicrosoftEdge/WebView2Feedback#960).</li>
         </ul>
 			
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.1.1:</h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.1.1</b></h5>
 		<p>Version 3.1.0 adds new functionality for the optional SEB Server integration with Moodle and fixes a few issues reported by the community.</p>
         <ul>
 			<li>Ensured missing machine info doesn't prevent startup.</li>
@@ -331,7 +369,7 @@
           <li>Added support for battery and WLAN status logging with SEB Server.</li>
         </ul>
 			
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.1.0:</h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.1.0</b></h5>
 		<p>Version 3.1.0 adds basic optional support for SEB Server, text search for the integrated browser and a first step towards feature parity of SEB for all three operating systems (Windows, macOS and iOS).</p>
         <ul>
 			<li>Text search for browser application.</li>
@@ -360,7 +398,7 @@
         <p><strong>IMPORTANT: SEB 3.1 for Windows uses a different policy to decide if it can be reconfigured when a seb(s) URL is opened and a .seb config file downloaded: </strong>When running in a secure session (a quit password is set in the currently active settings), SEB 3.1 cannot be reconfigured, even if it's using the persisted client settings. Earlier versions could always be reconfigured when using client settings. If you want to allow reconfiguring SEB by opening a seb(s) URL while running in a secure session, then you need to use the "Allow Reconfiguring" and "Reconfiguring Config URL" options in SEB Configuration Tool/Exam. For the same behavior as in previous versions, you can enable "Allow Reconfiguring" and set "Reconfiguring Config URL" to "*" (wildcard symbol, meaning any seb(s) URL or download URL of a .seb config file is allowed to reconfigure SEB) in your SEB client settings. This policy settings for reconfiguring are already used by SEB for macOS and iOS.</p>
         <br>
         
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.0.1:</h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.0.1</b></h5>
 		<p>Version 3.0.1 contains a fix for the issues some users of SEB 3.0.0 observed specifically in BYOD environments. The new version should prevent that anti-malware software falsely identifies SEB 3.0 as malware (false-positive detection using heuristics and similar algorithms). In some cases this blocked the SEB Windows Service from setting, resetting and monitoring specific settings in the Windows Registry, and prevented SEB 3.0.0 from starting or from resetting the power options. Following a list of the most prominent new features and changes:</p>
         <ul>
 			  <li>Implemented new default behavior to bypass SEB service as default.</li>
@@ -371,7 +409,7 @@
 			  <li>Fixed audio / video playback not stopping when closing additional browser window.</li>
 	  	</ul>
 			
-		<h5 id="sebh5">Release notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> version 3.0.0: </h5>
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.0.0</b></h5>
 		<p>The next major version of Safe Exam Browser for Windows. SEB 3.x for Windows has been completely refactored and uses Chromium as integrated browser engine. However, SEB 3.0.0 does not yet provide the complete feature set of SEB 2.x (see below). Following a list of the most prominent new features and changes:</p>
         <ul>
 			  <li>New, embedded browser engine (Chromium Version 79.0.3945.130 for SEB 3.0.0).</li>
