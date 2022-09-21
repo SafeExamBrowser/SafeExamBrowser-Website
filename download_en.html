@@ -327,34 +327,37 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.1 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.1.1 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 11 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>SEB 3.1 for iOS is an important stability update, improving support for the modern WebKit browser engine (also adding page zoom), adding text search on web pages and improvements for the optional <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> integration (disabled by default). </p>
-        <p>New since SEB 3.0 for iOS:</p>
-          <ul>
-            <li> Support for the modern WebKit browser engine, which increases performance, stability and compatibility with web applications.</li>
-          </ul>
+        <p>SEB 3.1.1 adds support for iOS 16, improves stability and allows to use VPN for Automatic Client Configuration by searching the network.</p>
+        <p> New since SEB 3.1 for iOS:</p>
         <ul>
-          <li>Access to camera/microphone via WebRTC on iOS 14.3 or newer.</li>
-          <li> SEB 3.0 for iOS can now also be started with seb(s) links to servers requiring authentication (including Basic Auth).</li>
-          <li> With the SEB integration in Moodle 3.9 or newer, you can now use the &quot;Launch Safe Exam Browser&quot; button to open the quiz in SEB for iOS.<br>
-          </li>
-          <li> SEB JavaScript API, currently for querying app version details, ConfigKey and BrowserExamKey security elements.</li>
-          <li> Fix for &quot;Back to Safari&quot; button/link function in visible Status Bar on iOS 14 before 14.5 in AAC kiosk mode.</li>
-          <li>SEB doesn't show context menu on phone numbers detected by the web view anymore.</li>
+          <li>Added text search for web pages (Note: Search in PDF files is currently not supported).</li>
+          <li>Added key shortcuts for reload (command-R), text search (cmd-F) and quitting exam session (cmd-shift-Q).</li>
+          <li>Added UI controls for zoom page in/out and settings for default page/text zoom.</li>
+          <li>Improved SEB JavaScript API, which is compatible with the upcoming, improved Safe Exam Browser integration in Moodle 4.1. This allows to use WebRTC camera and microphone access in Moodle.</li>
+          <li>JavaScript text input panel is now supported.</li>
+          <li>Now stopping media playback when closing tab or quitting session (including fullscreen and PiP) in modern WebView when running on iOS 14.5 or newer.</li>
+          <li>Improved displaying of PDF files.</li>
+          <li> On iOS 15, the new WebRTC permission API is used to prevent the repeated permissions dialog for a website to use camera/microphone access (camera/microphone access via web APIs is available on iOS 14.3 or newer).</li>
+          <li>Added automatic reload when web content process terminated in modern WebView.</li>
+          <li> SEB for iOS is now also localized for German.</li>
         </ul>
-        <p>Optional features, which need to be individually configured and are disabled by default:<br>
-        </p>
-        <ul>
-          <li> Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. You can use any Jitsi Meet server to test this feature, for example https://meet.jit.si (or install your own Jitsi Meet server).</li>
+        <p>Optional features, which need to be individually configured and are disabled by default:</p>
+<ul>
+          <li>Now supporting battery monitoring with SEB Server.</li>
+          <li>Added lock screen notifications and unlock by SEB Server.</li>
+          <li>Now sending operating system/device type information to SEB Server.</li>
+          <li>Now supporting OpenOLAT (currently not in public OO version) and Ans together with SEB Server. </li>
+          <li>Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. You can use any Jitsi Meet server to test this feature, for example https://meet.jit.si (or install your own Jitsi Meet server).</li>
           <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.<br>
           </li>
           <li> Support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.<br>
           </li>
-          <li> Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. <strong>SEB doesn't use any centralized server instances and the according features are by default disabled.</strong><br>
+          <li> Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. <strong>SEB doesn't use any centralized server instances and the according features are  disabled by default.</strong><br>
           </li>
         </ul>
         <p>Main Features:</p>
@@ -368,9 +371,8 @@
           also be started by  QR codes.</li>
           <li>SEB for iOS can be installed and configured using a mobile device management system, as it supports the iOS feature "MDM Managed Configuration".</li>
           <li>SEB for iOS is also compatible with <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">Apple Classroom</a>.</li>
-          <li>This  version contains some new features currently unique to the iOS version and almost all features of the macOS/Windows versions. Please check the <a href="https://sourceforge.net/p/seb/discussion/seb-ios/thread/22aea7b76c/" target="_blank">compatibility of SEB for iOS version 2.1.14</a> with your exam system.</li>
         </ul>
-        <p>See <a href="ios/ios_release_notes_en.html">release notes</a> for complete list of new features and changes. Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated for SEB 3.1). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
+        <p>See <a href="ios/ios_release_notes_en.html">release notes</a> for complete list of new features and changes. Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated for SEB 3.1.1). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
       </div>
       <!-- /Download Box -->
 
