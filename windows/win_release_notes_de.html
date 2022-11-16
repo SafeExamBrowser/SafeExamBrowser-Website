@@ -224,6 +224,19 @@
         <!-- Content Column -->
         <div class="col-md-9">
 			
+			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.4.1</b></h5>
+			<p>Version 3.4.1 behebt ein Problem mit Downloads, die von Daten-URLs stammen.</p>
+			<p><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
+			<ul>
+				<li>Absturz behoben, der durch das Herunterladen einer Datei, die von einer Daten-URL stammt, verursacht wurde.</li>
+     			<li>Browser-Engine auf Version 107.1.40 (Chromium-Version 107.0.5304.68) aktualisiert.</li>
+			</ul>
+			<p>Bekannte Probleme:</p>
+			<ul>
+				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
+				<li>Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
+			</ul>
+			
 			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.4.0</b></h5>
 			<p>Version 3.4.0 bietet wichtige Verbesserungen der Barrierefreiheit, behebt die Eltern-Kind-Beziehung für Javascript Popup-Fenster, verbessert die SEB-Server-Integration weiter und bietet verschiedene andere wichtige Verbesserungen.</p>
 			<p><span class="red">Ab dieser Version ist der Browser Exam Key von SEB für Windows nun auch plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
