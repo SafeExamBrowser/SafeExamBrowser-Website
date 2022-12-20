@@ -285,12 +285,36 @@
             
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.2.2/SafeExamBrowser-3.2.2.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.1.1  behebt verschiedene Probleme, unterstützt die Bildschirmfreigabe für Webanwendungen und verbessert die Unterstützung für den AAC Assessment/Bewertungs- (Kiosk-/Lockdown-) Modus. Mit SEB 3.1 wurde die Unterstützung für die moderne WebKit-Browser-Engine und für Barrierefreiheit/VoiceOver verbessert und eine Textsuche in Browserfenstern hinzugefügt. Neu ist auch die optionale Unterstützung des <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>, zur einfachen Konfiguration und Überwachung von Prüfungsclients.</p>
-          <p>Neu seit SEB 3.0 für macOS:</p>
+          <p>SEB 3.2.2 erweitert die optionale Unterstützung für SEB Server und bringt viele Stabilitätsverbesserungen:</p>
           <ul id="seblist">
-            <li>Unterstützung  der modernisierten WebKit-Browser-Engine verbessert Leistung, Stabilität und Kompatibilität mit Webapplikationen.</li>
-            <li>In Browserfenstern, welche die modernen WebKit-Engine verwenden (siehe <a href="macosx/mac_release_notes_en.html">Release Notes</a> betreffend notwendigen Voraussetzungen) ist Zugriff auf Kamera/Mikrofon via das WebRTC-Protokoll auf macOS 11.1 Big Sur und neuer möglich. </li>
-            <li> SEB JavaScript API, welche momentan zur Abfrage der App-Versionsdetails und der ConfigKey/BrowserExamKey Sicherheitselemente benutzt werden kann.        </li>
+            <li>Behoben: Auf einem Trackpad mit 'Force Touch' funktionierte die Funktion 'Begriffe Nachschlagen' (ausgelöst mittels eines kräftigen Klick) im modernen WebView.</li>
+            <li>Behoben: Roter Sperrbildschirm nach Benutzerwechsel verschwand ohne Benutzeraktion.</li>
+            <li>Behoben: Die neueste TeamViewer-Version wurde nicht standardmäßig blockiert. </li>
+          </ul>
+          <p>Neu seit 3.2.1:</p>
+          <ul id="seblist">
+            <li>Behoben: Die Tastenkombination zum Neuladen wurde nicht korrekt aktiviert, abhängig von den Einstellungen zum Neuladen und dem gewählten Fenster (Haupt-/Zusatzfenster).</li>
+            <li>Fehler behoben, der dazu führte, dass Eigenschaften wie &quot;aktiv&quot; von verbotenen Prozessen in den SEB-Einstellungen nicht korrekt gesetzt werden konnten.</li>
+            <li>Behoben: Null-Referenz-Exception in injiziertem Javascript-Code im Zusammenhang mit dem &quot;Download&quot;-Attribut von Links.<br>
+            </li>
+          </ul>
+          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmäßig deaktiviert sind</p>
+          <ul id="seblist">
+            <li>Massiv verbesserte Fehlerbehandlung bei der Verbindung zum SEB Server mit besseren Fehlermeldungen, die SEB Server- und Prüfungsadministratoren helfen können, serverseitige Probleme zu beheben.</li>
+            <li>Unterstützung für Fallback-Option hinzugefügt, wenn die Verbindung zum SEB Server komplett fehlschlägt. In diesem Fall kann eine alternative Start-URL konfiguriert und der Fallback optional mit einem neuen Passwort geschützt werden.</li>
+            <li>Verbessertes Senden von Log-Ereignissen, um zu verhindern, dass einzelne Ereignisse aufgrund von temporären Verbindungsproblemen verloren gehen.</li>
+            <li>Senden von Geräteinformationen an den SEB Server zu einem früheren Zeitpunkt im Verbindungsprozess.</li>
+            <li>Erneuerung abgelaufener SEB Server OAuth-Token.</li>
+            <li>Bereinigung ausstehender Anfragen an SEB Server behoben.</li>
+            <li>Fehlende <em>pingInterval</em> SEB-Server-Verbindungseinstellung behoben, die dazu führte, dass Pings kontinuierlich gesendet wurden und SEB nach einer Weile abstürzte.</li>
+          </ul>
+          <p>Hinweis: <strong>Diese Version enthält nicht die Zoom-Integration </strong>für Prüfungsaufsicht oder Prüfungssupport, die in SEB 3.2rc enthalten war. Es gibt eine nicht-öffentliche SEB Alliance Edition, die die Zoom-Integration weiterhin unterstützt. Wenn Sie daran interessiert sind, diese Zoom-Integration zu nutzen, kontaktieren Sie <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
+          <p>Wichtige neue Funktionen seit SEB 3.x:</p>
+          <ul id="seblist">
+            <li>Unterstützung für die neue <a href="developer/seb-config-key.html"><strong>SEB JavaScript API </strong></a>zur einfacheren Integration in Prüfungslösungen (derzeit für die Abfrage von App-Versionsdetails, ConfigKey und BrowserExamKey Sicherheitselementen). Dies ermöglicht die Verwendung der modernen WebKit-Browser-Engine (WKWebView), die die Leistung, Stabilität und Kompatibilität mit Webanwendungen erhöht. Wenn Sie eine Prüfungssoftware mit einer eingebauten SEB-Integration verwenden, stellen Sie sicher, dass Sie eine Version verwenden, die mit der SEB JavaScript API/modernen WebKit-Browser-Engine kompatibel ist (z. B. <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 oder das <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">aktualisierte Plugin für die manuelle Installation in Moodle 3.9 oder höher</a>).</li>
+            <li><strong>Zugriff auf Kamera/Mikrofon </strong>über <strong>WebRTC/getUserMedia() Web API </strong>auf macOS 11.1 Big Sur und neuer. Sie können webbasierte Videokonferenz- und Remote-Proctoring-Lösungen verwenden, sofern die in den <a href="macosx/mac_release_notes_en.html">Versionshinweisen</a> von SEB 3.0 erläuterten Anforderungen erfüllt sind, damit SEB das moderne WebView verwenden kann. </li>
+            <li><strong>Unterstützung für Bildschirm-Teilen und -Aufname </strong>für Webanwendungen über <strong>WebRTC/getDisplayMedia() API</strong>, wenn sie unter macOS 11.1 Big Sur (oder höher), macOS 12 Monterey oder macOS 13 Ventura laufen. Erfordert eine neue Einstellung in <em>Einstellungen / Browser / Bildschirmaufnahme zulassen.</em></li>
+            <li>Unterstützung für den <strong>macOS Bewertungsmodus/Assessment Mode </strong>(AAC-Kioskmodus) unter macOS Catalina 10.15.4 und &gt;=10.15.6 und macOS Monterey 12.1 oder neuer (unter macOS Big Sur 11.0 - Monterey 12.0 mit der <a href="https://safeexambrowser.org/macosx/mac_release_notes_en.html"><strong>DNS-Pre-Pinning-Funktion</strong></a>). Der AAC-Bewertungsmodus ist sicherer, da er alle anderen Programme auf dem Mac blockiert, um auf das Internet/Netzwerk zuzugreifen und den Bildschirm zu erfassen. Sie können ihn unter <em>Einstellungen / Sicherheit / Bewertungsmodus (AAC) verwenden falls verfügbar</em> aktivieren.</li>
           </ul>
         </div>
 <p>Andere Funktionen:</p>
