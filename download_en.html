@@ -271,25 +271,47 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.1.1/SafeExamBrowser-3.1.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.2.2/SafeExamBrowser-3.2.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.1.1 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.2.2 for macOS</span>
           </a> 
         </p>
         
-        <p><strong>Current version of Safe Exam Browser for macOS 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
-        <span class="codetext">Build 343F. SHA1: 40347b3bc2ab84c33d6574d742a0ed8c312c5e2f</span></p>
+        <p><strong>Current version of Safe Exam Browser for macOS 13, 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
+        <span class="codetext">Build 343F. SHA1: 33af82df28d22cf9ab625fd68fe14f83396fafbc</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.1.1/SafeExamBrowser-3.1.1.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.2.2/SafeExamBrowser-3.2.2.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
-          <p>SEB 3.1.1 for macOS solves various issues, supports screen sharing for web applications and improves support for the AAC Assessment (kiosk/lockdown) Mode.          </p>
+          <p>SEB 3.2.2 Improves the optional support for SEB Server and adds many stability improvements.          </p>
           <ul id="seblist">
-            <li>Support for getDisplayMedia() API for WebRTC screen sharing and screen capture for web applications when running on macOS 11.1 Big Sur (or later), macOS 12 Monterey or macOS 13 Ventura Beta 4 or later. Requires new setting in <em>Preferences / Browser / Allow screen capture</em> (key <em>browserMediaCaptureScreen = true</em>, default value is <em>false</em>).</li>
-            <li>Access to camera/microphone via WebRTC on macOS 11.1 Big Sur and newer. You can use web-based video conferencing and remote proctoring solutions, as long as the requirements explained in <a href="macosx/mac_release_notes_en.html">release notes</a> are met, so that SEB can use the modern WebView. Note: Apple currently doesn't support <em>getDisplayMedia</em> in WKWebView for screen sharing. </li>
-            <li>Due to refactored code using newer APIs, SEB 3.0 requires macOS 10.11 or later (using the modern WebView requires macOS 10.13 or later). We recommend to only use macOS versions which still receive security updates from Apple (the three most recent, currently macOS 10.15, 11 and 12). </li>
-            <li>Support for the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications. </li>
-            <li>Support for the new <a href="developer/seb-config-key.html" rel="nofollow">SEB JavaScript API</a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements). </li>
-            <li>Use AAC kiosk mode only on macOS 15.4+ and 11.4+ (except 11.0 - 11.3, as there was an issue with DNS lookup. This caused pages with yet unknown domains to not load). The AAC Assessment Mode is more secure, as it blocks any other applications on the Mac to access the Internet/network and to capture the screen. You can activate it in <a href="macosx/mac_usermanual_en.html#SecurityPane"><em>Preferences / Security</em></a><em> / Use Assessment Mode (AAC) if available</em>. </li>
+            <li>Fixed: Force Click lookup was working in the modern WebView.</li>
+            <li>Fixed red lock screen after user switch disappeared without user action.</li>
+            <li>Fixed: Latest TeamViewer version wasn't blocked by default.</li>
+          </ul>
+          <p>Fixed from 3.2.1:</p>
+          <ul>
+            <li>Fixed: Reload key shortcut not enabled correctly according to reload settings and selected window (main/additional).</li>
+            <li>Fixed a fix in 3.2.1, which caused that properties like "active" of prohibited processes couldn't be set correctly in SEB Preferences.</li>
+            <li>Fixed a null reference exception in injected Javascript code, related to the "download" attribute on links.</li>
+            <li>Fixed Cancel button in the  SEB Server (optional) fallback password alert and improved alert feedback text in case of an empty fallback password.</li>
+          </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+          <ul>
+            <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
+            <li>Added support for fallback option, when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new password.</li>
+            <li>Improved sending log events, to prevent loosing single events due to temporary connectivity issues.</li>
+            <li>Now sending device info to SEB Server earlier in the connection process.</li>
+            <li>Renew expired SEB Server OAuth token.</li>
+            <li>Fixed cleaning up of pending requests to SEB Server.</li>
+            <li>Fixed missing pingInterval SEB Server connection setting caused pings being send continuously and SEB crashing after a while.</li>
+          </ul>
+          <p>Note: This version <strong>does not contain the Zoom integration</strong> for exam proctoring or exam support which was contained in SEB 3.2rc. There is a non-public SEB Alliance Edition, which continues to support Zoom integration. If you are interested to use this Zoom integration, contact <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
+          <p>Important new features since SEB 3.x:</p>
+          <ul>
+            <li>Support for the new <a href="developer/seb-config-key.html" rel="nofollow"><strong>SEB JavaScript API</strong></a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements). This allows using the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications. If you're using an assessment software with a built-in SEB integration, make sure to use a version which is compatible with the SEB JavaScript API/modern WebKit browser engine (for example <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 or updated plugin for manual installation in Moodle 3.9 or later <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">from this link</a>).</li>
+            <li><strong>Access to camera/microphone</strong> via <strong>WebRTC/getUserMedia() web API</strong> on macOS 11.1 Big Sur and newer. You can use web-based video conferencing and remote proctoring solutions, as long as the requirements explained in the <a href="macosx/mac_release_notes_en.html">release notes</a> of SEB 3.0 are met, so that SEB can use the modern WebView. </li>
+            <li>Support for <strong>screen sharing and screen capture</strong> for web applications via <strong>WebRTC/getDisplayMedia() API</strong> when running on macOS 11.1 Big Sur (or later), macOS 12 Monterey or macOS 13 Ventura. Requires new setting in <em>Preferences / Browser / Allow screen capture</em> (key <em>browserMediaCaptureScreen = true</em>, default value is <em>false</em>).</li>
+            <li>Support for the <strong>macOS Assessment Mode </strong>(AAC kiosk mode) on macOS Catalina 10.15.4 and &gt;=10.15.6 and macOS Monterey 12.1 or newer (on macOS Big Sur 11.0 - Monterey 12.0 with the <a href="https://safeexambrowser.org/macosx/mac_release_notes_en.html"><strong>DNS pre-pinning</strong> feature</a>). The AAC Assessment Mode is more secure, as it blocks any other applications on the Mac to access the Internet/network and to capture the screen. You can activate it in <a href="macosx/mac_usermanual_en.html#SecurityPane"><em>Preferences / Security</em></a><em> / Use Assessment Mode (AAC) if available</em>.</li>
           </ul>
         </div>
         <div></div>
