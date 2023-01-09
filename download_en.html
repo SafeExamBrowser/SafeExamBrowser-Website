@@ -302,13 +302,11 @@
             <li>Improved sending log events, to prevent loosing single events due to temporary connectivity issues.</li>
             <li>Now sending device info to SEB Server earlier in the connection process.</li>
             <li>Renew expired SEB Server OAuth token.</li>
-            <li>Fixed cleaning up of pending requests to SEB Server.</li>
-            <li>Fixed missing pingInterval SEB Server connection setting caused pings being send continuously and SEB crashing after a while.</li>
           </ul>
-          <p>Note: This version <strong>does not contain the Zoom integration</strong> for exam proctoring or exam support which was contained in SEB 3.2rc. There is a non-public SEB Alliance Edition, which continues to support Zoom integration. If you are interested to use this Zoom integration, contact <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
+          <p>Note: This version <strong>does not contain the Zoom integration</strong> for exam proctoring or exam support which was contained in SEB 3.2rc. There is a non-public SEB Alliance Edition, which continues to support Zoom integration. If you are interested to use this Zoom integration, please contact <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
           <p>Important new features since SEB 3.x:</p>
           <ul id="seblist">
-            <li>Support for the new <a href="developer/seb-config-key.html" rel="nofollow"><strong>SEB JavaScript API</strong></a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements). This allows using the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications. If you're using an assessment software with a built-in SEB integration, make sure to use a version which is compatible with the SEB JavaScript API/modern WebKit browser engine (for example <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 or <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">updated plugin for manual installation in Moodle 3.9 or later</a>).</li>
+            <li>Support for the new <a href="developer/seb-config-key.html" rel="nofollow"><strong>SEB JavaScript API</strong></a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements). This allows using the <strong>modern WebKit browser engine</strong> (WKWebView), which increases performance, stability and compatibility with web applications. If you're using an assessment software with a built-in SEB integration, make sure to use a version which is compatible with the SEB JavaScript API/modern WebKit browser engine (for example <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 or <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">updated plugin for manual installation in Moodle 3.9 or later</a>).</li>
             <li><strong>Access to camera/microphone</strong> via <strong>WebRTC/getUserMedia() web API</strong> on macOS 11.1 Big Sur and newer. You can use web-based video conferencing and remote proctoring solutions, as long as the requirements explained in the <a href="macosx/mac_release_notes_en.html">release notes</a> of SEB 3.0 are met, so that SEB can use the modern WebView. </li>
             <li>Support for <strong>screen sharing and screen capture</strong> for web applications via <strong>WebRTC/getDisplayMedia() API</strong> when running on macOS 11.1 Big Sur (or later), macOS 12 Monterey or macOS 13 Ventura. Requires new setting in <em>Preferences / Browser / Allow screen capture</em> (key <em>browserMediaCaptureScreen = true</em>, default value is <em>false</em>).</li>
             <li>Support for the <strong>macOS Assessment Mode </strong>(AAC kiosk mode) on macOS Catalina 10.15.4 and &gt;=10.15.6 and macOS Monterey 12.1 or newer (on macOS Big Sur 11.0 - Monterey 12.0 with the <a href="https://safeexambrowser.org/macosx/mac_release_notes_en.html"><strong>DNS pre-pinning</strong> feature</a>). The AAC Assessment Mode is more secure, as it blocks any other applications on the Mac to access the Internet/network and to capture the screen. You can activate it in <a href="macosx/mac_usermanual_en.html#SecurityPane"><em>Preferences / Security</em></a><em> / Use Assessment Mode (AAC) if available</em>.</li>
@@ -341,39 +339,41 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.1.1 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.2.2 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 11 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>SEB 3.1.1 adds support for iOS 16, improves stability and allows to use VPN for Automatic Client Configuration by searching the network.</p>
-        <p> New since SEB 3.1 for iOS:</p>
-        <ul>
-          <li>Added text search for web pages (Note: Search in PDF files is currently not supported).</li>
-          <li>Added key shortcuts for reload (command-R), text search (cmd-F) and quitting exam session (cmd-shift-Q).</li>
-          <li>Added UI controls for zoom page in/out and settings for default page/text zoom.</li>
-          <li>Improved SEB JavaScript API, which is compatible with the upcoming, improved Safe Exam Browser integration in Moodle 4.1. This allows to use WebRTC camera and microphone access in Moodle.</li>
-          <li>JavaScript text input panel is now supported.</li>
-          <li>Now stopping media playback when closing tab or quitting session (including fullscreen and PiP) in modern WebView when running on iOS 14.5 or newer.</li>
-          <li>Improved displaying of PDF files.</li>
-          <li> On iOS 15, the new WebRTC permission API is used to prevent the repeated permissions dialog for a website to use camera/microphone access (camera/microphone access via web APIs is available on iOS 14.3 or newer).</li>
-          <li>Added automatic reload when web content process terminated in modern WebView.</li>
-          <li> SEB for iOS is now also localized for German.</li>
+        <p>SEB 3.2.2 enhances the optional support for SEB Server, improves MDM configuration and stability.</p>
+        <p> New in this version:</p>
+        <ul id="seblist">
+          <li>Now displaying camera &amp; microphone permission dialogs for web applications and optional built-in proctoring before starting session. </li>
+          <li>Added new settings <em>browserMediaCaptureCamera</em> and <em>browserMediaCaptureMicrophone</em> (<em>Settings / Browser Features / Media Playback/Capture / Allow Camera/Microphone Capture</em>) for controlling browser access to camera/microphone (WebRTC or still pictures/audio recording). If these settings are enabled, users will be asked to grant access to camera/microphone for SEB before the according (exam) session is started. </li>
+          <li>To access camera/microphone using  WebRTC/getUserMedia() Web API on iOS 14.3 or newer, SEB must use the <strong>modern WebKit browser engine</strong>. If you're using an assessment software with a built-in SEB integration, make sure to use a version which is compatible with the <a href="developer/seb-config-key.html">SEB JavaScript API</a> (for example <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 or <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">updated plugin for manual installation in Moodle 3.9 or later</a>).</li>
+          <li>Improved MDM configuration to better recognize configuration changes.</li>
+          <li>Fixed crash when configured via MDM: This happened when a config contained prohibited processes.</li>
+          <li>Fixed crash when a web page tab is close by Javascript (when using modern WebView).</li>
+          <li>Fixed file name of shared config file in iOS was not reset together with all other settings.</li>
+          <li>Fixed additional stability issues.</li>
         </ul>
         <p>Optional features, which need to be individually configured and are disabled by default:</p>
-<ul>
-          <li>Now supporting battery monitoring with SEB Server.</li>
-          <li>Added lock screen notifications and unlock by SEB Server.</li>
-          <li>Now sending operating system/device type information to SEB Server.</li>
-          <li>Now supporting OpenOLAT (currently not in public OO version) and Ans together with SEB Server. </li>
-          <li>Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. You can use any Jitsi Meet server to test this feature, for example https://meet.jit.si (or install your own Jitsi Meet server).</li>
-          <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.<br>
-          </li>
-          <li> Support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.<br>
-          </li>
-          <li> Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. <strong>SEB doesn't use any centralized server instances and the according features are  disabled by default.</strong><br>
-          </li>
+<ul id="seblist">
+          <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
+          <li>Added support for fallback option when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new fallback password.</li>
+          <li>Improved stability in case of misconfigured SEB Server exams.</li>
+          <li>Improved sending log events, to prevent loosing single events due to temporary connectivity issues.</li>
+          <li>Now sending device info to SEB Server earlier in the connection process.</li>
+          <li>Renew expired SEB Server OAuth token.</li>
         </ul>
+<p>New since SEB 3.x:</p>
+<ul id="seblist">
+  <li>Optional support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.</li>
+  <li>Now supporting OpenOLAT (currently not in public OO version) and Ans together with SEB Server. </li>
+  <li>Optional live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. You can use any Jitsi Meet server to test this feature, for example https://meet.jit.si (or install your own Jitsi Meet server).</li>
+  <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.</li>
+  <li> Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. <strong>SEB doesn't use any centralized server instances and the according features are  disabled by default.</strong><br>
+  </li>
+</ul>
         <p>Main Features:</p>
         <ul id="seblist">
           <li>The single app kiosk mode used by SEB is built into the iOS operating system and therefore provides a high level of security. </li>
@@ -386,7 +386,7 @@
           <li>SEB for iOS can be installed and configured using a mobile device management system, as it supports the iOS feature "MDM Managed Configuration".</li>
           <li>SEB for iOS is also compatible with <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">Apple Classroom</a>.</li>
         </ul>
-        <p>See <a href="ios/ios_release_notes_en.html">release notes</a> for complete list of new features and changes. Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated for SEB 3.1.1). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
+        <p>See <a href="ios/ios_release_notes_en.html">release notes</a> for complete list of new features and changes. Check out the SEB for iOS <a href="http://safeexambrowser.org/ios/ios_usermanual_en.html">manual</a> which explains all features (currently being updated). In addition, we published a first version of a <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html">tutorial</a> which will help exam administrators to better understand how to configure and use SEB for iOS. It also includes how SEB for iOS <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">can be used together with the Apple Classroom app</a>. More topics will be added to this tutorial over time.</p>
       </div>
       <!-- /Download Box -->
 
@@ -405,17 +405,22 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-win-verificator/releases/download/v1.0.1/Verificator_1.0.1.18.zip" target="_blank" alt="Download SEB Verificator for Windows">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-win-verificator/releases/download/v1.0.2/Verificator_1.0.2.26.zip" target="_blank" alt="Download SEB Verificator for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SEB Verificator 1.0.1 for Windows</span>
+            <span class="seb-button-text">SEB Verificator 1.0.2 for Windows</span>
           </a> 
         </p>
         
         <p><strong>Current version for Windows 8.1, 10 and 11</strong></p>
         <p>A stand-alone tool to manually verify the integrity of a Safe Exam Browser installation on Windows. This application is intended for use cases like BYOD exams where candidates have complete control over their systems and thus could be trying to use a manipulated build of Safe Exam Browser to perform an exam. </p>
         <h5>Changes</h5>
-        <ul>
-          <li>Added official references for SEB 3.4.0480.</li>
+        <ul id="seblist">
+          <li>Implemented logging.</li>
+          <li>Implemented single-select list for all configuration files found in nearby filesystem.</li>
+          <li>Improved layout of user interface.</li>
+          <li>Changed icon for window and executable.</li>
+          <li>Ensured verification can be started by hitting the ENTER key.</li>
+          <li>Added official references for SEB 3.4.1.        </li>
         </ul>
         <h5>Requirements</h5>
         <p>The application requires the prerequisites listed below in order to work correctly. These should already be present on a system which has SEB installed.</p>

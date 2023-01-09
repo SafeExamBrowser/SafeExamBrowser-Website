@@ -344,30 +344,39 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.1.1 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.2.2 für iOS im App Store</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 11 und neuer</strong></p>
                 
-<p>SEB 3.1.1 bietet Unterstützung für iOS 16, verbessert die Stabilität und ermöglicht die Verwendung von VPN für automatische Client-Konfiguration mittels Suche im Netzwerk. </p>
-<p>Neu seit SEB 3.0 für iOS:</p>
-<ul>
-  <li> Unterstützung  der modernisierten WebKit-Browser-Engine, welche Leistung, Stabilität und Kompatibilität mit Webapplikationen erhöht.</li>
+<p>SEB 3.2.2 erweitert die optionale Unterstützung für SEB Server, verbessert Konfiguration mittels MDM und die generelle Stabilität. </p>
+<p>Neu in dieser Version:</p>
+<ul id="seblist">
+  <li>Anzeige von Dialog für Kamera- und Mikrofonerlaubnis für Webanwendungen und optionales integriertes Proctoring vor Beginn der Session. </li>
+  <li>Neue Einstellungen <em>browserMediaCaptureCamera</em> und <em>browserMediaCaptureMicrophone</em> (<em>Einstellungen / Browser-Funktionen / Medienwiedergabe/-aufnahme / Kamera-/Mikrofonaufnahme zulassen</em>) zur Steuerung des Browserzugriffs auf Kamera/Mikrofon (WebRTC oder Standbilder/Audioaufnahmen) hinzugefügt. Wenn diese Einstellungen aktiviert sind, werden die Benutzer aufgefordert, den Zugriff auf Kamera/Mikrofon für SEB zu erlauben, bevor die entsprechende (Prüfungs-)Session gestartet wird. </li>
+  <li><strong>Für Zugriff auf Kamera/Mikrofon </strong>über WebRTC/getUserMedia() Web API auf iOS 14.3 und neuer müssen die in den <a href="macosx/mac_release_notes_en.html">Versionshinweisen</a> von SEB 3.0 erläuterten Anforderungen erfüllt sein, damit SEB das moderne WebView verwenden kann. Wenn Sie eine Prüfungssoftware mit einer eingebauten SEB-Integration verwenden, stellen Sie sicher, dass Sie eine Version verwenden, die mit der <a href="developer/seb-config-key.html">SEB JavaScript API</a> kompatibel ist (z. B. <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 oder das <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">aktualisierte Plugin für die manuelle Installation in Moodle 3.9 oder höher</a>).</li>
+  <li>Die Konfiguration mittels MDM wurde verbessert, um Änderungen der Einstellungen zuverlässiger zu erkennen.</li>
+  <li>Absturz bei der Konfiguration über MDM behoben: Dies geschah, wenn eine Konfiguration verbotene Prozesse enthielt.</li>
+  <li>Absturz behoben, wenn ein Web-Seiten-Tab per Javascript geschlossen wird (bei Verwendung des modernen WebViews).</li>
+  <li>Behoben: Der Dateiname der geteilten Konfigurationsdatei in iOS wurde nicht zusammen mit allen anderen Einstellungen zurückgesetzt.</li>
+  <li>Weitere Stabilitätsprobleme behoben. </li>
+  </ul>
+<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
+</p>
+<ul id="seblist">
+  <li>Massiv verbesserte Fehlerbehandlung bei der Verbindung zum SEB Server mit besseren Fehlermeldungen, die SEB Server- und Prüfungsadministratoren helfen können, serverseitige Probleme zu beheben.</li>
+  <li>Unterstützung für Fallback-Option hinzugefügt, wenn die Verbindung zum SEB Server komplett fehlschlägt. In diesem Fall kann eine alternative Start-URL konfiguriert und der Fallback optional mit einem neuen Fallback-Passwort geschützt werden.</li>
+  <li>Verbessertes Senden von Log-Ereignissen, um zu verhindern, dass einzelne Ereignisse aufgrund von temporären Verbindungsproblemen verloren gehen.</li>
+  <li>Senden von Geräteinformationen an den SEB Server zu einem früheren Zeitpunkt im Verbindungsprozess.</li>
+  <li>Erneuerung abgelaufener SEB Server OAuth-Token.</li>
+</ul>
+<p>Neu seit SEB 3.x:</p>
+<ul id="seblist">
+  <li> Video/Audio Echtzeit-Überwachung (Live Remote Proctoring) mit der  Open Source Videokonferenz-Lösung <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>, entweder  über SEB-Konfigurationsdateien gesteuert oder automatisch mittels SEB Server.</li>
 </ul>
 <ul id="seblist">
-  <li>Zugriff auf Kamera/Mikrofon via das WebRTC-Protokoll auf iOS 14.3 oder neuer.</li>
-  <li> SEB 3.0 für iOS kann nun auch mittels seb(s) Links auf Server, welche Authentifizierung benötigen, gestartet werden (inklusive Basic Authentication).</li>
-  <li> Mit der SEB-Integration in Moodle 3.9 oder neuer kann nun die Schaltfläche &quot;Safe Exam Browser starten&quot;  benutzt werden, um die Prüfung direkt in SEB für iOS zu öffnen.<br>
-  </li>
-  <li> SEB JavaScript API, welche momentan zur Abfrage der App-Versionsdetails und der ConfigKey/BrowserExamKey Sicherheitselemente benutzt werden kann.</li>
-  <li> Fehlerkorrektur für den &quot;Zurück zu Safari&quot;-Link in der Statusleiste, welcher im AAC-Kioskmodus unter iOS 14 vor 14.5 funktionsfähig blieb (sofern die Statusleiste nicht mittels SEB-Konfiguration unsichtbar gemacht wurde).</li>
-</ul>
-<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und standardmässig deaktiviert sind:<br>
-</p>
-<ul>
-  <li> Video/Audio Echtzeit-Überwachung (Live Remote Proctoring) mit der  Open Source Videokonferenz-Lösung <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>, entweder  über SEB-Konfigurationsdateien gesteuert oder automatisch mittels SEB Server.</li>
   <li> KI/AI unterstütztes Proctoring detektiert, wenn das Gesicht von Prüfungskandidaten aus der Kameraansicht verschwindet oder weitere Gesichter zu sehen sind.  Auffällige Gesichtsbewegungen werden ebenfalls erkannt und  Warnsymbolen im Video-Stream angezeigt. Die Gesichtsverfolgungs-Funktionen arbeiten lokal auf dem Gerät und respektieren den Datenschutz.<br>
   </li>
   <li> Unterstützung für den<a href="https://github.com/SafeExamBrowser/seb-server" target="_blank"> SEB Server</a>: Im Web-Benutzerinterface des SEB Servers kann ein Administrator Prüfungs-Metadaten eines Learning Management Systems (LMS) importieren und SEB Server unterstützte Prüfungen erstellen. Die Liste der aktuellen Prüfungen wird dann auf den Prüfungsgeräten, welche mit dieser SEB Server Instanz verbunden sind, im  SEB Client angezeigt. Während der Prüfung können die Prüfungsgeräte im SEB Server Web-Interface überwacht werden, SEB aus der Ferne beendet werden usw.<br>
@@ -410,7 +419,7 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-win-verificator/releases/download/v1.0.1/Verificator_1.0.1.18.zip" target="_blank" alt="Download SEB Verificator for Windows">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SEB Verificator 1.0.1 für Windows</span>
+            <span class="seb-button-text">SEB Verificator 1.0.2 für Windows</span>
           </a> 
         </p>
         
@@ -418,9 +427,13 @@
         <p>Diese neue, eigenständige Applikation kann von Aufsichtspersonen vor oder während einer Prüfung ausgeführt werden, um sicherzustellen, dass die richtige und nicht manipulierte offizielle SEB-Version auf einem bestimmten Gerät verwendet wird.</p>
         <h5>Änderungen</h5>
         <ul>
-          <li>Offizielle Referenzen für SEB 3.4.0480 hinzugefügt.</li>
+          <li>Logging</li>
+          <li> Auswahlliste für Konfigurationsdateien</li>
+          <li>Kleinere Verbesserungen der Benutzeroberfläche und Benutzerfreundlichkeit.</li>
+          <li>Überprüfung kann mittels der Eingabe-/ENTER-Taste gestartet werden.</li>
+          <li>Offizielle Referenzen für SEB 3.4.1 hinzugefügt.</li>
         </ul>
-        <h5>Requirements</h5>
+        <h5>Voraussetzungen</h5>
         <p>Das Programm benötigt die unten stehenden Voraussetzungen, um korrekt zu funktionieren. Diese sollten auf einem System, auf dem SEB installiert ist, bereits vorhanden sein.</p>
         <ul>
           <li>.NET Framework 4.7.2 Runtime: <a href="https://dotnet.microsoft.com/download/dotnet-framework/net472" target="_blank" rel="nofollow">https://dotnet.microsoft.com/download/dotnet-framework/net472</a>      </li>

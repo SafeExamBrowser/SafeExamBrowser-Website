@@ -196,8 +196,8 @@
           <ol class="breadcrumb">
             <li class="active">English
             </li>
-            <!-- <li><a href="mac_release_notes_de.html">Deutsch</a>
-            </li> -->
+            <li><a href="ios_release_notes_de.html">Deutsch</a>
+            </li>
           </ol>
     
         </div>
@@ -227,18 +227,35 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
+    <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.2.2</a>:</h5>
+          <ul id="seblist">
+            <li>Now displaying camera &amp; microphone permission dialogs for web applications and optional built-in proctoring before starting session.</li>
+            <li>Added new settings <em>browserMediaCaptureCamera</em> and <em>browserMediaCaptureMicrophone</em> (<em>Settings / Browser Features / Media Playback/Capture / Allow Camera/Microphone Capture)</em> for controlling browser access to camera/microphone (WebRTC or still pictures/audio recording). If these settings are enabled, users will be asked to grant access to camera/microphone for SEB before the according (exam) session is started. </li>
+            <li>To access camera/microphone, SEB must use the <strong>modern WebKit browser engine</strong>. If you're using an assessment software with a built-in SEB integration, make sure to use a version which is compatible with the <a href="file:///Users/drs/developer/safeexambrowser.org/developer/seb-config-key.html"><strong>SEB JavaScript API</strong></a> (for example <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 or <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">updated plugin for manual installation in Moodle 3.9 or later</a>).</li>
+            <li>Improved MDM configuration to better recognize configuration changes.</li>
+            <li>Fixed crash when configured via MDM: This happened when a config contained prohibited processes.</li>
+            <li>Fixed crash when a web page tab is close by Javascript (when using modern WebView).<br>
+            </li>
+            <li>Fixed file name of shared config file in iOS was not reset together with all other settings.</li>
+            <li>Fixed additional stability issues.</li>
+          </ul>
+          <p>Optional features which need to be individually configured and are disabled by default:</p>
+          <ul id="seblist">
+            <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
+            <li>Added support for fallback option when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new fallback password.</li>
+            <li>Improved stability in case of misconfigured SEB Server exams.</li>
+            <li>Improved sending log events, to prevent loosing single events due to temporary connectivity issues.</li>
+            <li>Now sending device info to SEB Server earlier in the connection process.</li>
+            <li>Renew expired SEB Server OAuth token.</li>
+          </ul>
+			  
 		  <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.1.1</a>:</h5>
           <ul id="seblist">
-            <li>Added support for iOS 16.<br>
-            </li>
-            <li>Added all current major iOS version numbers to the setting 'Allow running from iOS version'.<br>
-            </li>
-            <li>Allows to use VPN for Automatic Client Configuration by searching the network.<br>
-            </li>
-            <li>Now asking for local network access permissions in Initial Configuration Assistant.<br>
-            </li>
-            <li>Added warning about wrong format of institution URL in Initial Configuration Assistant.<br>
-            </li>
+            <li>Added support for iOS 16.</li>
+            <li>Added all current major iOS version numbers to the setting 'Allow running from iOS version'.</li>
+            <li>Allows to use VPN for Automatic Client Configuration by searching the network.</li>
+            <li>Now asking for local network access permissions in Initial Configuration Assistant.</li>
+            <li>Added warning about wrong format of institution URL in Initial Configuration Assistant.</li>
             <li>Fixed an issue when subsequent scanning of QR codes wasn't possible.</li>
             <li>Fixed iFrame contents not displayed.</li>
             <li>Fixed media continues to play after the originating browser tab is closed in modern WebView.</li>
@@ -249,45 +266,45 @@
           <ul id="seblist">
             <li>Added text search for web pages (Note: Search in PDF files is currently not supported).</li>
             <li>Added key shortcuts for reload (command-R), text search (cmd-F) and quitting exam session (cmd-shift-Q).<br>
-              </li>
+            </li>
             <li>Added settings for default page/text zoom.<br>
-              </li>
+            </li>
             <li>Added UI controls for zoom page in/out.</li>
             <li>Improved SEB JavaScript API, which is compatible with the improved Safe Exam Browser integration in Moodle 4.0.x. This allows to use WebRTC camera and microphone access in Moodle.<br>
-              </li>
+            </li>
             <li>Improved persisting of session cookies from WKWebView to WKWebView to avoid unexpected logout of the user on some websites. <br>
-              </li>
+            </li>
             <li>JavaScript text input panel is now supported.<br>
-              </li>
+            </li>
             <li>Now stopping media playback when closing tab or quitting session (including fullscreen and PiP) in modern WebView when running on iOS 14.5 or newer.<br>
-              </li>
+            </li>
             <li>Fixed crash when starting SEB using an sebs:// link.<br>
-              </li>
+            </li>
             <li>Improved displaying of PDF files.<br>
-              </li>
+            </li>
             <li>Fixed a security issue with screen capturing.<br>
-              </li>
+            </li>
             <li>Fixed an issue with Config Key and InAppSettings.<br>
-              </li>
+            </li>
             <li>On iOS 15, the new WebRTC permission API is used to prevent the repeated permissions dialog for a website to use camera/microphone access.<br>
-              </li>
+            </li>
             <li>Added automatic reload when web content process terminated in modern WebView<br>
-              </li>
+            </li>
             <li>Settings 'Enable JavaScript' and 'Block popups' are now supported<br>
-              </li>
+            </li>
             <li>Improved stability.<br>
-              </li>
+            </li>
             <li>SEB for iOS is now also localized for German.</li>
           </ul>
           <p>Optional features, which need to be individually configured and are disabled by default:<br>
           </p>
           <ul id="seblist">
             <li>Now supporting battery monitoring with SEB Server.<br>
-              </li>
+            </li>
             <li>Added lock screen notifications and unlock by SEB Server.<br>
-              </li>
+            </li>
             <li>Now sending operating system/device type information to SEB Server.<br>
-              </li>
+            </li>
             <li>Now supporting OpenOLAT and Ans together with SEB Server.</li>
           </ul>
           <h5> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.0.1</a>:</h5>
@@ -357,7 +374,7 @@
                 <li> When opening in-app settings, SEB indicates if MDM settings were received and asks if those should be applied.</li>
                 <li> When SEB is running with client settings, there is only one browser tab (with the exam web page) open and the current URL (still) is the Start URL. Please note that this won't work if your Start URL redirects to another page.</li>
                 <li> When secure client settings were quit and SEB is waiting to start another session.<br>
-                  </li>
+                </li>
                 <li> When opening SEB or returning back to the SEB app, cases 3 or 4 apply or in-app settings are open (user is asked if MDM settings should be applied).</li>
               </ol>
             </li>
