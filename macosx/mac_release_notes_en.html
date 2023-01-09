@@ -224,7 +224,25 @@
         
         <!-- Content Column -->
         <div class="col-md-6" role="main">
-          <h5 id="sebh"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.1.1</a>:</h5>
+          <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.2</a>:</h5>
+          <p>SEB 3.2.2 improves the optional support for SEB Server and adds many stability improvements:</p>
+          <ul>
+            <li>Fixed: Force Click lookup was working in the modern WebView.</li>
+            <li>Fixed red lock screen after user switch disappeared without user action.</li>
+            <li>Fixed: Latest TeamViewer version wasn't blocked by default. </li>
+            <li>Fixed: Reload key shortcut not enabled correctly according to reload settings and selected window (main/additional).</li>
+            <li>Fixed a null reference exception in injected Javascript code, related to the "download" attribute on links.</li>
+          </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+          <ul>
+            <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
+            <li>Added support for fallback option, when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new password.</li>
+            <li>Improved stability in case of misconfigured SEB Server exams.</li>
+            <li>Improved sending log events, to prevent loosing single events due to temporary connectivity issues.</li>
+            <li>Now sending device info to SEB Server earlier in the connection process.</li>
+            <li>Renew expired SEB Server OAuth token.</li>
+          </ul>
+          <h5 id="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.1.1</a>:</h5>
           <p>SEB 3.1.1 for macOS solves various issues, supports screen sharing for web applications and improves support for the AAC Assessment (kiosk/lockdown) Mode.</p>
           <ul>
             <li>SEB should download PDF file instead of displaying it, when a "download" attribute or "Content-Disposition" header with attachment filename is present.</li>
@@ -242,8 +260,7 @@
             <li>Fixed media continues to play after the originating browser tab is closed in modern WebView.</li>
             <li>Fixed error when connecting to SEB Server (optional, needs to be configured individually) and the "expires_in" attribute in the Oauth token response is missing. Added proper optionality to other attributes in this token response JSON.          </li>
           </ul>
-          <p>&nbsp;</p>
-          <h5> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.1</a>:</h5>
+          <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.1</a>:</h5>
           <p>SEB 3.1 adds support for accessibility/VoiceOver, text search in browser windows, optional support for SEB Server and many stability improvements.</p>
           <ul>
             <li>Implemented accessibility support using VoiceOver and tabulator keyboard navigation (if keyboard navigation in System Preferences/Keyboard/Shortcuts is activated).</li>
@@ -323,8 +340,7 @@
         
         <!-- Content -->
 
-	<h5 id="sebh5">&nbsp; </h5>
-	<h5>Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.0</a>:</h5>
+	<h5 id="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.0</a>:</h5>
     <p>SEB 3.0 for macOS is a major update, supporting the modern WebKit browser engine and access to camera/microphone via WebRTC.</p>
     <ul>
       <li>

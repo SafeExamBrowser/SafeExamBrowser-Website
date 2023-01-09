@@ -158,7 +158,7 @@
                                 <a href="ios/ios_tutorial_en.html">Tutorial</a>
                             </li>
                             <li>
-                                <a href="ios/ios_tutorial_en.html">Release Notes</a>
+                                <a href="ios/ios_release_notes_de.html">Release Notes</a>
                             </li>
                         </ul>
                     </li>
@@ -229,9 +229,26 @@
 
         <!-- Content -->
 		
+		<h5 id="sebh5">9. Januar 2023</h5>
+        <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.2.2 für iOS veröffentlicht</strong></a>. </span>Dieses Update erweitert die optionale Unterstützung für SEB Server, verbessert Konfiguration mittels MDM und die generelle Stabilität.</p>
+        <ul id="seblist">
+          <li>Anzeige von Dialog für Kamera- und Mikrofonerlaubnis für Webanwendungen und optionales integriertes Proctoring vor Beginn der Session, gesteuert mittels neuer Einstellungen <em>browserMediaCaptureCamera</em> und <em>browserMediaCaptureMicrophone</em> (<em>Einstellungen / Browser-Funktionen / Medienwiedergabe/-aufnahme / Kamera-/Mikrofonaufnahme zulassen</em>). </li>
+          <li><strong>Für Zugriff auf Kamera/Mikrofon </strong>über WebRTC/getUserMedia() Web API auf iOS 14.3 und neuer müssen die in den <a href="macosx/mac_release_notes_en.html">Versionshinweisen</a> von SEB 3.0 erläuterten Anforderungen erfüllt sein, damit SEB das moderne WebView verwenden kann. Wenn Sie eine Prüfungssoftware mit einer eingebauten SEB-Integration verwenden, stellen Sie sicher, dass Sie eine Version verwenden, die mit der <a href="developer/seb-config-key.html">SEB JavaScript API</a> kompatibel ist (z. B. <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 oder das <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">aktualisierte Plugin für die manuelle Installation in Moodle 3.9 oder höher</a>).</li>
+          <li>Die Konfiguration mittels MDM wurde verbessert, um Änderungen der Einstellungen zuverlässiger zu erkennen.</li>
+          <li>Absturz bei der Konfiguration über MDM behoben: Dies geschah, wenn eine Konfiguration verbotene Prozesse enthielt.</li>
+          <li>Weitere Stabilitätsprobleme behoben. </li>
+        </ul>
+        <p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
+        </p>
+        <ul id="seblist">
+          <li>Massiv verbesserte Fehlerbehandlung bei der Verbindung zum SEB Server mit besseren Fehlermeldungen, die SEB Server- und Prüfungsadministratoren helfen können, serverseitige Probleme zu beheben.</li>
+          <li>Unterstützung für Fallback-Option hinzugefügt, wenn die Verbindung zum SEB Server komplett fehlschlägt. In diesem Fall kann eine alternative Start-URL konfiguriert und der Fallback optional mit einem neuen Fallback-Passwort geschützt werden.</li>
+        </ul>
+        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+			
 		<h5 id="sebh5">19. Dezember 2022</h5>
 	  	<p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.2.2 für macOS veröffentlicht</strong></a>. Dieses Update erweitert die optionale Unterstützung für SEB Server und bringt viele Stabilitätsverbesserungen:</p>
-        <ul id="seblist5">
+        <ul id="seblist">
           <li>Behoben: Auf einem Trackpad mit 'Force Touch' funktionierte die Funktion 'Begriffe Nachschlagen' (ausgelöst mittels eines kräftigen Klick) im modernen WebView.</li>
           <li>Behoben: Roter Sperrbildschirm nach Benutzerwechsel verschwand ohne Benutzeraktion.</li>
           <li>Die neueste TeamViewer-Version wird jetzt ebenfalls standardmässig blockiert. </li>
@@ -239,14 +256,13 @@
           <li>Behoben: Null-Referenz-Exception in injiziertem Javascript-Code im Zusammenhang mit dem &quot;Download&quot;-Attribut von Links.</li>
         </ul>
         <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
-        <ul id="seblist5">
+        <ul id="seblist">
           <li>Massiv verbesserte Fehlerbehandlung bei der Verbindung zum SEB Server mit besseren Fehlermeldungen, die SEB Server- und Prüfungsadministratoren helfen können, serverseitige Probleme zu beheben.</li>
           <li>Unterstützung für Fallback-Option hinzugefügt, wenn die Verbindung zum SEB Server komplett fehlschlägt. In diesem Fall kann eine alternative Start-URL konfiguriert und der Fallback optional mit einem neuen Passwort geschützt werden.</li>
           <li>Verbesserte Stabilität im Falle von falsch konfigurierten SEB-Server-Prüfungen. </li>
-        </ul>
-			
-			
-		<h5 id="sebh5">16. November 2022</h5>
+          </ul>
+        <span class="half_linespace">Siehe englische <a href="macosx/mac_release_notes_en.html">Release Notes</a> für alle Änderungen.</span>
+        <h5 id="sebh5">16. November 2022</h5>
 	  	<p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.4.1 für Windows veröffentlicht</a></strong>: Dieses Update behebt ein Problem mit Downloads, die von Daten-URLs stammen. Bitte lesen Sie die <a href="windows/win_release_notes_de.html">Release Notes</a> für die Liste aller Änderungen.</p>
 			
 		<h5 id="sebh5">10. Oktober 2022</h5>
@@ -254,7 +270,7 @@
 		
 		<h5 id="sebh5">5. Oktober 2022</h5>
 	  	<p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.1.1 für macOS</strong></a> <strong><a href="download_de.html#iOS">und iOS</a></strong> veröffentlicht. SEB 3.1.1 ist ein Wartungsupdate mit verschiedenen Verbesserungen und Unterstützung für neue Funktionen:</p>
-	  	<p><a href="download_de.html#MacOSX">SEB 3.1.1 für macOS</a> behebt verschiedene Probleme, unterstützt die Bildschirmfreigabe für Webanwendungen und verbessert die Unterstützung für den AAC Assessment/Bewertungs- (Kiosk-/Lockdown-) Modus. <span class="half_linespace">Siehe englische <a href="https://safeexambrowser.org/macosx/mac_release_notes_en.html">Release Notes</a> für alle Änderungen.</span></p>
+	  	<p><a href="download_de.html#MacOSX">SEB 3.1.1 für macOS</a> behebt verschiedene Probleme, unterstützt die Bildschirmfreigabe für Webanwendungen und verbessert die Unterstützung für den AAC Assessment/Bewertungs- (Kiosk-/Lockdown-) Modus. <span class="half_linespace">Siehe englische <a href="macosx/mac_release_notes_en.html">Release Notes</a> für alle Änderungen.</span></p>
 	  	<p><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank">SEB 3.1.1 für iOS</a> bietet Unterstützung für iOS 16, verbessert die Stabilität und ermöglicht die Verwendung von VPN für automatische Client-Konfiguration mittels Suche im Netzwerk. <span class="half_linespace">Siehe englische <a href="ios/ios_release_notes_en.html">Release Notes</a> für alle Änderungen.</span></p>
 			
         <h5 id="sebh5">29. August 2022</h5>
