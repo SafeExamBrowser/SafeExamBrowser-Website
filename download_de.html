@@ -348,7 +348,7 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.2.2 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.2.4 für iOS im App Store</span>
           </a> 
         </p>
         
@@ -356,7 +356,13 @@
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 11 und neuer</strong></p>
                 
 <p>SEB 3.2.2 erweitert die optionale Unterstützung für SEB Server, verbessert Konfiguration mittels MDM und die generelle Stabilität. </p>
-<p>Neu in dieser Version:</p>
+<p>Neu in SEB 3.2.3:</p>
+<ul id="seblist">
+  <li>Das Herunterladen von auf der Website generierten Dateien (mit dem Protokollschema &quot;data:&quot;) im modernen WebView wurde korrigiert.</li>
+  <li>Jetzt sind Downloads beliebiger Dateitypen und &quot;blob:&quot;-generierter Dateien möglich, wenn Sie das moderne WebView und iOS 14.5 oder neuer verwenden. Diese heruntergeladenen Dateien verwenden auch den ursprünglichen Dateinamen (dies war in dem klassischen WebView nicht möglich).</li>
+  <li> Absturz beim Schliessen einiger Webseiten  behoben.</li>
+</ul>
+<p>Neu seit SEB 3.2.1/3.2.2:</p>
 <ul id="seblist">
   <li>Anzeige von Dialog für Kamera- und Mikrofonerlaubnis für Webanwendungen und optionales integriertes Proctoring vor Beginn der Session. </li>
   <li>Neue Einstellungen <em>browserMediaCaptureCamera</em> und <em>browserMediaCaptureMicrophone</em> (<em>Einstellungen / Browser-Funktionen / Medienwiedergabe/-aufnahme / Kamera-/Mikrofonaufnahme zulassen</em>) zur Steuerung des Browserzugriffs auf Kamera/Mikrofon (WebRTC oder Standbilder/Audioaufnahmen) hinzugefügt. Wenn diese Einstellungen aktiviert sind, werden die Benutzer aufgefordert, den Zugriff auf Kamera/Mikrofon für SEB zu erlauben, bevor die entsprechende (Prüfungs-)Session gestartet wird. </li>
@@ -366,7 +372,7 @@
   <li>Absturz behoben, wenn ein Web-Seiten-Tab per Javascript geschlossen wird (bei Verwendung des modernen WebViews).</li>
   <li>Behoben: Der Dateiname der geteilten Konfigurationsdatei in iOS wurde nicht zusammen mit allen anderen Einstellungen zurückgesetzt.</li>
   <li>Weitere Stabilitätsprobleme behoben. </li>
-  </ul>
+</ul>
 <p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
 </p>
 <ul id="seblist">
