@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="consortium">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/consortium.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Media">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Media/SEB-Adventskalender-NEU.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Media/SEB-Adventskalender.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

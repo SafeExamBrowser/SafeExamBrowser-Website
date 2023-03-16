@@ -232,7 +232,7 @@
                 <ul class="nav">
                   <li><a href="#moodle">Using SEB with Moodle</a></li>
                   <li><a href="#ILIAS">Using SEB with ILIAS</a></li>
-                  <li><a href="#OpenOLAT">Using SEB with OpenOLAT</a></li>
+                  <li><a href="#OpenOlat">Using SEB with OpenOlat</a></li>
                 </ul>
               </li>
               <li> <a href="#download">Download/Installation</a> </li>
@@ -293,7 +293,7 @@
           </h2>
     
           <p><strong>Note: This is the manual for the legacy version of Safe Exam Browser for Windows. Until the manual is updated for SEB 3.x, please check tool tips (hover mouse cursor over new controls) for new options in the Configuration Tool.</strong></p>
-          <p>Safe Exam Browser – SEB for Windows opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOLAT and several commercial and non-commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most  web-based online quiz and e-assessment systems.          </p>
+          <p>Safe Exam Browser – SEB for Windows opens a web browser window without navigation elements and locks the computer into a kiosk mode, which prevents from switching to other applications or quitting SEB untimely. <span class="half_linespace">SEB enables secure exams on unmanaged computers like students' own laptops as well as in managed environments</span>. Currently SEB integrates with the wide spread learning management systems (LMS) Moodle,  ILIAS and OpenOlat and several commercial and non-commercial exam systems, as for example Inspera Assessment. Generally it can easily be used with most  web-based online quiz and e-assessment systems.          </p>
           <p><strong>The following manual explains how to configure and use SEB for Windows from the perspective of exam administrators.</strong> SEB is a very flexible and modular tool, therefore documentation for examinees on how to use SEB with individual exam setups and the various exam systems it works with should be provided by the institution using SEB or their e-assessment provider.</p>
 
 
@@ -365,12 +365,12 @@
           
           <p>Please note that currently  support for Safe Exam Browser in ILAS can only be switched on for some roles of a whole installation, not a single exam/course.</p>
           
-          <h4 class="seb-section-header sebnavbar-link" id="OpenOLAT">
-            <a class="anchorjs-link" href="#OpenOLAT"></a>
-            Using SEB with OpenOLAT
+          <h4 class="seb-section-header sebnavbar-link" id="OpenOlat">
+            <a class="anchorjs-link" href="#OpenOlat"></a>
+            Using SEB with OpenOlat
           </h4>
           
-          <p>An assessment mode has been added to the OpenOLAT standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOLAT courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOLAT course elements can be configured for such an exam setting. </p>
+          <p>An assessment mode has been added to the OpenOlat standard with the 10.2 release. The assessment mode allows course authors to limit the functionality and access of OpenOlat courses for exam settings. An exam setting is not limited to online tests however,  IMS QTI assessments, SCORM modules, external LTI 1.1 tools and all other OpenOlat course elements can be configured for such an exam setting. </p>
           
           <p>One of the many security features is the enforced usage of  Safe Exam Browser. An exam setting can be configured with multiple <a href="win_usermanual_en.html#ExamPane">Browser Exam Key</a> keys.</p>
           
@@ -379,7 +379,7 @@
           <p><a href="https://confluence.openolat.org/display/OO103EN/Assessment+mode" target="_blank">More information and a video tutorial about the assessment mode</a>.<br />
           </p>
           
-          <p><a href="http://www.openolat.org" target="_blank">More information about OpenOLAT</a>.</p>
+          <p><a href="http://www.openolat.org" target="_blank">More information about OpenOlat</a>.</p>
                     
         </div>
         <!-- / Document Section --> 
@@ -670,11 +670,11 @@
           <p>IMPORTANT: Always copy the (key(s) as a last step, after the configuration file was saved!&nbsp;</p>
       <ul id="seblist">      
             <li> <span class="quote">Use Browser Exam Key and Config Key</span>: Enables using the Browser Exam Key or Config Key. The key is sent in an HTTP header to authenticate the SEB client and its settings to a compatible exam system.</li>
-            <li><span class="quote">Browser Exam Key</span>: Copy the Exam Key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a>, <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a> and OpenOLAT. These have a built-in SEB support.<br>
+            <li><span class="quote">Browser Exam Key</span>: Copy the Exam Key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a>, <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a> and OpenOlat. These have a built-in SEB support.<br>
               <strong>Important: First save your final exam settings in a .seb settings file and then  copy the browser exam key to your exam system's quiz settings as the Browser Exam Key changes when you change any setting</strong>. <br>
               Please note that if you want to use the same <span class="quote">.seb</span> file with Windows and Mac clients, you should not alter the file anymore when you're copying the Browser Exam Key hashes to your exam settings in your quiz module. Re-saving it will change the Browser Exam Key of that file also in the SEB version on the other platform. The keys for the Mac and the Windows version will in any case be different, so you have to load the final <span class="quote">.seb</span> file into both versions and copy both keys to your quiz settings. <br>
-  <strong class="red">PLEASE NOTE:</strong> <span class="red">Every new SEB version generates a different Browser Exam Key</span> (as code and configuration option changes are reflected in the key, this is the idea of the request header check using this key together with compatible exam systems). If you want to use an existing exam configuration with a new SEB version, you have to re-calculate the Browser Exam Key with the new version and copy the new key to the quiz settings in your SEB compatible examination system (Moodle,  ILIAS and OpenOLAT allow you to specify several keys in case you want to  allow your examinees to use for example the current and previous SEB version). </li>
-          <li><span class="quote">Config Key</span>: Copy the Config Key string (which depends on your SEB configuration only, the SEB version is not included!) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems Moodle, ILIAS and OpenOLAT. These have&nbsp;a built-in SEB support. <br>
+  <strong class="red">PLEASE NOTE:</strong> <span class="red">Every new SEB version generates a different Browser Exam Key</span> (as code and configuration option changes are reflected in the key, this is the idea of the request header check using this key together with compatible exam systems). If you want to use an existing exam configuration with a new SEB version, you have to re-calculate the Browser Exam Key with the new version and copy the new key to the quiz settings in your SEB compatible examination system (Moodle,  ILIAS and OpenOlat allow you to specify several keys in case you want to  allow your examinees to use for example the current and previous SEB version). </li>
+          <li><span class="quote">Config Key</span>: Copy the Config Key string (which depends on your SEB configuration only, the SEB version is not included!) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems Moodle, ILIAS and OpenOlat. These have&nbsp;a built-in SEB support. <br>
               <strong>Important: First save your final exam settings in a .seb settings file and then copy the browser exam key to your exam system's quiz settings as the Config Key changes when you change any setting. <br>
               </strong>Use the Config key instead of the Exam Key in sceanrios where mroe than one verdsion of SEB (e.g. Mac an Windows) are used, or your exam settings should be tolerant to a future update of SEB (to e certain extend).</li>
 	</ul>
