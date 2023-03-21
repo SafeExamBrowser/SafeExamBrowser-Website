@@ -153,7 +153,7 @@
 	<key>browserWindowWebView</key>
 	<integer>2</integer>
 	<key>chooseFileToUploadPolicy</key>
-	<integer>0</integer>
+	<integer>2</integer>
 	<key>configFileCreateIdentity</key>
 	<false/>
 	<key>configFileEncryptUsingIdentity</key>
@@ -172,7 +172,7 @@
 	<key>downloadAndOpenSebConfig</key>
 	<true/>
 	<key>downloadDirectoryOSX</key>
-	<string>/var/mobile/Containers/Data/Application/DE2E302B-36C4-48B7-A29E-804F8B27C2F6/Downloads</string>
+	<string>~/Downloads</string>
 	<key>downloadDirectoryWin</key>
 	<string>Desktop</string>
 	<key>downloadPDFFiles</key>
@@ -265,7 +265,7 @@
 	<array/>
 	<key>examKeySalt</key>
 	<data>
-	0Yuy6bwITCMrFW54KMtRIzR3UkhHnzEz9+KmhxBmDvM=
+	OBrnIIv/k+/umY8sUMsDHa3eaWbH7pxzQJ9NfxdHPM0=
 	</data>
 	<key>examSessionClearCookiesOnEnd</key>
 	<false/>
@@ -450,7 +450,7 @@
 	<key>openDownloads</key>
 	<false/>
 	<key>originatorVersion</key>
-	<string>SEB_iOS_3.2.4_14561</string>
+	<string>SEB_iOS_3.2.4_14585</string>
 	<key>oskBehavior</key>
 	<integer>2</integer>
 	<key>outsideSebEnableChangeAPassword</key>
@@ -1524,7 +1524,7 @@
 	<key>touchOptimized</key>
 	<false/>
 	<key>urlFilterRegex</key>
-	<false/>
+	<true/>
 	<key>urlFilterTrustedContent</key>
 	<false/>
 	<key>whitelistURLFilter</key>
