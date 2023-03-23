@@ -271,41 +271,45 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.2.3/SafeExamBrowser-3.2.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.2.4/SafeExamBrowser-3.2.4.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.2.3 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.2.4 for macOS</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for macOS 13, 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
-        <span class="codetext">Build 343F. SHA1: 180d110d47465fdf0c1f327291dc620e3d554cbd</span></p>
+        <span class="codetext">Build 343F. SHA1: 6a028d2e7ac9b49c9200d3d737258e4612fa73fc</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.2.3/SafeExamBrowser-3.2.3.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.2.4/SafeExamBrowser-3.2.4.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
           <p>SEB 3.2 Improves the optional support for SEB Server and adds many stability improvements.          </p>
-          <p>New in 3.2.3:</p>
+          <p>New in SEB 3.2.4:</p>
           <ul id="seblist">
-            <li>Fixed downloads of website generated files (using &quot;data:&quot; protocol scheme) in modern WebView.</li>
-            <li>Now downloads of any file types and &quot;blob:&quot;-generated files are possible when using the modern WebView and macOS 11.3 or newer.</li>
-            <li>Another attempt to fix crash when closing some web pages.</li>
+            <li>Blocking AnyGPT by default.</li>
+            <li>Fixed: Untimely modal alert freezes SEB. Modal alerts were sometimes displayed behind the black background covering windows.</li>
+            <li>Security improvements.</li>
+            <li>Fixed download directory bug from SEB 3.2.3 for macOS.</li>
+            <li>Now also showing "Downloads not Allowed" alert in modern WebView if settings don't allow downloads and in one case for downloads in classic WebView on macOS.</li>
+            <li>Now checking if download directory is correctly set when performing download in WKWebView. If not, the Downloads directory is used.</li>
+            <li>Now also correctly handling PDF files in modern WebView when downloading is disabled (then PDF files even with a "download" link are displayed instead of downloaded).</li>
+            <li>Fixed "Choose file to upload ... by only allowing to upload the same file downloaded before" policy, which was not working in the modern WebView. Also resetting previous download paths when reconfiguring SEB.</li>
           </ul>
-          <p>New since 3.2.2/3.2.1:</p>
+          <p>New since 3.2.3/3.2.2/3.2.1:</p>
           <ul id="seblist">
+            <li>Fixed downloads of website generated files (using "data:" protocol scheme) in modern WebView.</li>
+            <li>Now downloads of any file types and "blob:"-generated files are possible when using the modern WebView and macOS 11.3 or newer.</li>
+            <li>Fixed crash when closing some web pages.</li>
             <li>Fixed: Force Click lookup was working in the modern WebView.</li>
             <li>Fixed red lock screen after user switch disappeared without user action.</li>
-            <li>Fixed: Latest TeamViewer version wasn't blocked by default.          </li>
-            <li>Fixed: Reload key shortcut not enabled correctly according to reload settings and selected window (main/additional).</li>
-            <li>Fixed an issue which caused that properties like "active" of prohibited processes couldn't be set correctly in SEB Preferences.</li>
-            <li>Fixed a null reference exception in injected Javascript code, related to the "download" attribute on links.</li>
-            <li>Fixed Cancel button in the  SEB Server (optional) fallback password alert and improved alert feedback text in case of an empty fallback password.</li>
+            <li>Latest TeamViewer version wasn't blocked by default.</li>
+            <li>Fixed reload key shortcut not enabled correctly according to reload settings and selected window (main/additional).          </li>
           </ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
           <ul id="seblist">
+            <li><strong>New in 3.2.4:</strong> When using the optional SEB Server, an SEB client can be locked (with a red lock screen with optional, individual message) and again unlocked by the server.</li>
             <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
             <li>Added support for fallback option, when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new password.</li>
             <li>Improved sending log events, to prevent loosing single events due to temporary connectivity issues.</li>
-            <li>Now sending device info to SEB Server earlier in the connection process.</li>
-            <li>Renew expired SEB Server OAuth token.</li>
           </ul>
           <p>Note: This version <strong>does not contain the Zoom integration</strong> for exam proctoring or exam support which was contained in SEB 3.2rc. There is a non-public SEB Alliance Edition, which continues to support Zoom integration. If you are interested to use this Zoom integration, please contact <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
           <p>Important new features since SEB 3.x:</p>

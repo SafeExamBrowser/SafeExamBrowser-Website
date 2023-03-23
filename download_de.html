@@ -273,28 +273,43 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.2.3/SafeExamBrowser-3.2.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.2.4/SafeExamBrowser-3.2.4.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.2.3 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.2.4 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 13, 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
-        <span class="codetext">Build 343F. SHA1: 180d110d47465fdf0c1f327291dc620e3d554cbd</span></p>
+        <span class="codetext">Build 343F. SHA1: 6a028d2e7ac9b49c9200d3d737258e4612fa73fc</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.2.3/SafeExamBrowser-3.2.3.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.2.4/SafeExamBrowser-3.2.4.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
           <p>SEB 3.2 erweitert die optionale Unterstützung für SEB Server und bringt viele Stabilitätsverbesserungen.</p>
-          <p>Neu in SEB 3.2.3:</p>
-          <ul>
+          <p>Neu in SEB 3.2.4:</p>
+          <ul id="seblist">
+            <li>AnyGPT wird standardmässig blockiert.</li>
+            <li>Ein Fall wurde behoben, bei dem eine modale Warnung  SEB beim Starten einer Session blockieren kann. Modale Warnungen wurden manchmal hinter dem schwarzen Hintergrund der Fenster angezeigt.</li>
+            <li>Sicherheitsverbesserungen.</li>
+            <li>Behoben: Einstellung für Download-Verzeichnis funktionierte in SEB 3.2.3 nicht.</li>
+            <li>Es wird nun geprüft, ob ein korrektes Download-Verzeichnis  in den Einstellungen definiert ist, bevor ein Download im modernen WebView durchgeführt wird. Wenn nicht, wird das  Standard-Downloads-Verzeichnis verwendet.</li>
+            <li> Warnung &quot;Downloads nicht erlaubt&quot; wird jetzt auch im modernen WebView angezeigt, wenn die Einstellungen keine Downloads zulassen, und in einem Fall auch für Downloads im klassischen WebView.</li>
+            <li>Jetzt auch korrekte Behandlung von PDF-Dateien im modernem WebView, wenn das Herunterladen deaktiviert ist (dann werden auch PDF-Dateien  mit einem &quot;Download&quot;-Link angezeigt statt heruntergeladen).</li>
+            <li>Dabei Berücksichtigung der Einstellung <em>newBrowserWindowByLinkPolicy = openInSameWindow</em>: Dann wird ein PDF nicht in einem neuen Fenster geöffnet.</li>
+            <li>Jetzt auch korrekte Handhabung der Einstellungen &quot;Dateien nach dem Herunterladen öffnen&quot; und &quot;PDF-Dateien herunterladen und öffnen, anstatt sie inline anzuzeigen&quot; im modernen WebView.</li>
+            <li>Die Richtlinie &quot;Datei zum Hochladen auswählen ..., indem nur das Hochladen derselben Datei erlaubt wird, die zuvor heruntergeladen wurde&quot;, die im modernen WebView nicht funktionierte, wurde korrigiert. Ausserdem werden die vorherigen Download-Pfade zurückgesetzt, wenn SEB neu konfiguriert wird.<br>
+            </li>
+          </ul>
+          <p>Neu seit 3.2.3/3.2.2/3.2.1:</p>
+          <ul id="seblist">
             <li>Das Herunterladen von auf der Website generierten Dateien (mit dem Protokollschema &quot;data:&quot;) im modernen WebView wurde korrigiert.</li>
             <li>Jetzt sind Downloads beliebiger Dateitypen und &quot;blob:&quot;-generierter Dateien möglich, wenn Sie das moderne WebView und macOS 10.3 oder neuer verwenden. Diese heruntergeladenen Dateien verwenden auch den ursprünglichen Dateinamen (dies war im klassischen WebView nicht möglich).</li>
             <li> Absturz beim Schliessen mancher Webseiten  behoben.</li>
-          </ul>
-          <p>Neu seit SEB 3.2.1/3.2.2:</p>
-          <ul id="seblist">
-            <li>Behoben: Auf einem Trackpad mit 'Force Touch' funktionierte die Funktion 'Begriffe Nachschlagen' (ausgelöst mittels eines kräftigen Klick) im modernen WebView.</li>
+            <li>Protokollierung wurde verbessert, um sich wiederholende Ereignisse in den Logdateien zu verhindern.<br>
+            </li>
+            <li>macOS 13 Ventura wurde als Option für die minimale macOS-Version hinzugefügt.</li>
+            <li>Die Abbrechen-Schaltfläche in der Fallback-Passwort-Warnung bei Benutzung des optionalen SEB Servers wurde behoben und der Text der Warnung im Falle eines leeren Fallback-Passworts verbessert.          </li>
+            <li>Behoben: Auf einem Trackpad mit 'Force Touch' funktionierte die Funktion 'Begriffe Nachschlagen' (ausgelöst mittels Force-Clicks) im modernen WebView.</li>
             <li>Behoben: Roter Sperrbildschirm nach Benutzerwechsel verschwand ohne Benutzeraktion.</li>
             <li>Behoben: Die neueste TeamViewer-Version wurde nicht standardmässig blockiert.          </li>
             <li>Behoben: Die Tastenkombination zum Neuladen wurde nicht korrekt aktiviert, abhängig von den Einstellungen zum Neuladen und dem gewählten Fenster (Haupt-/Zusatzfenster).</li>
@@ -304,6 +319,9 @@
           </ul>
           <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
           <ul id="seblist">
+            <li><strong>Neu in 3.2.4:</strong> Bei Verwendung des optionalen SEB Servers kann ein SEB Client gesperrt (mit einem roten Sperrbildschirm mit optionaler, individueller Nachricht) und vom Server wieder entsperrt werden.</li>
+            <li>Es wird nun eine Benachrichtigung an den SEB Server gesendet, wenn ein Sperrbildschirm auf dem Client geschlossen wird (durch Eingabe des Beenden-Passworts).</li>
+            <li>Ein Problem mit der Benachrichtigung bei Verwendung der Funktion &quot;Hand heben/senken&quot; wurde behoben.</li>
             <li>Massiv verbesserte Fehlerbehandlung bei der Verbindung zum SEB Server mit besseren Fehlermeldungen, die SEB Server- und Prüfungsadministratoren helfen können, serverseitige Probleme zu beheben.</li>
             <li>Unterstützung für Fallback-Option hinzugefügt, wenn die Verbindung zum SEB Server komplett fehlschlägt. In diesem Fall kann eine alternative Start-URL konfiguriert und der Fallback optional mit einem neuen Passwort geschützt werden.</li>
             <li>Verbessertes Senden von Log-Ereignissen, um zu verhindern, dass einzelne Ereignisse aufgrund von temporären Verbindungsproblemen verloren gehen.</li>

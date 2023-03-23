@@ -224,9 +224,53 @@
         
         <!-- Content Column -->
         <div class="col-md-6" role="main">
+          <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.4</a>:</h5>
+          <p>SEB 3.2 improves the optional support for SEB Server and adds many stability improvements.</p>
+              <p>New in SEB 3.2.4:</p>
+              <ul id="seblist">
+                <li>Blocking AnyGPT by default.</li>
+                <li>Fixed: Untimely modal alert freezes SEB. Modal alerts were sometimes displayed behind the black background covering windows.</li>
+                <li>Security improvements.</li>
+                <li>Fixed download directory bug from SEB 3.2.3 for macOS.</li>
+                <li>Now also showing "Downloads not Allowed" alert in modern WebView if settings don't allow downloads and in one case for downloads in classic WebView on macOS.</li>
+                <li>Now checking if download directory is correctly set when performing download in WKWebView. If not, the Downloads directory is used.</li>
+                <li>Now also correctly handling PDF files in modern WebView when downloading is disabled (then PDF files even with a "download" link are displayed instead of downloaded).</li>
+                <li>Considering the setting <em>newBrowserWindowByLinkPolicy = openInSameWindow</em>: Don't open a PDF in a new window then.</li>
+                <li>Now also handling settings "Open files after downloading" and "Download and open PDF files instead of displaying them inline" correctly in the modern WebView.</li>
+                <li>Fixed "Choose file to upload ... by only allowing to upload the same file downloaded before" policy, which was not working in the modern WebView. Also resetting previous download paths when reconfiguring SEB.</li>
+                <li>When using the optional SEB Server, an SEB client can be locked (with a red lock screen with optional, individual message) and again unlocked by the server.</li>
+                <li>Now sending notification to SEB Server when any lock screen is closed on client (by entering the quit password).</li>
+                <li>Fixed a notification issue when using the raise/lower hand feature.</li>
+              </ul>
+              <p>New since 3.2.3/3.2.2/3.2.1:</p>
+              <ul id="seblist">
+                <li>Fixed downloads of website generated files (using "data:" protocol scheme) in modern WebView.</li>
+                <li>Now downloads of any file types and "blob:"-generated files are possible when using the modern WebView and macOS 11.3 or newer.</li>
+                <li>Fixed crash when closing some web pages.</li>
+                <li>Fixed: Force Click lookup was working in the modern WebView.</li>
+                <li>Fixed red lock screen after user switch disappeared without user action.</li>
+                <li>Latest TeamViewer version wasn't blocked by default.</li>
+                <li>Added fix for a possible crash when closing a temporary browser window while not running on the main thread.</li>
+                <li>Improved logging verbosity, to prevent log files to be full of repeating log events.</li>
+                <li>Added macOS 13 Ventura as option for minimum macOS version.</li>
+                <li>Fixed reload key shortcut not enabled correctly according to reload settings and selected window (main/additional).</li>
+                <li>Fixed a null reference exception in injected Javascript code, related to the "download" attribute on links.</li>
+                <li>Fixed Cancel button in the macOS SEB Server (optional) fallback password alert and improved alert feedback text in case of an empty fallback password.</li>
+              </ul>
+              <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+              <ul id="seblist">
+                <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
+                <li>Added support for fallback option, when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new password.</li>
+                <li>Improved sending log events, to prevent loosing single events due to temporary connectivity issues.</li>
+                <li>Now sending device info to SEB Server earlier in the connection process.</li>
+                <li>Renew expired SEB Server OAuth token.</li>
+                <li>Fixed cleaning up of pending requests to SEB Server.</li>
+                <li>Fixed missing pingInterval SEB Server connection setting caused pings being send continuously and SEB crashing after a while.</li>
+              </ul>
+              <p>Note: This version does NOT contain the Zoom integration for exam proctoring or exam support which was contained in SEB 3.2rc. There is a non-public SEB Alliance Edition, which continues to support Zoom integration. If you are interested to use this Zoom integration, contact <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
           <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.2</a>:</h5>
           <p>SEB 3.2.2 improves the optional support for SEB Server and adds many stability improvements:</p>
-          <ul>
+          <ul id="seblist">
             <li>Fixed: Force Click lookup was working in the modern WebView.</li>
             <li>Fixed red lock screen after user switch disappeared without user action.</li>
             <li>Fixed: Latest TeamViewer version wasn't blocked by default. </li>
@@ -234,7 +278,7 @@
             <li>Fixed a null reference exception in injected Javascript code, related to the "download" attribute on links.</li>
           </ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
-          <ul>
+          <ul id="seblist">
             <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
             <li>Added support for fallback option, when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new password.</li>
             <li>Improved stability in case of misconfigured SEB Server exams.</li>
@@ -244,7 +288,7 @@
           </ul>
           <h5 id="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.1.1</a>:</h5>
           <p>SEB 3.1.1 for macOS solves various issues, supports screen sharing for web applications and improves support for the AAC Assessment (kiosk/lockdown) Mode.</p>
-          <ul>
+          <ul id="seblist">
             <li>SEB should download PDF file instead of displaying it, when a "download" attribute or "Content-Disposition" header with attachment filename is present.</li>
             <li>Display correct error message when downloading is disabled and attempting to download website generated files.</li>
             <li>Fixed default and optional values for minimum macOS and iOS versions and iOS beta version.</li>
@@ -262,7 +306,7 @@
           </ul>
           <h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.1</a>:</h5>
           <p>SEB 3.1 adds support for accessibility/VoiceOver, text search in browser windows, optional support for SEB Server and many stability improvements.</p>
-          <ul>
+          <ul id="seblist">
             <li>Implemented accessibility support using VoiceOver and tabulator keyboard navigation (if keyboard navigation in System Preferences/Keyboard/Shortcuts is activated).</li>
             <li>Added new setting Preferences / Browser / &quot;Tab focuses links&quot; (key tabFocusesLinks, enabled by default) to allow to use tabulator key to move between links and controls on a web page.</li>
             <li>Improved accessibility in Preferences: Fixed tabbing to controls only worked in first preferences pane displayed. Fixed tab order of some buttons in Config pane.</li>
@@ -328,7 +372,7 @@
               Fixed toolbar Reload button width in older macOS versions.</li>
           </ul>
           <p>Optional features which need to be individually configured and are disabled by default</p>
-          <ul>
+          <ul id="seblist">
             <li>Support for lock screen notifications when connected to SEB Server. The notification is displayed with a bell symbol in front of the user name in the Running Exam monitoring view. Clicking the user name shows the error message which invoked a lock screen.</li>
             <li>Lock screens can be unlocked from SEB Server (without having to communicate the Quit/Unlock password to students). Note that you have to confirm all pending lock screen notifications for a user if there are several before the lock screen closes.</li>
             <li>Now sending computer/environment information to SEB Server (ONLY when connecting to an SEB Server instance is configured in individual settings): Local short user/account name, operating system version and device type (iPhone, iPad, iPod Touch), SEB version and machine name.</li>
@@ -342,7 +386,7 @@
 
 	<h5 id="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.0</a>:</h5>
     <p>SEB 3.0 for macOS is a major update, supporting the modern WebKit browser engine and access to camera/microphone via WebRTC.</p>
-    <ul>
+    <ul id="seblist">
       <li>
         <p>Support for the modern WebKit browser engine (WKWebView), which increases performance, stability and compatibility with web applications.</p>
       </li>
@@ -410,14 +454,14 @@
 
 	<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.3.2</a>:</h5>
     <p>SEB 2.3.2 is a minor update for 2.3.1 with one bug fix:</p>
-    <ul>
+    <ul id="seblist">
       <li>When running on macOS 11 Big Sur on Intel CPU based Macs (tested on macOS 11.2.3), system processes displaying UI in the foreground were not recognized as system applications and terminated by SEB or locked SEB (displaying a red lock screen) if SEB couldn't terminate them. Now system processes should be identified correctly both on Intel and Apple Silicon based Macs.</li>
     </ul>
 
 			
 	<h5 id="sebh5"> Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version  2.3.1</a>:</h5>
     <p>SEB 2.3.1 is a maintenance update, which disables Automatic Assessment Configuration (AAC) macOS Assessment Mode in default settings, as it has a major issue when used on macOS 11 Big Sur. We recommend to not use AAC until this issue will be fixed in an upcoming macOS Big Sur update.</p>
-    <ul>
+    <ul id="seblist">
       <li>Changed default setting for AAC to disabled, using a new settings key enableMacOSAAC.</li>
       <li>Block screen capture also when AAC is used (as AAC currently doesn't prevent screen capture reliably).</li>
       <li>Fixed URL String from pasteboard to copy to Preferences/General/Start URL is not saved when SEB is started in AAC.</li>
@@ -426,7 +470,7 @@
       <li>Fixed security issue with &quot;Revert to Client Settings&quot; and &quot;Configure Client&quot; in Preferences: Don't ask for client settings admin password if none is set.      </li>
     </ul>
     <p>Known issues while using Assessment Mode in macOS 11:</p>
-    <ul>
+    <ul id="seblist">
       <li>When running on macOS 11 Big Sur, DNS lookup fails while AAC is enabled. This is why SEB fails to load URLs with a different domain than the Start URL the first time it tries to connect to that URL. Usually it would connect to the according domain after quitting and starting SEB again (as the DNS lookup result is cached). The domain of the Start URL should always be loadable, as SEB reaches out to the Start URL before activating AAC.</li>
       <li>When switching Preferences panes, the Preferences window sometimes disappear. Press cmd - , (comma key) in that case and the window appears again.</li>
       <li>In the file dialog, you cannot change the file name when using &quot;Save As&quot;. </li>
@@ -455,7 +499,7 @@
       </li>
       </ul>
     <p>Known issues while using Assessment Mode in macOS 11:</p>
-    <ul>
+    <ul id="seblist">
       <li>When switching Preferences panes, the Preferences window sometimes disappear. Press cmd - , (comma key) in that case and the window appears again.</li>
       <li>In the file dialog, you cannot change the file name when using &quot;Save As&quot;. </li>
       </ul>
@@ -593,7 +637,7 @@
             <li> Enabled all Function Keys in Hooked Keys (Win) default settings.</li>
           </ul>
           <p>Changed in build 29E7:</p>
-          <ul>
+          <ul id="seblist">
             <li> Improved performance and stability for reading system defaults (preferences for Siri, dictation). The previous implementation in SEB 2.1.3 build 29E5 could crash SEB while system load was very high (for example when SEB is automatically started by the system after a reboot/hard reset).</li>
             <li> Changed default for setting browserWindowShowURL to never (to not leak exam URLs in case the are supposed to be kept secret in some exam environments).</li>
           </ul>
