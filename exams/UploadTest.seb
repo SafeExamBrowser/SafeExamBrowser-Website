@@ -51,7 +51,7 @@
 	<key>allowQuit</key>
 	<true/>
 	<key>allowScreenCapture</key>
-	<false/>
+	<true/>
 	<key>allowScreenSharing</key>
 	<false/>
 	<key>allowSiri</key>
@@ -71,7 +71,7 @@
 	<key>allowWLAN</key>
 	<false/>
 	<key>allowWindowCapture</key>
-	<false/>
+	<true/>
 	<key>allowWlan</key>
 	<false/>
 	<key>allowedDisplayBuiltin</key>
@@ -450,7 +450,7 @@
 	<key>openDownloads</key>
 	<false/>
 	<key>originatorVersion</key>
-	<string>SEB_iOS_3.2.4_14585</string>
+	<string>SEB_iOS_3.2.4_1456E</string>
 	<key>oskBehavior</key>
 	<integer>2</integer>
 	<key>outsideSebEnableChangeAPassword</key>
@@ -1145,6 +1145,30 @@
 			<integer>0</integer>
 			<key>strongKill</key>
 			<false/>
+			<key>user</key>
+			<string></string>
+		</dict>
+		<dict>
+			<key>active</key>
+			<true/>
+			<key>allowedExecutables</key>
+			<string></string>
+			<key>currentUser</key>
+			<false/>
+			<key>description</key>
+			<string></string>
+			<key>executable</key>
+			<string>AnyGPT</string>
+			<key>identifier</key>
+			<string>me.tanmay.AnyGPT</string>
+			<key>ignoreInAAC</key>
+			<false/>
+			<key>originalName</key>
+			<string></string>
+			<key>os</key>
+			<integer>0</integer>
+			<key>strongKill</key>
+			<true/>
 			<key>user</key>
 			<string></string>
 		</dict>
