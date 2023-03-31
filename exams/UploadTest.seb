@@ -75,7 +75,7 @@
 	<key>allowWlan</key>
 	<false/>
 	<key>allowedDisplayBuiltin</key>
-	<false/>
+	<true/>
 	<key>allowedDisplayBuiltinEnforce</key>
 	<true/>
 	<key>allowedDisplayBuiltinExceptDesktop</key>
