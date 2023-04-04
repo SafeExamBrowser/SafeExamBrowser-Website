@@ -224,6 +224,54 @@
         <!-- Content Column -->
         <div class="col-md-9">
 			
+			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.5.0</b></h5>
+			<p>Version 3.5.0 fügt die App Signature Key Funktionalität für Server-Sitzungen hinzu, enthält den neuen, servergesteuerten Browser Exam Key und bringt eine neue Konfigurationsoption für den Dateisystemdialog sowie verschiedene Verbesserungen der Barrierefreiheit und wichtige Fehlerkorrekturen.</p>
+			<p><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
+			<ul>
+				<li>NullReferenceException beim Zugriff auf CanNavigate-Eigenschaften des Browser-Controls behoben.</li>
+				<li>Absturz behoben, wenn SEB ohne Browser verwendet und die Windows-Taste gedrückt wird.</li>
+				<li>Absturz behoben, wenn die Anwendung eines Drittanbieters keinen Titel hat.</li>
+				<li>Formulierung im Passwort-Dialog der Einstellungen geändert.</li>
+				<li>Neue Konfigurationsoption implementiert, um den Pfad von Dateisystemelementen ein- oder auszublenden.</li>
+				<li>Hyper-V zum Detektor für virtuelle Maschinen hinzugefügt.</li>
+				<li>Chrome Remote Desktop wurde zur Standardliste der verbotenen Anwendungen hinzugefügt.</li>
+				<li>Einfachen Benutzer-Agent für Netzwerk-Ressourcen-Anfragen hinzugefügt.</li>
+				<li>Verschiedene Verbesserungen der Barrierefreiheit und Fehlerbehebungen.</li>
+				<li>VMware wurde auf die schwarze Liste der PCI-Anbieter gesetzt.</li>
+				<li>Größenänderungsproblem mit dem Sperrbildschirm bei Änderung der Bildschirmauflösung behoben.</li>
+				<li>Fehler behoben, bei dem die Überwachung der Barrierefreiheit ausgelöst wurde, obwohl die Service-Komponente aktiv ist.</li>
+				<li>Behebung des Barrierefreiheit-Schwachstelle.</li>
+				<li>Der Zugriff auf ein möglicherweise nicht initialisiertes DOM im JavaScript-Code für die Barrierefreiheit wurde korrigiert.</li>
+				<li>Sitzungsintegritätsprüfung implementiert.</li>
+				<li>Implementierung einer visuellen Anzeige für aktive Anwendungen in der Taskleiste.</li>
+				<li>Absturz bei Verwendung der Tabulatortaste behoben.</li>
+				<li>Sichergestellt dass das Setup-Bundle nicht fehlschlägt, wenn eine neuere WebView2-Runtime bereits installiert ist.</li>
+				<li>Absturz beim Versuch, eine Datei von einer Daten-URL herunterzuladen, behoben.</li>
+				<li>Unit Tests für die Client-Operation wurden korrigiert.</li>
+				<li>Absturz behoben, der durch Nicht-ASCII-Zeichen (z.B. Hebräisch) im Pfad der Client-Protokolldatei verursacht wurde.</li>
+				<li>Bei der Suche führt die Eingabetaste nun eine Vorwärtssuche innerhalb eines Browserfensters durch.</li>
+				<li>Browser-Engine auf Version 111.2.20 (Chromium-Version 111.0.5563.65) aktualisiert.</li>
+			</ul>
+			<p>Die folgenden optionalen Funktionen und Änderungen sind standardmäßig deaktiviert und müssen individuell konfiguriert werden:</p>
+			<ul>
+				<li>Fehler behoben, bei dem das Netzwerkstatusprotokoll wiederholt gesendet wurde, wenn keine Verbindung bestand, und Schwellenwert für Wertänderungen hinzugefügt.</li>
+				<li>Hacks zur Steuerung der Zoom-Benutzeroberfläche behoben.</li>
+				<li>Implementierung eines benutzerdefinierten Browser Exam Keys, der vom Server definiert wird.</li>
+				<li>Suchen Sie nur nach einem LMS-Sitzungsidentifikator, wenn eine Serversitzung aktiv ist.</li>
+				<li>Zoom WebSDK wurde auf Version 2.10.1 aktualisiert und die Authentifizierung auf SDK-Schlüssel und JWT-Token geändert.</li>
+				<li>Überarbeitung des Server-Proxys durch Extraktion der Anforderungsimplementierungen.</li>
+				<li>Implementierung eines grundlegenden Mechanismus für den Austausch des App Signature Key (ASK).</li>
+				<li>Race-Condition bei der Erneuerung von OAuth2-Token behoben.</li>
+				<li>Fehlende Übersetzung für den Serverfehler-Dialog hinzugefügt.</li>
+				<li>Sichergestellt, dass mehrere vom Server gesendete Anweisungen zum Sperren des Bildschirms nicht zu mehreren Sperrbildschirmen führen.</li>
+				<li>Sichergestellt, dass eine offene Serververbindung geschlossen wird, wenn der Sitzungsstart fehlgeschlagen ist.</li>
+			</ul>
+			<p>Bekannte Probleme:</p>
+			<ul>
+				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
+				<li>Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
+			</ul>
+			
 			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.4.1</b></h5>
 			<p>Version 3.4.1 behebt ein Problem mit Downloads, die von Daten-URLs stammen.</p>
 			<p><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
