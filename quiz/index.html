@@ -1,0 +1,1066 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SafeExamBrowser Quiz Example</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@charset "utf-8";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+	font-family: 'Roboto', sans-serif;
+	background: #fafafa;
+}
+
+.main { margin: 50px auto; }
+
+h1 { text-align: center; }
+
+#example {
+	padding: 5% 5% 10% 5%;
+}
+@charset "utf-8";
+/* CSS Document */
+
+/* Quiz container */
+.quiz_flex {
+	display: -ms-flexbox;
+	display: flex;
+}
+.quiz_num {
+	margin: 0 .5rem 0 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #006ba1;
+	line-height: 1.2;
+}
+.quiz_flex-fill {
+	flex: 1 1 auto;
+}
+.quiz_flex h2 {
+	margin: 0 0 .75rem 0;
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #006ba1;
+	line-height: 1.2;
+}
+
+/* Quiz intro */
+.quiz_intro {
+	padding: 1.5rem;
+	border: .125rem solid #006ba1;
+	border-radius: .25rem;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+/* Results */
+.quiz_response {
+	font-size: 1.25rem;
+	margin: 0 0 .75rem 0;
+}
+.quiz_alert {
+	position: relative;
+	padding: 0.75rem 1.25rem;
+	margin: 0 0 1.75rem 0;
+	border: 1px solid transparent;
+	border-radius: 0.25rem;
+}
+.quiz_alert i {
+	margin-right: .75rem;
+}
+.quiz_alert-success {
+	color: #155724;
+	background-color: #d4edda;
+	border-color: #c3e6cb;
+}
+.quiz_alert-success a {
+	color: #0b2e13;
+}
+.quiz_alert-fail {
+	color: #721c24;
+	background-color: #f8d7da;
+	border-color: #f5c6cb;
+}
+.quiz_alert-fail a {
+	color: #491217;
+}
+
+/* Radio button */
+.quiz_radio-button {
+	margin-top: 2rem;
+}
+.quiz_radio-button input[type="radio"] {
+	position: absolute;
+	left: 0;
+	z-index: -1;
+	width: 1rem;
+	height: 1.25rem;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+	overflow: visible;
+}
+.quiz_radio-button input[type="radio"] + label {
+	display: inline-block;
+	margin: 0;
+	font-size: 1.25rem;
+	line-height: 2rem;
+}
+.quiz_radio-button input[type="radio"] + label span {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+	margin: -.25rem .25rem 0 0;
+	border-radius: 50%;
+	border: .125rem solid #ffffff;
+	box-shadow: 0 .125rem .25rem 0 rgba(0, 0, 0, 0.33);
+	background-color: grey;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.quiz_radio-button input[type="radio"]:checked + label span {
+	background: #006ba1 url("https://www.positronx.io/wp-content/uploads/2019/06/tick-icon-4657-01.png") center center no-repeat;
+}
+
+/* Buttons */
+.quiz_btn {
+	display: inline-block;
+	font-weight: 400;
+	color: #fff;
+	text-align: center;
+	vertical-align: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	background-color: #006ba1;
+	border: 1px solid #fff;
+	margin: 0;
+	padding: 0.5rem 1rem;
+	font-size: 1.5rem;
+	line-height: 1.5;
+	border-radius: 0.3rem;
+	overflow: visible;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.quiz_btn:hover {
+	border: 1px solid #006ba1;
+	background: #fff;
+	color: #006ba1;
+}
+.quiz_btn-group {
+	position: relative;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	vertical-align: middle;
+	width: 100%;
+}
+.quiz_btn-group > .quiz_btn {
+	position: relative;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+}
+.quiz_btn-group > .quiz_btn:hover {
+	z-index: 1;
+}
+.quiz_btn-group > .quiz_btn:not(:first-child) {
+	margin-left: -1px;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.quiz_btn-group > .quiz_btn:not(:last-child) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+#quiz_start,
+#quiz_prev,
+#quiz_next,
+#quiz_results,
+#quiz_restart,
+#quiz_restart_modal {
+	margin-top: 2rem;
+}
+#quiz_start,
+#quiz_restart,
+#quiz_restart_modal {
+	display: block;
+	width: 100%;
+}
+#quiz_start,
+#quiz_restart {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+#quiz_start i,
+#quiz_prev i,
+#quiz_next i,
+#quiz_results i,
+#quiz_restart i,
+#quiz_restart_modal i {
+	margin-left: .75rem;
+	margin-right: .75rem;
+	font-size: 1.25rem;
+}
+
+/* Progress bar */
+.quiz_progress {
+	display: -ms-flexbox;
+	display: flex;
+	height: 1.75rem;
+	margin-top: 1.125rem;
+	overflow: hidden;
+	line-height: 0;
+	font-size: 1rem;
+	background-color: #e9ecef;
+	border-radius: 0.25rem;
+}
+.quiz_progress-bar {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: center;
+	justify-content: center;
+	overflow: hidden;
+	color: #fff;
+	text-align: center;
+	white-space: nowrap;
+	background-color: #fed200;
+	transition: width 0.6s ease;
+}
+
+/* Modal */
+#quiz_modal .modal-header {
+	background-color: #006ba1;
+	color: #fff;
+}
+#quiz_modal .close {
+    color: #fff;
+    text-shadow: 0 1px 0 #000;
+}
+#quiz_modal .close:hover {
+    color: #fff;
+}
+#quiz_modal .modal-body {
+	font-size: 1.25rem;
+}
+</style>
+
+</head>
+<body>
+<span style="float:right; margin-top:-50px"><a href="https://SafeExamBrowser.org/"><img src="https://avatars.githubusercontent.com/u/13450095?s=50&v=4"></a></span>
+<!-- main -->
+<section class="main">
+	<h1>SafeExamBrowser Quiz Example</h1>
+  <div class="container">
+    <div id="example"></div>
+  </div>
+</section>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script>
+
+
+(function($){
+
+	// Customizable texts according to the language
+	// (buttons, labels and error messages)
+	var messages = {
+		start: 'Start',
+		prev: 'Back',
+		next: 'Forward',
+		results: 'Go to results',
+		restart: 'Restart the quiz',
+		error: 'Error',
+		errmsg: [
+			'Please choose an answer',
+			'Some questions have not been answered. Please, back to the top to answer all questions'
+		]
+	}
+
+	// Plugin
+	$.quiz = $.fn.quiz = function(options){
+
+		// Static variables
+		var quizJson,
+			params,
+			step = 0,
+			good = 0,
+			first = 0,
+			hashActual,
+			container = typeof this == 'object'? this.first(): null,
+			quiz = 'quiz_container',
+			modal = 'quiz_modal',
+			progress = 'quiz_progress';
+
+		// Default settings
+		var defaults = {
+			quizJson: null,
+			cookieExpire: 3600,
+			onResults: function(good, total){
+
+				// Perform some operations to show a message about the results
+			}
+		};
+
+		// Plugin methods
+		var methods = {
+
+			// Localization of messages
+			localization: function(translation){
+
+				if(typeof translation == 'object'){
+
+					text = $.extend(messages, translation);
+				}
+			}
+		};
+
+		// If options is a string...
+		if(typeof options == 'string'){
+
+			// If options is a method's name...
+			if(methods[options]){
+
+				// Call method
+				return methods[options].apply(this, Array.prototype.slice.call(arguments, 1));
+			} else{
+
+				// Options must be the url to quiz json file
+				options = {
+					quizJson: options
+				};
+			}
+		}
+
+		// If options is an object, but the url to quiz json file isn't set...
+		if(typeof options == 'object' && !options.quizJson){
+
+			// Search for data-quiz-json in container tag
+			var url = container.data('quizJson');
+			if(url){
+
+				options.quizJson = url;
+			}
+		}
+
+		// Merge options with default settings
+		var settings = $.extend(defaults, options);
+
+
+		/*** EVENTS ***/
+		// Event: Record response
+		$(document).on('click', 'input[type="radio"]', function(e){
+
+			// Get cookie response
+			var response = JSON.parse(getCookie('response'));
+
+			// New response
+			var obj = {};
+			obj[this.name] = this.value;
+
+			// Merge new response with other responses
+			response = $.extend(response, obj);
+
+			// Set cookie response
+			setCookie('response', JSON.stringify(response), settings.cookieExpire);
+		});
+
+		// Event: Start the quiz
+		$(document).on('click', '#quiz_start', function(e){
+			e.preventDefault();
+
+			// Open first question
+			openQuestion(first);
+		});
+
+		// Event: Move on to the next question
+		$(document).on('click', '#quiz_prev', function(e){
+			e.preventDefault();
+
+			// Question ID
+			var question = $(this).data('quizId');
+
+			// If question ID is less than zero...
+			if((question - 1) < 0){
+
+				// Open first question or intro
+				openFirst();
+			} else{
+
+				// Open previous question
+				openQuestion(question - 1);
+			}
+		});
+
+		// Event: Move on to the next question
+		$(document).on('click', '#quiz_next', function(e){
+			e.preventDefault();
+
+			// Question ID
+			var question = $(this).data('quizId');
+
+			// If there isn't errors...
+			if(hasErrors(question)){
+
+				// Open next question
+				openQuestion(question + 1);
+			}
+		});
+
+		// Event: Show results
+		$(document).on('click', '#quiz_results', function(e){
+			e.preventDefault();
+
+			// Question ID
+			var question = $(this).data('quizId');
+
+			// If there isn't errors...
+			if(hasErrors(question)){
+
+				// Open results
+				openResults();
+			}
+		});
+
+		// Event: Start over from the beginning
+		$(document).on('click', '#quiz_restart, #quiz_restart_modal', function(e){
+			e.preventDefault();
+
+			// Empty cookie response
+			response = {};
+			setCookie('response', JSON.stringify(response), settings.cookieExpire);
+
+			// Open first question or intro
+			openFirst();
+		});
+
+		// Event: Intercept hash change
+		$(window).bind('hashchange', function(e){
+
+			// If hash is empty...
+			if(window.location.hash == ''){
+
+				// Open first question or intro
+				openFirst();
+				return;
+			}
+
+			// Step ID
+			var stepid = window.location.hash.substr(1).split('=')[1];
+
+			// If step is an integer...
+			if(/^\+?(0|[1-9]\d*)$/.test(stepid)){
+
+				if(parseInt(hashActual) != parseInt(stepid)){
+
+					// Open question
+					openQuestion(stepid - 1);
+				}
+			}
+
+			// If step is results...
+			else if(stepid == 'results'){
+
+				// Open results
+				openResults();
+			}
+		});
+
+
+		/*** FUNCTIONS ***/
+		// Function: Set up the quiz
+		function init(){
+
+			// Bootstrap 4 is required
+			if(!$(document).modal){
+
+				console.error('Bootstrap 4 is required');
+				return;
+			}
+
+			// Set url to quiz json file
+			if(!settings.quizJson){
+
+				console.error('Set url to quiz json file');
+				return;
+			}
+
+			// Append quiz container
+			$('<div id="' + quiz + '"></div>').appendTo(container);
+
+			// Append progress bar container
+			$('<div id="' + progress + '"></div>').appendTo(container)
+				.addClass('quiz_progress');
+
+			// Get quiz json file via ajax
+			$.getJSON(settings.quizJson + '?_=' + new Date().getTime())
+				.done(function(data, textStatus, jqXHR){
+
+					// Qyestions
+					quizJson = data[0].questions;
+
+					// Params
+					params = data[0].params;
+
+					// Number of questions
+					step = quizJson.length;
+
+					// If there is a hash...
+					if(window.location.hash){
+
+						// Step ID
+						var stepid = window.location.hash.substr(1).split('=')[1];
+
+						// If step is an integer...
+						if(/^\+?(0|[1-9]\d*)$/.test(stepid)){
+
+							// Open question
+							openQuestion(stepid - 1);
+						}
+
+						// If step is results...
+						else if(stepid == 'results'){
+
+							// Open results
+							openResults();
+						}
+					} else{
+
+						// Open first question or intro
+						openFirst();
+					}
+				})
+				.fail(function(jqXHR, textStatus, errorThrown){
+
+					// Ajax error
+					console.error('Fail');
+					console.error('Error ' + textStatus);
+					console.error('Incoming Text ' + jqXHR.responseText);
+				});
+		}
+
+		// Function: Open first question or intro
+		function openFirst(){
+
+			// Get html
+			var html = htmlFirst();
+			if(html){
+
+				// Unset actual hash
+				hashActual = null;
+				window.location.hash = '';
+
+				// Insert html into quiz container
+				$('#' + quiz).html(html);
+
+				// Unset progress bar
+				showProgress(false);
+			}
+		}
+
+		// Function: Open a question
+		function openQuestion(id){
+
+			// Get question from quiz json
+			var question = getQuestion(id);
+
+			if(question){
+
+				// Question ID
+				var id = question[0] + 1;
+
+				// Set actual hash
+				hashActual = id;
+				window.location.hash = 'step=' + id;
+
+				// Insert html into quiz container
+				$('#' + quiz).html(htmlQuestion(question));
+
+				// Set progress bar
+				showProgress(id);
+			}
+		}
+
+		// Function: Open results
+		function openResults(id){
+
+			// Set actual hash
+			hashActual = 'results';
+			window.location.hash = 'step=results';
+
+			// Insert html into quiz container
+			$('#' + quiz).html(htmlResults());
+
+			// Unset progress bar
+			showProgress(false);
+
+			// Call onResult function
+			if(typeof settings.onResults === 'function'){
+
+				settings.onResults.apply($('#' + quiz), [good, step]);
+			}
+		}
+
+		// Function: Returns a question starting from the id
+		function getQuestion(id){
+
+			var question;
+
+			// Search for question
+			$.each(quizJson, function(i, q){
+
+				// If question key is equal to id...
+				if(i == id){
+
+					// Set array with key and question
+					question = [i, q];
+				}
+			});
+
+			return question;
+		}
+
+		// Function: Check for unanswered questions
+		function hasErrors(id){
+
+			// Get cookie response
+			var response = JSON.parse(getCookie('response'));
+
+			var questionId;
+			var result = true;
+
+			// If cookie response doesn't exist...
+			if(!response){
+
+				// Set an empty cookie response
+				response = {};
+				setCookie('response', JSON.stringify(response), settings.cookieExpire);
+			}
+
+			// Search for unanswered questions
+			$.each(quizJson, function(i, q){
+
+				questionId = 'question' + i;
+
+				// Previous question with no answer
+				if(i < id && !response[questionId]){
+
+					// Open modal
+					showModal(messages.errmsg[1], true);
+
+					result = false;
+					return false;
+				}
+
+				// Current question with no answer
+				else if(i == id && !response[questionId]){
+
+					// Open modal
+					showModal(messages.errmsg[0], false);
+
+					result = false;
+					return false;
+				}
+			});
+
+			return result;
+		}
+
+		// Function: Check if it is the last question
+		function hasLast(id){
+
+			var lastquestion = true;
+
+			// Search for question
+			$.each(quizJson, function(i, q){
+
+				// If question key is greater than id...
+				if(i > id){
+
+					lastquestion = false;
+				}
+			});
+
+			return lastquestion;
+		}
+
+		// Function: Get html of first question or intro
+		function htmlFirst(){
+
+			var items = [];
+
+			// If the intro is set in the json...
+			if(params.intro == 1){
+
+				// An intro message is displayed
+				items.push('<div class="quiz_intro">');
+				items.push(params.intromessage);
+				items.push('<button id="quiz_start" class="quiz_btn">' + messages.start + '<i class="fa fa-play" aria-hidden="true"></i></button>');
+				items.push('</div>');
+
+				return items.join('');
+			} else{
+
+				// Open first question
+				openQuestion(first);
+			}
+		}
+
+		// Function: Get html of a question
+		function htmlQuestion(q){
+
+			var items = [];
+
+			var questionId = 'question' + q[0];
+
+			// Get cookie response
+			var response = JSON.parse(getCookie('response'));
+
+			items.push('<div class="quiz_flex">');
+
+			// Question number
+			items.push('<div class="quiz_num">' + (q[0] + 1) + '.</div>');
+
+			items.push('<div class="quiz_flex-fill">');
+
+			// Question text
+			items.push('<h2>' + q[1].question + '</h2>');
+
+			// Question description
+			if(q[1].description){
+
+				items.push('<p>' + q[1].description + '</p>');
+			}
+
+			// Answers
+			$.each(q[1].answers, function(i, r){
+
+				var checked = '';
+
+				// If an answer has already been chosen for the question...
+				if(response && response[questionId] && response[questionId] == i){
+
+					checked = ' checked';
+				}
+
+				// Input and Label
+				items.push('<div class="quiz_radio-button">');
+				items.push('<input type="radio" id="quiz_answer-' + i + '" name="question' + q[0] + '" value="' + i + '"' + checked + '>');
+				items.push('<label for="quiz_answer-' + i + '"><span></span> ' + r.answer + '</label>');
+				items.push('</div>');
+			});
+
+			items.push('</div>');
+			items.push('</div>');
+
+			// If it is the last question...
+			if(hasLast(q[0])){
+
+				// Prev and Results buttons
+				items.push('<div class="quiz_btn-group" role="group">');
+				items.push('<button id="quiz_prev" class="quiz_btn" data-quiz-id="' + q[0] + '"><i class="fa fa-step-backward" aria-hidden="true"></i>' + messages.prev + '</button>');
+				items.push('<button id="quiz_results" class="quiz_btn" data-quiz-id="' + q[0] + '">' + messages.results + '<i class="fa fa-step-forward" aria-hidden="true"></i></button>');
+				items.push('</div>');
+			} else{
+
+				// Prev and Next buttons
+				items.push('<div class="quiz_btn-group" role="group">');
+				items.push('<button id="quiz_prev" class="quiz_btn" data-quiz-id="' + q[0] + '"><i class="fa fa-step-backward" aria-hidden="true"></i>' + messages.prev + '</button>');
+				items.push('<button id="quiz_next" class="quiz_btn" data-quiz-id="' + q[0] + '">' + messages.next + '<i class="fa fa-step-forward" aria-hidden="true"></i></button>');
+				items.push('</div>');
+			}
+
+			return items.join('');
+		}
+
+		// Function: Get html of results
+		function htmlResults(){
+
+			var items = [];
+
+			// Reset good response
+			good = 0;
+
+			// Get cookie response
+			var response = JSON.parse(getCookie('response'));
+
+			// Search for question
+			$.each(quizJson, function(i, q){
+
+				var questionId = 'question' + i;
+
+				items.push('<div class="quiz_flex">');
+
+				// Question number
+				items.push('<div class="quiz_num">' + (i + 1) + '.</div>');
+
+				items.push('<div class="quiz_flex-fill">');
+
+				// Question text
+				items.push('<h2>' + q.question + '</h2>');
+
+				// Question description
+				if(q.description){
+
+					items.push('<p>' + q.description + '</p>');
+				}
+
+				// Answers
+				$.each(q.answers, function(i, r){
+
+					// If an answer has already been chosen for the question...
+					if(response && response[questionId] && response[questionId] == i){
+
+						// If the answer is right...
+						if(r.true == 1){
+
+							// Correct answers
+							good++;
+
+							// Alert success
+							items.push('<div class="quiz_response"><strong>' + (i + 1) + '.</strong> ' + r.answer + '</div>');
+							items.push('<div class="quiz_alert quiz_alert-success">');
+							items.push('<i class="fa fa-thumbs-up" aria-hidden="true"></i>' + r.alert);
+							items.push('</div>');
+						} else{
+
+							// Alert fail
+							items.push('<div class="quiz_response"><strong>' + (i + 1) + '.</strong> ' + r.answer + '</div>');
+							items.push('<div class="quiz_alert quiz_alert-fail">');
+							items.push('<i class="fa fa-thumbs-down" aria-hidden="true"></i>' + r.alert);
+							items.push('</div>');
+						}
+					} else{
+
+						//items.push('<div class="quiz_response"><strong>' + (i + 1) + '.</strong> ' + r.answer + '</div>');
+					}
+				});
+
+				items.push('</div>');
+				items.push('</div>');
+			});
+
+			// Restart button
+			items.push('<button id="quiz_restart" class="quiz_btn"><i class="fa fa-repeat" aria-hidden="true"></i>' + messages.restart + '</button> <a href="https://SafeExamBrowser.org/"><button class="quiz_btn" style="float:right; background:red">Exit Quiz</button></a>');
+
+			return items.join('');
+		}
+
+		// Function: Set progress bar, if it doesn't exists, and show/hide it
+		function showProgress(id){
+
+			// Width of bar
+			var perc = (id / step) * 100;
+
+			// Search for progress bar
+			var bar = $('#' + progress).show()
+				.find('.quiz_progress-bar');
+
+			// if no progress bar exist...
+			if(!bar.length){
+
+				// Append progress bar to progress container
+				bar = $('<div class="quiz_progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>')
+					.appendTo('#' + progress);
+			}
+
+			// Set width and counter
+			bar.attr('aria-valuenow', perc)
+				.css('width', perc + '%')
+				.html(id + '/' + step);
+
+			// If id is false...
+			if(!id){
+
+				// Hide progress bar
+				$('#' + progress).hide();
+			}
+		}
+
+		// Function: Set bootstrap modal, if it doesn't exists, and show it
+		function showModal(error, back){
+
+			var mdl = $('#' + modal);
+
+			// If modal html doesn't exist, append one to body
+			if(!mdl.length){
+
+				var items = [];
+
+				items.push('<div id="' + modal + '" class="modal fade" role="dialog" aria-hidden="true" aria-labelledby="quiz_mdltitle" tabindex="-1">');
+				items.push('<div class="modal-dialog modal-dialog-centered" role="document">');
+				items.push('<div class="modal-content">');
+
+				// Header
+				items.push('<div class="modal-header">');
+				items.push('<h5 id="quiz_mdltitle" class="modal-title">' + messages.error + '</h5>');
+				items.push('<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>');
+				items.push('</div>');
+
+				// Body
+				items.push('<div class="modal-body text-danger" aria-live="polite"></div>');
+
+				// Footer
+				items.push('<div class="modal-footer">');
+				items.push('<button id="quiz_restart_modal" type="button" class="quiz_btn" data-dismiss="modal"><i class="fa fa-repeat" aria-hidden="true"></i>' + messages.restart + '</button>');
+				items.push('</div>');
+
+				items.push('</div>');
+				items.push('</div>');
+				items.push('</div>');
+
+				$(items.join(''))
+					.appendTo('body');
+
+				// Wait ten millisecond before to open modal
+				setTimeout(function(){
+
+					showModal(error, back);
+				}, 10);
+			} else{
+
+				// Set error message and footer button, then open modal
+				mdl.find('.modal-body').text(error)
+					.end().find('.modal-footer').css('display', back? 'flex': 'none')
+					.end().modal('show');
+			}
+		}
+
+
+		/*** COOKIE ***/
+		// Set a cookie
+		function setCookie(name, value, seconds){
+
+			var expires = '';
+
+			// Set cookie expiring date
+			if(seconds){
+
+				var date = new Date();
+				date.setTime(date.getTime() + (seconds * 1000));
+				expires = '; expires=' + date.toUTCString();
+			}
+
+			document.cookie = name + '=' + (value || '')  + expires + '; path=/';
+		}
+
+		// Get a cookie
+		function getCookie(name){
+
+			var nameEQ = name + '=';
+			var ca = document.cookie.split(';');
+
+			for(var i = 0; i < ca.length; i++){
+
+				var c = ca[i];
+
+				while(c.charAt(0) == ' '){
+
+					c = c.substring(1, c.length);
+				}
+
+				if(c.indexOf(nameEQ) == 0){
+
+					return c.substring(nameEQ.length, c.length);
+				}
+			}
+
+			return null;
+		}
+
+		// Delete a cookie
+		function eraseCookie(name){
+
+			document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		}
+
+
+		/*** INIT ***/
+		init();
+
+		return this;
+	}
+}(jQuery));
+
+</script>
+<script>
+$(document).ready(function(){
+
+	var pathJson = window.location.pathname.replace(/\/[^\/]+?\.[^\/]+?$/, '/');
+
+	$('#example').quiz({
+		quizJson: pathJson + "quiz.json",
+    onResults: function(good, total){
+      var perc = good / total;
+      var alert = $('<div class="alert"></div>')
+        .prependTo(this);
+      if(perc == 0){
+        alert.addClass('alert-danger')
+          .html('All wrong! You didn\'t get an answer right.');
+      } else if(perc > 0 && perc <= 0.25){
+
+        alert.addClass('alert-danger')
+          .html('Poor result! You just got it right ' + good + ' answers on ' + total + '. Try again.');
+      } else if(perc > 0.25 && perc <= 0.5){
+
+        alert.addClass('alert-danger')
+          .html('Just sufficient! You got it right ' + good + ' answers on ' + total + '. You can do better.');
+      } else if(perc > 0.5 && perc <= 0.75){
+
+        alert.addClass('alert-success')
+          .html('Discreet result! You got it right ' + good + ' answers on ' + total + '. Try again.');
+      } else if(perc > 0.75 && perc < 1){
+
+        alert.addClass('alert-success')
+          .html('Good result! You got it right ' + good + ' answers on ' + total + '. We are almost there.');
+      } else if(perc == 1){
+
+        alert.addClass('alert-success')
+          .html('Congratulations, you have answered all the questions!');
+      }
+    }
+	});
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+</body>
+</html>

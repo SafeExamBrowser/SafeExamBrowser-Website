@@ -1,0 +1,53 @@
+[{
+    "questions": [
+        {
+            "question": "What is the capital of Switzerland?",
+            "description": null,
+            "answers":
+            [
+                {
+                    "answer": "Geneva",
+                    "alert": "<strong>The answer is incorrect.</strong>",
+                    "true": 0
+                },
+                {
+                    "answer": "Stockholm",
+                    "alert": "<strong>The answer is incorrect.</strong>",
+                    "true": 0
+                },
+                {
+                    "answer": "Bern",
+                    "alert": "<strong>Exactly!</strong>",
+                    "true": 1
+                },
+                {
+                    "answer": "Zurich",
+                    "alert": "<strong>The answer is incorrect.</strong>",
+                    "true": 0
+                }
+            ]
+        },
+        {
+            "question": "Which scientist studied at ETH Zurich?",
+            "description": null,
+            "answers": [{
+                "answer": "Alfred Nobel",
+                "alert": "<strong>The answer is incorrect.</strong>",
+                "true": 0
+            },
+                {
+                    "answer": "Marie Curie",
+                    "alert": "<strong>The answer is incorrect.</strong>",
+                    "true": 0
+                },
+                {
+                    "answer": "Albert Einstein",
+                    "alert": "<strong>Exactly!</strong>",
+                    "true": 1
+                }]
+        }],
+    "params": {
+        "intro": 1,
+        "intromessage": "You are about to start the test quiz..  Press Start to proceed."
+    }
+}]
