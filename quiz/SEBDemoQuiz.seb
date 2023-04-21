@@ -5,9 +5,12 @@
 	<key>URLFilterEnable</key>
 	<false/>
 	<key>URLFilterEnableContentFilter</key>
-	<false/>
+	<true/>
 	<key>URLFilterIgnoreList</key>
-	<array/>
+	<array>
+		<string>ssl.google-analytics.com</string>
+		<string>pagead2.googlesyndication.com</string>
+	</array>
 	<key>URLFilterMessage</key>
 	<integer>0</integer>
 	<key>URLFilterRules</key>
@@ -19,6 +22,96 @@
 			<true/>
 			<key>expression</key>
 			<string>https://safeexambrowser.org</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>www.jqueryscript.net</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>cdn.jsdelivr.net</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>cdnjs.cloudflare.com</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>fonts.googleapis.com</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>avatars.githubusercontent.com</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>code.jquery.com</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>jquery.app</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>fonts.gstatic.com</string>
+			<key>regex</key>
+			<false/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<integer>1</integer>
+			<key>active</key>
+			<true/>
+			<key>expression</key>
+			<string>www.positronx.io</string>
 			<key>regex</key>
 			<false/>
 		</dict>
@@ -276,7 +369,7 @@
 	<array/>
 	<key>examKeySalt</key>
 	<data>
-	vNyQHa9LMGO+aB8P3+P3JBDsoJ6N1OYU/6KY5dqInfw=
+	ZCZq5gv7aBbqtUbegmzVC+pHhrpXX+eyz6vOq5M/Vrg=
 	</data>
 	<key>examSessionClearCookiesOnEnd</key>
 	<true/>
@@ -373,7 +466,7 @@
 	<key>logDirectoryWin</key>
 	<string></string>
 	<key>logLevel</key>
-	<integer>3</integer>
+	<integer>2</integer>
 	<key>logSendingRequiresAdminPassword</key>
 	<false/>
 	<key>mainBrowserWindowHeight</key>
@@ -1425,7 +1518,7 @@
 	<key>proxySettingsPolicy</key>
 	<integer>0</integer>
 	<key>quitURL</key>
-	<string>https://safeexambrowser.org</string>
+	<string>https://safeexambrowser.org/exit</string>
 	<key>quitURLConfirm</key>
 	<false/>
 	<key>quitURLRestart</key>
@@ -1534,9 +1627,9 @@
 	<key>urlFilterRegex</key>
 	<true/>
 	<key>urlFilterTrustedContent</key>
-	<false/>
+	<true/>
 	<key>whitelistURLFilter</key>
-	<string>^https:\/\/((((safeexambrowser\.org)|(.*?\.safeexambrowser\.org)))|(((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/.*?))(()|(\?.*?))$</string>
+	<string>^https:\/\/((((safeexambrowser\.org)|(.*?\.safeexambrowser\.org)))|(((safeexambrowser\.org)|(.*?\.safeexambrowser\.org))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((www\.jqueryscript\.net)|(.*?\.www\.jqueryscript\.net)))|(((www\.jqueryscript\.net)|(.*?\.www\.jqueryscript\.net))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((cdn\.jsdelivr\.net)|(.*?\.cdn\.jsdelivr\.net)))|(((cdn\.jsdelivr\.net)|(.*?\.cdn\.jsdelivr\.net))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((cdnjs\.cloudflare\.com)|(.*?\.cdnjs\.cloudflare\.com)))|(((cdnjs\.cloudflare\.com)|(.*?\.cdnjs\.cloudflare\.com))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((fonts\.googleapis\.com)|(.*?\.fonts\.googleapis\.com)))|(((fonts\.googleapis\.com)|(.*?\.fonts\.googleapis\.com))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((avatars\.githubusercontent\.com)|(.*?\.avatars\.githubusercontent\.com)))|(((avatars\.githubusercontent\.com)|(.*?\.avatars\.githubusercontent\.com))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((code\.jquery\.com)|(.*?\.code\.jquery\.com)))|(((code\.jquery\.com)|(.*?\.code\.jquery\.com))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((jquery\.app)|(.*?\.jquery\.app)))|(((jquery\.app)|(.*?\.jquery\.app))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((fonts\.gstatic\.com)|(.*?\.fonts\.gstatic\.com)))|(((fonts\.gstatic\.com)|(.*?\.fonts\.gstatic\.com))\/.*?))(()|(\?.*?))$;^.*?:\/\/((((www\.positronx\.io)|(.*?\.www\.positronx\.io)))|(((www\.positronx\.io)|(.*?\.www\.positronx\.io))\/.*?))(()|(\?.*?))$</string>
 	<key>zoomAPIKey</key>
 	<string></string>
 	<key>zoomAudioMuted</key>
