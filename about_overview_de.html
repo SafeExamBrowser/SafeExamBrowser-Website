@@ -424,7 +424,7 @@
                   <li>Windows 11</li>
                 </ul>
               </li>
-              <li>Lizenz: Mozilla Public License (MPL)</li>
+              <li>Lizenz: Mozilla Public License (MPL). Enthält ein binäres Sicherheitsmodul, welches nicht als Open Source verfügbar ist.</li>
               <li>Browser-System: Chromium Blink</li>
               <li>Programmiersprachen/Frameworks: 
                 <ul>
@@ -443,6 +443,7 @@
             <ul>
               <li>Betriebssystem: 
                 <ul>
+	              <li>macOS 13 Ventura</li>
 	              <li>macOS 12 Monterey</li>
 	              <li>macOS 11 Big Sur</li>
 	              <li>macOS 10.15 Catalina</li>
@@ -470,11 +471,14 @@
             <ul>
               <li>Betriebssystem: 
                 <ul>
+	              <li>iOS 16</li>
 	              <li>iOS 15</li>
 	              <li>iOS 14</li>
 	              <li>iOS 13</li>
 	              <li>iOS 12</li>
-	              <li>iOS 11</li>
+	              <li>iOS 11<br>
+	                Auf den untenstehenden iOS-Versionen kann nur noch SEB für iOS 2.1.17 benutzt werden (welches diverse Funktionen von SEB 3.0 und neuer nicht unterstützt)<br>
+	              </li>
 	              <li>iOS 10</li>
 	              <li>iOS 9.3.5</li>
                 </ul>
@@ -511,7 +515,7 @@
             <p>SafeExamBrowser (SEB) liefert weder personenbezogene noch andere Daten an einen zentralen Server und ist mit keinem Webanalyse-Dienst (Web Analytics, User Tracking, Clickstream Analytics usw.) direkt verbunden.  SEB sammelt in der Standardeinstellung sogenannte Randdaten (wozu einige Information über das System gehören wie Gerätetyp und -Namen, Betriebssystemversion, Computer-Benutzerkontoname, lokaler Netzwerk-Host-Name), die lokal auf dem jeweiligen Client-Rechner in einer Log-Datei gespeichert werden. Die Log-Dateien werden durch SEB nicht weitergeben, sondern verbleiben auf dem lokalen Rechner. Die Log-Dateien können manuell eingesammelt werden. Sie dienen dem Zweck der Fehleranalyse. Das Sammeln von Randdaten und des Erstellen der zugehörigen Log-Dateien kann in den SEB-Einstellungen deaktiviert werden (<a href="windows/win_usermanual_en.html#SecurityPane">Win</a>/<a href="macosx/mac_usermanual_en.html#SecurityPane">Mac</a>). </p>
             <p>Falls SEB Clients optional konfiguriert wurden, um sich mit einer Instanz der <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> Softwarekomponente zu verbinden, werden die erwähnten Log-Daten zusammen mit dem Benutzernamen eines Prüfungskandidaten aus einem unterstützten Prüfungssystem (momentan Open edX, Moodle, OpenOlat und Ans, sofern diese so konfiguriert wurden, damit  sich die  SEB Server Instanz mit diesen unabhängigen Systemen verbinden kann) an die individuelle SEB Server Instanz übertragen. SEB sammelt keine anderen Benutzerdaten, sondern lädt und zeigt nur Webseiten an und &quot;kennt&quot; deswegen keine Details über die jeweiligen Benutzer.  SEB arbeitet mit verschiedenen webbasierten Prüfungssystemen zusammen, die unter Umständen Benutzerdaten sammeln, hierfür sind die jeweiligen, produktbezogenen Datenschutzbestimmungen zu beachten. SEB Clients können individuell so konfiguriert werden, damit sie sich mit einem Videokonferenzdienst (<a href="https://jitsi.org" target="_blank">Jitsi Meet</a> oder <a href="https://zoom.us" target="_blank">Zoom</a>) verbinden  und Video-/Audio-Daten von der  Kamera und dem Mikrofon eines Client-Rechners  über diesen Videokonferenzdienst übertragen können. Dies ist rein optional und standardmässig immer deaktiviert<strong>.</strong> Falls  ein SEB Client konfiguriert wurde, sich mit einem Videokonferenzdienst oder einer SEB Server Instanz zu verbinden, wird dies beim Starten einer Prüfungs-Session den Kandidaten angezeigt und dem Video-/Audio-Proctoring/Support über einen Videokonferenzdienst muss jeder/jede Prüfungskandidat/in explizit in einem Dialogfenster zustimmen.</p>
             <p>Weder für den Download von SEB noch für dessen Installation oder Nutzung ist eine irgendwie geartete Anmeldung notwendig. SEB nimmt mit Standardkonfiguration keinerlei Verbindung zu einem Cloud-Service auf. SEB verbindet sich ausschließlich zu dem Server, der in den Einstellungen unter "Start URL" definiert wird und bei Verwendung von entsprechenden, individuellen Konfigurationsdateien mit einer SEB Server Instanz oder einem Videokonferenzdienst. In der Standardeinstellung zeigt SEB beim Starten diese <a href="http://safeexambrowser.org/start" target="_blank">Webseite</a> an.</p>
-            <p>Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>des Open-Source-Projekts SEB ist öffentlich verfügbar. Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>kann jederzeit  eingesehen und damit die gemachten Erklärungen unabhängig überprüft werden. Die SEB-Version für iOS enthält ein Sicherheitsmodul, welches dazu dient, die Integrität der Applikation und der iOS-Umgebung zu überprüfen. Dieses Modul wird nur in binärer Form verteilt und aus Sicherheitsgründen ist dessen Code nicht als Open Source verfügbar. Dieses Modul sammelt keine personenbezogene Daten und sendet keine solche Daten an zentrale Server, es greift weder auf lokale Netzwerke noch das Internet zu.<br>
+            <p>Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>des Open-Source-Projekts SEB ist öffentlich verfügbar. Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode </a>kann jederzeit  eingesehen und damit die gemachten Erklärungen unabhängig überprüft werden.  Aktuelle SEB-Versionen enthalten ein Sicherheitsmodul, welches dazu dient, die Integrität der Applikation und der bei der entsprechenden Version der iOS-Umgebung zu überprüfen. Dieses Modul wird nur in binärer Form verteilt und aus Sicherheitsgründen ist dessen Code nicht als Open Source verfügbar. Dieses Modul sammelt keine personenbezogene Daten und sendet keine solche Daten an zentrale Server, es greift weder auf lokale Netzwerke noch das Internet zu.<br>
             </p>
               
           </div>
