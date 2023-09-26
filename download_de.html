@@ -278,66 +278,47 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.2.5/SafeExamBrowser-3.2.5.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.3/SafeExamBrowser-3.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.2.5 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.3 für macOS</span>
           </a> 
         </p>
         
 
-<p><strong>Aktuelle Version von Safe Exam Browser für macOS 13, 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
-        <span class="codetext">Build 1456D. SHA1: 3e1edfcbf3865071c175e11f2dd646c55d5feaf5</span></p>
+<p><strong>Aktuelle Version von Safe Exam Browser für macOS 14, 13, 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
+        <span class="codetext">Build 1456D. SHA1: ed02c166c579d2277d5624d06683856cc9aa3eca</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.2.5/SafeExamBrowser-3.2.5.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.3/SafeExamBrowser-3.3.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.2 erweitert die optionale Unterstützung für SEB Server und bringt viele Stabilitätsverbesserungen.</p>
-          <p>Neu in SEB 3.2.5:</p>
+          <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit, ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. Optional: SEB Server-Integration mit Moodle.</p>
+          <p>Neu in SEB 3.3:</p>
           <ul id="seblist">
-            <li>Behoben: Nachschlagen mittels kräftigem Klick funktionierte im klassischen WebView in macOS 13 Ventura.</li>
-          </ul>
-          <p>Neu in SEB 3.2.4:</p>
-          <ul id="seblist">
-            <li>AnyGPT wird standardmässig blockiert.</li>
-            <li>Ein Fall wurde behoben, bei dem eine modale Warnung  SEB beim Starten einer Session blockieren kann. Modale Warnungen wurden manchmal hinter dem schwarzen Bildschirmhintergrund  angezeigt.</li>
-            <li>Sicherheitsverbesserungen.</li>
-            <li>Behoben: Einstellung für Download-Verzeichnis funktionierte in SEB 3.2.3 nicht.</li>
-            <li>Es wird nun geprüft, ob ein korrektes Download-Verzeichnis  in den Einstellungen definiert ist, bevor ein Download im modernen WebView durchgeführt wird. Wenn nicht, wird das  Standard-Downloads-Verzeichnis verwendet.</li>
-            <li> Warnung &quot;Downloads nicht erlaubt&quot; wird jetzt auch im modernen WebView angezeigt, wenn die Einstellungen keine Downloads zulassen, und in einem Fall auch für Downloads im klassischen WebView.</li>
-            <li>Jetzt auch korrekte Behandlung von PDF-Dateien im modernem WebView, wenn das Herunterladen deaktiviert ist (dann werden auch PDF-Dateien  mit einem &quot;Download&quot;-Link angezeigt statt heruntergeladen).</li>
-            <li>Dabei Berücksichtigung der Einstellung <em>newBrowserWindowByLinkPolicy = openInSameWindow</em>: Dann wird ein PDF nicht in einem neuen Fenster geöffnet.</li>
-            <li>Jetzt auch korrekte Handhabung der Einstellungen &quot;Dateien nach dem Herunterladen öffnen&quot; und &quot;PDF-Dateien herunterladen und öffnen, anstatt sie inline anzuzeigen&quot; im modernen WebView.</li>
-            <li>Die Funktion &quot;Datei für Upload auswählen … nur zuvor heruntergeladene Datei zulassen&quot;, die im modernen WebView nicht funktionierte, wurde korrigiert. Ausserdem werden die vorherigen Download-Pfade zurückgesetzt, wenn SEB neu konfiguriert wird.<br>
-            </li>
-          </ul>
-          <p>Neu seit 3.2.3/3.2.2/3.2.1:</p>
-          <ul id="seblist">
-            <li>Das Herunterladen von auf der Website generierten Dateien (mit dem Protokollschema &quot;data:&quot;) im modernen WebView wurde korrigiert.</li>
-            <li>Jetzt sind Downloads beliebiger Dateitypen und &quot;blob:&quot;-generierter Dateien möglich, wenn Sie das moderne WebView und macOS 10.3 oder neuer verwenden. Diese heruntergeladenen Dateien verwenden auch den ursprünglichen Dateinamen (dies war im klassischen WebView nicht möglich).</li>
-            <li> Absturz beim Schliessen mancher Webseiten  behoben.</li>
-            <li>Protokollierung wurde verbessert, um sich wiederholende Ereignisse in den Logdateien zu verhindern.<br>
-            </li>
-            <li>macOS 13 Ventura wurde als Option für die minimale macOS-Version hinzugefügt.</li>
-            <li>Die Abbrechen-Schaltfläche in der Fallback-Passwort-Warnung bei Benutzung des optionalen SEB Servers wurde behoben und der Text der Warnung im Falle eines leeren Fallback-Passworts verbessert.          </li>
-            <li>Behoben: Auf einem Trackpad mit 'Force Touch' funktionierte die Funktion 'Begriffe Nachschlagen' (ausgelöst mittels Force-Clicks) im modernen WebView.</li>
-            <li>Behoben: Roter Sperrbildschirm nach Benutzerwechsel verschwand ohne Benutzeraktion.</li>
-            <li>Behoben: Die neueste TeamViewer-Version wurde nicht standardmässig blockiert.          </li>
-            <li>Behoben: Die Tastenkombination zum Neuladen wurde nicht korrekt aktiviert, abhängig von den Einstellungen zum Neuladen und dem gewählten Fenster (Haupt-/Zusatzfenster).</li>
-            <li>Fehler behoben, der dazu führte, dass Eigenschaften wie &quot;aktiv&quot; von verbotenen Prozessen in den SEB-Einstellungen nicht korrekt gesetzt werden konnten.</li>
-            <li>Behoben: Null-Referenz-Exception in injiziertem Javascript-Code im Zusammenhang mit dem &quot;Download&quot;-Attribut von Links.<br>
-            </li>
-          </ul>
+            <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>
+            <li>Unterstützt jetzt auch den Modus &quot;Kontrast erhöhen&quot; und fettgedruckten Text im Seitenmenü.</li>
+            <li>Verbessertes VoiceOver-Feedback beim Öffnen neuer Ansichten.</li>
+            <li>Unterstützung von QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten, für den internen SEB-QR-Code-Leser und für QR-Codes, die mit der iOS-Kamera-App gescannt werden. Es ist nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
+            <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen.</li>
+            <li>Unterstützung für Konfigurationslinks (URLs) mit vollständigen SEB-Konfigurationen wurde hinzugefügt (ähnlich wie bei den neuen QR-Codes).</li>
+            <li>Option zum Exportieren von SEB-Einstellungen als unverschlüsselte und wahlweise reduzierte plist-Datei für die MDM Managed Configuration-Funktion wurde hinzugefügt.</li>
+            <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
+            <li>Der Vergleich der Einstellungen vom MDM-Server mit den aktuellen Einstellungen wurde verbessert, indem auch einzelne verbotene Prozesse korrekt verglichen werden.</li>
+            <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
+            <li>Der Titel der Einstellungsseite für Konfigurationsdateien wurde in Konfigurationen geändert und die Terminologie aktualisiert.</li>
+            <li>Der Standardwert für den Zweck der SEB-Konfiguration wurde in Prüfung starten geändert.</li>
+            <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt (allowDownloads = standardmässig true, allowUploads = standardmässig true), die mit der bestehenden, aber veralteten Einstellung allowDownUploads UND verknüpft werden.</li>
+            <li>Option zum Blockieren von Uploads und Datei-/Fotoauswahldialog für die Taste &quot;Datei auswählen&quot; im modernen WebView hinzugefügt.</li>
+            <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
+            <li>Logging in Swift-Klassen und Log-Level Error funktionieren nicht mehr.</li>
+            <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
+            <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.<br>
+            </li></ul>
           <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
           <ul id="seblist">
-            <li><strong>Neu in 3.2.4:</strong> Bei Verwendung des optionalen SEB Servers kann ein SEB Client gesperrt (mit einem roten Sperrbildschirm mit optionaler, individueller Nachricht) und vom Server wieder entsperrt werden.</li>
-            <li>Es wird nun eine Benachrichtigung an den SEB Server gesendet, wenn ein Sperrbildschirm auf dem Client geschlossen wird (durch Eingabe des Beenden-Passworts).</li>
-            <li>Ein Problem mit der Benachrichtigung bei Verwendung der Funktion &quot;Hand heben/senken&quot; wurde behoben.</li>
-            <li>Massiv verbesserte Fehlerbehandlung bei der Verbindung zum SEB Server mit besseren Fehlermeldungen, die SEB Server- und Prüfungsadministratoren helfen können, serverseitige Probleme zu beheben.</li>
-            <li>Unterstützung für Fallback-Option hinzugefügt, wenn die Verbindung zum SEB Server komplett fehlschlägt. In diesem Fall kann eine alternative Start-URL konfiguriert und der Fallback optional mit einem neuen Passwort geschützt werden.</li>
-            <li>Verbessertes Senden von Log-Ereignissen, um zu verhindern, dass einzelne Ereignisse aufgrund von temporären Verbindungsproblemen verloren gehen.</li>
-            <li>Senden von Geräteinformationen an den SEB Server zu einem früheren Zeitpunkt im Verbindungsprozess.</li>
-            <li>Erneuerung abgelaufener SEB Server OAuth-Token.</li>
-            <li>Bereinigung ausstehender Anfragen an SEB Server behoben.</li>
-            <li>Fehlende <em>pingInterval</em> SEB-Server-Verbindungseinstellung behoben, die dazu führte, dass Pings kontinuierlich gesendet wurden und SEB nach einer Weile abstürzte.</li>
+            <li>App Signature Key-Funktionalität, die eine automatisierte Prüfung der Anwendungsintegrität ermöglicht, ähnlich wie bei der manuellen Verwendung des Browser Exam Key (kein Kopieren und Einfügen von Hash-Strings erforderlich).</li>
+            <li>Neuer servergesteuerter Browser Exam Key, der für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden kann. </li>
+            <li>Beim Beenden der SEB Server-Sitzung wird nun das Fenster &quot;Verbindung wird getrennt&quot; angezeigt, um dem Benutzer eine Rückmeldung bei Verbindungsproblemen zu geben.</li>
+            <li>Hinzufügen von Fehlermeldungen, wenn bestimmte Schritte des Verbindungsprozesses zu einer SEB Server Prüfung fehlschlagen, mit mehr Statusmeldungen im SEB Server Verbindungsfenster.</li>
+            <li>Verbesserte Protokollierung von SEB Server-Verbindungen.</li>
           </ul>
           <p>Hinweis: <strong>Diese Version enthält nicht die Zoom-Integration </strong>für Prüfungsaufsicht oder Prüfungssupport, die in SEB 3.2rc enthalten war. Es gibt eine nicht-öffentliche SEB Alliance Edition, die die Zoom-Integration weiterhin unterstützt. Wenn Sie daran interessiert sind, diese Zoom-Integration zu nutzen, kontaktieren Sie <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
           <p>Wichtige neue Funktionen seit SEB 3.x:</p>
@@ -375,7 +356,7 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.2.4 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.3 für iOS im App Store</span>
           </a> 
         </p>
         
@@ -383,31 +364,35 @@
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 11 und neuer</strong></p>
                 
 <p>SEB 3.2 erweitert die optionale Unterstützung für SEB Server, verbessert Konfiguration mittels MDM und die generelle Stabilität. </p>
-<p>Neu in SEB 3.2.4:</p>
+<p>Neu in SEB 3.3:</p>
 <ul id="seblist">
-  <li>Das Herunterladen von auf der Website generierten Dateien (mit dem Protokollschema &quot;data:&quot;) im modernen WebView wurde korrigiert.</li>
-  <li>Jetzt sind Downloads beliebiger Dateitypen und &quot;blob:&quot;-generierter Dateien möglich, wenn Sie das moderne WebView und iOS 14.5 oder neuer verwenden. Diese heruntergeladenen Dateien verwenden auch den ursprünglichen Dateinamen (dies war in dem klassischen WebView nicht möglich).</li>
-  <li> Absturz beim Schliessen einiger Webseiten  behoben.</li>
-</ul>
-<p>Neu seit SEB 3.2.1/3.2.2:</p>
-<ul id="seblist">
-  <li>Anzeige von Dialog für Kamera- und Mikrofonerlaubnis für Webanwendungen und optionales integriertes Proctoring vor Beginn der Session. </li>
-  <li>Neue Einstellungen <em>browserMediaCaptureCamera</em> und <em>browserMediaCaptureMicrophone</em> (<em>Einstellungen / Browser-Funktionen / Medienwiedergabe/-aufnahme / Kamera-/Mikrofonaufnahme zulassen</em>) zur Steuerung des Browserzugriffs auf Kamera/Mikrofon (WebRTC oder Standbilder/Audioaufnahmen) hinzugefügt. Wenn diese Einstellungen aktiviert sind, werden die Benutzer aufgefordert, den Zugriff auf Kamera/Mikrofon für SEB zu erlauben, bevor die entsprechende (Prüfungs-)Session gestartet wird. </li>
-  <li><strong>Für Zugriff auf Kamera/Mikrofon </strong>über WebRTC/getUserMedia() Web API auf iOS 14.3 und neuer müssen die in den <a href="macosx/mac_release_notes_en.html">Versionshinweisen</a> von SEB 3.0 erläuterten Anforderungen erfüllt sein, damit SEB das moderne WebView verwenden kann. Wenn Sie eine Prüfungssoftware mit einer eingebauten SEB-Integration verwenden, stellen Sie sicher, dass Sie eine Version verwenden, die mit der <a href="developer/seb-config-key.html">SEB JavaScript API</a> kompatibel ist (z. B. <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 oder das <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">aktualisierte Plugin für die manuelle Installation in Moodle 3.9 oder höher</a>).</li>
-  <li>Die Konfiguration mittels MDM wurde verbessert, um Änderungen der Einstellungen zuverlässiger zu erkennen.</li>
-  <li>Absturz bei der Konfiguration über MDM behoben: Dies geschah, wenn eine Konfiguration verbotene Prozesse enthielt.</li>
-  <li>Absturz behoben, wenn ein Web-Seiten-Tab per Javascript geschlossen wird (bei Verwendung des modernen WebViews).</li>
-  <li>Behoben: Der Dateiname der geteilten Konfigurationsdatei in iOS wurde nicht zusammen mit allen anderen Einstellungen zurückgesetzt.</li>
-  <li>Weitere Stabilitätsprobleme behoben. </li>
+  <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>
+  <li>Unterstützt jetzt auch den Modus &quot;Kontrast erhöhen&quot; und fettgedruckten Text im Seitenmenü.</li>
+  <li>Verbessertes VoiceOver-Feedback beim Öffnen neuer Ansichten.</li>
+  <li>Unterstützung von QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten, für den internen SEB-QR-Code-Leser und für QR-Codes, die mit der iOS-Kamera-App gescannt werden. Es ist nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
+  <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen.</li>
+  <li>Unterstützung für Konfigurationslinks (URLs) mit vollständigen SEB-Konfigurationen wurde hinzugefügt (ähnlich wie bei den neuen QR-Codes).</li>
+  <li>Option zum Exportieren von SEB-Einstellungen als unverschlüsselte und wahlweise reduzierte plist-Datei für die MDM Managed Configuration-Funktion wurde hinzugefügt.</li>
+  <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
+  <li>Der Vergleich der Einstellungen vom MDM-Server mit den aktuellen Einstellungen wurde verbessert, indem auch einzelne verbotene Prozesse korrekt verglichen werden.</li>
+  <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
+  <li>Der Titel der Einstellungsseite für Konfigurationsdateien wurde in Konfigurationen geändert und die Terminologie aktualisiert.</li>
+  <li>Der Standardwert für den Zweck der SEB-Konfiguration wurde in Prüfung starten geändert.</li>
+  <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt (allowDownloads = standardmässig true, allowUploads = standardmässig true), die mit der bestehenden, aber veralteten Einstellung allowDownUploads UND verknüpft werden.</li>
+  <li>Option zum Blockieren von Uploads und Datei-/Fotoauswahldialog für die Taste &quot;Datei auswählen&quot; im modernen WebView hinzugefügt.</li>
+  <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
+  <li>Logging in Swift-Klassen und Log-Level Error funktionieren nicht mehr.</li>
+  <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
+  <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.</li>
 </ul>
 <p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
 </p>
 <ul id="seblist">
-  <li>Massiv verbesserte Fehlerbehandlung bei der Verbindung zum SEB Server mit besseren Fehlermeldungen, die SEB Server- und Prüfungsadministratoren helfen können, serverseitige Probleme zu beheben.</li>
-  <li>Unterstützung für Fallback-Option hinzugefügt, wenn die Verbindung zum SEB Server komplett fehlschlägt. In diesem Fall kann eine alternative Start-URL konfiguriert und der Fallback optional mit einem neuen Fallback-Passwort geschützt werden.</li>
-  <li>Verbessertes Senden von Log-Ereignissen, um zu verhindern, dass einzelne Ereignisse aufgrund von temporären Verbindungsproblemen verloren gehen.</li>
-  <li>Senden von Geräteinformationen an den SEB Server zu einem früheren Zeitpunkt im Verbindungsprozess.</li>
-  <li>Erneuerung abgelaufener SEB Server OAuth-Token.</li>
+  <li>App Signature Key-Funktionalität, die eine automatisierte Prüfung der Anwendungsintegrität ermöglicht, ähnlich wie bei der manuellen Verwendung des Browser Exam Key (kein Kopieren und Einfügen von Hash-Strings erforderlich).</li>
+  <li>Neuer servergesteuerter Browser Exam Key, der für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden kann. </li>
+  <li>Beim Beenden der SEB Server-Sitzung wird nun das Fenster &quot;Verbindung wird getrennt&quot; angezeigt, um dem Benutzer eine Rückmeldung bei Verbindungsproblemen zu geben.</li>
+  <li>Hinzufügen von Fehlermeldungen, wenn bestimmte Schritte des Verbindungsprozesses zu einer SEB Server Prüfung fehlschlagen, mit mehr Statusmeldungen im SEB Server Verbindungsfenster.</li>
+  <li>Verbesserte Protokollierung von SEB Server-Verbindungen.</li>
 </ul>
 <p>Neu seit SEB 3.x:</p>
 <ul id="seblist">
