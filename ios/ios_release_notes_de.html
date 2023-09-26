@@ -227,7 +227,50 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
-    <h5 id="sebh5"> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.2</a>:</h5>
+    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
+    <ul id="seblist">
+      <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>
+      <li>Unterstützt jetzt auch den Modus &quot;Kontrast erhöhen&quot; und fettgedruckten Text im Seitenmenü.</li>
+      <li>Verbessertes VoiceOver-Feedback beim Öffnen neuer Ansichten.</li>
+      <li>Unterstützung von QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten, für den internen SEB-QR-Code-Leser und für QR-Codes, die mit der iOS-Kamera-App gescannt werden. Es ist nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
+      <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen.</li>
+      <li>Unterstützung für Konfigurationslinks (URLs) mit vollständigen SEB-Konfigurationen wurde hinzugefügt (ähnlich wie bei den neuen QR-Codes).</li>
+      <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
+      <li>Der Vergleich der Einstellungen vom MDM-Server mit den aktuellen Einstellungen wurde verbessert, indem auch einzelne verbotene Prozesse korrekt verglichen werden.</li>
+      <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
+      <li>Der Titel der Einstellungsseite für Konfigurationsdateien wurde in Konfigurationen geändert und die Terminologie aktualisiert.</li>
+      <li>Der Standardwert für den Zweck der SEB-Konfiguration wurde in Prüfung starten geändert.</li>
+      <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt (allowDownloads = standardmässig true, allowUploads = standardmässig true), die mit der bestehenden, aber veralteten Einstellung allowDownUploads UND verknüpft werden.</li>
+      <li>Option zum Blockieren von Uploads und Datei-/Fotoauswahldialog für die Taste &quot;Datei auswählen&quot; im modernen WebView hinzugefügt.</li>
+      <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
+      <li>Behoben: Logging in Swift-Klassen und Log-Level Error funktionieren nicht.</li>
+      <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
+      <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.</li>
+    </ul>
+    <p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
+    </p>
+    <ul id="seblist">
+      <li>App Signature Key-Funktionalität, die eine automatisierte Prüfung der Anwendungsintegrität ermöglicht, ähnlich wie bei der manuellen Verwendung des Browser Exam Key (kein Kopieren und Einfügen von Hash-Strings erforderlich).</li>
+      <li>Neuer servergesteuerter Browser Exam Key, der für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden kann. </li>
+      <li>Beim Beenden der SEB Server-Sitzung wird nun das Fenster &quot;Verbindung wird getrennt&quot; angezeigt, um dem Benutzer eine Rückmeldung bei Verbindungsproblemen zu geben.</li>
+      <li>Hinzufügen von Fehlermeldungen, wenn bestimmte Schritte des Verbindungsprozesses zu einer SEB Server Prüfung fehlschlagen, mit mehr Statusmeldungen im SEB Server Verbindungsfenster.</li>
+      <li>Verbesserte Protokollierung von SEB Server-Verbindungen.</li>
+    </ul>
+			
+    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.4</a>:</h5>
+    <ul id="seblist">
+      <li>Das Herunterladen von auf der Website generierten Dateien (mit dem Protokollschema &quot;data:&quot;) wurde korrigiert.</li>
+      <li>Jetzt sind Downloads beliebiger Dateitypen und &quot;blob:&quot;-generierter Dateien möglich, wenn Sie das moderne WebView und iOS 14.5 oder neuer verwenden. Diese heruntergeladenen Dateien verwenden auch den ursprünglichen Dateinamen (dies war in dem klassischen WebView nicht möglich).</li>
+      <li>Ein weiterer Versuch, einen Absturz beim Schliessen einiger Webseiten zu beheben.</li>
+    </ul>
+			
+    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.3</a>:</h5>
+    <ul id="seblist">
+      <li>Behoben: Downloads von Website-generierten Dateien funktionierten nicht in SEB 3.1.1 und 3.2.2.</li>
+      <li>Absturz beim Schliessen eines Tabs behoben.</li>
+    </ul>
+			
+    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.2</a>:</h5>
           <ul id="seblist">
             <li>Anzeige von Dialog für Kamera- und Mikrofonerlaubnis für Webanwendungen und optionales integriertes Proctoring vor Beginn der Session. </li>
             <li>Neue Einstellungen <em>browserMediaCaptureCamera</em> und <em>browserMediaCaptureMicrophone</em> (<em>Einstellungen / Browser-Funktionen / Medienwiedergabe/-aufnahme / Kamera-/Mikrofonaufnahme zulassen</em>) zur Steuerung des Browserzugriffs auf Kamera/Mikrofon (WebRTC oder Standbilder/Audioaufnahmen) hinzugefügt. Wenn diese Einstellungen aktiviert sind, werden die Benutzer aufgefordert, den Zugriff auf Kamera/Mikrofon für SEB zu erlauben, bevor die entsprechende (Prüfungs-)Session gestartet wird. </li>

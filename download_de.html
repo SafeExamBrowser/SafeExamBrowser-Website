@@ -285,7 +285,7 @@
         </p>
         
 
-<p><strong>Aktuelle Version von Safe Exam Browser für macOS 14, 13, 12, 11, 10.15, 10.14, 10.13, 10.12, 10.11</strong><br />
+<p><strong>Aktuelle Version von Safe Exam Browser für macOS 14, 13, 12, 11, 10.15, 10.14, 10.13</strong><br />
         <span class="codetext">Build 1456D. SHA1: ed02c166c579d2277d5624d06683856cc9aa3eca</span></p>
             
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.3/SafeExamBrowser-3.3.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
@@ -293,22 +293,17 @@
           <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit, ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. Optional: SEB Server-Integration mit Moodle.</p>
           <p>Neu in SEB 3.3:</p>
           <ul id="seblist">
-            <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>
-            <li>Unterstützt jetzt auch den Modus &quot;Kontrast erhöhen&quot; und fettgedruckten Text im Seitenmenü.</li>
-            <li>Verbessertes VoiceOver-Feedback beim Öffnen neuer Ansichten.</li>
-            <li>Unterstützung von QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten, für den internen SEB-QR-Code-Leser und für QR-Codes, die mit der iOS-Kamera-App gescannt werden. Es ist nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
-            <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen.</li>
-            <li>Unterstützung für Konfigurationslinks (URLs) mit vollständigen SEB-Konfigurationen wurde hinzugefügt (ähnlich wie bei den neuen QR-Codes).</li>
-            <li>Option zum Exportieren von SEB-Einstellungen als unverschlüsselte und wahlweise reduzierte plist-Datei für die MDM Managed Configuration-Funktion wurde hinzugefügt.</li>
+            <li>Verbesserungen für Barrierefreiheit: Das Menü zur Auswahl geöffneter Webseiten (auf dem SEB-Symbol im SEB-Dock) kann nun mit VoiceOver über die Tastenkombination VO-Umschalttaste-M geöffnet werden (zusätzlich zum Rechtsklick).</li>
+            <li>Verbesserte Ansagen zur Barrierefreiheit auf verschiedenen UI-Elementen, auch im SEB-Einstellungsmenü.</li>
+            <li>Verbessertes VoiceOver-Feedback beim Öffnen von Sperrbildschirmen.</li>
+            <li>Unterstützung von Konfigurationslinks (URLs) und QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten. Damit ist es nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
+            <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen. Diese können derzeit direkt mit der iOS-Version oder mit Tools von Drittanbietern auf Mac/Windows verwendet werden.</li>
+            <li>Option zum Exportieren von SEB-Einstellungen als unverschlüsselte und wahlweise reduzierte plist-Datei für die MDM Managed Configuration-Funktion (derzeit für iOS verfügbar) wurde hinzugefügt.</li>
             <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
-            <li>Der Vergleich der Einstellungen vom MDM-Server mit den aktuellen Einstellungen wurde verbessert, indem auch einzelne verbotene Prozesse korrekt verglichen werden.</li>
             <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
-            <li>Der Titel der Einstellungsseite für Konfigurationsdateien wurde in Konfigurationen geändert und die Terminologie aktualisiert.</li>
-            <li>Der Standardwert für den Zweck der SEB-Konfiguration wurde in Prüfung starten geändert.</li>
-            <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt (allowDownloads = standardmässig true, allowUploads = standardmässig true), die mit der bestehenden, aber veralteten Einstellung allowDownUploads UND verknüpft werden.</li>
+            <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt.</li>
             <li>Option zum Blockieren von Uploads und Datei-/Fotoauswahldialog für die Taste &quot;Datei auswählen&quot; im modernen WebView hinzugefügt.</li>
             <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
-            <li>Logging in Swift-Klassen und Log-Level Error funktionieren nicht mehr.</li>
             <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
             <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.<br>
             </li></ul>
@@ -370,18 +365,14 @@
   <li>Unterstützt jetzt auch den Modus &quot;Kontrast erhöhen&quot; und fettgedruckten Text im Seitenmenü.</li>
   <li>Verbessertes VoiceOver-Feedback beim Öffnen neuer Ansichten.</li>
   <li>Unterstützung von QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten, für den internen SEB-QR-Code-Leser und für QR-Codes, die mit der iOS-Kamera-App gescannt werden. Es ist nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
-  <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen.</li>
+  <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen. Diese können derzeit direkt mit der iOS-Version oder mit Tools von Drittanbietern auf Mac/Windows verwendet werden.Diese können derzeit direkt mit der iOS-Version oder mit Tools von Drittanbietern auf Mac/Windows verwendet werden.</li>
   <li>Unterstützung für Konfigurationslinks (URLs) mit vollständigen SEB-Konfigurationen wurde hinzugefügt (ähnlich wie bei den neuen QR-Codes).</li>
-  <li>Option zum Exportieren von SEB-Einstellungen als unverschlüsselte und wahlweise reduzierte plist-Datei für die MDM Managed Configuration-Funktion wurde hinzugefügt.</li>
   <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
   <li>Der Vergleich der Einstellungen vom MDM-Server mit den aktuellen Einstellungen wurde verbessert, indem auch einzelne verbotene Prozesse korrekt verglichen werden.</li>
   <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
-  <li>Der Titel der Einstellungsseite für Konfigurationsdateien wurde in Konfigurationen geändert und die Terminologie aktualisiert.</li>
-  <li>Der Standardwert für den Zweck der SEB-Konfiguration wurde in Prüfung starten geändert.</li>
-  <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt (allowDownloads = standardmässig true, allowUploads = standardmässig true), die mit der bestehenden, aber veralteten Einstellung allowDownUploads UND verknüpft werden.</li>
+  <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt.</li>
   <li>Option zum Blockieren von Uploads und Datei-/Fotoauswahldialog für die Taste &quot;Datei auswählen&quot; im modernen WebView hinzugefügt.</li>
   <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
-  <li>Logging in Swift-Klassen und Log-Level Error funktionieren nicht mehr.</li>
   <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
   <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.</li>
 </ul>
