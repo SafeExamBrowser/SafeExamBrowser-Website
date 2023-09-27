@@ -226,7 +226,35 @@
         
           <!-- Content -->
 
-		  <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.5</a>:</h5>
+		  <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3</a>:		  </h5>
+		  <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit, ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. Optional: SEB Server-Integration mit Moodle.</p>
+          <p>Neu in SEB 3.3:</p>
+          <ul id="seblist">
+            <li>Verbesserungen für Barrierefreiheit: Das Menü zur Auswahl geöffneter Webseiten (auf dem SEB-Symbol im SEB-Dock) kann nun mit VoiceOver über die Tastenkombination VO-Umschalttaste-M geöffnet werden (zusätzlich zum Rechtsklick).</li>
+            <li>Verbesserte Ansagen zur Barrierefreiheit auf verschiedenen UI-Elementen, auch im SEB-Einstellungsmenü.</li>
+            <li>Verbessertes VoiceOver-Feedback beim Öffnen von Sperrbildschirmen.</li>
+            <li>Unterstützung von Konfigurationslinks (URLs) und QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten. Damit ist es nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
+            <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen. Diese können derzeit direkt mit der iOS-Version oder mit Tools von Drittanbietern auf Mac/Windows verwendet werden.</li>
+            <li>Option zum Exportieren von SEB-Einstellungen als unverschlüsselte und wahlweise reduzierte plist-Datei für die MDM Managed Configuration-Funktion (derzeit für iOS verfügbar) wurde hinzugefügt.</li>
+            <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
+            <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
+            <li>Der Titel der Einstellungsseite für Konfigurationsdateien wurde in &quot;Konfigurationen&quot; geändert und die Terminologie aktualisiert.</li>
+            <li>Der Standardwert für den Zweck der SEB-Konfiguration wurde in Prüfung starten geändert.</li>
+            <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt (<em>allowDownloads</em> = standardmässig true, <em>allowUploads</em> = standardmässig true), die mit der bestehenden, aber veralteten Einstellung <em>allowDownUploads</em> UND verknüpft werden.</li>
+            <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
+            <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
+            <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.<br>
+            </li>
+          </ul>
+          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
+          <ul id="seblist">
+            <li>App Signature Key-Funktionalität, die eine automatisierte Prüfung der Anwendungsintegrität ermöglicht, ähnlich wie bei der manuellen Verwendung des Browser Exam Key (kein Kopieren und Einfügen von Hash-Strings erforderlich).</li>
+            <li>Neuer servergesteuerter Browser Exam Key, der für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden kann. </li>
+            <li>Beim Beenden der SEB Server-Sitzung wird nun das Fenster &quot;Verbindung wird getrennt&quot; angezeigt, um dem Benutzer eine Rückmeldung bei Verbindungsproblemen zu geben.</li>
+            <li>Hinzufügen von Fehlermeldungen, wenn bestimmte Schritte des Verbindungsprozesses zu einer SEB Server Prüfung fehlschlagen, mit mehr Statusmeldungen im SEB Server Verbindungsfenster.</li>
+            <li>Verbesserte Protokollierung von SEB Server-Verbindungen.		  </li>
+          </ul>
+          <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.5</a>:</h5>
 		  <p>Neu in SEB 3.2.5:</p>
           <ul id="seblist">
             <li>Behoben: Nachschlagen mittels kräftigem Klick funktionierte im klassischen WebView in macOS 13 Ventura.</li>
@@ -234,7 +262,7 @@
 		  <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.4</a>:</h5>
 		  <p>SEB 3.2 erweitert die optionale Unterstützung für SEB Server und bringt viele Stabilitätsverbesserungen.</p>
           <p>Neu in SEB 3.2.4:</p>
-          <ul>
+          <ul id="seblist">
             <li> AnyGPT wird standardmässig blockiert.</li>
             <li>Ein Fall wurde behoben, bei dem eine modale Warnung  SEB beim Starten einer Session blockieren kann. Modale Warnungen wurden manchmal hinter dem schwarzen Hintergrund der Fenster angezeigt.</li>
             <li>Sicherheitsverbesserungen.</li>
