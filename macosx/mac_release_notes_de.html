@@ -241,9 +241,18 @@
             <li>Der Titel der Einstellungsseite für Konfigurationsdateien wurde in &quot;Konfigurationen&quot; geändert und die Terminologie aktualisiert.</li>
             <li>Der Standardwert für den Zweck der SEB-Konfiguration wurde in Prüfung starten geändert.</li>
             <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt (<em>allowDownloads</em> = standardmässig true, <em>allowUploads</em> = standardmässig true), die mit der bestehenden, aber veralteten Einstellung <em>allowDownUploads</em> UND verknüpft werden.</li>
+            <li>Falsche Windows-Einstellung in <em>allowCustomDownUploadLocation</em> geändert.</li>
+            <li>XULRunner URL-Filterregeln werden nicht mehr erzeugt.</li>
+            <li>Einige nicht mehr aktuelle Standardwerte wurden angepasst.</li>
             <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
+            <li>Behoben: Logging in Swift-Klassen und Log-Level Error funktionieren nicht.</li>
             <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
-            <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.<br>
+            <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.</li>
+            <li>Neues Modul zur Überprüfung der Applikations-Integrität wurde integriert.</li>
+            <li>Chrome Remote Host wurde zu den voreingestellten, standardmässig verbotenen Prozessen hinzugefügt.</li>
+            <li>SEB-Versionsnummer zum &quot;Prüfung starten&quot; Prüfungspasswort-Dialog hinzugefügt.</li>
+            <li>Die minimal benötigte macOS-Version ist nun macOS 10.13.</li>
+            <li>macOS 14 Sonoma wurde zu den Optionen für die Einstellung der minimal erforderlichen macOS-Version (und iOS 17 zu den iOS-Einstellungen) in Einstellungen/Sicherheit hinzugefügt.<br>
             </li>
           </ul>
           <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
@@ -253,6 +262,7 @@
             <li>Beim Beenden der SEB Server-Sitzung wird nun das Fenster &quot;Verbindung wird getrennt&quot; angezeigt, um dem Benutzer eine Rückmeldung bei Verbindungsproblemen zu geben.</li>
             <li>Hinzufügen von Fehlermeldungen, wenn bestimmte Schritte des Verbindungsprozesses zu einer SEB Server Prüfung fehlschlagen, mit mehr Statusmeldungen im SEB Server Verbindungsfenster.</li>
             <li>Verbesserte Protokollierung von SEB Server-Verbindungen.		  </li>
+            <li>Behebung eines Absturzes beim Beenden von SEB mit noch aktiver SEB Server-Verbindung, wenn das Verbindungstoken möglicherweise bereits ungültig ist.</li>
           </ul>
           <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.5</a>:</h5>
 		  <p>Neu in SEB 3.2.5:</p>
