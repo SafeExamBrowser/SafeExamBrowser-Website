@@ -224,7 +224,49 @@
         <!-- Content Column -->
         <div class="col-md-9">
 			
-			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.5.0</b></h5>
+			<h5 id="sebh5"><b>Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.6.0</b></h5>
+			<p>Version 3.6.0 fügt die Signaturüberprüfung für Anwendungen von Drittanbietern hinzu, bietet die Möglichkeit zur Versionsbeschränkung per Konfigurationsdatei und bringt eine isolierte Zwischenablage sowie wichtige Fehlerkorrekturen und Verbesserungen.</p>
+			<p>Diese Version enthält außerdem wichtige Sicherheitsverbesserungen für Schwachstellen, die von Studenten der TU Eindhoven entdeckt wurden. Wir möchten hiermit unseren Dank für die proaktive, konstruktive und verantwortungsbewusste Offenlegung der Schwachstellen ausdrücken, insbesondere und in keiner besonderen Reihenfolge an Angelos Mangos, Bence Barnabas Racsko, Paolo Pocol, Strahil Georgiev Peykov, Wiliam Dokov, Techna Huynh, Teun Peters und Andrei Tudor Popescu.</p>
+			<p><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
+			<ul>
+				<li>Fehler mit der Quit-URL behoben, bei dem URLs, die nicht genau mit der Quit-URL übereinstimmten, ebenfalls ein Herunterfahren auslösten.</li>
+				<li>Implementierung der Signaturprüfung für die Anwendungsüberwachung.</li>
+				<li>Falsch-positive VM-Erkennung aufgrund von virtuellen Festplattengeräten behoben.</li>
+				<li>Fehlende BEK- und CK-Header z.B. nach einer Authentifizierungsumleitung wurden behoben.</li>
+				<li>Spanische Übersetzung hinzugefügt.</li>
+				<li>Das Ziel-Framework wurde auf .NET Framework 4.8 aktualisiert und das Setup-Bundle so geändert, dass es nun auch den .NET Setup-Bootstrapper enthält.</li>
+				<li>Implementierung der Versionsbeschränkungsfunktion.</li>
+				<li>Verbesserte Erkennung virtueller Maschinen.</li>
+				<li>Isolierte Zwischenablage-Funktionalität implementiert.</li>
+				<li>Es wurde ein Problem behoben, bei dem der Kennwortdialog zwar sichtbar war, aber beim Start der Anwendung nicht den Eingabefokus hatte.</li>
+				<li>Das Laden der MAC-Adresse für Systeminformationen wurde korrigiert.</li>
+				<li>Grundlegende Cursor-Funktionen wurden implementiert.</li>
+				<li>Splashtop wurde zur Standardliste der verbotenen Anwendungen hinzugefügt.</li>
+				<li>Unterstützung für Konfigurationsdaten-URIs wurde implementiert.</li>
+				<li>Implementierung der zufälligen Desktop-Funktionalität.</li>
+				<li>Verbesserte Protokollierung bei der Initialisierung von Standardeinstellungen.</li>
+				<li>Pulseway RMM wurde zur Standardliste der verbotenen Anwendungen hinzugefügt.</li>
+				<li>Die Statusinformationen in der WLAN-Steuerung des Action Centers wurden korrigiert, wenn die drahtlose Verbindung aktiviert ist, aber keine Verbindung besteht (d. h. wenn eine kabelgebundene Verbindung verwendet wird).</li>
+				<li>Holländische / Flämische Übersetzung hinzugefügt.</li>
+				<li>Falsch-positive VM-Erkennung für VirtualBox-Hostsysteme behoben.</li>
+				<li>Fehler bei der Überprüfung der Barrierefreiheitskonfiguration behoben.</li>
+				<li>Russische Übersetzung hinzugefügt.</li>
+				<li>Neues Teams und OBS zu verbotenen Anwendungen hinzugefügt.</li>
+				<li>Estnische Übersetzung hinzugefügt.</li>
+				<li>Browser-Engine auf Version 118.6.80 (Chromium-Version 118.0.5993.117) aktualisiert.</li>
+			</ul>
+			<p>Die folgenden optionalen Funktionen und Änderungen sind standardmäßig deaktiviert und müssen individuell konfiguriert werden:</p>
+			<ul>
+				<li>Die Implementierung des Zoom Proctoring wurde entfernt und eine Fehlermeldung hinzugefügt, wenn Zoom Proctoring aktiv ist. Aufgrund von Lizenzierungsproblemen ist Zoom Live Proctoring nur für SEB Alliance Mitglieder verfügbar, siehe https://safeexambrowser.org/alliance/members.html.</li>
+				<li>Erkennung von Benutzerkennungen über Moodle-Plugin hinzugefügt.</li>
+			</ul>
+			<p>Bekannte Probleme:</p>
+			<ul>
+				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
+				<li>Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
+			</ul>
+			
+			<h5 id="sebh5"><b>Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.5.0</b></h5>
 			<p>Version 3.5.0 fügt die App Signature Key Funktionalität für Server-Sitzungen hinzu, enthält den neuen, servergesteuerten Browser Exam Key und bringt eine neue Konfigurationsoption für den Dateisystemdialog sowie verschiedene Verbesserungen der Barrierefreiheit und wichtige Fehlerkorrekturen.</p>
 			<p><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
 			<ul>
@@ -272,7 +314,7 @@
 				<li>Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
 			</ul>
 			
-			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.4.1</b></h5>
+			<h5 id="sebh5"><b>Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.4.1</b></h5>
 			<p>Version 3.4.1 behebt ein Problem mit Downloads, die von Daten-URLs stammen.</p>
 			<p><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
 			<ul>
@@ -285,7 +327,7 @@
 				<li>Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
 			</ul>
 			
-			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.4.0</b></h5>
+			<h5 id="sebh5"><b>Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.4.0</b></h5>
 			<p>Version 3.4.0 bietet wichtige Verbesserungen der Barrierefreiheit, behebt die Eltern-Kind-Beziehung für Javascript Popup-Fenster, verbessert die SEB-Server-Integration weiter und bietet verschiedene andere wichtige Verbesserungen.</p>
 			<p><span class="red">Ab dieser Version ist der Browser Exam Key von SEB für Windows nun auch plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
 			<ul>
@@ -323,7 +365,7 @@
 				<li>Echtzeit-Überwachung ist nicht kompatibel mit Kiosk-Modus Create New Desktop aufgrund eines Problems in der WebView2 (siehe https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Deshalb wird der Kiosk-Modus immer automatisch auf Disable Explorer Shell gesetzt wenn die Echtzeit-Überwachung aktiv ist.</li>
 			</ul>
 		
-			<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser für Windows</a> Version 3.3.2</b></h5>
+			<h5 id="sebh5"><b>Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.3.2</b></h5>
 			<p>Version 3.3.2 enthält ein neues JavaScript API um den Browser Exam Key (BEK) und Config Key (CK) abzufragen, verbessert die optionale SEB-Server-Integration und beinhaltet einige weitere Verbesserungen.</p>
 			<ul>
 				<li>JavaScript-API zur Abfrage des Browser Exam Key (BEK) und Configuration Key (CK) implementiert.</li>

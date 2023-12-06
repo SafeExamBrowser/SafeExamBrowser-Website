@@ -224,6 +224,48 @@
         <!-- Content Column -->
         <div class="col-md-9" role="main">
 			
+		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.6.0</b></h5>
+		<p>Version 3.6.0 adds signature verification for third-party applications, provides version restriction by configuration file and adds an isolated clipboard implementation as well as important bug fixes and improvements.</p>
+		<p>This release version furthermore includes important security improvements of exploits discovered by students of TU Eindhoven, and we hereby would like to express our gratitude for the proactive, constructive and responsible vulnerability disclosure, namely and in no particular order to Angelos Mangos, Bence Barnabas Racsko, Paolo Pocol, Strahil Georgiev Peykov, Wiliam Dokov, Techna Huynh, Teun Peters and Andrei Tudor Popescu.</p>
+		<p><span class="red">Starting with release version 3.4.0, the Browser Exam Key of SEB for Windows is platform-specific, i.e. its value is different for the 32-bit (x86) and 64-bit (x64) build of the same version!</span></p>
+	   	<ul>
+			<li>Fixed bug with quit URL where URLs not exactly matching the quit URL would also trigger a shutdown.</li>
+			<li>Implemented signature verification for application monitoring.</li>
+			<li>Fixed false-positive VM detection due to virtual disk devices.</li>
+			<li>Fixed missing BEK and CK headers after e.g. authentication redirection.</li>
+			<li>Added Spanish translation.</li>
+			<li>Updated target framework to .NET Framework 4.8 and changed setup bundle to also embed .NET setup bootstrapper.</li>
+			<li>Implemented version restriction functionality.</li>
+			<li>Improved virtual machine detection.</li>
+			<li>Implemented isolated clipboard functionality.</li>
+			<li>Fixed issue where password dialog was visible but not having input focus during application startup.</li>
+			<li>Fixed loading of MAC address for system info.</li>
+			<li>Implemented basic cursor functionality.</li>
+			<li>Added Splashtop to default list of prohibited applications.</li>
+			<li>Implemented support for configuration data URIs.</li>
+			<li>Implemented random desktop functionality.</li>
+			<li>Improved logging with respect to default settings initialization.</li>
+			<li>Added Pulseway RMM to default list of prohibited applications.</li>
+			<li>Fixed status info in Action Center WLAN control when wireless is enabled but not connected (i.e. using wired connection).</li>
+			<li>Added Dutch / Flemish translation.</li>
+			<li>Fixed false positive VM detection for VirtualBox host systems.</li>
+			<li>Fixed bug with ease of access configuration verification.</li>
+			<li>Added Russian translation.</li>
+			<li>Added new Teams and OBS to prohibited applications.</li>
+			<li>Added Estonian translation.</li>
+			<li>Updated browser engine to version 118.6.80 (Chromium version 118.0.5993.117).</li>
+		</ul>
+		<p>The following optional features and changes are disabled by default and need to be configured individually:</p>
+		<ul>
+			<li>Removed Zoom proctoring implementation and added error message when Zoom proctoring is active. Due to licensing issues Zoom live proctoring is only available for SEB Alliance members, please refer to https://safeexambrowser.org/alliance/members.html.</li>
+			<li>Added user identifier detection via Moodle plugin.</li>
+		</ul>
+		<p>Known issues:</p>
+		<ul>
+			<li>Screen readers NVDA and JAWS are not compatible with kiosk mode Create New Desktop. If their usage is required, please use kiosk mode Disable Explorer Shell where they should work as expected.</li>
+    		<li>Live proctoring isn't compatible with kiosk mode Create New Desktop due to an issue in WebView2 (see https://github.com/MicrosoftEdge/WebView2Feedback/issues/960). Thus, if live proctoring is active, the kiosk mode will always automatically be set to Disable Explorer Shell.</li>
+	  	</ul>
+			
 		<h5 id="sebh5"><b>Release Notes <a href="../download_en.html#Windows">Safe Exam Browser for Windows</a> Version 3.5.0</b></h5>
 		<p>Version 3.5.0 adds the App Signature Key functionality for server sessions, contains the new server-driven Browser Exam Key and brings a new configuration option for the file system dialog along with various accessibility improvements as well as important bug fixes.</p>
 		<p><span class="red">Starting with release version 3.4.0, the Browser Exam Key of SEB for Windows is platform-specific, i.e. its value is different for the 32-bit (x86) and 64-bit (x64) build of the same version!</span></p>
