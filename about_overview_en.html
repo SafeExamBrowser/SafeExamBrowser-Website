@@ -250,6 +250,7 @@
                 </ul>
               </li>
               <li> <a href="#license">License</a> </li>
+              <li> <a href="#accessibility-statement">Accessibility Statement</a> </li>
               <li> <a href="#privacy-statement">Privacy Statement</a> </li>
               <li> <a href="#acknowledgement">Acknowledgement</a> </li>
             </ul>
@@ -486,7 +487,8 @@
               <li>Browser engine: WebKit  (as Safari). SEB uses the WebKit version installed on the system (WebKit version depends on macOS   version).</li>
               <li>Programming language and system framework: Objective-C/Swift (Cocoa)</li>
             </ul>
-                        <h4 class="seb-section-header sebnavbar-link" id="details-seb-iOS">
+			  
+            <h4 class="seb-section-header sebnavbar-link" id="details-seb-iOS">
               <a class="anchorjs-link " href="#details-seb-iOS" aria-label="Anchor link for: Details SEB iOS"></a>
               SEB for iOS
             </h4>
@@ -532,6 +534,92 @@
           <!-- / Document Section -->
 
           <!-- Document Section -->
+          <div class="bs-docs-section">
+
+            <h3 id="accessibility-statement" class="page-header sebnavbar-link">
+              <a class="anchorjs-link " href="#accessibility-statement" aria-label="Anchor link for: Accessibility Statement"></a>
+              Accessibility Statement
+            </h3>
+
+            <p>All Safe Exam Browser (SEB) versions were prepared to be as accessible as our concept of a secure environment allows. Conformance level AA of the Web Accessibility Guidelines WCAG version 2.1 was aimed for SEB on iOS, macOS and Windows.<br>
+Information and useful tips on the peculiarities of the individual SEB versions with regard to accessibility as well as some restrictions regarding individual violations of WCAG success criteria are listed below: </p>
+			  
+            <h4 class="seb-section-header sebnavbar-link" id="accessibility-seb-windows">
+              <a class="anchorjs-link " href="#accessibility-seb-windows" aria-label="Accessibility SEB Windows"></a>
+              SEB for Windows
+            </h4>
+			  
+			  <ul>
+              <li>Safe Exam Browser does not allow the use of custom user styles. SEB for Windows does come with a function to adjust the text size, but not for other stylistic aspects such as Text Spacing (WCAG 1.4.12)</li>
+              <li>No browse mode with NVDA screen reader</li>
+              <ul>
+                <li>At the time of publishing the current release of the SEB, the content in the browser window cannot be read in browse mode with NVDA screen readers (release 2022_4).</li>
+                <li>NVDA is therefore currently not usable within the SEB environment. Instead SEB can be used with the latest versions of JAWS.</li>
+              </ul>
+              <li>No New Desktop Kiosk Mode</li>
+              <ul>
+                <li>No &quot;Create new desktop&quot; Kiosk Mode: The &quot;Create new desktop&quot; mode (SEB Configuration Tool > <a href="windows/win_usermanual_en.html">Security</a> > Kiosk mode) does not work with tested screen readers (NVDA &amp; JAWS).</li>
+                <li>Use Disable Explorer Shell Kiosk Mode instead: Alternatively, SEB can be run in Disable Explorer Shell Kiosk Mode.</li>
+              </ul>
+              <li>Action Center: [Win] + [A]:</li>
+              <ul>
+                <li>The Action Center can be displayed from the left edge of the screen using the keyboard shortcut [Win] + [A].</li>
+                <li>The Action Center is not conveniently accessible in the current release for screen reader users. However, all relevant functions in the Action Center are accessible via the taskbar.</li>
+              </ul>
+              <li>Keyboard shortcuts: <br>
+                Safe Exam Browser ensures that most relevant Windows operating system keyboard shortcuts also work within  SEB. Mentioned are</li>
+              <ul>
+                <li>Taskbar/Dock: [Win] + [D] as well as [Win] + [T]; Navigate with [Tab] within taskbar.</li>
+                <li>Task view: [Alt]+[Tab]</li>
+                <li>Browser address bar: [Ctrl]+[L]</li>
+                <li>Action Center: [Win] + [A]</li>
+              </ul>
+            </ul>
+            <p>A detailed compilation of the conformity of the individual WCAG success criteria can be found in the Voluntary Product Accessibility Template document <a href="https://safeexambrowser.org/vpat/VPAT_WCAG_SEB_Win.pdf" target="_blank">VPAT SEB for Windows (WCAG Edition)</a></p>
+
+            <h4 class="seb-section-header sebnavbar-link" id="accessibility-seb-macOS">
+              <a class="anchorjs-link " href="#accessibility-seb-macOS" aria-label="Anchor link for: Accessibility SEB macOS"></a>
+              SEB for macOS
+            </h4>
+
+            <ul>
+              <li>Safe Exam Browser does not allow the use of custom user styles. However, SEB for mac OS has a function for adjusting the text size, but not for other stylistic aspects such as Text Spacing (WCAG 1.4.12).</li>
+              <li>For aspects of use using touch gestures, please refer to the iOS version of  SEB.</li>
+              <li>Activate the &quot;Use keyboard navigation to move focus between controls&quot; checkbox (System Settings &gt; Keyboard &gt; Shortcuts) to enable keyboard operability.</li>
+              <li>Access menu bar and status bar using VoiceOver key (VO) + M shortcut when using Voice Over and ^F2/F8 (control + F2) when navigating keyboard only. Note that on modern Mac keyboards with default settings, you usually need to press the fn key to access function keys, for example ^ +  fn + F2 to go to the menu bar.</li>
+              <li>Go to SEB Dock with keyboard shortcut: control + shift + fn + F3</li>
+              <li>For now, this Accessibility Statement is  exclusive of the (built-in) SEB configuration interface (SafeExamBrowser &gt; Settings), which is not used in exam mode.</li>
+            </ul>
+            <p>A detailed compilation of the conformity of the individual WCAG success criteria can be found in the Voluntary Product Accessibility Template document <a href="https://safeexambrowser.org/vpat/VPAT_WCAG_SEB_macOS.pdf" target="_blank">VPAT SEB for macOS (WCAG Edition)</a></p>
+			  
+            <h4 class="seb-section-header sebnavbar-link" id="accessibility-seb-iOS">
+              <a class="anchorjs-link " href="#accessibility-seb-iOS" aria-label="Anchor link for: Accessibility SEB iOS"></a>
+              SEB for iOS
+            </h4>
+
+            <ul>
+              <li>Safe Exam Browser does not allow the application of custom user styles. SEB for iOS does come with a function to adjust the text size, but not for other stylistic aspects such as Text Spacing (WCAG 1.4.12)</li>
+              <li>Special keyboard shortcuts (when using an external keyboard):
+                <ul>
+                  <li>cmd + M: Open/close side menu</li>
+                  <li>cmd + R: Reload page (if reload for exam tab or additional/new tabs is enabled in SEB settings)</li>
+                  <li>cmd + F: Search text on page (if enabled in SEB settings)</li>
+                  <li>cmd + Q: Quit SEB session</li>
+                  <li>control + tab: Switch to next browser tab</li>
+                  <li>control + shift + tab: Switch to previous browser tab</li>
+                </ul>
+              </li>
+            </ul>
+            <p>A detailed compilation of the conformity of the individual WCAG success criteria can be found in the Voluntary Product Accessibility Template document <a href="https://safeexambrowser.org/vpat/VPAT_WCAG_SEB_iOS.pdf" target="_blank">VPAT SEB for iOS (WCAG Edition)</a></p>
+            <div>
+              <div> </div>
+              <div> </div>
+              <div> </div>
+            </div>
+          </div>
+          <!-- / Document Section -->
+
+		  <!-- Document Section -->
           <div class="bs-docs-section">
 
             <h3 id="privacy-statement" class="page-header sebnavbar-link">
