@@ -251,6 +251,7 @@
                 </ul>
               </li>
               <li> <a href="#license">Lizenz</a> </li>
+              <li> <a href="#accessibility-statement">Erklärung zur Barrierefreiheit</a> </li>
               <li> <a href="#privacy-statement">Datenschutzerklärung</a> </li>
               <li> <a href="#acknowledgement">Danksagung</a> </li>
             </ul>
@@ -282,7 +283,7 @@
             </h4>
 
             <p>SEB läuft lokal auf einem  Gerät und ist über das Internet mit einem Learning Management System verbunden. Generell läuft SEB mit jedem Web-basierten LMS und anderen Web-basierten Prüfungssystemen. Momentan bieten  weitverbreiteten Learning Management Systeme Moodle, ILIAS und OpenOlat und E-Assessment-Systeme wie Inspera Assessment einen ausdrücklich mit SEB kompatiblen Prüfungsmodus. </p>
-            <p><strong>SEB verbindet sich mit keinem  zentralen Server oder  Cloud-Dienst!</strong> Der sich in Entwicklung befindliche <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> ist eine unabhängige Open Source Software-Komponente, welche auf einem selbst betriebenen Server installiert werden kann. SEB Clients können dann mittels individuellen Konfigurationsdateien mit  einer solchen SEB Server Instanz verbunden werden. <strong>Dies ist rein optional und muss auf jeden Fall individuell konfiguriert werden</strong>. Dies gilt auch für die Support- und Proctoring-Fähigkeiten in neuen SEB-Versionen mittels Videokonferenz-Diensten wie <a href="https://jitsi.org" target="_blank">Jitsi Meet</a> (Open Source, kann auf einem selbst betriebenen Server installiert werden) oder <a href="https://zoom.us" target="_blank">Zoom</a> (kommerziell, Cloud-basiert). <strong>Diese Videokonferenz-Anbindung muss ebenfalls individuell konfiguriert werden und ist standardmässig immer deaktiviert.</strong> Falls  ein SEB Client konfiguriert wurde, sich mit einem Videokonferenzdienst oder einer SEB Server Instanz zu verbinden, wird dies beim Starten einer Prüfungs-Session den Kandidaten angezeigt und <strong>dem Video-/Audio-Proctoring/Support muss jeder/jede Prüfungskandidat/in explizit in einem Dialogfenster zustimmen.</strong> Für weitere Informationen siehe die <a href="#privacy-statement">Datenschutzerklärung</a>.</p>
+            <p><strong>SEB verbindet sich mit keinem  zentralen Server oder  Cloud-Dienst!</strong> Der optional verwendbare <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a> ist eine unabhängige Open Source Software-Komponente, welche auf einem selbst betriebenen Server installiert werden kann. SEB Clients können dann mittels individuellen Konfigurationsdateien mit  einer solchen SEB Server Instanz verbunden werden. <strong>Dies ist rein optional und muss auf jeden Fall individuell konfiguriert werden</strong>. Dies gilt auch für die Support- und Proctoring-Fähigkeiten in neuen SEB-Versionen mittels Videokonferenz-Diensten wie <a href="https://jitsi.org" target="_blank">Jitsi Meet</a> (Open Source, kann auf einem selbst betriebenen Server installiert werden) oder <a href="https://zoom.us" target="_blank">Zoom</a> (kommerziell, Cloud-basiert). <strong>Diese Videokonferenz-Anbindung muss ebenfalls individuell konfiguriert werden und ist standardmässig immer deaktiviert.</strong> Falls  ein SEB Client konfiguriert wurde, sich mit einem Videokonferenzdienst oder einer SEB Server Instanz zu verbinden, wird dies beim Starten einer Prüfungs-Session den Kandidaten angezeigt und <strong>dem Video-/Audio-Proctoring/Support muss jeder/jede Prüfungskandidat/in explizit in einem Dialogfenster zustimmen.</strong> Für weitere Informationen siehe die <a href="#privacy-statement">Datenschutzerklärung</a>.</p>
             <h4 class="seb-section-header sebnavbar-link" id="concept-architecture">
               <a class="anchorjs-link " href="#concept-architecture" aria-label="Anchor link for: concept concept-architecture"></a>
               Architektur
@@ -505,6 +506,84 @@
             Projekt-Konzept: Dr. Thomas Piendl, Daniel R. Schneider, Dr. Dirk Bauer, Kai Reuter, Tobias Halbherr,  Karsten Burger, Marco Lehre, Brigitte Schmucki, Oliver Rahs.          </p>
           <p>Safe Exam Browser ist als Freeware verfügbar. Der <a href="https://github.com/SafeExamBrowser" target="_blank">Quellcode</a> wird unter der <strong><a href="http://www.mozilla.org/MPL/MPL-1.1.html">Mozilla Public License Version 1.1</a></strong> (die  &quot;Lizenz&quot;) veröffentlicht,   diese Dateien dürfen nur unter Einhaltung der Lizenzbedingungen verwendet werden. Eine Kopie der Lizenz ist unter  <a href="http://www.mozilla.org/MPL/">http://www.mozilla.org/MPL/</a> verfügbar.</p>
               
+          </div>
+          <!-- / Document Section --> 
+          
+          <!-- Document Section --> 
+          <div class="bs-docs-section">
+      
+            <h3 id="accessibility-statement" class="page-header sebnavbar-link">
+              <a class="anchorjs-link " href="#accessibility-statement" aria-label="Anchor link for: Accessibility Statement"></a>Erklärung zur Barrierefreiheit </h3>
+            
+            <p>Alle Versionen von Safe Exam Browser (SEB) wurden so barrierefrei gestaltet, wie es unser Konzept einer sicheren Umgebung zulässt. Für SEB auf iOS, macOS und Windows wurde die Konformitätsstufe AA der Web Accessibility Guidelines WCAG Version 2.1 angestrebt.<br>
+Informationen und nützliche Hinweise zu den Besonderheiten der einzelnen SEB-Versionen in Bezug auf Barrierefreiheit sowie einige Einschränkungen zu einzelnen Verstößen gegen die WCAG-Erfolgskriterien sind im Folgenden aufgeführt:</p>
+			  
+            <h4 class="seb-section-header sebnavbar-link" id="accessibility-seb-windows">
+              <a class="anchorjs-link " href="#accessibility-seb-windows" aria-label="Accessibility SEB Windows"></a>
+              SEB für Windows
+            </h4>
+			  
+			<ul>
+              <li>Safe Exam Browser erlaubt nicht die Verwendung benutzerdefinierter Stile. SEB für Windows verfügt zwar über eine Funktion zur Anpassung der Textgröße, aber nicht für andere stilistische Aspekte wie z. B. Text Spacing (WCAG 1.4.12)</li>
+              <li>Kein Browse-Mode mit NVDA Screenreader</li>
+              <ul>
+                <li>Zum Zeitpunkt der Veröffentlichung der aktuellen Version des SEB können die Inhalte im Browserfenster nicht im Browse mode mit NVDA-Bildschirmlesegeräten gelesen werden (Version 2022_4).</li>
+                <li>NVDA ist daher derzeit in der SEB-Umgebung nicht nutzbar. Stattdessen kann SEB mit den neuesten Versionen von JAWS verwendet werden.</li>
+              </ul>
+              <li>Kein New Desktop Kiosk-Mode</li>
+              <ul>
+                <li>Kein &quot;Create new desktop&quot; Kiosk-Modus: Der Modus &quot;Create new desktop&quot; (SEB Configuration Tool &gt; Security &gt; Kiosk mode) funktioniert nicht mit den getesteten Screenreadern (NVDA &amp; JAWS).</li>
+                <li>Verwenden Sie stattdessen den &quot;Disable Explorer Shell&quot; Kioskmodus: Alternativ kann SEB im Disable Explorer Shell Kiosk Mode ausgeführt werden.</li>
+              </ul>
+              <li>Aktions-Center: [Win] + [A]:</li>
+              <ul>
+                <li>Das Aktions-Center kann mit der Tastaturkurztaste [Win] + [A] vom linken Bildschirmrand aus aufgerufen werden.</li>
+                <li>Das Aktions-Center ist in der aktuellen Version für Screenreader-Benutzer nicht bequem zugänglich. Alle relevanten Funktionen des Aktions-Centers sind jedoch über die Taskleiste erreichbar.</li>
+              </ul>
+              <li>Tastaturkürzel:<br>
+                Der Safe Exam Browser stellt sicher, dass die meisten relevanten Tastenkombinationen des Windows-Betriebssystems auch innerhalb des SEB funktionieren. Erwähnt sind</li>
+              <ul>
+                <li>Taskleiste/Dock: [Win] + [D] sowie [Win] + [T]; Navigieren mit [Tab] innerhalb der Taskleiste.</li>
+                <li>Task View: [Alt]+[Tab]</li>
+                <li>Browser Adressleiste: [Ctrl]+[L]</li>
+                <li>Actions Center: [Win] + [A]</li>
+              </ul>
+            </ul>
+            <p>Eine detaillierte Zusammenstellung zur Konformität einzelner WCAG-Erfolgskriterien findet sich im Voluntary Product Accessibility Template-Dokument <a href="https://safeexambrowser.org/vpat/VPAT_WCAG_SEB_Win.pdf" target="_blank">VPAT SEB für Windows (WCAG Edition) </a></p>
+
+            <h4 class="seb-section-header sebnavbar-link" id="accessibility-seb-macOS">
+              <a class="anchorjs-link " href="#accessibility-seb-macOS" aria-label="Anchor link for: Accessibility SEB macOS"></a>
+              SEB für macOS
+            </h4>
+			  
+            <ul>
+              <li>Safe Exam Browser erlaubt nicht die Verwendung von benutzerdefinierten Stilen. SEB für Mac OS verfügt jedoch über eine Funktion zur Anpassung der Textgröße, jedoch nicht für andere stilistische Aspekte wie z. B. <strong>Text spacing (WCAG 1.4.12)</strong>.</li>
+              <li>Für Aspekte der Nutzung mit Touch-Gesten verweisen wir auf die iOS-Version der SEB.</li>
+              <li>Aktivieren Sie die Checkbox &quot;Use keyboard navigation to move focus between controls&quot; (Systemeinstellungen &gt; Tastatur &gt; Shortcuts), um die Tastaturbedienung zu aktivieren.</li>
+              <li>Greifen Sie auf die Menü- und Statusleiste zu, indem Sie die Tastenkombination VoiceOver key (VO) + M verwenden, wenn Sie Voice Over nutzen, und ^F2/F8 (Steuerung + F2), wenn Sie mittels Tastatur alleine navigieren. Beachten Sie, dass bei unserer aktuellen Einstellung (deutsche Tastatur) einige Tastaturkürzel nicht funktionieren. Weder in SEB noch irgendwo anders auf dem OS. Z.B. ^F3 um zum Dock zu gelangen. Dies ist ein allgemeines Voice Over - Tastaturlayout Kompatibilitätsproblem.</li>
+              <li>Diese Erklärung zur Barrierefreiheit bezieht sich ausschließlich auf das SEB-Konfigurationswerkzeug (&gt; SafeExamBrowser &gt; Einstellungen), das im Prüfungsmodus nicht aktiviert ist.</li>
+            </ul>
+            <p>Eine detaillierte Zusammenstellung zur Konformität einzelner WCAG-Erfolgskriterien finden Sie im Voluntary Product Accessibility Template Dokument <a href="https://safeexambrowser.org/vpat/VPAT_WCAG_SEB_macOS.pdf" target="_blank">VPAT SEB für macOS (WCAG Edition) </a></p>
+			  
+            <h4 class="seb-section-header sebnavbar-link" id="accessibility-seb-iOS">
+              <a class="anchorjs-link " href="#accessibility-seb-iOS" aria-label="Anchor link for: Accessibility SEB iOS"></a>
+              SEB für iOS
+            </h4>
+
+            <ul>
+              <li>Safe Exam Browser erlaubt nicht die Anwendung von benutzerdefinierten Stilen. SEB für iOS verfügt zwar über eine Funktion zur Anpassung der Textgröße, aber nicht für andere stilistische Aspekte wie z.B. <strong>Text spacing (WCAG 1.4.12)</strong></li>
+              <li>Spezielle Tastaturkürzel (wenn eine externe Tastatur benutzt wird):
+                <ul>
+                  <li>cmd (Befehlstaste) + M: Seitenmenü öffnen/schliessen</li>
+                  <li>cmd + R: Seite neu laden (wenn neu laden in SEB-Einstellungen erlaubt ist)</li>
+                  <li>cmd + F: Nach einem Text auf der Webseite suchen (wenn in SEB-Einstellungen erlaubt)</li>
+                  <li>cmd + Q:  SEB-Session beenden</li>
+                  <li>control + tab: Zum nächsten Browser-Tab wechseln</li>
+                  <li>control + shift + tab: Zum vorigen Browser-Tab wechseln</li>
+                </ul>
+              </li>
+            </ul>
+            <p>Eine detaillierte Zusammenstellung zur Konformität mit einzelnen WCAG-Erfolgskriterien findet sich im Voluntary Product Accessibility Template Dokument <a href="https://safeexambrowser.org/vpat/VPAT_WCAG_SEB_iOS.pdf" target="_blank">VPAT SEB für iOS (WCAG Edition)</a></p>              
           </div>
           <!-- / Document Section --> 
           
