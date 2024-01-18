@@ -296,24 +296,24 @@
           <p>Neu in SEB 3.3.2:</p>
           <ul id="seblist">
             <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
-            <li>WebInspector zum Debuggen von Websites funktioniert jetzt direkt in SEB mit dem modernen WebView(flackert nicht mehr, wenn es in WKWebView aufgerufen wird) .<br>
-            Einige Randfälle wurden behoben, bei denen der Sperrbildschirm &quot;SEB gesperrt wegen verbotenem Prozess!&quot; unnötigerweise angezeigt wurde.</li>
-            <li> Behoben: Das Übersteuern von Sicherheitsoptionen im Sperrbildschirm wird beim Neukonfigurieren nicht zurückgesetzt.</li>
+            <li>WebInspector zum Debuggen von Websites funktioniert jetzt direkt in SEB mit dem modernen WebView (flackert nicht mehr, wenn er auf einer Webseite mittels aktivierter rechter Maustaste und dem Kontextmenu &quot;Element-Informationen&quot; aufgerufen wird) .</li>
+            <li>Einige Randfälle wurden behoben, bei denen der Sperrbildschirm &quot;SEB gesperrt wegen verbotenem Prozess&quot; unnötigerweise angezeigt wurde.</li>
+            <li> Behoben: Das Übersteuern von Sicherheitsoptionen im Sperrbildschirm wurde beim Neukonfigurieren nicht zurückgesetzt.</li>
             <li> Behoben: Das Übersteuern des Sperrbildschirms für bestimmte verbotene Prozesse funktionierte nicht korrekt.</li>
-            <li> Die Prüfung auf bestimmte verbotene Prozesse kann jetzt mehrfach ausser Kraft gesetzt werden (auch für neu entdeckte verbotene Prozesse).</li>
-            <li> Behoben: Der falsche BrowserExamKey wurde angezeigt, wenn SEB mit der Alt-/Optionstaste gestartet wurde, um das Einstellungsfenster direkt anzuzeigen.</li>
+            <li> Die Prüfung auf bestimmte verbotene Prozesse kann jetzt mehrere Male ausser Kraft gesetzt werden (auch für neu entdeckte verbotene Prozesse).</li>
+            <li> Behoben: Ein falscher Browser Exam Key wurde angezeigt, wenn SEB mit der Alt-/Options-Taste gestartet worden war, um das Einstellungsfenster direkt anzuzeigen.</li>
             <li>              Behoben: Zurücksetzen auf Standardwerte hat veraltete Einstellungen nicht entfernt.</li>
-            <li>Behoben: Falsche Meldung, dass Einstellungen bearbeitet wurden, wenn das  Einstellungen-Fenster geschlossen wurde (SEB mit alt/option-Taste gestartet), auch wenn keine Änderungen vorgenommen wurden.</li>
+            <li>Behoben: Falsche Meldung, dass Einstellungen bearbeitet wurden, wenn das  Einstellungen-Fenster geschlossen wurde (SEB mit Alt-/Options-Taste gestartet), auch wenn keine Änderungen vorgenommen wurden.</li>
             <li>Behoben: Absturz beim Herunterladen von Dateien.</li>
             <li>Behoben: Es wurde keine Fehlermeldung angezeigt, wenn versucht wurde, SEB-Konfigurationen herunterzuladen/zu öffnen, während dies deaktiviert war.</li>
             <li>SEB friert nicht mehr ein, wenn die Taste &quot;Beenden&quot; im Sperrbildschirm &quot;System Security Feature disabled&quot; (Systemsicherheitsfunktion deaktiviert) gedrückt wird.</li>
             <li>Behoben: Javascript-Pop-up öffnete sich nicht bei aktiviertem URL-Filter.</li>
-            <li>Behoben: Die Neukonfiguration nach einem Login schloss keine zusätzlichen Browserfenster.</li>
+            <li>Behoben:  Neukonfiguration nach einem Login schloss keine zusätzlichen Browserfenster.</li>
             <li>SEB verhindert jetzt die Anzeige von &quot;Time Machine-Backups durchsuchen&quot;.</li>
-            <li>Behoben: SEB Server BrowserExamKey (BEK) wird von Moodle nicht erkannt, wenn die klassische WebView verwendet wird.<br>
-            Workaround für SEB Server Bug hinzugefügt, der BEK in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn sendBrowserExamKey = false gesetzt ist</li>
-            <li>Skalierung des Seitenverhältnisses im Fenster Einstellungen (Preferences) korrigiert. Der horizontale Schiebebalken im Bereich Sicherheit wurde entfernt.</li>
-            <li>Aktualisierung des BEK-Salts bei Sichern als (immer) und Sichern (nie) der Prüfungskonfiguration behoben.</li>
+            <li>Behoben: SEB Server Browser Exam Key (BEK) wird von Moodle nicht erkannt, wenn das klassische WebView verwendet wird.<br>
+            Workaround für SEB Server Bug hinzugefügt, der BEK in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn <em>sendBrowserExamKey = false</em> gesetzt ist</li>
+            <li>Skalierung des Seitenverhältnisses im Einstellungen-Fenster  korrigiert. Der horizontale Schiebebalken im  Tab Sicherheit wurde entfernt.</li>
+            <li>Aktualisierung des BEK-Salts bei &quot;Sichern als&quot; (immer) und &quot;Sichern&quot; (nie) der Prüfungskonfiguration korrigiert.</li>
           </ul>
           <p>Neu in SEB 3.3:</p>
           <ul id="seblist">
