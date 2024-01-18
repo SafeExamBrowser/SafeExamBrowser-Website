@@ -291,8 +291,30 @@
             
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.3.2/SafeExamBrowser-3.3.2.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit und ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. </p>
+          <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit und ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
           <p>Bei Verwendung des optionalen SEB Servers ermöglicht die App Signature Key-Funktionalität eine automatisierte Prüfung der Anwendungsintegrität, ähnlich wie bei der manuellen Verwendung des Browser Exam Key. Darüber hinaus kann der neue servergesteuerte Browser-Prüfungsschlüssel für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden.</p>
+          <p>Neu in SEB 3.3.2:</p>
+          <ul id="seblist">
+            <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
+            <li>WebInspector zum Debuggen von Websites funktioniert jetzt direkt in SEB mit dem modernen WebView(flackert nicht mehr, wenn es in WKWebView aufgerufen wird) .<br>
+            Einige Randfälle wurden behoben, bei denen der Sperrbildschirm &quot;SEB gesperrt wegen verbotenem Prozess!&quot; unnötigerweise angezeigt wurde.</li>
+            <li> Behoben: Das Übersteuern von Sicherheitsoptionen im Sperrbildschirm wird beim Neukonfigurieren nicht zurückgesetzt.</li>
+            <li> Behoben: Das Übersteuern des Sperrbildschirms für bestimmte verbotene Prozesse funktionierte nicht korrekt.</li>
+            <li> Die Prüfung auf bestimmte verbotene Prozesse kann jetzt mehrfach ausser Kraft gesetzt werden (auch für neu entdeckte verbotene Prozesse).</li>
+            <li> Behoben: Der falsche BrowserExamKey wurde angezeigt, wenn SEB mit der Alt-/Optionstaste gestartet wurde, um das Einstellungsfenster direkt anzuzeigen.</li>
+            <li>              Behoben: Zurücksetzen auf Standardwerte hat veraltete Einstellungen nicht entfernt.</li>
+            <li>Behoben: Falsche Meldung, dass Einstellungen bearbeitet wurden, wenn das  Einstellungen-Fenster geschlossen wurde (SEB mit alt/option-Taste gestartet), auch wenn keine Änderungen vorgenommen wurden.</li>
+            <li>Behoben: Absturz beim Herunterladen von Dateien.</li>
+            <li>Behoben: Es wurde keine Fehlermeldung angezeigt, wenn versucht wurde, SEB-Konfigurationen herunterzuladen/zu öffnen, während dies deaktiviert war.</li>
+            <li>SEB friert nicht mehr ein, wenn die Taste &quot;Beenden&quot; im Sperrbildschirm &quot;System Security Feature disabled&quot; (Systemsicherheitsfunktion deaktiviert) gedrückt wird.</li>
+            <li>Behoben: Javascript-Pop-up öffnete sich nicht bei aktiviertem URL-Filter.</li>
+            <li>Behoben: Die Neukonfiguration nach einem Login schloss keine zusätzlichen Browserfenster.</li>
+            <li>SEB verhindert jetzt die Anzeige von &quot;Time Machine-Backups durchsuchen&quot;.</li>
+            <li>Behoben: SEB Server BrowserExamKey (BEK) wird von Moodle nicht erkannt, wenn die klassische WebView verwendet wird.<br>
+            Workaround für SEB Server Bug hinzugefügt, der BEK in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn sendBrowserExamKey = false gesetzt ist</li>
+            <li>Skalierung des Seitenverhältnisses im Fenster Einstellungen (Preferences) korrigiert. Der horizontale Schiebebalken im Bereich Sicherheit wurde entfernt.</li>
+            <li>Aktualisierung des BEK-Salts bei Sichern als (immer) und Sichern (nie) der Prüfungskonfiguration behoben.</li>
+          </ul>
           <p>Neu in SEB 3.3:</p>
           <ul id="seblist">
             <li>Verbesserungen für Barrierefreiheit: Das Menü zur Auswahl geöffneter Webseiten (auf dem SEB-Symbol im SEB-Dock) kann nun mit VoiceOver über die Tastenkombination VO-Umschalttaste-M geöffnet werden (zusätzlich zum Rechtsklick).</li>
@@ -304,8 +326,6 @@
             <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
             <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
             <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt.</li>
-            <li>Option zum Blockieren von Uploads und Datei-/Fotoauswahldialog für die Taste &quot;Datei auswählen&quot; im modernen WebView hinzugefügt.</li>
-            <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
             <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
             <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.<br>
             </li></ul>
@@ -328,7 +348,7 @@
         </div>
 <p>Andere Funktionen:</p>
 <ul id="seblist">
-  <li>Unterstützung für verschlüsselte SEB-Konfigurationsdateien (Dateityp <span class="quote">.seb</span>), die es erlauben, SEB pro Prüfung individuell zu konfigurieren. Dieselben <span class="quote">.seb</span> Dateien können nun für das Starten von Prüfungen mit SEB 2.x auf Windows-Rechnern,  Macs und iPads/iOS-Geräten benutzt werden. </li>
+  <li>Unterstützung für verschlüsselte SEB-Konfigurationsdateien (Dateityp <span class="quote">.seb</span>), die es erlauben, SEB pro Prüfung individuell zu konfigurieren. Dieselben <span class="quote">.seb</span> Dateien können  für das Starten von Prüfungen mit SEB 2.x auf Windows-Rechnern,  Macs und iPads/iOS-Geräten benutzt werden. </li>
   <li>Eingebauter komfortabler Editor für die Plattform-unabhängigen SEB-Konfigurationsdateien, der auch alle zusätzlichen individuellen Einstellungen der Windows-Version konfigurieren kann.</li>
   <li>Die Bildschirmfoto-Funktion von macOS wird von SEB blockiert.</li>
   <li>SEB hat ein optionales Dock/Taskleiste eingebaut, in der ein Icon für den SEB-Browser mit Steuerelementen für  seine offenen Browser-Fenster und ein Beenden-Button angezeigt werden.</li>
