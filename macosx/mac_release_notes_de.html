@@ -225,8 +225,40 @@
         <div class="col-md-9">
         
           <!-- Content -->
-
-		  <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3</a>:		  </h5>
+			
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.2</a>:		  </h5>
+		  <p>SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
+          <p>Neu in SEB 3.3.2:</p>
+          <ul id="seblist">
+            <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
+            <li>WebInspector zum Debuggen von Websites funktioniert jetzt direkt in SEB mit dem modernen WebView (flackert nicht mehr, wenn auf einer Webseite mittels aktivierter rechter Maustaste und dem Kontextmenu &quot;Element-Informationen&quot; aufgerufen).</li>
+            <li>Einige Randfälle wurden behoben, bei denen der Sperrbildschirm &quot;SEB gesperrt wegen verbotenem Prozess&quot; unnötigerweise angezeigt wurde.</li>
+            <li> Behoben: Das Übersteuern von Sicherheitsoptionen im Sperrbildschirm wurde beim Neukonfigurieren nicht zurückgesetzt.</li>
+            <li> Behoben: Das Übersteuern des Sperrbildschirms für bestimmte verbotene Prozesse funktionierte nicht korrekt.</li>
+            <li> Die Prüfung auf bestimmte verbotene Prozesse kann jetzt mehrere Male ausser Kraft gesetzt werden (auch für neu entdeckte verbotene Prozesse).</li>
+            <li> Behoben: Ein falscher Browser Exam Key wurde angezeigt, wenn SEB mit der Alt-/Options-Taste gestartet worden war, um das Einstellungsfenster direkt anzuzeigen.</li>
+            <li> Behoben: Zurücksetzen auf Standardwerte hat veraltete Einstellungen nicht entfernt.</li>
+            <li>Behoben: Falsche Meldung, dass Einstellungen bearbeitet wurden, wenn das  Einstellungen-Fenster geschlossen wurde (SEB mit Alt-/Options-Taste gestartet), auch wenn keine Änderungen vorgenommen wurden.</li>
+            <li>Behoben: Absturz beim Herunterladen von Dateien.</li>
+            <li>Behoben: Es wurde keine Fehlermeldung angezeigt, wenn versucht wurde, SEB-Konfigurationen herunterzuladen/zu öffnen, während dies deaktiviert war.</li>
+            <li>SEB friert nicht mehr ein, wenn die Taste &quot;Beenden&quot; im Sperrbildschirm &quot;System Security Feature disabled&quot; (Systemsicherheitsfunktion deaktiviert) gedrückt wird.</li>
+            <li>Behoben: Javascript-Pop-up öffnete sich nicht bei aktiviertem URL-Filter.</li>
+            <li>Behoben:  Neukonfiguration nach einem Login schloss keine zusätzlichen Browserfenster.</li>
+            <li>SEB verhindert jetzt die Anzeige von &quot;Time Machine-Backups durchsuchen&quot;.</li>
+            <li>Behoben: SEB Server Browser Exam Key (BEK) wird von Moodle nicht erkannt, wenn das klassische WebView verwendet wird.</li>
+            <li>Workaround für SEB Server Bug hinzugefügt, der BEK in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn <em>sendBrowserExamKey = false</em> gesetzt ist</li>
+            <li>Skalierung des Seitenverhältnisses im Einstellungen-Fenster  korrigiert. Der horizontale Schiebebalken im  Tab Sicherheit wurde entfernt.</li>
+            <li>Aktualisierung des BEK-Salts bei &quot;Sichern als&quot; (immer) und &quot;Sichern&quot; (nie) der Prüfungskonfiguration korrigiert.</li>
+            <li>Erweiterte Fehlermeldung, wenn Zoom Proctoring in den Einstellungen aktiviert ist, mit &quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;.</li>
+            <li>              Ein neuer Fehlerfall wurde hinzugefügt, um zu verhindern, dass der SEB-Sperrbildschirm für &quot;Process nicht gefunden&quot; (bereits beendet) angezeigt wird.</li>
+            <li>Die veraltete Einstellung <em>allowWLAN</em> (welche Probleme beim Berechnen des Config Key auslöst) wird jetzt beim Speichern von Konfigurationen  entfernt.</li>
+            <li>Behoben: Falsche BEK-Anzeige nach dem Speichern einer Konfiguration.</li>
+            <li> Das Meldeintervall für noch laufende Prozesse wurde von 3 auf 30 Sekunden geändert.</li>
+            <li>Die Ansicht der Log-Konsole in Sperrbildschirmen sollte nun korrekt nach unten scrollen (wenn sie vor dem Erscheinen des neuen Log-Eintrags am unteren Rand war).</li>
+            <li>Die maximale Höhe der Scrollansicht der Log-Konsole wurde erhöht, um zu verhindern, dass längere Logs abgeschnitten werden.</li>
+          </ul>
+			
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3</a>:		  </h5>
 		  <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit, ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. Optional: SEB Server-Integration mit Moodle.</p>
           <p>Neu in SEB 3.3:</p>
           <ul id="seblist">
@@ -264,12 +296,14 @@
             <li>Verbesserte Protokollierung von SEB Server-Verbindungen.		  </li>
             <li>Behebung eines Absturzes beim Beenden von SEB mit noch aktiver SEB Server-Verbindung, wenn das Verbindungstoken möglicherweise bereits ungültig ist.</li>
           </ul>
-          <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.5</a>:</h5>
+			
+          <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.5</a>:</h5>
 		  <p>Neu in SEB 3.2.5:</p>
           <ul id="seblist">
             <li>Behoben: Nachschlagen mittels kräftigem Klick funktionierte im klassischen WebView in macOS 13 Ventura.</li>
           </ul>
-		  <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.4</a>:</h5>
+			
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.2.4</a>:</h5>
 		  <p>SEB 3.2 erweitert die optionale Unterstützung für SEB Server und bringt viele Stabilitätsverbesserungen.</p>
           <p>Neu in SEB 3.2.4:</p>
           <ul id="seblist">
@@ -322,7 +356,7 @@
 	      </ul>
 			
 			
-		  <h5>Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 2.2.2</a>:</h5>
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 2.2.2</a>:</h5>
             <ul id="seblist">
               <li>Korrigiert, dass PDF-Dokumente nicht dargestellt wurden, wenn der Acrobat PDF Reader installiert war.</li>
               <li>Das Einstellungen-Fenster kann nun nicht mehr geöffnet werden, wenn in Moodle 3.9 automatisch erzeugte SEB-Einstellungen benutzt werden (Option "Manuell Konfigurieren"). SEB benutzt nun die Standardeinstellung <em>allowPreferencesWindow=false</em> in Prüfungs-Einstellungen (Client-Konfigurationen haben weiterhin <em>allowPreferencesWindow=true </em>als Standardeinstellung).</li>
