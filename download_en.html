@@ -291,25 +291,25 @@
           <p>When using the optional SEB Server, the App Signature Key functionality allows automated application integrity checks similar to the manual use of the Browser Exam Key. Additionally, the new server-driven Browser Exam Key can be used for improved SEB Server integration with LMS/assessment systems like Moodle.</p>
           <p>New in SEB 3.3.2:</p>
           <ul>
-            <li>Added option to save settings for starting an exam uncompressed as plain text in the Save As… dialog. This is helpful for importing these configuration files into LMS/exam systems which don't support gzip compressed or encrypted config files (for example Moodle) or for manual editing.</li>
-            <li>WebInspector for debugging websites directly inside SEB using the modern WebView works now (no longer flickers if invoked in WKWebView).</li>
-            <li>Fixed some edge cases when the lock screen for prohibited process locked SEB was displayed unnecessarily.</li>
-            <li>Fixed: Overriding security options in lock screen isn't reset when reconfiguring.</li>
+            <li>Added option to save settings &quot;for starting an exam&quot; uncompressed as plain text in the Save As… dialog. This is helpful for importing these configuration files into LMS/exam systems which don't support gzip compressed or encrypted config files (for example Moodle) or for manual editing.</li>
+            <li>WebInspector for debugging websites directly inside SEB using the modern WebView works now (no longer flickers if invoked  on a website using the activated right mouse button and context menu option &quot;Inspect Element&quot;).</li>
+            <li>Fixed some edge cases when the lock screen for &quot;Prohibited process locked SEB&quot; was displayed unnecessarily.</li>
+            <li>Fixed: Overriding security options in lock screen wasn't reset when reconfiguring.</li>
             <li>Fixed that lock screen override for specific prohibited processes didn't work correctly.</li>
-            <li>The check for specific prohibited processes can be overridden multiple times now (again for newly detected prohibited processes).</li>
-            <li>Fixed: Wrong Browser Exam Key was displayed when starting SEB with alt/option key to directly display Preferences window.</li>
+            <li>The check for specific prohibited processes can now be overridden multiple times  (again for newly detected prohibited processes).</li>
+            <li>Fixed: Wrong Browser Exam Key was displayed when starting SEB with alt/option key to directly display Settings (Preferences) window.</li>
             <li>Fixed: Revert to Defaults doesn't remove outdated settings.</li>
-            <li>Fixed wrong message that settings were edited when closing Settings(Preferences) window (SEB started with alt/option key) even when no changes were performed.</li>
+            <li>Fixed wrong message that settings were edited when closing Settings (Preferences) window (SEB started with alt/option key) even when no changes were performed.</li>
             <li>Fixed crash when downloading files.</li>
-            <li>Fixed: No error message was displayed when attempting to download/open SEB configurations while this was disabled.</li>
-            <li>SEB no longer freezes on Quit button in "System Security Feature disabled" lock screen.</li>
+            <li>Fixed: No error message was displayed when attempting to download/open SEB configurations while this is disabled.</li>
+            <li>SEB no longer freezes on Quit button in "System Security Feature Disabled" lock screen.</li>
             <li>Fixed: Javascript pop-up was not opening with activated URL filter.</li>
             <li>Fixed: Reconfiguration after login didn't close additional browser windows.</li>
             <li>Now preventing display of "Browse Time Machine Backups".</li>
-            <li>Fixed SEB Server BrowserExamKey (BEK) is not recognized by Moodle when classic WebView is used.</li>
-            <li>Added workaround for SEB Server bug to send BEK in HTTP headers when Server BEK is used, even if setting sendBrowserExamKey = false</li>
+            <li>Fixed SEB Server Browser Exam Key is not recognized by Moodle when classic WebView is used.</li>
+            <li>Added workaround for SEB Server bug to send Browser Exam Key (BEK) in HTTP headers when Server BEK is used, even if setting <em>sendBrowserExamKey = false</em></li>
             <li>Fixed aspect ratio scaling of Settings (Preferences) window. Removed horizontal ruler in Security pane.</li>
-            <li>Fixed updating BEK salt when Save As (always) and Save (never) exam config.</li>
+            <li>Fixed updating Browser Exam Key salt when using Save As (always) and Save (never) for exam config.</li>
           </ul>
           <br>
           <p>New in SEB 3.3:</p>

@@ -228,6 +228,27 @@
 
           <!-- Content -->
 			
+			<h5 id="sebh5">January 19, 2024</h5>
+            <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.3.2 for macOS </a><!-- <a href="download_en.html#iOS">and iOS released</a> --></strong>. This  update fixes issues regarding file download, the Settings (formerly known as Preferences) window and allows exporting uncompressed configuration files (for example for directly importing it into Moodle). Also contains several security fixes: We therefore recommend to update soon! </p>
+            <ul id="seblist">
+              <li>WebInspector for debugging websites directly inside SEB using the modern WebView works now (no longer flickers if invoked  on a website using the activated right mouse button and context menu option &quot;Inspect Element&quot;).</li>
+              <li>Fixed some edge cases when the lock screen for &quot;Prohibited process locked SEB&quot; was displayed unnecessarily.</li>
+              <li>Fixed: Overriding security options in lock screen wasn't reset when reconfiguring.</li>
+              <li>Fixed that lock screen override for specific prohibited processes didn't work correctly.</li>
+              <li>Fixed: Wrong Browser Exam Key was displayed when starting SEB with alt/option key to directly display Settings (Preferences) window.</li>
+              <li>Fixed crash when downloading files.</li>
+              <li>Fixed: No error message was displayed when attempting to download/open SEB configurations while this is disabled.</li>
+              <li>SEB no longer freezes on Quit button in "System Security Feature Disabled" lock screen.</li>
+              <li>Fixed: Javascript pop-up was not opening with activated URL filter.</li>
+              <li>Fixed: Reconfiguration after login didn't close additional browser windows.</li>
+              <li>Now preventing display of "Browse Time Machine Backups".            </li>
+            </ul>
+			<!-- 
+            <p><a href="download_en.html#MacOSX">SEB 3.3 for macOS</a> especially improves security by using new integrity checks. --> <span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
+			<!-- 
+            <p><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank">SEB 3.3 for iOS</a> adds support for iOS 17 and in particular solves a security issue by adding a  settings option (active by default) to block uploads and the file/photo selection dialog for the &quot; Choose File&quot; button in the modern WebView. <span class="half_linespace">See <a href="ios/ios_release_notes_en.html">release notes</a> for all changes.</span></p>
+            <p><strong>Note: Due to an issue in iOS 17, SEB for iOS can crash on when playing videos/audio. </strong>  This issue is  fixed in iOS/iPadOS Beta 3. As a workaround, you can disable Guided Access in Settings / Accessibility, remove ASAM profiles on managed devices and reset the iPad's settings, in case you previoulsy used Classroom to lock that device. Also see the discussion in <a href="https://github.com/SafeExamBrowser/seb-mac/issues/321#issuecomment-1750259186" target="_blank">this GitHub issue</a>.</p> -->
+
 			<h5 id="sebh5">December 6, 2023</h5>
 	      	<p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.6.0 for Windows released</a></strong>: This feature update adds signature verification for third-party applications, provides version restriction by configuration file and adds an isolated clipboard implementation as well as important bug fixes and improvements. Please visit the <a href="windows/win_release_notes_en.html">release notes</a> for a list of all changes.</p>
 
@@ -260,7 +281,7 @@
 		  
 		  <h5 id="sebh5">March 23, 2023</h5>
           <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.2.4 for macOS released</a></strong>. This update increases security in exams, further enhances the optional support for SEB Server and adds  stability improvements:</p>
-          <ul id="seblist7">
+          <ul id="seblist">
             <li>Blocking AnyGPT by default.</li>
             <li>Fixed: When starting SEB, a modal alert was sometimes displayed in the screen background and blocked SEB. </li>
             <li>Security improvements.</li>
