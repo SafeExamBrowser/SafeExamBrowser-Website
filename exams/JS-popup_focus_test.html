@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Popup Test</title>
+    </head>
+    <body>
+        <script>
+            var popup
+           
+            function openPopup() {
+                if (!popup) {
+                    popup = window.open(https://www.duckduckgo.com, "DuckDuckGo", "width=450,height=350")
+                    document.getElementById('button').innerHTML = 'Focus'
+                }
+               
+                popup.focus()
+            }
+        </script>
+        <button id="button" onclick="openPopup()">Open</button>
+    </body>
+</html>
