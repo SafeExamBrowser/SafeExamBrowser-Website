@@ -227,6 +227,23 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
+			
+    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
+    <ul id="seblist">
+      <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
+      <li>Behoben: Abbrechen im Prüfungspasswort-Dialog funktionierte nicht.</li>
+      <li>Behoben: Tastaturkürzel zum Umschalten von Browser-Tabs ^(control/Strg)-Tabulator und ^(control/Strg)-Umschalt/Shift-Tab funktionierte auf aktuellen iPadOS-Versionen nicht.</li>
+      <li>Behoben: Beim Speichern von Konfigurationsdateien für MDM wurde unter iOS nicht die .plist-Erweiterung verwendet.</li>
+      <li>Behoben: Möglicher Concurrency-Fehler beim Herunterladen einer Konfiguration im temporären WebView.<br>
+        Behoben: Zurücksetzen auf Standardwerte hat veraltete Einstellungen nicht entfernt.</li>
+      <li>Behoben: Der aktuelle BrowserExamKey/ConfigKey wurde manchmal nicht in den Einstellungen angezeigt (zusammen mit der Warnung &quot;Die Konfiguration wurde geändert, die Schlüssel stimmen nicht mehr mit dem Originalzustand überein!&quot;), auch wenn die aktuelle Konfiguration nicht geändert worden war.</li>
+      <li>Behoben: Es wurde keine Fehlermeldung angezeigt, wenn versucht wurde, SEB-Konfigurationen herunterzuladen/zu öffnen, während dies deaktiviert war.</li>
+      <li>Behoben: SEB Server Browser Exam Key (BEK) wird von Moodle nicht erkannt, wenn das klassische WebView verwendet wird.</li>
+      <li>Workaround für SEB Server Fehler hinzugefügt, der den BrowserExamKey (BEK) in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn sendBrowserExamKey = false gesetzt ist.</li>
+      <li>Die veraltete Einstellung allowWLAN (welche Probleme beim Berechnen des Config Key auslöst) wird jetzt beim Speichern von Konfigurationen entfernt.</li>
+      <li>Erweiterte Fehlermeldung, wenn die optionale Funktion Zoom Proctoring in den Einstellungen aktiviert ist, mit &quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;.</li>
+    </ul>
+			
     <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
     <ul id="seblist">
       <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>
