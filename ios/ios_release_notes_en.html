@@ -227,6 +227,27 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
+			
+    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
+        <ul id="seblist">
+          <li>Added option to share settings &quot;for starting an exam&quot; uncompressed as plain text. This is helpful for importing these configuration files into LMS/exam systems which don't support gzip compressed or encrypted config files (for example Moodle) or for manual editing.</li>
+          <li>Fixed: Cancel in Exam Password dialog didn't work.</li>
+          <li>Fixed keyboard shortcut for switching tabs (control-tab/shift-control-tab) didn't work on current iPadOS versions.</li>
+          <li>Fixed: Saving config files for MDM didn't use the .plist extension on iOS.</li>
+          <li>Fixed possible concurrency issue when downloading config in temporary WebView.</li>
+          <li>Fixed: Revert to Defaults doesn't remove outdated settings.</li>
+          <li>Fixed: Current BrowserExamKey/ConfigKey were sometimes not displayed in Settings together with the warning &quot;Config was modified, keys won't match original state!&quot; even when the current configuration wasn't changed.</li>
+          <li>Fixed: No error message was displayed when attempting to download/open SEB configurations while this was disabled.</li>
+          <li>Fixed SEB Server BrowserExamKey was not recognized by Moodle when classic WebView was used.</li>
+          <li>Added workaround for SEB Server bug to send BrowserExamKey (BEK) in HTTP headers when Server BEK is used, even if setting sendBrowserExamKey = false.</li>
+          <li>Remove the outdated setting allowWLAN (which causes problems when calculating the ConfigKey) when saving configurations.</li>
+          <li>Extended error message when the optional feature Zoom proctoring is enabled in settings with &quot;Due to Zoom licensing issues, Zoom live proctoring is only available for SEB Alliance members. Please see https://safeexambrowser.org/alliance.&quot;.</li>
+          <li>Fixed data: and other downloads in the modern WebView were not working in some instances.</li>
+          <li>Fixed: Button for Automatic Client Configuration didn't work correctly.</li>
+          <li>Changed UIAlert preferredAction (for Return key) to default button: This doesn't seem to work though in current iOS versions.</li>
+          <li>Updated workaround for &quot;Back to Safari&quot; button/link bug in iOS 14.0 &lt; 14.5 in AAC kiosk mode (switched back to Safari or other previous app and stayed locked in it). Now using correct background color and statusbar none when using this workaround.</li>
+        </ul>
+			
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
         <ul id="seblist">
           <li>Accessibility improvements: Added dynamic type font scaling to side menu, Initial Configuration Assistant, About SEB and lock screen views.</li>
