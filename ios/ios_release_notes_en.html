@@ -246,9 +246,9 @@
           <li>Fixed: Button for Automatic Client Configuration didn't work correctly.</li>
           <li>Changed UIAlert preferredAction (for Return key) to default button: This doesn't seem to work though in current iOS versions.</li>
           <li>Updated workaround for &quot;Back to Safari&quot; button/link bug in iOS 14.0 &lt; 14.5 in AAC kiosk mode (switched back to Safari or other previous app and stayed locked in it). Now using correct background color and statusbar none when using this workaround.</li>
-        </ul>
-			
-    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
+          </ul>
+        <strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong style="color: #FF000C"> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API. <strong>In an upcoming release, SEB will display a warning message if the classic WebView is used by your SEB settings, as it's now of upmost importance to move away from the classic WebView and only use the modern one. </strong>
+        <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
         <ul id="seblist">
           <li>Accessibility improvements: Added dynamic type font scaling to side menu, Initial Configuration Assistant, About SEB and lock screen views.</li>
           <li>Now also supporting Increase Contrast mode and Bold Text in side menu.</li>

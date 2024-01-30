@@ -242,8 +242,8 @@
       <li>Workaround für SEB Server Fehler hinzugefügt, der den BrowserExamKey (BEK) in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn sendBrowserExamKey = false gesetzt ist.</li>
       <li>Die veraltete Einstellung allowWLAN (welche Probleme beim Berechnen des Config Key auslöst) wird jetzt beim Speichern von Konfigurationen entfernt.</li>
       <li>Erweiterte Fehlermeldung, wenn die optionale Funktion Zoom Proctoring in den Einstellungen aktiviert ist, mit &quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;.</li>
-    </ul>
-			
+      </ul>
+    <strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und wird irgendwann komplett aus iOS/iPadOS entfernt. <strong style="color: #FF0004">Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können. <strong>In einer kommenden Version wird SEB eine Warnmeldung anzeigen, wenn das klassische WebView von Ihren SEB-Einstellungen verwendet wird, da es jetzt von grösster Wichtigkeit ist, vom klassischen WebView wegzukommen und nur das moderne zu verwenden.</strong>
     <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
     <ul id="seblist">
       <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>

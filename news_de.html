@@ -228,7 +228,22 @@
         <div class="col-md-9">
 
         <!-- Content -->
-		
+
+		<h5 id="sebh5">30. Januar 2024</h5>
+        <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.3.2 für iOS veröffentlicht</strong></a>. Dieses Update ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle) und behebt verschiedene Probleme.</span></p>
+        <ul id="seblist">
+          
+          <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
+          <li>Behoben: Abbrechen im Prüfungspasswort-Dialog funktionierte nicht.</li>
+          <li>Behoben: Tastaturkürzel zum Umschalten von Browser-Tabs <em>^(control/Strg)-Tabulator </em>und <em>^(control/Strg)-Umschalt/Shift-Tab</em> funktionierte auf aktuellen iPadOS-Versionen nicht.</li>
+          <li>Behoben: Beim Speichern von Konfigurationsdateien für MDM wurde unter iOS nicht die .plist-Erweiterung verwendet.</li>
+          <li>Behoben: Der aktuelle BrowserExamKey/ConfigKey wurde manchmal nicht in den Einstellungen angezeigt (zusammen mit einer Warnung), auch ohne Einstellungen zu ändern.</li>
+          <li>Behoben: Es wurde keine Fehlermeldung angezeigt, wenn versucht wurde, SEB-Konfigurationen herunterzuladen/zu öffnen, während dies deaktiviert war.</li>
+          <li>Behoben: SEB Server Browser Exam Key (BEK) wird von Moodle nicht erkannt, wenn das klassische WebView verwendet wird.</li>
+          <li>Erweiterte Fehlermeldung, wenn die optionale Funktion Zoom Proctoring in den Einstellungen aktiviert ist, mit <em>&quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;</em>.</li></ul>
+        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+        <p><strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und wird irgendwann komplett aus iOS/iPadOS entfernt. <strong>Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können. <strong>In einer kommenden Version wird SEB eine Warnmeldung anzeigen, wenn das klassische WebView von Ihren SEB-Einstellungen verwendet wird, da es jetzt von grösster Wichtigkeit ist, vom klassischen WebView wegzukommen und nur das moderne zu verwenden.</strong></p>
+			
 		<h5 id="sebh5">19. Januar 2024 2023</h5>
         <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.3.2 für macOS veröffentlicht</strong></a>: <!-- <strong><a href="download_de.html#iOS">und für iOS</a></strong> veröffentlicht. -->SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
 

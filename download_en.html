@@ -379,21 +379,21 @@
         <p>SEB 3.3 improves accessibility and security and allows to export SEB settings as configuration links or QR codes. SEB 3.3.2 allows exporting uncompressed configuration files (for example for directly importing it into Moodle) and corrects various issues.</p>
         <p>When using the optional SEB Server, the App Signature Key functionality allows automated application integrity checks similar to the manual use of the Browser Exam Key. Additionally, the new server-driven Browser Exam Key can be used for improved SEB Server integration with LMS/assessment systems like Moodle. </p>
         <p><strong>Note: Due to an issue in iOS 17, SEB for iOS can crash on some devices</strong> when media (videos, HTML5 audio etc.) is played. This issue seems to be fixed in iOS 17.3. Other crashes happened when  any text input field was being displayed or activated (taking input focus). This issue was fixed in  iOS 17.1.  Also see the discussion in <a href="https://github.com/SafeExamBrowser/seb-mac/issues/321#issuecomment-1750259186" target="_blank">this GitHub issue</a>.</p>
-		  
+        <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API. <strong>In an upcoming release, SEB will display a warning message if the classic WebView is used by your SEB settings, as it's now of upmost importance to move away from the classic WebView and only use the modern one.        </strong></p>
         <p>New in SEB 3.3.2:</p>
         <ul id="seblist">
           <li>Added option to share settings &quot;for starting an exam&quot; uncompressed as plain text. This is helpful for importing these configuration files into LMS/exam systems which don't support gzip compressed or encrypted config files (for example Moodle) or for manual editing.</li>
           <li>Fixed: Cancel in Exam Password dialog didn't work.</li>
-          <li>Fixed keyboard shortcut for switching tabs (control-tab/shift-control-tab) didn't work on current iPadOS versions.</li>
+          <li>Fixed keyboard shortcut for switching tabs (<em>control-tab/shift-control-tab</em>) didn't work on current iPadOS versions.</li>
           <li>Fixed: Saving config files for MDM didn't use the .plist extension on iOS.</li>
           <li>Fixed possible concurrency issue when downloading config in temporary WebView.</li>
           <li>Fixed: Revert to Defaults doesn't remove outdated settings.</li>
-          <li>Fixed: Current BrowserExamKey/ConfigKey were sometimes not displayed in Settings together with the warning &quot;Config was modified, keys won't match original state!&quot; even when the current configuration wasn't changed.</li>
+          <li>Fixed: Current BrowserExamKey/ConfigKey were sometimes not displayed in Settings together with the warning <em>&quot;Config was modified, keys won't match original state!&quot;</em> even when the current configuration wasn't changed.</li>
           <li>Fixed: No error message was displayed when attempting to download/open SEB configurations while this was disabled.</li>
           <li>Fixed SEB Server BrowserExamKey was not recognized by Moodle when classic WebView was used.</li>
-          <li>Added workaround for SEB Server bug to send BrowserExamKey (BEK) in HTTP headers when Server BEK is used, even if setting sendBrowserExamKey = false.</li>
-          <li>Remove the outdated setting allowWLAN (which causes problems when calculating the ConfigKey) when saving configurations.</li>
-          <li>Extended error message when the optional feature Zoom proctoring is enabled in settings with &quot;Due to Zoom licensing issues, Zoom live proctoring is only available for SEB Alliance members. Please see https://safeexambrowser.org/alliance.&quot;.</li>
+          <li>Added workaround for SEB Server bug to send BrowserExamKey (BEK) in HTTP headers when Server BEK is used, even if setting <em>sendBrowserExamKey = false</em>.</li>
+          <li>Remove the outdated setting <em>allowWLAN</em> (which causes problems when calculating the ConfigKey) when saving configurations.</li>
+          <li>Extended error message when the optional feature Zoom proctoring is enabled in settings with <em>&quot;Due to Zoom licensing issues, Zoom live proctoring is only available for SEB Alliance members. Please see https://safeexambrowser.org/alliance.&quot;</em>.</li>
         </ul>
 		  
         <p>New in SEB 3.3:</p>
@@ -421,8 +421,8 @@
 <ul id="seblist">
   <li>Optional support for <a href="https://github.com/SafeExamBrowser/seb-server" target="_blank">SEB Server</a>: In the web backend of SEB Server, an administrator can import exam metadata from a learning management system (LMS) and create SEB Server exams. The list of current exams is then displayed on the SEB clients connected to this SEB Server instance. During the exam, the clients can be monitored in the SEB Server web backend, SEB can be quit remotely etc.</li>
   <li>Now supporting OpenOlat (currently not in public OO version) and Ans together with SEB Server. </li>
-  <li>Optional live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. You can use any Jitsi Meet server to test this feature, for example https://meet.jit.si (or install your own Jitsi Meet server).</li>
-  <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.</li>
+  <li>Optional live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. You can use any Jitsi Meet server to test this feature, for example https://meet.jit.si (or install your own Jitsi Meet server). <strong>DEPRECATED: This feature will be removed in the next major SEB release.</strong></li>
+  <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy. <strong>DEPRECATED: This feature will be removed in the next major SEB release.</strong></li>
   <li> Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. <strong>SEB doesn't use any centralized server instances and the according features are  disabled by default.</strong><br>
   </li>
 </ul>
