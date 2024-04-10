@@ -228,7 +228,34 @@
         
         <!-- Content -->
 			
-    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
+    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
+    <ul id="seblist">
+      <li>Der Kontextmenüeintrag &quot;Automatisch Ausfüllen&quot; für Kontakte/Kennwörter in Textfeldern unter iOS 17 wird nun entfernt.<br>
+      </li>
+      <li>Ausserdem wurde der Kontextmenüpunkt &quot;Teilen ...&quot; entfernt (der ohnehin vom AAC Assessment Mode/Bewertungsmodus blockiert wird). Beachten Sie, dass der Kontextmenüpunkt &quot;Übersetzen&quot; derzeit nicht entfernt werden kann (nicht von der API abgedeckt, aber auch von AAC blockiert). <br>
+      </li>
+      <li>Falsche Höhe der Browser-Symbolleiste im iPhone-Querformat unter iOS 17 und nach dem Drehen eines iPads unter iPadOS 17 behoben.<br>
+      </li>
+      <li>Behoben: Das Suchtext-Icon hatte unter iOS 16/17 eine Textfeld-Hintergrundfarbe.<br>
+      </li>
+      <li>Anzeige einer Warnung, wenn das veraltete klassische WebView verwendet wird.<br>
+      </li>
+      <li>Es wurde eine Einstellung im Tab Browser-Funktionen hinzugefügt, um die Warnung zu deaktivieren, wenn das veraltete klassische WebView verwendet wird (Einstellungs-Key: <em>browserWindowWebViewClassicHideDeprecationNote</em>).<br>
+      </li>
+      <li>Das klassische WebView verwendet jetzt eine alternative Methode zum Hinzufügen des SEB User Agent-Strings in HTTP-Headern. Dies vermeidet Kompatibilitätsprobleme, wenn ein Prüfungssystem mit SEB-Integration das moderne WebView noch nicht unterstützt (es verwendet nicht die SEB Javascript API zur Abfrage von ConfigKey/BrowserExamKey). <br>
+        <strong>Dieser Fix ist jedoch kein Grund, die Implementierung der Unterstützung für das moderne WebView in SEB-Integrationen aufzuschieben. Jedes iOS-Update kann die Unterstützung für das klassische WebView (UIWebView) endgültig beenden!</strong><br>
+      </li>
+      <li>Neue Einstellung im Tab Browser-Funktionen hinzugefügt, um die ganze Seite nach einem Verbindungsfehler neu zu laden (anstatt die fehlgeschlagene URL zu laden), Einstellungs-Key: <em>browserConnectionErrorReload</em>. Dies ist ein Workaround für einige Probleme mit LMS/Assessment-Systemen, z.B. in Moodle.<br>
+      </li>
+      <li>Behoben: Bei Verwendung des optionalen SEB Servers funktionierte das Sperren des Clients nicht.<br>
+      </li>
+      <li>Behoben: Absturz beim Skalieren einer bereits skalierten dynamischen Schrift in den Sperr- und Über SEB-Bildschirmen.<br>
+      </li>
+      <li>Deutsche Übersetzungen in den In-App-Einstellungen korrigiert.</li>
+      </ul>
+    <strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und wird irgendwann komplett aus iOS/iPadOS entfernt. <strong style="color: #FF0004">Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können. <strong> SEB zeigt nun eine Warnmeldung an, wenn das klassische WebView von Ihren SEB-Einstellungen verwendet wird, da es jetzt von grösster Wichtigkeit ist, vom klassischen WebView wegzukommen und nur das moderne zu verwenden.</strong>
+			
+	<h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
     <ul id="seblist">
       <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
       <li>Behoben: Abbrechen im Prüfungspasswort-Dialog funktionierte nicht.</li>
@@ -243,7 +270,7 @@
       <li>Die veraltete Einstellung allowWLAN (welche Probleme beim Berechnen des Config Key auslöst) wird jetzt beim Speichern von Konfigurationen entfernt.</li>
       <li>Erweiterte Fehlermeldung, wenn die optionale Funktion Zoom Proctoring in den Einstellungen aktiviert ist, mit &quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;.</li>
       </ul>
-    <strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und wird irgendwann komplett aus iOS/iPadOS entfernt. <strong style="color: #FF0004">Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können. <strong>In einer kommenden Version wird SEB eine Warnmeldung anzeigen, wenn das klassische WebView von Ihren SEB-Einstellungen verwendet wird, da es jetzt von grösster Wichtigkeit ist, vom klassischen WebView wegzukommen und nur das moderne zu verwenden.</strong>
+			
     <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
     <ul id="seblist">
       <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>

@@ -228,6 +228,30 @@
 
           <!-- Content -->
 			
+		  <h5 id="sebh5">April 10, 2024</h5>
+          <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.3.3 for iOS released</strong></a>. This minor update fixes a security and some UI issues when running on iPadOS/iOS 17. </span> </p>
+          <ul id="seblist">
+            <li>Removed the Autofill Contacts/Passwords context menu item in text fields on iOS 17.<br>
+            </li>
+            <li>Fixed wrong browser toolbar height in iPhone landscape mode on iOS 17 and after rotating an iPad with iPadOS 17.<br>
+            </li>
+            <li>Fixed Search text icon had a text field background color on iOS 16/17.<br>
+            </li>
+            <li>Display deprecation warning when classic WebView is used.<br>
+            </li>
+            <li>Added setting in Browser Features pane to disable deprecation warning when classic WebView is used.<br>
+            </li>
+            <li>Now using an alternative method to add the SEB User Agent string in HTTP Headers with classic WebView. This avoids compatibility issues when an assessment system with SEB integration doesn't yet support the modern WebView (doesn't use the SEB Javascript API to query ConfigKey/BrowserExamKey). <br>
+              <strong>This fix nevertheless is no reason to delay implementing support for the modern WebView in SEB integrations. Any iOS update may break support for the classic WebView (UIWebView) finally!</strong><br>
+            </li>
+            <li>Added new setting in Browser Features pane to reload the full page after a connection error (instead of loading the failed URL. This is a workaround for some LMS/assessment system issues e.g. in Moodle.<br>
+            </li>
+            <li>Fixed: When using the optional SEB Server, locking the client didn't work.<br>
+            </li>
+          </ul>
+          <p><span class="half_linespace">See <a href="ios/ios_release_notes_en.html">release notes</a> for all changes</span>.</p>
+          <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API. <strong> SEB now displays a warning message if the classic WebView is used by your SEB settings, as it's now of upmost importance to move away from the classic WebView and only use the modern one. </strong></p>
+			
 		  <h5 id="sebh5">April 3, 2024</h5>
 		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.7.0 for Windows released</a></strong>: This feature update introduces the optional screen proctoring functionality, resolves an issue with the isolated clipboard and adds various new configuration options as well as important bug fixes and improvements. Please visit the <a href="windows/win_release_notes_en.html">release notes</a> for a list of all changes.</p>
 			
@@ -244,10 +268,8 @@
             <li>Added workaround for SEB Server bug to send BrowserExamKey (BEK) in HTTP headers when Server BEK is used, even if setting <em>sendBrowserExamKey = false</em>.</li>
             <li>Remove the outdated setting <em>allowWLAN</em> (which causes problems when calculating the ConfigKey) when saving configurations.</li>
             <li>Extended error message when the optional feature Zoom proctoring is enabled in settings with <em>&quot;Due to Zoom licensing issues, Zoom live proctoring is only available for SEB Alliance members. Please see https://safeexambrowser.org/alliance.&quot;</em>.</li></ul>
-          <p><span class="half_linespace">See <a href="ios/ios_release_notes_en.html">release notes</a> for all changes</span>.</p>
-          <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API. <strong>In an upcoming release, SEB will display a warning message if the classic WebView is used by your SEB settings, as it's now of upmost importance to move away from the classic WebView and only use the modern one. </strong></p>
-			
-			<h5 id="sebh5">January 19, 2024</h5>
+          <p><span class="half_linespace">See <a href="ios/ios_release_notes_en.html">release notes</a> for all changes</span>.		  </p>
+          <h5 id="sebh5">January 19, 2024</h5>
             <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.3.2 for macOS released</a><!-- <a href="download_en.html#iOS">and iOS released</a> --></strong>: This  update fixes issues regarding file download, the Settings (formerly known as Preferences) window and allows exporting uncompressed configuration files (for example for directly importing it into Moodle). Also contains several security fixes: We therefore recommend to update soon! </p>
             <ul id="seblist">
               <li>WebInspector for debugging websites directly inside SEB using the modern WebView works now (no longer flickers if invoked  on a website using the activated right mouse button and context menu option &quot;Inspect Element&quot;).</li>

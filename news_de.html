@@ -229,6 +229,31 @@
 
         <!-- Content -->
 
+		<h5 id="sebh5">10. April 2024</h5>
+        <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.3.3 für iOS veröffentlicht</strong></a>. Dieses Update behebt ein Sicherheitsproblem und einige UI-Probleme beim Betrieb unter iPadOS/iOS 17.</span></p>
+        <ul id="seblist">
+          
+          <li>Der Kontextmenüeintrag &quot;Automatisch Ausfüllen&quot; für Kontakte/Kennwörter in Textfeldern unter iOS 17 wird nun entfernt.<br>
+          </li>
+          <li>Falsche Höhe der Browser-Symbolleiste im iPhone-Querformat unter iOS 17 und nach dem Drehen eines iPads unter iPadOS 17 behoben.<br>
+          </li>
+          <li>Behoben: Das Suchtext-Icon hatte unter iOS 16/17 eine Textfeld-Hintergrundfarbe.<br>
+          </li>
+          <li>Anzeige einer Warnung, wenn das veraltete klassische WebView verwendet wird.<br>
+          </li>
+          <li>Es wurde eine Einstellung im Tab Browser-Funktionen hinzugefügt, um die Warnung zu deaktivieren, wenn das veraltete klassische WebView verwendet wird.<br>
+          </li>
+          <li>Das klassische WebView verwendet jetzt eine alternative Methode zum Hinzufügen des SEB User Agent-Strings in HTTP-Headern. Dies vermeidet Kompatibilitätsprobleme, wenn ein Prüfungssystem mit SEB-Integration das moderne WebView noch nicht unterstützt (es verwendet nicht die SEB Javascript API zur Abfrage von ConfigKey/BrowserExamKey). <br>
+            <strong>Dieser Fix ist jedoch kein Grund, die Implementierung der Unterstützung für das moderne WebView in SEB-Integrationen aufzuschieben. Jedes iOS-Update kann die Unterstützung für das klassische WebView (UIWebView) endgültig beenden!</strong><br>
+          </li>
+          <li>Neue Einstellung im Tab Browser-Funktionen hinzugefügt, um die ganze Seite nach einem Verbindungsfehler neu zu laden (anstatt die fehlgeschlagene URL zu laden). Dies ist ein Workaround für einige Probleme mit LMS/Assessment-Systemen, z.B. in Moodle.<br>
+          </li>
+          <li>Behoben: Bei Verwendung des optionalen SEB Servers funktionierte das Sperren des Clients nicht.<br>
+          </li>
+          <li>Deutsche Übersetzungen in den In-App-Einstellungen korrigiert.</li></ul>
+        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+        <p><strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und wird irgendwann komplett aus iOS/iPadOS entfernt. <strong>Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können. <strong>SEB zeigt nun eine Warnmeldung an, wenn das klassische WebView von Ihren SEB-Einstellungen verwendet wird, da es jetzt von grösster Wichtigkeit ist, vom klassischen WebView wegzukommen und nur das moderne zu verwenden.</strong></p>
+			
 		<h5 id="sebh5">3. April 2024</h5>
 	    <p><strong><a href="download_de.html#Windows">Safe Exam Browser 3.7.0 für Windows veröffentlicht</a></strong>: Dieses Funktionsupdate führt die optionale Funktionalität zur Bildschirmüberwachung ein, behebt ein Problem mit der isolierten Zwischenablage und bietet verschiedene neue Konfigurationsoptionen sowie wichtige Fehlerkorrekturen und Verbesserungen. Bitte lesen Sie die <a href="windows/win_release_notes_de.html">Release Notes</a> für die Liste aller Änderungen.</p>
 			
@@ -244,10 +269,8 @@
           <li>Behoben: Es wurde keine Fehlermeldung angezeigt, wenn versucht wurde, SEB-Konfigurationen herunterzuladen/zu öffnen, während dies deaktiviert war.</li>
           <li>Behoben: SEB Server Browser Exam Key (BEK) wird von Moodle nicht erkannt, wenn das klassische WebView verwendet wird.</li>
           <li>Erweiterte Fehlermeldung, wenn die optionale Funktion Zoom Proctoring in den Einstellungen aktiviert ist, mit <em>&quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;</em>.</li></ul>
-        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
-        <p><strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und wird irgendwann komplett aus iOS/iPadOS entfernt. <strong>Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können. <strong>In einer kommenden Version wird SEB eine Warnmeldung anzeigen, wenn das klassische WebView von Ihren SEB-Einstellungen verwendet wird, da es jetzt von grösster Wichtigkeit ist, vom klassischen WebView wegzukommen und nur das moderne zu verwenden.</strong></p>
-			
-		<h5 id="sebh5">19. Januar 2024 2023</h5>
+        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span>		</p>
+        <h5 id="sebh5">19. Januar 2024 2023</h5>
         <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.3.2 für macOS veröffentlicht</strong></a>: <!-- <strong><a href="download_de.html#iOS">und für iOS</a></strong> veröffentlicht. -->SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
 
           <p>Neu in SEB 3.3.2:</p>

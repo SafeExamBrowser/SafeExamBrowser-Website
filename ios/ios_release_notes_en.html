@@ -230,6 +230,33 @@
 			
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
         <ul id="seblist">
+          <li>Removed the Autofill Contacts/Passwords context menu item in text fields on iOS 17.<br>
+          </li>
+          <li>Also removed the &quot;Share...&quot; context menu item (which is anyways blocked by the AAC Assessment Mode). Note that the &quot;Translate&quot; context menu item cannot be removed currently (not covered by API, but also blocked by AAC). <br>
+          </li>
+          <li>Fixed wrong browser toolbar height in iPhone landscape mode on iOS 17 and after rotating an iPad with iPadOS 17.<br>
+          </li>
+          <li>Fixed Search text icon had a text field background color on iOS 16/17.<br>
+          </li>
+          <li>Display deprecation warning when classic WebView is used.<br>
+          </li>
+          <li>Added setting in Browser Features pane to disable deprecation warning when classic WebView is used (key: <em>browserWindowWebViewClassicHideDeprecationNote</em>).<br>
+          </li>
+          <li>Now using an alternative method to add the SEB User Agent string in HTTP Headers with classic WebView. This avoids compatibility issues when an assessment system with SEB integration doesn't yet support the modern WebView (doesn't use the SEB Javascript API to query ConfigKey/BrowserExamKey). <br>
+            <strong>This fix nevertheless is no reason to delay implementing support for the modern WebView in SEB integrations. Any iOS update may break support for the classic WebView (UIWebView) finally!</strong><br>
+          </li>
+          <li>Added new setting in Browser Features pane to reload the full page after a connection error (instead of loading the failed URL), key: <em>browserConnectionErrorReload</em>. This is a workaround for some LMS/assessment system issues e.g. in Moodle.<br>
+          </li>
+          <li>Fixed: When using the optional SEB Server, locking the client didn't work.<br>
+          </li>
+          <li>Fixed crash when scaling already scaled dynamic font in lock and About SEB screens.<br>
+          </li>
+          <li>Fixed German localization in in-app-settings.</li>
+        </ul>
+        <strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong style="color: #FF000C"> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API. <strong> SEB now displays a warning message if the classic WebView is used by your SEB settings, as it's now of upmost importance to move away from the classic WebView and only use the modern one. </strong>
+			
+        <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
+        <ul id="seblist">
           <li>Added option to share settings &quot;for starting an exam&quot; uncompressed as plain text. This is helpful for importing these configuration files into LMS/exam systems which don't support gzip compressed or encrypted config files (for example Moodle) or for manual editing.</li>
           <li>Fixed: Cancel in Exam Password dialog didn't work.</li>
           <li>Fixed keyboard shortcut for switching tabs (control-tab/shift-control-tab) didn't work on current iPadOS versions.</li>
@@ -247,7 +274,7 @@
           <li>Changed UIAlert preferredAction (for Return key) to default button: This doesn't seem to work though in current iOS versions.</li>
           <li>Updated workaround for &quot;Back to Safari&quot; button/link bug in iOS 14.0 &lt; 14.5 in AAC kiosk mode (switched back to Safari or other previous app and stayed locked in it). Now using correct background color and statusbar none when using this workaround.</li>
           </ul>
-        <strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong style="color: #FF000C"> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API. <strong>In an upcoming release, SEB will display a warning message if the classic WebView is used by your SEB settings, as it's now of upmost importance to move away from the classic WebView and only use the modern one. </strong>
+			
         <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
         <ul id="seblist">
           <li>Accessibility improvements: Added dynamic type font scaling to side menu, Initial Configuration Assistant, About SEB and lock screen views.</li>
