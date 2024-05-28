@@ -277,41 +277,45 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.3.2/SafeExamBrowser-3.3.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.3.3/SafeExamBrowser-3.3.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.3.2 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.3.3 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 14, 13, 12, 11, 10.15, 10.14, 10.13</strong><br />
-        <span class="codetext">Build 1456D. SHA1: 51d64980c5e5df6123ec094bb76130de0d6b5b38</span></p>
+        <span class="codetext">Build 151C0. SHA1: a296a8d6f2a4425f824a80f1171a1627eba4ef16</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.3.2/SafeExamBrowser-3.3.2.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.3.3/SafeExamBrowser-3.3.3.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit und ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
+          <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit und ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. SEB 3.3.3  enthält  mehrere wichtige Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
           <p>Bei Verwendung des optionalen SEB Servers ermöglicht die App Signature Key-Funktionalität eine automatisierte Prüfung der Anwendungsintegrität, ähnlich wie bei der manuellen Verwendung des Browser Exam Key. Darüber hinaus kann der neue servergesteuerte Browser-Prüfungsschlüssel für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden.</p>
-          <p>Neu in SEB 3.3.2:</p>
+          <p>Neu in SEB 3.3.3:</p>
           <ul id="seblist">
-            <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
-            <li>WebInspector zum Debuggen von Websites funktioniert jetzt direkt in SEB mit dem modernen WebView (flackert nicht mehr, wenn auf einer Webseite mittels aktivierter rechter Maustaste und dem Kontextmenu &quot;Element-Informationen&quot; aufgerufen).</li>
-            <li>Einige Randfälle wurden behoben, bei denen der Sperrbildschirm &quot;SEB gesperrt wegen verbotenem Prozess&quot; unnötigerweise angezeigt wurde.</li>
-            <li> Behoben: Das Übersteuern von Sicherheitsoptionen im Sperrbildschirm wurde beim Neukonfigurieren nicht zurückgesetzt.</li>
-            <li> Behoben: Das Übersteuern des Sperrbildschirms für bestimmte verbotene Prozesse funktionierte nicht korrekt.</li>
-            <li> Die Prüfung auf bestimmte verbotene Prozesse kann jetzt mehrere Male ausser Kraft gesetzt werden (auch für neu entdeckte verbotene Prozesse).</li>
-            <li> Behoben: Ein falscher Browser Exam Key wurde angezeigt, wenn SEB mit der Alt-/Options-Taste gestartet worden war, um das Einstellungsfenster direkt anzuzeigen.</li>
-            <li>              Behoben: Zurücksetzen auf Standardwerte hat veraltete Einstellungen nicht entfernt.</li>
-            <li>Behoben: Falsche Meldung, dass Einstellungen bearbeitet wurden, wenn das  Einstellungen-Fenster geschlossen wurde (SEB mit Alt-/Options-Taste gestartet), auch wenn keine Änderungen vorgenommen wurden.</li>
-            <li>Behoben: Absturz beim Herunterladen von Dateien.</li>
-            <li>Behoben: Es wurde keine Fehlermeldung angezeigt, wenn versucht wurde, SEB-Konfigurationen herunterzuladen/zu öffnen, während dies deaktiviert war.</li>
-            <li>SEB friert nicht mehr ein, wenn die Taste &quot;Beenden&quot; im Sperrbildschirm &quot;System Security Feature disabled&quot; (Systemsicherheitsfunktion deaktiviert) gedrückt wird.</li>
-            <li>Behoben: Javascript-Pop-up öffnete sich nicht bei aktiviertem URL-Filter.</li>
-            <li>Behoben:  Neukonfiguration nach einem Login schloss keine zusätzlichen Browserfenster.</li>
-            <li>SEB verhindert jetzt die Anzeige von &quot;Time Machine-Backups durchsuchen&quot;.</li>
-            <li>Behoben: SEB Server Browser Exam Key (BEK) wird von Moodle nicht erkannt, wenn das klassische WebView verwendet wird.</li>
-            <li>Workaround für SEB Server Bug hinzugefügt, der BEK in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn <em>sendBrowserExamKey = false</em> gesetzt ist</li>
-            <li>Skalierung des Seitenverhältnisses im Einstellungen-Fenster  korrigiert. Der horizontale Schiebebalken im  Tab Sicherheit wurde entfernt.</li>
-            <li>Aktualisierung des BEK-Salts bei &quot;Sichern als&quot; (immer) und &quot;Sichern&quot; (nie) der Prüfungskonfiguration korrigiert.</li>
+            <li>Neue Einstellung im Tab Browser hinzugefügt, um die ganze Seite nach einem Verbindungsfehler neu zu laden (anstatt die fehlgeschlagene URL zu laden). Dies ist ein Workaround für einige Probleme mit LMS/Assessment-Systemen, z.B. in Moodle.<br>
+</li>
+            <li>Es wurde behoben, dass die Deaktivierung der Rechtschreibprüfung und Autokorrektur in WKWebView manchmal nicht funktionierte: Sie wurde komplett deaktiviert (kann für macOS/iOS nicht mehr konfiguriert werden).</li>
+            <li>Die Blockierung von WebKit Networking-Prozessen wurde geändert, um SEB nicht zu sperren, wenn ein WebKit-Netzwerkprozess mit erhöhter Benutzerpriorität ausgeführt wird.</li>
+            <li>Behoben: Berechtigungen für den reinen Mikrofonzugriff funktionierten nicht.</li>
+            <li> Behoben: Textersetzungen konnten in SEB verwendet werden.</li>
+            <li> Verhindern, dass der Keyboard Viewer verwendet wird, der weiterhin Textersetzungen anzeigt.<br>
+              </li>
+            <li>Jetzt wird erkannt und die Ausführung verweigert, wenn benutzerdefinierte Cocoa-Text-System-Tastenbindungen gesetzt sind.<br>
+              </li>
+            <li>Behoben: Chrome-Videokonferenzen wurden nicht mehr gestoppt, wenn aktuelle Chrome-Versionen verwendet wurden.<br>
+              </li>
+            <li>Behoben: Es wird nun die korrekte Start-URL der aktuellen Session verwendet (lokale/SEB-Server-Prüfung).<br>
+              </li>
+            <li>Behoben: Einstellungen-Menü und Cmd-S waren in einigen Fällen während der Prüfung verfügbar.<br>
+              </li>
+            <li>Im Sperrbildschirm für gesperrte Prüfungen wird nun klargestellt, dass das Beenden-Passwort der aktuellen Session eingegeben werden muss, um SEB zu entsperren.<br>
+              </li>
+            <li>Ausgabe von alten SEB-Versionen im User-Agent. Erforderlich, um gefährdete SEB-Versionen durch 3.3.3 zu ersetzen.<br>
+              </li>
+            <li>Ein mögliches Problem wurde behoben, bei dem SEB manchmal kein Fenster öffnete und mit CMD-Q beendet werden musste.<br>
+              </li>
+            <li>Behebung eines Xcode-Build-Fehlers, der dazu führte, dass SEB 3.3.2 nicht auf macOS 10.13 lief.</li>
           </ul>
           <p>Neu in SEB 3.3:</p>
           <ul id="seblist">

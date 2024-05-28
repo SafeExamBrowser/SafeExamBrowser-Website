@@ -229,6 +229,38 @@
 
         <!-- Content -->
 
+        <h5 id="sebh5">28. Mai 2024 2023</h5>
+        <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.3.3 für macOS veröffentlicht</strong></a>: <!-- <strong><a href="download_de.html#iOS">und für iOS</a></strong> veröffentlicht. -->SEB 3.3.3  enthält  mehrere wichtige Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
+
+          <p>Neu in SEB 3.3.3:</p>
+          <ul id="seblist">
+            <li>Neue Einstellung im Tab Browser hinzugefügt, um die ganze Seite nach einem Verbindungsfehler neu zu laden (anstatt die fehlgeschlagene URL zu laden). Dies ist ein Workaround für einige Probleme mit LMS/Assessment-Systemen, z.B. in Moodle.<br>
+            </li>
+            <li>Es wurde behoben, dass die Deaktivierung der Rechtschreibprüfung und Autokorrektur in WKWebView manchmal nicht funktionierte: Sie wurde komplett deaktiviert (kann für macOS/iOS nicht mehr konfiguriert werden).</li>
+            <li>Die Blockierung von WebKit Networking-Prozessen wurde geändert, um SEB nicht zu sperren, wenn ein WebKit-Netzwerkprozess mit erhöhter Benutzerpriorität ausgeführt wird.</li>
+            <li>Behoben: Berechtigungen für den reinen Mikrofonzugriff funktionierten nicht.</li>
+            <li> Behoben: Textersetzungen konnten in SEB verwendet werden.</li>
+            <li> Verhindern, dass der Keyboard Viewer verwendet wird, der weiterhin Textersetzungen anzeigt.<br>
+            </li>
+            <li>Jetzt wird erkannt und die Ausführung verweigert, wenn benutzerdefinierte Cocoa-Text-System-Tastenbindungen gesetzt sind.<br>
+            </li>
+            <li>Behoben: Chrome-Videokonferenzen wurden nicht mehr gestoppt, wenn aktuelle Chrome-Versionen verwendet wurden.<br>
+            </li>
+            <li>Behoben: Es wird nun die korrekte Start-URL der aktuellen Session verwendet (lokale/SEB-Server-Prüfung).<br>
+            </li>
+            <li>Behoben: Einstellungen-Menü und Cmd-S waren in einigen Fällen während der Prüfung verfügbar.<br>
+            </li>
+            <li>Im Sperrbildschirm für gesperrte Prüfungen wird nun klargestellt, dass das Beenden-Passwort der aktuellen Session eingegeben werden muss, um SEB zu entsperren.<br>
+            </li>
+            <li>Ausgabe von alten SEB-Versionen im User-Agent. Erforderlich, um gefährdete SEB-Versionen durch 3.3.3 zu ersetzen.<br>
+            </li>
+            <li>Ein mögliches Problem wurde behoben, bei dem SEB manchmal kein Fenster öffnete und mit CMD-Q beendet werden musste.<br>
+            </li>
+            <li>Behebung eines Xcode-Build-Fehlers, der dazu führte, dass SEB 3.3.2 nicht auf macOS 10.13 lief.</li>
+          </ul>
+			
+		<p><span class="half_linespace"> Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+			
 		<h5 id="sebh5">10. April 2024</h5>
         <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.3.3 für iOS veröffentlicht</strong></a>. Dieses Update behebt ein Sicherheitsproblem und einige UI-Probleme beim Betrieb unter iPadOS/iOS 17.</span></p>
         <ul id="seblist">
@@ -270,6 +302,7 @@
           <li>Behoben: SEB Server Browser Exam Key (BEK) wird von Moodle nicht erkannt, wenn das klassische WebView verwendet wird.</li>
           <li>Erweiterte Fehlermeldung, wenn die optionale Funktion Zoom Proctoring in den Einstellungen aktiviert ist, mit <em>&quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;</em>.</li></ul>
         <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span>		</p>
+			
         <h5 id="sebh5">19. Januar 2024 2023</h5>
         <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.3.2 für macOS veröffentlicht</strong></a>: <!-- <strong><a href="download_de.html#iOS">und für iOS</a></strong> veröffentlicht. -->SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
 
@@ -290,12 +323,8 @@
             <li>            Workaround für SEB Server Bug hinzugefügt, der BEK in HTTP-Headern sendet, wenn Server BEK verwendet wird, auch wenn <em>sendBrowserExamKey = false</em> gesetzt ist.</li>
           </ul>
 			
-		<!-- <p><a href="download_de.html#MacOSX">SEB 3.3 für macOS</a> verbessert insbesondere die Sicherheit mittels neuen Integritätschecks. <span class="half_linespace"> --> Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
-		<!-- 
-        <p><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank">SEB 3.3 für iOS</a> bietet Unterstützung für iOS 17 und löst insbesondere ein Sicherheitsproblem durch eine standardmässig aktive Einstellungsoption zum Blockieren von Uploads und dem Datei-/Fotoauswahldialog für die Taste &quot;Datei auswählen&quot; im modernen WebView. <span class="half_linespace">Siehe <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
-        <p><strong>Hinweis: Aufgrund eines Problems in iOS 17 kann SEB für iOS auf einigen Geräten abstürzen</strong>, wenn ein Texteingabefeld angezeigt oder aktiviert wird (und den Eingabefokus erhält). Dieses Problem sollte in der finalen Version von iOS 17.1 behoben sein. Leider ist derzeit kein Workaround bekannt. Siehe auch die Diskussion in <a href="https://github.com/SafeExamBrowser/seb-mac/issues/321#issuecomment-1750259186" target="_blank">diesem GitHub-Issue</a>.</p>
-        <p>Bei Verwendung des optionalen SEB Servers ermöglicht die App Signature Key-Funktionalität eine automatisierte Prüfung der Anwendungsintegrität, ähnlich wie bei der manuellen Verwendung des Browser Exam Key. Darüber hinaus kann der neue servergesteuerte Browser-Prüfungsschlüssel für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden. </p>			
-			 -->
+		<p><span class="half_linespace"> --> Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+
 		<h5 id="sebh5">6. Dezember 2023</h5>
 	    <p><strong><a href="download_de.html#Windows">Safe Exam Browser 3.6.0 für Windows veröffentlicht</a></strong>: Dieses Funktionsupdate fügt die Signaturüberprüfung für Anwendungen von Drittanbietern hinzu, bietet die Möglichkeit zur Versionsbeschränkung per Konfigurationsdatei und bringt eine isolierte Zwischenablage sowie wichtige Fehlerkorrekturen und Verbesserungen. Bitte lesen Sie die <a href="windows/win_release_notes_de.html">Release Notes</a> für die Liste aller Änderungen.</p>
 

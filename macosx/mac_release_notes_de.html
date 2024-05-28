@@ -226,8 +226,37 @@
         
           <!-- Content -->
 			
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.3</a>:		  </h5>
+		  <p>SEB 3.3.3  enthält  mehrere wichtige Sicherheitskorrekturen.</p>
+          <p>Neu in SEB 3.3.3:</p>
+          <ul id="seblist">
+            <li>Neue Einstellung im Tab Browser hinzugefügt, um die ganze Seite nach einem Verbindungsfehler neu zu laden (anstatt die fehlgeschlagene URL zu laden). Dies ist ein Workaround für einige Probleme mit LMS/Assessment-Systemen, z.B. in Moodle.<br>
+</li>
+            <li>Es wurde behoben, dass die Deaktivierung der Rechtschreibprüfung und Autokorrektur in WKWebView manchmal nicht funktionierte: Sie wurde komplett deaktiviert (kann für macOS/iOS nicht mehr konfiguriert werden).</li>
+            <li>Die Blockierung von WebKit Networking-Prozessen wurde geändert, um SEB nicht zu sperren, wenn ein WebKit-Netzwerkprozess mit erhöhter Benutzerpriorität ausgeführt wird.</li>
+            <li>Behoben: Berechtigungen für den reinen Mikrofonzugriff funktionierten nicht.</li>
+            <li> Behoben: Textersetzungen konnten in SEB verwendet werden.</li>
+            <li> Verhindern, dass der Keyboard Viewer verwendet wird, der weiterhin Textersetzungen anzeigt.<br>
+            </li>
+            <li>Jetzt wird erkannt und die Ausführung verweigert, wenn benutzerdefinierte Cocoa-Text-System-Tastenbindungen gesetzt sind.<br>
+            </li>
+            <li>Behoben: Chrome-Videokonferenzen wurden nicht mehr gestoppt, wenn aktuelle Chrome-Versionen verwendet wurden.<br>
+            </li>
+            <li>Behoben: Es wird nun die korrekte Start-URL der aktuellen Session verwendet (lokale/SEB-Server-Prüfung).<br>
+            </li>
+            <li>Behoben: Einstellungen-Menü und Cmd-S waren in einigen Fällen während der Prüfung verfügbar.<br>
+            </li>
+            <li>Im Sperrbildschirm für gesperrte Prüfungen wird nun klargestellt, dass das Beenden-Passwort der aktuellen Session eingegeben werden muss, um SEB zu entsperren.<br>
+            </li>
+            <li>Ausgabe von alten SEB-Versionen im User-Agent. Erforderlich, um gefährdete SEB-Versionen durch 3.3.3 zu ersetzen.<br>
+            </li>
+            <li>Ein mögliches Problem wurde behoben, bei dem SEB manchmal kein Fenster öffnete und mit CMD-Q beendet werden musste.<br>
+            </li>
+            <li>Behebung eines Xcode-Build-Fehlers, der dazu führte, dass SEB 3.3.2 nicht auf macOS 10.13 lief.</li>
+          </ul>
+			
 		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.2</a>:		  </h5>
-		  <p>SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
+		  <p>SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen.</p>
           <p>Neu in SEB 3.3.2:</p>
           <ul id="seblist">
             <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
