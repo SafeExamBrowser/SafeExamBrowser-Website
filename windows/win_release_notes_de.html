@@ -224,6 +224,44 @@
         <!-- Content Column -->
         <div class="col-md-9">
 			
+			<h5 id="sebh5"><b>Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.8.0</b></h5>
+			<p>Version 3.8.0 bietet eine produktionsbereite Bildschirmüberwachungs-Funktionalität, eine neue Konfigurationsoption für die Hintergrundfarbe des Sperrbildschirms und eine verbesserte Netzwerkadapter-Implementierung mit neuen Funktionen sowie wichtige Fehlerbehebungen und Verbesserungen.</p>
+			<p class="red">WICHTIG:</p>
+			<ul>
+				<li><span class="red">Ab dieser Version benötigt Safe Exam Browser für Windows eine Mindestversion des Betriebssystemes von Windows 10 Version 1803.</span></li>
+				<li><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+			</ul>
+			<p>Änderungen:</p>
+			<ul>
+				<li>Der gesamte Code für die Videoüberwachung mit Jitsi Meet und Zoom wurde vollständig gelöscht und die Abhängigkeit von WebView2 entfernt.</li>
+				<li>Behebung von False-Positives, die aufgrund der historischen VM-Hardware-Erkennung auftraten.</li>
+				<li>Einführung einer neuen (drahtlosen) Netzwerkadapter-Implementierung und Authentifizierungsfunktionalität.</li>
+				<li>Implementierung eines Index-Suffixes für bereits vorhandene Dateien beim Herunterladen.</li>
+				<li>Es wurde sichergestellt, dass die Browser-Sitzung nach der Neukonfiguration durch eine Browser-Ressource aktiv bleibt.</li>
+				<li>Konfigurationsoption zur Überprüfung der Sitzungsintegrität implementiert.</li>
+				<li>Neuer Konfigurationswert für die Hintergrundfarbe des Sperrbildschirms implementiert.</li>
+				<li>Standardwerte für Down- und Uploads korrigiert.</li>
+				<li>Doppelte Einträge in der Standardliste der verbotenen Anwendungen wurden entfernt.</li>
+				<li>Schutz vor mehrfacher Rekonfiguration implementiert und Rekonfiguration und Sitzungssperre in das neue Koordinatormodul verschoben.</li>
+				<li>Lösung für GHSA-9cr5-q96r-887f implementiert und verschiedene Integritätsaspekte überarbeitet.</li>
+				<li>Es wurde sichergestellt, dass die Überwachung vor der Rekonfiguration beendet wird.</li>
+				<li>Die fehlenden Standardeinstellungen für die Zwischenablage wurden hinzugefügt und sichergestellt, dass der Datenprozessor auch mit Standardeinstellungen ausgeführt wird.</li>
+				<li>Es wurde sichergestellt, dass der Seitenzoom über Strg+Mausrad auch entsprechend dem jeweiligen Konfigurationswert funktioniert.</li>
+				<li>Alte Browser-Engine-Laufzeitreferenzen wurden entfernt.</li>
+			</ul>
+			<p>Die folgenden optionalen Funktionen und Änderungen sind standardmäßig deaktiviert und müssen individuell konfiguriert werden:</p>
+			<ul>
+				<li>Produktionsbereite Bildschirmüberwachungs-Funktionalität einschließlich Metadatenerfassung und Netzwerkredundanz.</li>
+				<li>Generische Unterstützung von Lernmanagementsystemen (LMS) und Webanwendungen für die SEB-Server-Integration.</li>
+				<li>Cookie-Name von Sitzungen für die Benutzerauflösung mit Moodle und SEB Server korrigiert.</li>
+				<li>Verbesserte Auflösung von Benutzersitzungen mit SEB-Server.</li>
+				<li>Fehler behoben, bei dem die Start-URL-Abfrageparameter bei der Verwendung von SEB-Server nicht angewendet wurden.</li>
+			</ul>
+			<p>Bekannte Probleme:</p>
+			<ul>
+				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
+			</ul>
+			
 			<h5 id="sebh5"><b>Release Notes <a href="../download_de.html#Windows">Safe Exam Browser für Windows</a> Version 3.7.1</b></h5>
 			<p>Version 3.7.1 bietet eine wichtige Fehlerbehebung für ein Gleichzeitigkeitsproblem, das zu einem zufälligen Absturz der Client-Anwendungskomponente von SEB führte.</p>
 			<p><span class="red">Ab Version 3.4.0 ist der Browser Exam Key von SEB für Windows plattformspezifisch, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></p>
