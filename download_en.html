@@ -376,61 +376,34 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.3.3 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.4 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 12 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>SEB 3.3 improves accessibility and security and allows to export SEB settings as configuration links or QR codes. SEB 3.3.3 fixes a security and some UI issues when running on iPadOS/iOS 17.</p>
-        <p>When using the optional SEB Server, the App Signature Key functionality allows automated application integrity checks similar to the manual use of the Browser Exam Key. Additionally, the new server-driven Browser Exam Key can be used for improved SEB Server integration with LMS/assessment systems like Moodle. </p>
-        <p><strong>Note: Due to an issue in iOS 17, SEB for iOS can crash on some devices</strong> when media (videos, HTML5 audio etc.) is played. This issue seems to be fixed in iOS 17.3. Other crashes happened when  any text input field was being displayed or activated (taking input focus). This issue was fixed in  iOS 17.1.  Also see the discussion in <a href="https://github.com/SafeExamBrowser/seb-mac/issues/321#issuecomment-1750259186" target="_blank">this GitHub issue</a>.</p>
-        <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
-        <p>New in SEB 3.3.3:</p>
+        <p>SEB 3.4 is fully compatible with iOS 18, allows to use the new optional screen proctoring feature and additional apps in exams on iPadOS 18.</p>
+        <p>When using the optional SEB Server, the App Signature Key functionality allows automated application integrity checks similar to the manual use of the Browser Exam Key. Additionally, the new server-driven Browser Exam Key can be used for improved SEB Server integration with LMS/assessment systems like Moodle. The new screen proctoring feature, if enabled, allows a live  view and recordings for exam proctors of the screens of connected devices.</p>
+        <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work correctly on iOS/iPadOS 18 anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
+        <p>New in SEB 3.4:</p>
         <ul id="seblist">
-          <li>Removed the Autofill Contacts/Passwords context menu item in text fields on iOS 17.<br>
-            </li>
-          <li>Also removed the &quot;Share...&quot; context menu item (which is anyways blocked by the AAC Assessment Mode). Note that the &quot;Translate&quot; context menu item cannot be removed currently (not covered by API, but also blocked by AAC). <br>
-            </li>
-          <li>Fixed wrong browser toolbar height in iPhone landscape mode on iOS 17 and after rotating an iPad with iPadOS 17.<br>
-            </li>
-          <li>Fixed Search text icon had a text field background color on iOS 16/17.<br>
-            </li>
-          <li>Display deprecation warning when classic WebView is used.<br>
-            </li>
-          <li>Added setting in Browser Features pane to disable deprecation warning when classic WebView is used (key: <em>browserWindowWebViewClassicHideDeprecationNote</em>).<br>
-            </li>
-          <li>Now using an alternative method to add the SEB User Agent string in HTTP Headers with classic WebView. This avoids compatibility issues when an assessment system with SEB integration doesn't yet support the modern WebView (doesn't use the SEB Javascript API to query ConfigKey/BrowserExamKey). <br>
-            <strong>This fix nevertheless is no reason to delay implementing support for the modern WebView in SEB integrations. Any iOS update may break support for the classic WebView (UIWebView) finally!</strong><br>
-            </li>
-          <li>Added new setting in Browser Features pane to reload the full page after a connection error (instead of loading the failed URL), key: <em>browserConnectionErrorReload</em>. This is a workaround for some LMS/assessment system issues e.g. in Moodle.<br>
-            </li>
-          <li>Fixed: When using the optional SEB Server, locking the client didn't work.<br>
-            </li>
-          <li>Fixed crash when scaling already scaled dynamic font in lock and About SEB screens.<br>
-            </li>
-          <li>Fixed German localization in in-app-settings.</li>
+          <li>Now running on iOS 18 without having to use special setting.</li>
+          <li> Support for AAC Multi-App Mode starting iPadOS 18. This allows to use additional apps running alongside SEB in exams.</li>
+          <li> You can add/edit which apps should be available in an exam session along with SEB in its in-app settings in the Additional Apps section. </li>
+          <li> You need to enter the Bundle ID in the Identifier field. See <a href="https://forums.ivanti.com/s/article/How-to-find-Bundle-ID-of-any-iOS-App?language=en_US" target="_blank">this page</a> to find out the Bundle ID of any iOS app.<br>
+          </li>
+          <li> Removed support and settings for classic WebView (UIWebView), as it isn't supported anymore in iOS/iPadOS 18 and newer.</li>
+          <li> Updated deprecation warning: &quot;Classic WebView (UIWebView) is no longer supported on iOS/iPadOS! The used SEB assessment solution integration/settings might no longer work and need to be updated to support the modern WebView. Contact the vendor of your assessment solution or your exam provider.&quot;</li>
+          <li> Improvement of user ID resolution resp. handshake completion with the optional SEB-Server:<br>
+          Now generic exam systems are supported with SEB Server.</li>
+          <li>Fixed a security issue with a shortcut.</li>
+          <li> Fixed issue when &quot;Exam Session Finished&quot; was unnecessarily displayed.</li>
+          <li> Fixed: Prompting web microphone access permissions was not working correctly in some cases.</li>
+          <li> Added the new version of the AAC Assessment mode to iOS version. This can optionally be deactivated with new setting Security / Use Modern AAC API.</li>
+          <li> Now injecting ConfigKey/BrowserExamKey into all iFrames when using the modern WebView. You should use the SEB JS API function <span class="codetext">void SafeExamBrowser.security.updateKeys(function callback)</span> to support this.</li>
         </ul>
-        <p>New features in SEB 3.3.2 (see release notes for full list):</p>
-        <ul id="seblist">
-          <li>Added option to share settings &quot;for starting an exam&quot; uncompressed as plain text. This is helpful for importing these configuration files into LMS/exam systems which don't support gzip compressed or encrypted config files (for example Moodle) or for manual editing.</li>
-          <li>Extended error message when the optional feature Zoom proctoring is enabled in settings with <em>&quot;Due to Zoom licensing issues, Zoom live proctoring is only available for SEB Alliance members. Please see https://safeexambrowser.org/alliance.&quot;</em>.</li>
-        </ul>
-		  
-        <p>New features in SEB 3.3:</p>
-        <ul id="seblist">
-          <li>Accessibility improvements: Added dynamic type font scaling, Increase Contrast mode and Bold Textto side menu, Initial Configuration Assistant, About SEB and lock screen views.</li>
-          <li>Improved VoiceOver feedback when opening new screens/views.</li>
-          <li>Now supporting QR codes containing full, compressed SEB configuration, for internal SEB QR code reader and for QR codes scanned with iOS Camera App. It's no longer necessary to store a config file on a server.</li>
-          <li>Now it's possible to generate and share QR codes containing full SEB configurations directly as PNG image files from the in-app settings menu.</li>
-          <li>Added support for config links (URLs) containing full SEB configurations (similar to the new QR codes).</li>
-          <li>New setting for removing default key/values from shared (exported) config files, which decreases size significantly (for example removing default prohibited processes). This is by default used for generated QR code and config link configurations and helpful for MDM configuration for example with Jamf.</li>
-          <li>Now gzip compressing also unencrypted config files. </li>
-          <li>Added separate allow downloads/uploads settings.</li>
-          <li>Added option to block uploads and file/photo selection dialog for &quot;Choose File&quot; button in modern WebView.</li>
-          <li>Now using ConfigKey to identify stored running exam session for lock screen. This should avoid unnecessary lock screens if a new exam is opened, which is using the same start URL as an older locked exam.</li>
-        </ul>
-        <p>Optional features, which need to be individually configured and are disabled by default:</p>
+        <p><strong>Optional features, which need to be individually configured and are disabled by default:</strong></p>
 <ul id="seblist">
+          <li>Added the optional feature Screen Proctoring (which requires to run your own instance of SEB Server and the SEB Screen Proctoring feature).</li>
           <li>App Signature Key functionality, which allows automated application integrity checks similar to the manual use of the Browser Exam Key (no copy-paste of hash string necessary).</li>
           <li>New server-driven Browser Exam Key which can be used for improved SEB Server integration with LMS/assessment systems like Moodle.</li>
 </ul>
@@ -441,8 +414,8 @@
 </ul>
         <p>Main Features:</p>
         <ul id="seblist">
-          <li>The single app kiosk mode used by SEB is built into the iOS operating system and therefore provides a high level of security. </li>
-          <li>Students cannot switch to other apps, access other websites or communicate with other students during an exam. </li>
+          <li>The assessment mode used by SEB is built into the iOS operating system and therefore provides a high level of security. </li>
+          <li>Students cannot switch to other (not permitted) apps, access other websites or communicate with other students during an exam. </li>
           <li>Notifications, FaceTime/voice calls and screen shots are also blocked. </li>
           <li>SEB for iOS works both on unmanaged iOS devices like students' own iPads as well as on iOS devices owned and managed by an institution. </li>
           <li>SEB for iOS is compatible with the  versions for macOS and Windows. You can use the same SEB config links and files to start exams in SEB from Safari or Mail or to configure SEB to display your institution's exam system start/portal page. </li>
