@@ -228,6 +228,28 @@
         
         <!-- Content -->
 			
+    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
+		<ul id="seblist">
+          <li>Now running on iOS 18 without having to use special setting.</li>
+          <li> Support for AAC Multi-App Mode starting iPadOS 18. This allows to use additional apps running alongside SEB in exams.</li>
+          <li> You can add/edit which apps should be available in an exam session along with SEB in its in-app settings in the Additional Apps section. </li>
+          <li> You need to enter the Bundle ID in the Identifier field. See <a href="https://forums.ivanti.com/s/article/How-to-find-Bundle-ID-of-any-iOS-App?language=en_US" target="_blank">this page</a> to find out the Bundle ID of any iOS app.<br>
+          </li>
+          <li> Removed support and settings for classic WebView (UIWebView), as it isn't supported anymore in iOS/iPadOS 18 and newer.</li>
+          <li> Updated deprecation warning: &quot;Classic WebView (UIWebView) is no longer supported on iOS/iPadOS! The used SEB assessment solution integration/settings might no longer work and need to be updated to support the modern WebView. Contact the vendor of your assessment solution or your exam provider.&quot;</li>
+          <li>Fixed a security issue with a shortcut.</li>
+          <li> Fixed issue when &quot;Exam Session Finished&quot; was unnecessarily displayed.</li>
+          <li> Fixed: Prompting web microphone access permissions was not working correctly in some cases.</li>
+          <li> Added the new version of the AAC Assessment mode to iOS version. This can optionally be deactivated with new setting Security / Use Modern AAC API.</li>
+          <li> Now injecting ConfigKey/BrowserExamKey into all iFrames when using the modern WebView. You should use the SEB JS API function <span class="codetext">void SafeExamBrowser.security.updateKeys(function callback)</span> to support this.</li>
+        </ul>
+        <p><strong>Optional features, which need to be individually configured and are disabled by default:</strong></p>
+<ul id="seblist">
+          <li>Added the optional feature Screen Proctoring (which requires to run your own instance of SEB Server and the SEB Screen Proctoring feature).</li>
+          <li> Improvement of user ID resolution resp. handshake completion with the optional SEB-Server:<br>
+Now generic exam systems are supported with SEB Server.<br>
+  </li>
+</ul>
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
         <ul id="seblist">
           <li>Removed the Autofill Contacts/Passwords context menu item in text fields on iOS 17.<br>

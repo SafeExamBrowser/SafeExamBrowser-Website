@@ -228,7 +228,28 @@
         
         <!-- Content -->
 			
-    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
+    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
+<ul id="seblist">
+  <li>Läuft jetzt unter iOS 18, ohne dass spezielle Einstellungen verwendet werden müssen.</li>
+  <li>Unterstützung für den AAC Multi-App Modus ab iPadOS 18. Dies ermöglicht es, Drittapplikationen neben SEB in Prüfungen zu verwenden.</li>
+  <li> Welche Apps in einer Prüfungssession zusammen mit SEB verfügbar sein sollen, können Sie in den In-App-Einstellungen im Bereich Zusätzliche Apps hinzufügen/bearbeiten. </li>
+  <li> Sie müssen die Bundle ID in das Feld Identifier eingeben. <a href="https://forums.ivanti.com/s/article/How-to-find-Bundle-ID-of-any-iOS-App?language=en_US" target="_blank">Siehe diese Seite, </a>um die Bundle ID einer beliebigen iOS-App herauszufinden.</li>
+  <li> Unterstützung und Einstellungen für das klassische WebView (UIWebView) wurden entfernt, da es in iOS/iPadOS 18 und neuer nicht mehr unterstützt wird.</li>
+  <li> Aktualisierte Warnmeldung: &quot;Das klassische WebView (UIWebView) wird unter iOS/iPadOS nicht mehr unterstützt! Die SEB-Integration/-Einstellungen der verwendeten Prüfungslösung funktionieren möglicherweise nicht mehr und müssen aktualisiert werden, um das moderne WebView zu unterstützen. Wenden Sie sich an den Anbieter Ihrer Prüfungslösung oder an Ihren Prüfungsveranstalter.&quot;</li>
+  <li> Sicherheitsproblem mit einem Shortcut behoben.</li>
+  <li> Problem behoben, bei dem „Prüfungssession beendet“ unnötigerweise angezeigt wurde.</li>
+  <li> Behoben: Die Abfrage der Zugriffsrechte für das Webmikrofon funktionierte in einigen Fällen nicht korrekt.</li>
+  <li> Die neue Version des AAC-Bewertungsmodus wurde zur iOS-Version hinzugefügt. Dieser kann optional mit der neuen Einstellung Sicherheit / Moderne AAC-API verwenden deaktiviert werden.<br>
+     Jetzt wird ConfigKey/BrowserExamKey in alle iFrames injiziert, wenn die moderne WebView verwendet wird. Sie sollten die SEB JS API Funktion <span class="codetext"> void SafeExamBrowser.security.updateKeys(function callback)</span> verwenden, um dies zu unterstützen..</li>
+</ul>
+<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
+</p>
+<ul id="seblist">
+  <li>Die  optionale Funktion Screen Proctoring (erfordert den Betrieb einer eigenen Instanz von SEB Server und der SEB Screen Proctoring Funktion) wurde hinzugefügt.<strong></strong></li>
+  <li> Verbesserung der Benutzer-ID-Auflösung bzw. des Handshake-Abschlusses mit dem optionalen SEB-Server: Es werden nun auch generische Prüfungssysteme mit SEB-Server unterstützt.<br>
+  </li>
+</ul>
+<h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
     <ul id="seblist">
       <li>Der Kontextmenüeintrag &quot;Automatisch Ausfüllen&quot; für Kontakte/Kennwörter in Textfeldern unter iOS 17 wird nun entfernt.<br>
       </li>

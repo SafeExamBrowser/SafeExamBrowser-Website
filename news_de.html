@@ -228,7 +228,31 @@
         <div class="col-md-9">
 
         <!-- Content -->
-		
+			
+		<h5 id="sebh5">1. Oktober 2024</h5>
+        <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.4 für iOS veröffentlicht</strong></a>. </span>Dieses Update ist vollständig kompatibel mit iOS 18 und ermöglicht die Nutzung der neuen optionalen Screen-Proctoring-Funktion und Drittapplikationen in Prüfungen auf iPadOS 18.</p>
+        <p>Bei Verwendung des optionalen SEB Servers ermöglicht die neue Screen-Proctoring-Funktion (Bildschirm-Fernüberwachung), wenn sie aktiviert ist, eine Live-Ansicht und Aufzeichnungen der Bildschirme angeschlossener Geräte für Prüfungsleiter.</p>
+
+<ul id="seblist">
+  <li>Läuft jetzt unter iOS 18, ohne dass spezielle Einstellungen verwendet werden müssen.</li>
+  <li>Unterstützung für den AAC Multi-App Modus ab iPadOS 18. Dies ermöglicht es, Drittapplikationen neben SEB in Prüfungen zu verwenden.</li>
+  <li> Welche Apps in einer Prüfungssession zusammen mit SEB verfügbar sein sollen, können Sie in den In-App-Einstellungen im Bereich Zusätzliche Apps hinzufügen/bearbeiten. </li>
+  <li> Sie müssen die Bundle ID in das Feld Identifier eingeben. <a href="https://forums.ivanti.com/s/article/How-to-find-Bundle-ID-of-any-iOS-App?language=en_US" target="_blank">Siehe diese Seite, </a>um die Bundle ID einer beliebigen iOS-App herauszufinden.</li>
+  <li> Unterstützung und Einstellungen für das klassische WebView (UIWebView) wurden entfernt, da es in iOS/iPadOS 18 und neuer nicht mehr unterstützt wird.</li>
+  <li> Sicherheitsproblem mit einem Shortcut behoben.</li>
+  <li> Behoben: Die Abfrage der Zugriffsrechte für das Webmikrofon funktionierte in einigen Fällen nicht korrekt.</li>
+</ul>
+<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
+</p>
+<ul id="seblist">
+  <li>Die  optionale Funktion Screen Proctoring (erfordert den Betrieb einer eigenen Instanz von SEB Server und der SEB Screen Proctoring Funktion) wurde hinzugefügt.</li>
+  <li>  Es werden nun auch generische Prüfungssysteme mit SEB-Server unterstützt.<br>
+  </li>
+</ul>
+			
+        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+        <p><strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und funktioniert jetzt nicht mehr korrekt mit iOS/iPadOS 18. <strong>Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können.</p>
+					
 		<h5 id="sebh5">26. September 2024</h5>
 	    <p><strong><a href="download_de.html#Windows">Safe Exam Browser 3.8.0 für Windows veröffentlicht</a></strong>: Dieses Funktionsupdate bietet eine produktionsbereite Bildschirmüberwachungs-Funktionalität, eine neue Konfigurationsoption für die Hintergrundfarbe des Sperrbildschirms und eine verbesserte Netzwerkadapter-Implementierung mit neuen Funktionen sowie wichtige Fehlerbehebungen und Verbesserungen. Bitte lesen Sie die <a href="windows/win_release_notes_de.html">Release Notes</a> für die Liste aller Änderungen.</p>
 			
