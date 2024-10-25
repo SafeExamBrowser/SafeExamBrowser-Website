@@ -298,57 +298,29 @@
             
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.4/SafeExamBrowser-3.4.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit und ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. SEB 3.3.3  enthält  mehrere wichtige Sicherheitskorrekturen: Bitte bald aktualisieren!</p>
-          <p>Bei Verwendung des optionalen SEB Servers ermöglicht die App Signature Key-Funktionalität eine automatisierte Prüfung der Anwendungsintegrität, ähnlich wie bei der manuellen Verwendung des Browser Exam Key. Darüber hinaus kann der neue servergesteuerte Browser-Prüfungsschlüssel für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden.</p>
-          <p>Neu in SEB 3.3.3:</p>
+          <p>SEB 3.4 erlaubt die Verwendung von Drittanbieter-Applikationen in Prüfungen, behebt Probleme, die vor allem unter macOS 14 Sonoma auftreten können, und implementiert die <strong>optionale </strong>Screen-Proctoring-Funktion (dazu muss eine eigene Instanz von SEB Server mit dem SEB Screen-Proctoring-Service laufen, <strong>SEB verbindet sich nie mit einem zentralen Proctoring- oder anderen Server, dies muss immer individuell konfiguriert werden, falls man es nutzen möchte!)</strong></p>
+          <p>Neu in SEB 3.4:</p>
           <ul id="seblist">
-            <li>Neue Einstellung im Tab Browser hinzugefügt, um die ganze Seite nach einem Verbindungsfehler neu zu laden (anstatt die fehlgeschlagene URL zu laden). Dies ist ein Workaround für einige Probleme mit LMS/Assessment-Systemen, z.B. in Moodle.<br>
-</li>
-            <li>Es wurde behoben, dass die Deaktivierung der Rechtschreibprüfung und Autokorrektur in WKWebView manchmal nicht funktionierte: Sie wurde komplett deaktiviert (kann für macOS/iOS nicht mehr konfiguriert werden).</li>
-            <li>Die Blockierung von WebKit Networking-Prozessen wurde geändert, um SEB nicht zu sperren, wenn ein WebKit-Netzwerkprozess mit erhöhter Benutzerpriorität ausgeführt wird.</li>
-            <li>Behoben: Berechtigungen für den reinen Mikrofonzugriff funktionierten nicht.</li>
-            <li> Behoben: Textersetzungen konnten in SEB verwendet werden.</li>
-            <li> Verhindern, dass der Keyboard Viewer verwendet wird, der weiterhin Textersetzungen anzeigt.<br>
-              </li>
-            <li>Jetzt wird erkannt und die Ausführung verweigert, wenn benutzerdefinierte Cocoa-Text-System-Tastenbindungen gesetzt sind.<br>
-              </li>
-            <li>Behoben: Chrome-Videokonferenzen wurden nicht mehr gestoppt, wenn aktuelle Chrome-Versionen verwendet wurden.<br>
-              </li>
-            <li>Behoben: Es wird nun die korrekte Start-URL der aktuellen Session verwendet (lokale/SEB-Server-Prüfung).<br>
-              </li>
-            <li>Behoben: Einstellungen-Menü und Cmd-S waren in einigen Fällen während der Prüfung verfügbar.<br>
-              </li>
-            <li>Im Sperrbildschirm für gesperrte Prüfungen wird nun klargestellt, dass das Beenden-Passwort der aktuellen Session eingegeben werden muss, um SEB zu entsperren.<br>
-              </li>
-            <li>Ausgabe von alten SEB-Versionen im User-Agent. Erforderlich, um gefährdete SEB-Versionen durch 3.3.3 zu ersetzen.<br>
-              </li>
-            <li>Ein mögliches Problem wurde behoben, bei dem SEB manchmal kein Fenster öffnete und mit CMD-Q beendet werden musste.<br>
-              </li>
-            <li>Behebung eines Xcode-Build-Fehlers, der dazu führte, dass SEB 3.3.2 nicht auf macOS 10.13 lief.</li>
+            <li>Unterstützung für die Ausführung von Drittanbieterprogrammen im macOS AAC Multi App Assessment Modus (erfordert macOS 12 oder neuer).<br>
+            </li>
+            <li>Optionales temporäres Upload- und Download-Verzeichnis, um den freien Zugriff auf das gesamte Dateisystem zu verhindern, wenn zusätzliche Apps verwendet werden.<br>
+            </li>
+            <li>Ein mögliches Problem wurde behoben, bei dem SEB manchmal kein Fenster öffnete und mit cmd-Q beendet werden musste. Dies scheint häufiger/nur unter macOS 14 Sonoma zu passieren.<br>
+            </li>
+            <li>Die Abfrage von Berechtigungen für Webanwendungen zum Zugriff auf Mikrofon und Kamera wurde behoben.<br>
+            </li>
+            <li>Problem mit der Blockierung von Bildschirmfotos unter macOS 14 behoben.<br>
+            </li>
+            <li>Injizieren von ConfigKey und BrowserExamKey in alle iFrames, was jedoch nur beim Laden der Seite korrekt funktioniert, wenn die Funktion SafeExamBrowser.security.updateKeys(function callback) verwendet wird (in der Callback-Funktion können Sie die korrekten CK/BEK-Schlüssel für den Frame lesen).<br>
+            </li>
+            <li>Beendete Nicht-UI-Prozesse werden nicht mehr neu gestartet.          </li>
           </ul>
-          <p>Neu in SEB 3.3:</p>
-          <ul id="seblist">
-            <li>Verbesserungen für Barrierefreiheit: Das Menü zur Auswahl geöffneter Webseiten (auf dem SEB-Symbol im SEB-Dock) kann nun mit VoiceOver über die Tastenkombination VO-Umschalttaste-M geöffnet werden (zusätzlich zum Rechtsklick).</li>
-            <li>Verbesserte Ansagen zur Barrierefreiheit auf verschiedenen UI-Elementen, auch im SEB-Einstellungsmenü.</li>
-            <li>Verbessertes VoiceOver-Feedback beim Öffnen von Sperrbildschirmen.</li>
-            <li>Unterstützung von Konfigurationslinks (URLs) und QR-Codes, die eine vollständige, komprimierte SEB-Konfiguration enthalten. Damit ist es nicht mehr notwendig, eine Konfigurationsdatei auf einem Server zu speichern.</li>
-            <li>Jetzt ist es möglich, QR-Codes mit vollständigen SEB-Konfigurationen direkt als PNG-Bilddateien aus dem In-App-Einstellungsmenü zu erzeugen und zu teilen. Diese können derzeit direkt mit der iOS-Version oder mit Tools von Drittanbietern auf Mac/Windows verwendet werden.</li>
-            <li>Option zum Exportieren von SEB-Einstellungen als unverschlüsselte und wahlweise reduzierte plist-Datei für die MDM Managed Configuration-Funktion (derzeit für iOS verfügbar) wurde hinzugefügt.</li>
-            <li>Neue Einstellung zum Entfernen von Standardschlüsseln/-werten aus gemeinsam genutzten (exportierten) Konfigurationsdateien, was die Grösse erheblich verringert (z.B. Entfernen von standardmässig verbotenen Prozessen). Dies wird standardmässig für generierte QR-Code- und Config-Link-Konfigurationen verwendet und ist hilfreich für die MDM-Konfiguration, zum Beispiel mit Jamf.</li>
-            <li>Jetzt werden auch unverschlüsselte Konfigurationsdateien gzip-komprimiert. Nur MDM-Konfigurationsdateien werden unkomprimiert gespeichert.</li>
-            <li>Separate Einstellungen für das Erlauben von Downloads/Uploads hinzugefügt.</li>
-            <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
-            <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.<br>
-            </li></ul>
           <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
           <ul id="seblist">
-            <li>App Signature Key-Funktionalität, die eine automatisierte Prüfung der Anwendungsintegrität ermöglicht, ähnlich wie bei der manuellen Verwendung des Browser Exam Key (kein Kopieren und Einfügen von Hash-Strings erforderlich).</li>
-            <li>Neuer servergesteuerter Browser Exam Key, der für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden kann. </li>
-            <li>Beim Beenden der SEB Server-Sitzung wird nun das Fenster &quot;Verbindung wird getrennt&quot; angezeigt, um dem Benutzer eine Rückmeldung bei Verbindungsproblemen zu geben.</li>
-            <li>Hinzufügen von Fehlermeldungen, wenn bestimmte Schritte des Verbindungsprozesses zu einer SEB Server Prüfung fehlschlagen, mit mehr Statusmeldungen im SEB Server Verbindungsfenster.</li>
-            <li>Verbesserte Protokollierung von SEB Server-Verbindungen.</li>
+            <li>Unterstützung für  Screen Proctoring (Bildschirm-Fernüberwachung). Diese bietet eine Live-Ansicht der Bildschirme von angeschlossenen SEB-Clients und Aufzeichnungen mit verschiedenen durchsuchbaren Metadaten. Diese Funktion erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service. SEB verbindet sich niemals mit einem zentralisierten Proctoring- oder anderen Servern, dies muss immer individuell konfiguriert werden, falls Sie es nutzen wollen.<br>
+          </li>
+            <li>Jetzt werden generische Prüfungssysteme mit SEB Server unterstützt: Sie können die URL einer beliebigen webbasierten Prüfung/eines beliebigen Tests/Quiz eingeben und SEB Server verwenden, um die in seinem Web-Backend erstellten SEB-Einstellungen bereitzustellen. Sie können auch die angeschlossenen SEB Clients überwachen, inklusive einer automatischen Überprüfung der Integrität der einzelnen SEB Clients.          </li>
           </ul>
-          <p>Hinweis: <strong>Diese Version enthält nicht die Zoom-Integration </strong>für Prüfungsaufsicht oder Prüfungssupport, die in SEB 3.2rc enthalten war. Es gibt eine nicht-öffentliche SEB Alliance Edition, die die Zoom-Integration weiterhin unterstützt. Wenn Sie daran interessiert sind, diese Zoom-Integration zu nutzen, kontaktieren Sie <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
           <p>Wichtige neue Funktionen seit SEB 3.x:</p>
           <ul id="seblist">
             <li>Unterstützung für die neue <a href="developer/seb-config-key.html"><strong>SEB JavaScript API </strong></a>zur einfacheren Integration in Prüfungslösungen (derzeit für die Abfrage von App-Versionsdetails, ConfigKey und BrowserExamKey Sicherheitselementen). Dies ermöglicht die Verwendung der modernen WebKit-Browser-Engine (WKWebView), die die Leistung, Stabilität und Kompatibilität mit Webanwendungen erhöht. Wenn Sie eine Prüfungssoftware mit einer eingebauten SEB-Integration verwenden, stellen Sie sicher, dass Sie eine Version verwenden, die mit der SEB JavaScript API/modernen WebKit-Browser-Engine kompatibel ist (z. B. <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 oder das <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">aktualisierte Plugin für die manuelle Installation in Moodle 3.9 oder höher</a>).</li>
@@ -407,7 +379,7 @@
   <li> Unterstützung und Einstellungen für das klassische WebView (UIWebView) wurden entfernt, da es in iOS/iPadOS 18 und neuer nicht mehr unterstützt wird.</li>
   <li> Aktualisierte Warnmeldung: &quot;Das klassische WebView (UIWebView) wird unter iOS/iPadOS nicht mehr unterstützt! Die SEB-Integration/-Einstellungen der verwendeten Prüfungslösung funktionieren möglicherweise nicht mehr und müssen aktualisiert werden, um das moderne WebView zu unterstützen. Wenden Sie sich an den Anbieter Ihrer Prüfungslösung oder an Ihren Prüfungsveranstalter.&quot;</li>
   <li> Verbesserung der Benutzer-ID-Auflösung bzw. des Handshake-Abschlusses mit dem optionalen SEB-Server: Es werden nun auch generische Prüfungssysteme mit SEB-Server unterstützt.</li>
-  <li> Sicherheitsproblem mit einem Shortcut behoben.</li>
+  <li> Sicherheitsproblem mit einer Tastenkombination behoben.</li>
   <li> Problem behoben, bei dem „Prüfungssession beendet“ unnötigerweise angezeigt wurde.</li>
   <li> Behoben: Die Abfrage der Zugriffsrechte für das Webmikrofon funktionierte in einigen Fällen nicht korrekt.</li>
   <li> Die neue Version des AAC-Bewertungsmodus wurde zur iOS-Version hinzugefügt. Dieser kann optional mit der neuen Einstellung Sicherheit / Moderne AAC-API verwenden deaktiviert werden.<br>

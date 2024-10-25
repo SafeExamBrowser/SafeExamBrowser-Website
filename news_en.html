@@ -228,7 +228,24 @@
 
           <!-- Content -->
 			
-		  <h5 id="sebh5">October 1, 2024</h5>
+		  <h5 id="sebh5">October 25, 2024</h5>
+		  <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.4 for macOS released</a>
+	      <!-- <a href="download_en.html#iOS">and iOS released</a> --></strong>: This major update allows using third party applications in exams, fixes issues which might manifest mostly on macOS 14 Sonoma and implements the <strong>optional</strong> screen proctoring feature (requiring to run your own instance of SEB Server with SEB screen proctoring service</p>
+		  <ul id="seblist">
+            <li>Support for running third party applications in macOS AAC Multi App Assessment mode (requires macOS 12 or newer).
+</li>
+            <li>Optional temporary upload & download directory to prevent free access to the whole file system when using additional apps.
+            </li>
+            <li>Fixed a possible issue when sometimes SEB didn't open any window and had to be quit with cmd-Q. This seems to happen more often/only when running on macOS 14 Sonoma.              </li>
+            <li>Fixed querying permissions for web applications to access microphone and camera.              </li>
+            <li>Now injecting ConfigKey and BrowserExamKey into all iFrames. </li>
+          </ul>
+		  <p><strong>Optional features, which need to be individually configured and are disabled by default:</strong></p>
+		  <ul id="seblist">
+		    <li>Support for screen proctoring feature. This provides a live view of the screens of connected SEB clients and recordings with various searchable meta data. This feature requires to run your own instance of SEB Server with SEB screen proctoring service. SEB never connects to any centralized proctoring or other servers, this always has to be configured individually in case you want to use it.              </li>
+		    <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client. </li>
+	      </ul>
+		  <h5>October 1, 2024</h5>
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.4 for iOS released</strong></a>. This  update </span> is fully compatible with iOS 18, allows to use the new optional screen proctoring feature and additional apps in exams on iPadOS 18.</p>
           <p>When using the optional SEB Server, the new screen proctoring feature allows a live  view and recordings for exam proctors of the screens of connected devices.</p>
         <ul id="seblist">
@@ -240,9 +257,9 @@
               </li>
             </ul>
           </li>
-          <li> Removed support and settings for classic WebView (UIWebView), as it isn't supported anymore in iOS/iPadOS 18 and newer.</li>
+          <li> Removed support and settings for classic WebView (UIWebView), as it isn't fully supported anymore in iOS/iPadOS 18 and newer.</li>
           <li>Fixed a security issue with a shortcut.</li>
-          <li> Fixed: Prompting web microphone access permissions was not working correctly in some cases.</li>
+          <li>Fixed querying permissions for web applications to access microphone and camera.</li>
         </ul>
         <p><strong>Optional features, which need to be individually configured and are disabled by default:</strong></p>
 <ul id="seblist">

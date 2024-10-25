@@ -300,20 +300,23 @@
           <p>SEB 3.4 allows using third party applications in exams, fixes issues which might manifest mostly on macOS 14 Sonoma and implements the <strong>optional</strong> screen proctoring feature (requiring to run your own instance of SEB Server with SEB screen proctoring service).          </p>
           <p>New in SEB 3.4</p>
           <ul id="seblist">
-            <li>Support for running third party applications in macOS AAC (Assessment Mode) Multi App Mode (requires macOS 12 or newer).</li>
-            <li>Optional temporary upload &amp; download directory.</li>
+            <li>Support for running third party applications in macOS AAC Multi App Assessment mode (requires macOS 12 or newer).</li>
+            <li>Optional temporary upload &amp; download directory to prevent free access to the whole file system when using additional apps.</li>
             <li>Fixed a possible issue when sometimes SEB didn't open any window and had to be quit with cmd-Q. This seems to happen more often/only when running on macOS 14 Sonoma.</li>
-            <li>Fixed querying web microphone access permissions wasn't working.</li>
+            <li>Fixed querying  permissions for web applications to access microphone and camera.</li>
             <li>Fixed issue with legacy screen shot blocking in macOS 14.</li>
-            <li>Now injecting ConfigKey and BrowserExamKey into all iFrames, which nevertheless only works correctly on page load when using the SafeExamBrowser.security.updateKeys(function callback) function (in the callback function you can read the correct CK/BEK keys for the page).</li>
+            <li>Now injecting ConfigKey and BrowserExamKey into all iFrames, which nevertheless only works correctly on page load when using the SafeExamBrowser.security.updateKeys(function callback) function (in the callback function you can read the correct CK/BEK keys for the frame).</li>
             <li>No longer restarting terminated non-UI processes.</li></ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
           <div data-view-component="true">
             <div data-pjax="true" data-test-selector="body-content" data-view-component="true">
               <ul id="seblist">
-                <li>Support for screen proctoring feature. This requires to run your own instance of SEB Server with SEB screen proctoring service. SEB never connects to any centralized proctoring or other servers, this always has to be configured individually in case you want to use it.</li>
-                <li>Now generic exam systems are supported with SEB Server.</li></ul></div>
+                <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client.</li>
+                <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client.</li>
+              </ul>
+            </div>
           </div>
+          <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work well anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (macOS/iOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
           <p>Important new features since SEB 3.x:</p>
           <ul id="seblist">
             <li>Support for the new <a href="developer/seb-config-key.html" rel="nofollow"><strong>SEB JavaScript API</strong></a> for easier integration into exam solutions (currently for querying app version details, ConfigKey and BrowserExamKey security elements). This allows using the <strong>modern WebKit browser engine</strong> (WKWebView), which increases performance, stability and compatibility with web applications. If you're using an assessment software with a built-in SEB integration, make sure to use a version which is compatible with the SEB JavaScript API/modern WebKit browser engine (for example <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 or <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">updated plugin for manual installation in Moodle 3.9 or later</a>).</li>
