@@ -225,9 +225,46 @@
         <!-- Content Column -->
         <div class="col-md-6" role="main">		
 			
+          <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4.1</a>:</h5>
+          <p>SEB 3.4.1 fixes various issues and replaces 3.4 effective immediately.  </p>
+          <p>New in SEB 3.4.1 (Build 15437):</p>
+          <ul id="seblist">
+            <li>Now displaying classic WebView deprecation message on macOS.</li>
+            <li>Added setting for hiding classic WebView deprecation message in Settings / Browser.</li>
+            <li>Added button to show Config QR Code in Settings / Configuration.</li>
+            <li>Fixed false positive for red error screen &quot;System Security Feature Not Enabled&quot;.</li>
+            <li>Fixed Remove default settings sometimes created wrong settings.</li>
+            <li>Fixed: Session startup didn't work correctly if prohibited apps needed to be terminated.</li>
+            <li>Fixed: ConfigKey wasn't updated correctly in Settings window.</li>
+            <li>Fixed: Canceling password entry in Settings window still used filename as window title instead of &quot;Local Client Settings&quot;.</li>
+            <li>Fixed a crash because of a nil-&gt;null value of the configKey setting in UserDefaults.</li>
+            <li>Changed blocking of Chrome videoconferencing/screen sharing (blocked process) to &quot;Google Chrome Helper&quot;.</li>
+            <li>Added new MS Teams version to default preset prohibited processes.</li>
+            <li>Added minimal macOS and iOS options for versions 15/18.</li>
+            <li>Fixed Screen Proctoring capture screen and accessibility permissions dialog was not displayed before starting the session.</li>
+            <li>Only accept screen proctoring JOIN-Instruction if setting enableScreenProctoring = true.</li>
+            <li>Now restricting total screen proctoring metadata JSON length to 4000 chars and adding error log event if it is larger.</li>
+            <li>Fixed a case when the lock screen closed (on SEB client) confirmation wasn't updated in SEB Server.</li>
+          </ul>
+
+          <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4</a>:</h5>
+          <p>SEB 3.4 allows using third party applications in exams, fixes issues which might manifest mostly on macOS 14 Sonoma and implements the <strong>optional</strong> screen proctoring feature.   </p>
+          <p>New in SEB 3.4 (Build 15396):</p>
+          <ul id="seblist">
+            <li>Support for running third party applications in macOS AAC Multi App Assessment mode (requires macOS 12 or newer).</li>
+            <li>Optional temporary upload &amp; download directory to prevent free access to the whole file system when using additional apps.</li>
+            <li>Fixed a possible issue when sometimes SEB didn't open any window and had to be quit with cmd-Q. This seems to happen more often/only when running on macOS 14 Sonoma.</li>
+            <li>Fixed querying  permissions for web applications to access microphone and camera.</li>
+            <li>Fixed issue with legacy screen shot blocking in macOS 14.</li>
+            <li>Now injecting ConfigKey and BrowserExamKey into all iFrames, which nevertheless only works correctly on page load when using the SafeExamBrowser.security.updateKeys(function callback) function (in the callback function you can read the correct CK/BEK keys for the frame).</li>
+            <li>No longer restarting terminated non-UI processes.</li>
+            <li>The new screen proctoring feature, if enabled, allows a live view and recordings of the screens of connected devices for exam proctors. This requires to run your own instance of SEB Server with SEB screen proctoring service.</li>
+            <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client.</li>
+          </ul>
+
           <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.3</a>:</h5>
           <p>SEB 3.3.3 contains important security fixes.  </p>
-          <p>New in SEB 3.3.3:</p>
+          <p>New in SEB 3.3.3 (Build 151C0):</p>
           <ul id="seblist">
             <li>Added new setting in Browser  pane to reload the full page after a connection error (instead of loading the failed URL. This is a workaround for some LMS/assessment system issues e.g. in Moodle.<br>
 </li>

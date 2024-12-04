@@ -297,30 +297,28 @@
             
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.4/SafeExamBrowser-3.4.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
-          <p>SEB 3.4 allows using third party applications in exams, fixes issues which might manifest mostly on macOS 14 Sonoma and implements the <strong>optional</strong> screen proctoring feature (requiring to run your own instance of SEB Server with SEB screen proctoring service).          </p>
+          <p>SEB 3.4 allows using third party applications in exams, fixes issues which might manifest mostly on macOS 14 Sonoma and implements the <strong>optional</strong> screen proctoring feature. SEB 3.4.1 fixes various issues and replaces 3.4 effective immediately.</p>
           <p>New in SEB 3.4.1:</p>
           <ul id="seblist">
             <li>Now displaying classic WebView deprecation message on macOS.</li>
             <li>Added setting for hiding classic WebView deprecation message in Settings / Browser.</li>
             <li>Added button to show Config QR Code in Settings / Configuration.</li>
+            <li>Fixed false positive for red error screen &quot;System Security Feature Not Enabled&quot;.</li>
             <li>Fixed Remove default settings sometimes created wrong settings.</li>
             <li>Fixed: Session startup didn't work correctly if prohibited apps needed to be terminated.</li>
             <li>Fixed: ConfigKey wasn't updated correctly in Settings window.</li>
             <li>Fixed: Canceling password entry in Settings window still used filename as window title instead of &quot;Local Client Settings&quot;.</li>
-            <li>Fixed a crash because of a nil-&gt;null value of the configKey setting in UserDefaults.</li>
             <li>Changed blocking of Chrome videoconferencing/screen sharing (blocked process) to &quot;Google Chrome Helper&quot;.</li>
             <li>Added new MS Teams version to default preset prohibited processes.</li>
             <li>Added minimal macOS and iOS options for versions 15/18.<br>
             </li>
-			</ul>
+		  </ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
-              <ul id="seblist">
-            <li>Fixed Screen Proctoring capture screen and accessibility permissions dialog was not displayed before starting the session.</li>
-            <li>Only accept screen proctoring JOIN-Instruction if setting enableScreenProctoring = true.</li>
-            <li>Now restricting total screen proctoring metadata JSON length to 4000 chars and adding error log event if it is larger.</li>
+              <ul id="seblist">            
+				  <li>Fixed Screen Proctoring capture screen and accessibility permissions dialog was not displayed before starting the session.</li>
             <li>Fixed a case when the lock screen closed (on SEB client) confirmation wasn't updated in SEB Server.<br>
             </li>
-          </ul>          <p>New in SEB 3.4</p>
+          </ul>          <p>New in SEB 3.4:</p>
           <ul id="seblist">
             <li>Support for running third party applications in macOS AAC Multi App Assessment mode (requires macOS 12 or newer).</li>
             <li>Optional temporary upload &amp; download directory to prevent free access to the whole file system when using additional apps.</li>
@@ -328,15 +326,12 @@
             <li>Fixed querying  permissions for web applications to access microphone and camera.</li>
             <li>Fixed issue with legacy screen shot blocking in macOS 14.</li>
             <li>Now injecting ConfigKey and BrowserExamKey into all iFrames, which nevertheless only works correctly on page load when using the SafeExamBrowser.security.updateKeys(function callback) function (in the callback function you can read the correct CK/BEK keys for the frame).</li>
-            <li>No longer restarting terminated non-UI processes.</li>
-			</ul>
+            <li>No longer restarting terminated non-UI processes.</li></ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
               <ul id="seblist">
-                <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client.</li>
+                <li>The new screen proctoring feature, if enabled, allows a live view and recordings of the screens of connected devices for exam proctors. This requires to run your own instance of SEB Server with SEB screen proctoring service.</li>
                 <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client.</li>
               </ul>
-            </div>
-          </div>
           <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work well anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (macOS/iOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
           <p>Important new features since SEB 3.x:</p>
           <ul id="seblist">

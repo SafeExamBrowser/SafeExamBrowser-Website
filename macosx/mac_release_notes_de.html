@@ -226,9 +226,60 @@
         
           <!-- Content -->
 			
-		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.3</a>:		  </h5>
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4.1</a>:		  </h5>
+		  <p>SEB 3.4.1  enthält  mehrere wichtige Sicherheitskorrekturen und ersetzt ab sofort Version 3.4.</p>
+          <p>Neu in SEB 3.4.1 (Build 15437):</p>
+          <ul id="seblist">
+            <li>Anzeige einer Warnung, wenn das veraltete klassische WebView verwendet wird.</li>
+            <li>Es wurde eine Einstellung im Tab Browser hinzugefügt, um die Warnung zu deaktivieren, wenn das veraltete klassische WebView verwendet wird (Einstellungs-Key: <em>browserWindowWebViewClassicHideDeprecationNote</em>).</li>
+            <li> Schaltfläche zum Anzeigen des Konfigurations-QR-Codes in Einstellungen / Konfiguration hinzugefügt.</li>
+            <li> Falsch positive Meldung für roten Fehlerbildschirm „System Security Feature Not Enabled“ behoben.</li>
+            <li> Behoben Standardeinstellungen entfernen erzeugte manchmal falsche Einstellungen.<br>
+              </li>
+            <li> Behoben: Der Session-Start funktionierte nicht korrekt, wenn verbotene Anwendungen beendet werden mussten.<br>
+              </li>
+            <li> Behoben: ConfigKey wurde im Einstellungsfenster nicht korrekt aktualisiert.<br>
+              </li>
+            <li> Behoben: Beim Abbrechen der Passworteingabe im Einstellungsfenster wurde immer noch der Dateiname als Fenstertitel verwendet, anstatt „Lokale Client-Einstellungen“.<br>
+              </li>
+            <li> Behoben: Absturz aufgrund eines nil-&gt;null Wertes der configKey Einstellung in UserDefaults.<br>
+              </li>
+            <li> Die Blockierung von Chrome-Videokonferenzen/Bildschirmfreigabe (verbotener Prozess) wurde in &quot;Google Chrome Helper&quot; geändert.<br>
+              </li>
+            <li> Die neue MS Teams-Version wurde zu den standardmäßig voreingestellten verbotenen Prozessen hinzugefügt.<br>
+              </li>
+            <li> Minimale macOS- und iOS-Optionen für die Versionen 15/18 hinzugefügt.</li>
+            <li> Es wurde behoben, dass der Dialog für die Berechtigungen zur Aufnahme des Bildschirms und für Bedienungshilfen nicht angezeigt wurde, bevor die Screen Proctoring- Session gestartet wurde.</li>
+            <li> Die JOIN-Anweisung für Screen Proctoring wird nur akzeptiert, wenn die Einstellung enableScreenProctoring = true ist.<br>
+            </li>
+            <li> Begrenzung der JSON-Gesamtlänge der Screen Proctoring-Metadaten auf 4000 Zeichen und Hinzufügen eines Fehlerprotokolls, wenn die Länge größer ist.<br>
+            </li>
+            <li> Es wurde ein Fall behoben, in dem die Bestätigung des geschlossenen Sperrbildschirms (auf dem SEB-Client) nicht im SEB-Server aktualisiert wurde.</li>
+          </ul>
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4</a>:		  </h5>
+		  <p>SEB 3.4 erlaubt die Verwendung von Drittanbieter-Applikationen in Prüfungen, behebt Probleme, die vor allem unter macOS 14 Sonoma auftreten können, und implementiert die <strong>optionale </strong>Screen-Proctoring-Funktion.</p>
+          <p>Neu in SEB 3.4 (Build 15396):</p>
+          <ul id="seblist">
+            <li>Unterstützung für die Ausführung von Drittanbieterprogrammen im macOS AAC Multi App Assessment Modus (erfordert macOS 12 oder neuer).<br>
+            </li>
+            <li>Optionales temporäres Upload- und Download-Verzeichnis, um den freien Zugriff auf das gesamte Dateisystem zu verhindern, wenn zusätzliche Apps verwendet werden.<br>
+            </li>
+            <li>Ein mögliches Problem wurde behoben, bei dem SEB manchmal kein Fenster öffnete und mit cmd-Q beendet werden musste. Dies scheint häufiger/nur unter macOS 14 Sonoma zu passieren.<br>
+            </li>
+            <li>Die Abfrage von Berechtigungen für Webanwendungen zum Zugriff auf Mikrofon und Kamera wurde behoben.<br>
+            </li>
+            <li>Problem mit der Blockierung von Bildschirmfotos unter macOS 14 behoben.<br>
+            </li>
+            <li>Injizieren von ConfigKey und BrowserExamKey in alle iFrames, was jedoch nur beim Laden der Seite korrekt funktioniert, wenn die Funktion SafeExamBrowser.security.updateKeys(function callback) verwendet wird (in der Callback-Funktion können Sie die korrekten CK/BEK-Schlüssel für den Frame lesen).<br>
+            </li>
+            <li>Beendete Nicht-UI-Prozesse werden nicht mehr neu gestartet. </li>
+            <li>Unterstützung für  Screen Proctoring (Bildschirm-Fernüberwachung). Diese bietet eine Live-Ansicht der Bildschirme von angeschlossenen SEB-Clients und Aufzeichnungen mit verschiedenen durchsuchbaren Metadaten. Diese Funktion erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service. SEB verbindet sich niemals mit einem zentralisierten Proctoring- oder anderen Servern, dies muss immer individuell konfiguriert werden, falls Sie es nutzen wollen.<br>
+            </li>
+            <li>Jetzt werden generische Prüfungssysteme mit SEB Server unterstützt: Sie können die URL einer beliebigen webbasierten Prüfung/eines beliebigen Tests/Quiz eingeben und SEB Server verwenden, um die in seinem Web-Backend erstellten SEB-Einstellungen bereitzustellen. Sie können auch die angeschlossenen SEB Clients überwachen, inklusive einer automatischen Überprüfung der Integrität der einzelnen SEB Clients. </li>
+          </ul>
+					  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.3</a>:		  </h5>
 		  <p>SEB 3.3.3  enthält  mehrere wichtige Sicherheitskorrekturen.</p>
-          <p>Neu in SEB 3.3.3:</p>
+          <p>Neu in SEB 3.3.3 (Build 151C0):</p>
           <ul id="seblist">
             <li>Neue Einstellung im Tab Browser hinzugefügt, um die ganze Seite nach einem Verbindungsfehler neu zu laden (anstatt die fehlgeschlagene URL zu laden). Dies ist ein Workaround für einige Probleme mit LMS/Assessment-Systemen, z.B. in Moodle.<br>
 </li>
