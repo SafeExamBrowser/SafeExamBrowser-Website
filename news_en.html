@@ -228,7 +228,24 @@
 
           <!-- Content -->
 			
-		  <h5 id="sebh5">November 5, 2024</h5>
+		  <h5 id="sebh5">December 4, 2024</h5>
+		  <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.4.1 for macOS released</a>
+	      <!-- <a href="download_en.html#iOS">and iOS released</a> --></strong>: This update fixes various issues and replaces 3.4 effective immediately.</p>
+		  <ul id="seblist">
+            <li>Now displaying classic WebView deprecation message on macOS.</li>
+            <li>Added button to show Config QR Code in Settings / Configuration: Great for quick testing of configurations with the SEB iOS version.</li>
+            <li>Fixed false positive for red error screen &quot;System Security Feature Not Enabled&quot;.</li>
+            <li>Fixed: Session startup didn't work correctly if prohibited apps needed to be terminated.</li>
+            <li>Fixed: ConfigKey wasn't updated correctly in Settings window.</li>
+            <li>Changed blocking of Chrome videoconferencing/screen sharing (blocked process) to &quot;Google Chrome Helper&quot;.</li>
+          </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+          <ul id="seblist">
+            <li>Fixed Screen Proctoring capture screen and accessibility permissions dialog was not displayed before starting the session.</li>
+          </ul>
+          <p><span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
+			
+		<h5 id="sebh5">November 5, 2024</h5>
 		  <p><strong>Deprecation Notice:</strong> The combined up- and download configuration value <code>allowDownUploads</code> ("Allow downloading and uploading files" under tab "Down-/Uploads" in the configuration tool) will be discontinued with the upcoming release versions 3.9.0 for Windows and 3.5.0 for macOS. Henceforth, down- and uploads can be enabled separately with the new configuration values <code>allowDownloads</code> and <code>allowUploads</code> respectively (which are to be found at the same location in the configuration tool).</p>
 			
 		  <h5 id="sebh5">October 25, 2024</h5>
@@ -248,6 +265,7 @@
 		    <li>Support for screen proctoring feature. This provides a live view of the screens of connected SEB clients and recordings with various searchable meta data. This feature requires to run your own instance of SEB Server with SEB screen proctoring service. SEB never connects to any centralized proctoring or other servers, this always has to be configured individually in case you want to use it.              </li>
 		    <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client. </li>
 	      </ul>
+			
 		  <h5 id="sebh5">October 1, 2024</h5>
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.4 for iOS released</strong></a>. This  update </span> is fully compatible with iOS 18, allows to use the new optional screen proctoring feature and additional apps in exams on iPadOS 18.</p>
           <p>When using the optional SEB Server, the new screen proctoring feature allows a live  view and recordings for exam proctors of the screens of connected devices.</p>
