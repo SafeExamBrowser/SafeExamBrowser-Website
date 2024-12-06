@@ -16,6 +16,8 @@
 	<string>ws:\localhost:8706</string>
 	<key>browserUserAgentWinTouchModeIPad</key>
 	<string>Mozilla/5.0 (iPad; CPU OS 9_0_2 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13A452 Safari/601.1</string>
+	<key>browserWindowWebView</key>
+	<integer>3</integer>
 	<key>downloadDirectoryOSX</key>
 	<string>/var/mobile/Containers/Data/Application/DB6EEB0D-E6BC-4433-869F-7FCB998D9F21/Downloads</string>
 	<key>downloadDirectoryWin</key>
@@ -57,10 +59,8 @@
 	<true/>
 	<key>examKeySalt</key>
 	<data>
-	qrQFcQt4LK0EaapKSY++7DEhhnZRKzVouzOu0eecfNY=
+	lATI4e4FsC4PK6CyYFMR1k3YjBwSQp/ta9LI73rEAos=
 	</data>
-	<key>examSessionReconfigureAllow</key>
-	<true/>
 	<key>examSessionReconfigureConfigURL</key>
 	<string>*</string>
 	<key>hashedAdminPassword</key>
