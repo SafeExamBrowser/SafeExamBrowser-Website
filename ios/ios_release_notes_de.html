@@ -228,6 +228,28 @@
         
         <!-- Content -->
 			
+    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4.1</a>:</h5>
+<ul id="seblist">
+  <li>Schaltfläche zum Anzeigen des Konfigurations-QR-Codes in den App-internen Einstellungen / Konfiguration hinzugefügt.<br>
+  </li>
+  <li> Die neue Version des AAC-Bewertungsmodus wird nicht mehr mit iOS älter als 18.1 verwendet, ausser mit dem AAC Multi-App Modus und iPadOS 17.7.1 oder iPadOS 18.1 und neuer (unter iPadOS 17.7.1 muss aber die Einstellung Sicherheit / Moderne AAC-API aktiviert werden).<br>
+  </li>
+  <li> Die Option „Website-übergreifendes Tracking zulassen“ in der Einstellungs-App wurde für SEB aktiviert.<br>
+  </li>
+  <li> Der Standardwert für die Einstellung browserWindowWebView wurde auf webViewSelectPreferModernInForeignNewTabs (2) zurückgesetzt, da die Verwendung der Option webViewSelectPreferModern die Erkennung von Einstellungen verhindert hätte, die in früheren SEB-Versionen zur Verwendung des klassischen WebView führten. Diese Einstellung (browserWindowWebView) wird ohnehin seit SEB 3.4 für iOS ignoriert.<br>
+  </li>
+  <li> Behoben: Die Meldung über die Entfernung des klassischen WebViews (UIWebView) wurde in einigen Fällen nicht angezeigt.<br>
+    Diese Warnung wird oben auf den Browser-Tabs angezeigt, wenn die Einstellungen das klassische WebView erfordern. Sie können die Anzeige dieser Warnung deaktivieren, aber wenn Sie der Anbieter eines Prüfungssystems sind, das noch nicht mit dem modernen WebView kompatibel ist, müssen Sie Ihre Integration jetzt aktualisieren (verwenden Sie SEB Javascript API anstelle der HTTP-Header-Prüfung für BEK/CK, siehe <a href="developer/seb-config-key.html"> unserer Dokumentation</a>).</li>
+</ul>
+<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
+</p>
+<ul id="seblist">
+  <li> Implementierung einer Bestätigung des Schliessens des Sperrbildschirms an den SEB Server.<br>
+  </li>
+  <li> JOIN-Instruktion für Screen Proctoring wird nur akzeptiert, wenn die SEB-Einstellungen enableScreenProctoring = true enthalten (dies konnte zu Inkonsistenzen bei der Verwendung von Screen Proctoring führen).<br>
+  </li>
+</ul>
+			
     <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
 <ul id="seblist">
   <li>Läuft jetzt unter iOS 18, ohne dass spezielle Einstellungen verwendet werden müssen.</li>
@@ -251,7 +273,7 @@
   <li>Die  optionale Funktion Screen Proctoring (erfordert den Betrieb einer eigenen Instanz von SEB Server und der SEB Screen Proctoring Funktion) wurde hinzugefügt.<strong></strong></li>
   <li> Verbesserung der Benutzer-ID-Auflösung bzw. des Handshake-Abschlusses mit dem optionalen SEB-Server: Es werden nun auch generische Prüfungssysteme mit SEB-Server unterstützt.<br>
   </li>
-</ul>
+</ul>			
 <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
     <ul id="seblist">
       <li>Der Kontextmenüeintrag &quot;Automatisch Ausfüllen&quot; für Kontakte/Kennwörter in Textfeldern unter iOS 17 wird nun entfernt.<br>

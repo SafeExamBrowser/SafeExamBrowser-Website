@@ -228,7 +228,25 @@
         
         <!-- Content -->
 			
-    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
+    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4.1</a>:</h5>
+		<ul id="seblist">
+          <li> Added button to show Config QR Code in in-app Settings / Configuration.</li>
+          <li> No longer using the modern AAC API with iOS older than 18.1, unless using the AAC Multi-App Mode on iPadOS 17.7.1 or iPadOS 18.1 and newer (on iPadOS 17.7.1 the option Settings / Security / Use Modern AAC API must explicitly be enabled).<br>
+          </li>
+          <li> Enabled the Settings app option &quot;Allow Cross-Website Tracking&quot; for SEB.<br>
+          </li>
+          <li> Changed default value for setting browserWindowWebView back to webViewSelectPreferModernInForeignNewTabs (2), as using the option webViewSelectPreferModern would have prevented detecting settings which caused the classic WebView to be used in previous SEB version. This setting (browserWindowWebView) is anyways ignored since SEB 3.4 for iOS.<br>
+          </li>
+          <li> Fixed: Removal message for the classic WebView (UIWebView) was not displayed in some cases.<br>
+            This warning is displayed on top of browser tabs when settings require the classic WebView. You can disable this warning being displayed, but if you are the vendor of an assessment system which isn't yet compatible with the modern WebView, you need to update your integration now (use SEB Javascript API instead of HTTP header check for BEK/CK, <a href="developer/seb-config-key.html">see our documentation</a>).</li>
+        </ul>
+        <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
+        <ul>
+          <li> Implemented lock screen closed confirmation to SEB Server.<br>
+          </li>
+          <li> Only accept JOIN-Instruction for screen proctoring if SEB settings contain enableScreenProctoring = true (this could have caused inconsistencies when using screen proctoring).</li>
+        </ul>
+		<h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
 		<ul id="seblist">
           <li>Now running on iOS 18 without having to use special setting.</li>
           <li> Support for AAC Multi-App Mode starting iPadOS 18. This allows to use additional apps running alongside SEB in exams.
@@ -240,7 +258,7 @@
           </li>
           <li> Removed support and settings for classic WebView (UIWebView), as it isn't supported anymore in iOS/iPadOS 18 and newer.</li>
           <li> Updated deprecation warning: &quot;Classic WebView (UIWebView) is no longer supported on iOS/iPadOS! The used SEB assessment solution integration/settings might no longer work and need to be updated to support the modern WebView. Contact the vendor of your assessment solution or your exam provider.&quot;</li>
-          <li>Fixed a security issue with a shortcut.</li>
+          <li>Fixed a security issue with a keyboard shortcut.</li>
           <li> Fixed issue when &quot;Exam Session Finished&quot; was unnecessarily displayed.</li>
           <li> Fixed: Prompting web microphone access permissions was not working correctly in some cases.</li>
           <li> Added the new version of the AAC Assessment mode to iOS version. This can optionally be deactivated with new setting Security / Use Modern AAC API.</li>

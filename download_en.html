@@ -362,14 +362,30 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.4 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.4.1 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 12 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>SEB 3.4 is fully compatible with iOS 18, allows to use the new optional screen proctoring feature and additional apps in exams on iPadOS 18.</p>
-        <p>When using the optional SEB Server, the App Signature Key functionality allows automated application integrity checks similar to the manual use of the Browser Exam Key. Additionally, the new server-driven Browser Exam Key can be used for improved SEB Server integration with LMS/assessment systems like Moodle. The new screen proctoring feature, if enabled, allows a live  view and recordings for exam proctors of the screens of connected devices.</p>
-        <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work correctly on iOS/iPadOS 18 anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
+        <p>SEB 3.4.1 allows to display the Config QR Code in its in-app settings and fixes issues with the Assessment (lockdown) Mode and browser WebView warning.        </p>
+        <p>New in SEB 3.4.1:</p>
+        <ul>
+          <li> Added button to show Config QR Code in in-app Settings / Configuration.</li>
+          <li> No longer using the modern AAC API with iOS older than 18.1, unless using the AAC Multi-App Mode on iPadOS 17.7.1 or iPadOS 18.1 and newer (on iPadOS 17.7.1 the option Settings / Security / Use Modern AAC API must explicitly be enabled).<br>
+          </li>
+          <li> Enabled the Settings app option &quot;Allow Cross-Website Tracking&quot; for SEB.<br>
+          </li>
+          <li> Changed default value for setting browserWindowWebView back to webViewSelectPreferModernInForeignNewTabs (2), as using the option webViewSelectPreferModern would have prevented detecting settings which caused the classic WebView to be used in previous SEB version. This setting (browserWindowWebView) is anyways ignored since SEB 3.4 for iOS.<br>
+          </li>
+          <li> Fixed: Removal message for the classic WebView (UIWebView) was not displayed in some cases.<br>
+            This warning is displayed on top of browser tabs when settings require the classic WebView. You can disable this warning being displayed, but if you are the vendor of an assessment system which isn't yet compatible with the modern WebView, you need to update your integration now (use SEB Javascript API instead of HTTP header check for BEK/CK, <a href="developer/seb-config-key.html">see our documentation</a>).</li>
+        </ul>
+        <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
+        <ul>
+          <li> Implemented lock screen closed confirmation to SEB Server.<br>
+            </li>
+          <li> Only accept JOIN-Instruction for screen proctoring if SEB settings contain enableScreenProctoring = true (this could have caused inconsistencies when using screen proctoring).</li>
+        </ul>
         <p>New in SEB 3.4:</p>
         <ul id="seblist">
           <li>Now running on iOS 18 without having to use special setting.</li>
@@ -381,18 +397,14 @@
             </ul>
           </li>
           <li> Removed support and settings for classic WebView (UIWebView), as it isn't supported anymore in iOS/iPadOS 18 and newer.</li>
-          <li> Updated deprecation warning: &quot;Classic WebView (UIWebView) is no longer supported on iOS/iPadOS! The used SEB assessment solution integration/settings might no longer work and need to be updated to support the modern WebView. Contact the vendor of your assessment solution or your exam provider.&quot;</li>
-          <li> Improvement of user ID resolution resp. handshake completion with the optional SEB-Server:<br>
-          Now generic exam systems are supported with SEB Server.</li>
-          <li>Fixed a security issue with a shortcut.</li>
-          <li> Fixed issue when &quot;Exam Session Finished&quot; was unnecessarily displayed.</li>
+          <li>Fixed a security issue with a keyboard shortcut.</li>
           <li> Fixed: Prompting web microphone access permissions was not working correctly in some cases.</li>
-          <li> Added the new version of the AAC Assessment mode to iOS version. This can optionally be deactivated with new setting Security / Use Modern AAC API.</li>
           <li> Now injecting ConfigKey/BrowserExamKey into all iFrames when using the modern WebView. You should use the SEB JS API function <span class="codetext">void SafeExamBrowser.security.updateKeys(function callback)</span> to support this.</li>
         </ul>
         <p><strong>Optional features, which need to be individually configured and are disabled by default:</strong></p>
 <ul id="seblist">
           <li>Added the optional feature Screen Proctoring (which requires to run your own instance of SEB Server and the SEB Screen Proctoring feature).</li>
+          <li> Now generic exam systems are supported with SEB Server.</li>
           <li>App Signature Key functionality, which allows automated application integrity checks similar to the manual use of the Browser Exam Key (no copy-paste of hash string necessary).</li>
           <li>New server-driven Browser Exam Key which can be used for improved SEB Server integration with LMS/assessment systems like Moodle.</li>
 </ul>
