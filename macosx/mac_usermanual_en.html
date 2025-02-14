@@ -965,7 +965,7 @@
                 <li>An optional <span class="codetext">'.'</span> (dot) can prefix the host field to disable subdomain matching, see below for details.</li>
                 <li>An optional port can come after the host and always has to start with the character <span class="codetext">':'</span>. It must be a valid port value from 1 to 65535.</li>
                 <li>An optional path can come after the host or after the port and always has to start with the character <span class="codetext">'/'</span>. Parts of the path can be replaced with the wildcard char <span class="codetext">'*'</span>. If a path ends with a <span class="codetext">'/'</span>, that trailing <span class="codetext">'/'</span> is removed (as the filter doesn't distinguish paths with or without trailing <span class="codetext">'/'</span>).</li>
-                <li>URL parameters like a query string can be indicated and always have to start with the character <span class="codetext">'?'</span>. Parts of the query can be replaced with the wildcard char <span class="codetext">'*'</span>.</li>
+                <li>URL parameters like a query string can be indicated and always have to start with the character <span class="codetext">'?'</span>. Parts of the query can be replaced with the wildcard char <span class="codetext">'*'</span>. If "?." is specified as query, then SEB enforces no query.</li>
                 <li>Filtering against a fragment usually doesn't make sense, as the content can be reached by scrolling the loaded page. Allowing specific fragments could force people to use a link to a particular anchor on a page (other links would not work).<br />
                   <br />
                   <span class="quote">      Examples for filter expressions:</span></li>
