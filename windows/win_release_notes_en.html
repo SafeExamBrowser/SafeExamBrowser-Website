@@ -224,7 +224,47 @@
         <!-- Content Column -->
         <div class="col-md-9" role="main">
 			
-		<h4><b>Version 3.8.0</b></h4>
+		<h4><b>Version 3.9.0</b></h4>
+		<p>Safe Exam Browser for Windows version 3.9.0 fixes the startup delay of version 3.8.0, provides major improvements of the optional screen proctoring feature as well as other important bug fixes and improvements.</p>
+		<p class="red">IMPORTANT:</p>
+		<ul>
+			<li><span class="red">Starting with release version 3.8.0, Safe Exam Browser for Windows requires a minimum operating system version of <b>Windows 10 version 1803</b>.</span></li>
+			<li><span class="red">The Browser Exam Key of SEB for Windows is <i>platform-specific</i>, i.e. its value is different for the 32-bit (x86) and 64-bit (x64) build of the same version!</span></li>
+		</ul>
+		<p>Changes:</p>
+		<ul>
+			<li>Fixed bug leading to user interface freezing and caused by bad implementation of the downloads popup for browser windows.</li>
+			<li>Ensured web development tools are always closed when terminating browser.</li>
+			<li>Aligned before download event of browser control to existing wrapper pattern.</li>
+    		<li>Resolved focus issue using custom focus handler and returning the actually correct value.</li>
+    		<li>Added Guilded and other Discord alternative builds to the default list of prohibited applications.</li>
+    		<li>Extended operation model to allow for type constraints of operations and improved repeatable operation sequence implementation.</li>
+			<li>Refactored client controller using the new responsibility model.</li>
+    		<li>Implemented localization for JavaScript unload dialogs and fixed integration of Romanian translation.</li>
+			<li>Implemented custom drag handler to suppress drag&amp;drop behavior.</li>
+			<li>Completely removed combined configuration value for down- and uploads.</li>
+			<li>Changed default configuration value for uploads to disabled.</li>
+			<li>Fixed startup delay.</li>
+			<li>Implemented safeguard against nonexistent custom down- and upload directory.</li>
+			<li>Fixed status and progress information of client splash screen.</li>
+			<li>Updated browser engine to version 131.3.50 (Chromium version 131.0.6778.205).</li>
+		</ul>
+		<p>The following optional features and changes are disabled by default and need to be configured individually:</p>
+		<ul>
+			<li>Fixed issue with base address of HttpClient and paths of APIs for bundled setup of server and service.</li>
+			<li>Implemented basic encryption of the locally cached screen proctoring data.</li>
+			<li>Implemented cache size restriction and data deletion of the locally cached screen proctoring data.</li>
+			<li>Fixed app signature key exchange with server.</li>
+			<li>Fixed issue with older server versions not sending the new screen proctoring encryption secret.</li>
+			<li>Implemented option to cancel remaining work of screen proctoring when terminating.</li>
+			<li>Removed condition to automatically terminate remaining work of screen proctoring in case of network or server issues.</li>
+		</ul>
+		<p>Known issues:</p>
+		<ul>
+			<li>Screen readers NVDA and JAWS are not compatible with kiosk mode Create New Desktop. If their usage is required, please use kiosk mode Disable Explorer Shell where they should work as expected.</li>
+		</ul>
+			
+		<h4 id="sebh5"><b>Version 3.8.0</b></h4>
 		<p>Safe Exam Browser for Windows version 3.8.0 provides production-ready screen proctoring functionality, a new configuration option for the lock screen background color and an improved network adapter implementation with new functionalities as well as important bug fixes and improvements.</p>
 		<p class="red">IMPORTANT:</p>
 		<ul>

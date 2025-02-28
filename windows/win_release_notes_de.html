@@ -224,7 +224,47 @@
         <!-- Content Column -->
         <div class="col-md-9">
 			
-			<h4><b>Version 3.8.0</b></h4>
+			<h4><b>Version 3.9.0</b></h4>
+			<p>Safe Exam Browser für Windows Version 3.9.0 behebt die Startverzögerung der Version 3.8.0, bietet wesentliche Verbesserungen der optionalen Bildschirmüberwachungsfunktion sowie weitere wichtige Fehlerbehebungen und Verbesserungen.</p>
+			<p class="red">WICHTIG:</p>
+			<ul>
+				<li><span class="red">Ab Version 3.8.0 benötigt Safe Exam Browser für Windows eine Mindestversion des Betriebssystemes von <b>Windows 10 Version 1803</b>.</span></li>
+				<li><span class="red">Der Browser Exam Key von SEB für Windows <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+			</ul>
+			<p>Änderungen:</p>
+			<ul>
+				<li>Fehler behoben, der zum Einfrieren der Benutzeroberfläche führte und durch eine schlechte Implementierung des Download-Popups für Browserfenster verursacht wurde.</li>
+    			<li>Sichergestellt, dass Web-Entwicklungswerkzeuge immer geschlossen werden, wenn der Browser beendet wird.</li>
+    			<li>Anpassung des „Before Download“-Ereignisses des Browser-Steuerelements an das bestehende Wrapper-Muster.</li>
+    			<li>Das Problem mit dem Fokus wurde behoben, indem ein benutzerdefinierter Fokus-Handler verwendet wurde, der den tatsächlich korrekten Wert zurückgibt.</li>
+    			<li>Guilded und andere alternative Discord-Builds wurden in die Standardliste der verbotenen Anwendungen aufgenommen.</li>
+    			<li>Erweitertes Operationsmodell, um Typbeschränkungen von Operationen zu ermöglichen und verbesserte Implementierung von wiederholbaren Operationssequenzen.</li>
+				<li>Überarbeitung des Client-Controllers unter Verwendung des neuen Verantwortungsmodells.</li>
+    			<li>Implementierung der Lokalisierung für JavaScript-Entlade-Dialoge und verbesserte Integration der rumänischen Übersetzung.</li>
+    			<li>Implementierung eines benutzerdefinierten Drag-Handlers zur Unterdrückung des Drag&amp;Drop-Verhaltens.</li>
+				<li>Der kombinierte Konfigurationswert für Down- und Uploads wurde vollständig entfernt.</li>
+				<li>Der Standard-Konfigurationswert für Uploads wurde auf deaktiviert geändert.</li>
+				<li>Startverzögerung behoben.</li>
+    			<li>Schutz gegen ein nicht existierendes benutzerdefinierte Down- und Upload-Verzeichnis implementiert.</li>
+				<li>Status- und Fortschrittsinformationen des Client-Splashscreens korrigiert.</li>
+				<li>Browser-Engine auf Version 131.3.50 (Chromium Version 131.0.6778.205) aktualisiert.</li>
+			</ul>
+			<p>Die folgenden optionalen Funktionen und Änderungen sind standardmäßig deaktiviert und müssen individuell konfiguriert werden:</p>
+			<ul>
+				<li>Problem mit der Basisadresse des HttpClient und den Pfaden der APIs für die gebündelte Einrichtung von Server und Service behoben.</li>
+    			<li>Grundlegende Verschlüsselung der lokal zwischengespeicherten Screen-Proctoring-Daten implementiert.</li>
+    			<li>Cache-Größenbeschränkung und Datenlöschung der lokal gecachten Screen-Proctoring-Daten implementiert.</li>
+				<li>Der Schlüsselaustausch des App-Signature-Keys mit dem Server wurde korrigiert.</li>
+    			<li>Das Problem, dass ältere Serverversionen das neue Verschlüsselungsgeheimnis für Screen Proctoring nicht senden, wurde behoben.</li>
+    			<li>Es wurde die Option implementiert, die verbleibende Arbeit des Screen Proctorings beim Beenden abbrechen zu können.</li>
+    			<li>Der Mechanismus, die verbleibende Arbeit des Screen Proctorings bei Netzwerk- oder Serverproblemen automatisch zu beenden, wurde entfernt.</li>
+			</ul>
+			<p>Bekannte Probleme:</p>
+			<ul>
+				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
+			</ul>
+			
+			<h4 id="sebh5"><b>Version 3.8.0</b></h4>
 			<p>Safe Exam Browser für Windows Version 3.8.0 bietet eine produktionsbereite Bildschirmüberwachungs-Funktionalität, eine neue Konfigurationsoption für die Hintergrundfarbe des Sperrbildschirms und eine verbesserte Netzwerkadapter-Implementierung mit neuen Funktionen sowie wichtige Fehlerbehebungen und Verbesserungen.</p>
 			<p class="red">WICHTIG:</p>
 			<ul>
