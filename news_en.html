@@ -228,8 +228,34 @@
 
           <!-- Content -->
 			
+          <h5 id="sebh5">March 5, 2025</h5>
+		  <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.5 for macOS released</a>
+	      <!-- <a href="download_en.html#iOS">and iOS released</a> --></strong>: This update supports the URL content filter also in the modern WebView, fixes general issues and in the <strong>optional</strong> Screen Proctoring feature (requiring to run your own instance of SEB Server with SEB Screen Proctoring service).</p>
+		  <ul id="seblist">
+            <li>Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expressions, only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">here</a>. </li>
+            <li>Now blocking AI Writing Tools in macOS Sequoia.</li>
+            <li>Now blocking inline predictive text. </li>
+            <li>Now removes the Passwords Menu Bar Extra (item).<br>
+            </li>
+            <li>Added "Choose Application" button also for prohibited macOS apps (Settings / Applications).<br>
+            </li>
+            <li>No longer accepting Start URL with obviously wrong format in Settings / General (for example with preceding space) and preventing SEB to crash with some wrong Start URLs. Also: If no protocol scheme is entered, https:// is added.<br>
+            </li>
+		  </ul>
+<p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+          <ul id="seblist">
+            <li>The SEB Server feature Raise Hand is now available again if enabled in session settings.<br>
+            </li>
+            <li>Fixed: SEB couldn't be quit because it was trying to transmit a screen shot which already was transmitted and deleted.<br>
+            </li>
+            <li>Improved security when caching screen shots when connection is offline.            </li>
+          </ul>
+          <p><span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
+
+			
 		  <h5 id="sebh5">February 28, 2025</h5>
 		  <p><strong><a href="download_en.html#Windows">Safe Exam Browser 3.9.0 for Windows released</a></strong>: This update fixes the startup delay of version 3.8.0, provides major improvements of the optional screen proctoring feature as well as other important bug fixes and improvements. Please visit the <a href="windows/win_release_notes_en.html">release notes</a> for a list of all changes.</p>
+			
 			
 		  <h5 id="sebh5">January 8, 2025</h5>
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.4.1 for iOS released</strong></a>. This  update </span>allows to display the Config QR Code in its in-app settings and fixes issues with the Assessment (lockdown) Mode and browser WebView warning.        </p>
@@ -246,6 +272,8 @@
             </li>
           </ul>
           <p><span class="half_linespace">See <a href="ios/ios_release_notes_en.html">release notes</a> for all changes</span>.		  </p>
+			
+			
           <h5 id="sebh5">December 4, 2024</h5>
 		  <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.4.1 for macOS released</a>
 	      <!-- <a href="download_en.html#iOS">and iOS released</a> --></strong>: This update fixes various issues and replaces 3.4 effective immediately.</p>
@@ -262,6 +290,7 @@
             <li>Fixed Screen Proctoring capture screen and accessibility permissions dialog was not displayed before starting the session.</li>
           </ul>
           <p><span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
+			
 			
 		<h5 id="sebh5">November 5, 2024</h5>
 		  <p><strong>Deprecation Notice:</strong> The combined up- and download configuration value <code>allowDownUploads</code> ("Allow downloading and uploading files" under tab "Down-/Uploads" in the configuration tool) will be discontinued with the upcoming release versions 3.9.0 for Windows and 3.5.0 for macOS. Henceforth, down- and uploads can be enabled separately with the new configuration values <code>allowDownloads</code> and <code>allowUploads</code> respectively (which are to be found at the same location in the configuration tool).</p>

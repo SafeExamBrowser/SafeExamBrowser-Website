@@ -297,64 +297,36 @@
             
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5/SafeExamBrowser-3.5.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.4 erlaubt die Verwendung von Drittanbieter-Applikationen in Prüfungen, behebt Probleme, die vor allem unter macOS 14 Sonoma auftreten können, und implementiert die <strong>optionale </strong>Screen-Proctoring-Funktion (dazu muss eine eigene Instanz von SEB Server mit dem SEB Screen-Proctoring-Service laufen, <strong>SEB verbindet sich nie mit einem zentralen Proctoring- oder anderen Server, dies muss immer individuell konfiguriert werden, falls man es nutzen möchte!)</strong>. SEB 3.4.1  enthält  mehrere wichtige Sicherheitskorrekturen und ersetzt ab sofort Version 3.4.</p>
-          <p>Neu in SEB 3.4.1:</p>
+          <p>SEB 3.5 unterstützt den URL-Content-(Inhalts-) Filter auch in der modernen Browser-Engine, behebt allgemeine Probleme und in der <strong>optionalen</strong> Screen Proctoring Funktion (Bildschirm-Fernüberwachung, erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service. <strong>SEB verbindet sich nie mit einem zentralen Proctoring- oder anderen Server, dies muss immer individuell konfiguriert werden, falls man es nutzen möchte!)</strong>. </p>
+          <p>Neu in SEB 3.5:</p>
           <ul id="seblist">
-            <li>Anzeige einer Warnung, wenn das veraltete klassische WebView verwendet wird.</li>
-            <li> Schaltfläche zum Anzeigen des Konfigurations-QR-Codes in Einstellungen / Konfiguration hinzugefügt.</li>
-            <li> Falsch positive Meldung für roten Fehlerbildschirm „System Security Feature Not Enabled“ behoben.</li>
-            <li> Behoben: Der Session-Start funktionierte nicht korrekt, wenn verbotene Anwendungen beendet werden mussten.<br>
+            <li>Unterstützung für URL-Inhaltsfilter im modernen WebView (WKWebView) hinzugefügt. Hinweis: Wenn benutzerdefinierte reguläre Ausdrücke als SEB-URL-Filterausdrücke verwendet werden, ist nur die von WKWebView/Safari Content Filters unterstützte Regex-Teilmenge erlaubt, siehe <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">hier.</a><br>
             </li>
-            <li> Behoben: ConfigKey wurde im Einstellungsfenster nicht korrekt aktualisiert.<br>
+            <li> Aktualisierte Auswahlrichtlinie für das moderne WebView (nicht mehr abhängig von der Verwendung von URL-Inhaltsfiltern).</li>
+            <li> AI-Schreibwerkzeuge in macOS Sequoia werden jetzt  blockiert.</li>
+            <li>Blockiert  die Inline-Textvorhersage.</li>
+            <li>Entfernt jetzt das Passwörter-Menüleisten-Element.</li>
+            <li>Schaltfläche &quot;Applikation/Executable auswählen&quot; auch für verbotene macOS-Apps hinzugefügt (Einstellungen / Applikationen).</li>
+            <li>Behoben: Die Eingabe einer URL-Filterregel (Einstellungen / Netzwerk / Filter) im Textfeld musste bestätigt werden (&quot;Eingabe/Return&quot;-Taste) und wurde nicht gespeichert, wenn &quot;Anwenden und Neustart&quot; verwendet wurde. </li>
+            <li>Start-URL mit offensichtlich falschem Format in Einstellungen / Allgemein (z.B. mit vorangestelltem Leerzeichen) wird nicht mehr akzeptiert und verhindert, dass SEB bei einigen falschen Start-URLs abstürzt.<br>
             </li>
-            <li> Die Blockierung von Chrome-Videokonferenzen/Bildschirmfreigabe (verbotener Prozess) wurde in &quot;Google Chrome Helper&quot; geändert.<br>
-            </li>
+            <li> Verbesserte Validierung der Start- und SEB-Server-URL in Einstellungen / Allgemein: Wenn kein Protokollschema eingegeben wird, wird https:// hinzugefügt.<br>
+              </li>
+            <li> Behoben: ConfigKey wurde im Settings-Fenster nach dem Speichern einer Konfigurationsdatei nicht korrekt aktualisiert.</li>
+            <li>Der Standardwert für die minimal unterstützte macOS-Version wurde auf 10.15 geändert. SEB könnte noch mit macOS 10.13 und 10.14 funktionieren, wenn Sie diese Einstellung ändern, aber wir testen nicht mit diesen Versionen und wie Apple empfehlen wir generell, nur die drei neuesten macOS-Versionen zu verwenden.            </li>
+            <li> Erlaubt nun die unabhängige Aktivierung/Deaktivierung von Bildschirm-/ Fensteraufnahme in Einstellungen / Sicherheit.</li>
           </ul>
           <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
           <ul id="seblist">
-            <li> Es wurde behoben, dass der Dialog für die Berechtigungen zur Aufnahme des Bildschirms und für Bedienungshilfen nicht angezeigt wurde, bevor die Screen Proctoring- Session gestartet wurde.</li>          </ul>
-		  <p>Neu in SEB 3.4:</p>
-          <ul id="seblist">
-            <li>Unterstützung für die Ausführung von Drittanbieterprogrammen im macOS AAC Multi App Assessment Modus (erfordert macOS 12 oder neuer).<br>
+            <li>Die SEB Server-Funktion „Hand heben“ ist nun wieder verfügbar, wenn sie in den Session-Einstellungen aktiviert ist.<br>
             </li>
-            <li>Optionales temporäres Upload- und Download-Verzeichnis, um den freien Zugriff auf das gesamte Dateisystem zu verhindern, wenn zusätzliche Apps verwendet werden.<br>
+            <li> Behoben: Abgelaufene Screen Proctoring Token verursachten unnötige Unterbrechungen der Serververbindung.<br>
             </li>
-            <li>Ein mögliches Problem wurde behoben, bei dem SEB manchmal kein Fenster öffnete und mit cmd-Q beendet werden musste. Dies scheint häufiger/nur unter macOS 14 Sonoma zu passieren.<br>
+            <li> Behoben: SEB konnte nicht beendet werden, weil versucht wurde, einen Screenshot zu übertragen, der bereits übertragen und gelöscht worden war.<br>
             </li>
-            <li>Die Abfrage von Berechtigungen für Webanwendungen zum Zugriff auf Mikrofon und Kamera wurde behoben.<br>
-            </li>
-            <li>Problem mit der Blockierung von Bildschirmfotos unter macOS 14 behoben.<br>
-            </li>
-            <li>Injizieren von ConfigKey und BrowserExamKey in alle iFrames, was jedoch nur beim Laden der Seite korrekt funktioniert, wenn die Funktion SafeExamBrowser.security.updateKeys(function callback) verwendet wird (in der Callback-Funktion können Sie die korrekten CK/BEK-Schlüssel für den Frame lesen).<br>
-            </li>
-            <li>Beendete Nicht-UI-Prozesse werden nicht mehr neu gestartet.          </li>
-          </ul>
-          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
-          <ul id="seblist">
-            <li>Unterstützung für  Screen Proctoring (Bildschirm-Fernüberwachung). Diese bietet eine Live-Ansicht der Bildschirme von angeschlossenen SEB-Clients und Aufzeichnungen mit verschiedenen durchsuchbaren Metadaten. Diese Funktion erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service. SEB verbindet sich niemals mit einem zentralisierten Proctoring- oder anderen Servern, dies muss immer individuell konfiguriert werden, falls Sie es nutzen wollen.<br>
-          </li>
-            <li>Jetzt werden generische Prüfungssysteme mit SEB Server unterstützt: Sie können die URL einer beliebigen webbasierten Prüfung/eines beliebigen Tests/Quiz eingeben und SEB Server verwenden, um die in seinem Web-Backend erstellten SEB-Einstellungen bereitzustellen. Sie können auch die angeschlossenen SEB Clients überwachen, inklusive einer automatischen Überprüfung der Integrität der einzelnen SEB Clients.          </li>
-          </ul>
-          <p>Wichtige neue Funktionen seit SEB 3.x:</p>
-          <ul id="seblist">
-            <li>Unterstützung für die neue <a href="developer/seb-config-key.html"><strong>SEB JavaScript API </strong></a>zur einfacheren Integration in Prüfungslösungen (derzeit für die Abfrage von App-Versionsdetails, ConfigKey und BrowserExamKey Sicherheitselementen). Dies ermöglicht die Verwendung der modernen WebKit-Browser-Engine (WKWebView), die die Leistung, Stabilität und Kompatibilität mit Webanwendungen erhöht. Wenn Sie eine Prüfungssoftware mit einer eingebauten SEB-Integration verwenden, stellen Sie sicher, dass Sie eine Version verwenden, die mit der SEB JavaScript API/modernen WebKit-Browser-Engine kompatibel ist (z. B. <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 oder das <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">aktualisierte Plugin für die manuelle Installation in Moodle 3.9 oder höher</a>).</li>
-            <li><strong>Zugriff auf Kamera/Mikrofon </strong>über <strong>WebRTC/getUserMedia() Web API </strong>auf macOS 11.1 Big Sur und neuer. Sie können webbasierte Videokonferenz- und Remote-Proctoring-Lösungen verwenden, sofern die in den <a href="macosx/mac_release_notes_en.html">Versionshinweisen</a> von SEB 3.0 erläuterten Anforderungen erfüllt sind, damit SEB das moderne WebView verwenden kann. </li>
-            <li><strong>Unterstützung für Bildschirm-Teilen und -Aufname </strong>für Webanwendungen über <strong>WebRTC/getDisplayMedia() API</strong>, wenn sie unter macOS 11.1 Big Sur (oder höher), macOS 12 Monterey oder macOS 13 Ventura laufen. Erfordert eine neue Einstellung in <em>Einstellungen / Browser / Bildschirmaufnahme zulassen.</em></li>
-            <li>Unterstützung für den <strong>macOS Bewertungsmodus/Assessment Mode </strong>(AAC-Kioskmodus) unter macOS Catalina 10.15.4 und &gt;=10.15.6 und macOS Monterey 12.1 oder neuer (unter macOS Big Sur 11.0 - Monterey 12.0 mit der <a href="https://safeexambrowser.org/macosx/mac_release_notes_en.html"><strong>DNS-Pre-Pinning-Funktion</strong></a>). Der AAC-Bewertungsmodus ist sicherer, da er alle anderen Programme auf dem Mac blockiert, um auf das Internet/Netzwerk zuzugreifen und den Bildschirm zu erfassen. Sie können ihn unter <em>Einstellungen / Sicherheit / Bewertungsmodus (AAC) verwenden falls verfügbar</em> aktivieren.</li>
+            <li> Verbesserte Sicherheit beim Zwischenspeichern von Screen Shots, wenn die Verbindung offline ist.</li>
           </ul>
         </div>
-<p>Andere Funktionen:</p>
-<ul id="seblist">
-  <li>Unterstützung für verschlüsselte SEB-Konfigurationsdateien (Dateityp <span class="quote">.seb</span>), die es erlauben, SEB pro Prüfung individuell zu konfigurieren. Dieselben <span class="quote">.seb</span> Dateien können  für das Starten von Prüfungen mit SEB 2.x auf Windows-Rechnern,  Macs und iPads/iOS-Geräten benutzt werden. </li>
-  <li>Eingebauter komfortabler Editor für die Plattform-unabhängigen SEB-Konfigurationsdateien, der auch alle zusätzlichen individuellen Einstellungen der Windows-Version konfigurieren kann.</li>
-  <li>Die Bildschirmfoto-Funktion von macOS wird von SEB blockiert.</li>
-  <li>SEB hat ein optionales Dock/Taskleiste eingebaut, in der ein Icon für den SEB-Browser mit Steuerelementen für  seine offenen Browser-Fenster und ein Beenden-Button angezeigt werden.</li>
-  <li> Funktion zum Beenden von SEB, nachdem eine Prüfung abgeben wurde (ohne Eingabe eines Quit-Passworts). Dazu muss ein Quit-Link festgelegt werden und dieser dann auf der nach der Prüfungsabgabe angezeigten Ergebnis-Seite im Learning Management System platziert werden.</li>
-  <li>Der <strong>Browser Exam Key </strong>ermöglicht die Authentifizierung der verwendeten SEB-Version und deren Einstellungen im Prüfungsmodul. Für die Learning Management Systeme <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a> und <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a>  wurden Plug-Ins für diese Funktionalität veröffentlicht. Andere Systeme bieten eingebaute SEB-Unterstützung: <a href="macosx/mac_usermanual_en.html#OpenOlat">OpenOlat</a>, <a href="http://www.inspera.com" target="_blank">Inspera Assessment</a> und weitere.</li>
-  <li> Das User-Interface kann  angepasst werden:  Grösse und Positionierung der Browser-Fenster (Hauptfenster mit der Prüfung und  zusätzlich geöffnete Fenster) kann voreingestellt werden. Das Hauptfenster kann auch bildschirmfüllend dargestellt werden.</li>
-  <li>SEB kann  optional auch mit Menüleiste benutzt werden, damit und mit der ebenfalls optionalen  Toolbar in Browserfenstern sind Funktionen wie Einstellungen öffnen, 'Über SEB', Beenden, Seite neu laden, Schrift vergrössern/verkleinern und vorwärts/rückwärts im Browserverlauf leicht zugänglich).</li>
-  <li> URL-Filter mit Lernmodus, um den Zugriff auf Weblinks und Ressourcen zu begrenzen. Die gespeicherten Konfigurationsdateien beinhalten URL-Filterregeln, die auch in SEB für Windows funktionieren.</li>
-</ul>
 <p>Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für eine  vollständige Liste neuer Funktionen.</p>
       </div>
       <!-- /Download Box -->

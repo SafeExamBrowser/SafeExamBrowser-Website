@@ -225,6 +225,51 @@
         <!-- Content Column -->
         <div class="col-md-6" role="main">		
 			
+          <!-- Content -->
+			
+		  <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.5</a>:</h5>
+          <p>SEB 3.5 supports the URL content filter also in the modern WebView, fixes general issues and in the optional Screen Proctoring feature (requiring to run your own instance of SEB Server with SEB Screen Proctoring service). </p>
+          <p>New in SEB 3.5 (Build 15487):</p>
+          <ul id="seblist">
+            <li>Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expressions, only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">https://webkit.org/blog/3476/content-blockers-first-look/</a> </li>
+            <li>Updated selection policy of modern WebView (no longer dependent on using URL content filters).</li>
+            <li>Renamed web browser engine (WebView) policy 'Prefer Modern' to 'Force Modern' and removed UI references to URL content filters regarding the WebView selection policy.</li>
+            <li>Now blocking AI Writing Tools in macOS Sequoia.</li>
+            <li>Now blocking inline predictive text. </li>
+            <li>Now removes the Passwords Menu Bar Extra (item).<br>
+            </li>
+            <li>Added "Choose Application" button also for prohibited macOS apps (Settings / Applications).<br>
+            </li>
+            <li>Fixed: Entering URL filter rule (Settings / Network / Filter) in text field needed to be confirmed (return/enter key and new URL filter rule wasn't saved when using "Apply and Start SEB".<br>
+            </li>
+            <li>No longer accepting Start URL with obviously wrong format in Settings / General (for example with preceding space) and preventing SEB to crash with some wrong Start URLs.<br>
+            </li>
+            <li>Improved validating Start and SEB Server URL in Settings / General: If no protocol scheme is entered, https:// is added.<br>
+            </li>
+            <li>Fixed: ConfigKey wasn't updated correctly in Settings window after saving a config file.</li>
+            <li>Changed default value for minimum supported macOS version to 10.15. SEB might still work with macOS 10.13 and 10.14 if you change that setting, but we are not testing with these versions and like Apple we generally recommend to use only the three latest macOS versions. </li>
+            <li> Removed some legacy SEB versions from user agent string (only outputting 3.4, 3.4.1 and 3.5).<br>
+            </li>
+            <li> Updated Safari version in hardcoded user agent element strings.<br>
+            </li>
+            <li>Now allowing independent enabling/disabling of screen/window capture in Settings / Security.</li>
+			</ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+              <ul id="seblist">            
+				  <li>The SEB Server feature Raise Hand is now available again if enabled in session settings.</li>
+			    <li>Fixed: Prefix in Moodle login User ID resolution for SEB Server wasn't working.</li>
+				  <li>Screen Proctoring Metadata: Now removing SEB version in focused and list of application's window titles.<br>
+			    </li>
+				  <li> Fixed: Expired Screen Proctoring token caused unnecessary server connection interruption handling.<br>
+			      </li>
+				  <li> Fixed: SEB couldn't be quit because it was trying to transmit a screen shot which already was transmitted and deleted.<br>
+			      </li>
+				  <li> Improved security when caching screen shots when connection is offline.
+				  </li>
+				  <li>Now first closing Screen Proctoring, then SEB Server connection.</li>
+              </ul>
+			
+			
           <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4.1</a>:</h5>
           <p>SEB 3.4.1 fixes various issues and replaces 3.4 effective immediately.  </p>
           <p>New in SEB 3.4.1 (Build 15437):</p>
@@ -247,6 +292,7 @@
             <li>Fixed a case when the lock screen closed (on SEB client) confirmation wasn't updated in SEB Server.</li>
           </ul>
 
+			
           <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4</a>:</h5>
           <p>SEB 3.4 allows using third party applications in exams, fixes issues which might manifest mostly on macOS 14 Sonoma and implements the <strong>optional</strong> screen proctoring feature.   </p>
           <p>New in SEB 3.4 (Build 15396):</p>
@@ -262,6 +308,7 @@
             <li>Now generic exam systems are supported with SEB Server: You can enter the URL of any web based exam/test/quiz and use SEB Server to provide SEB settings created in its web backend. You can also monitor connected SEB clients, including an automated check for the integrity of each SEB client.</li>
           </ul>
 
+			
           <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.3</a>:</h5>
           <p>SEB 3.3.3 contains important security fixes.  </p>
           <p>New in SEB 3.3.3 (Build 151C0):</p>
@@ -283,6 +330,7 @@
             <li>Fixed an Xcode build error which caused SEB 3.3.2 to not run on macOS 10.13.</li>
           </ul>
 
+			
           <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.2</a>:</h5>
           <p>SEB 3.3.2 fixes issues regarding file download, the Settings (formerly known as Preferences) window and allows exporting uncompressed configuration files (for example for directly importing it into Moodle). Also contains several security fixes.  </p>
           <p>New in SEB 3.3.2:</p>

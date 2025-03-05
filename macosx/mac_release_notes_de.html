@@ -209,7 +209,7 @@
         <!-- Sidebar Column -->
         <div class="col-md-3">
           <div class="list-group">
-            <a href="../news_de.html" class="list-group-item active">News</a>
+            <a href="../news_de.html" class="list-group-item">News</a>
             <a href="../about_overview_de.html" class="list-group-item">Über SEB</a>
             <a href="../alliance/members.html" class="list-group-item">Allianz</a>
             <a href="../download_de.html" class="list-group-item">Download</a>
@@ -225,6 +225,51 @@
         <div class="col-md-9">
         
           <!-- Content -->
+			
+		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.5</a>:		  </h5>
+		  <p>SEB 3.5 unterstützt den URL-Content-(Inhalts-) Filter auch in der modernen Browser-Engine, behebt allgemeine Probleme und in der <strong>optionalen</strong> Screen Proctoring Funktion (Bildschirm-Fernüberwachung, erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service).</p>
+          <p>Neu in SEB 3.5 (Build 15487):</p>
+          <ul id="seblist">
+            <li>Unterstützung für URL-Inhaltsfilter im modernen WebView (WKWebView) hinzugefügt. Hinweis: Wenn benutzerdefinierte reguläre Ausdrücke als SEB-URL-Filterausdrücke verwendet werden, ist nur die von WKWebView/Safari Content Filters unterstützte Regex-Teilmenge erlaubt, siehe <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">https://webkit.org/blog/3476/content-blockers-first-look/</a><br>
+            </li>
+            <li> Aktualisierte Auswahlrichtlinie für das moderne WebView (nicht mehr abhängig von der Verwendung von URL-Inhaltsfiltern).</li>
+            <li> Umbenennung der Webbrowser-Engine- (WebView-) Richtlinie 'Moderne bevorzugen' in 'Moderne erzwingen' und Entfernung von UI-Verweisen auf URL-Inhaltsfilter in Bezug auf die WebView-Auswahlrichtlinie.</li>
+            <li> AI-Schreibwerkzeuge in macOS Sequoia werden jetzt  blockiert.</li>
+            <li>Blockiert  die Inline-Textvorhersage.</li>
+            <li>Entfernt jetzt das Passwörter-Menüleisten-Element.</li>
+            <li>Schaltfläche &quot;Applikation/Executable auswählen&quot; auch für verbotene macOS-Apps hinzugefügt (Einstellungen / Applikationen).</li>
+            <li>Behoben: Die Eingabe einer URL-Filterregel (Einstellungen / Netzwerk / Filter) im Textfeld musste bestätigt werden (&quot;Eingabe/Return&quot;-Taste). </li>
+            <li>Behoben: Neue URL-Filterregel wurde nicht gespeichert, wenn &quot;Anwenden und Neustart&quot; verwendet wurde. </li>
+            <li>Start-URL mit offensichtlich falschem Format in Einstellungen / Allgemein (z.B. mit vorangestelltem Leerzeichen) wird nicht mehr akzeptiert und verhindert, dass SEB bei einigen falschen Start-URLs abstürzt.<br>
+            </li>
+            <li> Verbesserte Validierung der Start- und SEB-Server-URL in Einstellungen / Allgemein: Wenn kein Protokollschema eingegeben wird, wird https:// hinzugefügt.<br>
+            </li>
+            <li> Behoben: ConfigKey wurde im Settings-Fenster nach dem Speichern einer Konfigurationsdatei nicht korrekt aktualisiert.</li>
+            <li>Der Standardwert für die minimal unterstützte macOS-Version wurde auf 10.15 geändert. SEB könnte noch mit macOS 10.13 und 10.14 funktionieren, wenn Sie diese Einstellung ändern, aber wir testen nicht mit diesen Versionen und wie Apple empfehlen wir generell, nur die drei neuesten macOS-Versionen zu verwenden. <br>
+            </li>
+            <li> Einige ältere SEB-Versionen wurden aus dem User-Agent-String entfernt (es werden nur noch 3.4, 3.4.1 und 3.5 ausgegeben).<br>
+            </li>
+            <li> Die Safari-Version in hartkodierten User-Agent-Element-Strings wurde aktualisiert.<br>
+            </li>
+            <li> Erlaubt nun die unabhängige Aktivierung/Deaktivierung von Bildschirm-/ Fensteraufnahme in Einstellungen / Sicherheit.</li>
+          </ul>
+          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
+          <ul id="seblist2">
+            <li>Die SEB Server-Funktion „Hand heben“ ist nun wieder verfügbar, wenn sie in den Session-Einstellungen aktiviert ist.<br>
+            </li>
+            <li>Behoben: Das Präfix in der Moodle Login User ID Auflösung für SEB Server funktionierte nicht.<br>
+            </li>
+            <li> Screen Proctoring Metadaten: Jetzt wird die SEB-Version im fokusierten und in der Liste der Fenstertitel der Anwendung entfernt.<br>
+            </li>
+            <li> Behoben: Abgelaufene Screen Proctoring Token verursachten unnötige Unterbrechungen der Serververbindung.<br>
+            </li>
+            <li> Behoben: SEB konnte nicht beendet werden, weil versucht wurde, einen Screenshot zu übertragen, der bereits übertragen und gelöscht worden war.<br>
+            </li>
+            <li> Verbesserte Sicherheit beim Zwischenspeichern von Screen Shots, wenn die Verbindung offline ist.<br>
+            </li>
+            <li> Nun wird zuerst Screen Proctoring geschlossen, dann die SEB Serververbindung.</li>
+          </ul>
+			
 			
 		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4.1</a>:		  </h5>
 		  <p>SEB 3.4.1  enthält  mehrere wichtige Sicherheitskorrekturen und ersetzt ab sofort Version 3.4.</p>
@@ -256,6 +301,8 @@
             </li>
             <li> Es wurde ein Fall behoben, in dem die Bestätigung des geschlossenen Sperrbildschirms (auf dem SEB-Client) nicht im SEB-Server aktualisiert wurde.</li>
           </ul>
+			
+			
 		  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.4</a>:		  </h5>
 		  <p>SEB 3.4 erlaubt die Verwendung von Drittanbieter-Applikationen in Prüfungen, behebt Probleme, die vor allem unter macOS 14 Sonoma auftreten können, und implementiert die <strong>optionale </strong>Screen-Proctoring-Funktion.</p>
           <p>Neu in SEB 3.4 (Build 15396):</p>
@@ -277,7 +324,9 @@
             </li>
             <li>Jetzt werden generische Prüfungssysteme mit SEB Server unterstützt: Sie können die URL einer beliebigen webbasierten Prüfung/eines beliebigen Tests/Quiz eingeben und SEB Server verwenden, um die in seinem Web-Backend erstellten SEB-Einstellungen bereitzustellen. Sie können auch die angeschlossenen SEB Clients überwachen, inklusive einer automatischen Überprüfung der Integrität der einzelnen SEB Clients. </li>
           </ul>
-					  <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.3</a>:		  </h5>
+			
+			
+		 <h5 id="sebh5">Release Notes für <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.3.3</a>:		  </h5>
 		  <p>SEB 3.3.3  enthält  mehrere wichtige Sicherheitskorrekturen.</p>
           <p>Neu in SEB 3.3.3 (Build 151C0):</p>
           <ul id="seblist">

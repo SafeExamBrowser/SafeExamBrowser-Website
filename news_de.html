@@ -229,6 +229,30 @@
 
         <!-- Content -->
 		
+        <h5 id="sebh5">5. März 2025</h5>
+        <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.5 für macOS veröffentlicht</strong></a>: <!-- <strong><a href="download_de.html#iOS">und für iOS</a></strong> veröffentlicht. -->Dieses Update  unterstützt den URL-Content-(Inhalts-) Filter auch in der modernen Browser-Engine, behebt allgemeine Probleme und in der <strong>optionalen</strong> Screen Proctoring Funktion (Bildschirm-Fernüberwachung, erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service). </p>
+        <ul id="seblist">
+          <li>Unterstützung für URL-Inhaltsfilter im modernen WebView (WKWebView) hinzugefügt. Hinweis: Wenn benutzerdefinierte reguläre Ausdrücke als SEB-URL-Filterausdrücke verwendet werden, ist nur die von WKWebView/Safari Content Filters unterstützte Regex-Teilmenge erlaubt, siehe <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">hier.</a><br>
+          </li>
+          <li>AI-Schreibwerkzeuge in macOS Sequoia werden jetzt blockiert.</li>
+          <li>Blockiert die Inline-Textvorhersage.</li>
+          <li>Entfernt jetzt das Passwörter-Menüleisten-Element.</li>
+          <li>Schaltfläche "Applikation/Executable auswählen" auch für verbotene macOS-Apps hinzugefügt (Einstellungen / Applikationen).</li>
+          <li>Start-URL mit offensichtlich falschem Format in Einstellungen / Allgemein (z.B. mit vorangestelltem Leerzeichen) wird nicht mehr akzeptiert und verhindert, dass SEB bei einigen falschen Start-URLs abstürzt. Ausserdem: Wenn kein Protokollschema eingegeben wird, wird https:// hinzugefügt.          </li>
+        </ul>
+        <p><strong>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</strong></p>
+        <ul id="seblist7">
+          <li>Die SEB Server-Funktion &bdquo;Hand heben&ldquo; ist nun wieder verfügbar, wenn sie in den Session-Einstellungen aktiviert ist.<br>
+          </li>
+          <li>Behoben: SEB konnte nicht beendet werden, weil versucht wurde, einen Screenshot zu übertragen, der bereits übertragen und gelöscht worden war.<br>
+          </li>
+          <li>Verbesserte Sicherheit beim Zwischenspeichern von Screen Shots, wenn die Verbindung offline ist.</li>
+        </ul>
+			
+		<p><span class="half_linespace"> Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+		  <h5 id="sebh5">5. November 2024</h5>
+	    <p><strong>Entfernungshinweis:</strong> Der kombinierte Up- und Download-Konfigurationswert <code>allowDownUploads</code> („Allow downloading and uploading files“ unter dem Reiter „Down-/Uploads“ im Konfigurationstool) wird mit den kommenden Versionen 3.9.0 für Windows und 3.5.0 für macOS entfernt. Ab diesen Versionen können Down- und Uploads separat mit den neuen Konfigurationswerten <code>allowDownloads</code> bzw. <code>allowUploads</code> aktiviert werden (die an der gleichen Stelle im Konfigurationstool zu finden sind).</p>
+			
 		<h5 id="sebh5">28. Februar 2025</h5>
 	    <p><strong><a href="download_de.html#Windows">Safe Exam Browser 3.9.0 für Windows veröffentlicht</a></strong>: Dieses Update behebt die Startverzögerung der Version 3.8.0, bietet wesentliche Verbesserungen der optionalen Bildschirmüberwachungsfunktion sowie weitere wichtige Fehlerbehebungen und Verbesserungen. Bitte lesen Sie die <a href="windows/win_release_notes_de.html">Release Notes</a> für die Liste aller Änderungen.</p>
 					
@@ -248,7 +272,9 @@
           <li> Implementierung einer Bestätigung des Schliessens des Sperrbildschirms an den SEB Server.</li>
         </ul>
 			
-        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>			
+        <p><span class="half_linespace">Siehe  <a href="ios/ios_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>	
+			
+			
         <h5 id="sebh5">4. Dezember 2024</h5>
         <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.4.1 für macOS veröffentlicht</strong></a>: <!-- <strong><a href="download_de.html#iOS">und für iOS</a></strong> veröffentlicht. -->Dieses Update  enthält  mehrere wichtige Verbesserungen und ersetzt ab sofort Version 3.4.</p>
         <ul id="seblist">
@@ -270,6 +296,7 @@
 		<p><span class="half_linespace"> Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
 		  <h5 id="sebh5">5. November 2024</h5>
 	    <p><strong>Entfernungshinweis:</strong> Der kombinierte Up- und Download-Konfigurationswert <code>allowDownUploads</code> („Allow downloading and uploading files“ unter dem Reiter „Down-/Uploads“ im Konfigurationstool) wird mit den kommenden Versionen 3.9.0 für Windows und 3.5.0 für macOS entfernt. Ab diesen Versionen können Down- und Uploads separat mit den neuen Konfigurationswerten <code>allowDownloads</code> bzw. <code>allowUploads</code> aktiviert werden (die an der gleichen Stelle im Konfigurationstool zu finden sind).</p>
+			
 			
 		<h5 id="sebh5">25. Oktober 2024</h5>
         <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.4 für macOS veröffentlicht</strong></a>:

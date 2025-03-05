@@ -299,15 +299,15 @@
           <p>SEB 3.5 supports the URL content filter also in the modern WebView, fixes general issues and in the optional Screen Proctoring feature (requiring to run your own instance of SEB Server with SEB Screen Proctoring service). </p>
           <p>New in SEB 3.5:</p>
           <ul id="seblist">
-            <li>Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expressions, only the subset supported by WKWebView/Safari Content Filters is allowed, see https://webkit.org/blog/3476/content-blockers-first-look/ </li>
+            <li>Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expressions, only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">here</a>. </li>
             <li> Updated selection policy of modern WebView (no longer dependent on using URL content filters).</li>
             <li> Now blocking AI Writing Tools in macOS Sequoia.</li>
             <li> Now blocking inline predictive text.            </li>
-            <li> Now terminating Passwords Menu Bar Extra (item).<br>
+            <li> Now removes the Passwords Menu Bar Extra (item).<br>
             </li>
             <li> Added &quot;Choose Application&quot; button also for prohibited macOS apps (Settings / Applications).<br>
             </li>
-            <li> Fixed: Entering URL filter rule (Settings / Network / Filter) in text field needed to be confirmed (return/enter key and new URL filter rule wasn't saved when using &quot;Apply and Start SEB&quot;.<br>
+            <li> Fixed: Entering URL filter rule (Settings / Network / Filter) in text field needed to be confirmed (return/enter key) and  wasn't saved when using &quot;Apply and Restart&quot;.<br>
             </li>
             <li> No longer accepting Start URL with obviously wrong format in Settings / General (for example with preceding space) and preventing SEB to crash with some wrong Start URLs.<br>
             </li>
@@ -321,16 +321,13 @@
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
               <ul id="seblist">            
 				  <li>The SEB Server feature Raise Hand is now available again if enabled in session settings.<br>
-			      </li>
-				  <li> Screen Proctoring Metadata: Now removing SEB version in focused and list of application's window titles.<br>
-			      </li>
+				  </li>
 				  <li> Fixed: Expired Screen Proctoring token caused unnecessary server connection interruption handling.<br>
 			      </li>
 				  <li> Fixed: SEB couldn't be quit because it was trying to transmit a screen shot which already was transmitted and deleted.<br>
 			      </li>
 				  <li> Improved security when caching screen shots when connection is offline.<br>
-			      </li>
-				  <li> Now first closing Screen Proctoring, then SEB Server connection.</li>
+				  </li>
               </ul>
           <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work well anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (macOS/iOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
         </div>
