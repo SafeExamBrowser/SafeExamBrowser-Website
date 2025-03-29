@@ -340,7 +340,7 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.4.1 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.5 für iOS im App Store</span>
           </a> 
         </p>
         
@@ -349,54 +349,62 @@
                 
 <p>SEB 3.4.1 ermöglicht die Anzeige des Config QR Codes in den In-App Einstellungen und behebt Probleme mit dem Assessment (Lockdown) Mode und der Browser WebView Warnung.</p>
 <p>Bei Verwendung des optionalen SEB Servers ermöglicht die App Signature Key-Funktionalität eine automatisierte Prüfung der Anwendungsintegrität, ähnlich wie bei der manuellen Verwendung des Browser Exam Key. Darüber hinaus kann der neue servergesteuerte Browser-Prüfungsschlüssel für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden. Die neue Screen-Proctoring-Funktion (Bildschirm-Fernüberwachung) ermöglicht, wenn sie aktiviert ist, eine Live-Ansicht und Aufzeichnungen der Bildschirme angeschlossener Geräte für Prüfungsleiter.</p>
-        <p>Neu in SEB 3.4.1:</p>
+        <p>Neu in SEB 3.5:</p>
         <ul>
-          <li>Schaltfläche zum Anzeigen des Konfigurations-QR-Codes in den App-internen Einstellungen / Konfiguration hinzugefügt.<br>
-            </li>
-          <li> Die neue Version des AAC-Bewertungsmodus wird nicht mehr mit iOS älter als 18.1 verwendet, ausser mit dem AAC Multi-App Modus und iPadOS 17.7.1 oder iPadOS 18.1 und neuer (unter iPadOS 17.7.1 muss aber die Einstellung Sicherheit / Moderne AAC-API aktiviert werden).<br>
-            </li>
-          <li> Die Option „Website-übergreifendes Tracking zulassen“ in der Einstellungs-App wurde für SEB aktiviert.<br>
-            </li>
-          <li> Der Standardwert für die Einstellung browserWindowWebView wurde auf webViewSelectPreferModernInForeignNewTabs (2) zurückgesetzt, da die Verwendung der Option webViewSelectPreferModern die Erkennung von Einstellungen verhindert hätte, die in früheren SEB-Versionen zur Verwendung des klassischen WebView führten. Diese Einstellung (browserWindowWebView) wird ohnehin seit SEB 3.4 für iOS ignoriert.<br>
-            </li>
-          <li> Behoben: Die Meldung über die Entfernung des klassischen WebViews (UIWebView) wurde in einigen Fällen nicht angezeigt.<br>
-            Diese Warnung wird oben auf den Browser-Tabs angezeigt, wenn die Einstellungen das klassische WebView erfordern. Sie können die Anzeige dieser Warnung deaktivieren, aber wenn Sie der Anbieter eines Prüfungssystems sind, das noch nicht mit dem modernen WebView kompatibel ist, müssen Sie Ihre Integration jetzt aktualisieren (verwenden Sie SEB Javascript API anstelle der HTTP-Header-Prüfung für BEK/CK, siehe <a href="developer/seb-config-key.html">unserer Dokumentation</a>).</li>
+          <li>Es ist jetzt möglich, Konfigurationsdateien in den In-App-Einstellungen (Menü „Weitere Optionen“) zu öffnen, wenn keine sichere Session läuft.<br>
+          </li>
+          <li> Auf dem Startbildschirm wurde eine Schnellaktion zum Bearbeiten von Konfigurationsdateien in den In-App-Einstellungen hinzugefügt (SEB-Symbol berühren und halten).<br>
+          </li>
+          <li> Das Bearbeiten von Konfigurationsdateien funktioniert nun korrekt in einer sicheren Client-Session.<br>
+          </li>
+          <li> Einstellung für die Anzeige der Schnellaktion „Konfigurationsdatei bearbeiten“ auf dem Startbildschirm wurde zu Einstellungen / Konfiguration hinzugefügt.<br>
+            (Key mobileShowEditConfigShortcutItem).<br>
+          </li>
+          <li> Es wurde die Option hinzugefügt, neue Prüfungseinstellungen mit Standardwerten zu erstellen, entweder über das Menü „Weitere Optionen“ in den In-App-Einstellungen oder beim Abbrechen der Dateiauswahl, die über die Schnellaktion zur Bearbeitung der Konfigurationsdatei auf dem Startbildschirm aufgerufen wird.<br>
+          </li>
+          <li> Die Schaltfläche „Verwerfen“ wurde zu den In-App-Einstellungen hinzugefügt, wenn Konfigurationsdateien zur Bearbeitung geöffnet werden oder wenn Prüfungseinstellungen erstellt werden. Wenn Sie auf „Verwerfen“ klicken, werden die Einstellungen geschlossen und SEB mit den Client-Einstellungen neu gestartet.<br>
+          </li>
+          <li> Behoben: „Zusätzliche Apps“ wurde manchmal nicht in den In-App-Einstellungen des Clients angezeigt.<br>
+          </li>
+          <li> In-App-Einstellungen UI zur Eingabe/Bearbeitung von URL-Filterregeln hinzugefügt.<br>
+          </li>
+          <li> Unterstützung für URL-Inhaltsfilter im modernen WebView (WKWebView). Wenn benutzerdefinierte reguläre Ausdrücke als SEB-URL-Filterausdrücke verwendet werden, ist nur die von WKWebView/Safari Content Filters unterstützte Regex-Teilmenge erlaubt, siehe https://webkit.org/blog/3476/content-blockers-first-look/<br>
+          </li>
+          <li> Herunterladen (und 'Öffnen') von konfigurierten Dateitypen, anstatt sie anzuzeigen:<br>
+            Es wurde eine neue Einstellung für Dateitypen zu Einstellungen / Down/Uploads hinzugefügt, die es ermöglicht, Dateitypen anzugeben, die vom Browser heruntergeladen statt angezeigt werden sollen. Sie können auch die zugehörige zusätzliche App für den Dateityp angeben, ein benutzerdefiniertes Protokollschema für diese App festlegen (Einstellungen / Zusätzliche Apps / App / Benutzerdefiniertes Schema) und die Option „App für heruntergeladene Datei öffnen“ verwenden.<br>
+          </li>
+          <li> Behoben: AAC-Multi-App-Modus wurde auf iPadOS &gt; 17.7.1 nicht aktiviert.<br>
+          </li>
+          <li> Startbildschirm-Schnellaktion „Logdatei teilen“ hinzugefügt.<br>
+          </li>
+          <li> Das Versenden von Protokollen ist nun auch mit einer sicheren Client-Session möglich.<br>
+          </li>
+          <li> Behoben: Blockieren der Dateiauswahl für Uploads auf iOS funktioniert nicht in Ans.<br>
+          </li>
+          <li> Geänderte Standardwerte für die Einstellungen allowDownUploads (erlaubt, veraltete Einstellung) und allowUploads, die nun durch allowUploadsiOS (nicht erlaubt) ersetzt werden.<br>
+          </li>
+          <li> Separate allowUploadsiOS-Einstellung hinzugefügt, da die Auswahl von Dateien für den Upload den Zugriff auf die Fotobibliothek und (iCloud-)Dateien unter iOS ermöglicht (im Gegensatz zu macOS, wo Sie den temporären Download-Ordner verwenden können, um den Zugriff auf die gesamte Festplatte zu vermeiden). <br>
+          </li>
+          <li> Jetzt ist es möglich, die Prüfungssitzung vom Erstkonfigurationsassistenten aus zu beenden. Wenn eine Prüfungssession keine oder die Standard-StartURL hat, wird der Erstkonfigurationsassistent angezeigt. Bisher war es nicht einfach möglich, diese Prüfungssession zu beenden, jetzt gibt es eine Schaltfläche „ Session beenden“, die im Erstkonfigurationsassistenten angezeigt wird (wenn man sich in einer Prüfungssession befindet).<br>
+          </li>
+          <li> Einige ältere SEB-Versionen wurden aus dem User-Agent-String entfernt (es werden nur noch 3.4, 3.4.1 und 3.5 ausgegeben).<br>
+          </li>
+          <li> Die Safari-Version in hartkodierten User-Agent-Element-Strings wurde aktualisiert.</li>
+          <li>Der Standardwert für die minimal unterstützte iOS-Version wurde auf 13 geändert. SEB könnte noch mit iOS 12 funktionieren, wenn Sie diese Einstellung ändern, aber wir testen nicht mit dieser Version und wir empfehlen, nur die neueste iOS-Version zu verwenden. </li>
         </ul>
         <p>Optionale Funktionen, die individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:</p>
         <ul>
-          <li> Implementierung einer Bestätigung des Schliessens des Sperrbildschirms an den SEB Server.<br>
-            </li>
-          <li> JOIN-Instruktion für Screen Proctoring wird nur akzeptiert, wenn die SEB-Einstellungen enableScreenProctoring = true enthalten (dies konnte zu Inkonsistenzen bei der Verwendung von Screen Proctoring führen).</li>
+          <li>SEB Server-Funktion „Hand heben“ hinzugefügt.<br>
+          </li>
+          <li> Die Funktion „Hand heben“-Nachricht wurde implementiert (sie wird angezeigt, wenn man lange auf die Dock-Taste/den Seitenmenüpunkt „Hand heben“ drückt oder die Einstellung „raiseHandButtonAlwaysPromptMessage“ verwendet).<br>
+          </li>
+          <li>Behoben: Der Präfix in der Moodle Login User ID Auflösung für SEB Server funktionierte nicht.<br>
+          </li>
+          <li> Behoben: SEB konnte nicht beendet werden, weil versucht wurde, einen Screenshot zu übertragen, der bereits übertragen und gelöscht worden war.<br>
+          </li>
+          <li> Verbesserte Sicherheit beim Zwischenspeichern von Screen Shots, wenn die Verbindung offline ist.<br>
+  </li>
         </ul>
-        <p>Neu in SEB 3.4:</p>
-        <ul id="seblist">
-  <li>Unterstützung für den AAC Multi-App Modus ab iPadOS 18. Dies ermöglicht es, Drittapplikationen neben SEB in Prüfungen zu verwenden.
-    <ul>
-      <li> Welche Apps in einer Prüfungssession zusammen mit SEB verfügbar sein sollen, können Sie in den In-App-Einstellungen im Bereich Zusätzliche Apps hinzufügen/bearbeiten. </li>
-      <li> Sie müssen die Bundle ID in das Feld Identifier eingeben. <a href="https://forums.ivanti.com/s/article/How-to-find-Bundle-ID-of-any-iOS-App?language=en_US" target="_blank">Siehe diese Seite, </a>um die Bundle ID einer beliebigen iOS-App herauszufinden.</li>
-      </ul>
-  </li>
-  <li> Unterstützung und Einstellungen für das klassische WebView (UIWebView) wurden entfernt, da es in iOS/iPadOS 18 und neuer nicht mehr unterstützt wird.</li>
-  <li> Sicherheitsproblem mit einer Tastenkombination behoben.</li>
-  <li> Behoben: Die Abfrage der Zugriffsrechte für das Webmikrofon funktionierte in einigen Fällen nicht korrekt.</li>
-  <li> Die neue Version des AAC-Bewertungsmodus wurde zur iOS-Version hinzugefügt. Dieser kann optional mit der neuen Einstellung Sicherheit / Moderne AAC-API verwenden deaktiviert werden.<br>
-     Jetzt wird ConfigKey/BrowserExamKey in alle iFrames injiziert, wenn die moderne WebView verwendet wird. Sie sollten die SEB JS API Funktion <span class="codetext"> void SafeExamBrowser.security.updateKeys(function callback)</span> verwenden, um dies zu unterstützen..</li>
-</ul>
-<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
-</p>
-<ul id="seblist">
-  <li>Die  optionale Funktion Screen Proctoring (erfordert den Betrieb einer eigenen Instanz von SEB Server und der SEB Screen Proctoring Funktion) wurde hinzugefügt.</li>
-  <li>Es werden nun auch generische Prüfungssysteme mit SEB-Server unterstützt.</li>
-  <li>App Signature Key-Funktionalität, die eine automatisierte Prüfung der Anwendungsintegrität ermöglicht, ähnlich wie bei der manuellen Verwendung des Browser Exam Key (kein Kopieren und Einfügen von Hash-Strings erforderlich).</li>
-  <li>Neuer servergesteuerter Browser Exam Key, der für eine verbesserte SEB Server-Integration mit LMS/Assessment-Systemen wie Moodle verwendet werden kann. </li>
-  <li>Beim Beenden der SEB Server-Sitzung wird nun das Fenster &quot;Verbindung wird getrennt&quot; angezeigt, um dem Benutzer eine Rückmeldung bei Verbindungsproblemen zu geben.</li>
-</ul>
-<ul id="seblist">
-  <li> Unterstützung für den<a href="https://github.com/SafeExamBrowser/seb-server" target="_blank"> SEB Server</a>: Im Web-Benutzerinterface des SEB Servers kann ein Administrator Prüfungs-Metadaten eines Learning Management Systems (LMS) importieren und SEB Server unterstützte Prüfungen erstellen. Die Liste der aktuellen Prüfungen wird dann auf den Prüfungsgeräten, welche mit dieser SEB Server Instanz verbunden sind, im  SEB Client angezeigt. Während der Prüfung können die Prüfungsgeräte im SEB Server Web-Interface überwacht werden, SEB aus der Ferne beendet werden usw. SEB Server unterstützt momentan Open edX, Moodle, OpenOlat (momentan nicht in öffentlicher OO-Version) und Ans.<br>
-  </li>
-  <li> Für die Benutzung von  SEB Server müssen Prüfungsadministratoren ihre eigenen Server-Instanzen aufsetzen (oder externe Anbieter einsetzen) und SEB Clients mit diesen Servern verbinden. <strong>SEB benutzt keine zentrale Server-Instanz und die entsprechenden Funktionen sind standardmässig deaktiviert.</strong><br>
-  </li>
-</ul>
 <p>Wichtigste Funktionen:</p>
 <ul id="seblist">
   <li> SEB für iOS generiert nun den <strong>Browser Exam Key</strong> und den neuen <strong>Config Key</strong> und sendet deren Hash-Werte an kompatible Prüfungssysteme. Diese Prüfungssysteme können damit sicherstellen, dass eine Prüfung nur mit einer zugelassenen  SEB-Version mit korrekten Einstellungen zugänglich ist.</li>
@@ -409,6 +417,10 @@
   <li>SEB für iOS ist kompatibel mit den bestehenden Versionen für macOS und Windows. Dieselben SEB-Konfigurations-Links und -Dateien für das Starten von Prüfungen oder zum Konfigurieren von SEB zur Darstellung der Start/Portalseite des Prüfungssystems einer Institution können verwendet werden. </li>
   <li>In SEB für iOS können Prüfungen mit individuellen Einstellungen auch über QR-Codes gestartet werden.</li>
   <li>SEB für iOS kann mittels Mobile Management System installiert und konfiguriert werden, da die Funktion "MDM Managed Configuration" unterstützt wird.</li>
+  <li> Unterstützung für den<a href="https://github.com/SafeExamBrowser/seb-server" target="_blank"> SEB Server</a>: Im Web-Benutzerinterface des SEB Servers kann ein Administrator Prüfungs-Metadaten eines Learning Management Systems (LMS) importieren und SEB Server unterstützte Prüfungen erstellen. Die Liste der aktuellen Prüfungen wird dann auf den Prüfungsgeräten, welche mit dieser SEB Server Instanz verbunden sind, im  SEB Client angezeigt. Während der Prüfung können die Prüfungsgeräte im SEB Server Web-Interface überwacht werden, SEB aus der Ferne beendet werden usw. SEB Server unterstützt momentan Open edX, Moodle, OpenOlat (momentan nicht in öffentlicher OO-Version) und Ans.</li>
+  <li>Die  optionale Funktion Screen Proctoring wurde hinzugefügt.<br>
+  </li>
+  <li> Für die Benutzung von  SEB Server müssen Prüfungsadministratoren ihre eigenen Server-Instanzen aufsetzen (oder externe Anbieter einsetzen) und SEB Clients mit diesen Servern verbinden. <strong>SEB benutzt keine zentrale Server-Instanz und die entsprechenden Funktionen sind standardmässig deaktiviert.</strong></li>
   <li>SEB für iOS ist auch mit  <a href="http://safeexambrowser.org/ios/ios_tutorial_en.html#UsingWithClassroom">Apple Classroom</a> kompatibel.</li>
 </ul>
 <p>Siehe <a href="ios/ios_release_notes_de.html">Release Notes</a> für eine  vollständige Liste neuer Funktionen.</p>

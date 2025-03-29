@@ -228,6 +228,88 @@
         
         <!-- Content -->
 			
+    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5</a>:</h5>
+		<ul id="seblist">
+          <li> Now it's possible to open configuration files in in-app Settings ('More options' menu) when not running in a secure session.<br>
+          </li>
+          <li> Added Home Screen quick action for editing config files in SEB in-app Settings (touch and hold SEB icon).<br>
+          </li>
+          <li> Editing config files now works correctly with secure client session.<br>
+          </li>
+          <li> Added setting for showing 'Edit Config File' Home Screen quick action to Settings / Configuration.<br>
+            (settings key mobileShowEditConfigShortcutItem).<br>
+          </li>
+          <li> Added option to create new exam settings with default values either from the &quot;More options&quot; menu in in-app settings or when canceling file picker invoked from Home Screen quick action for editing config file.<br>
+          </li>
+          <li> Added Discard button to in-app settings when opening config files for editing or when creating exam settings. Hitting Discard will close settings and restart SEB into client settings.<br>
+          </li>
+          <li> Replaced &quot;+&quot; button icon in the root settings controller with &quot;more&quot; symbol (when running on iOS 13 or later).<br>
+          </li>
+          <li> Fixed &quot;Additional Apps&quot; was sometimes not displayed in client In-App-Settings.<br>
+          </li>
+          <li> Added in-app settings UI for entering/editing URL filter rules.<br>
+          </li>
+          <li> Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expression, only the subset supported by WKWebView/Safari Content Filters is allowed, see https://webkit.org/blog/3476/content-blockers-first-look/ ).<br>
+          </li>
+          <li> Download (and 'open') configured file types instead of displaying them:<br>
+            Added new File Types setting to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type, specify a custom protocol scheme for that app (Settings / Additional Apps / App / Custom Scheme) and use the option 'Open App for Downloaded File'.<br>
+          </li>
+          <li> Download configured file types instead of displaying them: The new setting list downloadFileTypes contains file types with parameters extension (file extension), os, associatedAppId (Bundle ID of app which will be opened after download is finished).<br>
+          </li>
+          <li> Added parameter Custom Protocol Scheme for additional apps, to be able to open them after download of a configured file type is finished (using its setting associatedAppId to identify the according additional app). Note that there is no easy known way how to find out custom protocol schemes for particular apps (an internet search might help).<br>
+          </li>
+          <li> Fixed: AAC Multi-App mode not enabled on iPadOS &gt; 17.7.1.<br>
+          </li>
+          <li> Improved logging of which AAC API is being used when activating AAC.<br>
+          </li>
+          <li> Added logging of which additional apps are added to AEAssessmentConfiguration of modern AAC API.<br>
+          </li>
+          <li> Added Home Screen quick action &quot;Share Log File&quot;.<br>
+          </li>
+          <li> Sending logs is now also possible with secure client session.<br>
+          </li>
+          <li> Fixed: Blocking file chooser for uploads on iOS not working in Ans.<br>
+          </li>
+          <li> Changed default values for settings allowDownUploads (enabled/true, deprecated setting) and allowUploads, which is now replaced with allowUploadsiOS (disabled/false).<br>
+          </li>
+          <li> Added separate allowUploadsiOS setting, as choosing files for upload allows to access the Photos library and (iCloud) Files on iOS (compared to macOS, where you can use the temporary download folder to avoid full disk access). <br>
+          </li>
+          <li> Now allowing to quit exam session from Initial Configuration Assistant. If an exam session has no or the default startURL, the ICA is displayed. Until now it wasn't easily possible to quit this exam session, now there is a &quot;Quit Session&quot; button displayed in the ICA (when in an exam session).<br>
+          </li>
+          <li> Removed some legacy SEB versions from user agent string (only outputting 3.4, 3.4.1 and 3.5).<br>
+          </li>
+          <li> Updated Safari version in hardcoded user agent element strings.<br>
+          </li>
+          <li> Fixed unnecessary error log event regarding lock screen.</li>
+          <li>Changed default value for minimum supported iOS version to 13. SEB will still work with iOS 12 if you change that setting, but we are not testing with this version and we generally recommend to use the latest iOS version. <br>
+          </li>
+        </ul>
+        <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
+        <ul>
+          <li> Implemented the SEB Server invoked feature Raise Hand.<br>
+</li>
+          <li> Implemented Raise Hand message feature (displayed with long press on raise hand Dock button/side menu item or with setting raiseHandButtonAlwaysPromptMessage).<br>
+            </li>
+          <li> No longer showing transmitting state &quot;All cached screen shots transmitted&quot; in side menu screen proctoring item after server token was renewed.<br>
+            </li>
+          <li> Fixed: UI not correctly initialized when starting SEB Server exam.<br>
+            </li>
+          <li> Fixed: Prefix in Moodle login User ID resolution for SEB Server wasn't working.<br>
+            </li>
+          <li> Fixed: Crash after ending a screen proctoring session without internet connection.<br>
+            </li>
+          <li> Fixed: Expired Screen Proctoring token caused unnecessary server connection interruption handling.<br>
+            </li>
+          <li> Fixed: SEB couldn't be quit because it was trying to transmit a screen shot which already was transmitted and deleted.<br>
+            </li>
+          <li> Improved security for caching screen shots when connection is offline.<br>
+            </li>
+          <li> Now first closing Screen Proctoring, then SEB Server connection.<br>
+            </li>
+          <li> Restart instead of quitting SEB Server exam session with Quit Link didn't work: Not allowing to restart SEB Server exam sessions anymore.</li>
+        </ul>
+			
+			
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4.1</a>:</h5>
 		<ul id="seblist">
           <li> Added button to show Config QR Code in in-app Settings / Configuration.</li>
@@ -246,6 +328,8 @@
           </li>
           <li> Only accept JOIN-Instruction for screen proctoring if SEB settings contain enableScreenProctoring = true (this could have caused inconsistencies when using screen proctoring).</li>
         </ul>
+			
+			
 		<h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
 		<ul id="seblist">
           <li>Now running on iOS 18 without having to use special setting.</li>

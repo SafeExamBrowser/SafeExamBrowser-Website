@@ -228,6 +228,73 @@
         
         <!-- Content -->
 			
+    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5</a>:</h5>
+<ul id="seblist">
+  <li>Es ist jetzt möglich, Konfigurationsdateien in den In-App-Einstellungen (Menü „Weitere Optionen“) zu öffnen, wenn keine sichere Session läuft.<br>
+    </li>
+  <li> Auf dem Startbildschirm wurde eine Schnellaktion zum Bearbeiten von Konfigurationsdateien in den In-App-Einstellungen hinzugefügt (SEB-Symbol berühren und halten).<br>
+    </li>
+  <li> Das Bearbeiten von Konfigurationsdateien funktioniert nun korrekt in einer sicheren Client-Session.<br>
+    </li>
+  <li> Einstellung für die Anzeige der Schnellaktion „Konfigurationsdatei bearbeiten“ auf dem Startbildschirm wurde zu Einstellungen / Konfiguration hinzugefügt.<br>
+    (Key mobileShowEditConfigShortcutItem).<br>
+    </li>
+  <li> Es wurde die Option hinzugefügt, neue Prüfungseinstellungen mit Standardwerten zu erstellen, entweder über das Menü „Weitere Optionen“ in den In-App-Einstellungen oder beim Abbrechen der Dateiauswahl, die über die Schnellaktion zur Bearbeitung der Konfigurationsdatei auf dem Startbildschirm aufgerufen wird.<br>
+    </li>
+  <li> Die Schaltfläche „Verwerfen“ wurde zu den In-App-Einstellungen hinzugefügt, wenn Konfigurationsdateien zur Bearbeitung geöffnet werden oder wenn Prüfungseinstellungen erstellt werden. Wenn Sie auf „Verwerfen“ klicken, werden die Einstellungen geschlossen und SEB mit den Client-Einstellungen neu gestartet.<br>
+    </li>
+  <li> Behoben: „Zusätzliche Apps“ wurde manchmal nicht in den In-App-Einstellungen des Clients angezeigt.<br>
+    </li>
+  <li> In-App-Einstellungen UI zur Eingabe/Bearbeitung von URL-Filterregeln hinzugefügt.<br>
+    </li>
+  <li> Unterstützung für URL-Inhaltsfilter im modernen WebView (WKWebView). Wenn benutzerdefinierte reguläre Ausdrücke als SEB-URL-Filterausdrücke verwendet werden, ist nur die von WKWebView/Safari Content Filters unterstützte Regex-Teilmenge erlaubt, siehe https://webkit.org/blog/3476/content-blockers-first-look/<br>
+    </li>
+  <li> Herunterladen (und 'Öffnen') von konfigurierten Dateitypen, anstatt sie anzuzeigen:<br>
+    Es wurde eine neue Einstellung für Dateitypen zu Einstellungen / Down/Uploads hinzugefügt, die es ermöglicht, Dateitypen anzugeben, die vom Browser heruntergeladen statt angezeigt werden sollen. Sie können auch die zugehörige zusätzliche App für den Dateityp angeben, ein benutzerdefiniertes Protokollschema für diese App festlegen (Einstellungen / Zusätzliche Apps / App / Benutzerdefiniertes Schema) und die Option „App für heruntergeladene Datei öffnen“ verwenden.<br>
+    </li>
+  <li> Behoben: AAC-Multi-App-Modus wurde auf iPadOS &gt; 17.7.1 nicht aktiviert.<br>
+    </li>
+  <li> Startbildschirm-Schnellaktion „Logdatei teilen“ hinzugefügt.<br>
+    </li>
+  <li> Das Versenden von Protokollen ist nun auch mit einer sicheren Client-Session möglich.<br>
+    </li>
+  <li> Behoben: Blockieren der Dateiauswahl für Uploads auf iOS funktioniert nicht in Ans.<br>
+    </li>
+  <li> Geänderte Standardwerte für die Einstellungen allowDownUploads (erlaubt, veraltete Einstellung) und allowUploads, die nun durch allowUploadsiOS (nicht erlaubt) ersetzt werden.<br>
+    </li>
+  <li> Separate allowUploadsiOS-Einstellung hinzugefügt, da die Auswahl von Dateien für den Upload den Zugriff auf die Fotobibliothek und (iCloud-)Dateien unter iOS ermöglicht (im Gegensatz zu macOS, wo Sie den temporären Download-Ordner verwenden können, um den Zugriff auf die gesamte Festplatte zu vermeiden). <br>
+    </li>
+  <li> Jetzt ist es möglich, die Prüfungssitzung vom Erstkonfigurationsassistenten aus zu beenden. Wenn eine Prüfungssession keine oder die Standard-StartURL hat, wird der Erstkonfigurationsassistent angezeigt. Bisher war es nicht einfach möglich, diese Prüfungssession zu beenden, jetzt gibt es eine Schaltfläche „ Session beenden“, die im Erstkonfigurationsassistenten angezeigt wird (wenn man sich in einer Prüfungssession befindet).<br>
+    </li>
+  <li> Einige ältere SEB-Versionen wurden aus dem User-Agent-String entfernt (es werden nur noch 3.4, 3.4.1 und 3.5 ausgegeben).<br>
+    </li>
+  <li> Die Safari-Version in hartkodierten User-Agent-Element-Strings wurde aktualisiert.</li>
+  <li>Der Standardwert für die minimal unterstützte iOS-Version wurde auf 13 geändert. SEB könnte noch mit iOS 12 funktionieren, wenn Sie diese Einstellung ändern, aber wir testen nicht mit dieser Version und wir empfehlen, nur die neueste iOS-Version zu verwenden. </li>
+</ul>
+<p>Optionale Funktionen, welche individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:<br>
+</p>
+<ul id="seblist">
+  <li>SEB Server-Funktion „Hand heben“ hinzugefügt.<br>
+</li>
+  <li> Die Funktion „Hand heben“-Nachricht wurde implementiert (sie wird angezeigt, wenn man lange auf die Dock-Taste/den Seitenmenüpunkt „Hand heben“ drückt oder die Einstellung „raiseHandButtonAlwaysPromptMessage“ verwendet).<br>
+    </li>
+  <li> Der Übertragungsstatus „Alle zwischengespeicherten Screenshots übertragen“ wird im Seitenmenü nicht mehr angezeigt, nachdem das Server-Token erneuert wurde.<br>
+    </li>
+  <li> Behoben: UI wurde beim Starten der SEB Server Prüfung nicht korrekt initialisiert.</li>
+  <li> Behoben: Der Präfix in der Moodle Login User ID Auflösung für SEB Server funktionierte nicht.<br>
+  </li>
+  <li> Behoben: Abgelaufene Screen Proctoring Token verursachten unnötige Unterbrechungen der Serververbindung.<br>
+    </li>
+  <li> Behoben: SEB konnte nicht beendet werden, weil versucht wurde, einen Screenshot zu übertragen, der bereits übertragen und gelöscht worden war.<br>
+    </li>
+  <li> Verbesserte Sicherheit beim Zwischenspeichern von Screen Shots, wenn die Verbindung offline ist.<br>
+    </li>
+  <li> Nun wird zuerst Screen Proctoring geschlossen, dann die SEB Serververbindung.<br>
+    </li>
+  <li> Neustart statt Beenden der SEB Server-Prüfungssitzung mit Quit Link funktionierte nicht: SEB Server-Prüfungssession kann nicht mehr neu gestartet werden.<br>
+  </li>
+</ul>
+			
     <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4.1</a>:</h5>
 <ul id="seblist">
   <li>Schaltfläche zum Anzeigen des Konfigurations-QR-Codes in den App-internen Einstellungen / Konfiguration hinzugefügt.<br>
