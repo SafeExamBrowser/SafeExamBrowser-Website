@@ -354,7 +354,8 @@
         <p>SEB 3.5 supports the URL content filter also in the modern WebView, facilitates editing configuration files, sending log files and working with additional apps.</p>
         <p>New in SEB 3.5:</p>
         <ul>
-          <li> Now it's possible to open configuration files in in-app Settings ('More options' menu) when not running in a secure session.<br>
+          <li> Now it's possible to open configuration files in in-app Settings ('More options' menu) when not running in a secure session. Can be disabled with new setting &quot;Show 'Edit Config File'  Quick Action&quot; in Settings / Configuration.<br>
+(settings key mobileShowEditConfigShortcutItem).<br>
           </li>
           <li> Added Home Screen quick action for editing config files in SEB in-app Settings (touch and hold SEB icon).<br>
           </li>
@@ -368,11 +369,11 @@
           </li>
           <li> Added in-app settings UI for entering/editing URL filter rules.<br>
           </li>
-          <li> Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expression, only the subset supported by WKWebView/Safari Content Filters is allowed, see https://webkit.org/blog/3476/content-blockers-first-look/          </li>
+          <li> Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expression, only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">https://webkit.org/blog/3476/content-blockers-first-look/</a></li>
           <li> Download (and 'open') configured file types instead of displaying them:<br>
             Added new File Types setting to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type, specify a custom protocol scheme for that app (Settings / Additional Apps / App / Custom Scheme) and use the option 'Open App for Downloaded File'.<br>
           </li>
-          <li> Fixed: AAC Multi-App mode not enabled on iPadOS &gt; 17.7.1.<br>
+          <li> Fixed: AAC Multi-App mode (for Additional Apps) not enabled on iPadOS &gt; 17.7.1.<br>
           </li>
           <li> Added Home Screen quick action &quot;Share Log File&quot;.<br>
           </li>
