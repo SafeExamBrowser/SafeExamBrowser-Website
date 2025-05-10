@@ -340,7 +340,7 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.5 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.5.1 für iOS im App Store</span>
           </a> 
         </p>
         
@@ -348,8 +348,24 @@
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 12 und neuer</strong></p>
                 
 <p>SEB 3.5 unterstützt den URL-Inhalts-Filter, erleichtert die Bearbeitung von Konfigurationsdateien, das Senden von Log-Dateien und erlaubt zusätzliche Apps in Prüfungen.</p>
+<p>Neu in SEB 3.5.1:</p>
+<ul id="seblist">
+  <li>Behoben: BrowserExamKey/ConfigKey wird nicht korrekt neu berechnet, wenn die Konfiguration in den In-App-Einstellungen geöffnet wird, wenn zu den Client-Einstellungen zurückgekehrt wird oder wenn die Einstellungen zurückgesetzt werden.<br>
+    </li>
+  <li> Behoben: Absturz beim Ändern der Auswahl in der Radiogruppe (In-App-Einstellungen, z. B. auf der Seite „Konfiguration“).<br>
+    </li>
+  <li> Behoben: In-App-Einstellungen / Konfiguration / Standardwerte entfernen und Klartext wurden nicht angezeigt.<br>
+    </li>
+  <li> Geänderte Voreinstellung für Policy zum Wählen der Browser-Engine: Jetzt wird 'Moderne erzwingen' verwendet (wenn ältere Einstellungen keine andere Richtlinie enthalten).<br>
+    </li>
+  <li> Verbesserungen in Benutzeroberfläche und Formulierung auf der Seite Prüfungssession und beim Teilen von BEK/CK (auch sichtbar, wenn die neu formulierte Einstellung „Browser &amp; Config Keys im HTTP Header senden“ deaktiviert ist).<br>
+    </li>
+  <li> Eine mögliche Absturzursache wurde behoben (trat auf, wenn die SEB-Einstellungen beim Start zurückgesetzt wurden).<br>
+    </li>
+  <li> SEB 3.5 wurde in die Version der User-Agent-Strings aufgenommen.</li>
+</ul>
 <p>Neu in SEB 3.5:</p>
-        <ul>
+        <ul id="seblist">
           <li>Es ist jetzt möglich, Konfigurationsdateien in den In-App-Einstellungen (Menü „Weitere Optionen“) zu öffnen, wenn keine sichere Session läuft.<br>
           </li>
           <li> Auf dem Startbildschirm wurde eine Schnellaktion zum Bearbeiten von Konfigurationsdateien in den In-App-Einstellungen hinzugefügt (SEB-Symbol berühren und halten). Diese kann mit der Einstellung  &quot;Schnellaktion 'Konfigurationsdatei bearbeiten'&quot; in Einstellungen / Konfiguration deaktiviert werden (Settings Key mobileShowEditConfigShortcutItem).<br>
@@ -386,7 +402,7 @@
           <li>Der Standardwert für die minimal unterstützte iOS-Version wurde auf 13 geändert. SEB könnte noch mit iOS 12 funktionieren, wenn Sie diese Einstellung ändern, aber wir testen nicht mit dieser Version und wir empfehlen, nur die neueste iOS-Version zu verwenden. </li>
         </ul>
         <p>Optionale Funktionen, die individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:</p>
-        <ul>
+        <ul id="seblist">
           <li>SEB Server-Funktion „Hand heben“ hinzugefügt.<br>
           </li>
           <li> Die Funktion „Hand heben“-Nachricht wurde implementiert (sie wird angezeigt, wenn man lange auf die Dock-Taste/den Seitenmenüpunkt „Hand heben“ drückt oder die Einstellung „raiseHandButtonAlwaysPromptMessage“ verwendet).<br>
