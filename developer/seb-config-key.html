@@ -284,7 +284,8 @@
                   <li>All string elements must be UTF8 encoded.</li>
                   <li>Base16 strings should use lower-case a-f characters, even though this isn't relevant in the current implementation of the Config Key calculation.</li>
                   <li>&lt;data&gt; plist XML elements must be converted to <a href="http://en.wikipedia.org/wiki/Base64" target="_blank">Base64</a> strings.</li>
-                  <li>&lt;date&gt; plist XML elements must be converted to <a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> formatted strings.<br/>
+                  <li>&lt;date&gt; plist XML elements must be converted to <a href="http://en.wikipedia.org/wiki/ISO_8601" target="_blank">ISO 8601</a> formatted strings.</li>
+                  <li><strong>&lt;real&gt; plist XML floating point numbers must be rounded</strong> correctly for the JSON. Usually APIs generating JSON objects do reasonably round floating point numbers (a value &lt;real&gt;0.10000000000000001&lt;/real&gt; is rounded to 0.1). See for example the settings <em>batteryChargeThresholdCritical</em> and <em>batteryChargeThresholdLow</em>.<br/>
                     <br/>
                   </li>
                 </ul>
