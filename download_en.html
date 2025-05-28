@@ -283,45 +283,65 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5/SafeExamBrowser-3.5.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.1/SafeExamBrowser-3.5.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.5 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.5.1 for macOS</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for macOS 15, 14, 13, 12, 11, 10.15</strong><br />
-        <span class="codetext">Build 15487. SHA1: c931a47d8bdbe85353d31fbb795df64bc18e133e</span></p>
+        <span class="codetext">Build 1566E. SHA1: 2b1c534a0c7cba7e73a623a722954ebbf7c77343</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5/SafeExamBrowser-3.5.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.1/SafeExamBrowser-3.5.1.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
-          <p>SEB 3.5 supports the URL content filter also in the modern WebView, fixes general issues and in the optional Screen Proctoring feature (requiring to run your own instance of SEB Server with SEB Screen Proctoring service). </p>
-          <p>New in SEB 3.5:</p>
+          <p>SEB 3.5.1 adds new options for downloading and opening specific file types with additional apps, improves usability of some setting options and fixes text entry lag and security issues.</p>
+          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.1 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see below).</p>
+          <p>New in SEB 3.5.1:</p>
+          <ul id="seblist">
+            <li>Download configured file types (and optionally 'open' in specified app) instead of displaying them in the SEB browser: Added new 'File Types' list to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type and use the option 'Open files after downloading'. <br>
+              The new setting keys are: downloadFileTypes (array of dictionaries) with file types with properties 'extension' (file extension), 'os', 'associatedAppId' (Bundle Identifier of app which will be opened after download is finished). Currently supported in SEB for macOS and iOS.<br>
+            </li>
+            <li>Fixed: Blocking inline predictions in WebView text fields caused text entry lag with specific macOS versions and system settings: Removed terminating AppleSpell process and implemented better alternative solution. Note: If you created SEB configurations with SEB 3.5, you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes).<br>
+            </li>
+            <li> Updated UI and wording in Exam setting section and improved usability for sharing of BEK/CK (enabled also when rephrased setting &quot;Send Browser &amp; Config Keys in HTTP Header&quot; is disabled).<br>
+            </li>
+            <li> Now blocking DataDetectorsViewService system process to prevent contacts or calendar popup to be displayed in some instances.<br>
+            </li>
+            <li> No longer compiling empty content filter rule lists when using modern WebView (WKWebView).<br>
+            </li>
+            <li> Fixed a possible crash reason (happened when SEB settings were reset when starting).<br>
+            </li>
+            <li> Added SEB 3.5 to version user agent strings.<br>
+            </li>
+            <li> Updated preset prohibited processes (Win/Mac).<br>
+              </li>
+            <li> Changed defaults for allowUploads (false) / allowDownUploads (true, deprecated: use separate allowDownload/allowUploads settings).</li>
+		  </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+              <ul id="seblist">            
+				  <li>Restart instead of quitting SEB Server exam session doesn't work: Not allowing to restart SEB Server exam sessions anymore.<br>
+			      </li>
+				  <li> No longer showing transmitting state &quot;All cached screen shots transmitted&quot; in Dock button tooltip when token was renewed.<br>
+			    </li>
+              </ul>
+			
+		  <p>New in SEB 3.5:</p>
           <ul id="seblist">
             <li>Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expressions, only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">here</a>. </li>
             <li> Updated selection policy of modern WebView (no longer dependent on using URL content filters).</li>
             <li> Now blocking AI Writing Tools in macOS Sequoia.</li>
-            <li> Now blocking inline predictive text.            </li>
             <li> Now removes the Passwords Menu Bar Extra (item).<br>
             </li>
             <li> Added &quot;Choose Application&quot; button also for prohibited macOS apps (Settings / Applications).<br>
             </li>
-            <li> Fixed: Entering URL filter rule (Settings / Network / Filter) in text field needed to be confirmed (return/enter key) and  wasn't saved when using &quot;Apply and Restart&quot;.<br>
-            </li>
-            <li> No longer accepting Start URL with obviously wrong format in Settings / General (for example with preceding space) and preventing SEB to crash with some wrong Start URLs.<br>
-            </li>
-            <li> Improved validating Start and SEB Server URL in Settings / General: If no protocol scheme is entered, https:// is added.<br>
-            </li>
             <li> Fixed: ConfigKey wasn't updated correctly in Settings window after saving a config file.</li>
             <li>Changed default value for minimum supported macOS version to 10.15. SEB might still work with macOS 10.13 and 10.14 if you change that setting, but we are not testing with these versions and like Apple we generally recommend to use only the three latest macOS versions. <br>
             </li>
-            <li> Now allowing independent enabling/disabling of screen/window capture in Settings / Security.</li>
 		  </ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
               <ul id="seblist">            
 				  <li>The SEB Server feature Raise Hand is now available again if enabled in session settings.<br>
 				  </li>
-				  <li> Fixed: Expired Screen Proctoring token caused unnecessary server connection interruption handling.<br>
-			      </li>
 				  <li> Fixed: SEB couldn't be quit because it was trying to transmit a screen shot which already was transmitted and deleted.<br>
 			      </li>
 				  <li> Improved security when caching screen shots when connection is offline.<br>

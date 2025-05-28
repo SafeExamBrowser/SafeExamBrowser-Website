@@ -283,20 +283,49 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5/SafeExamBrowser-3.5.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.1/SafeExamBrowser-3.5.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.5 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.5.1 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 15, 14, 13, 12, 11, 10.15</strong><br />
-        <span class="codetext">Build 15487. SHA1: c931a47d8bdbe85353d31fbb795df64bc18e133e</span></p>
+        <span class="codetext">Build 1566E. SHA1: 2b1c534a0c7cba7e73a623a722954ebbf7c77343</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5/SafeExamBrowser-3.5.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.1/SafeExamBrowser-3.5.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.5 unterstützt den URL-Content-(Inhalts-) Filter auch in der modernen Browser-Engine, behebt allgemeine Probleme und in der <strong>optionalen</strong> Screen Proctoring Funktion (Bildschirm-Fernüberwachung, erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service. <strong>SEB verbindet sich nie mit einem zentralen Proctoring- oder anderen Server, dies muss immer individuell konfiguriert werden, falls man es nutzen möchte!)</strong>. </p>
-          <p>Neu in SEB 3.5:</p>
+          <p>SEB 3.5.1 bietet neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
+          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.5.1 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe unten). </p>
+          <p>Neu in SEB 3.5.1:</p>
+          <ul id="seblist">
+            <li>Konfigurierte Dateitypen herunterladen (und optional in einer bestimmten App öffnen), anstatt sie im SEB-Browser anzuzeigen: Unter „Einstellungen / Downloads/Uploads“ wurde eine neue Liste ‚Dateitypen‘ hinzugefügt, in der Sie Dateitypen festlegen können, die heruntergeladen statt im Browser angezeigt werden sollen. Sie können auch die zugehörige zusätzliche App für den Dateityp angeben und die Option „Dateien nach dem Herunterladen öffnen“ verwenden. <br>
+              Die neuen Einstellungs-Keys sind: downloadFileTypes (Array von Dictionaries) mit Dateitypen mit den Properties „extension“ (Dateiendung), ‚os‘ und „associatedAppId“ (Bundle-Identifier der App, die nach Abschluss des Downloads geöffnet wird). Derzeit in SEB für macOS und iOS unterstützt.<br>
+              </li>
+            <li> Behoben: Das Blockieren von Inline-Vorschlägen in WebView-Textfeldern führte bei bestimmten macOS-Versionen und Systemeinstellungen zu Verzögerungen bei der Texteingabe: Das Beenden des AppleSpell-Prozesses wurde entfernt und eine bessere Alternative implementiert. Hinweis: Wenn Sie SEB-Konfigurationen mit SEB 3.5 erstellt haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen entfernen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse).<br>
+              </li>
+            <li> Aktualisierte Benutzeroberfläche und Formulierungen im Abschnitt „Prüfungseinstellungen“ und verbesserte Benutzerfreundlichkeit für die Freigabe von BEK/CK (auch aktiviert, wenn die umformulierte Einstellung „Browser- und Konfigurationsschlüssel im HTTP-Header senden“ deaktiviert ist).<br>
+              </li>
+            <li> Blockiert nun den Systemprozess DataDetectorsViewService, um zu verhindern, dass in einigen Fällen Kontakte oder Kalender-Popups angezeigt werden.<br>
+              </li>
+            <li> Es werden keine leeren Inhaltsfilterregel-Listen mehr kompiliert, wenn das moderne WebView (WKWebView) verwendet wird.<br>
+              </li>
+            <li> Mögliche Ursache für Absturz behoben (trat auf, wenn die SEB-Einstellungen beim Start zurückgesetzt wurden).<br>
+              </li>
+            <li> SEB 3.5 zu den Versions-User-Agent-Strings hinzugefügt.<br>
+              </li>
+            <li> Voreingestellte verbotene Prozesse aktualisiert (Win/Mac).<br>
+              </li>
+            <li> Standardeinstellungen für allowUploads (false) / allowDownUploads (true, veraltet: separate Einstellungen für allowDownload/allowUploads verwenden) geändert.</li>
+          </ul>
+          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
+          <ul id="seblist">
+            <li>Neustart anstelle des Beendens der SEB Server-Prüfungssitzung funktioniert nicht: Ein Neustart der SEB Server-Prüfungssitzungen ist nicht mehr möglich.<br>
+            </li>
+            <li>Der Übertragungsstatus „Alle zwischengespeicherten Screenshots übertragen“ wird nicht mehr im Dock-Icon angezeigt, wenn das Token erneuert wurde.</li>
+          </ul>
+			
+		  <p>Neu in SEB 3.5:</p>
           <ul id="seblist">
             <li>Unterstützung für URL-Inhaltsfilter im modernen WebView (WKWebView) hinzugefügt. Hinweis: Wenn benutzerdefinierte reguläre Ausdrücke als SEB-URL-Filterausdrücke verwendet werden, ist nur die von WKWebView/Safari Content Filters unterstützte Regex-Teilmenge erlaubt, siehe <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">hier.</a><br>
             </li>
@@ -305,20 +334,12 @@
             <li>Blockiert  die Inline-Textvorhersage.</li>
             <li>Entfernt jetzt das Passwörter-Menüleisten-Element.</li>
             <li>Schaltfläche &quot;Applikation/Executable auswählen&quot; auch für verbotene macOS-Apps hinzugefügt (Einstellungen / Applikationen).</li>
-            <li>Behoben: Die Eingabe einer URL-Filterregel (Einstellungen / Netzwerk / Filter) im Textfeld musste bestätigt werden (&quot;Eingabe/Return&quot;-Taste) und wurde nicht gespeichert, wenn &quot;Anwenden und Neustart&quot; verwendet wurde. </li>
-            <li>Start-URL mit offensichtlich falschem Format in Einstellungen / Allgemein (z.B. mit vorangestelltem Leerzeichen) wird nicht mehr akzeptiert und verhindert, dass SEB bei einigen falschen Start-URLs abstürzt.<br>
-            </li>
-            <li> Verbesserte Validierung der Start- und SEB-Server-URL in Einstellungen / Allgemein: Wenn kein Protokollschema eingegeben wird, wird https:// hinzugefügt.<br>
-              </li>
             <li> Behoben: ConfigKey wurde im Settings-Fenster nach dem Speichern einer Konfigurationsdatei nicht korrekt aktualisiert.</li>
             <li>Der Standardwert für die minimal unterstützte macOS-Version wurde auf 10.15 geändert. SEB könnte noch mit macOS 10.13 und 10.14 funktionieren, wenn Sie diese Einstellung ändern, aber wir testen nicht mit diesen Versionen und wie Apple empfehlen wir generell, nur die drei neuesten macOS-Versionen zu verwenden.            </li>
-            <li> Erlaubt nun die unabhängige Aktivierung/Deaktivierung von Bildschirm-/ Fensteraufnahme in Einstellungen / Sicherheit.</li>
           </ul>
           <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
           <ul id="seblist">
             <li>Die SEB Server-Funktion „Hand heben“ ist nun wieder verfügbar, wenn sie in den Session-Einstellungen aktiviert ist.<br>
-            </li>
-            <li> Behoben: Abgelaufene Screen Proctoring Token verursachten unnötige Unterbrechungen der Serververbindung.<br>
             </li>
             <li> Behoben: SEB konnte nicht beendet werden, weil versucht wurde, einen Screenshot zu übertragen, der bereits übertragen und gelöscht worden war.<br>
             </li>
