@@ -298,32 +298,17 @@
           <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.1 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see below).</p>
           <p>New in SEB 3.5.1:</p>
           <ul id="seblist">
-            <li>Download configured file types (and optionally 'open' in specified app) instead of displaying them in the SEB browser: Added new 'File Types' list to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type and use the option 'Open files after downloading'. <br>
-              The new setting keys are: downloadFileTypes (array of dictionaries) with file types with properties 'extension' (file extension), 'os', 'associatedAppId' (Bundle Identifier of app which will be opened after download is finished). Currently supported in SEB for macOS and iOS.<br>
-            </li>
+            <li>Download configured file types (and optionally 'open' in specified app) instead of displaying them in the SEB browser: Added new 'File Types' list to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type and use the option 'Open files after downloading'. </li>
             <li>Fixed: Blocking inline predictions in WebView text fields caused text entry lag with specific macOS versions and system settings: Removed terminating AppleSpell process and implemented better alternative solution. Note: If you created SEB configurations with SEB 3.5, you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes).<br>
             </li>
             <li> Updated UI and wording in Exam setting section and improved usability for sharing of BEK/CK (enabled also when rephrased setting &quot;Send Browser &amp; Config Keys in HTTP Header&quot; is disabled).<br>
             </li>
             <li> Now blocking DataDetectorsViewService system process to prevent contacts or calendar popup to be displayed in some instances.<br>
             </li>
-            <li> No longer compiling empty content filter rule lists when using modern WebView (WKWebView).<br>
-            </li>
-            <li> Fixed a possible crash reason (happened when SEB settings were reset when starting).<br>
-            </li>
-            <li> Added SEB 3.5 to version user agent strings.<br>
-            </li>
             <li> Updated preset prohibited processes (Win/Mac).<br>
               </li>
             <li> Changed defaults for allowUploads (false) / allowDownUploads (true, deprecated: use separate allowDownload/allowUploads settings).</li>
-		  </ul>
-          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
-              <ul id="seblist">            
-				  <li>Restart instead of quitting SEB Server exam session doesn't work: Not allowing to restart SEB Server exam sessions anymore.<br>
-			      </li>
-				  <li> No longer showing transmitting state &quot;All cached screen shots transmitted&quot; in Dock button tooltip when token was renewed.<br>
-			    </li>
-              </ul>
+          </ul>
 			
 		  <p>New in SEB 3.5:</p>
           <ul id="seblist">

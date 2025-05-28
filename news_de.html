@@ -227,7 +227,24 @@
 
         <!-- Content -->
 		
-   		<h5 id="sebh5">9. Mai 2025</h5>
+		<h5 id="sebh5">28. Mai 2025</h5>
+        <p><a href="download_de.html#MacOSX"><strong>Safe Exam Browser 3.5.1 für macOS veröffentlicht</strong></a>: <!-- <strong><a href="download_de.html#iOS">und für iOS</a></strong> veröffentlicht. -->Dieses Update  bietet neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
+        <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.5.1 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe unten). </p>
+        <ul id="seblist">
+          <li>Konfigurierte Dateitypen herunterladen (und optional in einer bestimmten App öffnen), anstatt sie im SEB-Browser anzuzeigen: Unter „Einstellungen / Downloads/Uploads“ wurde eine neue Liste ‚Dateitypen‘ hinzugefügt, in der Sie Dateitypen festlegen können, die heruntergeladen statt im Browser angezeigt werden sollen. Sie können auch die zugehörige zusätzliche App für den Dateityp angeben und die Option „Dateien nach dem Herunterladen öffnen“ verwenden. <br>
+            Die neuen Einstellungs-Keys sind: downloadFileTypes (Array von Dictionaries) mit Dateitypen mit den Properties „extension“ (Dateiendung), ‚os‘ und „associatedAppId“ (Bundle-Identifier der App, die nach Abschluss des Downloads geöffnet wird). Derzeit in SEB für macOS und iOS unterstützt.<br>
+          </li>
+          <li> Behoben: Das Blockieren von Inline-Vorschlägen in WebView-Textfeldern führte bei bestimmten macOS-Versionen und Systemeinstellungen zu Verzögerungen bei der Texteingabe: Das Beenden des AppleSpell-Prozesses wurde entfernt und eine bessere Alternative implementiert. Hinweis: Wenn Sie SEB-Konfigurationen mit SEB 3.5 erstellt haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen entfernen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse).<br>
+          </li>
+          <li> Aktualisierte Benutzeroberfläche und Formulierungen im Abschnitt „Prüfungseinstellungen“ und verbesserte Benutzerfreundlichkeit für die Freigabe von BEK/CK (auch aktiviert, wenn die umformulierte Einstellung „Browser- und Konfigurationsschlüssel im HTTP-Header senden“ deaktiviert ist).<br>
+          </li>
+          <li> Blockiert nun den Systemprozess DataDetectorsViewService, um zu verhindern, dass in einigen Fällen Kontakte oder Kalender-Popups angezeigt werden. </li>
+          <li> Standardeinstellungen für allowUploads (false) / allowDownUploads (true, veraltet: separate Einstellungen für allowDownload/allowUploads verwenden) geändert. </li>
+        </ul>
+
+		<p><span class="half_linespace"> Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
+
+		<h5 id="sebh5">9. Mai 2025</h5>
         <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.5.1 für iOS veröffentlicht</strong></a>. </span>Dieses Update verbessert die Usability der In-App-Einstellungen.</p>
         <ul id="seblist">
           
@@ -297,7 +314,7 @@
           <li>Start-URL mit offensichtlich falschem Format in Einstellungen / Allgemein (z.B. mit vorangestelltem Leerzeichen) wird nicht mehr akzeptiert und verhindert, dass SEB bei einigen falschen Start-URLs abstürzt. Ausserdem: Wenn kein Protokollschema eingegeben wird, wird https:// hinzugefügt.          </li>
         </ul>
         <p><strong>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</strong></p>
-        <ul id="seblist7">
+        <ul id="seblist">
           <li>Die SEB Server-Funktion &bdquo;Hand heben&ldquo; ist nun wieder verfügbar, wenn sie in den Session-Einstellungen aktiviert ist.<br>
           </li>
           <li>Behoben: SEB konnte nicht beendet werden, weil versucht wurde, einen Screenshot zu übertragen, der bereits übertragen und gelöscht worden war.<br>
@@ -306,7 +323,8 @@
         </ul>
 			
 		<p><span class="half_linespace"> Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für alle Änderungen.</span></p>
-		  <h5 id="sebh5">5. November 2024</h5>
+			
+		<h5 id="sebh5">5. November 2024</h5>
 	    <p><strong>Entfernungshinweis:</strong> Der kombinierte Up- und Download-Konfigurationswert <code>allowDownUploads</code> („Allow downloading and uploading files“ unter dem Reiter „Down-/Uploads“ im Konfigurationstool) wird mit den kommenden Versionen 3.9.0 für Windows und 3.5.0 für macOS entfernt. Ab diesen Versionen können Down- und Uploads separat mit den neuen Konfigurationswerten <code>allowDownloads</code> bzw. <code>allowUploads</code> aktiviert werden (die an der gleichen Stelle im Konfigurationstool zu finden sind).</p>
 			
 		<h5 id="sebh5">28. Februar 2025</h5>
@@ -345,7 +363,7 @@
           </li>
         </ul>
         <p><strong>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</strong></p>
-        <ul id="seblist7">
+        <ul id="seblist">
           <li> Es wurde behoben, dass der Dialog für die Berechtigungen zur Aufnahme des Bildschirms und für Bedienungshilfen nicht angezeigt wurde, bevor die Screen Proctoring- Session gestartet wurde.</li>
         </ul>
 			
@@ -370,7 +388,7 @@
           </li>
         </ul>
         <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
-        <ul id="seblist8">
+        <ul id="seblist">
           <li>Unterstützung für  Screen Proctoring (Bildschirm-Fernüberwachung). Diese bietet eine Live-Ansicht der Bildschirme von angeschlossenen SEB-Clients und Aufzeichnungen mit verschiedenen durchsuchbaren Metadaten. Diese Funktion erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service. SEB verbindet sich niemals mit einem zentralisierten Proctoring- oder anderen Servern, dies muss immer individuell konfiguriert werden, falls Sie es nutzen wollen.<br>
           </li>
           <li>Jetzt werden generische Prüfungssysteme mit SEB Server unterstützt: Sie können die URL einer beliebigen webbasierten Prüfung/eines beliebigen Tests/Quiz eingeben und SEB Server verwenden, um die in seinem Web-Backend erstellten SEB-Einstellungen bereitzustellen. Sie können auch die angeschlossenen SEB Clients überwachen, inklusive einer automatischen Überprüfung der Integrität der einzelnen SEB Clients.        </li>

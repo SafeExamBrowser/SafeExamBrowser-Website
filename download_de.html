@@ -306,26 +306,10 @@
               </li>
             <li> Aktualisierte Benutzeroberfläche und Formulierungen im Abschnitt „Prüfungseinstellungen“ und verbesserte Benutzerfreundlichkeit für die Freigabe von BEK/CK (auch aktiviert, wenn die umformulierte Einstellung „Browser- und Konfigurationsschlüssel im HTTP-Header senden“ deaktiviert ist).<br>
               </li>
-            <li> Blockiert nun den Systemprozess DataDetectorsViewService, um zu verhindern, dass in einigen Fällen Kontakte oder Kalender-Popups angezeigt werden.<br>
-              </li>
-            <li> Es werden keine leeren Inhaltsfilterregel-Listen mehr kompiliert, wenn das moderne WebView (WKWebView) verwendet wird.<br>
-              </li>
-            <li> Mögliche Ursache für Absturz behoben (trat auf, wenn die SEB-Einstellungen beim Start zurückgesetzt wurden).<br>
-              </li>
-            <li> SEB 3.5 zu den Versions-User-Agent-Strings hinzugefügt.<br>
-              </li>
-            <li> Voreingestellte verbotene Prozesse aktualisiert (Win/Mac).<br>
-              </li>
-            <li> Standardeinstellungen für allowUploads (false) / allowDownUploads (true, veraltet: separate Einstellungen für allowDownload/allowUploads verwenden) geändert.</li>
+            <li> Blockiert nun den Systemprozess DataDetectorsViewService, um zu verhindern, dass in einigen Fällen Kontakte oder Kalender-Popups angezeigt werden.            </li>
+            <li> Standardeinstellungen für allowUploads (false) / allowDownUploads (true, veraltet: separate Einstellungen für allowDownload/allowUploads verwenden) geändert.		  </li>
           </ul>
-          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
-          <ul id="seblist">
-            <li>Neustart anstelle des Beendens der SEB Server-Prüfungssitzung funktioniert nicht: Ein Neustart der SEB Server-Prüfungssitzungen ist nicht mehr möglich.<br>
-            </li>
-            <li>Der Übertragungsstatus „Alle zwischengespeicherten Screenshots übertragen“ wird nicht mehr im Dock-Icon angezeigt, wenn das Token erneuert wurde.</li>
-          </ul>
-			
-		  <p>Neu in SEB 3.5:</p>
+          <p>Neu in SEB 3.5:</p>
           <ul id="seblist">
             <li>Unterstützung für URL-Inhaltsfilter im modernen WebView (WKWebView) hinzugefügt. Hinweis: Wenn benutzerdefinierte reguläre Ausdrücke als SEB-URL-Filterausdrücke verwendet werden, ist nur die von WKWebView/Safari Content Filters unterstützte Regex-Teilmenge erlaubt, siehe <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">hier.</a><br>
             </li>

@@ -226,6 +226,25 @@
 
           <!-- Content -->
 		
+          <h5 id="sebh5">May 28, 2025</h5>
+		  <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.5.1 for macOS released</a>
+	      </strong>: This update adds new options for downloading and opening specific file types with additional apps, improves usability of some setting options and fixes text entry lag and security issues.</p>
+          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.1 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see below).</p>
+          <ul id="seblist">
+            <li>Download configured file types (and optionally 'open' in specified app) instead of displaying them in the SEB browser: Added new 'File Types' list to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type and use the option 'Open files after downloading'. </li>
+            <li>Fixed: Blocking inline predictions in WebView text fields caused text entry lag with specific macOS versions and system settings: Removed terminating AppleSpell process and implemented better alternative solution. Note: If you created SEB configurations with SEB 3.5, you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes).<br>
+            </li>
+            <li> Updated UI and wording in Exam setting section and improved usability for sharing of BEK/CK (enabled also when rephrased setting &quot;Send Browser &amp; Config Keys in HTTP Header&quot; is disabled).<br>
+            </li>
+            <li> Now blocking DataDetectorsViewService system process to prevent contacts or calendar popup to be displayed in some instances.<br>
+            </li>
+            <li> Updated preset prohibited processes (Win/Mac).<br>
+            </li>
+            <li> Changed defaults for allowUploads (false) / allowDownUploads (true, deprecated: use separate allowDownload/allowUploads settings).</li>
+          </ul>
+          <p><span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
+
+			
 		  <h5 id="sebh5">May 9, 2025</h5>
           <p><span class="half_linespace"><a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank"><strong>Safe Exam Browser 3.5.1 for iOS released</strong></a>. This  update </span> improves usability of the in-app settings editor. </p>
           <ul id="seblist">
