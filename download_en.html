@@ -283,20 +283,25 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.1/SafeExamBrowser-3.5.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.2/SafeExamBrowser-3.5.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.5.1 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.5.2 for macOS</span>
           </a> 
         </p>
         
         <p><strong>Current version of Safe Exam Browser for macOS 15, 14, 13, 12, 11, 10.15</strong><br />
-        <span class="codetext">Build 15670. SHA1: feb15175ce477033ea4872b2502bcf28d855a4fd</span></p>
+        <span class="codetext">Build 15677. SHA1: 2452d5839223375dc01f66f47a0a96865ac1149e</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.1/SafeExamBrowser-3.5.1.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.2/SafeExamBrowser-3.5.2.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.	    </p>
         <div>
-          <p>SEB 3.5.1 adds new options for downloading and opening specific file types with additional apps, improves usability of some setting options and fixes text entry lag and security issues.</p>
-          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.1 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see below).</p>
-          <p>New in SEB 3.5.1:</p>
+          <p>SEB 3.5.2 fixes a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia. SEB 3.5.1 adds new options for downloading and opening specific file types with additional apps, improves usability of some setting options and fixes text entry lag and security issues.</p>
+          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.2 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see below).</p>
+          <p>New in SEB 3.5.2:</p>
+          <ul id="seblist">
+            <li>Fxed a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia.</li>
+		  </ul>
+
+		  <p>New in SEB 3.5.1:</p>
           <ul id="seblist">
             <li>Download configured file types (and optionally 'open' in specified app) instead of displaying them in the SEB browser: Added new 'File Types' list to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type and use the option 'Open files after downloading'. </li>
             <li>Fixed: Blocking inline predictions in WebView text fields caused text entry lag with specific macOS versions and system settings: Removed terminating AppleSpell process and implemented better alternative solution. Note: If you created SEB configurations with SEB 3.5, you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes).</li>

@@ -283,24 +283,27 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.1/SafeExamBrowser-3.5.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.2/SafeExamBrowser-3.5.2.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.5.1 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.5.2 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 15, 14, 13, 12, 11, 10.15</strong><br />
-        <span class="codetext">Build 15670. SHA1: feb15175ce477033ea4872b2502bcf28d855a4fd</span></p>
+        <span class="codetext">Build 15677. SHA1: 2452d5839223375dc01f66f47a0a96865ac1149e</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.1/SafeExamBrowser-3.5.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.2/SafeExamBrowser-3.5.2.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>.</p>
         <div>
-          <p>SEB 3.5.1 bietet neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
-          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.5.1 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe unten). </p>
-          <p>Neu in SEB 3.5.1:</p>
+          <p>SEB 3.5.2 behebt einen Absturz, der beim Laden einiger Websites unter macOS-Versionen vor macOS 15 Sequoia auftritt. SEB 3.5.1 bietet neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
+          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.5.2 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe unten). </p>
+          <p>Neu in SEB 3.5.2:</p>
           <ul id="seblist">
-            <li>Konfigurierte Dateitypen herunterladen (und optional in einer bestimmten App öffnen), anstatt sie im SEB-Browser anzuzeigen: Unter „Einstellungen / Downloads/Uploads“ wurde eine neue Liste ‚Dateitypen‘ hinzugefügt, in der Sie Dateitypen festlegen können, die heruntergeladen statt im Browser angezeigt werden sollen. Sie können auch die zugehörige zusätzliche App für den Dateityp angeben und die Option „Dateien nach dem Herunterladen öffnen“ verwenden. <br>
-              </li>
+            <li>Behebt einen Absturz, der beim Laden einiger Websites unter macOS-Versionen vor macOS 15 Sequoia auftritt.</li>
+          </ul>
+		  <p>Neu in SEB 3.5.1:</p>
+          <ul id="seblist">
+            <li>Konfigurierte Dateitypen herunterladen (und optional in einer bestimmten App öffnen), anstatt sie im SEB-Browser anzuzeigen: Unter „Einstellungen / Downloads/Uploads“ wurde eine neue Liste ‚Dateitypen‘ hinzugefügt, in der Sie Dateitypen festlegen können, die heruntergeladen statt im Browser angezeigt werden sollen. Sie können auch die zugehörige zusätzliche App für den Dateityp angeben und die Option „Dateien nach dem Herunterladen öffnen“ verwenden.</li>
             <li> Behoben: Das Blockieren von Inline-Vorschlägen in WebView-Textfeldern führte bei bestimmten macOS-Versionen und Systemeinstellungen zu Verzögerungen bei der Texteingabe: Das Beenden des AppleSpell-Prozesses wurde entfernt und eine bessere Alternative implementiert. Hinweis: Wenn Sie SEB-Konfigurationen mit SEB 3.5 erstellt haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen entfernen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse).</li>
             <li>Behoben: Einfrieren bei Verwendung des AAC-Bewertungsmodus, nachdem das Dialogfeld für die Download-Ordnerberechtigungen angezeigt wurde. Jetzt wird eine Vorabprüfung der Systemeinstellungen für Datenschutz Dateien und Ordnerzugriffsberechtigungen für Download- und Logdateiordner durchgeführt.</li>
             <li>Unterstützung der Einstellung &bdquo;Als Hintergrund-Prozess zulassen&ldquo; für erlaubte Prozesse: Erlaubt es dem erlaubten Prozess, bereits beim Start von SEB zu laufen (wird nicht beendet, wenn die Session in SEB gestartet und beendet wird).
