@@ -295,11 +295,13 @@
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.4/SafeExamBrowser-3.5.4.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.<span class="codetext"> sha256:bed48e0dc8b5373fa181f7b6d93e0462dbfa4bf464771341dfae209ef276a49b</span></p>
         <div>
           <p>SEB 3.5.4 is again sending an App Signature Key (ASK) when using the optional SEB Server and fixes a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia. It also offers new options for downloading and opening specific file types with additional apps, improves usability of some setting options and fixes text entry lag and security issues.</p>
-          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.4 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see below).</p>
+          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.4 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see SEB 3.5.1 below).</p>
           <p>New in SEB 3.5.4:</p>
           <ul id="seblist">
             <li>Fixed not sending the App Signature Key (ASK) when using the optional SEB Server (issue existing since SEB 3.5.1) .</li>
             <li>Crashes on macOS 10.15: The modern WebView (WKWebView) unfortunately crashes when loading some pages on macOS 10.15. Therefore we have to set the default setting for the minimum supported macOS version to 11. If you need to support macOS 10.15, you might be able by using the classic WebView in your SEB settings (which isn't recommended as it's outdated).          </li>
+            <li>The SEB icon is correctly displayed in the SEB Dock  when running on macOS 26 Tahoe.</li>
+            <li> Set default value for &quot;Allow Running on iOS Beta&quot; (Settings / Security / iOS) to 'iOS 26'.</li>
           </ul>
 
           <p>New in SEB 3.5.3:</p>
@@ -374,7 +376,7 @@
 		  
         <p>New in SEB 3.5.2:</p>
           <ul id="seblist">
-            <li>Download and 'open' configured file types instead of displaying them crashes: Fixed regression in iOS version.<br>
+            <li>Download and 'open' configured file types instead of displaying them crashed: Fixed regression in iOS version.<br>
             </li>
             <li> Fixed: App Signature Key (ASK) was not transmitted when using the optional, individually configured SEB Server.<br>
             </li>
