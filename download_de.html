@@ -283,25 +283,33 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.3/SafeExamBrowser-3.5.3.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.4/SafeExamBrowser-3.5.4.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.5.3 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.5.4 für macOS</span>
           </a> 
         </p>
         
 
-<p><strong>Aktuelle Version von Safe Exam Browser für macOS 15, 14, 13, 12, 11, 10.15</strong><br />
-        <span class="codetext">Build 1567A. SHA1: 5e5da7e6ea763b24df93dc5ddc73ab86be6dcb1c</span></p>
+<p><strong>Aktuelle Version von Safe Exam Browser für macOS 15, 14, 13, 12, 11</strong><br />
+        <span class="codetext">Build 15683. SHA1: fcc3deef83544661bdbf2c8ca5cc810e27cd064e</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.3/SafeExamBrowser-3.5.3.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:b6fa376e306c4046746f91b9ff5bb2eaa36126ababb12a780c74192d2a43e28f</span></p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.4/SafeExamBrowser-3.5.4.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:bed48e0dc8b5373fa181f7b6d93e0462dbfa4bf464771341dfae209ef276a49b</span></p>
         <div>
-          <p>SEB 3.5.3 behebt einen Absturz, der beim Laden einiger Websites unter macOS-Versionen vor macOS 15 Sequoia auftritt. Diese Version bietet auch neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
-          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.5.3 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe unten). </p>
+          <p>SEB 3.5.4 sendet wieder den App-Signaturschlüssel (ASK)  bei Verwendung des optionalen, individuell konfigurierten SEB-Servers. Ausserdem wird ein Absturz, der beim Laden einiger Websites unter macOS-Versionen vor macOS 15 Sequoia auftrat behoben. Diese Version bietet auch neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
+          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.5.4 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe SEB 3.5.1 unten). </p>
+			
+          <p>Neu in SEB 3.5.4:</p>
+          <ul id="seblist">
+            <li>Behoben: Der App-Signaturschlüssel (ASK) wurde bei Verwendung des optionalen, individuell konfigurierten SEB-Servers nicht übertragen.</li>
+            <li>Abstürze unter macOS 10.15: Das moderne WebView (WKWebView) stürzt leider beim Laden einiger Seiten unter macOS 10.15 ab. Daher müssen wir die Standardeinstellung für die minimal unterstützte macOS-Version auf 11 setzen. Wenn Sie macOS 10.15 unterstützen müssen, können Sie möglicherweise das klassische WebView in Ihren SEB-Einstellungen verwenden (was jedoch nicht empfohlen wird, da es veraltet ist).</li>
+          </ul>
+			
           <p>Neu in SEB 3.5.3:</p>
           <ul id="seblist">
             <li>Behebt einen Absturz, der beim Laden einiger Websites unter macOS-Versionen vor macOS 15 Sequoia auftritt.</li>
             <li>Behebt ein Problem mit der Codesignierung in Version 3.5.2.</li>
           </ul>
+			
 		  <p>Neu in SEB 3.5.1:</p>
           <ul id="seblist">
             <li>Konfigurierte Dateitypen herunterladen (und optional in einer bestimmten App öffnen), anstatt sie im SEB-Browser anzuzeigen: Unter „Einstellungen / Downloads/Uploads“ wurde eine neue Liste ‚Dateitypen‘ hinzugefügt, in der Sie Dateitypen festlegen können, die heruntergeladen statt im Browser angezeigt werden sollen. Sie können auch die zugehörige zusätzliche App für den Dateityp angeben und die Option „Dateien nach dem Herunterladen öffnen“ verwenden.</li>
@@ -350,7 +358,7 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.5.1 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.5.2 für iOS im App Store</span>
           </a> 
         </p>
         
@@ -358,6 +366,16 @@
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 12 und neuer</strong></p>
                 
 <p>SEB 3.5 unterstützt den URL-Inhalts-Filter, erleichtert die Bearbeitung von Konfigurationsdateien, das Senden von Log-Dateien und erlaubt zusätzliche Apps in Prüfungen.</p>
+		  
+        <p>Neu in SEB 3.5.2:</p>
+          <ul id="seblist">
+            <li>Das Herunterladen und Öffnen konfigurierter Dateitypen anstelle ihrer Anzeige führte zu einem Absturz: Regression in der iOS-Version behoben.<br>
+            </li>
+            <li> Behoben: Der App-Signaturschlüssel (ASK) wurde bei Verwendung des optionalen, individuell konfigurierten SEB-Servers nicht übertragen.<br>
+            </li>
+            <li> Standardwert für „Ausführung auf iOS Beta zulassen” (in den Einstellungen der App / Sicherheit) auf „iOS &gt;18” gesetzt.</li>
+		  </ul>
+
 <p>Neu in SEB 3.5.1:</p>
 <ul id="seblist">
   <li>Behoben: BrowserExamKey/ConfigKey wird nicht korrekt neu berechnet, wenn die Konfiguration in den In-App-Einstellungen geöffnet wird, wenn zu den Client-Einstellungen zurückgekehrt wird oder wenn die Einstellungen zurückgesetzt werden.<br>
