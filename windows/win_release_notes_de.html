@@ -224,7 +224,52 @@
         <!-- Content Column -->
         <div class="col-md-9">
 			
-			<h4><b>Version 3.9.0</b></h4>
+			<h4><b>Version 3.10.0</b></h4>
+			<p>Safe Exam Browser für Windows Version 3.10.0 verbessert Integritäts‑ und Sicherheitsaspekte, erweitert die optionalen Server‑ und Bildschirmüberwachungs‑Funktionen und behebt das Drag‑&‑Drop‑Problem sowie weitere wichtige Fehlerbehebungen und Verbesserungen.</p>
+			<p class="red">WICHTIG:</p>
+			<ul>
+				<li><span class="red">Ab Version 3.8.0 benötigt Safe Exam Browser für Windows eine Mindestversion des Betriebssystemes von <b>Windows 10 Version 1803</b>.</span></li>
+				<li><span class="red">Der Browser Exam Key von SEB für Windows <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+			</ul>
+			<p>Änderungen:</p>
+			<ul>
+				<li>Niederländische Benutzeroberflächen‑Übersetzung aktualisiert.</li>
+				<li>GHSA‑xhg6‑9j5j‑w4vf behoben, indem zu ProDotNetZip gewechselt wurde.</li>
+				<li>Stack‑Traces verbessert, sodass nur relative Pfade angezeigt werden.</li>
+				<li>Grundlegenden Fensterschutz implementiert.</li>
+				<li>Überprüfung zulässiger Anwendungen während der Initialisierung implementiert.</li>
+				<li>Sicherstellung, dass der Audio‑Stumm‑Zustand korrekt zurückgesetzt wird.</li>
+				<li>Problem mit Drag‑&‑Drop‑Fragetypen behoben, indem Fragmentbewegungen erlaubt wurden.</li>
+				<li>Autovervollständigung im Browser unterdrückt.</li>
+				<li>Action‑Center für den Browserressourcen-Anwendungsfall deaktiviert.</li>
+				<li>Berechtigungsoperation (z. B. zum Gewähren von WLAN‑Zugriff) implementiert, die vor dem Start der Anwendungsüberwachung ausgeführt wird.</li>
+				<li>Probleme bei der Implementierung der isolierten Zwischenablage behoben.</li>
+				<li>Ignorieren von Sperr‑ und Entsperr‑Ereignissen der laufenden Sitzung, um Sperrbildschirme zu verhindern.</li>
+				<li>Fehlende Übersetzungen ergänzt und kleinere Änderungen vorgenommen.</li>
+				<li>Blockierung injizierter Tastatureingaben.</li>
+				<li>Veraltete Auto‑Find‑Funktionalität entfernt.</li>
+				<li>Wrapper für Kontextmenü‑Handler implementiert.</li>
+				<li>Setup‑Bundle aktualisiert, um das Visual C++ Redistributable 2015‑2022 zu installieren.</li>
+				<li>Null‑Reference‑Exception beim Beenden des Browsers nach einem Initialisierungsfehler behoben.</li>
+				<li>Standard‑Log‑Verzeichnis für macOS korrigiert.</li>
+				<li>Browser‑Engine auf Version 139.0.280 (Chromium 139.0.7258.139) aktualisiert.</li>
+			</ul>
+			<p>Die folgenden optionalen Funktionen und Änderungen sind standardmäßig deaktiviert und müssen individuell konfiguriert werden:</p>
+			<ul>
+				<li>Funktion zur Server‑Neukonfiguration implementiert.</li>
+				<li>Cookie‑Durchlauf für die Benutzerauflösung mit dem Server implementiert.</li>
+				<li>Passwort‑Abfrage beim Beenden des Proctoring‑Abschlussdialogs eingeführt.</li>
+				<li>Beaufsichtigungs‑Funktionalität vom Proctoring‑Feature getrennt.</li>
+				<li>Benutzerkennungen zu den Browser‑Integrations‑Logs hinzugefügt.</li>
+				<li>Beaufsichtigungs‑Einstellungen von den Server‑Einstellungen getrennt und bei der Sitzungs‑Initialisierung korrekt zugeordnet.</li>
+				<li>LMS‑Typ für den Server‑Handshake optional gemacht.</li>
+			</ul>
+			<p>Bekannte Probleme:</p>
+			<ul>
+				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
+			</ul>
+			
+			<h4 id="sebh5"><b>Version 3.9.0</b></h4>
 			<p>Safe Exam Browser für Windows Version 3.9.0 behebt die Startverzögerung der Version 3.8.0, bietet wesentliche Verbesserungen der optionalen Bildschirmüberwachungsfunktion sowie weitere wichtige Fehlerbehebungen und Verbesserungen.</p>
 			<p class="red">WICHTIG:</p>
 			<ul>
