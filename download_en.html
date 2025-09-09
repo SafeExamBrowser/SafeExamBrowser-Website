@@ -283,69 +283,39 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.5.4/SafeExamBrowser-3.5.4.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.6/SafeExamBrowser-3.6.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.5.4 for macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.6 for macOS</span>
           </a> 
         </p>
         
-        <p><strong>Current version of Safe Exam Browser for macOS 15, 14, 13, 12, 11</strong><br />
-        <span class="codetext">Build 15683. SHA1: fcc3deef83544661bdbf2c8ca5cc810e27cd064e</span></p>
+        <p><strong>Current version of Safe Exam Browser for macOS 26, 15, 14, 13, 12, 11</strong><br />
+        <span class="codetext">Build 156D0. SHA1: 099ad3f370cf5c7bc46bea4c17975059a810d5df</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.5.4/SafeExamBrowser-3.5.4.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.<span class="codetext"> sha256:bed48e0dc8b5373fa181f7b6d93e0462dbfa4bf464771341dfae209ef276a49b</span></p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.6/SafeExamBrowser-3.6.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.<span class="codetext"> sha256:05a6bdd1abd76ef162883fbf364c93e7498d14231aa936a4633699aa06ea0fb5</span></p>
         <div>
-          <p>SEB 3.5.4 is again sending an App Signature Key (ASK) when using the optional SEB Server and fixes a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia. It also offers new options for downloading and opening specific file types with additional apps, improves usability of some setting options and fixes text entry lag and security issues.</p>
-          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.4 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see SEB 3.5.1 below).</p>
-          <p>New in SEB 3.5.4:</p>
+          <p>SEB 3.6 allows to control the accessibility feature VoiceOver (disable, enable) with new settings. In addition, exams with multiple consecutive quizzes are now possible if using the optional SEB Server and SEB Server Moodle plugin.</p>
+          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.6 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see SEB 3.5.1 <a href="macosx/mac_release_notes_en.html">release notes</a>).</p>
+          <p>New in SEB 3.6:</p>
           <ul id="seblist">
-            <li>Fixed not sending the App Signature Key (ASK) when using the optional SEB Server (issue existing since SEB 3.5.1) .</li>
-            <li>Crashes on macOS 10.15: The modern WebView (WKWebView) unfortunately crashes when loading some pages on macOS 10.15. Therefore we have to set the default setting for the minimum supported macOS version to 11. If you need to support macOS 10.15, you might be able by using the classic WebView in your SEB settings (which isn't recommended as it's outdated).          </li>
-            <li>The SEB icon is correctly displayed in the SEB Dock  when running on macOS 26 Tahoe.</li>
-            <li> Set default value for &quot;Allow Running on iOS Beta&quot; (Settings / Security / iOS) to 'iOS 26'.</li>
+            <li>Added options in Settings to control VoiceOver and other Accessibility settings (iOS).<br>
+            </li>
+            <li>On macOS, you can choose following options for VoiceOver: System Default, Enable, Disable. As SEB cannot change system settings for VoiceOver permanently: If enabling VoiceOver in SEB Settings for an exam, users will still have to manually disable VoiceOver in System Settings / Accessibility / VoiceOver or simply close VoiceOver in its overlay window if it is started by the system after a restart.<br>
+            </li>
+            <li> Changed default for &quot;Allow to open Preferences window on client&quot; to disabled/false.<br>
+            </li>
+            <li> Changed setting for minimum supported macOS version (SEBMinMacOSVersionSupported) to macOS 11 Big Sur. If manually changing this setting, SEB 3.6 should still run on macOS 10.13 - 10.15, but it's highly expected that the WebKit browser engine shipping with these macOS versions isn't fully compatible with some web applications and might even crash in some circumstances.<br>
+            </li>
           </ul>
-
-          <p>New in SEB 3.5.3:</p>
-          <ul id="seblist">
-            <li>Fxed a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia.</li>
-            <li>Fixes a code signing issue in version 3.5.2.</li>
-		  </ul>
-
-		  <p>New in SEB 3.5.1:</p>
-          <ul id="seblist">
-            <li>Download configured file types (and optionally 'open' in specified app) instead of displaying them in the SEB browser: Added new 'File Types' list to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type and use the option 'Open files after downloading'. </li>
-            <li>Fixed: Blocking inline predictions in WebView text fields caused text entry lag with specific macOS versions and system settings: Removed terminating AppleSpell process and implemented better alternative solution. Note: If you created SEB configurations with SEB 3.5, you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes).</li>
-            <li>Fixed: Freeze when using AAC Assessment Mode after download folder permission dialog is displayed. Now performing a preflight for System Settings Privacy Files &amp; Folder access permission for download and log file folders.</li>
-            <li>Support &quot;Running in background&quot; property for permitted processes: Allow the permitted process to already be running when SEB starts (won't be terminated when the session is started in SEB and when the session is ended).<br>
-            </li>
-            <li> Updated UI and wording in Exam setting section and improved usability for sharing of BEK/CK (enabled also when rephrased setting &quot;Send Browser &amp; Config Keys in HTTP Header&quot; is disabled).<br>
-            </li>
-            <li> Now blocking DataDetectorsViewService system process to prevent contacts or calendar popup to be displayed in some instances.<br>
-            </li>
-            <li> Updated preset prohibited processes (Win/Mac).<br>
-            </li>
-            <li> Changed defaults for allowUploads (false) / allowDownUploads (true, deprecated: use separate allowDownload/allowUploads settings).</li>
-          </ul>
-			
-		  <p>New in SEB 3.5:</p>
-          <ul id="seblist">
-            <li>Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expressions, only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">here</a>. </li>
-            <li> Updated selection policy of modern WebView (no longer dependent on using URL content filters).</li>
-            <li> Now blocking AI Writing Tools in macOS Sequoia.</li>
-            <li> Now removes the Passwords Menu Bar Extra (item).<br>
-            </li>
-            <li> Added &quot;Choose Application&quot; button also for prohibited macOS apps (Settings / Applications).<br>
-            </li>
-            <li> Fixed: ConfigKey wasn't updated correctly in Settings window after saving a config file.</li>
-            <li>Changed default value for minimum supported macOS version to 10.15. SEB might still work with macOS 10.13 and 10.14 if you change that setting, but we are not testing with these versions and like Apple we generally recommend to use only the three latest macOS versions. <br>
-            </li>
-		  </ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
               <ul id="seblist">            
-				  <li>The SEB Server feature Raise Hand is now available again if enabled in session settings.<br>
-				  </li>
-				  <li> Fixed: SEB couldn't be quit because it was trying to transmit a screen shot which already was transmitted and deleted.<br>
+				  <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
 			      </li>
-				  <li> Improved security when caching screen shots when connection is offline.<br>
+				  <li> Fixed: SEB should send updated screen shot triggered by touch events when using the optional SEB Screen Proctoring.<br>
+			      </li>
+				  <li> Attempt to fix a crash when establishing an SEB Server connection. If you are using SEB Server and encounter crashes when connecting to it, PLEASE SEND US A BUG REPORT (including according SEB log files and your config file). See Support link.<br>
+			      </li>
+				  <li> Fix for random crashes in screen proctoring.<br>
 				  </li>
               </ul>
           <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work well anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (macOS/iOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
@@ -367,84 +337,31 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.5.2 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.6 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 12 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>SEB 3.5 supports the URL content filter also in the modern WebView, facilitates editing configuration files, sending log files and working with additional apps.</p>
+        <p>SEB can now control accessibility features like VoiceOver. When using the optional SEB Server and its Moodle plugin, exams with multiple consecutive quizzes are possible.</p>
 		  
-        <p>New in SEB 3.5.2:</p>
+        <p>New in SEB 3.6:</p>
           <ul id="seblist">
-            <li>Download and 'open' configured file types instead of displaying them crashed: Fixed regression in iOS version.<br>
+            <li>Added options in in-app Settings / User Interface to control the accessibility features VoiceOver, AssistiveTouch, Grayscale Display, Smart Invert (colors) and Zoom (system default, enable, disable).<br>
             </li>
-            <li> Fixed: App Signature Key (ASK) was not transmitted when using the optional, individually configured SEB Server.<br>
+            <li> Support running on upcoming iOS/iPadOS version without having to change in in-app Settings / Security / Allow Running on iOS Beta never than iOS 18.<br>
             </li>
-            <li> Set default value for &quot;Allow Running on iOS Beta&quot; (in-app Settings / Security) to 'iOS &gt;18'.</li>
-		  </ul>
-
-        <p>New in SEB 3.5.1:</p>
-        <ul id="seblist">
-          <li> Fixed: BrowserExamKey/ConfigKey not recalculated correctly when opening config in in-app settings, when reverting to client settings or resetting settings.<br>
+            <li> Fixed crash in SEB 3.5.2 on (mostly) iOS older than 18.4 when loading specific webpages.<br>
             </li>
-          <li> Fixed crash when changing selection in radio group (InAppSettings, for example on Configuration page).<br>
-            </li>
-          <li> Fixed in-app Settings / Configuration / Remove Default Values and Plain Text not displayed.<br>
-            </li>
-          <li> Changed default preset for Browser Engine Policy: Now using Force Modern (if older settings don't contain another policy).<br>
-            </li>
-          <li> Updated UI and wording in Exam setting section and sharing of BEK/CK (visible also when rephrased setting &quot;Send Browser &amp; Config Keys in HTTP Header&quot; is disabled).<br>
-            </li>
-          <li> Fixed a possible crash reason (happened when SEB settings were reset when starting).<br>
-            </li>
-          <li> Added SEB 3.5 to version user agent strings.</li>
-        </ul>
-        <p>New in SEB 3.5:</p>
-        <ul id="seblist">
-          <li> Now it's possible to open configuration files in in-app Settings ('More options' menu) when not running in a secure session. Can be disabled with new setting &quot;Show 'Edit Config File'  Quick Action&quot; in Settings / Configuration.<br>
-(settings key mobileShowEditConfigShortcutItem).<br>
-          </li>
-          <li> Added Home Screen quick action for editing config files in SEB in-app Settings (touch and hold SEB icon).<br>
-          </li>
-          <li> Editing config files now works correctly with secure client session.<br>
-          </li>
-          <li> Added option to create new exam settings with default values either from the &quot;More options&quot; menu in in-app settings or when canceling file picker invoked from Home Screen quick action for editing config file.<br>
-          </li>
-          <li> Added Discard button to in-app settings when opening config files for editing or when creating exam settings. Hitting Discard will close settings and restart SEB into client settings.<br>
-          </li>
-          <li> Fixed &quot;Additional Apps&quot; was sometimes not displayed in client In-App-Settings.<br>
-          </li>
-          <li> Added in-app settings UI for entering/editing URL filter rules.<br>
-          </li>
-          <li> Added support for URL content filter in WKWebView. Note: If using custom regular expressions as SEB URL filter expression, only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">https://webkit.org/blog/3476/content-blockers-first-look/</a></li>
-          <li> Download (and 'open') configured file types instead of displaying them:<br>
-            Added new File Types setting to Settings / Down/Uploads which allows to specify file types which will be downloaded instead of displayed by the browser. You can also indicate the associated additional app for the file type, specify a custom protocol scheme for that app (Settings / Additional Apps / App / Custom Scheme) and use the option 'Open App for Downloaded File'.<br>
-          </li>
-          <li> Fixed: AAC Multi-App mode (for Additional Apps) not enabled on iPadOS &gt; 17.7.1.<br>
-          </li>
-          <li> Added Home Screen quick action &quot;Share Log File&quot;.<br>
-          </li>
-          <li> Sending logs is now also possible with secure client session.<br>
-          </li>
-          <li> Fixed: Blocking file chooser for uploads on iOS not working in Ans.<br>
-          </li>
-          <li> Changed default values for settings allowDownUploads (enabled/true, deprecated setting) and allowUploads, which is now replaced with allowUploadsiOS (disabled/false).<br>
-          </li>
-          <li> Added separate allowUploadsiOS setting, as choosing files for upload allows to access the Photos library and (iCloud) Files on iOS (compared to macOS, where you can use the temporary download folder to avoid full disk access). <br>
-          </li>
-          <li> Now allowing to quit exam session from Initial Configuration Assistant. If an exam session has no or the default startURL, the ICA is displayed. Until now it wasn't easily possible to quit this exam session, now there is a &quot;Quit Session&quot; button displayed in the ICA (when in an exam session).</li>
-          <li>Changed default value for minimum supported iOS version to 13. SEB will still work with iOS 12 if you change that setting, but we are not testing with this version and we generally recommend to use the latest iOS version. <br>
-          </li>
-        </ul>
+          </ul>
         <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
         <ul id="seblist">
-          <li> Implemented the SEB Server invoked feature Raise Hand.<br>
+          <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
           </li>
-          <li> Implemented Raise Hand message feature (displayed with long press on raise hand Dock button/side menu item or with setting raiseHandButtonAlwaysPromptMessage).<br>
+          <li>Fixed: SEB should send updated screen shot triggered by touch events when using the optional SEB Screen Proctoring.<br>
           </li>
-          <li> Fixed: Prefix in Moodle login User ID resolution for SEB Server wasn't working.<br>
+          <li> Attempt to fix a crash when establishing an SEB Server connection. If you are using SEB Server and encounter crashes when connecting to it, PLEASE SEND US A BUG REPORT (including according SEB log files and your config file). See <a href="support_en.html">support page</a>.<br>
           </li>
-          <li> Improved security for caching screen shots when connection is offline.<br>
+          <li> Fix for random crashes in screen proctoring.<br>
           </li>
         </ul>
         <p>Main Features:</p>
