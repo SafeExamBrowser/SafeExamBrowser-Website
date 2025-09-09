@@ -224,7 +224,52 @@
         <!-- Content Column -->
         <div class="col-md-9" role="main">
 			
-		<h4><b>Version 3.9.0</b></h4>
+		<h4><b>Version 3.10.0</b></h4>
+		<p>Safe Exam Browser for Windows version 3.10.0 improves integrity and security aspects, enhances the optional server and screen proctoring functionalities and fixes the drag & drop issue as well as other important bug fixes and improvements.</p>
+		<p class="red">IMPORTANT:</p>
+		<ul>
+			<li><span class="red">Starting with release version 3.8.0, Safe Exam Browser for Windows requires a minimum operating system version of <b>Windows 10 version 1803</b>.</span></li>
+			<li><span class="red">The Browser Exam Key of SEB for Windows is <i>platform-specific</i>, i.e. its value is different for the 32-bit (x86) and 64-bit (x64) build of the same version!</span></li>
+		</ul>
+		<p>Changes:</p>
+		<ul>
+			<li>Updated Dutch user interface translation.</li>
+			<li>Fixed GHSA-xhg6-9j5j-w4vf by switching to ProDotNetZip.</li>
+			<li>Improved stack traces to show only relative paths.</li>
+			<li>Implemented basic window protection.</li>
+			<li>Implemented verification of permitted applications during initialization.</li>
+			<li>Ensured audio mute state is reverted correctly.</li>
+			<li>Fixed issue with drag & drop question types by allowing fragment movements.</li>
+			<li>Suppressed autocomplete functionality in browser.</li>
+			<li>Disabled action center for browser resource use case.</li>
+			<li>Implemented permissions operation (e.g. for granting wireless network access) which is executed before the application monitoring starts.</li>
+			<li>Fixed issues with the implementation of the isolated clipboard.</li>
+			<li>Ignoring session lock and unlock to prevent lock screens.</li>
+			<li>Added missing translations and minor changes.</li>
+			<li>Blocking of injected keyboard inputs.</li>
+			<li>Removed obsolete auto-find functionality.</li>
+			<li>Implemented wrapper for context menu handler.</li>
+			<li>Updated setup bundle to install Visual C++ 2015-2022 Redistributable.</li>
+			<li>Fixed null reference exception when terminating browser after initialization failure.</li>
+			<li>Fixed default log directory for macOS.</li>
+			<li>Updated browser engine to version 139.0.280 (Chromium version 139.0.7258.139).</li>
+		</ul>
+		<p>The following optional features and changes are disabled by default and need to be configured individually:</p>
+		<ul>
+			<li>Implemented functionality for server reconfiguration.</li>
+			<li>Implemented cookie traversal for user resolution with server.</li>
+			<li>Implemented quit password requirement for proctoring finalization dialog.</li>
+			<li>Separated invigilation functionality from proctoring feature.</li>
+			<li>Added user identifiers to browser integration logs.</li>
+			<li>Separated invigilation settings from server settings and ensured they are correctly mapped during session initialization.</li>
+			<li>Made LMS type optional for server handshake.</li>
+		</ul>
+		<p>Known issues:</p>
+		<ul>
+			<li>Screen readers NVDA and JAWS are not compatible with kiosk mode Create New Desktop. If their usage is required, please use kiosk mode Disable Explorer Shell where they should work as expected.</li>
+		</ul>
+			
+		<h4 id=sebh5><b>Version 3.9.0</b></h4>
 		<p>Safe Exam Browser for Windows version 3.9.0 fixes the startup delay of version 3.8.0, provides major improvements of the optional screen proctoring feature as well as other important bug fixes and improvements.</p>
 		<p class="red">IMPORTANT:</p>
 		<ul>
