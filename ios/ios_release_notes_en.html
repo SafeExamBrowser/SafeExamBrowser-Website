@@ -228,7 +228,51 @@
         
         <!-- Content -->
 			
-    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5</a>:</h5>
+     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.6</a>:          </h5>
+     <ul id="seblist">
+        <li>Added options in in-app Settings / User Interface to control the accessibility features VoiceOver, AssistiveTouch, Grayscale Display, Smart Invert (colors) and Zoom (system default, enable, disable).<br>
+        </li>
+            <li> Support running on  iOS/iPadOS 26 without having to change in in-app Settings / Security / Allow Running on iOS Beta newer than iOS 18.<br>
+            </li>
+            <li> Fixed crash in SEB 3.5.2 on (mostly) iOS versions older than 18.4 when loading specific webpages.</li>
+            <li>Updated hardcoded user agent string (3.5.4 in addition to 3.6).<br>
+            </li>
+          </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
+          <ul id="seblist">
+            <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
+            </li>
+            <li>Fixed: SEB should send updated screen shot triggered by touch events when using the optional SEB Screen Proctoring.<br>
+            </li>
+            <li> Attempt to fix a crash when establishing an SEB Server connection. If you are using SEB Server and encounter crashes when connecting to it, PLEASE SEND US A BUG REPORT (including according SEB log files and your config file). See <a href="support_en.html">support page</a>.<br>
+            </li>
+            <li> Fix for random crashes in screen proctoring.          </li>
+          </ul>
+			
+   <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5.2</a>:</h5>
+          <ul id="seblist">
+            <li>&quot;Download and 'open' configured file types instead of displaying them&quot; crashed: Fixed regression in iOS version.<br>
+            </li>
+            <li> Fixed: App Signature Key (ASK) was not transmitted when using the optional, individually configured SEB Server.<br>
+            </li>
+            <li> Set default value for &quot;Allow Running on iOS Beta&quot; (in-app Settings / Security) to 'iOS &gt;18'.</li>
+		  </ul>
+			
+   <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5.1</a>:</h5>
+        <ul id="seblist">
+          <li> Fixed: BrowserExamKey/ConfigKey not recalculated correctly when opening config in in-app settings, when reverting to client settings or resetting settings.<br>
+          </li>
+          <li> Fixed crash when changing selection in radio group (InAppSettings, for example on Configuration page).<br>
+          </li>
+          <li> Fixed in-app Settings / Configuration / Remove Default Values and Plain Text not displayed.<br>
+          </li>
+          <li> Changed default preset for Browser Engine Policy: Now using Force Modern (if older settings don't contain another policy).<br>          
+          <li> Updated UI and wording in Exam setting section and sharing of BEK/CK (visible also when rephrased setting &quot;Send Browser &amp; Config Keys in HTTP Header&quot; is disabled).<br>          
+          <li> Fixed a possible crash reason (happened when SEB settings were reset when starting).<br>          
+          <li> Added SEB 3.5 to version user agent strings.</li>
+        </ul>
+			
+   <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5</a>:</h5>
 		<ul id="seblist">
           <li> Now it's possible to open configuration files in in-app Settings ('More options' menu) when not running in a secure session.<br>
           </li>

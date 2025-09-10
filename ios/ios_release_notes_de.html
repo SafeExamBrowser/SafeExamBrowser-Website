@@ -227,8 +227,53 @@
         <div class="col-md-6" role="main">
         
         <!-- Content -->
+		
+    <h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version 3.6</a>:</h5>
+          <ul id="seblist">
+            <li>Optionen in den In-App-Einstellungen / Benutzeroberfläche hinzugefügt, um die Bedienungshilfen VoiceOver, AssistiveTouch, Graustufen-Anzeige, &quot;Umkehren - Intelligent&quot; (Farben) und Zoom zu steuern (Systemstandard, aktivieren, deaktivieren).<br>
+            </li>
+            <li>Läuft auf  iOS-/iPadOS 26, ohne dass Einstellungen vorgenommen werden müssen (In-App-Einstellungen / Sicherheit / Ausführung auf iOS Beta neuer als iOS 18 zulassen).<br>
+            </li>
+            <li> Absturz in SEB 3.5.2 unter (meist) iOS älter als 18.4 beim Laden bestimmter Webseiten behoben.        </li>
+            <li>Hardkodierten User Agent String aktualisiert (3.5.4 zusätzlich zu 3.6).</li>
+          </ul>
+        <p>Optionale Funktionen, die individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:</p>
+        <ul id="seblist">
+          <li>Jetzt werden Prüfungen mit mehreren aufeinanderfolgenden Quizzes unterstützt, wenn der optionale SEB Server und das SEB-Server-Moodle-Plugin verwendet werden.<br>
+          </li>
+          <li> SEB sendet jetzt aktualisierte Screenshots, die durch Touch-Ereignisse ausgelöst werden, wenn das optionale SEB Screen Proctoring verwendet wird. <br>
+          </li>
+          <li> Versuch, einen Absturz beim Herstellen einer SEB-Server-Verbindung zu beheben. Wenn Sie SEB Server verwenden und beim Herstellen einer Verbindung dazu Abstürze auftreten, SENDEN SIE UNS BITTE EINEN FEHLERBERICHT (einschliesslich der entsprechenden SEB- Logdateien und Ihrer Konfigurationsdatei). Siehe <a href="support_de.html">Support-Seite</a>.<br>
+          </li>
+          <li> Behebung von zufälligen Abstürzen bei der Bildschirmüberwachung.<br>
+          </li>
+        </ul>
 			
-    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5</a>:</h5>
+    <h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version 3.5.2</a>:</h5>
+          <ul id="seblist">
+            <li>Das Herunterladen und Öffnen konfigurierter Dateitypen anstelle ihrer Anzeige führte zu einem Absturz: Regression in der iOS-Version behoben.</li>
+            <li> Behoben: Der App-Signaturschlüssel (ASK) wurde bei Verwendung des optionalen, individuell konfigurierten SEB-Servers nicht übertragen.</li>
+            <li> Standardwert für „Ausführung auf iOS Beta zulassen” (in den Einstellungen der App / Sicherheit) auf „iOS &gt;18” gesetzt.</li>
+		  </ul>
+
+    <h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version 3.5.1</a>:</h5>
+<ul id="seblist">
+  <li>Behoben: BrowserExamKey/ConfigKey wird nicht korrekt neu berechnet, wenn die Konfiguration in den In-App-Einstellungen geöffnet wird, wenn zu den Client-Einstellungen zurückgekehrt wird oder wenn die Einstellungen zurückgesetzt werden.<br>
+    </li>
+  <li> Behoben: Absturz beim Ändern der Auswahl in der Radiogruppe (In-App-Einstellungen, z. B. auf der Seite „Konfiguration“).<br>
+    </li>
+  <li> Behoben: In-App-Einstellungen / Konfiguration / Standardwerte entfernen und Klartext wurden nicht angezeigt.<br>
+    </li>
+  <li> Geänderte Voreinstellung für Policy zum Wählen der Browser-Engine: Jetzt wird 'Moderne erzwingen' verwendet (wenn ältere Einstellungen keine andere Richtlinie enthalten).<br>
+    </li>
+  <li> Verbesserungen in Benutzeroberfläche und Formulierung auf der Seite Prüfungssession und beim Teilen von BEK/CK (auch sichtbar, wenn die neu formulierte Einstellung „Browser &amp; Config Keys im HTTP Header senden“ deaktiviert ist).<br>
+    </li>
+  <li> Eine mögliche Absturzursache wurde behoben (trat auf, wenn die SEB-Einstellungen beim Start zurückgesetzt wurden).<br>
+    </li>
+  <li> Die Version SEB 3.5 wurde in die  User-Agent-Strings aufgenommen.</li>
+</ul>
+			
+    <h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version 3.5</a>:</h5>
 <ul id="seblist">
   <li>Es ist jetzt möglich, Konfigurationsdateien in den In-App-Einstellungen (Menü „Weitere Optionen“) zu öffnen, wenn keine sichere Session läuft.<br>
     </li>
@@ -295,7 +340,7 @@
   </li>
 </ul>
 			
-    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4.1</a>:</h5>
+    <h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version  3.4.1</a>:</h5>
 <ul id="seblist">
   <li>Schaltfläche zum Anzeigen des Konfigurations-QR-Codes in den App-internen Einstellungen / Konfiguration hinzugefügt.<br>
   </li>
@@ -317,7 +362,7 @@
   </li>
 </ul>
 			
-    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
+    <h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
 <ul id="seblist">
   <li>Läuft jetzt unter iOS 18, ohne dass spezielle Einstellungen verwendet werden müssen.</li>
   <li>Unterstützung für den AAC Multi-App Modus ab iPadOS 18. Dies ermöglicht es, Drittapplikationen neben SEB in Prüfungen zu verwenden.
@@ -341,7 +386,7 @@
   <li> Verbesserung der Benutzer-ID-Auflösung bzw. des Handshake-Abschlusses mit dem optionalen SEB-Server: Es werden nun auch generische Prüfungssysteme mit SEB-Server unterstützt.<br>
   </li>
 </ul>			
-<h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
+<h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
     <ul id="seblist">
       <li>Der Kontextmenüeintrag &quot;Automatisch Ausfüllen&quot; für Kontakte/Kennwörter in Textfeldern unter iOS 17 wird nun entfernt.<br>
       </li>
@@ -368,7 +413,7 @@
       </ul>
     <strong>WICHTIG für SEB-Integrationen: Das klassische WebView</strong> (das iOS-Framework UIWebView) <strong>wurde von Apple schon vor Jahren ABGEKÜNDIGT</strong> (DEPRECATED), wird nicht mehr gewartet und wird irgendwann komplett aus iOS/iPadOS entfernt. <strong style="color: #FF0004">Es ist wichtig, dass Assessment-Systeme mit SEB-Integration, die den Browser Exam Key (BEK) und Config Key (CK) verwenden, auf die <a href="developer/seb-config-key.html">SEB Javascript API</a> umsteigen, um diese Schlüssel abzufragen</strong>, da das moderne WebView (iOS/macOS Framework WKWebView) die Übermittlung des BEK/CK in HTTP-Request-Headern nicht unterstützt. <a href="developer/seb-config-key.html">Lesen Sie in unserer Dokumentation nach</a>, wie Sie die SEB JS API übernehmen können. <strong> SEB zeigt nun eine Warnmeldung an, wenn das klassische WebView von Ihren SEB-Einstellungen verwendet wird, da es jetzt von grösster Wichtigkeit ist, vom klassischen WebView wegzukommen und nur das moderne zu verwenden.</strong>
 			
-	<h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
+	<h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
     <ul id="seblist">
       <li>Option hinzugefügt, um die Einstellungen für den Start einer Prüfung unkomprimiert als reinen Text im Dialog &quot;Sichern als...&quot; zu speichern. Dies ist hilfreich für den Import dieser Konfigurationsdateien in LMS/Prüfungssysteme, die keine gzip-komprimierten oder verschlüsselten Konfigurationsdateien unterstützen (z.B. Moodle) oder für die manuelle Bearbeitung.</li>
       <li>Behoben: Abbrechen im Prüfungspasswort-Dialog funktionierte nicht.</li>
@@ -384,7 +429,7 @@
       <li>Erweiterte Fehlermeldung, wenn die optionale Funktion Zoom Proctoring in den Einstellungen aktiviert ist, mit &quot;Aufgrund von Zoom-Lizenzierungsfragen ist Zoom Live Proctoring nur für SEB Alliance-Mitglieder verfügbar. Bitte besuchen Sie https://safeexambrowser.org/alliance.&quot;.</li>
       </ul>
 			
-    <h5 id="sebh5"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
+    <h5 id="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
     <ul id="seblist">
       <li>Verbesserungen für Barrierefreiheit: Dynamische Skalierung der Schriftart im Seitenmenü, im Erstkonfigurationsassistenten, in der Ansicht &quot;Über SEB&quot; und im Sperrbildschirm.</li>
       <li>Unterstützt jetzt auch den Modus &quot;Kontrast erhöhen&quot; und fettgedruckten Text im Seitenmenü.</li>
@@ -414,20 +459,20 @@
       <li>Verbesserte Protokollierung von SEB Server-Verbindungen.</li>
     </ul>
 			
-    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.4</a>:</h5>
+    <h5> Release Notes  <a href="../download_de.html#iOS">Safe Exam Browser Version  3.2.4</a>:</h5>
     <ul id="seblist">
       <li>Das Herunterladen von auf der Website generierten Dateien (mit dem Protokollschema &quot;data:&quot;) wurde korrigiert.</li>
       <li>Jetzt sind Downloads beliebiger Dateitypen und &quot;blob:&quot;-generierter Dateien möglich, wenn Sie das moderne WebView und iOS 14.5 oder neuer verwenden. Diese heruntergeladenen Dateien verwenden auch den ursprünglichen Dateinamen (dies war in dem klassischen WebView nicht möglich).</li>
       <li>Ein weiterer Versuch, einen Absturz beim Schliessen einiger Webseiten zu beheben.</li>
     </ul>
 			
-    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.3</a>:</h5>
+    <h5> Release Notes  <a href="../download_de.html#iOS">Safe Exam Browser Version  3.2.3</a>:</h5>
     <ul id="seblist">
       <li>Behoben: Downloads von Website-generierten Dateien funktionierten nicht in SEB 3.1.1 und 3.2.2.</li>
       <li>Absturz beim Schliessen eines Tabs behoben.</li>
     </ul>
 			
-    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.2</a>:</h5>
+    <h5> Release Notes  <a href="../download_de.html#iOS">Safe Exam Browser Version  3.2.2</a>:</h5>
           <ul id="seblist">
             <li>Anzeige von Dialog für Kamera- und Mikrofonerlaubnis für Webanwendungen und optionales integriertes Proctoring vor Beginn der Session. </li>
             <li>Neue Einstellungen <em>browserMediaCaptureCamera</em> und <em>browserMediaCaptureMicrophone</em> (<em>Einstellungen / Browser-Funktionen / Medienwiedergabe/-aufnahme / Kamera-/Mikrofonaufnahme zulassen</em>) zur Steuerung des Browserzugriffs auf Kamera/Mikrofon (WebRTC oder Standbilder/Audioaufnahmen) hinzugefügt. Wenn diese Einstellungen aktiviert sind, werden die Benutzer aufgefordert, den Zugriff auf Kamera/Mikrofon für SEB zu erlauben, bevor die entsprechende (Prüfungs-)Session gestartet wird. </li>
@@ -448,7 +493,7 @@
             <li>Erneuerung abgelaufener SEB Server OAuth-Token.</li>
             <li>Verbesserte Stabilität im Fall von falsch konfigurierten SEB-Server-Prüfungen.</li>
           </ul>
-<h5 id="sebh5"> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.1.1</a>:</h5>
+<h5 id="sebh5"> Release Notes  <a href="../download_de.html#iOS">Safe Exam Browser Version  3.1.1</a>:</h5>
           <ul id="seblist">
             <li>Unterstützung für iOS 16 hinzugefügt.</li>
             <li>Alle aktuellen iOS-Versionsnummern wurden zur Einstellung 'Erlaube Benutzung ab iOS-Version' hinzugefügt.</li>
@@ -458,7 +503,7 @@
             <li>Ein Problem wurde behoben, welches das mehrmalige Scannen von QR-Codes verunmöglichte.</li>
             <li>Stabilitätsprobleme behoben.</li>
           </ul>
-          <h5 id="sebh"> Release Notes <a href="../download_en.html#iOS">Safe Exam Browser Version  3.1</a>:</h5>
+          <h5 id="sebh"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version  3.1</a>:</h5>
           <ul id="seblist">
             <li>Textsuche für Webseiten hinzugefügt (Hinweis: Die Suche in PDF-Dateien wird derzeit nicht unterstützt).</li>
             <li>Es wurden Tastenkombinationen für das Neuladen (Befehl-R), die Textsuche (cmd-F) und das Beenden der Prüfungssitzung (cmd-Umschalt-Q) hinzugefügt.</li>

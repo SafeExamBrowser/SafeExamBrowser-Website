@@ -227,13 +227,49 @@
 			
           <!-- Content -->
 			
+		  <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.6</a>:</h5>
+		  <p>SEB 3.6 allows to control the accessibility feature VoiceOver (disable, enable) with new settings. In addition, exams with multiple consecutive quizzes are now possible if using the optional SEB Server and SEB Server Moodle plugin.</p>
+		  <p>New in SEB 3.6 (Build 156D0):</p>
+          <ul id="seblist">
+            <li>Added options in Settings to control VoiceOver and other Accessibility settings (iOS).<br>
+            </li>
+            <li>On macOS, you can choose following options for VoiceOver: System Default, Enable, Disable. As SEB cannot change system settings for VoiceOver permanently: If enabling VoiceOver in SEB Settings for an exam, users will still have to manually disable VoiceOver in System Settings / Accessibility / VoiceOver or simply close VoiceOver in its overlay window if it is started by the system after a restart.<br>
+            </li>
+            <li> Changed default for &quot;Allow to open Preferences window on client&quot; to disabled/false.<br>
+            </li>
+            <li> Changed setting for minimum supported macOS version (SEBMinMacOSVersionSupported) to macOS 11 Big Sur. If manually changing this setting, SEB 3.6 should still run on macOS 10.13 - 10.15, but it's highly expected that the WebKit browser engine shipping with these macOS versions isn't fully compatible with some web applications and might even crash in some circumstances.</li>
+            <li>Updated hardcoded user agent string (3.5.4 in addition to 3.6).<br>
+            </li>
+          </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+          <ul id="seblist">            
+		    <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
+	        </li>
+				  <li> Fixed: SEB should send updated screen shot triggered by touch events when using the optional SEB Screen Proctoring.<br>
+			      </li>
+				  <li> Attempt to fix a crash when establishing an SEB Server connection. If you are using SEB Server and encounter crashes when connecting to it, PLEASE SEND US A BUG REPORT (including according SEB log files and your config file). See Support link.<br>
+			      </li>
+				  <li> Fix for random crashes in screen proctoring.<br>
+				  </li>
+          </ul>
+			
+		  <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.5.4</a>:</h5>
+		  <p>SEB 3.5.4 is again sending an App Signature Key (ASK) when using the optional SEB Server and fixes a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia. It also offers new options for downloading and opening specific file types with additional apps, improves usability of some setting options and fixes text entry lag and security issues.</p>
+          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.4 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions.</strong></p>
+          <p>New in SEB 3.5.4 (Build 15683):</p>
+          <ul id="seblist">
+            <li>Fixed not sending the App Signature Key (ASK) when using the optional SEB Server (issue existing since SEB 3.5.1).<br>
+            </li>
+            <li> Crashes on macOS 10.15: The modern WebView (WKWebView) unfortunately crashes when loading some pages on macOS 10.15. Therefore we have to set the default setting for the minimum supported macOS version to 11. If you need to support macOS 10.15, you might be able by using the classic WebView in your SEB settings (which isn't recommended as it's outdated). </li>
+          </ul>
+			
 		  <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.5.3</a>:</h5>
 		  <p>SEB 3.5.3 fixes a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia.</p>
           <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.5.3 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions.</strong></p>
           <p>New in SEB 3.5.3 (Build 1567A):</p>
           <ul id="seblist">
             <li>Fixes a crash which happens when loading some websites on macOS versions earlier than macOS 15 Sequoia. <br>
-              </li>
+            </li>
             <li> Fixes a code signing issue in version 3.5.2.</li>
           </ul>
 			
