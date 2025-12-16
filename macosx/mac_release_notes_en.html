@@ -227,7 +227,32 @@
 			
           <!-- Content -->
 			
-		  <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.6</a>:</h5>
+		  <h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.6.1</a>:</h5>
+		  <p>SEB 3.6.1 contains various maintenance fixes and one security improvement.</p>
+		  <p>New in SEB 3.6.1 (Build 15726):</p>
+          <ul id="seblist">
+            <li>Allow to open Settings when starting SEB for the first time/with default client settings. This solves access to settings if you want to set up SEB manually (as the setting &quot;Allow to open Preferences window on client&quot; is by default disabled/false since SEB 3.6).</li>
+            <li>Now blocking the Autofill feature in specific situations.<br>
+            </li>
+            <li> Added Google Chrome to preset default prohibited processes. Chrome will now be quit by SEB when not using the AAC Assessment Mode. This prevents that SEB has to terminate the &quot;Chromium Helper&quot; process constantly. <br>
+            </li>
+            <li> Fixed: &quot;Allow open/save panel&quot; and &quot;Allow share sheet&quot; settings (when working with permitted additional applications) were not working. <br>
+            </li>
+            <li> No longer terminating open/save panel agent while Settings are open (&quot;Open&quot; and &quot;Save As&quot; work in Settings even if the AAC Assessment Mode is active and the &quot;Allow open/save panel&quot; and &quot;Allow share sheet&quot; settings are not enabled). <br>
+            </li>
+            <li> Now only asking to grant downloads/log folder access if downloading/logging is enabled in current settings.<br>
+            </li>
+            <li> Fixed crash when loading web pages with settings sendBrowserExamKey = true and logLevel = Verbose.<br>
+            </li>
+          </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+          <ul id="seblist">            
+		    <li>Fixed: Accessibility settings (like enable/disable VoiceOver) were not updated when reconfiguring with SEB Server.</li>
+		    <li>Fix for starting an SEB Server exam via connection config (exam list), in which case SEB 3.6 wasn't sending an App Signature Key (ASK). <br>
+		    </li>
+          </ul>
+					  
+			<h5 id="sebh">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.6</a>:</h5>
 		  <p>SEB 3.6 allows to control the accessibility feature VoiceOver (disable, enable) with new settings. In addition, exams with multiple consecutive quizzes are now possible if using the optional SEB Server and SEB Server Moodle plugin.</p>
 		  <p>New in SEB 3.6 (Build 156D0):</p>
           <ul id="seblist">

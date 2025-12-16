@@ -226,7 +226,25 @@
         
           <!-- Content -->
 			
-		  <h5 id="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.6</a>:		  </h5>
+		  <h5 id="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.6.1</a>:		  </h5>
+          <p>SEB kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich.</p>
+			
+          <p>Neu in SEB 3.6 (Build 15726):</p>
+          <ul id="seblist">
+            <li>Erlaubt das Öffnen der Einstellungen beim ersten Start von SEB/mit den Standard-Client-Einstellungen. Dies löst das Problem des Zugriffs auf die Einstellungen, wenn Sie SEB manuell einrichten möchten (da die Einstellung &bdquo;Öffnen des Einstellungsfensters auf dem Client zulassen&rdquo; seit SEB 3.6 standardmässig deaktiviert/falsch ist).</li>
+            <li>Die Funktion &bdquo;Automatisches Ausfüllen&ldquo; wird nun in bestimmten Situationen blockiert. </li>
+            <li>Google Chrome wurde zu den voreingestellten standardmässig verbotenen Prozessen hinzugefügt. Chrome wird nun von SEB beendet, wenn der AAC-Bewertungsmodus nicht verwendet wird. Dadurch wird verhindert, dass SEB den Prozess &bdquo;Chromium Helper&ldquo; ständig beenden muss.</li>
+            <li> Behoben: Die Einstellungen &bdquo;Öffnen/Speichern-Fenster zulassen&rdquo; und &bdquo;Share Sheet zulassen&rdquo; (bei der Arbeit mit zugelassenen zusätzlichen Anwendungen) funktionierten nicht. </li>
+            <li>Beendet den Öffnen/Speichern-Fenster-Agenten nicht mehr, während die Einstellungen geöffnet sind (&bdquo;Öffnen&rdquo; und &bdquo;Speichern unter&rdquo; funktionieren in den Einstellungen auch dann, wenn der AAC-Bewertungsmodus aktiv ist und die Einstellungen &bdquo;Öffnen/Speichern-Fenster zulassen&rdquo; und &bdquo;Share Sheet zulassen&rdquo; nicht aktiviert sind). </li>
+            <li>Jetzt wird nur noch um die Erlaubnis zum Herunterladen/Zugriff auf den Protokollordner gebeten, wenn das Herunterladen/Protokollieren in den aktuellen Einstellungen aktiviert ist.</li>
+            <li>Absturz beim Laden von Webseiten mit den Einstellungen sendBrowserExamKey = true und logLevel = Verbose behoben. </li>
+          </ul>
+          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
+          <ul id="seblist">
+            <li>Behoben: Einstellungen für die Bedienungshilfen (wie das Aktivieren/Deaktivieren von VoiceOver) wurden bei der Neukonfiguration mit dem SEB-Server nicht aktualisiert.</li>
+            <li>Fehlerbehebung beim Starten einer SEB-Serverprüfung über die Verbindungskonfiguration (Prüfungsliste), bei der SEB 3.6 keinen App-Signaturschlüssel (ASK) gesendet hat. </li>
+          </ul>
+					  <h5 id="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.6</a>:		  </h5>
           <p>SEB kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich.</p>
           <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.6 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe Release Notes SEB 3.5.1). </p>
 			

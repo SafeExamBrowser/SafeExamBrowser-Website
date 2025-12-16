@@ -282,23 +282,39 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.6/SafeExamBrowser-3.6.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.6.1/SafeExamBrowser-3.6.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.6 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.6.1 für macOS</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 26, 15, 14, 13, 12, 11</strong><br />
-        <span class="codetext">Build 156D0. SHA1: 099ad3f370cf5c7bc46bea4c17975059a810d5df</span></p>
+        <span class="codetext">Build 15726. SHA1: 7088ee35b99b0f4a8e88250ef34d68352fdba4d3</span></p>
             
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.6/SafeExamBrowser-3.6.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:05a6bdd1abd76ef162883fbf364c93e7498d14231aa936a4633699aa06ea0fb5</span></p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.6.1/SafeExamBrowser-3.6.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:05a6bdd1abd76ef162883fbf364c93e7498d14231aa936a4633699aa06ea0fb5</span></p>
         <div>
-          <p>SEB kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich.</p>
-          <p><strong>Für Prüfungsadministratoren:</strong> Um nach einer Neuinstallation von SEB 3.6 den Zugriff auf das In-App-Einstellungsmenü zu ermöglichen, <a href="sebs://safeexambrowser.org/exams/SEBClientSettings_Settings_Allowed.seb">konfigurieren Sie SEB 3.6 über diesen Link</a>.</p>
-          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.6 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe <a href="macosx/mac_release_notes_de.html">Release Notes</a> SEB 3.5.1). </p>
+          <p>SEB kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich. SEB 3.6.1 enthält verschiedene Fehlerbehebungen und eine Sicherheitsverbesserung.          </p>
+          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.6.1 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe <a href="macosx/mac_release_notes_de.html">Release Notes</a> SEB 3.5.1). </p>
 			
-          <p>Neu in SEB 3.6:</p>
+          <p>Neu in SEB 3.6.1:</p>
+          <ul id="seblist">
+            <li>
+            Erlaubt das Öffnen der Einstellungen beim ersten Start von SEB/mit den Standard-Client-Einstellungen. Dies löst das Problem des Zugriffs auf die Einstellungen, wenn Sie SEB manuell einrichten möchten (da die Einstellung &bdquo;Öffnen des Einstellungsfensters auf dem Client zulassen&rdquo; seit SEB 3.6 standardmässig deaktiviert/falsch ist).</li>
+            <li>Die Funktion &bdquo;Automatisches Ausfüllen&ldquo; wird nun in bestimmten Situationen blockiert. </li>
+            <li>Google Chrome wurde zu den voreingestellten standardmässig verbotenen Prozessen hinzugefügt. Chrome wird nun von SEB beendet, wenn der AAC-Bewertungsmodus nicht verwendet wird. Dadurch wird verhindert, dass SEB den Prozess &bdquo;Chromium Helper&ldquo; ständig beenden muss.</li>
+            <li> Behoben: Die Einstellungen &bdquo;Öffnen/Speichern-Fenster zulassen&rdquo; und &bdquo;Share Sheet zulassen&rdquo; (bei der Arbeit mit zugelassenen zusätzlichen Anwendungen) funktionierten nicht. </li>
+            <li>Beendet den Öffnen/Speichern-Fenster-Agenten nicht mehr, während die Einstellungen geöffnet sind (&bdquo;Öffnen&rdquo; und &bdquo;Speichern unter&rdquo; funktionieren in den Einstellungen auch dann, wenn der AAC-Bewertungsmodus aktiv ist und die Einstellungen &bdquo;Öffnen/Speichern-Fenster zulassen&rdquo; und &bdquo;Share Sheet zulassen&rdquo; nicht aktiviert sind). </li>
+            <li>Jetzt wird nur noch um die Erlaubnis zum Herunterladen/Zugriff auf den Protokollordner gebeten, wenn das Herunterladen/Protokollieren in den aktuellen Einstellungen aktiviert ist.</li>
+            <li>Absturz beim Laden von Webseiten mit den Einstellungen sendBrowserExamKey = true und logLevel = Verbose behoben.            </li>
+          </ul>
+          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
+          <ul id="seblist">
+            <li>Behoben: Einstellungen für die Bedienungshilfen (wie das Aktivieren/Deaktivieren von VoiceOver) wurden bei der Neukonfiguration mit dem SEB-Server nicht aktualisiert.</li>
+            <li>Fehlerbehebung beim Starten einer SEB-Serverprüfung über die Verbindungskonfiguration (Prüfungsliste), bei der SEB 3.6 keinen App-Signaturschlüssel (ASK) gesendet hat. </li>
+          </ul>
+			
+		<p>Neu in SEB 3.6:</p>
           <ul id="seblist">
             <li>Optionen in den In-App-Einstellungen / Benutzeroberfläche hinzugefügt, um die Bedienungshilfe VoiceOver zu steuern (Systemstandard, aktivieren, deaktivieren).</li>
             <li>Die Standardeinstellung für „Öffnen des Einstellungsfensters auf dem Client zulassen“ wurde auf deaktiviert geändert.</li>
