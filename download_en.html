@@ -358,36 +358,47 @@
 	    <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.6 for iOS in the App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.6.2 for iOS in the App Store</span>
           </a> 
         </p>
         
         <p><strong>Current version of SafeExamBrowser for iOS/iPadOS 12 and newer<a href="#RemarkOSX10-7"></a></strong></p>
-        <p>SEB can now control accessibility features like VoiceOver. When using the optional SEB Server and its Moodle plugin, exams with multiple consecutive quizzes are possible.</p>
+        <p>SEB improves stability and fixes an MDM configuration issue. Starting SEB 3.6,  accessibility features like VoiceOver can be controlled by new settings options. When using the optional SEB Server and SEB Server Moodle plugin,  exams with multiple consecutive quizzes are supported.</p>
 		  
+        <p>New in SEB 3.6.2:</p>
+          <ul id="seblist">
+            <li>Fixes that a secure MDM config (with quit password) lead to a red lock screen (exam not finished correctly) on first start, now also when running on iOS 26.</li>
+            <li>Removed all legacy code related to UIWebView. This wasn't used anymore, but might still have led to some random crashes.<br>
+            </li>
+            <li> Fixed a crash which randomly happened when reconfiguring SEB (starting a new session).<br>
+            </li>
+            <li> Fixed crash in Settings/Configuration/Use Config For … when changing the selected option.<br>
+            </li>
+          </ul>	
+		  
+        <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
+        <ul id="seblist">
+          <li>Attempt to fix random crashes when using screen proctoring.<br>
+          </li>
+        </ul>
+		  
+        <p><strong>Known issue with a specific MDM restriction</strong>: This causes the system to terminate the app when<br>
+          • it was deployed/is managed by MDM<br>
+          • the MDM restriction &quot;Managed apps can't use iCloud sync” is active on the device<br>
+        • it invokes Assessment mode </p>
+        <p>This is an iOS issue, which should be fixed in some future iOS update. If you require that MDM restriction, then you can contact us (see <a href="https://safeexambrowser.org/alliance/contribute.html">e-mail on this page</a>).</p>
         <p>New in SEB 3.6:</p>
           <ul id="seblist">
             <li>Added options in in-app Settings / User Interface to control the accessibility features VoiceOver, AssistiveTouch, Grayscale Display, Smart Invert (colors) and Zoom (system default, enable, disable).<br>
             </li>
-            <li> Support running on  iOS/iPadOS 26 without having to change in in-app Settings / Security / Allow Running on iOS Beta newer than iOS 18.<br>
-            </li>
-            <li> Fixed crash in SEB 3.5.2 on (mostly) iOS versions older than 18.4 when loading specific webpages.<br>
+            <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
             </li>
           </ul>
-        <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
-        <ul id="seblist">
-          <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
-          </li>
-          <li>Fixed: SEB should send updated screen shot triggered by touch events when using the optional SEB Screen Proctoring.<br>
-          </li>
-          <li> Attempt to fix a crash when establishing an SEB Server connection. If you are using SEB Server and encounter crashes when connecting to it, PLEASE SEND US A BUG REPORT (including according SEB log files and your config file). See <a href="support_en.html">support page</a>.<br>
-          </li>
-          <li> Fix for random crashes in screen proctoring.<br>
-          </li>
-        </ul>
+		  
         <p>Main Features:</p>
         <ul id="seblist">
-          <li>The assessment mode used by SEB is built into the iOS operating system and therefore provides a high level of security. </li>
+          <li>The assessment mode used by SEB is built into the iOS operating system and therefore provides a high level of security. <br>
+          <strong class="red">NOTE: You must set a SEB Quit Password in order for SEB to activate the iOS Assessment mode! </strong></li>
           <li>Students cannot switch to other (not permitted) apps, access other websites or communicate with other students during an exam. </li>
           <li>Notifications, FaceTime/voice calls and screen shots are also blocked. </li>
           <li>SEB for iOS works both on unmanaged iOS devices like students' own iPads as well as on iOS devices owned and managed by an institution. </li>

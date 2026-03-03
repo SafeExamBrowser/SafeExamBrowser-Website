@@ -346,40 +346,51 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.6 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.6.2 für iOS im App Store</span>
           </a> 
         </p>
         
 
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 12 und neuer</strong></p>
                 
-<p>SEB 3.6 kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich.</p>
+<p>SEB 3.6.2 verbessert die Stabilität und behebt ein Problem mit der MDM-Konfiguration. Ab SEB 3.6 können Bedienungshilfen wie VoiceOver gesteuert werden. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich.</p>
 		  
-        <p>Neu in SEB 6:</p>
+        <p>Neu in SEB 3.6.2:</p>
           <ul id="seblist">
-            <li>Optionen in den In-App-Einstellungen / Benutzeroberfläche hinzugefügt, um die Bedienungshilfen VoiceOver, AssistiveTouch, Graustufen-Anzeige, &quot;Umkehren - Intelligent&quot; (Farben) und Zoom zu steuern (Systemstandard, aktivieren, deaktivieren).<br>
+            <li>Nun auch unter iOS 26 behoben: Sichere MDM-Konfiguration (mit Quit-Passwort) führt beim ersten Start zu einem roten Sperrbildschirm (Prüfung nicht korrekt abgeschlossen).<br>
             </li>
-            <li>Läuft auf  iOS-/iPadOS 26, ohne dass Einstellungen vorgenommen werden müssen (In-App-Einstellungen / Sicherheit / Ausführung auf iOS Beta neuer als iOS 18 zulassen).<br>
+            <li> Veralteter Code im Zusammenhang mit UIWebView wurde entfernt. Dieser wurde zwar nicht mehr verwendet, konnte jedoch weiterhin zu zufälligen Abstürzen führen.<br>
             </li>
-            <li> Absturz in SEB 3.5.2 unter (meist) iOS älter als 18.4 beim Laden bestimmter Webseiten behoben.        </li>
+            <li> Ein Absturz, der zufällig beim Neukonfigurieren von SEB (Starten einer neuen Sitzung) auftrat, wurde behoben.<br>
+            </li>
+            <li> Ein Absturz in „Einstellungen/Konfiguration/Konfiguration verwenden zum …” beim Ändern der ausgewählten Option wurde behoben..        </li>
           </ul>
         <p>Optionale Funktionen, die individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:</p>
         <ul id="seblist">
-          <li>Jetzt werden Prüfungen mit mehreren aufeinanderfolgenden Quizzes unterstützt, wenn der optionale SEB Server und das SEB-Server-Moodle-Plugin verwendet werden.<br>
-          </li>
-          <li> SEB sendet jetzt aktualisierte Screenshots, die durch Touch-Ereignisse ausgelöst werden, wenn das optionale SEB Screen Proctoring verwendet wird. <br>
-          </li>
-          <li> Versuch, einen Absturz beim Herstellen einer SEB-Server-Verbindung zu beheben. Wenn Sie SEB Server verwenden und beim Herstellen einer Verbindung dazu Abstürze auftreten, SENDEN SIE UNS BITTE EINEN FEHLERBERICHT (einschliesslich der entsprechenden SEB- Logdateien und Ihrer Konfigurationsdatei). Siehe <a href="support_de.html">Support-Seite</a>.<br>
-          </li>
-          <li> Behebung von zufälligen Abstürzen bei der Bildschirmüberwachung.<br>
+          <li>Zufällige Abstürze bei der Verwendung von Screen Proctoring sollten jetzt behoben sein.<br>
           </li>
         </ul>
-<p>Wichtigste Funktionen:</p>
+		  
+        <p><strong>Bekanntes Problem mit einer bestimmten MDM-Einschränkung:</strong> Dies führt dazu, dass das System die App beendet, wenn<br>
+          • sie von MDM bereitgestellt/verwaltet wird<br>
+          • die MDM-Einschränkung „Verwaltete Apps können iCloud-Synchronisierung nicht verwenden” auf dem Gerät aktiv ist<br>
+        • sie den Bewertungsmodus aufruft </p>
+        <p>Dies ist ein iOS-Problem, welches in einem zukünftigen iOS-Update behoben werden sollte. Wenn Sie diese MDM-Einschränkung benötigen, können Sie sich an uns wenden (siehe <a href="https://safeexambrowser.org/alliance/contribute.html">Mailadresse auf dieser Seite</a>). </p>
+        <p>Neu in SEB 3.6:</p>
+          <ul id="seblist">
+            <li>Optionen in den In-App-Einstellungen / Benutzeroberfläche hinzugefügt, um die Bedienungshilfen VoiceOver, AssistiveTouch, Graustufen-Anzeige, &quot;Umkehren - Intelligent&quot; (Farben) und Zoom zu steuern (Systemstandard, aktivieren, deaktivieren).<br>
+            </li>
+            <li>Jetzt werden Prüfungen mit mehreren aufeinanderfolgenden Quizzes unterstützt, wenn der <strong>optionale</strong> SEB Server und das SEB-Server-Moodle-Plugin verwendet werden.<br>
+            </li>
+          </ul>
+		  
+		  <p>Wichtigste Funktionen:</p>
 <ul id="seblist">
   <li> SEB für iOS generiert nun den <strong>Browser Exam Key</strong> und den neuen <strong>Config Key</strong> und sendet deren Hash-Werte an kompatible Prüfungssysteme. Diese Prüfungssysteme können damit sicherstellen, dass eine Prüfung nur mit einer zugelassenen  SEB-Version mit korrekten Einstellungen zugänglich ist.</li>
   <li><strong>URL Filter</strong> können nun benutzt werden, um den Zugang zu Websites/einzelnen Seiten/Web-Ressourcen einzuschränken. Benutzen Sie die Desktop-Versionen von SEB, um Konfigurationsdateien mit solchen URL-Filter-Regeln zu erstellen.</li>
   <li>SEB für iOS speichert  Log-Dateien, welche beim Analysieren von Problemen hilfreich sind. Diese Logs können direkt aus SEB per E-Mail an die SEB-Entwickler oder an Prüfungsadministratoren gesendet werden.</li>
-  <li>Der von SEB benutze Einzelapp-Kioskmodus ist im iOS Betriebssystem eingebaut und bietet deswegen ein hohes Mass an Sicherheit gegen Schummeln und Manipulationsversuche. </li>
+  <li>Der von SEB benutze Bewertungs-/Assessment-(Kiosk)-Modus ist im iOS Betriebssystem eingebaut und bietet deswegen ein hohes Mass an Sicherheit gegen Schummeln und Manipulationsversuche. <br>
+          <strong class="red">HINWEIS: Sie müssen ein SEB Beenden-Passwort setzen, damit SEB den iOS-Bewertungs/Assessment Modus benutzt! </strong></li>
   <li>Studierende können während der Prüfung nicht zu anderen Apps wechseln, auf andere Webseiten zugreifen oder mit anderen Personen kommunizieren. </li>
   <li>Benachrichtigungen, FaceTime/Mobilanrufe und Bildschirmfotos werden ebenfalls unterbunden. </li>
   <li>SEB für iOS funktioniert sowohl auf privaten iPads der Studierenden, als auch auf verwalteten iOS-Geräten, welche einer Institution gehören.  </li>
