@@ -293,21 +293,20 @@
 
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7/SafeExamBrowser-3.7.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.<span class="codetext"> sha256:fcf9725e9bbe42e58a843e5f60c4fc40ea7429c3bdebfb9c6f8c59f6f61f28e2</span></p>
         <div>
-          <p>SEB 3.7 contains many important security improvements, a new Wi-Fi control especially helpful with the AAC Assessment Mode and various fixes.</p>
+          <p>SEB 3.7 contains many important security improvements, a new Wi-Fi control especially helpful with the AAC Assessment Mode and various fixes. <strong>SEB 3.7 works with macOS 26.6 and macOS 27 beta, while all previous SEB versions may show a red lock screen because Apple updated their code signing certificates.</strong> <strong class="ss"><span class="red">Therefore, you should use only SEB 3.7 if you are on macOS 26.6 or later.</span></strong></p>
 
-        <p><strong>New in SEB 3.7 (most important changes):</strong></p>
+        <p><strong>New in SEB 3.7:</strong></p>
           <ul class="seblist">
-            <li>The macOS Automatic Assessment Configuration (AAC) Assessment Mode is now the default lockdown/kiosk mode, controlled by the new setting <em>lockdownModePolicy</em>.</li>
-            <li>Added a Wi-Fi control (widget) to the SEB Dock, shown in both the AAC Assessment Mode and the classic lockdown mode (as the macOS menu bar is now always hidden). It lets users see the current Wi-Fi network and switch networks during a session.</li>
-            <li>Now detecting and terminating applications which have been granted macOS Accessibility permissions (which could be misused in exams). This requires Full Disk Access.</li>
-            <li>Now preventing Live Activities from an iPhone from being displayed on the Mac during an exam session.</li>
-            <li>The macOS menu bar is now always hidden during a session (the previous &quot;Show menu bar&quot; option has been removed).</li>
+            <li>The macOS Automatic Assessment Configuration (AAC) Assessment Mode is now the default lockdown/kiosk mode, controlled by the new setting <em>Security / macOS / Lockdown/Kiosk mode</em> (key <em>lockdownModePolicy</em>).</li>
+            <li>Added a Wi-Fi control (widget) to the SEB Dock, shown in both the AAC Assessment Mode and the classic lockdown mode (as the macOS menu bar is now always hidden). It lets users see the current Wi-Fi network, reconnect and switch networks during a session.</li>
+            <li>Now detecting and terminating applications which have been granted macOS Accessibility permissions (which could be misused in exams). This requires the Full Disk Access permission in System Settings / Privacy &amp; Security.</li>
+            <li>The macOS menu bar is now always hidden during an exam session (the previous &quot;Show menu bar&quot; option has been removed).</li>
             <li>The &quot;Choose Application…&quot; button now also reads the Team Identifier from the selected app's code signature, and a new &quot;Add Preset Process…&quot; button was added. This improves setup for the AAC Assessment Mode, for example together with the Cisco Secure Client and similar VPN clients.</li>
             <li>Implemented macOS 26 clipboard (pasteboard) history blocking also for the Classic (non-AAC) kiosk mode.</li>
             <li>Improved support for multi-display setups (main browser window, covering windows and lock screen, also when using the AAC Assessment Mode).</li>
-            <li>Fixed: Quit/admin passwords containing accented characters (like é, ü, ñ) were not recognized on macOS and iOS while they worked on Windows. Passwords are now normalized (NFC) so hashes match across platforms.</li>
+            <li>Now preventing Live Activities from an iPhone from being displayed on the Mac during an exam session.</li>
+            <li>Fixed: Quit/admin passwords containing accented characters (like é, ü, ñ) set in Moodle or SEB Server were not recognized on macOS and iOS while they worked on Windows. Passwords are now normalized (NFC) so hashes match across platforms.</li>
             <li>Optional: Screen Proctoring now also works together with the macOS AAC Assessment Mode.</li>
-            <li>Changed the SEB source code license to the Mozilla Public License 2.0 (MPL 2.0).</li>
           </ul>
           <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work well anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (macOS/iOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
         </div>

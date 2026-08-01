@@ -294,21 +294,20 @@
 
         <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7/SafeExamBrowser-3.7.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:fcf9725e9bbe42e58a843e5f60c4fc40ea7429c3bdebfb9c6f8c59f6f61f28e2</span></p>
         <div>
-          <p>SEB 3.7 enthält viele wichtige Sicherheitsverbesserungen, ein neues WLAN-Steuerelement, das besonders im AAC-Bewertungsmodus hilfreich ist, sowie verschiedene Fehlerbehebungen.</p>
+          <p>SEB 3.7 enthält viele wichtige Sicherheitsverbesserungen, ein neues WLAN-Steuerelement, das besonders im AAC-Bewertungsmodus hilfreich ist, sowie verschiedene Fehlerbehebungen. <strong>SEB 3.7 funktioniert mit macOS 26.6 und der Beta-Version von macOS 27, während bei allen früheren SEB-Versionen möglicherweise ein roter Sperrbildschirm angezeigt wird, weil Apple seine Code-Signatur-Zertifikate aktualisiert hat.</strong> <strong class="red">Daher sollten Sie ausschliesslich SEB 3.7 verwenden, wenn Sie macOS 26.6 oder eine neuere Version nutzen.</strong></p>
 
-          <p><strong>Neu in SEB 3.7 (wichtigste Änderungen):</strong></p>
+          <p><strong>Neu in SEB 3.7:</strong></p>
           <ul class="seblist">
-            <li>Der macOS-Bewertungsmodus „Automatic Assessment Configuration“ (AAC) ist neu der standardmässige Lockdown-/Kiosk-Modus, gesteuert über die neue Einstellung <em>lockdownModePolicy</em>.</li>
-            <li>Neues WLAN-Steuerelement (Widget) im SEB-Dock, das sowohl im AAC-Bewertungsmodus als auch im klassischen Lockdown-Modus angezeigt wird (da die macOS-Menüleiste nun immer ausgeblendet ist). Benutzer sehen damit das aktuelle WLAN-Netzwerk und können während einer Sitzung das Netzwerk wechseln.</li>
-            <li>SEB erkennt und beendet nun Anwendungen, denen macOS-Bedienungshilfen-Berechtigungen (Accessibility) erteilt wurden und die in Prüfungen missbraucht werden könnten. Dies erfordert vollständigen Festplattenzugriff (Full Disk Access).</li>
-            <li>Verhindert nun, dass Live-Aktivitäten eines iPhones während einer Prüfungssitzung auf dem Mac angezeigt werden.</li>
-            <li>Die macOS-Menüleiste ist während einer Sitzung nun immer ausgeblendet (die frühere Option „Menüleiste anzeigen“ wurde entfernt).</li>
+            <li>Der macOS-Bewertungsmodus „Automatic Assessment Configuration“ (AAC) ist neu der standardmässige Lockdown-/Kiosk-Modus, gesteuert über die neue Einstellung <em>Sicherheit / macOS / Lockdown/Kiosk-Modus</em> (Einstellungs-Key <em>lockdownModePolicy</em>).</li>
+            <li>Neues WLAN-Steuerelement (Widget) im SEB-Dock, das sowohl im AAC-Bewertungsmodus als auch im klassischen Lockdown-Modus angezeigt wird (da die macOS-Menüleiste nun immer ausgeblendet ist). Benutzer sehen damit das aktuelle WLAN-Netzwerk, können sich  während einer Prüfung erneut damit verbinden oder das Netzwerk wechseln.</li>
+            <li>SEB erkennt und beendet nun Anwendungen, denen macOS-Bedienungshilfen-Berechtigungen (Accessibility) erteilt wurden und die in Prüfungen missbraucht werden könnten. Dies erfordert das Zugriffsrecht  Festplattenvollzugriff (Full Disk Access) in den Systemeinstellungen / Datenschutz und Sicherheit.</li>
+            <li>Die macOS-Menüleiste ist während einer Prüfungssession nun immer ausgeblendet (die frühere Option „Menüleiste anzeigen“ wurde entfernt).</li>
             <li>Die Schaltfläche „Anwendung auswählen …“ liest nun auch den Team-Identifier aus der Code-Signatur der gewählten App; ausserdem gibt es eine neue Schaltfläche „Voreingestellten Prozess hinzufügen …“. Dies verbessert die Einrichtung des AAC-Bewertungsmodus, zum Beispiel zusammen mit dem Cisco Secure Client und ähnlichen VPN-Clients.</li>
             <li>Die Blockierung des macOS-26-Zwischenablageverlaufs (Pasteboard-History) funktioniert nun auch im klassischen (Nicht-AAC-)Kiosk-Modus.</li>
             <li>Verbesserte Unterstützung für Mehrbildschirm-Setups (Hauptfenster, abdeckende Fenster und Sperrbildschirm, auch im AAC-Bewertungsmodus).</li>
-            <li>Behoben: Beenden-/Administrator-Passwörter mit akzentuierten Zeichen (wie é, ü, ñ) wurden unter macOS und iOS nicht erkannt, während sie unter Windows funktionierten. Passwörter werden nun normalisiert (NFC), sodass die Hashes plattformübergreifend übereinstimmen.</li>
+            <li>Verhindert nun, dass Live-Aktivitäten eines iPhones während einer Prüfungssitzung auf dem Mac angezeigt werden.</li>
+            <li>Behoben: Beenden-/Administrator-Passwörter mit akzentuierten Zeichen (wie é, ü, ñ) aus Moodle oder SEB Server wurden unter macOS und iOS nicht erkannt, während sie unter Windows funktionierten. Passwörter werden nun normalisiert (NFC), sodass die Hashes plattformübergreifend übereinstimmen.</li>
             <li>Optional: Die Bildschirmüberwachung (Screen Proctoring) funktioniert nun auch zusammen mit dem macOS-AAC-Bewertungsmodus.</li>
-            <li>Die Lizenz des SEB-Quellcodes wurde auf die Mozilla Public License 2.0 (MPL 2.0) geändert.</li>
           </ul>
         </div>
 <p>Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für eine  vollständige Liste neuer Funktionen.</p>
