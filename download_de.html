@@ -282,53 +282,33 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.6.1/SafeExamBrowser-3.6.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7/SafeExamBrowser-3.7.dmg" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.6.1 für macOS</span>
-          </a> 
+            <span class="seb-button-text">Safe Exam Browser 3.7 für macOS</span>
+          </a>
         </p>
-        
+
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 26, 15, 14, 13, 12, 11</strong><br />
-        <span class="codetext">Build 15726. SHA1: 7088ee35b99b0f4a8e88250ef34d68352fdba4d3</span></p>
-            
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.6.1/SafeExamBrowser-3.6.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:05a6bdd1abd76ef162883fbf364c93e7498d14231aa936a4633699aa06ea0fb5</span></p>
+        <span class="codetext">Build 1591F.</span></p>
+
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7/SafeExamBrowser-3.7.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:fcf9725e9bbe42e58a843e5f60c4fc40ea7429c3bdebfb9c6f8c59f6f61f28e2</span></p>
         <div>
-          <p>SEB kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich. SEB 3.6.1 enthält verschiedene Fehlerbehebungen und eine Sicherheitsverbesserung.          </p>
-			
-          <p><strong>Für Prüfungsadministratoren:</strong> Um nach einer Neuinstallation von SEB 3.6.1 den Zugriff auf das In-App-Einstellungsmenü zu ermöglichen, <a href="sebs://safeexambrowser.org/exams/SEBClientSettings_Settings_Allowed.seb">konfigurieren Sie SEB 3.6.1 über diesen Link</a>.</p>
-			
-          <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Anwendungen / Verbotene Prozesse) in SEB 3.6.1 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe <a href="macosx/mac_release_notes_de.html">Release Notes</a> SEB 3.5.1). </p>
-			
-          <p>Neu in SEB 3.6.1:</p>
+          <p>SEB 3.7 enthält viele wichtige Sicherheitsverbesserungen, ein neues WLAN-Steuerelement, das besonders im AAC-Bewertungsmodus hilfreich ist, sowie verschiedene Fehlerbehebungen.</p>
+
+          <p><strong>Neu in SEB 3.7 (wichtigste Änderungen):</strong></p>
           <ul class="seblist">
-            <li>
-            Erlaubt das Öffnen der Einstellungen beim ersten Start von SEB/mit den Standard-Client-Einstellungen. Dies löst das Problem des Zugriffs auf die Einstellungen, wenn Sie SEB manuell einrichten möchten (da die Einstellung &bdquo;Einstellungen-Fenster darf auf Client geöffnet werden&rdquo; seit SEB 3.6 standardmässig deaktiviert/falsch ist).</li>
-            <li>Die Funktion &bdquo;Automatisches Ausfüllen&ldquo; wird nun in bestimmten Situationen blockiert. </li>
-            <li>Google Chrome wurde zu den voreingestellten standardmässig verbotenen Prozessen hinzugefügt. Chrome wird nun von SEB beendet, wenn der AAC-Bewertungsmodus nicht verwendet wird. Dadurch wird verhindert, dass SEB den Prozess &bdquo;Chromium Helper&ldquo; ständig beenden muss.</li>
-            <li> Behoben: Die Einstellungen &bdquo;Öffnen/Speichern-Fenster zulassen&rdquo; und &bdquo;Share Sheet zulassen&rdquo; (bei der Arbeit mit zugelassenen zusätzlichen Anwendungen) funktionierten nicht. </li>
-            <li>Beendet den Öffnen/Speichern-Fenster-Agenten nicht mehr, während die Einstellungen geöffnet sind (&bdquo;Öffnen&rdquo; und &bdquo;Speichern unter&rdquo; funktionieren in den Einstellungen auch dann, wenn der AAC-Bewertungsmodus aktiv ist und die Einstellungen &bdquo;Öffnen/Speichern-Fenster zulassen&rdquo; und &bdquo;Share Sheet zulassen&rdquo; nicht aktiviert sind). </li>
-            <li>Jetzt wird nur noch um die Erlaubnis zum Herunterladen/Zugriff auf den Protokollordner gebeten, wenn das Herunterladen/Protokollieren in den aktuellen Einstellungen aktiviert ist.</li>
-            <li>Absturz beim Laden von Webseiten mit den Einstellungen sendBrowserExamKey = true und logLevel = Verbose behoben.            </li>
-          </ul>
-          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
-          <ul class="seblist">
-            <li>Behoben: Einstellungen für die Bedienungshilfen (wie das Aktivieren/Deaktivieren von VoiceOver) wurden bei der Neukonfiguration mit dem SEB-Server nicht aktualisiert.</li>
-            <li>Fehlerbehebung beim Starten einer SEB-Serverprüfung über die Verbindungskonfiguration (Prüfungsliste), bei der SEB 3.6 keinen App-Signaturschlüssel (ASK) gesendet hat. </li>
-          </ul>
-			
-		<p>Neu in SEB 3.6:</p>
-          <ul class="seblist">
-            <li>Optionen in den In-App-Einstellungen / Benutzeroberfläche hinzugefügt, um die Bedienungshilfe VoiceOver zu steuern (Systemstandard, aktivieren, deaktivieren).</li>
-            <li>Die Standardeinstellung für „Öffnen des Einstellungsfensters auf dem Client zulassen“ wurde auf deaktiviert geändert.</li>
-            <li>Die Einstellung für die minimal unterstützte macOS-Version (SEBMinMacOSVersionSupported) wurde auf macOS 11 Big Sur geändert. Wenn Sie diese Einstellung manuell ändern, sollte SEB 3.6 weiterhin unter macOS 10.13 bis 10.15 laufen, aber es ist sehr wahrscheinlich, dass die mit diesen macOS-Versionen ausgelieferte WebKit-Browser-Engine nicht vollständig mit einigen Webanwendungen kompatibel ist und unter bestimmten Umständen sogar abstürzen kann.</li>
-          </ul>
-          <p>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind</p>
-          <ul class="seblist">
-            <li>Jetzt werden Prüfungen mit mehreren aufeinanderfolgenden Quizzes unterstützt, wenn der optionale SEB Server und das SEB-Server-Moodle-Plugin verwendet werden.<br>
-            </li>
-            <li> Versuch, einen Absturz beim Herstellen einer SEB-Server-Verbindung zu beheben. Wenn Sie SEB Server verwenden und beim Herstellen einer Verbindung dazu Abstürze auftreten, SENDEN SIE UNS BITTE EINEN FEHLERBERICHT (einschliesslich der entsprechenden SEB- Logdateien und Ihrer Konfigurationsdatei). Siehe Support-Link.</li>
-            <li>Behebung von zufälligen Abstürzen bei der Bildschirmüberwachung.</li>
+            <li>Der macOS-Bewertungsmodus „Automatic Assessment Configuration“ (AAC) ist neu der standardmässige Lockdown-/Kiosk-Modus, gesteuert über die neue Einstellung <em>lockdownModePolicy</em>.</li>
+            <li>Neues WLAN-Steuerelement (Widget) im SEB-Dock, das sowohl im AAC-Bewertungsmodus als auch im klassischen Lockdown-Modus angezeigt wird (da die macOS-Menüleiste nun immer ausgeblendet ist). Benutzer sehen damit das aktuelle WLAN-Netzwerk und können während einer Sitzung das Netzwerk wechseln.</li>
+            <li>SEB erkennt und beendet nun Anwendungen, denen macOS-Bedienungshilfen-Berechtigungen (Accessibility) erteilt wurden und die in Prüfungen missbraucht werden könnten. Dies erfordert vollständigen Festplattenzugriff (Full Disk Access).</li>
+            <li>Verhindert nun, dass Live-Aktivitäten eines iPhones während einer Prüfungssitzung auf dem Mac angezeigt werden.</li>
+            <li>Die macOS-Menüleiste ist während einer Sitzung nun immer ausgeblendet (die frühere Option „Menüleiste anzeigen“ wurde entfernt).</li>
+            <li>Die Schaltfläche „Anwendung auswählen …“ liest nun auch den Team-Identifier aus der Code-Signatur der gewählten App; ausserdem gibt es eine neue Schaltfläche „Voreingestellten Prozess hinzufügen …“. Dies verbessert die Einrichtung des AAC-Bewertungsmodus, zum Beispiel zusammen mit dem Cisco Secure Client und ähnlichen VPN-Clients.</li>
+            <li>Die Blockierung des macOS-26-Zwischenablageverlaufs (Pasteboard-History) funktioniert nun auch im klassischen (Nicht-AAC-)Kiosk-Modus.</li>
+            <li>Verbesserte Unterstützung für Mehrbildschirm-Setups (Hauptfenster, abdeckende Fenster und Sperrbildschirm, auch im AAC-Bewertungsmodus).</li>
+            <li>Behoben: Beenden-/Administrator-Passwörter mit akzentuierten Zeichen (wie é, ü, ñ) wurden unter macOS und iOS nicht erkannt, während sie unter Windows funktionierten. Passwörter werden nun normalisiert (NFC), sodass die Hashes plattformübergreifend übereinstimmen.</li>
+            <li>Optional: Die Bildschirmüberwachung (Screen Proctoring) funktioniert nun auch zusammen mit dem macOS-AAC-Bewertungsmodus.</li>
+            <li>Die Lizenz des SEB-Quellcodes wurde auf die Mozilla Public License 2.0 (MPL 2.0) geändert.</li>
           </ul>
         </div>
 <p>Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für eine  vollständige Liste neuer Funktionen.</p>

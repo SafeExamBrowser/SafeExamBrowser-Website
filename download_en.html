@@ -282,63 +282,33 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://sourceforge.net/projects/seb/files/seb-macosx/seb_macos_3.6.1/SafeExamBrowser-3.6.1.dmg/download" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7/SafeExamBrowser-3.7.dmg" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.6.1 for macOS</span>
-          </a> 
+            <span class="seb-button-text">Safe Exam Browser 3.7 for macOS</span>
+          </a>
         </p>
-        
+
         <p><strong>Current version of Safe Exam Browser for macOS 26, 15, 14, 13, 12, 11</strong><br />
-        <span class="codetext">Build 15726. SHA1: 7088ee35b99b0f4a8e88250ef34d68352fdba4d3</span></p>
-            
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.6.1/SafeExamBrowser-3.6.1.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.<span class="codetext"> sha256:ccb581fd8d5ef3c1e783c10bb60a398d18f924a0bd4566103a762d9e7be2524e</span></p>
+        <span class="codetext">Build 1591F.</span></p>
+
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7/SafeExamBrowser-3.7.dmg" target="_blank">Download</a> from  <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub project site</a>.<span class="codetext"> sha256:fcf9725e9bbe42e58a843e5f60c4fc40ea7429c3bdebfb9c6f8c59f6f61f28e2</span></p>
         <div>
-          <p>SEB 3.6 allows to control the accessibility feature VoiceOver (disable, enable) with new settings. In addition, exams with multiple consecutive quizzes are now possible when using the optional SEB Server and SEB Server Moodle plugin. SEB 3.6.1 contains various maintenance fixes and one security improvement.          </p>
-			
-          <p><strong>For exam administrators:</strong> To allow  accessing the in-app Settings menu/editor after a fresh install of SEB 3.6.1, <a href="sebs://safeexambrowser.org/exams/SEBClientSettings_Settings_Allowed.seb">configure SEB 3.6.1 with this link</a>.</p>
-			
-          <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.6.1 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see SEB 3.5.1 <a href="macosx/mac_release_notes_en.html">release notes</a>).</p>
-			
-        <p><strong>New in SEB 3.6.1:</strong></p>
+          <p>SEB 3.7 contains many important security improvements, a new Wi-Fi control especially helpful with the AAC Assessment Mode and various fixes.</p>
+
+        <p><strong>New in SEB 3.7 (most important changes):</strong></p>
           <ul class="seblist">
-            <li>Allow to open Settings when starting SEB for the first time/with default client settings. This solves access to settings if you want to set up SEB manually (as the setting &quot;Allow to open Settings window on client&quot; is by default disabled/false since SEB 3.6).</li>
-            <li>Now blocking the Autofill feature in specific situations.<br>
-            </li>
-            <li> Added Google Chrome to preset default prohibited processes. Chrome will now be quit by SEB when not using the AAC Assessment Mode. This prevents that SEB has to terminate the &quot;Chromium Helper&quot; process constantly. <br>
-            </li>
-            <li> Fixed: &quot;Allow open/save panel&quot; and &quot;Allow share sheet&quot; settings (when working with permitted additional applications) were not working. <br>
-            </li>
-            <li> No longer terminating open/save panel agent while Settings are open (&quot;Open&quot; and &quot;Save As&quot; work in Settings even if the AAC Assessment Mode is active and the &quot;Allow open/save panel&quot; and &quot;Allow share sheet&quot; settings are not enabled). <br>
-            </li>
-            <li> Now only asking to grant downloads/log folder access if downloading/logging is enabled in current settings.<br>
-            </li>
-            <li> Fixed crash when loading web pages with settings sendBrowserExamKey = true and logLevel = Verbose.<br>
-            </li>
+            <li>The macOS Automatic Assessment Configuration (AAC) Assessment Mode is now the default lockdown/kiosk mode, controlled by the new setting <em>lockdownModePolicy</em>.</li>
+            <li>Added a Wi-Fi control (widget) to the SEB Dock, shown in both the AAC Assessment Mode and the classic lockdown mode (as the macOS menu bar is now always hidden). It lets users see the current Wi-Fi network and switch networks during a session.</li>
+            <li>Now detecting and terminating applications which have been granted macOS Accessibility permissions (which could be misused in exams). This requires Full Disk Access.</li>
+            <li>Now preventing Live Activities from an iPhone from being displayed on the Mac during an exam session.</li>
+            <li>The macOS menu bar is now always hidden during a session (the previous &quot;Show menu bar&quot; option has been removed).</li>
+            <li>The &quot;Choose Application…&quot; button now also reads the Team Identifier from the selected app's code signature, and a new &quot;Add Preset Process…&quot; button was added. This improves setup for the AAC Assessment Mode, for example together with the Cisco Secure Client and similar VPN clients.</li>
+            <li>Implemented macOS 26 clipboard (pasteboard) history blocking also for the Classic (non-AAC) kiosk mode.</li>
+            <li>Improved support for multi-display setups (main browser window, covering windows and lock screen, also when using the AAC Assessment Mode).</li>
+            <li>Fixed: Quit/admin passwords containing accented characters (like é, ü, ñ) were not recognized on macOS and iOS while they worked on Windows. Passwords are now normalized (NFC) so hashes match across platforms.</li>
+            <li>Optional: Screen Proctoring now also works together with the macOS AAC Assessment Mode.</li>
+            <li>Changed the SEB source code license to the Mozilla Public License 2.0 (MPL 2.0).</li>
           </ul>
-        <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
-        <ul class="seblist">
-          <li> Fixed: Accessibility settings (like enable/disable VoiceOver) were not updated when reconfiguring with SEB Server.<br>
-          </li>
-          <li>Fix for starting an SEB Server exam via connection config (exam list), in which case SEB 3.6 wasn't sending an App Signature Key (ASK). <br>
-          </li>
-        </ul>
-			
-		<p><strong>New in SEB 3.6:</strong></p>
-          <ul class="seblist">
-            <li>Added options in Settings to control VoiceOver and other Accessibility settings (iOS).<br>
-            </li>
-            <li>On macOS, you can choose following options for VoiceOver: System Default, Enable, Disable. As SEB cannot change system settings for VoiceOver permanently: If enabling VoiceOver in SEB Settings for an exam, users will still have to manually disable VoiceOver in System Settings / Accessibility / VoiceOver or simply close VoiceOver in its overlay window if it is started by the system after a restart.<br>
-            </li>
-            <li> Changed default for &quot;Allow to open Preferences window on client&quot; to disabled/false.<br>
-            </li>
-            <li> Changed setting for minimum supported macOS version (SEBMinMacOSVersionSupported) to macOS 11 Big Sur. If manually changing this setting, SEB 3.6 should still run on macOS 10.13 - 10.15, but it's highly expected that the WebKit browser engine shipping with these macOS versions isn't fully compatible with some web applications and might even crash in some circumstances.<br>
-            </li>
-          </ul>
-          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
-              <ul class="seblist">            
-				  <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
-				  </li>
-              </ul>
           <p><strong>IMPORTANT for SEB Integrations: The classic WebView</strong> <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and doesn't work well anymore.<strong> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (macOS/iOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API.</p>
         </div>
         <div></div>
