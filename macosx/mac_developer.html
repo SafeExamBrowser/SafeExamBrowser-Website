@@ -205,18 +205,18 @@
             <p>SEB for macOS is a modern Mac&nbsp;OS&nbsp;X application, written in Objective-C, using the Cocoa system framework. It has been developed for Mac&nbsp;OS&nbsp;X 10.6 Snow Leopard and updated for OS&nbsp;X&nbsp;10.7 Lion, we don't intend to support older system versions. SEB for macOS is using the <a href="http://www.webkit.org" target="_blank">WebKit</a> browser engine, on which Safari on Mac and iOS and some new open source browsers like Google Chrome and Android browsers are based. SEB for macOS embeds a private copy of the WebKit framework, so Apple updates of Safari don't affect the compatibility of SEB with existing quizzes. Please note: This doesn't apply to the   Mac App Store version of SEB which is using the system's built-in WebKit framework (due to restrictions of the Mac App Store). </p>
             <p>SEB for macOS  version 1.3 consists of the classes listed below. The class structure is supposed to change soon, since SEB will go trough major enhancements in the next months. Among others there will be additional preferences panes for more options and SEB will be ported to a document-based architecture to support opening multiple webpages in separate windows and tabs.</p>
     <h5>List of Classes</h5>
-            <ul id="seblist">
-            <li class="normal_line_height" id="half_linespace"><span class="codetext">SEBController</span><br />
+            <ul class="seblist">
+            <li class="normal_line_height half_linespace"><span class="codetext">SEBController</span><br />
                 Main Safe Exam Browser controller class.  Locks  system into  kiosk mode, opens browser and preferences window and exits SEB.</li>
-            <li class="normal_line_height" id="half_linespace"><span class="codetext">BrowserWindow</span><br />
+            <li class="normal_line_height half_linespace"><span class="codetext">BrowserWindow</span><br />
                 Browser window class, also containing all the web view delegates, which handle right clicks in the browser window and  web plugins, requests to open link in a new window, Javascript alerts and browser errors.</li>
-            <li class="normal_line_height" id="half_linespace"><span class="codetext">CapView</span><br />
+            <li class="normal_line_height half_linespace"><span class="codetext">CapView</span><br />
                 View class for the windows covering all attached screens with a black background. By overriding the mouseDown event it's prevented that the cap window is ordered front when clicked in.</li>
-            <li class="normal_line_height" id="half_linespace"><span class="codetext">AboutWindow</span><br />
+            <li class="normal_line_height half_linespace"><span class="codetext">AboutWindow</span><br />
                 Window class for the about panel (window without border and title bar). Loads and displays localized copyright and version from info.plist and closes the about window when the user clicks on it.</li>
-            <li class="normal_line_height" id="half_linespace"><span class="codetext">aboutView</span><br />
+            <li class="normal_line_height half_linespace"><span class="codetext">aboutView</span><br />
                 View class for the about panel, necessary for the background image in the borderless window.</li>
-            <li class="normal_line_height" id="half_linespace"><span class="codetext">PreferencesController</span><br />
+            <li class="normal_line_height half_linespace"><span class="codetext">PreferencesController</span><br />
                 Controller for the preferences window, populates it with panes.</li>
             <li class="normal_line_height"><span class="codetext">PrefsGeneralViewController</span><br />
               Preferences General Pane: Settings for passwords to enter preferences and quit SEB, buttons to quit and restart SEB, show About panel and help. 
@@ -234,69 +234,69 @@
             <p>You will find the current developer version of SEB for macOS at the path <span class="path">trunk/mac/SafeExamBrowser-src</span>. Checkout this directory to your computer.</p>
             <h4><a name="localisation"></a>Localizing SEB</h4>
             <p class="no_linespace">To translate Interface Builder xib files, you best use the <span class="codetext">ibtool</span> command-line utility to extract all the strings. Enter in Terminal:</p>
-            <p class="sourcecode" id="full_linespace">ibtool --generate-strings-file en.lproj/MainMenu.strings en.lproj/MainMenu.xib</p>
+            <p class="sourcecode full_linespace">ibtool --generate-strings-file en.lproj/MainMenu.strings en.lproj/MainMenu.xib</p>
             <p>The resulting file <span class="codetext">MainMenu.strings</span> can be given to the translator. Best is to keep it in the UTF-16 text encoding format, for example Apple's TextEdit reads and saves this format correctly.</p>
             <p class="no_linespace">Below the commands for the other xib files:</p>
-            <p class="sourcecode" id="half_linespace">ibtool --generate-strings-file en.lproj/PreferencesGeneral.strings en.lproj/PreferencesGeneral.xib</p>
-    <p class="sourcecode" id="half_linespace">ibtool --generate-strings-file en.lproj/PreferencesBrowser.strings en.lproj/PreferencesBrowser.xib</p>
-    <p class="sourcecode" id="full_linespace">ibtool --generate-strings-file en.lproj/PreferencesAdvanced.strings en.lproj/PreferencesAdvanced.xib</p>
+            <p class="sourcecode half_linespace">ibtool --generate-strings-file en.lproj/PreferencesGeneral.strings en.lproj/PreferencesGeneral.xib</p>
+    <p class="sourcecode half_linespace">ibtool --generate-strings-file en.lproj/PreferencesBrowser.strings en.lproj/PreferencesBrowser.xib</p>
+    <p class="sourcecode full_linespace">ibtool --generate-strings-file en.lproj/PreferencesAdvanced.strings en.lproj/PreferencesAdvanced.xib</p>
             <p class="no_linespace">Afterwards you can generate a new <span class="codetext">MainMenu.xib</span> file based on the original one and the translated strings file, again using  <span class="codetext">ibtool</span>:</p>
-    <p class="sourcecode" id="full_linespace">ibtool --strings-file fr.lproj/MainMenu.strings --write fr.lproj/MainMenu.xib en.lproj/MainMenu.xib</p>
+    <p class="sourcecode full_linespace">ibtool --strings-file fr.lproj/MainMenu.strings --write fr.lproj/MainMenu.xib en.lproj/MainMenu.xib</p>
             <p>Then you need to add the resource file to Xcode. I didn't find a better way in Xcode 4 than clicking on the Resource folder, adding a localisation with the + button in the utility area at the right of the workspace window and then pasting the contents of the strings-file into the new created language/region specific file (I guess there's a bug in Xcode 4, in Xcode 3 it was possible to add the files directly).</p>
             <p class="no_linespace">Here the commands for the other localized xib files (English to German):</p>
-            <p class="sourcecode" id="half_linespace">ibtool --strings-file de.lproj/PreferencesGeneral.strings --write de.lproj/PreferencesGeneral.xib en.lproj/PreferencesGeneral.xib</p>
-    <p class="sourcecode" id="half_linespace">ibtool --strings-file de.lproj/PreferencesBrowser.strings --write de.lproj/PreferencesBrowser.xib en.lproj/PreferencesBrowser.xib</p>
-    <p class="sourcecode" id="full_linespace">ibtool --strings-file de.lproj/PreferencesAdvanced.strings --write de.lproj/PreferencesAdvanced.xib en.lproj/PreferencesAdvanced.xib</p>
+            <p class="sourcecode half_linespace">ibtool --strings-file de.lproj/PreferencesGeneral.strings --write de.lproj/PreferencesGeneral.xib en.lproj/PreferencesGeneral.xib</p>
+    <p class="sourcecode half_linespace">ibtool --strings-file de.lproj/PreferencesBrowser.strings --write de.lproj/PreferencesBrowser.xib en.lproj/PreferencesBrowser.xib</p>
+    <p class="sourcecode full_linespace">ibtool --strings-file de.lproj/PreferencesAdvanced.strings --write de.lproj/PreferencesAdvanced.xib en.lproj/PreferencesAdvanced.xib</p>
             <p class="no_linespace">Here the commands for the other localized xib files (English to French):</p>
-            <p class="sourcecode" id="half_linespace">ibtool --strings-file fr.lproj/PreferencesGeneral.strings --write fr.lproj/PreferencesGeneral.xib en.lproj/PreferencesGeneral.xib</p>
-            <p class="sourcecode" id="half_linespace">ibtool --strings-file fr.lproj/PreferencesBrowser.strings --write fr.lproj/PreferencesBrowser.xib en.lproj/PreferencesBrowser.xib</p>
-            <p class="sourcecode" id="full_linespace">ibtool --strings-file fr.lproj/PreferencesAdvanced.strings --write fr.lproj/PreferencesAdvanced.xib en.lproj/PreferencesAdvanced.xib</p>
+            <p class="sourcecode half_linespace">ibtool --strings-file fr.lproj/PreferencesGeneral.strings --write fr.lproj/PreferencesGeneral.xib en.lproj/PreferencesGeneral.xib</p>
+            <p class="sourcecode half_linespace">ibtool --strings-file fr.lproj/PreferencesBrowser.strings --write fr.lproj/PreferencesBrowser.xib en.lproj/PreferencesBrowser.xib</p>
+            <p class="sourcecode full_linespace">ibtool --strings-file fr.lproj/PreferencesAdvanced.strings --write fr.lproj/PreferencesAdvanced.xib en.lproj/PreferencesAdvanced.xib</p>
 <p>In the end you should check the GUI in the new localized MainMenu.xib in Xcode/Interface Builder and adjust size and position of text fields according to the length of the localized text.</p>
             <h5>Localizing String Ressources</h5>
-            <p>Strings placed in the code instead of xib files are even easier to localize. In each <span class="codetext">.lproj</span> language directory you can find a file <span class="codetext">Localizable.strings</span>, containing all original and the corresponding localized strings. You just have to use the appropriate string-loading macros in the code (for example <span class="codetext">NSLocalizedString(@&quot;FirstTimeUserNotice&quot;, nil)</span> and then use the <span class="codetext">genstrings</span> command-line tool to extract those strings and create strings files for you. For example:            </p><p class="sourcecode" id="full_linespace">genstrings -o en.lproj *.m</p>
+            <p>Strings placed in the code instead of xib files are even easier to localize. In each <span class="codetext">.lproj</span> language directory you can find a file <span class="codetext">Localizable.strings</span>, containing all original and the corresponding localized strings. You just have to use the appropriate string-loading macros in the code (for example <span class="codetext">NSLocalizedString(@&quot;FirstTimeUserNotice&quot;, nil)</span> and then use the <span class="codetext">genstrings</span> command-line tool to extract those strings and create strings files for you. For example:            </p><p class="sourcecode full_linespace">genstrings -o en.lproj *.m</p>
     <p>This command  parses all Objective-C source files in the current directory and puts the resulting strings files in the <span class="codetext">en.lproj</span> subdirectory.
               You can then use this English  <span class="codetext">Localizable.strings</span> file to create the according files for  other languages, by replacing the English strings with the translated ones, for example:
 </p>
-    <p class="sourcecode" id="half_linespace">&quot;FirstTimeUserNotice&quot; = &quot;Bitte benutzen Sie die Fenster-Schliessen-Schaltfläche oder Befehlstaste+Q um SEB zu beenden und (fn+)F3+F6 um die Einstellungen zu öffnen.\n\nDieser Hinweis wird solange angezeigt, bis Sie in den Einstellungen eine Start-URL eingeben. Sie sollten dort ausserdem ein Beenden-Passwort und ein Administrator-Passwort festlegen, um das Beenden von SEB und den Zugang zu den Einstellungen einzuschränken.&quot;; </p>
+    <p class="sourcecode half_linespace">&quot;FirstTimeUserNotice&quot; = &quot;Bitte benutzen Sie die Fenster-Schliessen-Schaltfläche oder Befehlstaste+Q um SEB zu beenden und (fn+)F3+F6 um die Einstellungen zu öffnen.\n\nDieser Hinweis wird solange angezeigt, bis Sie in den Einstellungen eine Start-URL eingeben. Sie sollten dort ausserdem ein Beenden-Passwort und ein Administrator-Passwort festlegen, um das Beenden von SEB und den Zugang zu den Einstellungen einzuschränken.&quot;; </p>
     <p>(This is one line of the German localized strings file  <span class="path">de.lproj/Localizable.strings</span>)</p>
      <h4> <a name="privateWebKit" id="privateWebKit"> </a>Preparing a private copy of WebKit for use with SEB</h4>
             <p>Until version 1.4.1, SEB downloaded from this website contained a private copy of WebKit. From version 1.5 it was omitted, because experiences didn't show any  real advantage of using a private WebKit instead of the system's in practice, but there was a lot of additional time and effort needed for every update. Besides that at least some WebKit builds from December 2011 and January 2012 were not working on Mac OS X 10.6.8 anymore (and compiling on Snow Leopard resulted in build errors). But besides you can find how to include your private copy of WebKit if you see an advantage in that:</p>
             <p>Check out the WebKit source code in Terminal:</p>
-            <ul id="seblist">
-            <li class="normal_line_height" id="half_linespace"> <p>Change to your working directory</p></li>
-            <li class="normal_line_height" id="half_linespace">
+            <ul class="seblist">
+            <li class="normal_line_height half_linespace"> <p>Change to your working directory</p></li>
+            <li class="normal_line_height half_linespace">
               <p class="no_linespace"> Enter the following command in Terminal (and be prepared that it may take several hours):</p>
-                <p class="sourcecode"id="half_linespace">svn checkout http://svn.webkit.org/repository/webkit/trunk WebKit-src</p>
+                <p class="sourcecode half_linespace">svn checkout http://svn.webkit.org/repository/webkit/trunk WebKit-src</p>
                 <p>(the last line should say something like <span class="codetext">Checked out revision 71626.</span>)</p>
             </li>
-          <li class="normal_line_height" id="half_linespace">
+          <li class="normal_line_height half_linespace">
             <p class="no_linespace"> In case you want to update a WebKit build checked out some time ago, you can use the <span class="codetext">update-webkit</span> script:</p>
-            <p class="sourcecode"id="half_linespace">Tools/Scripts/update-webkit</p>
+            <p class="sourcecode half_linespace">Tools/Scripts/update-webkit</p>
                 <p>(the last line should say something like <span class="codetext">Updated to revision 71728</span>.)</p>
           </li>
-          <li class="normal_line_height" id="half_linespace">
+          <li class="normal_line_height half_linespace">
             <p class="no_linespace"> Now open from the framework source directories in <span class="path">WebKit-src/Source/</span> each <span class="codetext">.xcodeproj</span> of <span class="codetext">JavaScriptCore</span>, <span class="codetext">JavaScriptGlue</span>, <span class="codetext">WebCore</span> and <span class="codetext">WebKit</span> in Xcode and select the  framework bundle in <span class="quote">Target</span>. Go on <span class="quote">Build Settings</span> and change in section <span class="quote">Deployment</span> the <span class="quote">Installation Directory</span> for release to the following special path:</p>
-                <p class="codetext"id="half_linespace">@executable_path/../Frameworks</p>
+                <p class="codetext half_linespace">@executable_path/../Frameworks</p>
                 <p>Then close each of the Xcode projects, the new path will be saved automatically. </p>
           </li>
-          <li class="normal_line_height" id="full_linespace">
+          <li class="normal_line_height full_linespace">
             <p class="no_linespace"> Change to the WebKit directory:</p>
-                <p class="command_linespace" id="full_linespace"><span class="sourcecode">cd WebKit-src</span><br /></p>
+                <p class="command_linespace full_linespace"><span class="sourcecode">cd WebKit-src</span><br /></p>
           </li>
-          <li class="normal_line_height" id="half_linespace">
+          <li class="normal_line_height half_linespace">
             <p class="no_linespace">Build WebKit (this will also take some time and stress your CPU quite a lot, so you might want to run it during your lunch break).<br />
                 Building has to be done twice, separately for the 32- and 64-bit build:</p>
-                <p class="sourcecode"id="half_linespace">Tools/Scripts/set-webkit-configuration --32-bit</p>
-                <p class="sourcecode"id="half_linespace">Tools/Scripts/build-webkit</p>
+                <p class="sourcecode half_linespace">Tools/Scripts/set-webkit-configuration --32-bit</p>
+                <p class="sourcecode half_linespace">Tools/Scripts/build-webkit</p>
                 <p>(it should be written somewhere in the end <span class="codetext">** BUILD SUCCEEDED **</span>)</p>
           </li>
-            <li class="normal_line_height" id="half_linespace"><p class="no_linespace">Now you have the build 32-bit frameworks in directory <span class="path">WebKitBuild/Release</span>. Rename it to <span class="path">WebKitBuild/Release-i386</span>. Build the 64-bit version:</p>
-              <p class="sourcecode"id="half_linespace">Tools/Scripts/set-webkit-configuration --64-bit</p>
-              <p class="sourcecode" id="half_linespace">Tools/Scripts/build-webkit</p>
+            <li class="normal_line_height half_linespace"><p class="no_linespace">Now you have the build 32-bit frameworks in directory <span class="path">WebKitBuild/Release</span>. Rename it to <span class="path">WebKitBuild/Release-i386</span>. Build the 64-bit version:</p>
+              <p class="sourcecode half_linespace">Tools/Scripts/set-webkit-configuration --64-bit</p>
+              <p class="sourcecode half_linespace">Tools/Scripts/build-webkit</p>
               <p>Rename the built 64-bit framework directory <span class="path">WebKitBuild/Release/</span> to <span class="path">WebKitBuild/Release-x86_64</span>.</p></li>
             <li><p class="no_linespace">In Terminal you can check if the relative paths have been set in the frameworks with the <span class="codetext">otool -L</span> command, for example: </p>
                 <p class="sourcecode">otool -L WebKitBuild/Release-x86_64/WebCore.framework/WebCore</p>
-                <div class="sourcecode" id="codeblock">
+                <div class="sourcecode codeblock">
                 <p class="sourcecode">WebKitBuild/Release-x86_64/WebCore.framework/WebCore:</p>
                   <p class="sourcecode indent1">@executable_path/../Frameworks/WebCore.framework/Versions/A/WebCore (compatibility version 1.0.0, current version 534.13.0)</p>
                   <p class="sourcecode indent1">/usr/lib/libsqlite3.dylib (compatibility version 9.0.0, current version 9.6.0)</p>
@@ -324,10 +324,10 @@
           </ul>
             <h4> <a name="bitBundles" id="sourceLMSExtensions2"></a>Creating 32/64 bit bundles of the frameworks</h4>
             <p class="no_linespace">For this we need the <span class="codetext">lipo</span> command in Terminal:</p>
-            <p class="sourcecode" id="full_linespace">lipo -create WebKitBuild/Release-i386/JavaScriptCore.framework/JavaScriptCore WebKitBuild/Release-x86_64/JavaScriptCore.framework/JavaScriptCore -output WebKitBuild/JavaScriptCore</p>
+            <p class="sourcecode full_linespace">lipo -create WebKitBuild/Release-i386/JavaScriptCore.framework/JavaScriptCore WebKitBuild/Release-x86_64/JavaScriptCore.framework/JavaScriptCore -output WebKitBuild/JavaScriptCore</p>
             <p class="no_linespace">We can check what the resulting <span class="quote">fat</span> framework file contains:</p>
 <p class="sourcecode">lipo -detailed_info WebKitBuild/JavaScriptCore</p>
-              <div class="sourcecode" id="codeblock">
+              <div class="sourcecode codeblock">
               <p class="sourcecode">Fat header in: /Users/drs/developer/WebKit-src/WebKitBuild/JavaScriptCore<br />
               fat_magic 0xcafebabe<br />
               nfat_arch 2</p>
@@ -346,18 +346,18 @@
               </div>
             <p>So now we have a framework file with 32 and 64 bit binaries inside!</p>
             <p class="no_linespace">We have to make the other frameworks <span class="quote">fat</span> too:</p>
-            <p class="sourcecode" id="half_linespace">lipo -create WebKitBuild/Release-i386/JavaScriptGlue.framework/JavaScriptGlue WebKitBuild/Release-x86_64/JavaScriptGlue.framework/JavaScriptGlue -output WebKitBuild/JavaScriptGlue </p>
-    <p class="sourcecode" id="half_linespace">lipo -create WebKitBuild/Release-i386/WebCore.framework/WebCore WebKitBuild/Release-x86_64/WebCore.framework/WebCore -output WebKitBuild/WebCore</p>
-            <p class="sourcecode" id="full_linespace">lipo -create WebKitBuild/Release-i386/WebKit.framework/WebKit WebKitBuild/Release-x86_64/WebKit.framework/WebKit -output WebKitBuild/WebKit</p>
+            <p class="sourcecode half_linespace">lipo -create WebKitBuild/Release-i386/JavaScriptGlue.framework/JavaScriptGlue WebKitBuild/Release-x86_64/JavaScriptGlue.framework/JavaScriptGlue -output WebKitBuild/JavaScriptGlue </p>
+    <p class="sourcecode half_linespace">lipo -create WebKitBuild/Release-i386/WebCore.framework/WebCore WebKitBuild/Release-x86_64/WebCore.framework/WebCore -output WebKitBuild/WebCore</p>
+            <p class="sourcecode full_linespace">lipo -create WebKitBuild/Release-i386/WebKit.framework/WebKit WebKitBuild/Release-x86_64/WebKit.framework/WebKit -output WebKitBuild/WebKit</p>
             <p>In the end we have to copy the newly created fat framework binaries into the <span class="codetext">.framework</span> bundles. You can first duplicate one of the <span class="path">WebKitBuild/Release </span> directories and rename it  <span class="path">WebKitBuild/Release-FAT</span>. Then copy the four fat framework binaries <span class="codetext">JavaScriptCore</span>, <span class="codetext">JavaScriptGlue</span>, <span class="codetext">WebCore</span> and <span class="codetext">WebKit</span> to the right place in the <span class="codetext">.framewor</span>k bundles  (overwriting the old framework binaries). Usually the subdirectory <span class="path">xxx.framework/Versions/A/</span> is the right location for the framework binaries.<br />
           </p>
             <h4><a name="addingNewFrameworkVersions" id="addingNewFrameworkVersions"></a>Add new versions of the embedded WebKit frameworks</h4>
-            <p id="quarter_linespace">To comply with version control, you first have to delete the old version of the frameworks in Xcode (remove it with the SVN command in terminal or in Xcode):</p>
-    <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptCore.framework</p>            
-    <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptGlue.framework</p>           
-            <p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/WebCore.framework</p>
-<p class="sourcecode" id="half_linespace">svn delete --force SafeExamBrowser-src/WebKit.framework</p>
-<p class="sourcecode" id="full_linespace">svn commit -m "deleted old WebKit frameworks" SafeExamBrowser-src</p>
+            <p class="quarter_linespace">To comply with version control, you first have to delete the old version of the frameworks in Xcode (remove it with the SVN command in terminal or in Xcode):</p>
+    <p class="sourcecode half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptCore.framework</p>            
+    <p class="sourcecode half_linespace">svn delete --force SafeExamBrowser-src/JavaScriptGlue.framework</p>           
+            <p class="sourcecode half_linespace">svn delete --force SafeExamBrowser-src/WebCore.framework</p>
+<p class="sourcecode half_linespace">svn delete --force SafeExamBrowser-src/WebKit.framework</p>
+<p class="sourcecode full_linespace">svn commit -m "deleted old WebKit frameworks" SafeExamBrowser-src</p>
     <p>Then you have to add the new frameworks to the <span class="codetext">SafeExamBrowser</span> project in Xcode. Important is to remove the <span class="codetext">WebCore.framework</span> from the <span class="quote"><strong>Link</strong> Binary With Libraries</span> build phase of the target Safe Exam Browser in Xcode, otherwise building will fail, since WebCore is only linked through its umbrella framework WebKit. The four frameworks also have to be in the <span class="quote">Copy Files</span> build phase.</p>
           <p>There is a <span class="quote">Code Signing</span> build setting in the <span class="codetext">SafeExamBrowser</span> Xcode project, which you will have to modify, because you don't have the <span class="quote">ETH Zurich</span> code signing identity. We will add an explanation about how to code sign the SEB binary to this manual after the implementation of further security measures in SEB based on checking code signatures of running processes.</p>
             <p>So when you succeeded to build SEB with a new version of the WebKit frameworks, you can check if it is really used on <a href="http://www.webkit.org/misc/WebKitDetect.html" target="_blank">this page</a>. 

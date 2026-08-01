@@ -132,15 +132,6 @@ pre p {
 	font-weight:normal;
 }
 
-#half_linespace {
-	margin-bottom: 0.5em;
-}
-#quarter_linespace {
-	margin-bottom: 0.25em;
-}
-#full_linespace {
-	margin-bottom: 1em;
-}
 .no_linespace {
 	margin-bottom: 0em;
 }
@@ -166,7 +157,7 @@ pre p {
 	word-break: break-all;
 	margin: 0.25em 0 0.25em 0;
 }
-#codeblock {
+.codeblock {
 	margin-top: 0em;
 	margin-bottom: 1em;
 	word-break: break-all;
@@ -197,25 +188,25 @@ pre p {
 .indent6 {
 	text-indent: 120px;
 }
-#sebh5 {
+.sebh5 {
 	margin-bottom: 0.5em;
 	margin-top: 2em;
 }
-#seblist ul {
+.seblist ul {
 	margin: 0.5em 0 1em -1.5em;
 }
-#seblist li {
+.seblist li {
 	margin-bottom: 0.5em;
 	line-height: 1.25em;
 }
 ol.seblist>li {
 	margin-bottom: 10px;
 }
-#seblist ul li ul {
+.seblist ul li ul {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-#seblist ul li ul li {
+.seblist ul li ul li {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
@@ -236,11 +227,11 @@ ol.seblist>li {
 .textsubnavi { color: #070782; font-size: 10pt; font-weight: bold; text-decoration: none; }
 .linksubnavi { color: #6a8ccf; font-size: 10pt; font-weight: bold; text-decoration: none; }
 .textmainnavi { color: #494949; font-size: 11pt; font-weight: bold; }
-#tablecell {
+.tablecell {
 	padding-right: 5px;
 	padding-left: 5px;
 }
-#container #content #releases tr td {
+.releases tr td {
 	padding-right: 5px;
 	padding-left: 5px;
 	padding-top: 3px;
@@ -353,7 +344,7 @@ ol.seblist>li {
 	font-family: sans-serif;
 	font-weight: normal;
 }
-#title_table {
+.title_table {
 }
 .quote {
 	font-weight: bold;
@@ -364,6 +355,9 @@ ol.seblist>li {
 }
 .half_linespace {
 	margin-bottom: 0.5em;
+}
+.full_linespace {
+	margin-bottom: 1em;
 }
 .list_regular {
 	font-size: 13px;

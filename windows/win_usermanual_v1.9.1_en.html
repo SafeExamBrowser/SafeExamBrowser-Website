@@ -189,7 +189,7 @@
     <div class="container bs-docs-container">
 
     <!-- InstanceBeginEditable name="MainContent" -->
-            <table width="100%" border="0" cellpadding="0" cellspacing="0" id="title_table">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="title_table">
             <tr>
                 <td valign="top"><h4>User Manual SEB for Windows (from Version 1.8)</h4>
                  <p class="textsubnavi"><a href="win_usermanual_en.html">»Manual for SEB 2.0</a></p>
@@ -208,7 +208,7 @@
             <h4><a name="ConfigurationFiles" id="ConfigurationFiles"></a>Configuration Files</h4>
             <p>There are two configuration files for SEB: <span class="path">SebStarter.ini</span> and <span class="path">MsgHook.ini</span>. Here's where they are located:<br />
             </p>
-            <ul id="seblist">
+            <ul class="seblist">
               <li>under Windows XP:<br />
                 in the common application data folder, e.g.<br />
               <span class="path">C:\Documents and Settings\All Users\Application Data\<br />
@@ -429,7 +429,7 @@ Until Windows XP, the user was usually logged in as an Administrator, so the SEB
             <p> The SEB exit sequence can be <strong>customised</strong> in <span class="path">MsgHook.ini</span> by setting the variables B1, B2 and B3. The function keys F1, F2, ..., F12
             are coded as decimal values (<span class="quote">virtual key codes</span>)
             according to the following table: </p>
-            <table border="1" id="codeblock">
+            <table class="codeblock" border="1" id="codeblock">
             <tr>
                 <th>Function key</th>
                 <th>Code</th>
@@ -542,7 +542,7 @@ Until Windows XP, the user was usually logged in as an Administrator, so the SEB
             <p> in <span class="path">SebStarter.ini</span>.</p>
 <h4> <a name="Certificates"></a>Certificates </h4>
             <p>In SEB using XULRunner (version 1.4 and above) problems with SSL certificates can occur:</p>
-            <ul id="seblist">
+            <ul class="seblist">
             <li>If your secured site is using certificates which are generally trusted by
                 browsers like Firefox, there might be a problem with SEB XULRunner. The
                 problem occurs when your server certificate is signed by an intermediate

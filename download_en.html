@@ -300,7 +300,7 @@
           <p><strong>IMPORTANT: If you created or opened and saved configuration files with SEB 3.5 (macOS or iOS), then you should remove the AppleSpell process from those settings (SEB Settings / Applications / Prohibited Processes) in SEB 3.6.1 and re-save that config file. Otherwise a lag when entering text could be observed on some macOS versions</strong> (see SEB 3.5.1 <a href="macosx/mac_release_notes_en.html">release notes</a>).</p>
 			
         <p><strong>New in SEB 3.6.1:</strong></p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Allow to open Settings when starting SEB for the first time/with default client settings. This solves access to settings if you want to set up SEB manually (as the setting &quot;Allow to open Settings window on client&quot; is by default disabled/false since SEB 3.6).</li>
             <li>Now blocking the Autofill feature in specific situations.<br>
             </li>
@@ -316,7 +316,7 @@
             </li>
           </ul>
         <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
-        <ul id="seblist">
+        <ul class="seblist">
           <li> Fixed: Accessibility settings (like enable/disable VoiceOver) were not updated when reconfiguring with SEB Server.<br>
           </li>
           <li>Fix for starting an SEB Server exam via connection config (exam list), in which case SEB 3.6 wasn't sending an App Signature Key (ASK). <br>
@@ -324,7 +324,7 @@
         </ul>
 			
 		<p><strong>New in SEB 3.6:</strong></p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Added options in Settings to control VoiceOver and other Accessibility settings (iOS).<br>
             </li>
             <li>On macOS, you can choose following options for VoiceOver: System Default, Enable, Disable. As SEB cannot change system settings for VoiceOver permanently: If enabling VoiceOver in SEB Settings for an exam, users will still have to manually disable VoiceOver in System Settings / Accessibility / VoiceOver or simply close VoiceOver in its overlay window if it is started by the system after a restart.<br>
@@ -335,7 +335,7 @@
             </li>
           </ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
-              <ul id="seblist">            
+              <ul class="seblist">            
 				  <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
 				  </li>
               </ul>
@@ -366,7 +366,7 @@
         <p>SEB improves stability and fixes an MDM configuration issue. Starting SEB 3.6,  accessibility features like VoiceOver can be controlled by new settings options. When using the optional SEB Server and SEB Server Moodle plugin,  exams with multiple consecutive quizzes are supported.</p>
 		  
         <p>New in SEB 3.6.2:</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Fixes that a secure MDM config (with quit password) lead to a red lock screen (exam not finished correctly) on first start, now also when running on iOS 26.</li>
             <li>Removed all legacy code related to UIWebView. This wasn't used anymore, but might still have led to some random crashes.<br>
             </li>
@@ -377,7 +377,7 @@
           </ul>	
 		  
         <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
-        <ul id="seblist">
+        <ul class="seblist">
           <li>Attempt to fix random crashes when using screen proctoring.<br>
           </li>
         </ul>
@@ -388,7 +388,7 @@
         • it invokes Assessment mode </p>
         <p>This is an iOS issue, which should be fixed in some future iOS update. If you require that MDM restriction, then you can contact us (see <a href="https://safeexambrowser.org/alliance/contribute.html">e-mail on this page</a>).</p>
         <p>New in SEB 3.6:</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Added options in in-app Settings / User Interface to control the accessibility features VoiceOver, AssistiveTouch, Grayscale Display, Smart Invert (colors) and Zoom (system default, enable, disable).<br>
             </li>
             <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
@@ -396,7 +396,7 @@
           </ul>
 		  
         <p>Main Features:</p>
-        <ul id="seblist">
+        <ul class="seblist">
           <li>The assessment mode used by SEB is built into the iOS operating system and therefore provides a high level of security. <br>
           <strong class="red">NOTE: You must set a SEB Quit Password in order for SEB to activate the iOS Assessment mode! </strong></li>
           <li>Students cannot switch to other (not permitted) apps, access other websites or communicate with other students during an exam. </li>
@@ -440,7 +440,7 @@
         <p><strong>Current version for Windows 10 and 11</strong></p>
         <p>A stand-alone tool to manually verify the integrity of a Safe Exam Browser installation on Windows. This application is intended for use cases like BYOD exams where candidates have complete control over their systems and thus could be trying to use a manipulated build of Safe Exam Browser to perform an exam. </p>
         <h5><u>Changes</u></h5>
-        <ul id="seblist">
+        <ul class="seblist">
           <li>Implemented logging.</li>
           <li>Implemented single-select list for all configuration files found in nearby filesystem.</li>
           <li>Improved layout of user interface.</li>

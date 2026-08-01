@@ -439,7 +439,7 @@
           
           <p>In the SEB configuration<em><strong></strong></em> tool window, settings are grouped in several panes. There you can set  the parameters described below.</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li>In the <span class="quote">General</span> pane you'll find  basic settings like the URL which SEB opens at startup and the passwords to  open a config file for editing and to quit/restart SEB. When first time using SEB, you might only have to change these general settings, as the default values for all other settings should reflect the more &quot;secure&quot; option.</li>
             <li><span class="quote">Config File</span> contains details about encryption of the SEB <span class="quote">.seb</span> configuration files plus all functions to deal with opening, saving, reverting, duplicating and applying settings. These commands can also be accessed in the menu bar above the tab bar. </li>
             <li><span class="quote">User Interface</span> contains general SEB user interface settings; </li>
@@ -460,7 +460,7 @@
           
           <img class="img-responsive" src="images/3.2/SEB_Preferences_01_General.png" />
  
-           <ul id="seblist">
+           <ul class="seblist">
             <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
             <li><span class="quote">Administrator password</span>: Password required to open a config file for editing in the config tool. You should set an administrator password if you don't want that someone could  open and examine a <span class="quote">.seb</span> configuration file, after knowing the encryption credentials (for example after an exam). <br />
               <strong>If you're using macOS or iOS SEB clients  for exams as well, you definitely should set an administrator password</strong>, as otherwise students could open the preferences window (which is build into SEB for macOS/iOS)  and change settings during the exam.</li>
@@ -478,10 +478,10 @@
           
           <img class="img-responsive" src="images/3.2/SEB_Preferences_02_ConfigFile.png" />
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use SEB settings file for ... starting an exam</span>: <span class="red">A configuration file saved with this option will start the exam</span> with the according settings, but won't change  local SEB settings.</li>
           </ul>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use SEB settings file for ... configuring a client</span>: <span class="red">A SEB settings file saved with this option is used to change  persistent settings of a SEB client</span>. This means, next time SEB is started by double clicking its shortcut from the desktop (or opening SafeExamBrowser.exe from the Program Files folder), it will use these settings.<strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong> (using an empty password prevents people from having to enter a password just when SEB is starting, unless you want this to prevent SEB being started unintentionally for example in a computer lab when there is no exam happening).<br />
               When this <span class="quote">.seb</span> file is opened, for example by double clicking it in Windows Explorer, then SEB is started and settings from this file are copied into the file <span class="path">SebClientSettings.seb</span> which is placed in the hidden <span class="quote"> Application Data</span> folder of the current user (see below for exact path). <br />
               <br />
@@ -516,13 +516,13 @@
             <li><span class="quote">Save Settings (As...)</span> Saves the SEB settings using the same file name or lets you choose a file name and location for the SEB settings file. You have to either enter a password or choose a cryptographic identity with which the SEB settings file will be encrypted. Use the saved encrypted settings file  to either start the exam in SEB or to  change the local settings of a SEB client, depending on the <span class="quote">Use SEB settings file for ...</span> option. </li>
           </ul>
           <p class="quote">Revert Settings to…</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Default Settings</span>: After the user confirms, settings are reset to the default settings. <span class="quote">The options for default settings are in general set to a safe, most common value, so usually you can start using the default settings and just customize options which you need for your exam scenario.</span></li>
             <li><span class="quote">Local Client Settings</span>: After the user confirms, revert to the local client settings.</li>
             <li><span class="quote"> Last Saved</span>: After the user confirms, settings are reverted to the last ones saved or loaded.</li>
           </ul>
           <p class="quote">Use Current Settings to…</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Edit Duplicate</span>: Creates a duplicate of the current settings and continues editing those.</li>
             <li><span class="quote">Configure Client</span>: Configures the client using settings from the <span class="quote">.seb</span> file which is currently being edited  (overwriting current local client settings) and SEB switches to editing local client settings. </li>
             
@@ -539,13 +539,13 @@
 <ul>
           <li><span class="quote">Use browser window</span>: Use a window for the SEB browser which can be scaled and moved around, also to another screen when available. One advantage of using a browser window is that if you're using a large wide screen display, some web pages may not be ergonomic to read. With the scalable browser window you can adjust the width of displayed web pages.</li>
           </ul>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use full screen mode</span>: Display the SEB browser full screen. Full screen browser mode should mainly be used with exam systems which display everything in one main window and don't open auxiliary windows: When a web page opens in a new window, this will be hidden behind the full screen main browser window when the user clicks into that. From SEB 2.1 you can access single windows in the SEB taskbar (click on the SEB icon) or with Alt-Tab.</li>
             <li><span class="quote">Touch optimized</span>: Enables the touch optimized mode for Windows tablet computers (for Windows 8.1 and 10). <strong>In current versions of Windows 10 you need to enable the Windows 10 &quot;Tablet Mode&quot; as well before starting SEB in touch optimized mode</strong>. Select the <strong>Action Center</strong> icon on the Windows taskbar (next to the date and time), and then select <strong>Tablet mode</strong> to turn it on. The Windows on-screen keyboard is not working with the Create New Desktop kiosk mode, that's why you have to use the Disable Explorer Shell kiosk mode.
               <br>
               <br>
 Touch optimized mode features are:
-<ul id="seblist">
+<ul class="seblist">
               <li> Larger buttons in the SEB taskbar</li>
               <li>Touch optimized message boxes (alerts, dialogs) with larger buttons</li>
               <li>The Windows on-screen keyboard is displayed when the user touches a text field on a browser page or when SEB asks to enter a password. If a physical keyboard is connected, SEB doesn't show the on-screen keyboard.</li>
@@ -610,7 +610,7 @@ Touch optimized mode features are:
 <span class="quote">Links requesting to be opened in a new browser window...</span>: Choose how SEB shall treat links requesting to be opened in a new browser window:
 
             
-            <ul id="seblist">
+            <ul class="seblist">
             <li >get generally blocked</li>
             <li >open in same window</li>
             <li >open in new window</li>
@@ -659,14 +659,14 @@ Touch optimized mode features are:
           
           <img class="img-responsive" src="images/3.2/SEB_Preferences_05_DownUploads.png" />
                   
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Allow downloading and uploading files</span>: Usually to be used with permitted third party applications for which you want to provide files to be downloaded. Uploading can only be blocked by SEB when the website is using standard form elements (this is a restriction of the used Firefox browser engine).</li>
           </ul>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Choose download / upload directory</span>: Choose the download directory with this button, which displays a file/directory chooser dialog. In the  path displayed afterwards righthand of the button, SEB automatically replaces sections with a Windows environment variable, so paths are portable to other computers, for instance with another user account name (if you for example select your <span class="path">Documents</span> folder, the path becomes <span class="path">%USERPROFILE%\Documents</span>). An empty path means SEB uses the user's default <span class="path">Download</span> folder.</li>
             <li><span class="quote">Allow user to select custom download / upload directory</span>: With this option activated, SEB will bring up a simple dialog when download is starting. The user can then choose any folder from the local file system</li>
             <li><span class="quote">Choose file to upload…</span>  (Mac only): SEB can let the user choose the file to upload manually (as usual) or automatically choose the same file which was downloaded before. There are three possible policies to choose the file to upload:</li>
-                <ul id="seblist">
+                <ul class="seblist">
             <li class="quote">manually with file requester</li>
             <li><span class="quote">by attempting to upload same file downloaded before</span>: If the file is not found, a file requester  is presented and the user can choose some other file manually.</li>
             <li><span class="quote">by only allowing to upload the same file downloaded before</span>: 
@@ -685,7 +685,7 @@ Touch optimized mode features are:
           <p><span class="quote">Browser Exam Key / Config Key</span></p>
             <p>The Browser Exam Key and the Config Key allow to verfify different aspects of an exam. They both depend on all configuration values defined for a file, i.e. they change whenever&nbsp; a configuration value changes. The keys can be used independently from each other, but both are sent with every HTTP request if activated. Copy a key to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in.</p>
           <p>IMPORTANT: Always copy the key(s) as a last step, after the configuration file was saved!&nbsp;</p>
-      <ul id="seblist">      
+      <ul class="seblist">      
             <li> <span class="quote">Use Browser Exam Key and Config Key</span>: Enables using the Browser Exam Key or Config Key. The key is sent in an HTTP header to authenticate the SEB client and its settings to a compatible exam system.</li>
             <li><span class="quote">Browser Exam Key</span>: Copy the Exam Key string (which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. Plug-ins offering this functionality have been released for the learning management systems <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">Moodle</a>, <a href="https://github.com/eqsoft/SEBPlugin" target="_blank">ILIAS</a> and OpenOlat. These have a built-in SEB support.<br>
               <strong>Important: First save your final exam settings in a .seb settings file and then  copy the browser exam key to your exam system's quiz settings as the Browser Exam Key changes when you change any setting</strong>. <br>
@@ -702,20 +702,20 @@ Touch optimized mode features are:
 	</p>
 	<p><span class="quote">Session Handling</span></p>
 	<p>Use the following parameter to control whether a browser session shall be persited on disk, e.g. to keep users logged in after a reconfiguration.</p>
-	<ul id="seblist">
+	<ul class="seblist">
 		<li > <span class="quote">Clear browser session when starting an exam or starting SEB</span></li>
 		<li > <span class="quote">Clear browser session when ending an exam or terminating SEB (prevents deletion of browser cache if deactivated)</span></li>
 		</ul>
 	<p><span class="quote">Link to quit SEB after exam</span></p>
 	
 It is possible to configure SEB to quit after the exam is submitted without having to enter a quit password by specifying a <span class="quote">quit link</span> (full URL starting with http:// or https://) and placing this on the summary page displayed by the LMS after submitting the exam.
-            <ul id="seblist">
+            <ul class="seblist">
 		<li ><span class="quote">Ask user to confirm quitting</span>: If not selected, then SEB quits immediately after a Quit Link is detected, without users having to confirm.</p>
 	</li>
 		</ul>
 
 			<p><span class="quote">Back to Start Button</span></p>
-	<ul id="seblist">
+	<ul class="seblist">
 
             <li><span class="quote">Back to Start button</span>: Either check the &quot;<span class="quote">Use Start URL</span>&quot; option or enter a link to which the exam is redirected when the Back to Start button is pressed. The browser session is not restarted using this feature (session cookies are not cleared; a logged in user isn't logged out). The Back to Start button is displayed in the SEB taskbar when either the &quot;Use Start URL&quot; option is selected or a link is entered.</li>
             <li><span class="quote">Title/tool tip text for the Back to Start button</span>: This text is displayed as the title of the confirmation alert and as tool tip on the icon. Leave empty for a standard text (which is localized to the SEB user interface languages).</li>
@@ -742,7 +742,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
           
           <h5 class="seb-section-header">Setting options:</h5>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Monitor processes while SEB is running:</span> If enabled, SEB prevents non-permitted processes to display any windows (including alerts, message boxes etc.) by hiding them immediately. If SEB cannot hide such a process (because it is running with the rights of another user, for example SYSTEM) SEB terminates it. For the &quot;<span class="quote">Disable Explorer Shell</span>&quot; kiosk mode (see <a href="win_usermanual_en.html#SecurityPane">Security</a> pane), For the "Disable Explorer Shell" and the "Create new desktop" kiosk mode (see Security pane), "Monitor processes..." is always activated and cannot be deactivated (which was the case in former SEB versions). You can only deactivate this feature when using the "None (for debugging only)" Kiosk mode.</li>
           </ul>
           
@@ -758,7 +758,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
       
           <img class="img-responsive" src="images/3.2/SEB_Preferences_07a_Applications_PermittedProcesses.png" />
  
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Allow  switching to third party applications</span> (Mac only): If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">Cmd-Tab</span>) will work, so it's possible to switch to other running applications.<br />
               Use this option only when running SEB in a user account managed by parental controls, with only SEB and the desired applications allowed. Also you should switch on <span class="quote">Simple Finder</span> and don't give users access to other accounts with administrator rights on that computer (see SEB for macOS manual: <a href="../macosx/mac_usermanual_en.html#secure_environment">Secure Environment</a>). <br />
             </li>
@@ -773,7 +773,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
         
           <p class="seb-section-header quote">Selected Process details:</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Active</span>: Indicates if this permitted process item is active (can be used while testing).</li>
             <li><span class="quote">Title</span>: Application title which is displayed in the application chooser.</li>
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
@@ -808,13 +808,13 @@ It is possible to configure SEB to quit after the exam is submitted without havi
           <p>It might be an inconvenience having to quit running applications before starting an exam, but this is the only possible way for SEB to prevent that some specific applications could be used for cheating. <strong>The safest exam environment would be if students would quit ALL applications before the exam.</strong></p>
           <img class="img-responsive" src="images/3.2/SEB_Preferences_07b_Applications_ProhibitedProcesses.png" />
       <!--<br />
-      <ul id="seblist">
+      <ul class="seblist">
             <!--<li><span class="quote">Choose Executable...</span> Displays a file requester for choosing  a process executable or application which will be added to the list of prohibited processes. <strong>Not yet available in SEB 2.0.</strong></li>
             <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of prohibited processes. <strong>Not yet available in SEB 2.0.</strong></li>
           </ul>-->
 
           <p class="quote">Selected Process details:</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Active</span>: Indicates if this prohibited process item is active.</li>
             <li><span class="quote">Executable</span>: Process name, usually the filename of the executable.</li>
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
@@ -851,7 +851,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
           
         <img class="img-responsive" src="images/3.2/SEB_Preferences_09a_Network_Filter.png" />
 
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Activate URL filtering</span>: Filter URLs when loading web pages using the filter set defined below and in additional resources.<br />
             </li>
             <li> <span class="quote">Filter also embedded content</span>: If selected, also all embedded resources will be filtered using the filter set.    Note that there can be hundreds of resources such as images and other media per page, so filtering all content may slow down page loading.</li>
@@ -864,14 +864,14 @@ It is possible to configure SEB to quit after the exam is submitted without havi
           
           <p class="seb-section-header quote">Rules</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Active</span>:
               Indicates if the rule is active.</li>
             <li><span class="quote">Regex</span>:
               Indicates if the  rule is a regular expression. <br />
             If <em>Regex</em> is not checked, then the rule can be formatted using the wildcard <span class="codetext">'*'</span>, which stands for an arbitrary string of any length.</li>
             <li><span class="quote">Action</span> to process if the corresponding expression matches. Possible actions:
-      <ul id="seblist">
+      <ul class="seblist">
                 <li><span class="quote">block</span><br />
                 If the URL matches the expression, then it is rejected and processing of the remaining rules  is stopped.</li>
                 <li><span class="quote">allow</span><br />
@@ -885,7 +885,7 @@ It is possible to configure SEB to quit after the exam is submitted without havi
               scheme://user:password@host:port/path?query#fragment<br />
               <br />
               </span>      <span class="quote">Format for a filter expression in the non-regex format:</span><br />
-              <ul id="seblist">
+              <ul class="seblist">
                 <li>Scheme  is optional, and must be followed by <span class="codetext">'://'</span>.<br />
                 </li>
                 <li>The host field is required (besides when filtering against a protocol like about:blank or data:), and is either a partial or full hostname or an IP address. It can also contain or be replaced completely with the wildcard <span class="codetext">'*'</span> char, see below for details. The URL filter doesn't resolve hostnames itself, so if you allow everything and only block <span class="codetext">'hostname.com'</span>, then that host could still be reached using its IP address. You should therefore mainly use whitelisting to allow accessing only specific sites during an exam.</li>
@@ -922,16 +922,16 @@ It is possible to configure SEB to quit after the exam is submitted without havi
           
           <img class="img-responsive" src="images/3.2/SEB_Preferences_09b_Network_Certificates.png" />
 
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Choose TLS/SSL certificate to embed into configuration... </span>Here you can choose <span class="quote">SSL server certificates</span> which are stored in the <em>Windows Certificate Store</em> (if you  have a certificate file, usually in the<strong> .cer</strong> format, you first need to import it to the <em>Windows Certificate Store</em>, depending on the format you can just double click such a certificate file to invoke the Windows certificate import assistant). The  certificates added to this table will be embedded into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning then when connecting to  https servers with those self-signed certificates and you  don't need to distribute SSL certificates manually to the exam client computers<strong>.</strong></li>
             <li><span class="quote">Debug certificate:</span> Debug certificates allow changing the DNS name (you can overwrite the certificate name in the certificate list), so a server with a wrong domain name is accepted if its domain is entered in the certificate name field. Expired certificates are also accepted. If not using this option, the URLs of the accessed secure server have to match the 'Subject Common Name' or 'Subject Alternative Name' properties of the certificate.</li>
             <li><span class="quote">Choose identity to embed into configuration... </span>You can also choose <span class="quote">cryptographic identities</span> stored in the <em>Windows Certificate Store</em>  (stored in <strong>Current User/Personal</strong> and <strong>Current User/Trusted People</strong>) which are suitable for decrypting <span class="quote">.seb</span> files on SEB exam clients (X.509 certificates with RSA public key and associated private key). If you have a .p12 or .pfx certificate archive file, you first need to import it into the <em>Windows Certificate Store</em> (usually you can just double click such a certificate file to invoke the Windows certificate import assistant). <strong>When importing the .p12/.pfx identity file, the included private key must be marked as &quot;exportable&quot;.</strong> The identities added to this table will be embedded into the <span class="quote">.seb</span> settings file. Use this feature  for creating a <span class="quote">.seb</span> file for configuring a client and add the identity or identities you like to use for encrypting/decrypting <span class="quote">.seb</span> files for starting exams later. When opening this <span class="quote">.seb</span> file on your exam clients, the embedded identities will be imported into the <em>Windows Certificate Store</em> (or <em>Keychain</em> on Macs), so that they can be used for decrypting exam settings later. Please note that during this process the  private keys imported into the Windows Certificate Store of the exam clients will be flagged as non-exportable for increased security. If you don't use a client config file with embedded identities to distribute the identity to the exam client devices, but a <strong>deployment system</strong>, you can deploy the identity certificates into Local Machine/Trusted People. Then they are available for all users on that machine (as Windows makes them available for all users in their Current User/Trusted People stores).</li>
             <li><span class="quote">Pin embedded certificates</span>: Bypasses the browser's built-in certificate store, you have to embed TLS or CA certificates into SEB settings which establish trust for the secure servers you want SEB to connect to.</li>
           </ul>
           
-          <h5 id="sebh5">In SEB  problems with SSL certificates can occur:</h5>
+          <h5 class="sebh5">In SEB  problems with SSL certificates can occur:</h5>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Even if your secured site is using certificates which are generally trusted by
               browsers like Firefox, there might be a problem with the SEB <span class="quote">XULRunner</span> browser. The
               problem occurs when your server certificate is signed by an intermediate
@@ -1012,7 +1012,7 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
           <img class="img-responsive" src="images/3.2/SEB_Preferences_11_Registry.png" />
       
           <p>Options in the Windows Security Screen invoked by Ctrl-Alt-Del:</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><strong>Enable Switch User:&nbsp;
               </strong>Activates the button &quot;Switch User&quot; or &quot;Benutzer wechseln&quot;, respectively.<br />
             </li>
@@ -1044,7 +1044,7 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
             </li>
           </ul>
           <p>These Windows Registry options define the values while SEB is running. SEB remembers the settings which were active on the exam client computer before running SEB and resets them to the original values when exiting regularly. In case  SEB would crash or the user would enforce a reset of the machine while SEB was running, these options are reset to the original values:</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>when SEB is restarted once again and <strong>properly</strong> quit; </li>
             <li>or when uninstalling SEB. </li>
           </ul>
@@ -1062,7 +1062,7 @@ Logfiles are created for every SEB Session, so they are prefixed with &quot;xxx&
           
           <img class="img-responsive" src="images/3.2/SEB_Preferences_12_HookedKeys.png" />
       
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Special Keys</span>: Settings to enable or block (hook)  keys, key combinations and  mouse buttons.</li>
             <li><span class="quote">Enable Right Mouse</span>: The right mouse button has to be enabled for users to be able to use the context menu for spell checking.</li>
             <li><span class="quote">Enable  PrintScreen</span>: Controls PrintScreen and macOS screen capture (invoked with cmd-3 and cmd-4), this setting corresponds with Enable screen capture / PrintScreen in the <a href="win_usermanual_en.html#SecurityPane">Security</a> pane. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when PrintScreen is disabled.</li>

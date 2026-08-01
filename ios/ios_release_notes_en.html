@@ -229,7 +229,7 @@
         <!-- Content -->
 			
      <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.6</a>:          </h5>
-     <ul id="seblist">
+     <ul class="seblist">
         <li>Added options in in-app Settings / User Interface to control the accessibility features VoiceOver, AssistiveTouch, Grayscale Display, Smart Invert (colors) and Zoom (system default, enable, disable).<br>
         </li>
             <li> Support running on  iOS/iPadOS 26 without having to change in in-app Settings / Security / Allow Running on iOS Beta newer than iOS 18.<br>
@@ -239,7 +239,7 @@
             </li>
           </ul>
           <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Now supporting exams with multiple consecutive quizzes when using the optional SEB Server and SEB Server Moodle plugin.<br>
             </li>
             <li>Fixed: SEB should send updated screen shot triggered by touch events when using the optional SEB Screen Proctoring.<br>
@@ -250,7 +250,7 @@
           </ul>
 			
    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5.2</a>:</h5>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>&quot;Download and 'open' configured file types instead of displaying them&quot; crashed: Fixed regression in iOS version.<br>
             </li>
             <li> Fixed: App Signature Key (ASK) was not transmitted when using the optional, individually configured SEB Server.<br>
@@ -259,7 +259,7 @@
 		  </ul>
 			
    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5.1</a>:</h5>
-        <ul id="seblist">
+        <ul class="seblist">
           <li> Fixed: BrowserExamKey/ConfigKey not recalculated correctly when opening config in in-app settings, when reverting to client settings or resetting settings.<br>
           </li>
           <li> Fixed crash when changing selection in radio group (InAppSettings, for example on Configuration page).<br>
@@ -273,7 +273,7 @@
         </ul>
 			
    <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.5</a>:</h5>
-		<ul id="seblist">
+		<ul class="seblist">
           <li> Now it's possible to open configuration files in in-app Settings ('More options' menu) when not running in a secure session.<br>
           </li>
           <li> Added Home Screen quick action for editing config files in SEB in-app Settings (touch and hold SEB icon).<br>
@@ -355,7 +355,7 @@
 			
 			
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4.1</a>:</h5>
-		<ul id="seblist">
+		<ul class="seblist">
           <li> Added button to show Config QR Code in in-app Settings / Configuration.</li>
           <li> No longer using the modern AAC API with iOS older than 18.1, unless using the AAC Multi-App Mode on iPadOS 17.7.1 or iPadOS 18.1 and newer (on iPadOS 17.7.1 the option Settings / Security / Use Modern AAC API must explicitly be enabled).<br>
           </li>
@@ -375,7 +375,7 @@
 			
 			
 		<h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.4</a>:</h5>
-		<ul id="seblist">
+		<ul class="seblist">
           <li>Now running on iOS 18 without having to use special setting.</li>
           <li> Support for AAC Multi-App Mode starting iPadOS 18. This allows to use additional apps running alongside SEB in exams.
             <ul>
@@ -393,14 +393,14 @@
           <li> Now injecting ConfigKey/BrowserExamKey into all iFrames when using the modern WebView. You should use the SEB JS API function <span class="codetext">void SafeExamBrowser.security.updateKeys(function callback)</span> to support this.</li>
         </ul>
         <p><strong>Optional features, which need to be individually configured and are disabled by default:</strong></p>
-<ul id="seblist">
+<ul class="seblist">
           <li>Added the optional feature Screen Proctoring (which requires to run your own instance of SEB Server and the SEB Screen Proctoring feature).</li>
           <li> Improvement of user ID resolution resp. handshake completion with the optional SEB-Server:<br>
 Now generic exam systems are supported with SEB Server.<br>
   </li>
 </ul>
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.3</a>:</h5>
-        <ul id="seblist">
+        <ul class="seblist">
           <li>Removed the Autofill Contacts/Passwords context menu item in text fields on iOS 17.<br>
           </li>
           <li>Also removed the &quot;Share...&quot; context menu item (which is anyways blocked by the AAC Assessment Mode). Note that the &quot;Translate&quot; context menu item cannot be removed currently (not covered by API, but also blocked by AAC). <br>
@@ -427,7 +427,7 @@ Now generic exam systems are supported with SEB Server.<br>
         <strong>IMPORTANT for SEB Integrations: The classic WebView</strong> (the iOS framework UIWebView) <strong>has been</strong> <strong>DEPRECATED by Apple </strong>years ago, it's no longer maintained and will at some point be removed completely from iOS/iPadOS.<strong style="color: #FF000C"> It's crucial that assessment systems with SEB Integrations, which are using the Browser Exam Key (BEK) and Config Key (CK), transition to the <a href="developer/seb-config-key.html">SEB Javascript API</a></strong> to query these keys, as the modern WebView (iOS/macOS framework WKWebView) doesn't support transmitting the BEK/CK in HTTP request headers. <a href="developer/seb-config-key.html">See our documentation</a> about how to adopt the SEB JS API. <strong> SEB now displays a warning message if the classic WebView is used by your SEB settings, as it's now of upmost importance to move away from the classic WebView and only use the modern one. </strong>
 			
         <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3.2</a>:</h5>
-        <ul id="seblist">
+        <ul class="seblist">
           <li>Added option to share settings &quot;for starting an exam&quot; uncompressed as plain text. This is helpful for importing these configuration files into LMS/exam systems which don't support gzip compressed or encrypted config files (for example Moodle) or for manual editing.</li>
           <li>Fixed: Cancel in Exam/Quit Password dialog didn't work.</li>
           <li>Fixed keyboard shortcut for switching tabs (control-tab/shift-control-tab) didn't work on current iPadOS versions.</li>
@@ -447,7 +447,7 @@ Now generic exam systems are supported with SEB Server.<br>
           </ul>
 			
         <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.3</a>:</h5>
-        <ul id="seblist">
+        <ul class="seblist">
           <li>Accessibility improvements: Added dynamic type font scaling to side menu, Initial Configuration Assistant, About SEB and lock screen views.</li>
           <li>Now also supporting Increase Contrast mode and Bold Text in side menu.</li>
           <li>Improved VoiceOver feedback when opening new screens/views.</li>
@@ -470,7 +470,7 @@ Now generic exam systems are supported with SEB Server.<br>
           <li>Added iOS 17 to the settings options for minimal required iOS version in SEB in-app settings/Security.</li>
         </ul>
         <p>Optional features, which need to be individually configured and are disabled by default:</p>
-<ul id="seblist">
+<ul class="seblist">
           <li>App Signature Key functionality, which allows automated application integrity checks similar to the manual use of the Browser Exam Key (no copy-paste of hash string necessary).</li>
           <li>New server-driven Browser Exam Key which can be used for improved SEB Server integration with LMS/assessment systems like Moodle. </li>
           <li>Now showing &quot;Disconnecting&quot; window when quitting SEB Server session, for user feedback in case of connection issues.</li>
@@ -480,20 +480,20 @@ Now generic exam systems are supported with SEB Server.<br>
         </ul>
 			
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.4</a>:</h5>
-    <ul id="seblist">
+    <ul class="seblist">
       <li>Fixed downloads of website generated files (using &quot;data:&quot; protocol scheme).</li>
       <li>Now downloads of any file types and &quot;blob:&quot;-generated files are possible when using the modern WebView and iOS 14.5 or newer. These downloaded files also use the original file name (this wasn't possible in the classic WebView).</li>
       <li>Another attempt to fix crash when closing some web pages.</li>
     </ul>
 			
     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.2.3</a>:</h5>
-    <ul id="seblist">
+    <ul class="seblist">
       <li>Fixed: Downloads of website-generated files were not working in SEB 3.1.1 and 3.2.2.</li>
       <li>Fixed crash when closing a tab.</li>
     </ul>
 			
-    <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.2.2</a>:</h5>
-          <ul id="seblist">
+    <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.2.2</a>:</h5>
+          <ul class="seblist">
             <li>Now displaying camera &amp; microphone permission dialogs for web applications and optional built-in proctoring before starting session.</li>
             <li>Added new settings <em>browserMediaCaptureCamera</em> and <em>browserMediaCaptureMicrophone</em> (<em>Settings / Browser Features / Media Playback/Capture / Allow Camera/Microphone Capture)</em> for controlling browser access to camera/microphone (WebRTC or still pictures/audio recording). If these settings are enabled, users will be asked to grant access to camera/microphone for SEB before the according (exam) session is started. </li>
             <li>To access camera/microphone, SEB must use the <strong>modern WebKit browser engine</strong>. If you're using an assessment software with a built-in SEB integration, make sure to use a version which is compatible with the <a href="file:///Users/drs/developer/safeexambrowser.org/developer/seb-config-key.html"><strong>SEB JavaScript API</strong></a> (for example <a href="https://moodledev.io/general/releases/4.1" target="_blank">Moodle 4.1</a>/4.0.6 or <a href="https://github.com/ethz-let/moodle-quiz_accessrule_seb_js_api" target="_blank">updated plugin for manual installation in Moodle 3.9 or later</a>).</li>
@@ -505,7 +505,7 @@ Now generic exam systems are supported with SEB Server.<br>
             <li>Fixed additional stability issues.</li>
           </ul>
           <p>Optional features which need to be individually configured and are disabled by default:</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Massively improved error handling when connecting to SEB Server with better error messages which can help SEB Server and exam administrators to fix server-side issues.</li>
             <li>Added support for fallback option when connecting to SEB Server fails completely. In that case, an alternative start URL can be configured and fallback optionally protected with a new fallback password.</li>
             <li>Improved stability in case of misconfigured SEB Server exams.</li>
@@ -514,8 +514,8 @@ Now generic exam systems are supported with SEB Server.<br>
             <li>Renew expired SEB Server OAuth token.</li>
           </ul>
 			  
-		  <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.1.1</a>:</h5>
-          <ul id="seblist">
+		  <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.1.1</a>:</h5>
+          <ul class="seblist">
             <li>Added support for iOS 16.</li>
             <li>Added all current major iOS version numbers to the setting 'Allow running from iOS version'.</li>
             <li>Allows to use VPN for Automatic Client Configuration by searching the network.</li>
@@ -528,7 +528,7 @@ Now generic exam systems are supported with SEB Server.<br>
             <li>Fixed stability issues. </li>
           </ul>
           <h5 id="sebh"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.1</a>:</h5>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Added text search for web pages (Note: Search in PDF files is currently not supported).</li>
             <li>Added key shortcuts for reload (command-R), text search (cmd-F) and quitting exam session (cmd-shift-Q).<br>
             </li>
@@ -563,7 +563,7 @@ Now generic exam systems are supported with SEB Server.<br>
           </ul>
           <p>Optional features, which need to be individually configured and are disabled by default:<br>
           </p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Now supporting battery monitoring with SEB Server.<br>
             </li>
             <li>Added lock screen notifications and unlock by SEB Server.<br>
@@ -573,12 +573,12 @@ Now generic exam systems are supported with SEB Server.<br>
             <li>Now supporting OpenOlat and Ans together with SEB Server.</li>
           </ul>
           <h5> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.0.1</a>:</h5>
-		  <ul id="seblist">
+		  <ul class="seblist">
 		    <li>SEB 3.0.1 runs by default on iOS/iPadOS 15. It's not necessary to set the option in <em>Settings / Security  / Allow Running on iOS Beta</em> to <em>iOS 15</em>.</li>
 		    <li>Fixed that a custom user agent and suffix wasn't updated when reconfiguring SEB.		  </li>
 		  </ul>
-		  <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.0</a>:</h5>
-		  <ul id="seblist">
+		  <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  3.0</a>:</h5>
+		  <ul class="seblist">
 		    <li> Support for the modern WebKit browser engine, which increases performance, stability and compatibility with web applications.</li>
 		    <li>Access to camera/microphone via WebRTC on iOS 14.3 or newer.</li>
 		    <li> SEB 3.0 for iOS can now also be started with seb(s) links to servers requiring authentication.</li>
@@ -601,7 +601,7 @@ Now generic exam systems are supported with SEB Server.<br>
 		    </span> This variable is set regardless whether <span class="codetext">updateKeys()</span> is  called.</li>
 	      </ul>
 		  <p>Optional features, which need to be individually configured and are disabled by default: </p>
-		  <ul id="seblist">
+		  <ul class="seblist">
 		    <li>Live remote proctoring using the free, open source video conferencing solution <a href="https://jitsi.org/jitsi-meet" target="_blank">Jitsi Meet</a>. </li>
 		    <li> AI (machine learning) supported proctoring detects if candidates disappear from the camera view or if other faces show up. Also suspicious face movements are detected and displayed with warning symbols in the video stream. The face tracking features work on-device and respect privacy.<br>
 	        </li>
@@ -609,8 +609,8 @@ Now generic exam systems are supported with SEB Server.<br>
 		    <li>Both Jitsi remote proctoring and SEB Server require examination administrators to set up their own server instances (or use external service providers) and configure SEB clients to connect to those servers. SEB doesn't use any centralized server instances and the according features are by default disabled.</li>
 	      </ul>
 			
-		  <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.17</a>:</h5>
-		  <ul id="seblist">
+		  <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.17</a>:</h5>
+		  <ul class="seblist">
 		    <li>SEB 2.1.17 runs by default on iOS 14, removed check for running on iOS beta.</li>
 		    <li> New scroll lock button for better usability while using some drag-and-drop and drawing question types.<br>
 	        </li>
@@ -628,8 +628,8 @@ Now generic exam systems are supported with SEB Server.<br>
 	      </ul>
 
 			
-          <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.16</a>:</h5>
-          <ul id="seblist">
+          <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.16</a>:</h5>
+          <ul class="seblist">
             <li>Improved accessibility when using VoiceOver: Added accessibility labels and hints to buttons and excluded unnecessary UI elements. After opening the left side menu,  VoiceOver focus moves to the first browser tab entry</li>
             <li> Added keyboard shortcut Cmd-M to toggle left side menu (show/hide).</li>
             <li>Now supporting hardware keyboard shortcuts (Ctrl-Tab/Shift-Ctrl-Tab) to switch browser tabs.</li>
@@ -658,8 +658,8 @@ Now generic exam systems are supported with SEB Server.<br>
             <li>Changed left side menu &quot;SafeExamBrowser version number&quot; title to a button which closes the side menu for better accessibility.</li>
             <li>Activated text scaling (Dynamic Type) for most UI strings (currently  commands in the left side menu are not yet scaled, this will be added in a later version).</li>
           </ul>
-          <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.15</a>:</h5>
-          <ul id="seblist">
+          <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.15</a>:</h5>
+          <ul class="seblist">
             <li>Runs on iOS 13 with default settings  (without having to set the &quot;Allow Running on iOS Beta&quot; option in Settings/Security to iOS 13).</li>
             <li>It's now possible to start an exam with individual settings or to reconfigure SEB even if using client settings with a quit password, as long as no exam is running.</li>
             <li> Tapping Cancel in the &quot;No Kiosk Mode Available&quot; alert now displays the &quot;Exam Session Finished&quot; alert instead of asking to activate AAC Single App Mode immediately again.<br>
@@ -669,8 +669,8 @@ Now generic exam systems are supported with SEB Server.<br>
             <li>Now clearing cookie store when starting SEB, to prevent that some authentication logins persist.</li>
 		  </ul>
 				
-          <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.14</a>:</h5>
-          <ul id="seblist">
+          <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version  2.1.14</a>:</h5>
+          <ul class="seblist">
             <li>‪The Browser Exam Key and the new Config Key values are generated by SEB for iOS and sent with all HTTP requests (if enabled in Settings/Exam Session). Compatible assessment systems can use these values to verify if an exam is accessed with an approved version of SEB and deny access if a regular browser is used, if SEB is used with wrong settings or if a manipulated version of SEB is used.‬
               ‪</li>
             <li>SEB for iOS now supports the URL filter feature to restrict access to websites/web pages/web resources. Use the desktop versions of SEB to generate config files containing URL filter rules.‬<br>
@@ -715,11 +715,11 @@ Now generic exam systems are supported with SEB Server.<br>
             <li> Stability and security improvements.</li>
             <li>SEB 2.1.14 fixes an issue in SEB 2.1.13 which occurred when checking app integrity. </li></ul>
           <p><strong>Changes:</strong></p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><strong>IMPORTANT: SEB 2.1.14 for iOS uses a different policy to decide if it can be reconfigured when a seb(s) URL or a .seb config file is opened: </strong>When running in secure mode (a quit password is set in the currently active settings, which invokes AAC/the selected Single App Mode), SEB 2.1.14 cannot be reconfigured, even if it's using persisted client settings. Earlier versions could always be reconfigured when using client settings. If you want to allow reconfiguring SEB by opening a seb(s) URL while running in secure mode, then you need to use the  &quot;Allow Reconfiguring&quot; and &quot;Reconfiguring Config URL&quot; options in Settings/Exam Session. This new policy for reconfiguring will also be introduced to upcoming desktop versions of SEB.</li>
           </ul>
-          <h5 id="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version 2.1.12</a>:</h5>
-          <ul id="seblist">
+          <h5 class="sebh5"> Release notes for <a href="../download_en.html#iOS">Safe Exam Browser version 2.1.12</a>:</h5>
+          <ul class="seblist">
             <li>SEB is now running on iOS 12.<br>
             </li>
             <li>Supports full screen size on all new iPhone devices.<br>

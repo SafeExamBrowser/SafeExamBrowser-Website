@@ -447,7 +447,7 @@
           
           <p>While the preferences window is displayed, switching to other running (initially hidden) applications is possible and the screen background isn't blacked out. Also the menu bar is displayed, so  SEB menu commands can be used. You can also drag and drop <span class="quote">.seb</span> configuration files onto the preferences window or the SEB icon in the macOS dock (not the SEB dock). In the preferences window 9 tabs with grouped settings are available. </p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li>In the <span class="quote">General</span> pane you'll find  basic settings like the URL which SEB opens and the passwords to enter preferences or open a config file for editing and to quit/restart SEB. When first time using SEB, you might only have to change these general settings, as the default values for all other settings should reflect the more &quot;secure&quot; option.</li>
             <li><span class="quote">Config File</span> contains details about encryption of the SEB <span class="quote">.seb</span> configuration files plus all functions to deal with opening, saving, reverting, duplicating and applying settings. These commands can also be accessed in the <span class="quote">Settings</span> menu  and the popdown menu in the preferences window title bar (clicking on the triangle symbol). </li>
             <li><span class="quote">User Interface</span> contains general SEB user interface settings; </li>
@@ -460,7 +460,7 @@
           
           <p class="seb-section-header"><strong>There are two different modes in which you can edit settings: </strong></p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Edit local client settings</span>: Changes settings of this SEB client. These <span class="quote">local client settings</span> are saved persistently on drive (in the ~Library/Preferences/ directory). When you change a setting option, then  it is immediately saved (this is how preferences in other macOS standard applications work). <br />
             <strong>In the title bar of the Preferences window</strong> <em>'Local Client Settings' </em>is displayed instead of a file name.</li>
             <li><span class="quote">Edit a .seb settings file</span>:  When you open a settings file, it is always loaded temporary into memory and will be discarded when you quit SEB. So loading a .seb settings file for editing into the Preferences window (which serves as the configuration editor in SEB for macOS, similar to the SEB Config Tool in SEB for Windows) won't change settings of this SEB client permanently. If you change something, you have to explicitly save the changed settings into the same file  (using the command <span class="quote">Save</span>) or to another file (<span class="quote">Save As</span>…). <br />
@@ -469,14 +469,14 @@
           
           <p class="seb-section-header">You can switch from <em>editing local client settings</em> to <em>editing a settings file</em> with the commands:</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Save As…</span> Saves local client settings into a .seb file and  if answering the following dialog 'Edit Saved Settings'? with <span class="quote">Edit File</span> switches from local client settings to the new file.</li>
             <li><span class="quote">Edit Duplicate</span>: Switches to editing a settings file (with the default file name <span class="path">SebClientSettings.seb</span>), when saving this config file, the file chooser will be displayed to select a destination directory and to change the file name if desired.</li>
           </ul>
           
           <p class="seb-section-header">You can switch from <em>editing a settings file</em> to  <em>local client settings</em> with:</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Revert Settings to Local Client Settings</span>: The currently edited settings file is discarded and SEB switches back to editing local client settings.</li>
             <li><span class="quote">Use Current Settings to Configure Client</span>: Settings from the .seb file which is currently being edited are used to configure local client settings (overwriting current local client settings) and SEB  switches to editing local client settings.</li>
           </ul>
@@ -510,7 +510,7 @@
               <img class="img-responsive" src="images/SEB_PreferencesGeneral-2.0-en.png" width="762" alt="SEB Preferences Window General Pane" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Start URL</span>: Full URL (starting with http:// or https://) of the page to open when SEB is started.</li>
             <li><span class="quote">Paste from saved clipboard</span>: SEB saves the content of the clipboard (if it's a text string) when starting up and before clearing the clipboard. Use this link to paste the saved string to the <span class="quote">Start URL</span> field.</li>
             <li><span class="quote">Administrator password</span>: Password required to enter the preferences window or to open a config file for editing. It's recommended to set an administrator password!</li>
@@ -523,7 +523,7 @@
             <li><span class="quote">Help-Button &quot;?&quot;</span>: Displays this manual page in a new browser window.</li>
           </ul>
           <p class="seb-section-header">You can get out of the preferences windows using one of the three buttons described below:</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Close window</span> (standard red close button in the windows title bar).</li>
             <li><span class="quote">Restart SEB</span>: Saves preferences, eventually reconfigures and restarts SEB, displaying the webpage at start URL.</li>
             <li><span class="quote">Quit</span>: Saves preferences and exits SEB.</li>
@@ -539,10 +539,10 @@
             <img class="img-responsive" src="images/SEB_PreferencesConfigFile-2.0-en.png" width="762" alt="SEB Preferences Window Config File Pane" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use SEB settings file for ... starting an exam</span>: A config file saved with this option will start the exam with the according settings, but won't change local SEB settings.</li>
           </ul>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use SEB settings file for ... configuring a client</span>: A SEB settings file saved with this option can be used to change  local settings of a SEB client. This means, next time the Safe Exam Browser app is started directly (by opening its icon from the Applications folder, the Dock or Lauchpad), it will use these settings. <strong>Usually you should encrypt it with the same password which is set as administrator password on the SEB client or none if there is no administrator password set on the SEB client yet</strong>. If you use another settings password, then users are prompted to enter it.</li>
             <li><span class="quote">Show settings in app </span>(iOS): Shows the Edit Settings command in the left slider menu. If this option is enabled in the client configuration, in-app settings will also be available after opening an exam config. </li>
             <li><span class="quote">Allow to open preferences window on client</span>: Usually you should disable the preference window on exam clients besides for debugging purposes. </li>
@@ -555,13 +555,13 @@
             <li><span class="quote">Save settings (as...)</span> Saves the SEB settings using the same file name or lets you choose a file name and location for the SEB settings file. You have to either enter a password or choose a cryptographic identity with which the SEB settings file will be encrypted. Use the saved encrypted settings file  to either start the exam in SEB or to  change the local settings of a SEB client, depending on the <span class="quote">Use SEB settings file for ...</span> option. </li>
           </ul>
           <p class="quote">Revert Settings to…</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Default Settings</span>: After the user confirms, settings are reset to the default settings.</li>
             <li><span class="quote">Local Client Settings</span>: After the user confirms, revert to the local client settings.</li>
             <li><span class="quote"> Last Saved</span>: After the user confirms, settings are reverted to the last ones saved or loaded.</li>
           </ul>
           <p class="quote">Use Current Settings to…</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Edit Duplicate</span>: Creates a duplicate of the current settings and continues editing those.</li>
             <li><span class="quote">Configure Client</span>: Configures the client using settings from the .seb file which is currently being edited  (overwriting current local client settings) and SEB switches to editing local client settings. </li>
             <li><span class="quote">Apply and Restart SEB</span>: Applies current settings, closes Preferences and restarts SEB.</li>
@@ -594,13 +594,13 @@
             <img class="img-responsive" src="images/SEB_PreferencesUserInterface-2.0-en.png" width="779" alt="SEB Preferences Window Appearance Pane" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use browser window</span>: Use a window for the SEB browser which can be scaled and moved around, also to another screen when available. One advantage of using a browser window is that if you're using a large wide screen display, some web pages may not be ergonomic to read. With the scalable browser window you can adjust the width of displayed web pages.</li>
           </ul>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use full screen mode</span>: Display the SEB browser full screen.</li>
             <li><span class="quote">Touch optimized</span> (Win): Enables the touch optimized mode for Windows tablet computers (for Windows 8.1 and 10) featuring:
-              <ul id="seblist">
+              <ul class="seblist">
                 <li> Larger buttons in the SEB task bar</li>
                 <li>Touch optimized message boxes (alerts, dialogs) with larger buttons</li>
                 <li>The Winodws on-screen keyboard is displayed when the user touches a text field on a browser page or when SEB asks to enter a password.</li>
@@ -621,7 +621,7 @@
           <h5>SEB dock/task bar</h5>
           <ul>
             <li><span class="quote">Show SEB dock</span>:  The SEB dock is displaying an icon for the SEB browser with controls for its open browser windows and a quit button, plus additional optional buttons and information widgets (see below and in the <a href="mac_usermanual_en.html#ExamPane">Exam pane</a> for the back to start button). Clicking the SEB icon in the dock and holding the left mouse button down or a secondary (right mouse button) click displays a popup menu with all open browser windows, the main browser window is at the bottom. With this menu you can switch between open browser windows.
-              <ul id="seblist">
+              <ul class="seblist">
                 <li><span class="quote">Dock height</span>: SEB Dock height in points (pixel height x 2 on Retina HiDPI displays). In SEB for Windows display DPI settings are now also taken in account, in touch optimized mode task bar is scaled up in addition.</li>
                 <li><span class="quote">Show scroll lock button</span> (iOS): Shows the scroll lock button in the Dock if the scroll lock feature is enabled (iOS only).</li>
                 <li><span class="quote">Enable scroll lock</span> (iOS): With the scroll lock button and/or side menu item, web page scrolling, selecting text and the text magnifier can be disabled. This can facilitate using drag-and-drop and drawing question types. (iOS only)</li>
@@ -650,9 +650,9 @@
             <img class="img-responsive" src="images/SEB_PreferencesBrowser-2.0-en.png" width="779" alt="SEB Preferences Window Browser Pane" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Links requesting to be opened in a new browser window ... </span>This popup list offers three policies:</li>
-            <ul id="seblist">
+            <ul class="seblist">
             <li><span class="quote">get generally blocked</span></li>
             <li><span class="quote">open in same window</span>: This was the behavior in SEB for macOS versions before 1.5.</li>
             <li><span class="quote">open in new window</span></li>
@@ -662,7 +662,7 @@
             <li><span class="quote">New browser window size</span>: You can set the width and height of  new browser windows as absolute point values or a percentage of the screen width or height.  You can enter the dimensions (in points or percent values) in the text field or select one of the predefined values in the  popdown menu. </li>
             <li><span class="quote">New browser window horizontal positioning</span>:  You can choose how the window will be positioned horizontally if it doesn't fill the full screen width: Left, Center, Right.</li>
             <li><span class="quote"> Links in JavaScript/plug-ins ... </span>This popup list offers three policies for hyperlinks opened from JavaScript or plug-ins (like Flash):</li>
-            <ul id="seblist">
+            <ul class="seblist">
               <li><span class="quote">get generally blocked</span></li>
               <li><span class="quote">open in same window</span>: This was the behavior in SEB for macOS versions before 1.5, but links got only opened, when they were not directing to a different server (see the checkbox below). <span class="red"><strong>USE WITH CARE</strong>: When 'open in same window' is selected, then some JavaScript/HTML5 features (like File API) might not work</span></li>
               <li><span class="quote">open in new window</span></li>
@@ -733,14 +733,14 @@
             <img class="img-responsive" src="images/SEB_PreferencesDownUploads-2.0-en.png" width="762" alt="SEB Preferences Window Down/Uploads Pane" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Allow downloading and uploading files</span>: Usually to be used when switching to third party applications is enabled.</li>
           </ul>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Save downloaded files to</span>: Choose the download directory with this popup menu. <!--If you select a path inside the current user's home directory, then the path to the home directory is internally replaced with the according tilde placeholder (~/), so this abreviated relative path will also work on a client computer with another home directory name.--> </li>
             <li><span class="quote">Open files after downloading</span>: Downloaded files will be opened with the according application, which has to be set correctly in the system for each used file type! </li>
             <li><span class="quote">Download directory Windows</span>: Enter a valid, Windows-specific formatted path to a directory which should be used to save downloaded files.</li><li><span class="quote">Choose file to upload …</span> SEB can let the user choose the file to upload manually (as usual) or automatically choose the same file which was downloaded before. There are three possible policies to choose the file to upload:</li>
-                <ul id="seblist">
+                <ul class="seblist">
             <li><span class="quote">manually with file requester</span></li>
             <li><span class="quote">by attempting to upload same file downloaded before</span>: If the file is not found, a file requester  is presented and the user can choose some other file manually.</li>
             <li><span class="quote">by only allowing to upload the same file downloaded before</span>: 
@@ -759,7 +759,7 @@
             <img class="img-responsive" src="images/SEB_PreferencesExam-2.0-en.png" width="779" alt="SEB Preferences Window Exam Pane" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li> <span class="quote">Use Browser &amp; Config Keys (send in HTTP header)</span>: Enables using the Browser Exam Key and the Config Key, they are send in an HTTP header to authenticate the SEB client and its settings to a compatible exam system.</li>
             <li><span class="quote">Browser Exam Key</span>: Copy this key which depends on your SEB configuration and the SEB version/application signature) to the according field in your quiz settings in the exam system having support for SEB 2.0 or later built in. The Browser Exam Key is  automatically re-calculated and displayed in the Exam preferences pane. This happens  whenever a setting changes if editing local client settings and after saving a config file if editing settings for starting an exam.<br />
             <strong>Important: First save your final exam settings in a .seb settings file and then generate and copy the browser exam key to your exam system's quiz settings as the Browser Exam Key changes when you change any setting</strong>. <br />
@@ -826,7 +826,7 @@
             <img class="img-responsive" src="images/SEB_PreferencesApplications-PermittedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Permitted Processes Tab" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Allow  switching to third party applications</span>: If this option is activated, the kiosk mode induced by SEB will be reduced one level. The process switcher (<span class="quote">Cmd-Tab</span>) will work, so it's possible to switch to other running applications.<br />
               Use this option only when running SEB in a managed user account, with only SEB and the desired applications allowed. This will currently only be usable on managed Macs, not in BYOD environments (see <a href="#secure_environment">Secure Environment</a>).<br />
             </li>
@@ -840,7 +840,7 @@
           
           <p class="seb-section-header quote">Selected Process Details:</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Active</span>: Indicates if this permitted process item is active (can be used while testing).</li>
             <li><span class="quote">Title</span>: Application title which is displayed in the application chooser.</li>
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
@@ -884,14 +884,14 @@
             <img class="img-responsive" src="images/SEB_PreferencesApplications-ProhibitedProcesses-2.0-en.png" width="762" alt="SEB Preferences Window Applications Pane, Prohibited Processes Tab" />
           </div>
           <!--
-          <ul id="seblist">
+          <ul class="seblist">
                 <li><span class="quote">Choose Executable...</span> Displays a file requester for choosing  a process executable or application which will be added to the list of prohibited processes.</li>
                 <li><span class="quote">Choose Process...</span> For choosing a running process which will be added to the list of prohibited processes.</li>
            </ul> -->
               
           <p class="quote">Selected Process Details:</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Active</span>: Indicates if this prohibited process item is active.</li>
             <li><span class="quote">Executable</span>: Process name, usually the filename of the executable.</li>
             <li><span class="quote">Description</span>: Optional, should explain what kind of process this is, because this might not be obvious only from the executable's name.</li>
@@ -922,7 +922,7 @@
             <img class="img-responsive" src="images/SEB_PreferencesNetwork-Filter-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Filter Tab" />
           </div>
       
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Activate URL filtering</span>: Filter URLs when loading web pages using the filter set defined below.<br />
             </li>
             <li><span class="quote">Filter also embedded content</span>: If selected, also all embedded resources will be filtered using the filter set.    Note that there can be hundreds of resources such as images and other media per page, so filtering all content may slow down page loading.</li>
@@ -937,14 +937,14 @@
           
           <p class="seb-section-header quote">Rules</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Active</span>:
               Indicates if the rule is active.</li>
             <li><span class="quote">Regex</span>:
               Indicates if the  rule is a regular expression. Note: When using content filtering (setting F<span class="quote">ilter also embedded content</span>), only the subset supported by WKWebView/Safari Content Filters is allowed, see <a href="https://webkit.org/blog/3476/content-blockers-first-look/" target="_blank">here</a>.<br />
             If <em>Regex</em> is not checked, then the rule can be formatted using the wildcard <span class="codetext">'*'</span>, which stands for an arbitrary string of any length.</li>
             <li><span class="quote">Action</span> to process if the corresponding expression matches. Possible actions:
-      <ul id="seblist">
+      <ul class="seblist">
                 <li><span class="quote">block</span><br />
                 If the URL matches the expression, then it is rejected and processing of the remaining rules  is stopped.</li>
                 <li><span class="quote">allow</span><br />
@@ -958,7 +958,7 @@
               scheme://user:password@host:port/path?query#fragment<br />
               <br />
               </span>      <span class="quote">Format for a filter expression in the non-regex format:</span><br />
-              <ul id="seblist">
+              <ul class="seblist">
                 <li>Scheme  is optional, and must be followed by <span class="codetext">'://'</span>.<br />
                 </li>
                 <li>The host field is required (besides when filtering against a protocol like about:blank or data:), and is either a partial or full hostname or an IP address. It can also contain or be replaced completely with the wildcard <span class="codetext">'*'</span> char, see below for details. The URL filter doesn't resolve hostnames itself, so if you allow everything and only block <span class="codetext">'hostname.com'</span>, then that host could still be reached using its IP address. You should therefore mainly use whitelisting to allow accessing only specific sites during an exam.</li>
@@ -996,7 +996,7 @@
             <img class="img-responsive" src="images/SEB_PreferencesNetwork-Certificates-2.0-en.png" width="762" alt="SEB Preferences Window Network Pane, Certificates Tab" />
           </div>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Choose TLS/SSL  certificate to embed into settings:</span>  Lists valid TLS/SSL certificates from the macOS keychain (if a TLS/SSL certificate isn't listed here, use the &quot;Advanced…&quot; option below). Selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning when connecting to  https servers with self-signed certificates and you  don't need to distribute TLS/SSL certificates manually to the exam client computers.</li>
             <li><span class="quote">Choose CA  certificate to embed into settings:</span>  Lists valid certificate authority certificates from the macOS keychain (if a CA certificate isn't listed here, use the &quot;Advanced…&quot; option below). Selected certificates will be included into a <span class="quote">.seb</span> settings file when it is saved and used on the SEB clients which are started up with that <span class="quote">.seb</span> exam configuration. Users then won't be presented a warning when connecting to  https servers with  certificates which rely on a certificate authority which isn't included in the system's root certificate store. You  don't need to distribute CA certificates manually to the exam client computers when embedding them into a SEB config file.</li>
             <li><span class="quote">Pin embedded certificates:</span> If this option is selected, the  certificate store of macOS isn't used to evaluate the validity of a server certificate when SEB connects to a secure server using https. You have to embed TLS or CA certificates into SEB settings which establish trust for the secure servers you want SEB to connect to. The used certificates must be valid (not expired, containing the server's host address in &quot;common name&quot; or &quot;alternative names&quot;). If you want to use a certificate which fails validation (for the mentioned reasons), use a &quot;Debug Certificate&quot; which you can add in the &quot;Advanced&quot; window, where you can override &quot;common name&quot; and &quot;alternative names&quot; by changing the displayed name of the certificate into the server's host address (you can also specify a non-default port number).<br>
@@ -1025,7 +1025,7 @@ certificates extend the system trust store (as if you had manually added them to
           <div class="mac_prefs_screenshot">
             <img class="img-responsive" src="images/SEB_PreferencesSecurityOSSpecific-en.png" width="762" alt="SEB Preferences Window Security Pane, System Lockdown Tab" /><br />&nbsp;
           </div>
-          <ul id="seblist">
+          <ul class="seblist">
           <li><span class="quote">Allow SEB to run inside virtual machine</span>: Indicates if SEB is allowed to run in a virtual machine (e.g. for exams in virtual desktop environments) or not (in order to prevent potential manipulations).</li>
             <li><span class="quote">Allow screen capture/recording</span>:  Allows macOS screen capture (screen shots) and recording (cmd-shift-3/-4/-5) to be used. If users have the DropBox client installed and activated to upload screen shots directly to their DropBox, then this will also be stopped when screen capture is disabled.</li>
             <li><span class="quote">Allow window capture (screen shots)</span>:  Shows or hides SEB windows on macOS screen shots (invoked with cmd-shift-3/-4/-5).</li>
@@ -1046,7 +1046,7 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
           </ul>
 
           <p class="seb-section-header quote">OS Specific Settings: macOS</p>
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use Assessment Mode (AAC) if available</span>:  The Automatic Assessment Configuration (AAC) Assessment Mode is available from macOS Catalina 10.15.4. It blocks various macOS features (which cannot be allowed optionally, like screen capture/sharing, Siri, Dictation). Also no other applications and processes running in the background can access the network while Assessment Mode is active.</li>
             <li><span class="quote">Disable app switcher when starting</span>: SEB checks for the command key being held down while SEB is starting up. This prevents using the application switcher to mess with SEB's kiosk mode.</li>
             <li><span class="quote">Force installation in Applications folder</span>: SEB enforces to be installed in an Applications folder (/Applications or ~/Applications</li>
@@ -1064,7 +1064,7 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
 			
           <p class="seb-section-header quote">OS Specific Settings: Settings   SEB for iOS</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">Use AAC/ASAM if available</span>: Uses either Automatic Assessment Configuration, also called Assessment Mode (for BYOD) or requires device to be supervised and having SEB set as an allowed app to invoke Autonomous Single App Mode (ASAM, which takes priority over AAC). </li>
             <li><span class="quote">Allow Single App Mode</span>: Use Single App Mode invoked by Classroom, an MDM system or Apple Configurator instead of ASAM/AAC.</li>
             <li><span class="quote">Guided Access Compatibility</span>: Transforms specific HTTP requests for clicked links to prevent the 'Guided Access is enabled' message being displayed when clicking all links.</li>
@@ -1076,7 +1076,7 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
           
 		  <p class="seb-section-header quote">OS Specific Settings: Settings mostly for SEB Windows</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li><span class="quote">System Lockdown</span>: The <span class="quote">Kiosk mode</span>  settings reflect how the computer is locked down while SEB is running, see <a href="win_usermanual_en.html#SecurityPane">Windows manual</a> for details. </li>
               <ul id="seblist2">
                 <li><span class="quote">SEB Service policy</span>: The SEB Service is a background process running with elevated privileges (with administrator rights), which is necessary to block and unblock some system features. You can define the policy that applies when the SEB Service isn't running (for whatever reason): </li>
@@ -1109,7 +1109,7 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
           
           <p>SEB for macOS is running on 64-bit Intel Macs with the following operating systems:</p>
                
-          <ul id="seblist">
+          <ul class="seblist">
             <li>macOS 11 Big Sur</li><li>macOS 10.15 Catalina</li>
             <li>macOS 10.14 Mojave</li>
             <li>macOS 10.13 High Sierra</li>
@@ -1140,7 +1140,7 @@ Please note that internet bots can cause the screen sharing lock screen to be tr
           <p>The environment mentioned below is no longer possible from macOS 10.14 Mojave and later. We didn't yet investigate if other managed environments (for example by using MDM managed Macs and manged Apple IDs) would allow to securely  <strong>use third party applications</strong>.  Currently we can only recommend using a virtual desktop infrastructure (VDI) for running Windows applications and access these virtual desktops remotely with SEB for macOS (using  HTML5-based access in a full screen SEB browser window), see this <a href="http://safeexambrowser.org/vdi/Competence-Oriented_Exams_VDI+SEB_ETH-LET_2019_05.pdf" target="_blank">technical report</a> about a solution using VMware Horizon.</p>
           <p>Outdated solution using macOS Parental Controls and Simple Finder, available up to macOS 10.13:</p>
           
-          <ul id="seblist">
+          <ul class="seblist">
             <li>Create a <span class="quote">Standard</span> or <span class="quote">Managed with Parental Controls</span> user account (<span class="quote">System Preferences -&gt; Accounts</span>). For running third party applications together with SEB, you have to use an account managed by parental controls.</li>
             <li>You can add SEB to <span class="quote">Login Items</span> in the Account Preferences, then SEB will be started automatically after the exam user logs in.</li>
             <li>In <span class="quote">Login Options</span> you should uncheck the checkbox in front of <span class="quote">Show fast user switching menu as</span>, at least when the examinees have access to other accounts on that computer.</li>
