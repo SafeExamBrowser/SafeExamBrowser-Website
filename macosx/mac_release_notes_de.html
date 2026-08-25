@@ -226,7 +226,7 @@
         
           <!-- Content -->
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.7</a>:</h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.7</a>:</h4>
 		  <p>SEB 3.7 enthält viele wichtige Sicherheitsverbesserungen, ein neues WLAN-Steuerelement, das besonders im AAC-Bewertungsmodus hilfreich ist, sowie verschiedene Fehlerbehebungen.</p>
 		  <p>Neu in SEB 3.7 (Build 1591F):</p>
           <ul class="seblist">
@@ -242,11 +242,11 @@
             <li>Verbesserte Unterstützung für Mehrbildschirm-Setups: Grösse und Platzierung des Haupt-Browserfensters, der abdeckenden (Hintergrund-)Fenster und des Sperrbildschirms wurden korrigiert (auch bei Verwendung des AAC-Bewertungsmodus), und modale Hinweise werden nun auf dem Bildschirm von SEB zentriert.</li>
             <li>Behoben: Im AAC-Multi-App-Bewertungsmodus konnten zusätzliche (zugelassene) Applikationen hinter dem SEB-Browserfenster verborgen sein. SEB zwingt seine Fenster nicht mehr in den Vordergrund, solange der AAC-Bewertungsmodus aktiv ist, sodass zugelassene Apps im Vordergrund nutzbar bleiben.</li>
             <li>Behoben: SEB holte sich den Eingabefokus vom echten, von Apple signierten macOS-SecurityAgent-Dialog zurück (zum Beispiel der Schlüsselbund-Zugriffsdialog beim Verbinden mit einem WLAN-Netzwerk), was Benutzer daran hindern konnte, die angeforderten Anmeldedaten einzugeben. SEB belässt diesen Systemdialog nun im Vordergrund.</li>
-            <li>Behoben: Beim Umkonfigurieren von einer AAC-Bewertungsmodus-Session zu einer anderen AAC-Session wurde die anwendungsspezifische AAC-Konfiguration (zum Beispiel die Eigenschaft <em>„Netzwerkzugriff erlauben“</em> einer zugelassenen Anwendung) nicht aktualisiert. SEB startet die AAC-Session nun neu, damit die geänderten Einstellungen wirksam werden.</li>
+            <li>Behoben: Beim Umkonfigurieren von einer AAC-Bewertungsmodus-Session zu einer anderen AAC-Session wurde die applikationsspezifische AAC-Konfiguration (zum Beispiel die Eigenschaft <em>„Netzwerkzugriff erlauben“</em> einer zugelassenen Applikation) nicht aktualisiert. SEB startet die AAC-Session nun neu, damit die geänderten Einstellungen wirksam werden.</li>
             <li>Behoben: Das Klicken auf einen Link oder eine Schaltfläche, die in manchen Webapplikationen ein neues Browserfenster öffnet (zum Beispiel bestimmte Popups in Moodle), konnte fälschlicherweise den Dialog <em>„SEB beenden“</em> auslösen. Dies geschah, wenn die Webseite ein Fenster mit einer leeren URL öffnete (zum Beispiel <em>window.open(&quot;&quot;)</em> oder <em>window.open(&quot;&quot;, &quot;_blank&quot;) </em>und die Adresse erst danach setzte): Die resultierende Navigation hatte eine leere URL, gegen die der Beenden-Link-Vergleich von SEB nicht abgesichert war und die er fälschlicherweise als passenden Beenden-Link interpretieren konnte. SEB ignoriert solche Navigationen mit leerer URL nun korrekt, anstatt den Beenden-Dialog anzuzeigen.</li>
             <li>Behoben: Beenden-/Administrator-Passwörter mit akzentuierten Zeichen (wie é, ü, ñ) wurden unter macOS und iOS nicht erkannt, während sie unter Windows funktionierten — zum Beispiel konnte ein im Moodle-Quiz-Backend oder in SEB für Windows gesetztes Beenden-Passwort auf einem Mac oder iPad nicht eingegeben werden, sodass Benutzer SEB nicht beenden konnten. Ursache war eine Diskrepanz bei der Unicode-Normalisierung: Dasselbe akzentuierte Zeichen kann entweder zusammengesetzt (NFC, wie von Windows und von Web-/PHP-Backends wie Moodle erzeugt) oder zerlegt (NFD, wie oft bei der Texteingabe auf Apple-Plattformen erzeugt) kodiert sein, was unterschiedliche Bytes und damit einen unterschiedlichen Passwort-Hash ergibt. SEB normalisiert Passwörter nun vor dem Hashen zu NFC, sodass die Hashes plattformübergreifend übereinstimmen, und akzeptiert zusätzlich weiterhin die frühere (NFD-)Form aus Gründen der Abwärtskompatibilität. Dies gilt überall dort, wo ein Passwort zur Überprüfung eingegeben wird: das Beenden-/Entsperr-Passwort (auch auf dem Sperrbildschirm), das Administrator-Passwort, das SEB-Server-Fallback-Passwort und das Passwort zum Entschlüsseln verschlüsselter Konfigurationsdateien.</li>
             <li>Behoben: Der Dateiauswahl-Dialog liess sich beim Hochladen eines Dateianhangs im automatischen AAC-Bewertungsmodus nicht korrekt öffnen. Beim Migrieren älterer Einstellungen, in denen AAC nicht ausdrücklich aktiviert war, setzt SEB nun <em>allowOpenAndSavePanel</em> auf true, da der Dateiauswahl-Dialog im automatischen AAC-Modus sonst nicht angezeigt würde. SEB zeigt nun ausserdem eine Fehlermeldung an, wenn der Dateiauswahl-Dialog verwendet werden soll, <em>allowOpenAndSavePanel</em> aber false ist, sowie eine Warnung in Einstellungen / Down-/Uploads, wenn eine andere Upload-Richtlinie als <em>„nur das Hochladen der zuvor heruntergeladenen Datei erlauben“</em> ausgewählt ist, während <em>allowOpenAndSavePanel</em> false ist und der klassische Lockdown-Modus nicht verwendet wird.</li>
-            <li>Behoben: SEB erkannte nicht, wenn eine Webanwendung versucht, das Haupt-Browserfenster (das Fenster mit der Prüfungsseite) zu schliessen. Das Schliessen dieses Fensters ist unzulässig — eine Webanwendung darf nur Fenster schliessen, die sie selbst geöffnet hat — und SEB zeigt dann den Beenden-Dialog an. SEB verhindert nun wieder korrekt, dass das Haupt-Browserfenster von einer Webanwendung geschlossen wird.</li>
+            <li>Behoben: SEB erkannte nicht, wenn eine Webapplikation versucht, das Haupt-Browserfenster (das Fenster mit der Prüfungsseite) zu schliessen. Das Schliessen dieses Fensters ist unzulässig — eine Webapplikation darf nur Fenster schliessen, die sie selbst geöffnet hat — und SEB zeigt dann den Beenden-Dialog an. SEB verhindert nun wieder korrekt, dass das Haupt-Browserfenster von einer Webapplikation geschlossen wird.</li>
             <li>Behoben: Der von SEB berechnete Config Key konnte sich zwischen Windows und macOS/iOS bei Konfigurationen mit Fliesskomma-Einstellungswerten (zum Beispiel Zoomstufen, Akkuladeschwellen oder der Verkleinerungsfaktor für Screen-Proctoring-Bilder) unterscheiden, weil die beiden Plattformen diese Zahlen unterschiedlich serialisierten. Dies konnte dazu führen, dass ein Prüfungssystem oder SEB Server einen ansonsten gültigen SEB-Client ablehnte. SEB formatiert Fliesskommawerte nun so, dass sie enger mit SEB für Windows übereinstimmen (vorläufige Verbesserung, siehe <a href="https://github.com/SafeExamBrowser/seb-win-refactoring/issues/1495" target="_blank">https://github.com/SafeExamBrowser/seb-win-refactoring/issues/1495</a>).</li>
             <li>Behoben: Die Akkuladeanzeige im SEB-Dock zeigte gelegentlich einen falschen Ladestand an (abweichend von der Systemanzeige).</li>
             <li>Behoben: Beim Umkonfigurieren aus SEB-Einstellungen mit aktivem AAC (zum Beispiel bei Verwendung der Standard-SEB-Server-Verbindungseinstellungen) waren einige Systemhinweise verborgen. Dies betraf vor allem die macOS-Dialoge für die Berechtigungen zur Bildschirmaufnahme und für Bedienungshilfen. SEB blieb dann hängen und der Mac musste hart neu gestartet werden.</li>
@@ -269,7 +269,10 @@
             <li>Ein Absturz wurde behoben, der auftreten konnte, wenn SEB Server oder Screen Proctoring versuchten, eine Netzwerkanfrage über eine gerade geschlossene Verbindung zu erstellen (zum Beispiel während des Ablaufs zur Erteilung des Festplattenvollzugriffs oder beim Beenden des AAC-Bewertungsmodus). Der zugrunde liegende Fehler „<em>session has been invalidated</em>“ wird nun ordnungsgemäss behandelt, anstatt SEB zu beenden.</li>
             <li>Weitere Bestrebungen, um zufällige Abstürze bei Verwendung von Screen Proctoring zu beheben.</li>
           </ul>
-          <p><strong><a class="anchorjs-link" href="#seb37-newSettings"></a>Neue Einstellungen</strong></p>
+          <h5 class="page-header seb-section-header sebnavbar-link" id="seb37-newSettings">
+        <a class="anchorjs-link" href="#seb37-newSettings"></a>
+        Neue Einstellungen
+          </h5>          
           <p><strong>lockdownModePolicy</strong> — Integer, Standard 0<em> (lockdownModePolicyAutomatic)</em><br>
           <em>Einstellungsfenster: Sicherheit</em></p>
           <p>Legt fest, welchen Kiosk-/Lockdown-Modus SEB auf macOS verwendet.</p>
@@ -291,13 +294,13 @@
           <em>Einstellungsfenster: Sicherheit → „Apps mit Bedienungshilfen-Berechtigungen erkennen“</em></p>
           <p>Wenn aktiviert, erkennt SEB Apps, denen macOS-Bedienungshilfen-Berechtigungen erteilt wurden (die in Prüfungen missbraucht werden könnten, da sie das Aufzeichnen von Tastatureingaben sowie das Einschleusen von Tastatureingaben/die Automatisierung anderer Apps ermöglichen), und fügt sie — sofern nicht ausdrücklich zugelassen (siehe <em>allowAccessibility</em>) — der Liste der verbotenen Applikationen hinzu und beendet sie vor und während der Session. Erfordert Festplattenvollzugriff; fehlt dieser, fordert SEB auf, ihn in den Systemeinstellungen / Datenschutz und Sicherheit / Festplattenvollzugriff zu aktivieren.</p>
           <ul class="seblist">
-            <li><strong>allowAccessibility</strong> — Boolean, Standard false — Eigenschaft eines <em>permittedProcesses</em>-Eintrags (<em>Einstellungsfenster: Applikationen → Zugelassene Prozesse → (ausgewählte App) „Allow Accessibility“</em>). Nimmt eine zugelassene Anwendung von <em>detectAccessibilityApps</em> aus, sodass sie ihre Bedienungshilfen-Berechtigungen behalten darf, ohne beendet zu werden (und wird bei Session-Start nicht beendet, selbst wenn sie bereits läuft).</li>
+            <li><strong>allowAccessibility</strong> — Boolean, Standard false — Eigenschaft eines <em>permittedProcesses</em>-Eintrags (<em>Einstellungsfenster: Applikationen → Zugelassene Prozesse → (ausgewählte App) „Allow Accessibility“</em>). Nimmt eine zugelassene Applikation von <em>detectAccessibilityApps</em> aus, sodass sie ihre Bedienungshilfen-Berechtigungen behalten darf, ohne beendet zu werden (und wird bei Session-Start nicht beendet, selbst wenn sie bereits läuft).</li>
           </ul>
           <p><strong>hideWiFiControls</strong> — Boolean, Standard false (nur macOS)<br>
           <em>Einstellungsfenster: Benutzeroberfläche → Dock</em></p>
           <p>SEB zeigt im SEB-Dock automatisch ein WLAN-Steuerelement (Widget) an, wenn der AAC-Bewertungsmodus verwendet wird (die macOS-Menüleiste ist während einer Session immer ausgeblendet), damit Benutzer das aktuelle WLAN-Netzwerk sehen und das Netzwerk wechseln können, ohne Zugriff auf die Menüleiste zu haben. Setzen Sie dies auf true, um dieses WLAN-Steuerelement auch in diesen Situationen auszublenden.</p>
 
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.6.1</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.6.1</a>:		  </h4>
           <p>SEB kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich.</p>
 			
           <p>Neu in SEB 3.6.1 (Build 15726):</p>
@@ -315,7 +318,7 @@
             <li>Behoben: Einstellungen für die Bedienungshilfen (wie das Aktivieren/Deaktivieren von VoiceOver) wurden bei der Neukonfiguration mit dem SEB-Server nicht aktualisiert.</li>
             <li>Fehlerbehebung beim Starten einer SEB-Serverprüfung über die Verbindungskonfiguration (Prüfungsliste), bei der SEB 3.6 keinen App-Signaturschlüssel (ASK) gesendet hat. </li>
           </ul>
-					  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.6</a>:		  </h5>
+					  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.6</a>:		  </h4>
           <p>SEB kann nun Bedienungshilfen wie VoiceOver steuern. Mit dem optionalen SEB Server und seinem Moodle-Plugin sind mehrere aufeinanderfolgende Quizzes möglich.</p>
           <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Applikationen / Verbotene Prozesse) in SEB 3.6 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe Release Notes SEB 3.5.1). </p>
 			
@@ -334,7 +337,7 @@
             <li>Behebung von zufälligen Abstürzen bei der Bildschirmüberwachung.</li>
           </ul>
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5.4</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5.4</a>:		  </h4>
           <p>SEB 3.5.4 sendet wieder den App-Signaturschlüssel (ASK)  bei Verwendung des optionalen, individuell konfigurierten SEB-Servers. Ausserdem wird ein Absturz, der beim Laden einiger Websites unter macOS-Versionen vor macOS 15 Sequoia auftrat behoben. Diese Version bietet auch neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
           <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Applikationen / Verbotene Prozesse) in SEB 3.5.3 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen.</strong></p>
           <p>Neu in SEB 3.5.4 (Build 1567A):</p>
@@ -343,7 +346,7 @@
             <li>Abstürze unter macOS 10.15: Das moderne WebView (WKWebView) stürzt leider beim Laden einiger Seiten unter macOS 10.15 ab. Daher müssen wir die Standardeinstellung für die minimal unterstützte macOS-Version auf 11 setzen. Wenn Sie macOS 10.15 unterstützen müssen, können Sie möglicherweise das klassische WebView in Ihren SEB-Einstellungen verwenden (was jedoch nicht empfohlen wird, da es veraltet ist).</li>
           </ul>			
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5.3</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5.3</a>:		  </h4>
 		  <p>SEB 3.5.3 behebt einen Absturz, der beim Laden einiger Websites unter macOS-Versionen vor macOS 15 Sequoia auftritt. </p>
           <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Applikationen / Verbotene Prozesse) in SEB 3.5.3 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen.</strong></p>
           <p>Neu in SEB 3.5.3 (Build 1567A):</p>
@@ -352,7 +355,7 @@
             <li>Behebt ein Problem mit der Codesignierung in Version 3.5.2.</li>
           </ul>			
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5.1</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5.1</a>:		  </h4>
 		  <p>SEB 3.5.1 bietet neue Optionen zum Herunterladen und Öffnen bestimmter Dateitypen mit zusätzlichen Apps, verbessert die Benutzerfreundlichkeit einiger Einstellungsoptionen und behebt Verzögerungen bei der Texteingabe sowie Sicherheitsprobleme.</p>
           <p><strong>WICHTIG: Wenn Sie Konfigurationsdateien mit SEB 3.5 (macOS oder iOS) erstellt oder geöffnet und gespeichert haben, sollten Sie den AppleSpell-Prozess aus diesen Einstellungen (SEB-Einstellungen / Applikationen / Verbotene Prozesse) in SEB 3.5.1 entfernen und die Konfigurationsdatei erneut speichern. Andernfalls kann es bei einigen macOS-Versionen zu Verzögerungen bei der Texteingabe kommen</strong> (siehe unten). </p>
           <p>Neu in SEB 3.5.1 (Build 15670):</p>
@@ -384,7 +387,7 @@
             <li>Der Übertragungsstatus „Alle zwischengespeicherten Screenshots übertragen“ wird nicht mehr im Dock-Icon angezeigt, wenn das Token erneuert wurde.</li>
           </ul>
 			
-		<h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5</a>:		  </h5>
+		<h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.5</a>:		  </h4>
 		  <p>SEB 3.5 unterstützt den URL-Content-(Inhalts-) Filter auch in der modernen Browser-Engine, behebt allgemeine Probleme und in der <strong>optionalen</strong> Screen Proctoring Funktion (Bildschirm-Fernüberwachung, erfordert den Betrieb einer eigenen Instanz von SEB Server mit SEB Screen Proctoring Service).</p>
           <p>Neu in SEB 3.5 (Build 15487):</p>
           <ul class="seblist">
@@ -417,7 +420,7 @@
             </li>
             <li>Behoben: Das Präfix in der Moodle Login User ID Auflösung für SEB Server funktionierte nicht.<br>
             </li>
-            <li> Screen Proctoring Metadaten: Jetzt wird die SEB-Version im fokusierten und in der Liste der Fenstertitel der Anwendung entfernt.<br>
+            <li> Screen Proctoring Metadaten: Jetzt wird die SEB-Version im fokusierten und in der Liste der Fenstertitel der Applikation entfernt.<br>
             </li>
             <li> Behoben: Abgelaufene Screen Proctoring Token verursachten unnötige Unterbrechungen der Serververbindung.<br>
             </li>
@@ -429,7 +432,7 @@
           </ul>
 			
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.4.1</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.4.1</a>:		  </h4>
 		  <p>SEB 3.4.1  enthält  mehrere wichtige Sicherheitskorrekturen und ersetzt ab sofort Version 3.4.</p>
           <p>Neu in SEB 3.4.1 (Build 15437):</p>
           <ul class="seblist">
@@ -461,7 +464,7 @@
           </ul>
 			
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.4</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.4</a>:		  </h4>
 		  <p>SEB 3.4 erlaubt die Verwendung von Drittanbieter-Applikationen in Prüfungen, behebt Probleme, die vor allem unter macOS 14 Sonoma auftreten können, und implementiert die <strong>optionale </strong>Screen-Proctoring-Funktion.</p>
           <p>Neu in SEB 3.4 (Build 15396):</p>
           <ul class="seblist">
@@ -484,7 +487,7 @@
           </ul>
 			
 			
-		 <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.3.3</a>:		  </h5>
+		 <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.3.3</a>:		  </h4>
 		  <p>SEB 3.3.3  enthält  mehrere wichtige Sicherheitskorrekturen.</p>
           <p>Neu in SEB 3.3.3 (Build 151C0):</p>
           <ul class="seblist">
@@ -513,7 +516,7 @@
             <li>Behebung eines Xcode-Build-Fehlers, der dazu führte, dass SEB 3.3.2 nicht auf macOS 10.13 lief.</li>
           </ul>
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.3.2</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.3.2</a>:		  </h4>
 		  <p>SEB 3.3.2 behebt Probleme mit dem Dateidownload, dem Einstellungen-Fenster und ermöglicht den Export von unkomprimierten Konfigurationsdateien (z.B. für den direkten Import in Moodle). Ausserdem enthält die Version mehrere Sicherheitskorrekturen.</p>
           <p>Neu in SEB 3.3.2:</p>
           <ul class="seblist">
@@ -545,7 +548,7 @@
             <li>Die maximale Höhe der Scrollansicht der Log-Konsole wurde erhöht, um zu verhindern, dass längere Logs abgeschnitten werden.</li>
           </ul>
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.3</a>:		  </h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.3</a>:		  </h4>
 		  <p>SEB 3.3 verbessert Barrierefreiheit &amp; Sicherheit, ermöglicht Export von SEB-Einstellungen als Konfigurationslinks/QR-Codes. Optional: SEB Server-Integration mit Moodle.</p>
           <p>Neu in SEB 3.3:</p>
           <ul class="seblist">
@@ -565,7 +568,7 @@
             <li>Einige nicht mehr aktuelle Standardwerte wurden angepasst.</li>
             <li>Es werden jetzt 20 statt 7 Protokolldateien gespeichert (max. Speicherplatz: 20 MB).</li>
             <li>Behoben: Logging in Swift-Klassen und Log-Level Error funktionieren nicht.</li>
-            <li>Es wird nun verhindert, dass eine Webanwendung den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
+            <li>Es wird nun verhindert, dass eine Webapplikation den SEB-Hauptbrowser-Tab (derjenige, der die Prüfungsseite enthält) schliessen kann.</li>
             <li>Jetzt wird der Config Key verwendet, um die gespeicherte laufende Prüfungssitzung für den Sperrbildschirm zu identifizieren. Dies sollte unnötige Sperrbildschirme vermeiden, wenn eine neue Prüfung geöffnet wird, die die gleiche Start-URL wie eine ältere gesperrte Prüfung verwendet.</li>
             <li>Neues Modul zur Überprüfung der Applikations-Integrität wurde integriert.</li>
             <li>Chrome Remote Host wurde zu den voreingestellten, standardmässig verbotenen Prozessen hinzugefügt.</li>
@@ -584,13 +587,13 @@
             <li>Behebung eines Absturzes beim Beenden von SEB mit noch aktiver SEB Server-Verbindung, wenn das Verbindungstoken möglicherweise bereits ungültig ist.</li>
           </ul>
 			
-          <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.2.5</a>:</h5>
+          <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.2.5</a>:</h4>
 		  <p>Neu in SEB 3.2.5:</p>
           <ul class="seblist">
             <li>Behoben: Nachschlagen mittels kräftigem Klick funktionierte im klassischen WebView in macOS 13 Ventura.</li>
           </ul>
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.2.4</a>:</h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.2.4</a>:</h4>
 		  <p>SEB 3.2 erweitert die optionale Unterstützung für SEB Server und bringt viele Stabilitätsverbesserungen.</p>
           <p>Neu in SEB 3.2.4:</p>
           <ul class="seblist">
@@ -637,13 +640,13 @@
             <li>Fehlende <em>pingInterval</em> SEB-Server-Verbindungseinstellung behoben, die dazu führte, dass Pings kontinuierlich gesendet wurden und SEB nach einer Weile abstürzte.</li>
           </ul>
           <p>Hinweis: <strong>Diese Version enthält nicht die Zoom-Integration </strong>für Prüfungsaufsicht oder Prüfungssupport, die in SEB 3.2rc enthalten war. Es gibt eine nicht-öffentliche SEB Alliance Edition, die die Zoom-Integration weiterhin unterstützt. Wenn Sie daran interessiert sind, diese Zoom-Integration zu nutzen, kontaktieren Sie <a href="mailto:alliance@safeexambrowser.org">alliance@safeexambrowser.org</a>.</p>
-		  <h5>Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.1.x - 2.3</a>:</h5>
+		  <h4>Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.1.x - 2.3</a>:</h4>
 		  <ul class="seblist">
 		    <li>Siehe englische <a href="mac_release_notes_en.html">Release Notes</a>.</li>
 	      </ul>
 			
 			
-		  <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 2.2.2</a>:</h5>
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 2.2.2</a>:</h4>
             <ul class="seblist">
               <li>Korrigiert, dass PDF-Dokumente nicht dargestellt wurden, wenn der Acrobat PDF Reader installiert war.</li>
               <li>Das Einstellungen-Fenster kann nun nicht mehr geöffnet werden, wenn in Moodle 3.9 automatisch erzeugte SEB-Einstellungen benutzt werden (Option "Manuell Konfigurieren"). SEB benutzt nun die Standardeinstellung <em>allowPreferencesWindow=false</em> in Prüfungs-Einstellungen (Client-Konfigurationen haben weiterhin <em>allowPreferencesWindow=true </em>als Standardeinstellung).</li>
@@ -657,7 +660,7 @@
             </ul>
 			
 			
-            <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 2.2.1</a>:</h5>
+            <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 2.2.1</a>:</h4>
             <ul class="seblist">
               <li>Einstellung für verbotene Prozesse, welche verhindert, dass bestimmte Prozesse und Applikationen zusammen mit SEB verwendet werden. </li>
               <li>SEB 2.2.1 beinhaltet voreingestellte verbotene Prozesse, welche Programme für Kommunikation, Bildschirmfreigabe und Bildschirmaufnahme umfassen. Gerne nehmen wir in zukünftigen Versionen bei Hinweisen aus der Nutzer-Community weitere Prozesse in diese Liste auf (wir benötigen Informationen zu den Applikationen wie Dateiname und Bundle Identifier).</li>
@@ -679,7 +682,7 @@
         </ul>
             <p>Für eine vollständige Liste und Hinweise, welche Änderungen in SEB 2.2.1 eventuell Anpassungen von SEB Konfigurationsdateien notwendig machen könnten, siehe englische <a href="mac_release_notes_en.html">Release Notes</a>. </p>
 			
-            <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 2.1.4</a>:</h5>
+            <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 2.1.4</a>:</h4>
             <ul class="seblist">
               <li>SEB 2.1.4 ist vollständig kompatibel mit  macOS 10.15 Catalina.</li>
               <li>Die SEB-Applikation ist nun notarisiert und benutzt das &quot;Hardened Runtime&quot; Sicherheits-Feature.</li>
@@ -702,7 +705,7 @@
             </ul>
 			<p>Für vollständige Liste siehe englische <a href="mac_release_notes_en.html">Release Notes</a>. </p>
 
-            <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1.3</a>:</h5>
+            <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1.3</a>:</h4>
             <ul class="seblist">
               <li>Neue "Config Key"-Funktion, welche es einem Prüfungssystem erlaubt, zu überprüfen, ob SEB-Clients die korrekten Einstellungen benutzen. Der Config Key kann serverseitig generiert werden und ändert sich nicht, wenn dieselben Einstellungen in einer neueren SEB-Version geladen werden, in welcher neue Einstellungsoptionen hinzugefügt wurden (Aufwärts- und Abwärtskompatibilität).           
               <li>Neue Einstellungsoptionen zum Deaktivieren von Siri und der Diktats-Funktion hinzugefügt.
@@ -722,13 +725,13 @@
             </ul>
             <p>Für vollständige Liste siehe englische <a href="mac_release_notes_en.html">Release Notes</a>. </p>
 
-            <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1.2</a>:</h5>
+            <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1.2</a>:</h4>
             <ul class="seblist">
               <li> Das Bugfix-Release SEB 2.1.2 beseitigt  vorwiegend  Probleme, die in SEB 2.1.1 mit nicht-standardmässigen Bildschirm-Einstellungen und beim Starten einer unüblichen Konfiguration mittels .seb-Datei oder seb(s):// Link.</li>
             </ul>
             <p>Für vollständige Liste siehe englische <a href="mac_release_notes_en.html">Release Notes</a>. </p>
 
-            <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1.1</a>:</h5>
+            <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1.1</a>:</h4>
 <ul class="seblist">
   <li>Vollständige Kompatibilität mit macOS 10.12 Sierra.</li>
   <li>Neu können TLS-/SSL- und CA-Zertifikate in SEB-Konfigurationsdateien eingebettet  und mittels Zertifikat-Pinning  die Sicherheit bei verschlüsselten Verbindungen mit Prüfungsservern erhöht werden (wenn SEB unter macOS 10.9 oder neuer läuft).</li>
@@ -749,7 +752,7 @@
   </ul>
             <p>Für vollständige Liste siehe  englische <a href="mac_release_notes_en.html">Release Notes</a>. </p>
 
-            <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1</a>:</h5>
+            <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.1</a>:</h4>
             <ul class="seblist">
               <li>Neue Tasten im SEB-Dock zum Neustarten der Prüfung, Neuladen der aktuellen Webseite und eine Anzeige der Uhrzeit verbessern die Usability in Prüfungen.</li>
               <li>Volle Kompatibilität mit OS X 10.11 El Capitan.</li>
@@ -762,7 +765,7 @@
     </ul>
             <p>Für vollständige Liste siehe  englische <a href="mac_release_notes_en.html">Release Notes</a>. </p>
             
-<h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.0</a>:</h5>
+<h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.0</a>:</h4>
     <ul class="seblist">
       <li>Unterstützung für verschlüsselte SEB-Konfigurationsdateien (Dateityp .seb), die es erlauben, SEB pro Prüfung individuell zu konfigurieren. Dieselben .seb Dateien können nun für das Starten von Prüfungen mit SEB 2.0.x auf Windows-Rechnern und auf Macs benutzt werden.</li>
       <li>        Eingebauter komfortabler Editor für die Plattform-unabhängigen SEB-Konfigurationsdateien, der auch alle zusätzlichen individuellen Einstellungen der Windows-Version konfigurieren kann.<br />
@@ -783,7 +786,7 @@
       <li>Verbesserte Sicherheit und Leistung.</li>
     </ul>
     <p>Für vollständige Liste siehe  englische <a href="mac_release_notes_en.html">Release Notes</a>.</p>
-<h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.0pre3</a>:</h5>
+<h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.0pre3</a>:</h4>
             <ul class="seblist">
               <li>Unterstützung für verschlüsselte <span class="quote">.seb</span> Konfigurationsdateien, die es erlauben, SEB pro Prüfung individuell zu konfigurieren. Dieselben <span class="quote">.seb</span> Dateien können nun für das Starten von Prüfungen mit SEB 2.0RC auf Windows  und SEB 2.0pre3 auf macOS  Rechnern benutzt werden. <strong>Wichtig:</strong> Mit SEB 2.0pre1 oder 2.0pre2 erstellte SEB Konfigurationsdateien können mit dieser Version nicht gelesen werden. </li>
               <li>Fehler behoben beim Berechnen des Browser Exam Keys, wenn eine .seb Datei für das Starten einer Prüfung geladen wird.</li>
@@ -800,7 +803,7 @@
               <li>OS X 10.9 Mavericks: Wenn SEB auf einem System mit mehreren Bildschirmen verwendet wird, dann wird eine Applikation, die im Vollbildmodus auf einem der Monitore ausgeführt wird, nicht von SEB ausgeblendet.  Workaround: Benutzen Sie SEB 2.0pre3 nicht auf einem System mit mehreren Monitoren unter OS X 10.9 oder deaktivieren Sie die Einstellung &quot;Monitore verwenden verschiedene Spaces&quot; in den Systemeinstellungen -&gt; Mission Control.</li>
             </ul>
             <p>Diese Vorschau auf die Version 2.0 von Safe Exam Browser beinhaltet noch nicht alle Funktionalitäten des endgültigen Releases. Bitte testen Sie die Vorschauversion und <a href="https://sourceforge.net/projects/seb/forums/forum/3704033" target="_blank">teilen  uns Ihre Erfahrungen mit</a>. Diese Version läuft  unter OS X 10.7, 10.8 und 10.9. </p>
-            <h5 class="sebh5">  Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.0pre2</a>:</h5>
+            <h4 class="sebh5">  Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version  2.0pre2</a>:</h4>
             <ul class="seblist">
               <li>Der <strong>Browser Exam Key </strong>ermöglicht die Authentifizierung der verwendeten SEB-Version und deren Einstellungen im Prüfungsmodul. Für das Learning Management System <span class="quote">Moodle</span> wurde die Beta-Version eines Plugins für diese Funktionalität <a href="https://github.com/moodleou/moodle-quizaccess_safeexambrowser" target="_blank">veröffentlicht</a>.</li>
               <li>Neue Optionen im User Interface: Die Grösse und Positionierung der Browser-Fenster (Hauptfenster mit der Prüfung und  zusätzlich geöffnete Fenster) kann voreingestellt werden. Eine neue Aktivitätsanzeige zeigt den Ladevorgang an.</li>
@@ -822,7 +825,7 @@
               <li>Security Tab: SEB-Service, Zulassen des Benutzerwechsels (Allow user switching) und das Loggen sind noch nicht freigegeben.</li>
             </ul>
             <p>Diese Vorschau auf die Version 2.0 von Safe Exam Browser beinhaltet noch nicht alle Funktionalitäten des endgültigen Releases. Bitte testen Sie die Vorschauversion und <a href="https://sourceforge.net/projects/seb/forums/forum/3704033" target="_blank">teilen  uns Ihre Erfahrungen mit</a>. Diese Version läuft nur unter OS X 10.7 und 10.8. </p>
-            <h5 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser Version  2.0pre1</a>:</h5>
+            <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser Version  2.0pre1</a>:</h4>
             <ul class="half_linespace">
               <li>Unterstützung für verschlüsselte <span class="quote">.seb</span> Konfigurationsdateien, die es erlauben, SEB pro Prüfung individuell zu konfigurieren.</li>
               <li>Neue Funktion zum Beenden von SEB, nachdem eine Prüfung abgeben wurde (ohne Eingabe eines Quit-Passworts). Dazu muss ein <span class="quote">Quit-Link</span> festgelegt werden und dieser dann auf der nach der Prüfungsabgabe angezeigten Ergebnis-Seite im Learning Management System platziert werden.</li>
@@ -830,19 +833,19 @@
               <li>Funktion <span class="quote">Einstellungen ins App-Bundle speichern</span> entfernt, welche durch die SEB Einstellungsdateien (<span class="quote">.seb</span>-Dateien) ersetzt wird.</li>
             </ul>
             <p>Diese Vorschau auf die Version 2.0 von Safe Exam Browser beinhaltet noch nicht alle Funktionalitäten des endgültigen Releases. Bitte testen Sie die Vorschauversion und <a href="https://sourceforge.net/projects/seb/forums/forum/3704033" target="_blank">teilen  uns Ihre Erfahrungen mit</a>. Diese Version läuft nur unter OS X 10.7 und 10.8.            </p>
-            <h5 class="sebh5"> <strong>Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser Version  1.5.2</a>:</strong></h5>
+            <h4 class="sebh5"> <strong>Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser Version  1.5.2</a>:</strong></h4>
             <ul class="seblist">
               <li>Fehlerbehebung: Link zum Einsetzen der gesicherten Zwischenablage war manchmal nicht aktiv.</li>
               <li><span id="releases2"> Platzhalter-Text im Start-URL-Feld geändert.</span></li>
               <li>Mac App Store Version: Funktion <span class="quote">Einstellungen ins App-Bundle speichern</span> entfernt, einerseits wegen Restriktionen von Apple, andererseits weil diese Funktionalität nicht zum Szenario von Softwareverteilung über den Mac App Store passt.</li>
             </ul>
-            <h5 class="sebh5">  Release Notes für Safe Exam Browser Version  1.5.1:</h5>
+            <h4 class="sebh5">  Release Notes für Safe Exam Browser Version  1.5.1:</h4>
             <ul class="seblist">
               <li>Französische Übersetzung neuer GUI-Elemente vervollständigt.</li>
               <li><span id="releases2"> Fehlerbehebung: Einstellungen-Fenster war nicht modal.</span></li>
               <li>Grafischer Makel im App-Icon beseitigt.</li>
             </ul>
-<h5 class="sebh5">Release Notes für Safe Exam Browser Version  1.5:</h5>
+<h4 class="sebh5">Release Notes für Safe Exam Browser Version  1.5:</h4>
 			<ul class="seblist">
               <li>SEB kann nun zusätzliche Browserfenster öffnen.</li>
               <li>In neuen Browser-Einstellungen kann festgelegt werden, wie Hyperlinks in einem neuen Browserfenster geöffnet werden: Links  generell blockieren, im selben Fenster öffnen, in einem neuen Fenster öffnen. Einstellung separat möglich für normale Links und für solche, die per JavaScript oder aus Plug-Ins aufgerufen werden.</li>
@@ -863,34 +866,34 @@
               <li>Falsche Standard-Dateipfad-Auswahl beim Auswählen des Upload-Verzeichnisses unter OS X 10.7 Lion wurde korrigiert, ebenso einige Texte in der Benutzeroberfläche.</li>
               <li>Das eingebettete WebKit wurde aus SEB entfernt. Praxiserfahrungen haben keine echten Vorteile für die Benutzung einer privaten WebKit-Kopie gegenüber derjenigen des Betriebssystems gezeigt, ausserdem funktionierten aktuelle WebKit-Builds nicht mehr unter Mac OS X 10.6.8.</li>
     		</ul>
-    <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.4.1:</h5>
+    <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.4.1:</h4>
 			<ul class="seblist">
               <li>Unter OS X 10.7.2 Lion auftretender Fehler wurde korrigiert, als das Browserfenster beim Start nicht in den Vordergrund gebracht wurde.</li>
               <li>Absturz beim Starten von Drittapplikationen durch das Öffnen von heruntergeladenen Dokumenten beseitigt.</li>
     </ul>
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.4:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.4:</h4>
 			<ul class="seblist">
               <li>Es ist nun möglich, eine vorkonfigurierte Kopie von SEB zu erstellen, indem die angepassten Einstellungen in das Programm-Bundle geschrieben werden. Danach kann das so modifizierte Programm auf alle Prüfungsrechner verteilt werden und startet gleich mit der richtigen Konfiguration (Start-URL, Passwörter usw.) auf. </li>
 </ul>
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.3.1:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.3.1:</h4>
 			<ul class="seblist">
               <li>Französische Übersetzung neuer GUI-Elemente vervollständigt. </li>
 </ul>
 
-                        <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.3:</h5>
+                        <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.3:</h4>
 <ul class="seblist">
               <li>VM-Detektor verweigert den Betrieb von SEB in einer virtuellen Maschine.</li>
               <li>Verbesserte Kompatibilität mit OS X 10.7 Lion (Restore von Fensterposition und -Grösse nach erneutem Start wird unterbunden).</li>
               <li>Das in SEB eingebettete WebKit-Framework wurde aktualisiert.</li>
     </ul>
 
-                        <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.2.1:</h5>
+                        <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.2.1:</h4>
 <ul class="seblist">
               <li><span class="releases"> Beseitigt Fehler von Version 1.2 bei noch nicht existierender Preferences-Datei.</span></li>
               <li>Französische Übersetzung neuer GUI-Elemente vervollständigt. </li>
 </ul>
 
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.2:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.2:</h4>
 <ul class="seblist">
               <li>In den erweiterten Einstellungen kann eingestellt werden, ob SEB Download/Upload erlaubt und ob eine heruntergeladene Datei automatisch geöffnet werden soll. Dies ist bei der Benutzung von zusätzlichen Programmen in einem separaten, verwalteten macOS Benutzerkonto während einer Prüfung sinnvoll.</li>
               <li>SEB kann nun auch mit der Schaltfläche zum Schliessen des Browserfensters beendet werden (sofern das Beenden in den Einstellungen erlaubt ist, das Beenden muss wie bislang bestätigt werden).</li>
@@ -899,22 +902,22 @@
               <li>Ein in Version 1.1 selten auftretender Fehler  wurde beseitigt, bei dem die Passwörter in den Einstellungen nicht korrekt gespeichert oder geladen wurden.</li>
               <li>Das in SEB eingebettete WebKit-Framework wurde aktualisiert. </li>
           </ul>
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.1:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.1:</h4>
             <ul class="seblist">
               <li>Neues Einstellungen-Fenster mit Panes/Tabs für zusätzliche Einstellungen.</li>
               <li>SEB für macOS erlaubt nun einzelne Programme (<span class="quote">Drittapplikationen</span>) parallel während Prüfungen zu verwenden. </li>
             </ul>
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.0.2:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.0.2:</h4>
 <ul class="seblist">
               <li>Französische  Lokalisierung hinzugefügt (Dank an Nicolas Dunand).</li>
               <li>Das in SEB eingebettete WebKit-Framework wurde aktualisiert. </li>
           </ul>
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.0.1:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.0.1:</h4>
             <ul class="seblist">
               <li>Deutsche Lokalisierung hinzugefügt.</li>
               <li>Copyright und Version angezeigt im <span class="quote">Über SEB</span>-Fenster werden nun aus den entsprechenden Feldern der info.plist-Datei des Programms gelesen. </li>
             </ul>
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  1.0:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  1.0:</h4>
             <ul class="seblist">
             <li>Die Sicherheit des SEB-Kioskmodus wurde massiv verbessert, indem andere im Hintergrund laufende Programme zuverlässiger daran gehindert werden, sich in den Vordergrund zu schalten, den Kioskmodus abzuschalten oder Benutzereingaben abzufangen. </li>
             <li>Der Code der Applikation wurde mit einer macOS Codesignatur versehen, um Manipulationen der Binärdaten zu vermeiden und die Herkunft der Applikation überprüfen zu können.</li>
@@ -932,7 +935,7 @@
             <li>Das in SEB eingebettete WebKit-Framework wurde aktualisiert. </li>
             <li>Ein Fehler der Version  RC1.0 wurde beseitigt, durch welchen andere Applikationen aktiv werden konnten.</li>
           </ul>
-            <h5 class="sebh5"> Release Notes für Safe Exam Browser Version  RC1.0:</h5>
+            <h4 class="sebh5"> Release Notes für Safe Exam Browser Version  RC1.0:</h4>
             <ul class="seblist">
             <li>Die Administrator- und Beenden-Passwörter werden nicht mehr in Klartext gespeichert, sondern als   SHA256-Hashes. Die Eingabe und Überprüfung der Passwörter in den Einstellungen und Eingabedialogen wurde entsprechend angepasst. </li>
             <li>In den Einstellungen wurde ein Feld zum Bestätigen des Beenden-Passworts hinzugefügt. Ein selten auftetender Fehler beim Vergleichen der &quot;Passwort&quot;- und &quot;Passwort vergleichen&quot;-Felder wurde beseitigt.</li>
