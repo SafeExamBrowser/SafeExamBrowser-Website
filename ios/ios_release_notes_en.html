@@ -228,6 +228,26 @@
         
         <!-- Content -->
 			
+     <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.7.1</a>:          </h5>
+     <p>SEB 3.7.1 improves stability and reliability, facilitates certificate pinning and fixes an MDM restriction compatibility issue.</p>
+     <ul class="seblist">
+        <li>Fetch &amp; embed server certificates by URL: in Settings › Network › Certificates you can fetch a server's certificate over HTTPS and embed it (verify its SHA-256 fingerprint before embedding).</li>
+        <li>The &quot;Allow iOS screen capture&quot; setting to control screen recording / AirPlay / cable mirroring during an exam now has a new, iOS-specific key <em>allowScreenCaptureiOS</em>.</li>
+        <li>You can now enter a custom browser User Agent string (and suffix) directly in the iOS Settings.</li>
+        <li>In-page text search now also finds text inside iFrames, and no longer clears text you typed into open-answer fields. It now also shows the number of found search text occurrences.</li>
+        <li>Support for running on the latest iOS version.</li>
+        <li>Fixed the iCloud Documents capability causing iOS to terminate the app after it invoked AAC, when the MDM restriction &quot;Managed apps can't use iCloud sync&quot; was used: removed the iCloud Documents capability, as it's no longer necessary for files from iCloud Drive to be automatically downloaded when opening them in SEB.</li>
+        <li>Fixed: User Agent string with a trailing space caused web app error.</li>
+        <li>Added compatibility for passwords containing accented characters.</li>
+        <li>Fixed: SEB-JSON floating point serialization differs between Windows and macOS/iOS, which could lead to a different Config Key.</li>
+        <li>Allowed SEB Versions: exams can now require specific SEB versions. If your version isn't allowed, SEB explains the requirement and offers to update via the App Store.</li>
+        <li>Various stability and reliability improvements.</li>
+     </ul>
+     <p><strong>Optional features which need to be individually configured and are disabled by default:</strong></p>
+     <ul class="seblist">
+        <li>Screen Proctoring: if connecting to the proctoring service fails, SEB now shows an error and lets you retry.</li>
+        <li>Fixed some more random crashes when using screen proctoring.</li>
+     </ul>
      <h5> Release Notes  <a href="../download_en.html#iOS">Safe Exam Browser Version  3.6</a>:          </h5>
      <ul class="seblist">
         <li>Added options in in-app Settings / User Interface to control the accessibility features VoiceOver, AssistiveTouch, Grayscale Display, Smart Invert (colors) and Zoom (system default, enable, disable).<br>

@@ -227,6 +227,53 @@
 			
           <!-- Content -->
 			
+		  <h4 class="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.7.1</a>:</h4>
+		  <p>SEB 3.7.1 adds the option to require specific SEB client versions in a configuration, allows fetching server certificates by URL in Settings, and contains a security fix for certificate validation as well as several permission-handling and stability fixes.</p>
+		  <p>New in SEB 3.7.1 (Build 159F8):</p>
+          <ul class="seblist">
+            <li>Added &quot;Allowed SEB Versions&quot;: exam administrators can now require that a configuration may only be used (and an exam only attempted) with one or more specific SEB client version(s). If the SEB version running on the device doesn't match the requirement, SEB displays an alert stating which version(s) are required and offers to open the SEB download page (&quot;Download SEB&quot;) or to quit; in both cases SEB is quit, so it can't be used for the exam with a disallowed version. The requirements are configured in Settings / Security (see the new setting <em>sebAllowedVersions</em> in <a href="#seb371-newSettings">New Settings</a> below). As this feature will only make sense once only SEB macOS clients which support the version check are circulating, and because that is more secure, you should preferably use server-side SEB client version restrictions.</li>
+            <li>Added fetching server certificates by URL in Settings / Network / Certificates: certificates to embed can now be retrieved directly from a URL. This facilitates setting up certificate pinning to prevent MITM attacks.</li>
+            <li>Fixed improper certificate validation (CWE-295): removed the &quot;authorized hosts&quot; substring fallback in the server-trust evaluation, which could accept a certificate for a host whose name merely contained an authorized host name as a substring. Server trust is now matched correctly.</li>
+            <li>Added compatibility for passwords containing accented characters (é, ü, ñ) across platforms.</li>
+            <li>Fixed a crash when opening the Advanced Certificates sheet in Settings / Network / Certificates.</li>
+            <li>Detecting apps with Accessibility permissions (setting <em>detectAccessibilityApps</em>) requires Full Disk Access to read the system permission (TCC) database. On macOS 11 the system does not grant apps read access to this database even when Full Disk Access is enabled, so this detection is now only performed on macOS 12 and newer. On macOS 11 SEB no longer shows a Full Disk Access prompt that could never be satisfied and starts normally (the accessibility app detection is simply unavailable there). Accordingly, the default minimum required macOS version has been raised to macOS 12.</li>
+            <li>Fixed Full Disk Access permission detection on macOS 12, so SEB reliably recognizes when Full Disk Access has been granted. System permission prompts are now requested while the AAC Assessment Mode is off, and Full Disk Access is checked before requesting download/log folder access, so the prompts are shown reliably and aren't hidden behind the locked-down UI. The authorization dialog is also no longer displayed when starting SEB with pressed option key (which displays Settings instead of starting a session).</li>
+            <li>Fixed several permission and information dialogs (Location Services and the &quot;minimum macOS version required&quot; alert) not being displayed — or SEB freezing or continuing without waiting for the user — when running under the AAC Assessment Mode on macOS 11. These alerts are now shown reliably and correctly block the session start.</li>
+            <li>Fixed the Full Disk Access and Location Services permission dialogs being inaccessible when reconfiguring from one Classic kiosk mode session to another: the dialogs were shown while the previous session's kiosk mode still covered the screen, so System Settings stayed hidden behind SEB. While such a permission dialog is displayed, SEB now temporarily downgrades the Classic kiosk mode to allow switching to System Settings, brings the relevant System Settings pane to the foreground, and restores the kiosk mode once the permission has been granted or the dialog is dismissed.</li>
+            <li>Fixed Location Services not being requested when reconfiguring into a Classic kiosk mode session, so the Wi-Fi control showed that access wasn't granted without ever prompting for it. SEB now requests Location Services (when needed to display Wi-Fi network names) on such a reconfiguration, as it already did on the initial launch and when starting the AAC Assessment Mode.</li>
+            <li>Location Services access is now only requested when actually needed (to display Wi-Fi network names), when displaying the Wi-Fi control isn't disabled and while SEB isn't locked down, so users aren't prompted unnecessarily. Fixed the Location Services permission dialog not closing automatically on macOS 11 once access is granted, and an unnecessary Location Services permission dialog briefly appearing on macOS 11 even when access was already granted.</li>
+            <li>Fixed SEB still taking input focus back from the genuine Apple-signed macOS SecurityAgent dialog (for example the keychain prompt shown when connecting to a Wi-Fi network) in situations where the system reported the change without a workspace notification. SEB now leaves this system dialog in the foreground in these cases as well.</li>
+            <li>Fixed holding the Option key while starting SEB not opening the Settings window when SEB was launched with deployed client settings (a SEBClientSettings.seb in the Library/Preferences/ folder). Holding the Option key at launch now opens Settings in this case too (if allowed in the client settings), instead of always starting a session.</li>
+            <li>Fixed the browser text search (find on page) altering text in saved open-text answers, for example when searching within an open-text question in OLAT.</li>
+            <li>The browser text search now also covers content inside iFrames.</li>
+            <li>The browser text search now draws the &quot;N of M&quot; match counter inside the search field.</li>
+            <li>Replaced the preset permitted process for the Cisco Secure Client with AnyConnect, which works when it is connected before starting SEB.</li>
+            <li>Reordered the settings in the Settings / Security pane to reflect their current status (general settings vs. macOS-only settings).</li>
+            <li>Added an explanation about the Detect Accessibility Apps feature and Full Disk Access.</li>
+            <li>Security improvements.</li>
+            <li>Updated the hardcoded user agent string (with 3.7).</li>
+            <li>Updated localizations.</li>
+          </ul>
+          <p><strong>Optional features which need to be individually configured and are disabled by default</strong></p>
+          <ul class="seblist">
+            <li>Fixed the optional Screen Proctoring feature continuing without proctoring when the connection to the Screen Proctoring server failed. If SEB cannot establish or maintain the connection to the Screen Proctoring service (for example it cannot obtain an access token, or the token stays invalid after the configured number of attempts), SEB now shows an error alert and lets the user retry the connection or quit the session, instead of continuing the exam unmonitored.</li>
+          </ul>
+          <h5 class="page-header seb-section-header sebnavbar-link" id="seb371-newSettings">
+        <a class="anchorjs-link" href="#seb371-newSettings"></a>
+        New Settings
+          </h5>
+          <p><strong>sebAllowedVersions</strong> — Array of strings, default empty (no restriction)<br>
+          <em>Settings window: Security → &quot;Allowed SEB Versions&quot;</em></p>
+          <p>Specifies one or more SEB client versions required in order to use a configuration. Enter one restriction per row. Each restriction has the format <em>OS.Major.Minor.[Patch].[Build].[AE].[min]</em>, where the parts in square brackets are optional:</p>
+          <ul class="seblist">
+            <li><em>OS</em> — the operating system: <em>Win</em>, <em>Mac</em> or <em>iOS</em>.</li>
+            <li><em>Major</em>, <em>Minor</em> — the major and minor version (required).</li>
+            <li><em>[Patch]</em>, <em>[Build]</em> — optionally the patch and build version.</li>
+            <li><em>[AE]</em> — optionally indicates the Alliance Edition.</li>
+            <li><em>[min]</em> — optionally marks the value as the minimum required version (this version or any newer one); without it, the restriction is an exact match on the components you specified.</li>
+          </ul>
+          <p>Examples: <em>Win.3.9.min</em> allows all SEB for Windows versions from 3.9 upwards; <em>Mac.3.7.1</em> requires exactly SEB for macOS 3.7.1.</p>
+          <p>A restriction only constrains the platform it names. As long as no restriction is configured for a given platform, all versions of that platform are allowed — so a configuration that only restricts, for example, SEB for Windows does not affect SEB for macOS or iOS. Only the version components you specify are compared, so <em>Mac.3.7</em> allows any 3.7.x. A pre-release (beta) ranks just below its final release: for example <em>3.7.1b4</em> counts as below <em>3.7.1</em>, so it satisfies <em>Mac.3.7</em> but not <em>Mac.3.7.1</em> or <em>Mac.3.7.1.min</em>. When the platform SEB is running on is restricted and the running version doesn't satisfy any of its restrictions, SEB shows an error message describing the requirement — phrased as a minimum (&quot;… or higher&quot;) or as one or more specific versions, as configured — with a link to the SEB download page.</p>
 		  <h4 class="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.7</a>:</h4>
 		  <p>SEB 3.7 contains many important security improvements, a new Wi-Fi control especially helpful with AAC Assessment Mode and various fixes.</p>
 		  <p>New in SEB 3.7 (Build 1591F):</p>

@@ -226,6 +226,31 @@
 
           <!-- Content -->
 
+          <h5 class="sebh5">September 9, 2026</h5>
+          <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.7.1 for macOS</a> and <a href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank">iOS released</a></strong>: SEB 3.7.1 adds the option to require specific SEB client versions in a configuration, allows fetching server certificates by URL in Settings, and contains a security fix for certificate validation as well as several permission-handling, stability and reliability improvements.</p>
+          <p><strong>Common new features and fixes:</strong></p>
+          <ul class="seblist">
+            <li>Added &quot;Allowed SEB Versions&quot;: exams can now require one or more specific SEB client version(s). If the running version isn't allowed, SEB explains the requirement and offers to update.</li>
+            <li>Fetch &amp; embed server certificates by URL in Settings / Network / Certificates.</li>
+            <li>Fixed improper certificate validation (CWE-295): removed the &quot;authorized hosts&quot; substring fallback in the server-trust evaluation, which could accept a certificate for a host whose name merely contained an authorized host name as a substring. Server trust is now matched correctly.</li>
+            <li>The in-page text search now also finds text inside iFrames, no longer clears text typed into open-answer fields, and shows the number of found occurrences.</li>
+            <li>Fixed a User Agent string with a trailing space causing web app errors.</li>
+            <li>Added compatibility for passwords containing accented characters (é, ü, ñ) across platforms.</li>
+            <li>Fixed SEB-JSON floating-point serialization differing between Windows and macOS/iOS, which could lead to a different Config Key.</li>
+            <li>Optional Screen Proctoring: if the connection to the proctoring service fails, SEB now shows an error and lets you retry instead of continuing unmonitored.</li>
+          </ul>
+          <p><strong>Most important macOS changes:</strong></p>
+          <ul class="seblist">
+            <li>Several fixes to permission handling (Full Disk Access, Location Services and accessibility-app detection), including when reconfiguring between Classic kiosk mode sessions. Accessibility-app detection now requires macOS 12, so the default minimum macOS version was raised to macOS 12.</li>
+          </ul>
+          <p><strong>Most important iOS changes:</strong></p>
+          <ul class="seblist">
+            <li>You can now enter a custom browser User Agent string (and suffix) directly in the iOS Settings.</li>
+            <li>Fixed the iCloud Documents capability causing iOS to terminate the app after invoking AAC when the MDM restriction &quot;Managed apps can't use iCloud sync&quot; was active.</li>
+            <li>Support for running on iOS 27 with default settings.</li>
+          </ul>
+          <p><span class="half_linespace">See release notes for <a href="macosx/mac_release_notes_en.html">macOS</a> and <a href="ios/ios_release_notes_en.html">iOS</a> for all changes.</span></p>
+
           <h5 class="sebh5">August 1, 2026</h5>
           <p><strong><a href="download_en.html#MacOSX">Safe Exam Browser 3.7 for macOS released</a></strong>: SEB 3.7 contains many important security improvements, a new Wi-Fi control especially helpful with the AAC Assessment Mode and various fixes. <span class="half_linespace">See <a href="macosx/mac_release_notes_en.html">release notes</a> for all changes.</span></p>
           <p><strong>SEB 3.7 works with macOS 26.6 and macOS 27 beta, while all previous SEB versions may show a red lock screen, because Apple updated their code signing certificates. </strong></p>

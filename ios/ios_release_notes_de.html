@@ -228,6 +228,26 @@
         
         <!-- Content -->
 		
+    <h5 class="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version 3.7.1</a>:</h5>
+     <p>SEB 3.7.1 verbessert die Stabilität und Zuverlässigkeit, erleichtert das Zertifikat-Pinning und behebt ein Kompatibilitätsproblem mit einer MDM-Einschränkung.</p>
+          <ul class="seblist">
+            <li>Server-Zertifikate per URL abrufen und einbetten: Unter Einstellungen › Netzwerk › Zertifikate können Sie das Zertifikat eines Servers über HTTPS abrufen und einbetten (überprüfen Sie dessen SHA-256-Fingerabdruck vor dem Einbetten).</li>
+            <li>Die Einstellung „iOS-Bildschirmaufnahme erlauben“ zur Steuerung von Bildschirmaufnahme / AirPlay / Spiegelung per Kabel während einer Prüfung hat nun einen neuen, iOS-spezifischen Key <em>allowScreenCaptureiOS</em>.</li>
+            <li>Sie können nun eine benutzerdefinierte Browser-User-Agent-Zeichenfolge (und ein Suffix) direkt in den iOS-Einstellungen eingeben.</li>
+            <li>Die Textsuche auf der Seite findet nun auch Text innerhalb von iFrames und löscht keinen Text mehr, den Sie in Freitext-Antwortfelder eingegeben haben. Zudem wird nun die Anzahl der gefundenen Textstellen angezeigt.</li>
+            <li>Unterstützung für die Ausführung unter der neuesten iOS-Version.</li>
+            <li>Behoben: Die iCloud-Dokumente-Berechtigung führte dazu, dass iOS die App nach dem Aufrufen des Bewertungsmodus (AAC) beendete, wenn die MDM-Einschränkung „Verwaltete Apps können iCloud-Synchronisierung nicht verwenden“ aktiv war: Die iCloud-Dokumente-Berechtigung wurde entfernt, da sie nicht mehr erforderlich ist, damit Dateien aus iCloud Drive beim Öffnen in SEB automatisch heruntergeladen werden.</li>
+            <li>Behoben: Ein User-Agent-String mit einem Leerzeichen am Ende führte zu einem Fehler in Web-Apps.</li>
+            <li>Kompatibilität für Passwörter mit Akzentzeichen hinzugefügt.</li>
+            <li>Behoben: Die SEB-JSON-Gleitkomma-Serialisierung unterschied sich zwischen Windows und macOS/iOS, was zu einem abweichenden Config Key führen konnte.</li>
+            <li>Erlaubte SEB-Versionen: Prüfungen können nun bestimmte SEB-Versionen voraussetzen. Wenn Ihre Version nicht erlaubt ist, erklärt SEB die Anforderung und bietet an, über den App Store zu aktualisieren.</li>
+            <li>Verschiedene Verbesserungen bei Stabilität und Zuverlässigkeit.</li>
+          </ul>
+          <p><strong>Optionale Funktionen, die individuell konfiguriert werden müssen und standardmässig deaktiviert sind:</strong></p>
+          <ul class="seblist">
+            <li>Screen Proctoring: Wenn die Verbindung zum Proctoring-Dienst fehlschlägt, zeigt SEB nun einen Fehler an und ermöglicht einen erneuten Versuch.</li>
+            <li>Einige weitere zufällige Abstürze bei der Verwendung von Screen Proctoring wurden behoben.</li>
+          </ul>
     <h5 class="sebh5"> Release Notes <a href="../download_de.html#iOS">Safe Exam Browser Version 3.6</a>:</h5>
           <ul class="seblist">
             <li>Optionen in den In-App-Einstellungen / Benutzeroberfläche hinzugefügt, um die Bedienungshilfen VoiceOver, AssistiveTouch, Graustufen-Anzeige, &quot;Umkehren - Intelligent&quot; (Farben) und Zoom zu steuern (Systemstandard, aktivieren, deaktivieren).<br>
