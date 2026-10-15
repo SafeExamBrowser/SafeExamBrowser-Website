@@ -225,7 +225,30 @@
         <div class="col-md-9">
         
           <!-- Content -->
-			
+
+		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.7.1.1</a>:</h4>
+		  <p>SEB 3.7.1.1 ist ein Wartungsupdate: Es behebt einen fälschlich angezeigten roten Sperrbildschirm nach dem erzwungenen Beenden verbotener Prozesse, ergänzt eine klarere Fehlerbehandlung bei fehlgeschlagenen Konfigurations-Downloads und Seitenladevorgängen, enthält mehrere Fehlerbehebungen bei der Stabilität und den Einstellungen und verbessert die Erkennung von Full Disk Access unter macOS 12.</p>
+		  <p>Neu in SEB 3.7.1.1 (Build 15A08):</p>
+          <ul class="seblist">
+            <li>Behoben: Nach dem erzwungenen Beenden verbotener Prozesse wurde eine doppelte Prüfungssession gestartet, die fälschlicherweise den roten Bildschirm <em>„Erneutes Starten einer zuvor unterbrochenen Prüfungssession“</em> anzeigen konnte.</li>
+            <li>Behoben: Ein stummer weisser (leerer) Bildschirm, wenn eine Webseite nicht geladen werden kann. WebKit meldet bei HTTP-Fehlerstatuscodes keinen Fehler (es stellt einfach den oft leeren Inhalt der Antwort dar), und ein abstürzender Web-Content-Prozess wurde stillschweigend neu geladen. SEB zeigt nun bei Serverfehlern (5xx) und Clientfehlern (4xx) mit leerem Inhalt einen Ladefehler-Hinweis an (<em>„Wiederholen“</em>/<em>„Abbrechen“</em>) statt einer leeren Seite und beendet das Neuladen, wenn ein Web-Content-Prozess wiederholt abstürzt, anstatt in einer Schleife mit weissem Bildschirm zu verharren.</li>
+            <li>Behoben: Eine irreführende Meldung „Einstellungen sind beschädigt“ (und ein möglicher Absturz) beim Herunterladen einer Konfiguration, das zwar abgeschlossen wurde, aber einen HTTP-Fehlerstatus oder einen leeren Inhalt zurückgab. SEB zeigt in diesem Fall nun den klaren Fehler <em>„Herunterladen der Einstellungen fehlgeschlagen“</em> an, anstatt zu versuchen, ungültige Daten zu verarbeiten.</li>
+            <li>Verbesserte Robustheit gegen Abstürze beim Lesen beschädigter oder fehlender Konfigurations-/Benutzerdaten: Das Deserialisieren ungültiger oder leerer Daten bricht SEB nicht mehr ab, und solche Fehler werden sauber behandelt.</li>
+            <li>Die veraltete Einstellung <em>„Plug-Ins aktivieren“</em> wurde aus Einstellungen / Browser entfernt.</li>
+            <li>Das Einstellungsfenster wurde weiter verbessert (Reihenfolge und Bezeichnungen der Einstellungen) und die Einstellung <em>„Drucken erlauben (Win)“</em> hinzugefügt.</li>
+            <li>Die veraltete Einstellung <em>browserWindowTitleSuffix</em> wird nun beim Speichern mit <em>„Sichern als …“</em> entfernt.</li>
+            <li>Sicherheitsverbesserungen.</li>
+            <li>Aktualisierte Lokalisierungen.</li>
+            <li>Verbesserte Erkennung von Full Disk Access unter macOS 12: SEB unterscheidet nun zwischen einer Full-Disk-Access-Berechtigung, die tatsächlich fehlt, und einer, die zwar gewährt wurde, aber nicht wirksam ist — zum Beispiel wenn die Berechtigungen des Ordners der macOS-System-Berechtigungsdatenbank (TCC) gegenüber dem Standard geändert wurden oder wenn die Berechtigung nicht für die installierte Kopie von SEB gilt. Anstatt den Hinweis <em>„Festplattenvollzugriff gewähren“</em> wiederholt in einer Schleife anzuzeigen, nachdem die Berechtigung bereits aktiviert wurde, meldet SEB nun den tatsächlichen Fehler beim Datenbankzugriff und gibt Hinweise zur Behebung, falls das Gewähren der Berechtigung das Problem nicht löst. Auch die Erkennung von Apps mit Bedienungshilfen-Berechtigungen bleibt vollständig: Kann die System-Berechtigungsdatenbank nicht gelesen werden, wertet SEB das Ergebnis nicht mehr als „keine Apps gefunden“.
+              <p>Der von SEB gemeldete Fehler zeigt die Ursache an: Ein Fehler <em>„Operation not permitted“</em> (errno 1) bedeutet, dass Full Disk Access schlicht nicht wirksam ist (nicht gewährt, oder die Berechtigung gilt nicht für diese Kopie von SEB — installieren Sie SEB durch Ziehen in den Programme-Ordner neu und gewähren Sie die Berechtigung erneut). Ein Fehler <em>„Permission denied“</em> (errno 13) bedeutet hingegen, dass das Dateisystem den Zugriff blockiert hat, weil die Berechtigungen des Ordners der macOS-Datenschutzdatenbank gegenüber dem macOS-Standard geändert wurden.</p>
+              <p>Wenn Sie den Fehler <em>„Permission denied“</em> (errno 13) erhalten: Die Standardberechtigungen dieses Ordners sind <em>drwxr-xr-x</em> (Modus 755), Eigentümer <em>root</em>, Gruppe <em>wheel</em>. Die aktuellen Berechtigungen können Sie im Terminal prüfen mit:<br />
+              <span class="codetext">ls -lde &quot;/Library/Application Support/com.apple.TCC&quot;</span></p>
+              <p>und die Standardberechtigungen wiederherstellen mit:<br />
+              <span class="codetext">sudo chown root:wheel &quot;/Library/Application Support/com.apple.TCC&quot;</span><br />
+              <span class="codetext">sudo chmod 755 &quot;/Library/Application Support/com.apple.TCC&quot;</span></p>
+              <p>Hinweis: Dieser Ordner ist normalerweise durch den macOS-Systemintegritätsschutz (SIP) geschützt, daher melden diese Befehle möglicherweise auch mit sudo <em>„Operation not permitted“</em>. In diesem Fall wurden die Berechtigungen wahrscheinlich bei deaktiviertem SIP geändert oder durch eine Migration bzw. Wiederherstellung aus einem Backup übernommen, und ihre Wiederherstellung kann einen Start in die macOS-Wiederherstellung erfordern.</p></li>
+          </ul>
+
 		  <h4 class="sebh5">Release Notes für <a href="../download_de.html#MacOSX">Safe Exam Browser version 3.7.1</a>:</h4>
 		  <p>SEB 3.7.1 ergänzt die Möglichkeit, in einer Konfiguration bestimmte SEB-Client-Versionen vorauszusetzen, erlaubt das Abrufen von Server-Zertifikaten per URL in den Einstellungen und enthält einen Sicherheitsfix für die Zertifikatsvalidierung sowie mehrere Fehlerbehebungen bei der Berechtigungsbehandlung und der Stabilität.</p>
 		  <p>Neu in SEB 3.7.1 (Build 159F8):</p>

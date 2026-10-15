@@ -282,29 +282,27 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.1/SafeExamBrowser-3.7.1.dmg" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.1.1/SafeExamBrowser-3.7.1.1.dmg" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.7.1 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.7.1.1 für macOS</span>
           </a>
         </p>
 
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 27, 26, 15, 14, 13, 12</strong><br />
-        <span class="codetext">Build 159F8.</span></p>
+        <span class="codetext">Build 15A08.</span></p>
 
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.1/SafeExamBrowser-3.7.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:d9a11b2f5f35f5681b0f0f204a217bdcb90413481748f34cbff2ae86044e6086</span></p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.1.1/SafeExamBrowser-3.7.1.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:85e774fdc27bba02f0233e5f9ca5b07c43d92058cac44ce666dcca4f68f192ab</span></p>
         <div>
-          <p>SEB 3.7.1 ergänzt die Möglichkeit, in einer Konfiguration bestimmte SEB-Client-Versionen vorauszusetzen, erlaubt das Abrufen von Server-Zertifikaten per URL in den Einstellungen und enthält einen Sicherheitsfix für die Zertifikatsvalidierung sowie mehrere Fehlerbehebungen bei der Berechtigungsbehandlung und der Stabilität. <strong>SEB 3.7.1 funktioniert mit macOS 26.6 und der Beta-Version von macOS 27, während bei allen früheren SEB-Versionen möglicherweise ein roter Sperrbildschirm angezeigt wird, weil Apple seine Code-Signatur-Zertifikate aktualisiert hat. </strong><strong class="red">Auf macOS 26.6 oder neuer sollten Sie ausschliesslich SEB 3.7 oder neuer verwenden (keine älteren Versionen).</strong></p>
+          <p>SEB 3.7.1.1 ist ein Wartungsupdate: Es behebt einen fälschlich angezeigten roten Sperrbildschirm nach dem erzwungenen Beenden verbotener Prozesse, ergänzt eine klarere Fehlerbehandlung bei fehlgeschlagenen Konfigurations-Downloads und Seitenladevorgängen, enthält mehrere Fehlerbehebungen bei der Stabilität und den Einstellungen und verbessert die Erkennung von Full Disk Access unter macOS 12. <strong>SEB 3.7.1 und neuer funktionieren mit macOS 26.6 und macOS 27, während bei allen früheren SEB-Versionen möglicherweise ein roter Sperrbildschirm angezeigt wird, weil Apple seine Code-Signatur-Zertifikate aktualisiert hat. </strong><strong class="red">Auf macOS 26.6 oder neuer sollten Sie ausschliesslich SEB 3.7.1 oder neuer verwenden (keine älteren Versionen).</strong></p>
 
-          <p><strong>Neu in SEB 3.7.1:</strong></p>
+          <p><strong>Neu in SEB 3.7.1.1:</strong></p>
           <ul class="seblist">
-            <li>Neu „Erlaubte SEB-Versionen“: Prüfungsadministratoren können nun voraussetzen, dass eine Konfiguration nur mit einer oder mehreren bestimmten SEB-Client-Version(en) verwendet werden darf. Ist die laufende Version nicht erlaubt, zeigt SEB die Anforderung an und bietet an, die SEB-Downloadseite zu öffnen oder SEB zu beenden (neue Einstellung <em>sebAllowedVersions</em> in Einstellungen / Sicherheit).</li>
-            <li>Neu können Server-Zertifikate in Einstellungen / Netzwerk / Zertifikate per URL abgerufen werden: einzubettende Zertifikate lassen sich direkt von einer URL beziehen. Damit wird die Konfiguration von Zertifikat-Pinning erleichtert, um MITM-Attacken zu verhindern.</li>
-            <li>Behoben: Fehlerhafte Zertifikatsvalidierung (CWE-295): Der „Authorized Hosts“-Teilstring-Fallback in der Server-Trust-Prüfung wurde entfernt, sodass Server-Trust nun korrekt abgeglichen wird.</li>
-            <li>Mehrere Fehlerbehebungen bei der Behandlung der Berechtigungen für Full Disk Access, Ortungsdienste und die Erkennung von Bedienungshilfen-Apps, auch beim Neukonfigurieren zwischen zwei klassischen Kiosk-Modus-Sessions. Die Erkennung von Bedienungshilfen-Apps erfordert nun macOS 12, weshalb die standardmässige Mindest-macOS-Version auf macOS 12 angehoben wurde.</li>
-            <li>Die Textsuche im Browser findet nun auch Text innerhalb von iFrames, verändert keine gespeicherten Freitext-Antworten mehr und zeigt den Zähler „N von M“ innerhalb des Suchfelds an.</li>
-            <li>Optional: Wenn die Verbindung zum Screen-Proctoring-Server fehlschlägt, zeigt SEB nun einen Fehler an und ermöglicht einen erneuten Versuch, anstatt die Prüfung unüberwacht fortzusetzen.</li>
-            <li>Sicherheitsverbesserungen, aktualisierter fest hinterlegter User-Agent-String und aktualisierte Lokalisierungen.</li>
+            <li>Behoben: Eine doppelte Prüfungssession nach dem erzwungenen Beenden verbotener Prozesse, die fälschlicherweise den roten Bildschirm <em>„Erneutes Starten einer zuvor unterbrochenen Prüfungssession“</em> anzeigen konnte.</li>
+            <li>Behoben: Ein leerer weisser Bildschirm, wenn eine Webseite nicht geladen werden kann: SEB zeigt nun bei Serverfehlern und leeren Fehlerantworten einen Ladefehler-Hinweis an (<em>„Wiederholen“</em>/<em>„Abbrechen“</em>) und lädt einen wiederholt abstürzenden Web-Content-Prozess nicht mehr endlos neu.</li>
+            <li>Behoben: Eine irreführende Meldung „Einstellungen sind beschädigt“ (und ein möglicher Absturz), wenn ein Konfigurations-Download einen HTTP-Fehler oder einen leeren Inhalt zurückgab.</li>
+            <li>Verbesserte Robustheit gegen Abstürze bei beschädigten oder fehlenden Konfigurations-/Benutzerdaten, Verbesserungen im Einstellungsfenster, Sicherheitsverbesserungen und aktualisierte Lokalisierungen.</li>
+            <li>Verbesserte Erkennung von Full Disk Access unter macOS 12: SEB zeigt den Hinweis <em>„Festplattenvollzugriff gewähren“</em> nicht mehr in einer Schleife an, wenn die Berechtigung zwar gewährt, aber nicht wirksam ist (z. B. weil die Berechtigungen des Ordners der macOS-Datenschutzdatenbank (TCC) geändert wurden), sondern meldet den tatsächlichen Fehler und gibt Hinweise zur Behebung (siehe <a href="macosx/mac_release_notes_de.html">Release Notes</a>).</li>
           </ul>
         </div>
 <p>Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für eine  vollständige Liste neuer Funktionen.</p>

@@ -226,7 +226,30 @@
         <div class="col-md-6" role="main">		
 			
           <!-- Content -->
-			
+
+		  <h4 class="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.7.1.1</a>:</h4>
+		  <p>SEB 3.7.1.1 is a maintenance update: it fixes an incorrect red lock screen after force quitting prohibited processes, adds clearer error handling for failed configuration downloads and web page loads, contains several stability and settings fixes, and improves Full Disk Access detection on macOS 12.</p>
+		  <p>New in SEB 3.7.1.1 (Build 15A08):</p>
+          <ul class="seblist">
+            <li>Fixed a duplicate exam session being started after force quitting prohibited processes, which could incorrectly show the red <em>&quot;Re-Opening Locked Exam&quot;</em> screen.</li>
+            <li>Fixed a silent white (blank) screen when a web page fails to load. WebKit does not report an error for HTTP error status codes (it simply renders the, often empty, response body) and a crashing web content process was reloaded silently. SEB now shows a load error alert (Retry/Cancel) for server error (5xx) and empty-bodied client error (4xx) responses instead of a blank page, and stops reloading after a web content process repeatedly terminates instead of looping on a white screen.</li>
+            <li>Fixed a misleading &quot;settings are corrupted&quot; message (and a possible crash) when downloading a configuration that completed but returned an HTTP error status or an empty body. SEB now shows a clear <em>&quot;Downloading Settings Failed&quot;</em> error in this case instead of trying to parse invalid data.</li>
+            <li>Improved robustness against crashes when reading corrupted or missing configuration/user data: deserializing invalid or empty data no longer aborts SEB, and such errors are handled gracefully.</li>
+            <li>Removed the outdated <em>&quot;Enable Plug-Ins&quot;</em> setting from Settings / Browser.</li>
+            <li>Further improved the Settings window (order and labels of settings) and added the <em>&quot;Allow printing (Win)&quot;</em> setting.</li>
+            <li>The outdated setting <em>browserWindowTitleSuffix</em> is now removed when saving settings with <em>&quot;Save As&quot;</em>.</li>
+            <li>Security improvements.</li>
+            <li>Updated localizations.</li>
+            <li>Improved Full Disk Access detection on macOS 12: SEB now distinguishes a Full Disk Access permission that is genuinely missing from one that has been granted but isn't effective — for example when the permissions of the macOS system permission (TCC) database folder have been changed from their default, or when the grant doesn't apply to the installed copy of SEB. Instead of repeatedly showing the <em>&quot;Grant Full Disk Access&quot;</em> prompt in a loop after the permission has already been enabled, SEB now reports the actual database-access error and offers guidance once granting the permission doesn't resolve it. Detection of apps with Accessibility permissions is also kept complete: if the system permission database cannot be read, SEB no longer treats the result as &quot;no apps found&quot;.
+              <p>The error reported by SEB indicates the cause: an <em>&quot;Operation not permitted&quot;</em> (errno 1) error means Full Disk Access simply isn't in effect (not granted, or the grant doesn't apply to this copy of SEB — reinstall it by dragging it into the Applications folder and grant it again). A <em>&quot;Permission denied&quot;</em> (errno 13) error instead means the file system blocked access because the permissions of the macOS privacy database folder have been changed from their macOS default.</p>
+              <p>If you get the <em>&quot;Permission denied&quot;</em> (errno 13) error, the default permissions of that folder are <em>drwxr-xr-x</em> (mode 755), owner <em>root</em>, group <em>wheel</em>. You can check the current permissions in the Terminal with:<br />
+              <span class="codetext">ls -lde &quot;/Library/Application Support/com.apple.TCC&quot;</span></p>
+              <p>and restore the default permissions with:<br />
+              <span class="codetext">sudo chown root:wheel &quot;/Library/Application Support/com.apple.TCC&quot;</span><br />
+              <span class="codetext">sudo chmod 755 &quot;/Library/Application Support/com.apple.TCC&quot;</span></p>
+              <p>Note: this folder is normally protected by macOS System Integrity Protection (SIP), so these commands may report <em>&quot;Operation not permitted&quot;</em> even with sudo. In that case the permissions were likely altered while SIP was disabled or carried over by a migration or backup restore, and restoring them may require booting into macOS Recovery.</p></li>
+          </ul>
+
 		  <h4 class="sebh5">Release notes for <a href="../download_en.html#MacOSX">Safe Exam Browser version 3.7.1</a>:</h4>
 		  <p>SEB 3.7.1 adds the option to require specific SEB client versions in a configuration, allows fetching server certificates by URL in Settings, and contains a security fix for certificate validation as well as several permission-handling and stability fixes.</p>
 		  <p>New in SEB 3.7.1 (Build 159F8):</p>
