@@ -223,17 +223,50 @@
         
         <!-- Content Column -->
         <div class="col-md-9">
-			
-			<h4><b>Version 3.10.2</b></h4>
-			<p>Safe Exam Browser für Windows Version 3.10.2 verbessert Sicherheits- und Integritätsaspekte, behebt ein Problem mit der Bildschirmüberwachung und bietet weitere kleinere Fehlerbehebungen und Verbesserungen.</p>
+
+			<h4><b>Version 3.10.3</b></h4>
+			<p>Safe Exam Browser für Windows Version 3.10.3 verbessert Integritäts- und Sicherheitsaspekte, führt eine Konfigurationsoption für injizierte Tastatureingaben ein, erweitert die Fehlerbehandlung der optionalen Bildschirmüberwachungsfunktion und bietet weitere Fehlerbehebungen und Verbesserungen.</p>
 			<p class="red">WICHTIG:</p>
 			<ul>
 				<li><span class="red">Safe Exam Browser für Windows benötigt eine Mindestversion des Betriebssystemes von <b>Windows 10 Version 1803</b>.</span></li>
-				<li><span class="red">Der Browser Exam Key von SEB für Windows <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+				<li><span class="red">Der Browser Exam Key von SEB für Windows ist <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
 			</ul>
 			<p>Änderungen:</p>
 			<ul>
-				<li>Problem bei der Bildschirmüberwachung behoben.</li>
+				<li>Problem behoben, bei dem das Browserfenster aufgrund der kurzen Einblendung des Action-Centers beim Start nicht den initialen Fokus erhielt.</li>
+				<li>Option "Ignore SEB Service" im Konfigurationstool durch "Enable SEB Service Component" ersetzt und eine Empfehlung zur Verwendung der Service-Komponente für BYOD hinzugefügt. Die Option wird nun invertiert angezeigt, der Konfigurationswert selbst bleibt jedoch unverändert.</li>
+				<li>UltraViewer zur Standardliste der verbotenen Anwendungen hinzugefügt.</li>
+				<li>Konfigurationsoption zum Zulassen injizierter Tastatureingaben implementiert (siehe "Hooked Keys" &gt; "Enable Injected Keys"). Die Option ist standardmäßig deaktiviert, kann aber zur Kompatibilität mit Barrierefreiheits- oder Fernsteuerungssoftware aktiviert werden.</li>
+				<li>Grundlegende Validierung der Konfigurationsdaten implementiert.</li>
+				<li>Überprüfung der Laufzeitintegrität verbessert.</li>
+				<li>Protokolleinträge zur Laufzeitintegrität auf den Schweregrad "Debug" herabgestuft.</li>
+				<li>Problem mit dem Mechanismus der Sitzungsintegrität behoben.</li>
+				<li>Browser-Engine Version 152.0.100 (Chromium-Version 152.0.7977.140).</li>
+			</ul>
+			<p>Die folgenden optionalen Funktionen und Änderungen sind standardmäßig deaktiviert und müssen individuell konfiguriert werden:</p>
+			<ul>
+				<li>Protokollierung von Laufzeitinformationen (Computer, Betriebssystem und SEB-Version) während der Initialisierung einer Server-Sitzung in der Client-Komponente hinzugefügt.</li>
+				<li>Konfigurationswert implementiert, mit dem der Hinweis zur Bildschirmüberwachung während der Sitzungsinitialisierung optional ausgeblendet werden kann.</li>
+				<li>Fehlerbehandlung bei fehlgeschlagener Initialisierung der Bildschirmüberwachung implementiert: SEB informiert nun den Benutzer und beendet sich, wenn die Bildschirmüberwachung nicht initialisiert werden kann (z. B. aufgrund eines Verbindungsfehlers).</li>
+				<li>Übertragungs-Spooler der Bildschirmüberwachung bei Verbindungsfehlern verbessert.</li>
+				<li>Übertragung von Protokolleinträgen an SEB-Server auf max. 10 Einträge alle 500 ms begrenzt.</li>
+				<li>Null-Referenz-Ausnahme in der Bildschirmüberwachungsverantwortung bei einem Startfehler behoben.</li>
+			</ul>
+			<p>Bekannte Probleme:</p>
+			<ul>
+				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
+			</ul>
+
+			<h4 class="sebh5"><b>Version 3.10.2</b></h4>
+			<p>Safe Exam Browser für Windows Version 3.10.2 verbessert Sicherheits- und Integritätsaspekte, behebt ein Problem mit der Anzeigeüberwachung und bietet weitere kleinere Fehlerbehebungen und Verbesserungen.</p>
+			<p class="red">WICHTIG:</p>
+			<ul>
+				<li><span class="red">Safe Exam Browser für Windows benötigt eine Mindestversion des Betriebssystemes von <b>Windows 10 Version 1803</b>.</span></li>
+				<li><span class="red">Der Browser Exam Key von SEB für Windows ist <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+			</ul>
+			<p>Änderungen:</p>
+			<ul>
+				<li>Problem bei der Anzeigeüberwachung behoben.</li>
 				<li>Fensterüberwachung verbessert.</li>
 				<li>Erkennung von Remote-Sitzungen verbessert.</li>
 				<li>Terminaldienst-Client zur Standardliste der verbotenen Anwendungen hinzugefügt.</li>
@@ -251,26 +284,26 @@
 			<ul>
 				<li>Die Bildschirmleseprogramme NVDA und JAWS sind nicht mit dem Kioskmodus Create New Desktop kompatibel. Wenn ihre Verwendung erforderlich ist, benutzen Sie bitte den  Kioskmodus Disable Explorer Shell, wo diese wie erwartet funktionieren sollten.</li>
 			</ul>
-			
-			<h4 id=sebh5><b>Version 3.10.1</b></h4>
+
+			<h4 class="sebh5"><b>Version 3.10.1</b></h4>
 			<p>Safe Exam Browser für Windows Version 3.10.1 verbessert die Erkennung virtueller Maschinen, behebt einen Fehler bei der Browser-Initialisierung und bietet eine türkische Übersetzung der Benutzeroberfläche sowie weitere wichtige Fehlerbehebungen und Verbesserungen.</p>
 			<p class="red">WICHTIG:</p>
 			<ul>
 				<li><span class="red">Safe Exam Browser für Windows benötigt eine Mindestversion des Betriebssystemes von <b>Windows 10 Version 1803</b>.</span></li>
-				<li><span class="red">Der Browser Exam Key von SEB für Windows <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+				<li><span class="red">Der Browser Exam Key von SEB für Windows ist <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
 			</ul>
 			<p>Änderungen:</p>
 			<ul>
 				<li>Implementierung der System-Hardware-Überprüfung.</li>
 				<li>Verbesserte Erkennung virtueller Maschinen.</li>
-            	<li>Integration eines neuen Codesignaturzertifikats für Release-Builds.</li>
-            	<li>Aktualisierte Signatur für die Anwendungsüberwachung.</li>
-            	<li>Integration einer türkischen Übersetzung der Benutzeroberfläche.</li>
-            	<li>Hinzufügen der Protokollierung des Exit-Codes bei Fehlern bei der Browser-Initialisierung.</li>
+				<li>Integration eines neuen Codesignaturzertifikats für Release-Builds.</li>
+				<li>Aktualisierte Signatur für die Anwendungsüberwachung.</li>
+				<li>Integration einer türkischen Übersetzung der Benutzeroberfläche.</li>
+				<li>Hinzufügen der Protokollierung des Exit-Codes bei Fehlern bei der Browser-Initialisierung.</li>
 				<li>Problem behoben, bei dem Meldungsdialoge im Hintergrund hinter dem aktiven Browserfenster angezeigt wurden.</li>
-            	<li>Fehler bei der Passworteingabe bei der Neukonfiguration im Standard-Kioskmodus behoben.</li>
-            	<li>Problem mit Vollbild bzw. Fokus durch asynchronen Aufruf des Beendigungsaktivators behoben.</li>
-            	<li>Deaktivierung der Herabstufung des Browserprozesses.</li>
+				<li>Fehler bei der Passworteingabe bei der Neukonfiguration im Standard-Kioskmodus behoben.</li>
+				<li>Problem mit Vollbild bzw. Fokus durch asynchronen Aufruf des Beendigungsaktivators behoben.</li>
+				<li>Deaktivierung der Herabstufung des Browserprozesses.</li>
 				<li>Browser‑Engine Version 139.0.280 (Chromium 139.0.7258.139).</li>
 			</ul>
 			<p>Die folgenden optionalen Funktionen und Änderungen sind standardmäßig deaktiviert und müssen individuell konfiguriert werden:</p>
@@ -287,7 +320,7 @@
 			<p class="red">WICHTIG:</p>
 			<ul>
 				<li><span class="red">Ab Version 3.8.0 benötigt Safe Exam Browser für Windows eine Mindestversion des Betriebssystemes von <b>Windows 10 Version 1803</b>.</span></li>
-				<li><span class="red">Der Browser Exam Key von SEB für Windows <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+				<li><span class="red">Der Browser Exam Key von SEB für Windows ist <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
 			</ul>
 			<p>Änderungen:</p>
 			<ul>
@@ -332,7 +365,7 @@
 			<p class="red">WICHTIG:</p>
 			<ul>
 				<li><span class="red">Ab Version 3.8.0 benötigt Safe Exam Browser für Windows eine Mindestversion des Betriebssystemes von <b>Windows 10 Version 1803</b>.</span></li>
-				<li><span class="red">Der Browser Exam Key von SEB für Windows <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
+				<li><span class="red">Der Browser Exam Key von SEB für Windows ist <i>plattformspezifisch</i>, d.h. sein Wert ist für den 32-Bit (x86) und 64-Bit (x64) Build derselben Version unterschiedlich!</span></li>
 			</ul>
 			<p>Änderungen:</p>
 			<ul>

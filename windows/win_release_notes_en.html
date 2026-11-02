@@ -223,8 +223,41 @@
         
         <!-- Content Column -->
         <div class="col-md-9" role="main">
-			
-		<h4><b>Version 3.10.2</b></h4>
+
+		<h4><b>Version 3.10.3</b></h4>
+		<p>Safe Exam Browser for Windows version 3.10.3 improves integrity and security aspects, introduces a configuration option for injected keyboard input, enhances the error handling of the optional screen proctoring functionality and provides other bug fixes and improvements.</p>
+		<p class="red">IMPORTANT:</p>
+		<ul>
+			<li><span class="red">Safe Exam Browser for Windows requires a minimum operating system version of <b>Windows 10 version 1803</b>.</span></li>
+			<li><span class="red">The Browser Exam Key of SEB for Windows is <i>platform-specific</i>, i.e. its value is different for the 32-bit (x86) and 64-bit (x64) build of the same version!</span></li>
+		</ul>
+		<p>Changes:</p>
+		<ul>
+			<li>Fixed issue with initial focus on browser window caused by action center promotion.</li>
+			<li>Replaced option “Ignore SEB Service” with “Enable SEB Service Component” in the configuration tool and added a recommendation regarding service usage for BYOD. The option is now shown inverted, but the configuration value itself is unchanged.</li>
+			<li>Added UltraViewer to default list of prohibited applications.</li>
+			<li>Implemented configuration option to allow injected keyboard input (see "Hooked Keys" &gt; "Enable Injected Keys") which is disabled by default but may be enabled for compatibility with accessibility or remote control software.</li>
+			<li>Implemented basic configuration data validation.</li>
+			<li>Improved runtime integrity verification.</li>
+			<li>Lowered runtime integrity logs to debug severity.</li>
+			<li>Fixed issue with session integrity mechanism.</li>
+			<li>Browser engine version 152.0.100 (Chromium version 152.0.7977.140).</li>
+		</ul>
+		<p>The following optional features and changes are disabled by default and need to be configured individually:</p>
+		<ul>
+			<li>Added logging of runtime information (machine, operating system and SEB version) during server session initialization in client component.</li>
+			<li>Implemented configuration value to optionally hide the proctoring disclaimer during session initialization.</li>
+			<li>Implemented error handling on proctoring initialization failure: SEB now informs the user and shuts down if the screen proctoring cannot be initialized (e.g. due to a connection error).</li>
+			<li>Improved transmission spooler of screen proctoring in case of connection failure.</li>
+			<li>Limited transmission of log entries to SEB Server to max. 10 entries every 500 ms.</li>
+			<li>Fixed null reference exception in proctoring responsibility on startup failure.</li>
+		</ul>
+		<p>Known issues:</p>
+		<ul>
+			<li>Screen readers NVDA and JAWS are not compatible with kiosk mode Create New Desktop. If their usage is required, please use kiosk mode Disable Explorer Shell where they should work as expected.</li>
+		</ul>
+
+		<h4 class="sebh5"><b>Version 3.10.2</b></h4>
 		<p>Safe Exam Browser for Windows version 3.10.2 improves security and integrity aspects, resolves an issue with the display monitoring and provides other minor bug fixes and improvements.</p>
 		<p class="red">IMPORTANT:</p>
 		<ul>
