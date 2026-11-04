@@ -277,27 +277,27 @@
       <!-- Download Box -->
       <div class="well">
         <p>
-          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.1.1/SafeExamBrowser-3.7.1.1.dmg" target="_blank" alt="Download SEB for mac OS">
+          <a class="btn btn-primary btn-responsive btn-lg" href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.2/SafeExamBrowser-3.7.2.dmg" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">Safe Exam Browser 3.7.1.1 für macOS</span>
+            <span class="seb-button-text">Safe Exam Browser 3.7.2 für macOS</span>
           </a>
         </p>
 
 
 <p><strong>Aktuelle Version von Safe Exam Browser für macOS 27, 26, 15, 14, 13, 12</strong><br />
-        <span class="codetext">Build 15A08.</span></p>
+        <span class="codetext">Build 88609.</span></p>
 
-        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.1.1/SafeExamBrowser-3.7.1.1.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:85e774fdc27bba02f0233e5f9ca5b07c43d92058cac44ce666dcca4f68f192ab</span></p>
+        <p><a href="https://github.com/SafeExamBrowser/seb-mac/releases/download/3.7.2/SafeExamBrowser-3.7.2.dmg" target="_blank">Download</a> von <a href="https://github.com/SafeExamBrowser/seb-mac/releases" target="_blank">GitHub-Projektseite</a>. <span class="codetext"> sha256:a3e1936174a3e75bbe013f5aaf8a9af9d66c3a6d6ddaced608d0223837f0a8ab</span></p>
         <div>
-          <p>SEB 3.7.1.1 ist ein Wartungsupdate: Es behebt einen fälschlich angezeigten roten Sperrbildschirm nach dem erzwungenen Beenden verbotener Prozesse, ergänzt eine klarere Fehlerbehandlung bei fehlgeschlagenen Konfigurations-Downloads und Seitenladevorgängen, enthält mehrere Fehlerbehebungen bei der Stabilität und den Einstellungen und verbessert die Erkennung von Full Disk Access unter macOS 12. <strong>SEB 3.7.1 und neuer funktionieren mit macOS 26.6 und macOS 27, während bei allen früheren SEB-Versionen möglicherweise ein roter Sperrbildschirm angezeigt wird, weil Apple seine Code-Signatur-Zertifikate aktualisiert hat. </strong><strong class="red">Auf macOS 26.6 oder neuer sollten Sie ausschliesslich SEB 3.7.1 oder neuer verwenden (keine älteren Versionen).</strong></p>
+          <p>SEB 3.7.2 entfernt Fensterflackern auf Displays mit Notch, behebt die Platzierung von Fenstern, Hinweisen und des SEB-Docks bei Mehrbildschirm-Setups und ergänzt eine klarere Fehlerbehandlung für umgeleitete Log-/Download-Verzeichnisse, für beschädigte Einstellungen, die im Einstellungsfenster geöffnet werden, und wenn der Prüfungsmodus nicht gestartet werden kann. <strong>SEB 3.7.1 und neuer funktionieren mit macOS 26.6 und macOS 27, während bei allen früheren SEB-Versionen möglicherweise ein roter Sperrbildschirm angezeigt wird, weil Apple seine Code-Signatur-Zertifikate aktualisiert hat. </strong><strong class="red">Auf macOS 26.6 oder neuer sollten Sie ausschliesslich SEB 3.7.1 oder neuer verwenden (keine älteren Versionen).</strong></p>
 
-          <p><strong>Neu in SEB 3.7.1.1:</strong></p>
+          <p><strong>Neu in SEB 3.7.2:</strong></p>
           <ul class="seblist">
-            <li>Behoben: Eine doppelte Prüfungssession nach dem erzwungenen Beenden verbotener Prozesse, die fälschlicherweise den roten Bildschirm <em>„Erneutes Starten einer zuvor unterbrochenen Prüfungssession“</em> anzeigen konnte.</li>
-            <li>Behoben: Ein leerer weisser Bildschirm, wenn eine Webseite nicht geladen werden kann: SEB zeigt nun bei Serverfehlern und leeren Fehlerantworten einen Ladefehler-Hinweis an (<em>„Wiederholen“</em>/<em>„Abbrechen“</em>) und lädt einen wiederholt abstürzenden Web-Content-Prozess nicht mehr endlos neu.</li>
-            <li>Behoben: Eine irreführende Meldung „Einstellungen sind beschädigt“ (und ein möglicher Absturz), wenn ein Konfigurations-Download einen HTTP-Fehler oder einen leeren Inhalt zurückgab.</li>
-            <li>Verbesserte Robustheit gegen Abstürze bei beschädigten oder fehlenden Konfigurations-/Benutzerdaten, Verbesserungen im Einstellungsfenster, Sicherheitsverbesserungen und aktualisierte Lokalisierungen.</li>
-            <li>Verbesserte Erkennung von Full Disk Access unter macOS 12: SEB zeigt den Hinweis <em>„Festplattenvollzugriff gewähren“</em> nicht mehr in einer Schleife an, wenn die Berechtigung zwar gewährt, aber nicht wirksam ist (z. B. weil die Berechtigungen des Ordners der macOS-Datenschutzdatenbank (TCC) geändert wurden), sondern meldet den tatsächlichen Fehler und gibt Hinweise zur Behebung (siehe <a href="macosx/mac_release_notes_de.html">Release Notes</a>).</li>
+            <li>Browserfensterflackern beim Maximieren des Hauptbrowserfensters entfernt (sichtbar auf MacBooks mit Notch, wo der Streifen mit dem Kameragehäuse nur bei ausgeblendeter Menüleiste abgedeckt wird).</li>
+            <li>Behoben: Das SEB-Dock, die abdeckenden (Hintergrund-)Fenster und modale Hinweise wurden bei Mehrbildschirm-Setups, bei denen sich die Menüleiste auf einem anderen Bildschirm befindet und die macOS-Option <em>„Bildschirme verwenden separate Spaces“</em> aktiviert ist, auf dem falschen Bildschirm platziert. Modale Hinweise und das Einstellungsfenster werden nun zuverlässig auf dem richtigen Bildschirm zentriert, und Hinweise sowie neu geöffnete Browserfenster werden eingeblendet, sobald sie korrekt platziert sind.</li>
+            <li>Behoben: Ein Hängenbleiben beim Start, wenn über den Zugriff auf die Ortungsdienste noch nicht entschieden war (der Wartehinweis konnte bei einem Mehrbildschirm-Setup ausserhalb des sichtbaren Bereichs geöffnet werden).</li>
+            <li>Behoben: SEB konnte ein konfiguriertes Log- oder Download-Verzeichnis nicht verwenden, das durch einen symbolischen Link oder einen Finder-Alias umgeleitet ist.</li>
+            <li>Behoben: Beim Öffnen einer beschädigten oder ungültigen Konfigurationsdatei aus dem Einstellungsfenster wurde keine Fehlermeldung angezeigt; die Fehlermeldung, wenn der Prüfungsmodus (AAC) nicht gestartet werden kann, wurde verbessert, und ein Absturz wurde behoben, wenn eine zugelassene zusätzliche Applikation auf dem Mac nicht installiert ist.</li>
           </ul>
         </div>
 <p>Siehe  <a href="macosx/mac_release_notes_de.html">Release Notes</a> für eine  vollständige Liste neuer Funktionen.</p>
@@ -315,25 +315,23 @@
         <p>
           <a class="btn btn-primary btn-responsive btn-lg" href="https://itunes.apple.com/app/safeexambrowser/id1155002964?mt=8" target="_blank" alt="Download SEB for mac OS">
             <span class="glyphicon glyphicon-download seb-button-icon"></span>
-            <span class="seb-button-text">SafeExamBrowser 3.7.1 für iOS im App Store</span>
+            <span class="seb-button-text">SafeExamBrowser 3.7.2 für iOS im App Store</span>
           </a>
         </p>
 
 
 <p><strong>Aktuelle Version von SafeExamBrowser für iOS/iPadOS 12 und neuer</strong></p>
 
-<p>SEB 3.7.1 verbessert die Stabilität und Zuverlässigkeit, erleichtert das Zertifikat-Pinning und behebt ein Kompatibilitätsproblem mit einer MDM-Einschränkung (die App wird nicht mehr beendet, wenn die MDM-Einschränkung „Verwaltete Apps können iCloud-Synchronisierung nicht verwenden“ aktiv ist).</p>
+<p>SEB 3.7.2 behebt Abstürze und verbessert die Zuverlässigkeit, mit klarerer Behandlung von Fehlern beim Herunterladen der Konfiguration und beim Laden von Webseiten.</p>
 
-        <p>Neu in SEB 3.7.1:</p>
+        <p>Neu in SEB 3.7.2:</p>
           <ul class="seblist">
-            <li>Neu können Server-Zertifikate in Einstellungen / Netzwerk / Zertifikate per URL abgerufen werden: einzubettende Zertifikate lassen sich direkt von einer URL beziehen. Damit wird die Konfiguration von Zertifikat-Pinning erleichtert, um MITM-Attacken zu verhindern.</li>
-            <li>Sie können nun eine benutzerdefinierte Browser-User-Agent-Zeichenfolge (und ein Suffix) direkt in den iOS-Einstellungen eingeben.</li>
-            <li>Die Textsuche auf der Seite findet nun auch Text innerhalb von iFrames und löscht keinen Text mehr, den Sie in Freitext-Antwortfelder eingegeben haben. Zudem wird nun die Anzahl der gefundenen Textstellen angezeigt.</li>
-            <li>Unterstützung für die Ausführung unter  iOS 27 mit Standardeinstellungen.</li>
-            <li>Behoben: Die iCloud-Dokumente-Berechtigung führte dazu, dass iOS die App nach dem Aufrufen des Bewertungsmodus (AAC) beendete, wenn die MDM-Einschränkung „Verwaltete Apps können iCloud-Synchronisierung nicht verwenden“ aktiv war (die iCloud-Dokumente-Berechtigung wurde entfernt).</li>
-            <li>Behoben: Ein User-Agent-String mit einem Leerzeichen am Ende führte zu einem Fehler in Web-Apps.</li>
-            <li>Kompatibilität für Passwörter mit Akzentzeichen hinzugefügt.</li>
-            <li>Erlaubte SEB-Versionen: Prüfungen können nun bestimmte SEB-Versionen voraussetzen. Wenn Ihre Version nicht erlaubt ist, erklärt SEB die Anforderung und bietet an, über den App Store zu aktualisieren.</li>
+            <li>Verbesserte Stabilität: Mehrere Abstürze behoben, die beim Start, während des Browsens oder beim Lesen von Einstellungen auftreten konnten.</li>
+            <li>Kein stummer weisser Bildschirm mehr: Wenn eine Webseite nicht geladen werden kann (Serverfehler) oder der Web-Content-Prozess unerwartet stoppt, zeigt SEB nun einen Ladefehler mit einer Option zum erneuten Versuch an – statt einer leeren Seite.</li>
+            <li>Klarere Fehlermeldungen beim Herunterladen der Konfiguration: Wenn ein Server keine gültigen Einstellungen zurückgibt (ein HTTP-Fehler oder eine leere Antwort), zeigt SEB eine klare Meldung <em>„Herunterladen der Einstellungen fehlgeschlagen“</em> an – statt einer irreführenden Meldung über „beschädigte Einstellungen“.</li>
+            <li>Das Lesen beschädigter oder unvollständiger Konfigurationsdaten führt nicht mehr zum Absturz der App.</li>
+            <li>Die erlaubten SEB-Versionen können nun direkt in den iOS-Einstellungen konfiguriert werden.</li>
+            <li>Klarere Fehlermeldungen zum Prüfungsmodus: Wenn der Prüfungsmodus (AAC) nicht gestartet werden kann (zum Beispiel weil bereits eine Prüfungssession aktiv ist), zeigt SEB nun den konkreten Grund an – statt nur einer allgemeinen Meldung.</li>
             <li>Verschiedene Verbesserungen bei Stabilität und Zuverlässigkeit.</li>
           </ul>
         <p>Optionale Funktionen, die individuell konfiguriert werden müssen und <strong>standardmässig deaktiviert</strong> sind:</p>
